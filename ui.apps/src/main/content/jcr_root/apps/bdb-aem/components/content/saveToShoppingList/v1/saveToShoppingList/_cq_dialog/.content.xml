@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+          jcr:primaryType="nt:unstructured"
+          jcr:title="Save to Shopping List"
+          sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="granite/ui/components/coral/foundation/container">
+        <items jcr:primaryType="nt:unstructured">
+            <tabs
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/coral/foundation/tabs"
+                    maximized="{Boolean}true">
+                <items jcr:primaryType="nt:unstructured">
+                    <panel
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="Save to Shopping List Config"
+                            sling:resourceType="granite/ui/components/coral/foundation/container">
+                        <layout
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"/>
+                        <items jcr:primaryType="nt:unstructured">
+                            <columns
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <closeIcon
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                            fieldLabel="Close Icon Image"
+                                            name="./closeIcon"
+                                            rootPath="/content/dam/bdb"/>
+                                    <addToListLabel
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            fieldLabel="Select a Shopping List Label"
+                                            name="./addToListLabel"/>
+                                    <createListLabel
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            fieldLabel="Create a New List Label"
+                                            name="./createListLabel"/>
+                                    <addedToListLabel
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            fieldLabel="Added to List Label"
+                                            name="./addedToListLabel"/>
+                                    <viewListLabel
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            fieldLabel="View List Label"
+                                            name="./viewListLabel"/>
+                                    <closeCtaLabel
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            fieldLabel="Close Label"
+                                            name="./closeCtaLabel"/>
+                                    <saveCtaLabel
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            fieldLabel="Save Label"
+                                            name="./saveCtaLabel"/>
+                                    <createListCtaLabel
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            fieldLabel="Create New List Label"
+                                            name="./createListCtaLabel"/>
+                                    <addToListCtaLabel
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            fieldLabel="Add To List Label"
+                                            name="./addToListCtaLabel"/>
+                                    <inputLabel
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            fieldLabel="List Name Label"
+                                            name="./inputLabel"/>
+                                    <dropDownLabel
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            fieldLabel="Select Shopping List Label (Dropdown Default Label)"
+                                            name="./dropDownLabel"/>
+                                    <addToListContent
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            fieldLabel="Choose a list to add item {product}, or Create a New List Label"
+                                            name="./addToListContent"/>
+                                    <addedToListContent
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            fieldLabel="Item {product} has been added to Label"
+                                            name="./addedToListContent"/>
+                                    <addedToErrorMessageContent
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            fieldLabel="Add to List Error Message"
+                                            name="./addedToErrorMessageContent"/>
+                                    <saveCta
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            fieldLabel="Save Button Label"
+                                            name="./saveCta"/>
+                                    <createList
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            fieldLabel="Create New List Button Label"
+                                            name="./createList"/>
+                                    <closeCta
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            fieldLabel="Close Button Label"
+                                            name="./closeCta"/>
+                                    <addToList
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            fieldLabel="Add to List Button Label"
+                                            name="./addToList"/>
+                                </items>
+                            </columns>
+                        </items>
+                    </panel>
+                    <quote
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="Add to Quote List Config"
+                            sling:resourceType="granite/ui/components/foundation/container">
+                        <layout
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"/>
+                        <items jcr:primaryType="nt:unstructured">
+                            <columns
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <selectQuoteList
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            fieldLabel="Select a Quote List label"
+                                            name="./selectQuoteList"/>
+                                    <quoteDropDownLabel
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            fieldLabel="Select Quote List Label(Dropdown Default Label)"
+                                            name="./quoteDropDownLabel"/>
+                                </items>
+                            </columns>
+                        </items>
+                    </quote>
+
+
+                </items>
+            </tabs>
+        </items>
+    </content>
+</jcr:root>

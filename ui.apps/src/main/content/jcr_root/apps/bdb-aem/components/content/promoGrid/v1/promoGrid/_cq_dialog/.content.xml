@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Promo Grid Component"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+        <items jcr:primaryType="nt:unstructured">
+            <column
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/container">
+                <items jcr:primaryType="nt:unstructured">
+                    <togglePaddingTop
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/switch"
+                        checked="{Boolean}false"
+                        fieldLabel="Reduce Top Padding"
+                        fieldDescription="Switch between Default Padding (Off) and Reduced Padding (On)"
+                        name="./togglePaddingTop"/>
+                    <multifieldCells
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                        composite="{Boolean}true"
+                        eaem-show-on-collapse="EAEM.showProductName"
+                        fieldLabel="Add a promo grid">
+                        <field
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/container"
+                            name="./cells">
+                            <items jcr:primaryType="nt:unstructured">
+                                <column
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/container">
+                                    <items jcr:primaryType="nt:unstructured">
+                                        <title
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="cq/gui/components/authoring/dialog/richtext"
+                                            fieldLabel="Title"
+                                            name="./promoGridTitle"
+                                            useFixedInlineToolbar="{Boolean}true">
+                                            <rtePlugins
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceSuperType="/apps/bdb-aem/components/authoring/dialog/richtext/rtePlugins"/>
+                                            <uiSettings
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceSuperType="/apps/bdb-aem/components/authoring/dialog/richtext/uiSettings"/>
+                                            <granite:data
+                                                jcr:primaryType="nt:unstructured"
+                                                char-limit="250"/>
+                                        </title>
+                                        <description
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
+                                            fieldLabel="Description"
+                                            maxlength="{Long}250"
+                                            name="./promoGridDescription"/>
+                                        <expirationLabel
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            fieldLabel="Expiration Label"
+                                            name="./promoGridExpirationLabel"/>
+                                        <expirationDate
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/datepicker"
+                                            displayedFormat="DD MMMM YYYY"
+                                            fieldLabel="Expiration Date"
+                                            name="./promoGridExpirationDate"/>
+                                        <image
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                            fieldLabel="Image"
+                                            name="./promoGridImage"
+                                            rootPath="/content/dam"/>
+                                        <altText
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            fieldLabel="Image Alt Text"
+                                            name="./promoGridAltText"/>
+                                        <promoGridImageLinkUrl
+                                          	jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                            fieldLabel="Image Link URL"
+                                            name="./promoGridImageLinkUrl"
+                                            rootPath="/content"/> 
+                                        <openNewImageLinkTab
+                            	           jcr:primaryType="nt:unstructured"
+                                           sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                           fieldDescription="Check to open link in New Tab. By default, link opens in same tab."
+                                           name="./openNewImageLinkTab"
+                                           text="Open Link in New Tab"
+                                           uncheckedValue="{Boolean}false"
+                                           value="{Boolean}true"/>                                                                                       
+                                        <borderEnable
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/switch"
+                                            checked="{Boolean}false"
+                                            fieldDescription="Check to Enable Border for Image"
+                                            fieldLabel="Enable Border"
+                                            name="./borderEnable"/>
+                                        <fieldSetCTA
+                                            jcr:primaryType="nt:unstructured"
+                                            jcr:title="View Details - CTA "
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                                            <items jcr:primaryType="nt:unstructured">
+                                                <label
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldLabel="CTA Label"
+                                                    name="./promoGridCtaLabel"
+                                                    required="{Boolean}true"/>
+                                                <url
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                    fieldLabel="CTA URL"
+                                                    name="./promoGridCtaUrl"
+                                                    rootPath="/content"
+                                                    required="{Boolean}true"/>
+                                                <openNewTab
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                                    fieldDescription="Check to open link in New Tab. By default, link opens in same tab."
+                                                    name="./openNewTab"
+                                                    text="Open Link in New Tab"
+                                                    uncheckedValue="{Boolean}false"
+                                                    value="{Boolean}true"/>
+                                            </items>
+                                        </fieldSetCTA>
+                                        </items>
+                                </column>
+                            </items>
+                        </field>
+                    </multifieldCells>
+                </items>
+            </column>
+        </items>
+    </content>
+</jcr:root>

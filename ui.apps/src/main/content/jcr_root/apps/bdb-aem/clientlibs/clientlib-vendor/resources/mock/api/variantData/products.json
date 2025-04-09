@@ -1,0 +1,49 @@
+{
+    "productsPriceATP": [
+        {
+            "showAnnouncement": true,
+            "catalogNumber": "305180",
+            "contractPrice": {
+                "currencyIso": "USD",
+                "value": "226.43",
+                "formattedValue": "$226.43"
+            },
+            "listPrice": {
+                "currencyIso": "USD",
+                "value": "308.26",
+                "formattedValue": "$308.26"
+            },
+            "estimatedDeliveryDate": "May 24, 2020",
+            "unit": {
+                "name": "Each",
+                "code": "EA",
+                "conversion": "1"
+            },
+            "purchasingUser": false,
+            "purchasable": false,
+            "showInquireLink": true
+        },
+        {
+            "catalogNumber": "566599",
+            "contractPrice": {
+                "currencyIso": "USD",
+                "value": "226.43",
+                "formattedValue": "$226.43"
+            },
+            "listPrice": {
+                "currencyIso": "USD",
+                "value": "308.26",
+                "formattedValue": "$308.26"
+            },
+            "estimatedDeliveryDate": "May 24, 2020",
+            "unit": {
+                "name": "Each",
+                "code": "EA",
+                "conversion": "1"
+            },
+            "purchasingUser": false,
+            "purchasable": true,
+            "showAnnouncement": true
+        }
+    ]
+}

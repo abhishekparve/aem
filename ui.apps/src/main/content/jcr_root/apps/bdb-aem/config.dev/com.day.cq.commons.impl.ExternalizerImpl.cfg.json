@@ -1,0 +1,8 @@
+{
+  "externalizer.domains":[
+    "local $[env:externalizerLocal;default=http://localhost:4502]",
+    "author $[env:externalizerAuthor;default=https://author-p14102-e32568.adobeaemcloud.com]",
+    "publish $[env:externalizerPublish;default=https://dev-gl.bdbiosciences.com]",
+    "preview $[env:externalizerPreview;default=https://preview-p14102-e32568.adobeaemcloud.com]"
+  ]
+}

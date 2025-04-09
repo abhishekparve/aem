@@ -1,0 +1,45 @@
+<sly data-sly-template.cta="${@ teaser}">
+    <sly data-sly-use.bdbVideo="com.bdb.aem.core.models.BDBBrightcoveVideo"
+    	 data-sly-use.bdbTeaser="com.bdb.aem.core.models.BDBTeaserModel">
+        <sly data-sly-test="${bdbTeaser.primaryCtaLabel || bdbTeaser.secondaryCtaLabel}">
+            <div class="cmp-teaser__action-container">
+                <sly data-sly-test="${bdbTeaser.primaryCtaLabel}">
+                    <sly data-sly-test="${bdbTeaser.ctaTypeAsVideo == 'primary'}">
+                        <a
+                          class="cmp-teaser__action-link primary"
+                          data-toggle="modal"
+                          data-target="#hero-video-modal"
+                          data-accountId="${bdbvideo.brightcoveAccountId}"
+                          data-playerId="${bdbvideo.brightcovePlayerId}"
+                          data-videoId="${bdbTeaser.brightcoveVideoId}"
+                          role="button">${bdbTeaser.primaryCtaLabel}</a>			          
+                    </sly>
+                    <sly data-sly-test="${bdbTeaser.ctaTypeAsVideo != 'primary'}">
+                        <a
+                          class="cmp-teaser__action-link primary"
+                          href="${bdbTeaser.primaryCtaLink}"
+                          role="button">${bdbTeaser.primaryCtaLabel}</a>
+                    </sly>
+                </sly>
+                <sly data-sly-test="${bdbTeaser.secondaryCtaLabel}">
+                    <sly data-sly-test="${bdbTeaser.ctaTypeAsVideo == 'secondary'}">
+                        <a
+                          class="cmp-teaser__action-link secondary"
+                          data-toggle="modal"
+                          data-target="#hero-video-modal"
+                          data-accountId="${bdbvideo.brightcoveAccountId}"
+                          data-playerId="${bdbvideo.brightcovePlayerId}"
+                          data-videoId="${bdbTeaser.brightcoveVideoId}"
+                          role="button">${bdbTeaser.secondaryCtaLabel}</a>			          
+                    </sly>
+                    <sly data-sly-test="${bdbTeaser.ctaTypeAsVideo != 'secondary'}">
+                        <a
+                          class="cmp-teaser__action-link secondary"
+                          href="${bdbTeaser.secondaryCtaLink}"
+                          role="button">${bdbTeaser.secondaryCtaLabel}</a>
+                    </sly>		         
+                </sly>
+            </div>
+        </sly>
+    </sly>
+</sly>

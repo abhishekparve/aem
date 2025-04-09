@@ -1,0 +1,20 @@
+<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html"
+     data-sly-call="${templates.placeholder @ isEmpty = true}"></sly>
+
+<sly data-sly-use.socialMedia = "com.bdb.aem.core.models.SocialMedia"></sly>
+
+<h1>${socialMedia.socialMediaTitle @context='html'}</h1>
+<ul>
+     <sly data-sly-list.listMedia = ${socialMedia.socialMediaAsList}>
+          <li>
+          <sly data-sly-test="${listMedia.url}">
+               <a href = "${listMedia.url}" target="${listMedia.openNewImageLinkTab == 'true' ? '_blank' : '_self'}">
+                    <img src="${listMedia.icon}" alt="${listMedia.alt}">
+               </a>
+          </sly>  
+          <sly data-sly-test="${!listMedia.url}">
+                    <img src="${listMedia.icon}" alt="${listMedia.alt}">
+          </sly>  
+          </li>
+     </sly>
+</ul>

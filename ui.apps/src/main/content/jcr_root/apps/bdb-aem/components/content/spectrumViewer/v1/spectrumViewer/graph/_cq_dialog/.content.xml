@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Graph"
+    sling:resourceType="cq/gui/components/authoring/dialog"
+    extraClientlibs="[sv.dropdown]">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/container">
+        <items jcr:primaryType="nt:unstructured">
+            <tabs
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/tabs">
+                <items jcr:primaryType="nt:unstructured">
+                    <graph
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Graph"
+                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                        <layout
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"/>
+                        <items jcr:primaryType="nt:unstructured">
+                            <column
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <headerSectionGraph
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Header"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <resetIcon
+                                                granite:id="resetIconId"
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                fieldDescription="Please Select the Reset Graph Icon"
+                                                fieldLabel="Reset Icon"
+                                                name="./resetIcon">
+                                                <datasource
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="/bin/svgData"
+                                                    defaultSelectedValue="reload-active.svg"/>
+                                            </resetIcon>
+                                            <resetIconAlt
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldDescription="Please provide Alt text for Reset Graph Icon"
+                                                fieldLabel="Reset Icon Alt text"
+                                                name="./resetIconAlt"
+                                                value="Reset Graph"/>
+                                            <resetIconGray
+                                                granite:id="resetIconGrayId"
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                fieldDescription="Please Select the Reset Graph Icon for disabled state"
+                                                fieldLabel="Reset Icon gray (Disabled Version)"
+                                                name="./resetIconGray">
+                                                <datasource
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="/bin/svgData"
+                                                    defaultSelectedValue="reload-inactive.svg"/>
+                                            </resetIconGray>
+                                            <resetIconGrayAlt
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldDescription="Please provide Alt text for Reset(Disabled) Graph Icon"
+                                                fieldLabel="Reset (gray/disabled) Icon Alt text"
+                                                name="./resetIconGrayAlt"
+                                                value="Resetted"/>
+                                            <resetZoom
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldDescription="Please provide Reset Zoom label"
+                                                    fieldLabel="Reset Zoom Label"
+                                                    name="./resetZoom"
+                                                    value="Reset Zoom"/>
+                                            <zoomPlusIcon
+                                                granite:id="zoomPlusIconId"
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                fieldLabel="Zoom Plus Icon"
+                                                fieldDescription="Please Select the Zoom Plus Icon"
+                                                name="./zoomPlusIcon">
+                                                <datasource
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="/bin/svgData"
+                                                    defaultSelectedValue="plus-active.svg"/>
+                                            </zoomPlusIcon>
+                                            <zoomPlusIconAlt
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldDescription="Please provide Alt text for Zoom Plus Graph Icon"
+                                                fieldLabel="Zoom Plus Icon Alt text"
+                                                name="./zoomPlusIconAlt"
+                                                value="Zoom In"/>
+                                            <zoomPlusIconGray
+                                                granite:id="zoomPlusIconGrayId"
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                fieldDescription="Please Select the Zoom Plus Icon for disabled state"
+                                                fieldLabel="Zoom Plus Icon gray (Disabled Version)"
+                                                name="./zoomPlusIconGray">
+                                                <datasource
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="/bin/svgData"
+                                                    defaultSelectedValue="plus-disable.svg"/>
+                                            </zoomPlusIconGray>
+                                            <zoomPlusIconGrayAlt
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldDescription="Please provide Alt text for Zoom Plus(Disabled) Graph Icon"
+                                                fieldLabel="Zoom Plus (gray/disabled) Icon Alt text"
+                                                name="./zoomPlusIconGrayAlt"
+                                                value="Max Zoom"/>
+                                            <zoomLabel
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldDescription="Please provide Label for Zoom"
+                                                    fieldLabel="Zoom Label"
+                                                    name="./zoomLabel"
+                                                    value="Zoom"/>
+                                            <zoomMinusIcon
+                                                granite:id="zoomMinusIconId"
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                fieldLabel="Zoom Minus Icon"
+                                                name="./zoomMinusIcon">
+                                                <datasource
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="/bin/svgData"
+                                                    defaultSelectedValue="minus-active.svg"/>
+                                            </zoomMinusIcon>
+                                            <zoomMinusIconAlt
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldDescription="Please provide Alt text for Zoom Minus Graph Icon"
+                                                fieldLabel="Zoom Minus Icon Alt text"
+                                                name="./zoomMinusIconAlt"
+                                                value="Zoom out"/>
+                                            <zoomMinusIconGray
+                                                granite:id="zoomMinusIconGrayId"
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                fieldLabel="Zoom Minus Icon gray (Disabled Version)"
+                                                name="./zoomMinusIconGray">
+                                                <datasource
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="/bin/svgData"
+                                                    defaultSelectedValue="minus-sign.svg"/>
+                                            </zoomMinusIconGray>
+                                            <zoomMinusIconGrayAlt
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldDescription="Please provide Alt text for Zoom Minus(Disabled) Graph Icon"
+                                                fieldLabel="Zoom Minus (gray/disabled) Icon Alt text"
+                                                name="./zoomMinusIconGrayAlt"
+                                                value="Zoom Min"/>
+                                            <menuIcon
+                                                    granite:id="menuIconId"
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                    fieldLabel="Menu Icon"
+                                                    fieldDescription="Please Select the Menu Icon"
+                                                    name="./menuIcon">
+                                                <datasource
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="/bin/svgData"
+                                                        defaultSelectedValue="menu-icon.svg"/>
+                                            </menuIcon>
+                                            <menuIconAlt
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldDescription="Please provide Alt text for Menu Icon"
+                                                    fieldLabel="Menu Icon Alt text"
+                                                    name="./menuIconAlt"
+                                                    value="Graph Menu"/>
+                                            <graphDisplayOptions
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldDescription="Please provide for Graph Display Options"
+                                                fieldLabel="Graph Display Options Label"
+                                                name="./graphDisplayOptions"
+                                                value="Graph Display Options"/>
+                                            <graphExportLabel
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldDescription="Please provide Graph Export label"
+                                                    fieldLabel="Graph Export Label"
+                                                    name="./graphExportLabel"
+                                                    value="Graph Export Preview"/>
+                                            <savedList
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldDescription="Please provide Label for My Saved List"
+                                                    fieldLabel="Saved List Label"
+                                                    name="./savedList"
+                                                    value="My Saved List"/>
+                                            <savedListIcon
+                                                    granite:id="savedIconList"
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                    fieldLabel="Saved List Icon"
+                                                    name="./savedListIcon">
+                                                <datasource
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="/bin/svgData"
+                                                        defaultSelectedValue="saved-files.svg"/>
+                                            </savedListIcon>
+                                            <savedListIconAlt
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldDescription="Please provide Alt text for Saved List Icon"
+                                                    fieldLabel="Saved List Icon Alt text"
+                                                    name="./savedListIconAlt"
+                                                    value="Saved list Icon"/>
+                                            <fluorochromeSets
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldDescription="Please provide label for Fluorochrome Sets"
+                                                    fieldLabel="Fluorochrome Sets Label"
+                                                    name="./fluorochromeSets"
+                                                    value="Fluorochrome Combinations"/>
+                                            <expandGraphLabel
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldDescription="Please provide Label for Expande Graph"
+                                                    fieldLabel="Expnad Graph Label"
+                                                    name="./expandGraphLabel"
+                                                    value="Expand Graph"/>
+                                            <expandGraphIcon
+                                                    granite:id="expandGraphIconId"
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                    fieldLabel="Expand Graph Icon"
+                                                    name="./expandGraphIcon">
+                                                <datasource
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="/bin/svgData"
+                                                        defaultSelectedValue="expand-graph.svg"/>
+                                            </expandGraphIcon>
+                                            <expandGraphIconAlt
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldDescription="Please provide Alt text for Expande Graph Icon"
+                                                    fieldLabel="Expand Graph Icon Alt text"
+                                                    name="./expandGraphIconAlt"
+                                                    value="Expand Graph Icon"/>
+                                            <userGuide
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldDescription="Please provide label for User Guide"
+                                                fieldLabel="User Guide Label"
+                                                name="./userGuide"
+                                                value="User Guide"/>
+                                        </items>
+                                    </headerSectionGraph>
+                                    <singleViewGraphSection
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Single View Graph"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <xAxis
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldDescription="Please provide value of X-Axix"
+                                                fieldLabel="X-axix label"
+                                                name="./xAxis"
+                                                value="Wavelength (nm)"/>
+                                            <yAxis
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldDescription="Please provide value of Y-Axix"
+                                                fieldLabel="Y-axix Label"
+                                                name="./yAxis"
+                                                value="Excitation/Emission (%)"/>
+                                        </items>
+                                    </singleViewGraphSection>
+                                    <signatureViewGraphSection
+                                            jcr:primaryType="nt:unstructured"
+                                            jcr:title="Signature Graph"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <xaxisSignatureGraph
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldDescription="Please provide value of X-Axix"
+                                                    fieldLabel="X-axix label for Signature Graph"
+                                                    name="./xaxisSignatureGraph"
+                                                    value="Detector"/>
+                                            <yaxisSignatureGraph
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldDescription="Please provide value of Y-Axix"
+                                                    fieldLabel="Y-axix Label for Signature Grap"
+                                                    name="./yaxisSignatureGraph"
+                                                    value="Normalized Emission"/>
+                                        </items>
+                                    </signatureViewGraphSection>
+                                    <heatMapGraphSection
+                                            jcr:primaryType="nt:unstructured"
+                                            jcr:title="Heat Map Graph"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <xaxisHeatMapGraph
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldDescription="Please provide value of X-Axix"
+                                                    fieldLabel="X-axix label for Heat Map Graph"
+                                                    name="./xaxisHeatMapGraph"
+                                                    value="Detector"/>
+                                            <yaxisHeatMapGraph
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldDescription="Please provide value of Y-Axix"
+                                                    fieldLabel="Y-axix Label for Heat map Grap"
+                                                    name="./yaxisHeatMapGraph"
+                                                    value="Fluorochromes"/>
+                                        </items>
+                                    </heatMapGraphSection>
+									<expandFeatureGraphSection
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Expand Feature Graph"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <expandWorkspace
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldDescription="Please Provide Label for Expand Workspace"
+                                                fieldLabel="Expand Workspace Label"
+                                                name="./expandWorkspace"
+                                                value="Expand Workspace"/>
+                                            <expandGraphLabel
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldDescription="Please Provide Label for Expand Graph"
+                                                fieldLabel="Expand Graph Label"
+                                                name="./expandGraphLabel"
+                                                value="Expand"/>
+                                            <expandLabel
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldDescription="Please provide label for Expand"
+                                                fieldLabel="Expand label"
+                                                name="./expandLabel"
+                                                value="Expand"/>
+                                        </items>
+                                    </expandFeatureGraphSection>
+                                </items>
+                            </column>
+                        </items>
+                    </graph>
+                </items>
+            </tabs>
+        </items>
+    </content>
+</jcr:root>

@@ -1,0 +1,73 @@
+{
+  "products": [
+    {
+      "baseProduct": {
+        "mpgCategory": [],
+        "classificationCategory": [],
+        "code": "000000_base",
+        "approvalStatus": "APPROVED",
+        "variants": [
+          {
+            "code": "000000",
+            "approvalStatus": "APPROVED",
+            "dangerousGoodsIndicator": "_001",
+            "ean": "ean",
+            "globalWebAvailable": true,
+            "grossWeight": 0.5,
+            "grossWeightUnit": {
+              "code": "pieces",
+              "name": "Piece"
+            },
+            "hazardousCode": "G05",
+            "hazardousDescription": "GHS05-Corrosive",
+            "marketAvailability": [
+              {
+                "approvalStatus": "APPROVED",
+                "baseStore": {
+                  "name": "BDB United States Store",
+                  "uid": "US"
+                },
+                "salesUnit": {},
+                "derivedProductStatus": "PURCHASEABLE",
+                "validityStartDate": "2020-12-01T14:13:15Z",
+                "regulatoryStatus": "US_regulatoryStatus"
+              },
+              {
+                "approvalStatus": "APPROVED",
+                "baseStore": {
+                  "name": "BDB Korea Store",
+                  "uid": "KR"
+                },
+                "salesUnit": {},
+                "derivedProductStatus": "PURCHASEABLE",
+                "validityStartDate": "2020-12-08T14:13:49Z",
+                "productName": "Fixation Buffer",
+                "modelName": "wc",
+                "kfdaLicenseNumber": "5767",
+                "adReviewNumber": "1234"
+              },
+              {
+                "approvalStatus": "APPROVED",
+                "baseStore": {
+                  "name": "BDB Japan Store",
+                  "uid": "JP"
+                },
+                "salesUnit": {},
+                "derivedProductStatus": "PURCHASEABLE",
+                "validityStartDate": "2020-12-08T14:14:04Z",
+                "regulatoryStatus": "JP_regulatoryStatus",
+                "toxicity": "r43r"
+              }
+            ],
+            "netWeight": 10,
+            "prodHierarchy": "Prod Hierarchy",
+            "researchOnly": false,
+            "shippingConditionCode": "SP-01",
+            "shippingConditionDescription": "Shipping Condition Description",
+            "unit": {}
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,96 @@
+{
+    "payments": [
+        {
+            "accountHolderName": "Russel",
+            "cardNumber": "************1235",
+            "cardType": {
+                "code": "visa"
+            },
+            "defaultPayment": true,
+            "expiryMonth": "11",
+            "expiryYear": "2020",
+            "id": "8796191457322",
+            "saved": true,
+            "cardExpired": false,
+            "cardExpiring": true,
+            "prepayCustomer": false,
+            "nickName": "Department Visa"
+        },
+        {
+            "accountHolderName": "prakash",
+            "cardNumber": "************1234",
+            "cardExpired": false,
+            "cardExpiring": false,
+            "cardType": {
+                "code": "amex"
+            },
+            "defaultPayment": false,
+            "expiryMonth": "11",
+            "expiryYear": "2020",
+            "id": "879619123457323",
+            "saved": true,
+            "nickName": "",
+            "prepayCustomer": false
+        },
+        {
+            "accountHolderName": "amitabh",
+            "cardNumber": "************1234",
+            "cardExpired": true,
+            "cardExpiring": false,
+            "cardType": {
+                "code": "amex"
+            },
+            "defaultPayment": false,
+            "expiryMonth": "11",
+            "expiryYear": "2020",
+            "id": "879619178457323",
+            "saved": true,
+            "nickName": ""
+        },
+        {
+            "accountHolderName": "Aditya",
+            "cardNumber": "************1234",
+            "cardExpired": false,
+            "cardExpiring": false,
+            "cardType": {
+                "code": "amex"
+            },
+            "defaultPayment": false,
+            "expiryMonth": "11",
+            "expiryYear": "2020",
+            "id": "8796134591457323",
+            "saved": true,
+            "nickName": ""
+        },
+        {
+            "accountHolderName": "ashish",
+            "cardNumber": "************1234",
+            "cardExpired": false,
+            "cardExpiring": false,
+            "cardType": {
+                "code": "amex"
+            },
+            "defaultPayment": false,
+            "expiryMonth": "11",
+            "expiryYear": "2020",
+            "id": "879619145767783",
+            "saved": true,
+            "nickName": ""
+        },
+        {
+            "accountHolderName": "snow",
+            "cardNumber": "************1234",
+            "cardExpired": false,
+            "cardExpiring": false,
+            "cardType": {
+                "code": "master"
+            },
+            "defaultPayment": false,
+            "expiryMonth": "11",
+            "expiryYear": "2020",
+            "id": "8796191457345",
+            "saved": true,
+            "nickName": ""
+        }
+    ]
+}

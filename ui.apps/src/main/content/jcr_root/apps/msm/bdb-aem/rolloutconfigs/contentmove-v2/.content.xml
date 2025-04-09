@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    cq:trigger="rollout"
+    jcr:primaryType="cq:RolloutConfig"
+    jcr:title="Content Move Standard rollout config (V2)">
+    <PageMoveAction jcr:primaryType="cq:LiveSyncAction"/>
+    <contentUpdate jcr:primaryType="cq:LiveSyncAction"/>
+    <contentCopy jcr:primaryType="cq:LiveSyncAction"/>
+    <contentDelete jcr:primaryType="cq:LiveSyncAction"/>
+    <referencesUpdate jcr:primaryType="cq:LiveSyncAction"/>
+    <orderChildren jcr:primaryType="cq:LiveSyncAction"/>
+    <personalizationContentRollout jcr:primaryType="cq:LiveSyncAction"/>
+</jcr:root>

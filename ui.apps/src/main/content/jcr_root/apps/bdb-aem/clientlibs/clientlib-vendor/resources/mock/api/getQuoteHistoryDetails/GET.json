@@ -1,0 +1,49 @@
+{
+    "sourceApplicationResponse": {
+        "erpSystemId": "EverestECC",
+        "shipTo": "1001072919",
+        "soldTo": "1001111185",
+        "quotes": [
+            {
+                "currency": "USD",
+                "formattedValue": "$37,991.95",
+                "netValue": "37991.95",
+                "poNumber": "",
+                "salesQuotationNumber": "0400175599",
+                "validFrom": "2022/04/04",
+                "validTo": "2023/08/15",
+                "isQuoteExpired": false
+            },
+            {
+                "currency": "USD",
+                "formattedValue": "$1,999.60",
+                "netValue": "1999.60",
+                "poNumber": "",
+                "salesQuotationNumber": "0400207698",
+                "validFrom": "2022/08/29",
+                "validTo": "2023/09/30",
+                "isQuoteExpired": false
+            },
+            {
+                "currency": "USD",
+                "formattedValue": "$27,460.74",
+                "netValue": "27460.74",
+                "poNumber": "8979879",
+                "salesQuotationNumber": "0400209898",
+                "validFrom": "2022/09/12",
+                "validTo": "2023/09/30",
+                "isQuoteExpired": true
+            },
+            {
+                "currency": "USD",
+                "formattedValue": "$11,987.65",
+                "netValue": "11987.65",
+                "poNumber": "745698",
+                "salesQuotationNumber": "0400395799",
+                "validFrom": "2022/02/12",
+                "validTo": "2023/02/15",
+                "isQuoteExpired": false
+            }
+        ]
+    }
+}

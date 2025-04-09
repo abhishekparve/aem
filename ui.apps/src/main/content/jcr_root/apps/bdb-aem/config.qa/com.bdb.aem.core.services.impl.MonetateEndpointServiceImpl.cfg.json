@@ -1,0 +1,3 @@
+{
+  "monetateProductsEndpoint":"$[env:monetateProductsEndpoint;default=//se.monetate.net/js/2/a-f427f57e/d/dev-gl.bdbiosciences.com/entry.js]"
+}

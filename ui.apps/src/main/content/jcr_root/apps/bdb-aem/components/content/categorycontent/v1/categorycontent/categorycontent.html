@@ -1,0 +1,227 @@
+<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html"
+     data-sly-call="${templates.placeholder @ isEmpty = true}"></sly>
+
+<sly data-sly-use.categoryModelObject="com.bdb.aem.core.models.CategoryContentModel"
+    data-sly-test="${categoryModelObject}">
+    <!-- Starting for video varation -->
+    <sly data-sly-test="${categoryModelObject.videoImage == 'video'}">
+    <article class="category-content category-content__container image-with-video app-js__category-content ${properties.togglePaddingTop?'pt-2':''} ${properties.togglePaddingBottom?'pb-2':''}">
+        <div class="container px-0">
+            <div class="row">
+                <div class="category-content__wrapper  col-lg-12 ">
+                    <article class="category-info category-content image-with-video app-js__category-info">
+                        <div data-sly-test="${categoryModelObject.sectionLabel}" class="category-info__sec">
+                            ${categoryModelObject.sectionLabel}
+                        </div>
+                        <h2 data-sly-test="${categoryModelObject.title}" class="category-info__title">
+                            ${categoryModelObject.title @context='html'}
+                        </h2>
+                        <div data-sly-test="${categoryModelObject.description}" class="category-info__desc">
+                            ${categoryModelObject.description @context='html'}
+                        </div>
+                    </article>
+                    <div class="category-content__image-container d-flex text-center justify-content-center video-right-aligned"
+                        data-sly-attribute.class="category-content__image-container d-flex text-${categoryModelObject.iconAlignment} justify-content-center video-${properties.align}">
+                        <div class="category-left-block col-12 col-lg-7 ">
+                            <sly data-sly-list.contentList="${categoryModelObject.categoryContentList}"
+                                data-sly-test="${categoryModelObject.categoryContentList}" data-sly-unwrap>
+                                <sly data-sly-test="${contentList.iconType == 'text' || contentList.iconType == 'icon' ||contentList.iconType == 'image'}">
+                                    <div class="category-content__image  col-5 col-lg-3 pt-0 pt-lg-4   px-0">
+                                        <article class="image-with-text app-js__image-with-text  contains-video ">
+                                            <div class=" image-with-text__wrapper">
+                                                <a href="${contentList.iconLink}" tabindex="0">
+                                                    <div  class="d-flex align-items-center justify-content-center position-relative ">
+                                                        <picture data-sly-test="${contentList.iconUrl}">
+                                                            <source media="(max-width: 900px)" srcset=${contentList.iconUrl}
+                                                                onload="window.aos && window.aos.refresh()">
+                                                            <img  src="${contentList.iconUrl}" alt="${contentList.iconAlt}" title="${contentList.iconAlt}"
+                                                                onload="window.aos && window.aos.refresh()">
+                                                        </picture>
+                                                    </div>
+                                                </a>
+                                                <div data-sly-test="${contentList.iconHeading}" class="image-with-text__title">
+                                                    ${contentList.iconHeading @context='html'}
+                                                </div>
+                                                <div data-sly-test="${contentList.iconDescription}" class="image-with-text__img-text bd-rte">
+                                                    <p>${contentList.iconDescription @context='html'}</p>
+                                                </div>
+                                            
+                                        </article>
+                                    </div>
+                                </sly>
+                            </sly>
+                        </div>
+                        <!--  starting video block -->
+                        <div class="category-content__video-section col-lg-5 col-12" data-toggle="modal" data-target="#categoryContentVideo">
+                            <div class="position-relative">
+                                <div class="category-content__overlay">
+                                    <sly data-sly-test="${categoryModelObject.videoImagePath}">
+                                        <img src="${categoryModelObject.videoImagePath}" alt="${categoryModelObject.vidImageAlt}" tabindex="0" />
+                                    </sly>
+                                </div>
+                                <img src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/playButton.svg" alt="url" tabindex="0" class="category-content__play-btn" />
+                            </div>
+                            <p class="category-content__video-section-description mt-3 mt-lg-2" data-sly-test="${categoryModelObject.videoImageDescription}">
+                                ${categoryModelObject.videoImageDescription @context='html'}
+                            </p>
+                            <div class="modal fade category-content__video-modal brightcove-modal" id="categoryContentVideo"
+                                tabindex="-1" role="dialog" aria-labelledby="categoryContentVideoTitle" aria-hidden="true"
+                                data-backdrop="static">
+                                <div class="modal-dialog modal-dialog-centered" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close category-content__video-modal-close"
+                                                data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body category-content__video-modal-body is-video"
+                                            data-accountId="${categoryModelObject.brightcoveAccountId}" data-playerId="${categoryModelObject.brightcovePlayerId}"
+                                            data-videoId="${categoryModelObject.brightcoveVideoIdCategoryContent}">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>                   
+                        <!--  ending video block -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+    </sly>
+
+    <!-- Starting for image varation -->
+    <sly data-sly-test="${categoryModelObject.videoImage == 'image'}">
+     <article class="category-content category-content__container  app-js__category-content ${properties.hasGreyBackground ? 'gray-background-container' : ''} ${properties.togglePaddingTop?'pt-2':''} ${properties.togglePaddingBottom?'pb-2':''}">
+        <div class="container px-0">
+            <div class="row">
+                <div class="category-content__wrapper  col-lg-12">
+                    <article class="category-info category-content image-with-video app-js__category-info">
+                        <div data-sly-test="${categoryModelObject.sectionLabel}" class="category-info__sec">
+                            ${categoryModelObject.sectionLabel}
+                        </div>
+                        <h2 data-sly-test="${categoryModelObject.title}" class="category-info__title">
+                            ${categoryModelObject.title @context='html'}
+                        </h2>
+                        <div data-sly-test="${categoryModelObject.description}" class="category-info__desc">
+                            ${categoryModelObject.description @context='html'}
+                        </div>
+                    </article>
+                    <div class="row category-content__image-container d-flex text-left justify-content-center video-right-aligned"
+                        data-sly-attribute.class="row category-content__image-container d-flex text-${categoryModelObject.iconAlignment} justify-content-center video-${properties.align} ${categoryModelObject.description?'':'pt-4'}">
+						<div class="category-left-block col-12 col-lg-7">
+                            <sly data-sly-list.contentList="${categoryModelObject.categoryContentList}"
+                                data-sly-test="${categoryModelObject.categoryContentList}" data-sly-unwrap>
+                                <sly data-sly-test="${contentList.iconType == 'text' || contentList.iconType == 'icon' ||contentList.iconType == 'image'}">
+                                    <div class="category-content__image  col-5 col-lg-3 pt-0 pt-lg-4   px-0">
+                                        <article class="image-with-text app-js__image-with-text  contains-video ">
+                                            <div class=" image-with-text__wrapper">
+                                                <a href="${contentList.iconLink}" tabindex="0">
+                                                    <div class="d-flex align-items-center justify-content-center position-relative">
+                                                        <picture data-sly-test="${contentList.iconUrl}">
+                                                            <source media="(max-width: 900px)" srcset=${contentList.iconUrl}
+                                                                onload="window.aos && window.aos.refresh()">
+                                                            <img  src="${contentList.iconUrl}" alt="${contentList.iconAlt}"
+                                                                onload="window.aos && window.aos.refresh()">
+                                                        </picture>
+                                                    </div>
+                                                </a>
+                                                <div data-sly-test="${contentList.iconHeading}" class="image-with-text__title">
+                                                    ${contentList.iconHeading @context='html'}
+                                                </div>
+                                                <div data-sly-test="${contentList.iconDescription}" class="image-with-text__img-text bd-rte">
+                                                    <p>${contentList.iconDescription @context='html'}</p>
+                                                </div>
+                                            </div>
+                                        </article>
+                                    </div>
+                                </sly>
+                            </sly>
+						</div>
+                        <!--  starting image block -->
+                        <div class="category-content__image-section col-lg-4 col-12">
+                            <div class="category-content__overlay">
+	                        	<div class="d-flex align-items-center justify-content-center position-relative">
+	                            	<sly data-sly-test="${categoryModelObject.imageLink}">
+	                                        <picture>
+	                                        	<a href=${categoryModelObject.imageLink} target="${properties.openNewImageLinkTab == 'true' ? '_blank' : '_self'}" tabindex="0">
+	                                        		<source media="(max-width: 900px)" srcset=${categoryModelObject.videoImagePath}  onload="window.aos && window.aos.refresh()">
+	                                        		<img  data-src=${categoryModelObject.videoImagePath} class="lazy"
+	                                                alt="${categoryModelObject.vidImageAlt}" onload="window.aos && window.aos.refresh()"
+	                                                onerror='this.onerror=null;this.src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/images/product-default.png";'>
+	                                           </a>
+	                                        </picture>
+	                               </sly>
+	                               <sly data-sly-test="${!categoryModelObject.imageLink}">
+	                               		<picture>
+	                                            <source media="(max-width: 900px)" srcset=${categoryModelObject.videoImagePath}  onload="window.aos && window.aos.refresh()">
+	                                            <img  data-src=${categoryModelObject.videoImagePath} class="lazy"
+	                                                alt="${categoryModelObject.vidImageAlt}" onload="window.aos && window.aos.refresh()"
+	                                                onerror='this.onerror=null;this.src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/images/product-default.png";'>
+	                                     </picture>
+	                               </sly>
+	                           </div>
+                            </div>
+                        </div>
+                        <!--  ending image block -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+    </sly>
+
+    <!-- Starting for no varation -->
+    <sly data-sly-test="${categoryModelObject.videoImage == 'no'}">
+    <article class="category-content category-content__container  app-js__category-content ${properties.hasGreyBackground ? 'gray-background-container' : ''} ${properties.togglePaddingTop?'pt-2':''} ${properties.togglePaddingBottom?'pb-2':''}">
+        <div class="container px-0">
+            <div class="row">
+                <div class="category-content__wrapper col-lg-10 col-sm-12 offset-lg-1  px-0 ">
+                    <article class="category-info category-content">
+                        <div data-sly-test="${categoryModelObject.sectionLabel}" class="category-info__sec">
+                            ${categoryModelObject.sectionLabel}
+                        </div>
+                        <h2 data-sly-test="${categoryModelObject.title}" class="category-info__title">
+                            ${categoryModelObject.title @context='html'}
+                        </h2>
+                        <div data-sly-test="${categoryModelObject.description}" class="category-info__desc">
+                            ${categoryModelObject.description @context='html'}
+                        </div>
+                    </article>
+                    <div class="row category-content__image-container d-flex text-center justify-content-center"
+                        data-sly-attribute.class="row category-content__image-container d-flex text-${categoryModelObject.iconAlignment} justify-content-center ${categoryModelObject.description?'':'pt-4'}">
+                        <sly data-sly-list.contentList="${categoryModelObject.categoryContentList}"
+                            data-sly-test="${categoryModelObject.categoryContentList}" data-sly-unwrap>
+                            <sly data-sly-test="${contentList.iconType == 'text' || contentList.iconType == 'icon' ||contentList.iconType == 'image'}">
+                                <div class="category-content__image  col-6 col-lg-3  pl-0">
+                                    <article class="image-with-text app-js__image-with-text ">
+                                        <div class=" image-with-text__wrapper">
+                                            <a href="${contentList.iconLink}" tabindex="0">
+                                                <div class="d-flex align-items-center justify-content-center position-relative ">
+                                                    <picture data-sly-test="${contentList.iconUrl}">
+                                                        <source media="(max-width: 900px)" srcset=${contentList.iconUrl}
+                                                            onload="window.aos && window.aos.refresh()">
+                                                        <img  src="${contentList.iconUrl}" alt="${contentList.iconAlt}"
+                                                            onload="window.aos && window.aos.refresh()">
+                                                    </picture>
+                                                </div>
+                                            </a>
+                                            <div data-sly-test="${contentList.iconHeading}" class="image-with-text__title">
+                                                ${contentList.iconHeading @context='html'}
+                                            </div>
+                                            <div data-sly-test="${contentList.iconDescription}" class="image-with-text__img-text bd-rte">
+                                                <p>${contentList.iconDescription @context='html'}</p>
+                                            </div>
+                                        </div>
+                                    </article>
+                                </div>
+                            </sly>
+                        </sly>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+    </sly>
+</sly>

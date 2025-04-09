@@ -1,0 +1,337 @@
+<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html" />
+<sly data-sly-call="${templates.placeholder @ isEmpty = !properties.type, classAppend='cmp-searchResults'}"></sly>
+<sly data-sly-use.banner="com.bdb.aem.core.models.PIPBannerModel" />
+<script>
+    if (typeof window.AEM_DATA === 'undefined') {
+        window.AEM_DATA = {};
+    }
+    if (typeof window.AEM_DATA.config === 'undefined') {
+        window.AEM_DATA.config = {};
+    }
+    window.AEM_DATA.config.hotspotImage = ${ banner.hotspotObject || '{}' @context='scriptComment' };
+</script>
+
+<sly data-sly-test.blueVariation="${properties.variation == 'blue'}"></sly>
+<sly data-sly-test.onlyTitlesBlue="${!banner.ctaText && !banner.secondaryCTA && blueVariation }"></sly>
+
+<div
+    class="app-js__bd-banner bd-banner pip-version ${banner.bgColor @ context='styleToken'} ${banner.fontColorVariation == '#000' ? 'text-black' : 'text-white'}">
+    <div
+        class="bd-banner__image d-flex no-resize ${!banner.bgImage ?'no-image':''} ${blueVariation ? 'blueVar no-image':''} ${onlyTitlesBlue ?'my-auto pip-only-title':''}">
+        <sly data-sly-test="${(banner.bgImage || banner.bgImageMobile) && !blueVariation}">
+            <picture class="">
+                <source media="(max-width: 992px)" srcset="${banner.bgImageMobile}"
+                    onload="window.aos &amp;&amp; window.aos.refresh()">
+                <img src="${banner.bgImage}" alt="${banner.bgImageAlt}"
+                    onload="window.aos &amp;&amp; window.aos.refresh()"
+                    onerror="this.onerror=null;this.src=&quot;/resources/images/product-default.png&quot;;"
+                    class="loading ${properties.backgroundPositionStyle}" data-ll-status="loading">
+            </picture>
+        </sly>
+        <div class="bd-banner__bg-gradient "></div>
+    </div>
+    <div class="container bd-banner__container d-flex">
+        <div class="row text-left">
+            <div class="bd-banner__section d-flex col-md-6 col-sm-12 ${onlyTitlesBlue ?'my-auto':''}" tabindex="0">
+                <h1 class="bd-banner__title text-wrap text-break white-text ${onlyTitlesBlue ?'align-title':''}">
+                    ${banner.title @context='html'}
+                </h1>
+                <div class="bd-banner__desc bd-rte">
+                    <p>${banner.subTitle @context='html'}</p>
+                </div>
+                <div data-sly-test="${banner.ctaText || banner.secondaryCTA}" class="bd-banner__cta">
+                    <a data-sly-test="${banner.ctaUrl}" href="${banner.ctaUrl}"
+                        data-toggle="${properties.loadInModalPrimary?'modal':''}"
+                        data-target="${properties.loadInModalPrimary?'#bdb-request-quote-form-modal':''}">
+                        <button class="btn btn-primary-white btn-md mx-auto" data-color="${banner.ctaTxtColor}"
+                            data-background-color="${banner.ctaBgColor}">${banner.ctaText @context='html'}
+                        </button>
+                    </a>
+                    <a data-sly-test="${banner.secondaryCTAUrl}" href="${banner.secondaryCTAUrl}"
+                        data-toggle="${properties.loadInModalSecondary?'modal':''}"
+                        data-target="${properties.loadInModalSecondary?'#bdb-request-quote-form-modal':''}">
+                        <sly data-sly-test="${banner.ctaVariationSecondary == 'blueWhite'}">
+                            <button class="btn btn-blue-white btn-md mx-auto" >
+                            ${banner.secondaryCTA @context='html'}
+                            </button>
+                        </sly>
+                        <sly data-sly-test="${banner.ctaVariationSecondary == 'whiteBorderFont'}">
+	                        <button class="btn btn-white-font btn-md mx-auto" >
+	                            ${banner.secondaryCTA @context='html'}
+	                        </button>
+                        </sly>
+                        <sly data-sly-test="${banner.ctaVariationSecondary == 'blueBorderFont'}">
+	                        <button class="btn btn-blue-font btn-md mx-auto" >
+	                            ${banner.secondaryCTA @context='html'}
+	                        </button>
+                        </sly>
+                    </a>
+                </div>
+
+            </div>
+            <sly data-sly-test="${banner.list}">
+            	<bd-hotspot-image style="top: ${banner.offsetPosition @ context='styleToken'}px"
+					class="col-md-6 col-sm-12 ${banner.offsetPosition ? 'position-relative' : ''}"
+					config="hotspotImage"></bd-hotspot-image>
+			</sly>
+			<sly data-sly-test="${!banner.list}">
+				<div class="col-md-6 col-sm-12 image-with-hotspot position-relative" style="top: ${banner.offsetPosition @ context='styleToken'}px">
+					<a href="${banner.imageLinkUrl}" target="${banner.openNewImageLinkTab == 'true' ? '_blank' : '_self'}">
+						<img  src=${banner.imagePath} class="hotspot-main-image" alt="${banner.imageAlt}">
+			        </a>
+				</div>
+			</sly>
+        </div>
+    </div>
+</div>
+
+<sly
+    data-sly-test.modalCTAPrimary="${properties.loadInModalPrimary == 'yes' && properties.loadInModalSecondary == 'false'}">
+</sly>
+<sly
+    data-sly-test.modalCTASecondary="${properties.loadInModalPrimary == 'false' && properties.loadInModalSecondary == 'yes'}">
+</sly>
+<sly data-sly-test="${modalCTAPrimary || modalCTASecondary}">
+    <article class="bdb-FACSLyric-request-form app-js__bdb-FACSLyric-request-form bd-custom-scroll">
+        <div class="modal" id="bdb-request-quote-form-modal" tabindex="-1" role="dialog"
+            aria-labelledby="bdb-request-quote-form-modal" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered bdb-request-form-modal__modal-dimensions" role="document">
+                <div class="modal-content bdb-request-form-modal__modal-container">
+                    <div class="bdb-request-form-modal__modal-close p-0">
+                        <button type="button" class="close p-0" data-dismiss="modal" aria-label="Close"
+                            data-role="none">
+                            <img src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/Close-dark.svg"
+                                alt="close" />
+                        </button>
+                    </div>
+                    <div class="modal-header p-0">
+                        <sly data-sly-test="${modalCTAPrimary}">
+                            <h5 class="modal-title bdb-request-form-modal__modal-heading">${banner.formTitle}</h5>
+                        </sly>
+                        <sly data-sly-test="${modalCTASecondary}">
+                            <h5 class="modal-title bdb-request-form-modal__modal-heading">${banner.formTitleSec}</h5>
+                        </sly>
+                    </div>
+                    <div class="modal-body p-0 bdb-request-form-modal__modal-body">
+                        <sly data-sly-test="${modalCTAPrimary}">
+                            <p class="text">${banner.formBodyText @ context='html'}</p>
+                            <script src="${banner.rootURL}/js/forms2/js/forms2.min.js"></script>
+                            <form id="mktoForm_${banner.formID}"></form>
+                        </sly>
+                        <sly data-sly-test="${modalCTASecondary}">
+                            <p class="text">${banner.formBodyTextSec @ context='html'}</p>
+                            <script src="${banner.rootURLSec}/js/forms2/js/forms2.min.js"></script>
+                            <form id="mktoForm_${banner.formIDSec}"></form>
+                        </sly>
+                        <div id="marketoFormRequestQuote_alert" class="alert__message mt-3 hide" role="alert">
+                            <div class="alert__message-iconSuccess">
+                                <img class="icon "
+                                    src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/checkmark.svg"
+                                    alt="alert  icon">
+                            </div>
+                            <div class="alert__message-info">Successfully submitted.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+    <sly data-sly-test="${modalCTAPrimary}">
+        <script>
+            MktoForms2.loadForm('${banner.rootURL @ context='attribute'}', '${banner.munchkinID @ context='attribute'}', ${ banner.formID @context = 'attribute'});
+            window.adobeDataLayer.push({
+                event: 'formView',
+                xdm: {
+                    form: {
+                        formName: document.getElementById(`mktoForm_${banner.formID @context = 'attribute'
+                }`).parentElement.parentElement.querySelector('h5').innerText,
+                        marketoUserToken: ${banner.formID @context = 'attribute'
+                }
+                    }
+                }
+            });
+            MktoForms2.whenReady(function (mktoForm) {
+                if (marketoForms) {
+                    marketoForms.destyleMktoForm(mktoForm);
+                }
+                function handleFormStart() {
+                    window.adobeDataLayer.push({
+                        event: 'formStart',
+                        xdm: {
+                            form: {
+                                formName: document.getElementById(`mktoForm_${banner.formID @context = 'attribute'
+                        }`).parentElement.parentElement.querySelector('h5').innerText,
+                                marketoUserToken: ${banner.formID @context = 'attribute'
+                        }
+                            }
+                        }
+                    });
+                    for(var i = 0; i < controls.length;i++){
+                        controls[i].removeEventListener('blur', handleFormStart);
+                	}
+                }
+                if(mktoForm.getId() == '${banner.formID @ context='attribute'}'){
+                	var controls = document.querySelectorAll(`#mktoForm_${banner.formID @context = 'attribute'} input, #mktoForm_${banner.formID @context = 'attribute'} select, #mktoForm_${banner.formID @context = 'attribute'} textarea`);
+                    for(var i = 0; i < controls.length; i++){
+						controls[i].addEventListener('blur', handleFormStart);
+					}
+                }
+                const submitText = document.querySelector('#mktoForm_${banner.formID @ context='attribute'} .mktoButton').innerText;
+                mktoForm.onSuccess(function (vals, tyURL) {
+                    window.adobeDataLayer.push({
+                        event: 'formSubmit',
+                        xdm: {
+                            form: {
+                                formName: document.getElementById(`mktoForm_${banner.formID @context = 'attribute'
+                }`).parentElement.parentElement.querySelector('h5').innerText,
+                                marketoUserToken: ${banner.formID @context = 'attribute'
+                }
+                            }
+                        }
+                    });
+            window.dataLayer.push({ event: 'request_quote' });
+            document.querySelector('#marketoFormRequestQuote_alert').classList.remove('hide');
+            setTimeout(function () {
+                document.querySelector('#bdb-request-quote-form-modal .modal-content .close').click();
+                const formElement = mktoForm.getFormElem()[0];
+
+                formElement.reset();
+
+                document.querySelector('#mktoForm_${banner.formID @ context='attribute'} .mktoButton').removeAttribute('disabled');
+                document.querySelector('#mktoForm_${banner.formID @ context='attribute'} .mktoButton').innerText = submitText ? submitText : 'Submit';
+
+                document.querySelector('#marketoFormRequestQuote_alert').classList.add('hide');
+            }, 5000);
+            return false;
+                });
+            mktoForm.onValidate(function (isValid) {
+                if (!isValid) {
+                    let errorList = [...document.getElementsByClassName("mktoInvalid")];
+                    let errorField = [];
+                    errorList.forEach(element => {
+                        if (element.getAttribute('name')) {
+                            errorField.push({ value: element.getAttribute('name') });
+                        } else {
+                            errorField.push({ value: 'Terms and Condition' });
+                        }
+                    });
+                    window.adobeDataLayer.push({
+                        event: 'formError',
+                        xdm: {
+                            form: {
+                                formName: document.getElementById(`mktoForm_${banner.formID @context = 'attribute'
+                }`).parentElement.parentElement.querySelector('h5').innerText,
+                                formErrors: errorField,
+                                marketoUserToken: ${banner.formID @context = 'attribute'
+                }
+            }
+                        }
+                    });
+                }
+            });
+            if (marketoForms) {
+                marketoForms.customBdStyles('${banner.formID @ context='attribute'}');
+            }
+            });
+        </script>
+    </sly>
+    <sly data-sly-test="${modalCTASecondary}">
+        <script>
+            MktoForms2.loadForm('${banner.rootURLSec @ context='attribute'}', '${banner.munchkinIDSec @ context='attribute'}', ${ banner.formIDSec @context = 'attribute'});
+            window.adobeDataLayer.push({
+                event: 'formView',
+                xdm: {
+                    form: {
+                        formName: document.getElementById(`mktoForm_${banner.formIDSec @context = 'attribute'
+                }`).parentElement.parentElement.querySelector('h5').innerText,
+                        marketoUserToken: ${banner.formIDSec @context = 'attribute'
+                }
+                    }
+                }
+            });
+            MktoForms2.whenReady(function (mktoForm) {
+                if (marketoForms) {
+                    marketoForms.destyleMktoForm(mktoForm);
+                }
+                function handleFormStart() {
+                    window.adobeDataLayer.push({
+                        event: 'formStart',
+                        xdm: {
+                            form: {
+                                formName: document.getElementById(`mktoForm_${banner.formID @context = 'attribute'
+                        }`).parentElement.parentElement.querySelector('h5').innerText,
+                                marketoUserToken: ${banner.formID @context = 'attribute'
+                        }
+                            }
+                        }
+                    });
+                    for(var i = 0; i < controls.length;i++){
+                        controls[i].removeEventListener('blur', handleFormStart);
+                	}
+                }
+                if(mktoForm.getId() == '${banner.formID @ context='attribute'}'){
+                	var controls = document.querySelectorAll(`#mktoForm_${banner.formID @context = 'attribute'} input, #mktoForm_${banner.formID @context = 'attribute'} select, #mktoForm_${banner.formID @context = 'attribute'} textarea`);
+                    for(var i = 0; i < controls.length; i++){
+						controls[i].addEventListener('blur', handleFormStart);
+					}
+                }
+                const submitText = document.querySelector('#mktoForm_${banner.formIDSec @ context='attribute'} .mktoButton').innerText;
+                mktoForm.onSuccess(function (vals, tyURL) {
+                    window.adobeDataLayer.push({
+                        event: 'formSubmit',
+                        xdm: {
+                            form: {
+                                formName: document.getElementById(`mktoForm_${banner.formIDSec @context = 'attribute'
+                }`).parentElement.parentElement.querySelector('h5').innerText,
+                                marketoUserToken: ${banner.formIDSec @context = 'attribute'
+                }
+                            }
+                        }
+                    });
+            window.dataLayer.push({ event: 'request_quote' });
+            document.querySelector('#marketoFormRequestQuote_alert').classList.remove('hide');
+            setTimeout(function () {
+                document.querySelector('#bdb-request-quote-form-modal .modal-content .close').click();
+                const formElement = mktoForm.getFormElem()[0];
+
+                formElement.reset();
+
+                document.querySelector('#mktoForm_${banner.formIDSec @ context='attribute'} .mktoButton').removeAttribute('disabled');
+                document.querySelector('#mktoForm_${banner.formIDSec @ context='attribute'} .mktoButton').innerText = submitText ? submitText : 'Submit';
+
+                document.querySelector('#marketoFormRequestQuote_alert').classList.add('hide');
+            }, 5000);
+            return false;
+                });
+            mktoForm.onValidate(function (isValid) {
+                if (!isValid) {
+                    let errorList = [...document.getElementsByClassName("mktoInvalid")];
+                    let errorField = [];
+                    errorList.forEach(element => {
+                        if (element.getAttribute('name')) {
+                            errorField.push({ value: element.getAttribute('name') });
+                        } else {
+                            errorField.push({ value: 'Terms and Condition' });
+                        }
+                    });
+                    window.adobeDataLayer.push({
+                        event: 'formError',
+                        xdm: {
+                            form: {
+                                formName: document.getElementById(`mktoForm_${banner.formIDSec @context = 'attribute'
+                }`).parentElement.parentElement.querySelector('h5').innerText
+                                formErrors: errorField,
+                                marketoUserToken: ${banner.formIDSec @context = 'attribute'
+                }
+            }
+                        }
+                    });
+                }
+            });
+            if (marketoForms) {
+                marketoForms.customBdStyles('${banner.formIDSec @ context='attribute'}');
+            }
+            });
+        </script>
+    </sly>
+</sly>

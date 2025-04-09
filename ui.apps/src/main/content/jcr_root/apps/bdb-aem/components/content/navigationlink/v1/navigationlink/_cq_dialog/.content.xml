@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0"
+          jcr:primaryType="nt:unstructured"
+          jcr:title="Navigation Link"
+          sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="granite/ui/components/coral/foundation/container">
+        <items jcr:primaryType="nt:unstructured">
+            <tabs
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/tabs"
+                maximized="{Boolean}false">
+                <items jcr:primaryType="nt:unstructured">
+                <navigationLinkTab
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Navigation Title and Links"
+                    sling:resourceType="granite/ui/components/coral/foundation/container"
+                    margin="{Boolean}true">
+                    <items jcr:primaryType="nt:unstructured">
+                        <column
+                             jcr:primaryType="nt:unstructured"
+                             sling:resourceType="granite/ui/components/coral/foundation/container">
+                            <items jcr:primaryType="nt:unstructured">
+                                <navigationLinksFieldSet
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="Navigation Title and Links"
+                                    sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                                    <items jcr:primaryType="nt:unstructured">
+                                        <navigationLinksMultifield
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                            composite="{Boolean}true"
+                                            fieldDescription="Author Navigation Links and Titles"
+                                            fieldLabel="Author Titles and Links">
+                                            <granite:data
+                                                jcr:primaryType="nt:unstructured"
+                                                max-items="6"/>
+                                            <field
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/container"
+                                                name="./navigationLinksMultifield">
+                                                <items jcr:primaryType="nt:unstructured">
+                                                <label
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldLabel="Title"
+                                                    fieldDescription="Author Title for the Navigation Link"
+                                                    required="{Boolean}true"
+                                                    name="./label"/>
+                                                <path
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                                                    rootPath="/content/bdb"
+                                                    fieldLabel="URL"
+                                                    fieldDescription="Author Link/URL for the Navigation Link"
+                                                    required="{Boolean}true"
+                                                    name="./path"/>
+                                                </items>
+                                            </field>
+                                        </navigationLinksMultifield>
+                                    </items>
+                                </navigationLinksFieldSet>
+                            </items>
+                        </column>
+                    </items>
+                </navigationLinkTab>
+                </items>
+            </tabs>
+        </items>
+    </content>
+</jcr:root>

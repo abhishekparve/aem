@@ -1,0 +1,372 @@
+{
+    "addresses": [
+        {
+            "country": {
+                "isocode": "US"
+            },
+            "shipTo": "12344",
+            "billTo": "456767",
+            "shipToName": "Akiro",
+            "billToName": "Akiro",
+            "canAddressBeDefault": false,
+            "organizationName": "Akiro",
+            "shippingAddress": true,
+            "billingAddress": false,
+            "defaultAddress": true,
+            "favouriteAddress": true,
+            "nickName": "Akiro 1",
+            "department": "test",
+            "building": "Akiro",
+            "floor": "2",
+            "room": "212",
+            "district": "district",
+            "formattedAddress": "3000 Lombard Street, California, San Francisco, 94123",
+            "addressId": "1001648546",
+            "line1": "3000 Lombard Street",
+            "postalCode": "94123",
+            "phone": "9412323123",
+            "region": {
+                "isocode": "US-CA"
+            },
+            "town": "San Francisco"
+        },
+        {
+            "country": {
+                "isocode": "US"
+            },
+            "shipTo": "123445",
+            "billTo": "4567673",
+            "shipToName": "Akiro one",
+            "billToName": "Akiro one",
+            "canAddressBeDefault": true,
+            "organizationName": "Akiro LTD",
+            "shippingAddress": true,
+            "billingAddress": false,
+            "defaultAddress": false,
+            "favouriteAddress": true,
+            "nickName": "",
+            "department": "test",
+            "building": "Akiro",
+            "floor": "2",
+            "room": "212",
+            "district": "district",
+            "formattedAddress": "3000 Lombard Street, California, San Francisco, 94123",
+            "addressId": "87961258229991",
+            "line1": "3000 Lombard Street newyork",
+            "postalCode": "941235",
+            "phone": "9334523467",
+            "region": {
+                "isocode": "US-CA"
+            },
+            "town": "Newyork"
+        },
+        {
+            "country": {
+                "isocode": "US"
+            },
+            "shipTo": "123445",
+            "billTo": "4567673",
+            "shipToName": "Akiro one",
+            "billToName": "Akiro one",
+            "canAddressBeDefault": true,
+            "organizationName": "Akiro LTD",
+            "shippingAddress": true,
+            "billingAddress": false,
+            "defaultAddress": false,
+            "favouriteAddress": true,
+            "nickName": "Akiro 2",
+            "department": "test",
+            "building": "Akiro",
+            "floor": "2",
+            "room": "212",
+            "district": "district",
+            "formattedAddress": "3000 Lombard Street, California, San Francisco, 94123",
+            "addressId": "87961258229992",
+            "line1": "3000 Lombard Street newyork",
+            "postalCode": "941235",
+            "phone": "9334523467",
+            "region": {
+                "isocode": "US-CA"
+            },
+            "town": "Newyork"
+        },
+        {
+            "country": {
+                "isocode": "US"
+            },
+            "shipTo": "123445",
+            "billTo": "4567673",
+            "shipToName": "Akiro one",
+            "billToName": "Akiro one",
+            "canAddressBeDefault": true,
+            "organizationName": "Akiro LTD",
+            "shippingAddress": true,
+            "billingAddress": false,
+            "defaultAddress": false,
+            "favouriteAddress": true,
+            "nickName": "Akiro 3",
+            "department": "test",
+            "building": "Akiro",
+            "floor": "2",
+            "room": "212",
+            "district": "district",
+            "formattedAddress": "3000 Lombard Street, California, San Francisco, 94123",
+            "addressId": "8796125822993",
+            "line1": "3000 Lombard Street newyork",
+            "postalCode": "941235",
+            "phone": "9334523467",
+            "region": {
+                "isocode": "US-CA"
+            },
+            "town": "Newyork"
+        },
+        {
+            "country": {
+                "isocode": "US"
+            },
+            "shipTo": "123445",
+            "billTo": "4567673",
+            "shipToName": "Akiro one",
+            "billToName": "Akiro one",
+
+            "organizationName": "Akiro LTD",
+            "canAddressBeDefault": true,
+            "shippingAddress": true,
+            "billingAddress": false,
+            "defaultAddress": false,
+            "favouriteAddress": true,
+            "nickName": "Akiro 4",
+            "department": "test",
+            "building": "Akiro",
+            "floor": "2",
+            "room": "212",
+            "district": "district",
+            "formattedAddress": "3000 Lombard Street, California, San Francisco, 94123",
+            "addressId": "87961258229994",
+            "line1": "3000 Lombard Street newyork",
+            "postalCode": "941235",
+            "phone": "9334523467",
+            "region": {
+                "isocode": "US-CA"
+            },
+            "town": "Newyork"
+        },
+        {
+            "country": {
+                "isocode": "US"
+            },
+            "shipTo": "123445",
+            "billTo": "4567673",
+            "shipToName": "Akiro one",
+            "billToName": "Akiro one",
+
+            "organizationName": "Akiro LTD",
+            "canAddressBeDefault": false,
+            "shippingAddress": true,
+            "billingAddress": false,
+            "defaultAddress": false,
+            "favouriteAddress": false,
+            "nickName": "Akiro 5",
+            "department": "test",
+            "building": "Akiro",
+            "floor": "2",
+            "room": "212",
+            "district": "district",
+            "formattedAddress": "3000 Lombard Street, California, San Francisco, 94123",
+            "addressId": "87961258229995",
+            "line1": "3000 Lombard Street newyork",
+            "postalCode": "941235",
+            "phone": "9334523467",
+            "region": {
+                "isocode": "US-CA"
+            },
+            "town": "Newyork"
+        },
+        {
+            "country": {
+                "isocode": "US"
+            },
+            "shipTo": "123445",
+            "billTo": "4567673",
+            "shipToName": "Akiro one",
+            "billToName": "Akiro one",
+
+            "organizationName": "Akiro LTD",
+            "shippingAddress": false,
+            "canAddressBeDefault": false,
+            "billingAddress": true,
+            "defaultAddress": false,
+            "favouriteAddress": true,
+            "nickName": "Akiro 6",
+            "department": "test",
+            "building": "Akiro",
+            "floor": "2",
+            "room": "212",
+            "district": "district",
+            "formattedAddress": "3000 Lombard Street, California, San Francisco, 94123",
+            "addressId": "87961258229996",
+            "line1": "3000 Lombard Street newyork",
+            "postalCode": "941235",
+            "phone": "9334523467",
+            "region": {
+                "isocode": "US-CA"
+            },
+            "town": "Newyork"
+        },
+        {
+            "country": {
+                "isocode": "US"
+            },
+            "shipTo": "123445",
+            "billTo": "4567673",
+            "shipToName": "Akiro one",
+            "billToName": "Akiro one",
+
+            "organizationName": "Akiro LTD",
+            "shippingAddress": false,
+            "billingAddress": true,
+            "canAddressBeDefault": true,
+            "defaultAddress": false,
+            "favouriteAddress": true,
+            "nickName": "Akiro 7",
+            "department": "test",
+            "building": "Akiro",
+            "floor": "2",
+            "room": "212",
+            "district": "district",
+            "formattedAddress": "3000 Lombard Street, California, San Francisco, 94123",
+            "addressId": "87961258229997",
+            "line1": "3000 Lombard Street newyork",
+            "postalCode": "941235",
+            "phone": "9334523467",
+            "region": {
+                "isocode": "US-CA"
+            },
+            "town": "Newyork"
+        },
+        {
+            "country": {
+                "isocode": "US"
+            },
+            "shipTo": "123445",
+            "billTo": "4567673",
+            "shipToName": "Akiro one",
+            "billToName": "Akiro one",
+
+            "organizationName": "Akiro LTD",
+            "shippingAddress": false,
+            "canAddressBeDefault": true,
+            "billingAddress": true,
+            "defaultAddress": false,
+            "favouriteAddress": false,
+            "nickName": "Akiro 8",
+            "department": "test",
+            "building": "Akiro",
+            "floor": "2",
+            "room": "212",
+            "district": "district",
+            "formattedAddress": "3000 Lombard Street, California, San Francisco, 94123",
+            "addressId": "87961258229998",
+            "line1": "3000 Lombard Street newyork",
+            "postalCode": "941235",
+            "phone": "9334523467",
+            "region": {
+                "isocode": "US-CA"
+            },
+            "town": "Newyork"
+        },
+        {
+            "country": {
+                "isocode": "US"
+            },
+            "shipTo": "123445",
+            "billTo": "4567673",
+            "shipToName": "Akiro one",
+            "billToName": "Akiro one",
+
+            "organizationName": "Akiro LTD",
+            "canAddressBeDefault": true,
+            "shippingAddress": false,
+            "billingAddress": true,
+            "defaultAddress": false,
+            "favouriteAddress": false,
+            "nickName": "Akiro 9",
+            "department": "test",
+            "building": "Akiro",
+            "floor": "2",
+            "room": "212",
+            "district": "district",
+            "formattedAddress": "3000 Lombard Street, California, San Francisco, 94123",
+            "addressId": "87961258229999",
+            "line1": "3000 Lombard Street newyork",
+            "postalCode": "941235",
+            "phone": "9334523467",
+            "region": {
+                "isocode": "US-CA"
+            },
+            "town": "Newyork"
+        },
+        {
+            "country": {
+                "isocode": "US"
+            },
+            "shipTo": "123445",
+            "billTo": "4567673",
+            "shipToName": "Akiro one",
+            "billToName": "Akiro one",
+
+            "organizationName": "Akiro LTD",
+            "canAddressBeDefault": true,
+            "shippingAddress": false,
+            "billingAddress": true,
+            "defaultAddress": false,
+            "favouriteAddress": true,
+            "nickName": "Akiro 10",
+            "department": "test",
+            "building": "Akiro",
+            "floor": "2",
+            "room": "212",
+            "district": "district",
+            "formattedAddress": "3000 Lombard Street, California, San Francisco, 94123",
+            "addressId": "87961258229967",
+            "line1": "3000 Lombard Street newyork",
+            "postalCode": "941235",
+            "phone": "9334523467",
+            "region": {
+                "isocode": "US-CA"
+            },
+            "town": "Newyork"
+        },
+        {
+            "country": {
+                "isocode": "US"
+            },
+            "shipTo": "123445",
+            "billTo": "4567673",
+            "shipToName": "Akiro one",
+            "billToName": "Akiro one",
+            "canAddressBeDefault": true,
+            "organizationName": "Akiro LTD no district",
+            "shippingAddress": false,
+            "billingAddress": true,
+            "defaultAddress": false,
+            "favouriteAddress": false,
+            "nickName": "Akiro 11",
+            "department": "test",
+            "building": "Akiro",
+            "floor": "2",
+            "room": "212",
+            "formattedAddress": "3000 Lombard Street, California, San Francisco, 94123",
+            "addressId": "879612582296899",
+            "line1": "3000 Lombard Street newyork",
+            "postalCode": "941235",
+            "phone": "9334523467",
+            "region": {
+                "isocode": "US-CA"
+            },
+            "town": "Newyork",
+            "line2": "address line 2",
+            "status": "PENDING_APPROVAL"
+        }
+    ]
+}

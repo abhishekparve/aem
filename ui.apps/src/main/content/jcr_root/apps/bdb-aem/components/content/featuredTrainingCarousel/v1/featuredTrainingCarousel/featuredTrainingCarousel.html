@@ -1,0 +1,25 @@
+<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html"
+     data-sly-call="${templates.placeholder @ isEmpty = true}"></sly>
+
+<sly data-sly-use.featuredTrainingCarouselModel="com.bdb.aem.core.models.FeaturedTrainingCarouselModel">
+    <article class="training-featured-carousel app-js__training-featured-carousel research-reagents ${properties.togglePaddingTop?'pt-2':''} ${properties.togglePaddingBottom?'pb-2':''}">
+    <div class="training-featured-carousel__container bd-container">
+        <div data-sly-test="${featuredTrainingCarouselModel.sectionTitle}" class="training-featured-carousel__sec">${featuredTrainingCarouselModel.sectionTitle}</div>
+        <div data-sly-test="${featuredTrainingCarouselModel.title}" class="training-featured-carousel__title">${featuredTrainingCarouselModel.title @context='html'}</div>
+      <div data-sly-list.item="${featuredTrainingCarouselModel.featuredTrainingModels}" class="training-featured-carousel__carousel"
+        data-slidesInMobile="1.28">
+        <div class="training-featured-carousel__cont research-reagents">
+          <div class="training-featured-carousel__cont__slides d-flex flex-column research-reagents-mobile text-center mx-auto">
+            <div class="training-featured-carousel__cont__img-container mx-auto">
+              <a data-sly-test="${featuredTrainingCarouselModel.commonCtaPath}" href="${featuredTrainingCarouselModel.commonCtaPath}">
+                <img data-sly-test="${item.miniThumbnailImage}" class="m-auto" src="${item.miniThumbnailImage}" alt="${item.miniThumbnailAltText}">
+              </a>
+            </div>
+            <a data-sly-test="${item.title}" class="training-featured-carousel__cont__slides_title" href="${featuredTrainingCarouselModel.commonCtaPath}">${item.title @context='html'}</a>
+            <a data-sly-test="${featuredTrainingCarouselModel.commonCtaLabel && featuredTrainingCarouselModel.commonCtaPath}" class="btn btn-primary-blue training-featured-carousel__cont__slides_btn" tabindex="0" href="${featuredTrainingCarouselModel.commonCtaPath}">${featuredTrainingCarouselModel.commonCtaLabel @context='html'}</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
+</sly>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:WorkflowLauncher"
+    condition=""
+    conditions="[dam:assetState==processed]"
+    description="This will process the Images dropped in temp-assets folder"
+    disabledFeatures="[]"
+    enabled="{Boolean}true"
+    eventType="{Long}16"
+    excludeList="cq:lastModified,cq:lastModifiedBy,cq:lastReplicatedBy,cq:lastReplicationAction,jcr:created,jcr:createdBy,jcr:versionHistory,dam:processingId,dam:processingRenditions,dam:processingRequestedDate,dam:runPostProcess"
+    features="[]"
+    glob="/content/dam/bdb/temp-assets/images/.*"
+    nodetype="dam:AssetContent"
+    runModes="author"
+    workflow="/var/workflow/models/product-image-processing"/>

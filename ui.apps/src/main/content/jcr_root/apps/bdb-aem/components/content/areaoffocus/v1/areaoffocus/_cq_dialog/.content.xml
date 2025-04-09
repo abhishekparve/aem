@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0"
+          xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+          jcr:primaryType="nt:unstructured"
+          jcr:title="Area of Focus"
+          sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="granite/ui/components/coral/foundation/container">
+        <items jcr:primaryType="nt:unstructured">
+            <tabs
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/coral/foundation/tabs"
+                    maximized="{Boolean}false">
+                <items jcr:primaryType="nt:unstructured">
+                    <industryRoleInterest
+                        jcr:primaryType="nt:unstructured"
+                                jcr:title="Industry-Role-Interest"
+                                sling:resourceType="granite/ui/components/coral/foundation/container"
+                                margin="{Boolean}true">
+                                <items jcr:primaryType="nt:unstructured">
+                                <columns
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                                        margin="{Boolean}true">
+                                        <items jcr:primaryType="nt:unstructured">
+                                        <column
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                                <items jcr:primaryType="nt:unstructured">
+                                                        <industryTitle
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="Industry Title"
+                                                                name="./industryTitle"/>
+                                                        <industryDescription
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="Industry Description"
+                                                                name="./industryDescription"/>
+                                                        <industrySelectionText
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="Industry Selection Text"
+                                                                name="./industrySelectionText"/>
+
+                                                        <roleTitle
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="Role Title"
+                                                                name="./roleTitle"/>
+                                                        <roleDescription
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="Role Description"
+                                                                name="./roleDescription"/>
+                                                        <roleSelectionText
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="Role Selection Text"
+                                                                name="./roleSelectionText"/>
+
+                                                        <interestTitle
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="Interest Title"
+                                                                name="./interestTitle"/>
+                                                        <interestDescription
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="Interest Description"
+                                                                name="./interestDescription"/>
+                                                        <interestSelectionText
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="Interest Selection Text"
+                                                                name="./interestSelectionText"/>
+                                                                
+                                                        <IndustryFieldSet
+                                                                jcr:primaryType="nt:unstructured"
+                                                                jcr:title="Industry"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                                                        <items jcr:primaryType="nt:unstructured">
+                                                        <multipleIndustryConfig
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                                                composite="{Boolean}true"
+                                                                fieldDescription="Add Industry"
+                                                                fieldLabel="Add Industry">
+                                                                <granite:data
+                                                                jcr:primaryType="nt:unstructured"
+                                                                max-items="50"/>
+                                                                <field
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                                                                        name="./multipleIndustryConfig">
+                                                                <items jcr:primaryType="nt:unstructured">
+                                                                        <industryLabel
+                                                                                jcr:primaryType="nt:unstructured"
+                                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                                fieldLabel="Industry Label"
+                                                                                required="{Boolean}true"
+                                                                                name="./industryLabel"/>
+                                                                        <industryCode
+                                                                                jcr:primaryType="nt:unstructured"
+                                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                                fieldLabel="Industry Code"
+                                                                                required="{Boolean}true"
+                                                                                name="./industryCode"/>                                                                       
+                                                                        
+                                                                        <roleField
+                                                                                jcr:primaryType="nt:unstructured"
+                                                                                jcr:title="Role"
+                                                                                sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                                                                                <items jcr:primaryType="nt:unstructured">                                                                                
+                                                                                        <roleMultifield
+                                                                                                jcr:primaryType="nt:unstructured"
+                                                                                                sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                                                                                composite="{Boolean}true"
+                                                                                                fieldDescription="Role Multifield"
+                                                                                                fieldLabel="Add Role">
+                                                                                                <granite:data
+                                                                                                jcr:primaryType="nt:unstructured"
+                                                                                                max-items="50"/>
+                                                                                                <field
+                                                                                                        jcr:primaryType="nt:unstructured"
+                                                                                                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                                                                                                        name="./roleMultifield">
+                                                                                                        <items jcr:primaryType="nt:unstructured">
+                                                                                                                <roleLabel
+                                                                                                                        jcr:primaryType="nt:unstructured"
+                                                                                                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                                                                        fieldLabel="Role Label"
+                                                                                                                        required="{Boolean}true"
+                                                                                                                        name="./roleLabel"/>
+                                                                                                                <roleCode
+                                                                                                                        jcr:primaryType="nt:unstructured"
+                                                                                                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                                                                        fieldLabel="Role Code"
+                                                                                                                        required="{Boolean}true"
+                                                                                                                        name="./roleCode"/>                                                                                        
+                                                                                                        </items>
+                                                                                                </field>
+                                                                                        </roleMultifield>
+                                                                                </items>
+                                                                        </roleField>
+                                                                        <interestField
+                                                                                jcr:primaryType="nt:unstructured"
+                                                                                jcr:title="Interest"
+                                                                                sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                                                                                <items jcr:primaryType="nt:unstructured">                                                                                
+                                                                                        <interestMultifield
+                                                                                                jcr:primaryType="nt:unstructured"
+                                                                                                sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                                                                                composite="{Boolean}true"
+                                                                                                fieldDescription="Interest Multifield"
+                                                                                                fieldLabel="Add Interest">
+                                                                                                <granite:data
+                                                                                                jcr:primaryType="nt:unstructured"
+                                                                                                max-items="50"/>
+                                                                                                <field
+                                                                                                        jcr:primaryType="nt:unstructured"
+                                                                                                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                                                                                                        name="./interestMultifield">
+                                                                                                        <items jcr:primaryType="nt:unstructured">
+                                                                                                                <interestLabel
+                                                                                                                        jcr:primaryType="nt:unstructured"
+                                                                                                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                                                                        fieldLabel="Interest Label"
+                                                                                                                        required="{Boolean}true"
+                                                                                                                        name="./interestLabel"/>
+                                                                                                                <interestCode
+                                                                                                                        jcr:primaryType="nt:unstructured"
+                                                                                                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                                                                        fieldLabel="Interest Code"
+                                                                                                                        required="{Boolean}true"
+                                                                                                                        name="./interestCode"/>
+                                                                                                                                
+                                                                                                        </items>
+                                                                                                </field>
+                                                                                        </interestMultifield>
+                                                                                </items>
+                                                                        </interestField>
+                                                                </items>
+                                                                </field>
+                                                        </multipleIndustryConfig>
+                                                        </items>
+                                                        </IndustryFieldSet>
+                                                </items>
+                                        </column>
+                                        </items>
+                                </columns>
+                                </items>
+                    </industryRoleInterest>
+                    <navigationLabels
+                       jcr:primaryType="nt:unstructured"
+                            jcr:title="Navigation Labels"
+                            sling:resourceType="granite/ui/components/coral/foundation/container"
+                            margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <columns
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                                    margin="{Boolean}true">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <column
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/container">
+                                        <items jcr:primaryType="nt:unstructured">
+                                                <nextIndustryButtonLabel
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                        fieldLabel="Next Button for Industry - Label"
+                                                        name="./nextIndustryButtonLabel"/>
+                                                <skipIndustryLinkLabel
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                        fieldLabel="Skip Link for Industry - Label"
+                                                        name="./skipIndustryLinkLabel"/>
+                                                <backRoleButtonLabel
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                        fieldLabel="Back Button for Role - Label"
+                                                        name="./backRoleButtonLabel"/>
+                                                <nextRoleButtonLabel
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                        fieldLabel="Next Button for Role - Label"
+                                                        name="./nextRoleButtonLabel"/>
+                                                <backInterestButtonLabel
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                        fieldLabel="Back Button for Interest - Label"
+                                                        name="./backInterestButtonLabel"/>
+                                                <nextInterestButtonLabel
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                        fieldLabel="Next Button for Interest - Label"
+                                                        name="./nextInterestButtonLabel"/>
+
+                                        </items>
+                                    </column>
+                                </items>
+                                </columns>
+                        </items>
+                    </navigationLabels>
+                </items>
+            </tabs>
+        </items>
+    </content>
+</jcr:root>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2020-02-10T17:04:20.219+05:30"
+        cq:lastModifiedBy="admin"
+        jcr:primaryType="nt:unstructured"
+        jcr:title="Sri Lanka"
+        sling:resourceType="acs-commons/components/utilities/genericlist"
+            value="LK">
+        <image
+            jcr:primaryType="nt:unstructured"
+            fileReference="/apps/acs-commons/components/utilities/genericlist/generic-list.png"/>
+        <list jcr:primaryType="nt:unstructured">
+            <item0
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Western Province"
+                value="LK-1"/>
+            <item1
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Central Province"
+                value="LK-2"/>
+            <item2
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Southern Province"
+                value="LK-3"/>
+            <item3
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Uva Province"
+                value="LK-8"/>
+            <item4
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Sabaragamuwa Province"
+                value="LK-9"/>
+            <item5
+                jcr:primaryType="nt:unstructured"
+                jcr:title="North Western Province"
+                value="LK-6"/>
+            <item6
+                jcr:primaryType="nt:unstructured"
+                jcr:title="North Central Province"
+                value="LK-7"/>
+            <item7
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Northern Province"
+                value="LK-4"/>
+            <item8
+                 jcr:primaryType="nt:unstructured"
+                 jcr:title="Eastern Province"
+                 value="LK-5"/>
+        </list>
+    </jcr:content>
+</jcr:root>

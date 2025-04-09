@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Grid Component"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+        <items jcr:primaryType="nt:unstructured">
+            <column
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/container">
+                <items jcr:primaryType="nt:unstructured">
+                    <togglePaddingTop
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/switch"
+                        checked="{Boolean}false"
+                        fieldLabel="Reduce Top Padding"
+                        fieldDescription="Switch between Default Padding (Off) and Reduced Padding (On)"
+                        name="./togglePaddingTop"/>               
+                    <title
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldLabel="Title"
+						maxlength="255"
+                        name="./gridComponentTitle"/>
+                    <description
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="cq/gui/components/authoring/dialog/richtext"
+                        fieldLabel="Description"
+                        name="./gridComponentDescription"
+                        useFixedInlineToolbar="{Boolean}true">
+                        <rtePlugins
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceSuperType="/apps/bdb-aem/components/authoring/dialog/richtext/rtePlugins"/>
+                        <uiSettings
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceSuperType="/apps/bdb-aem/components/authoring/dialog/richtext/uiSettings"/>
+						<granite:data
+							jcr:primaryType="nt:unstructured"
+							char-limit="255"/>
+                    </description>
+                    <cells
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                        composite="{Boolean}true"
+                        eaem-show-on-collapse="EAEM.showProductName"
+                        fieldLabel="Product Cells">
+                        <granite:data
+                            jcr:primaryType="nt:unstructured"
+                            max-items="3"/>
+                        <field
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/container"
+                            name="./cells">
+                            <items jcr:primaryType="nt:unstructured">
+                                <column
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/container">
+                                    <items jcr:primaryType="nt:unstructured">
+                                        <productImage
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                            fieldLabel="Product Image Path"
+                                            name="./productImage"
+                                            rootPath="/content/dam"/>
+                                         <imageLinkUrl
+											jcr:primaryType="nt:unstructured"
+											sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+											fieldDescription="Image Link URL"
+											fieldLabel="Image Link URL"
+											name="./imageLinkUrl"
+											rootPath="/content"/>
+										<openNewImageLinkTab
+											jcr:primaryType="nt:unstructured"
+											sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+											fieldDescription="Check to open link in New Tab. By default, link opens in same tab."
+											name="./openNewImageLinkTab"
+											text="Open Link in New Tab"
+											uncheckedValue="{Boolean}false"
+											value="{Boolean}true"/>
+                                        <altImage
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            fieldLabel="Product Image Alt Text"
+                                            name="./altImage"/>
+                                        <productTitle
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            fieldLabel="Product Title"
+											maxlength="255"
+                                            name="./productTitle"/>
+                                        <productDescription
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="cq/gui/components/authoring/dialog/richtext"
+                                            fieldLabel="Product Description"
+                                            name="./productDescription"
+                                            useFixedInlineToolbar="{Boolean}true">
+                                            <rtePlugins
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceSuperType="/apps/bdb-aem/components/authoring/dialog/richtext/rtePlugins"/>
+                                            <uiSettings
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceSuperType="/apps/bdb-aem/components/authoring/dialog/richtext/uiSettings"/>
+                                            <granite:data
+                                                jcr:primaryType="nt:unstructured"
+                                                char-limit="255"/>
+                                        </productDescription>
+                                        <buttonURL
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                            fieldLabel="Product Button URL"
+                                            name="./buttonURL"
+                                            rootPath="/content/bdb"/>
+                                        <buttonLabel
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            fieldLabel="Product Button Label"
+                                            name="./buttonLabel"/>
+                                    </items>
+                                </column>
+                            </items>
+                        </field>
+                    </cells>
+                    <quote
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldLabel="Quote"
+						maxlength="255"
+                        name="./gridComponentQuote"/>
+                </items>
+            </column>
+        </items>
+    </content>
+</jcr:root>

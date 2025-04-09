@@ -1,0 +1,16 @@
+// Configuration created by Apache Sling JCR Installer
+{
+  "servlet.name":"",
+  "sling.max.record.requests:Integer":20,
+  "sling.serverinfo":"Apache Sling",
+  "sling.store.pattern.requests":[
+    ""
+  ],
+  "sling.additional.response.headers":[
+    "X-Content-Type-Options=nosniff",
+    "X-Frame-Options=SAMEORIGIN"
+  ],
+  "sling.max.calls:Integer":3000,
+  "sling.trace.allow":false,
+  "sling.max.inclusions:Integer":50
+}

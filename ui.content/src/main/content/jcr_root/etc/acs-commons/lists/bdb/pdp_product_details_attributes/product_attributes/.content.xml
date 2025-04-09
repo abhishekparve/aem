@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="nt:unstructured"
+        jcr:title="Product Attributes"
+        jcr:uuid="cdfb30f6-54c6-47e4-b049-4ea91cd2ec4c"
+        sling:resourceType="acs-commons/components/utilities/genericlist">
+        <image
+            jcr:primaryType="nt:unstructured"
+            fileReference="/apps/acs-commons/components/utilities/genericlist/generic-list.png"/>
+        <list jcr:primaryType="nt:unstructured">
+            <item0
+                jcr:primaryType="nt:unstructured"
+                jcr:title=""
+                value=""/>
+            <item1
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Brand"
+                value="brand"/>
+            <item2
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Sequence ID"
+                value="seqId"/>
+            <item3
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Concentration"
+                value="concentration"/>
+            <item4
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Workshop Number"
+                value="workshopNumber"/>
+            <item5
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Entrez Gene ID"
+                value="entrezGeneId"/>
+            <item6
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Regulatory Status"
+                value="regulatoryStatus"/>
+            <item7
+                jcr:primaryType="nt:unstructured"
+                jcr:title="RRID"
+                value="rrid"/>
+            <item8
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Storage Buffer"
+                value="storageBuffer"/>
+            <item9
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Assay Range"
+                value="assayRange"/>
+            <item10
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Alternative Name"
+                value="alternativeName"/>
+            <item11
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Neutralization Activity"
+                value="neutralizationActivity"/>
+            <item12
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Toxicity"
+                value="toxicity"/>
+            <item13
+                jcr:primaryType="nt:unstructured"
+                jcr:title="IVD"
+                value="ivd"/>
+            <item14
+                jcr:primaryType="nt:unstructured"
+                jcr:title="IVD Registered Name"
+                value="ivdRegisteredName"/>
+            <item15
+                jcr:primaryType="nt:unstructured"
+                jcr:title="CFDA License Number"
+                value="cfdaLicenseNumber"/>
+            <item16
+                jcr:primaryType="nt:unstructured"
+                jcr:title="KFDA License Number"
+                value="kfdaLicenseNumber"/>
+            <item17
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Product Name"
+                value="productName"/>
+            <item18
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Model Name"
+                value="modelName"/>
+            <item19
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Country Of Origin"
+                value="countryOfOrigin"/>
+            <item20
+                jcr:primaryType="nt:unstructured"
+                jcr:title="AD Review Number"
+                value="adReviewNumber"/>
+            <item21
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Target Molecular Weight"
+                value="targetMW"/>
+            <item22
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Reactivity"
+                value="speciesReactivity"/>
+            <item23
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Doc Part ID"
+                value="docPartIds"/>
+            <item24
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Isotype"
+                value="isoType"/>
+            <item25
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Immunogen"
+                value="immunogen"/>
+            <item26
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Application"
+                value="productApplicationTest"/>
+            <item27
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Molecular Weight"
+                value="molecularWeight"/>
+            <item28
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Bead Position"
+                value="beadPosition"/>
+            <item29
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Barcode Sequence"
+                value="barcodeSequence"/>
+            <item30
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Host Species"
+                value="hostSpecies"/>
+            <item31
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Volume Per Test"
+                value="volPerTest"/>
+            <item32
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Portugal"
+                value="PT"/>
+        </list>
+    </jcr:content>
+</jcr:root>

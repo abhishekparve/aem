@@ -1,0 +1,6 @@
+{
+  "scheduledpurge.workflowStatus":"COMPLETED",
+  "scheduledpurge.name":"Generic Workflow Purge",
+  "scheduledpurge.daysold:Integer":30,
+  "scheduledpurge.modelIds":[]
+}

@@ -1,0 +1,27 @@
+<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html"
+     data-sly-call="${templates.placeholder @ isEmpty = true}"></sly>
+
+<sly data-sly-use.scientificResourcesModel="com.bdb.aem.core.models.ScientificResourcesLibraryModel">
+     <script>
+          if (typeof window.AEM_DATA === 'undefined') {
+               window.AEM_DATA = {};
+          }
+          if (typeof window.AEM_DATA.labels === 'undefined') {
+               window.AEM_DATA.labels = {};
+          }
+          window.AEM_DATA.labels.scientificResourcesLabel = ${scientificResourcesModel.scientificResourcesLabel || '{}' @context='scriptComment'};
+
+          if (typeof window.AEM_DATA.config === 'undefined') {
+               window.AEM_DATA.config = {};
+          }
+          if (typeof window.AEM_DATA.config.scientificResourcesConfig === 'undefined') {
+               window.AEM_DATA.config.scientificResourcesConfig = {};
+          }
+          window.AEM_DATA.config.scientificResourcesConfig.getScientificResources = ${scientificResourcesModel.scientificResourcesConfig || '{}' @context='scriptComment'};
+     </script>
+</sly>
+
+<div class="scientific-resources">
+	<bd-scientific-resources labels="scientificResourcesLabel" config="scientificResourcesConfig">
+	</bd-scientific-resources>
+</div>

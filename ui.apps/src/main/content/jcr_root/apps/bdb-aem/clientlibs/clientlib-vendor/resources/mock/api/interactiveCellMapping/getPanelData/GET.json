@@ -1,0 +1,221 @@
+{
+    "filters": [
+        {
+            "name": "Instrument Configuration",
+            "id": "instrumentConfig",
+            "multiSelect": true,
+            "filterOptions": [
+                {
+                    "key": "violet",
+                    "value": "Violet",
+                    "selected": true,
+                    "hasTooltip": false,
+                    "tooltipText": ""
+                },
+                {
+                    "key": "blue",
+                    "value": "Blue",
+                    "selected": true,
+                    "hasTooltip": false,
+                    "tooltipText": ""
+                },
+                {
+                    "key": "red",
+                    "value": "Red",
+                    "selected": true,
+                    "hasTooltip": false,
+                    "tooltipText": ""
+                },
+                {
+                    "key": "yg",
+                    "value": "YG",
+                    "selected": true,
+                    "hasTooltip": false,
+                    "tooltipText": ""
+                },
+                {
+                    "key": "uv",
+                    "value": "UV",
+                    "selected": true,
+                    "hasTooltip": false,
+                    "tooltipText": ""
+                }
+            ]
+        },
+        {
+            "name": "Panel Type",
+            "id": "panelType",
+            "multiSelect": true,
+            "filterOptions": [
+                {
+                    "key": "mvpanel",
+                    "value": "Multi-vial panel",
+                    "selected": true,
+                    "hasTooltip": true,
+                    "tooltipText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequa"
+                },
+                {
+                    "key": "dc",
+                    "value": "Dried Cocktail",
+                    "selected": true,
+                    "hasTooltip": true,
+                    "tooltipText": "text 2"
+                },
+                {
+                    "key": "bdp",
+                    "value": "Backbone + Drop-ins panel",
+                    "selected": true,
+                    "hasTooltip": true,
+                    "tooltipText": "text 3"
+                }
+            ]
+        }
+    ],
+    "panels": [
+        {
+            "name": "Minimal spectral overlap Treg panel",
+            "panelTypeId": "mvpanel",
+            "id": "panel1",
+            "data": {
+                "reagentTables": [
+                    {
+                        "sectionTitle": "Panel Reagents",
+                        "tableHeadings": [
+                            "Laser Line",
+                            "Marker",
+                            "Fluorochrome",
+                            "Clone",
+                            "Volume per Test",
+                            "Cat. Number",
+                            "Add to Cart"
+                        ],
+                        "tbodyData": [
+                            {
+                                "title": "UV 640nm",
+                                "key": "uv",
+                                "marker": "CD3",
+                                "fluorochrome": "BUV395",
+                                "clone": "UCHT1",
+                                "volPerTest": "5 µL",
+                                "catNumber": "",
+                                "productUrl": "/{language-country}/products/reagents/flow-cytometry-reagents/research-reagents/single-color-antibodies-ruo/bv510-mouse-anti-human-cd3.563109"
+                            },
+                            {
+                                "title": "Violet 405nm",
+                                "key": "violet",
+                                "marker": "CD127",
+                                "fluorochrome": "BV421",
+                                "clone": "HIL-7R-M21",
+                                "volPerTest": "5 µL",
+                                "catNumber": "",
+                                "productUrl": "/"
+                            },
+                            {
+                                "title": "Blue 488 nm",
+                                "key": "blue",
+                                "marker": "CD4",
+                                "fluorochrome": "BUV395",
+                                "clone": "SK3",
+                                "volPerTest": "5 µL",
+                                "catNumber": "566286",
+                                "productUrl": "/"
+                            },
+                            {
+                                "title": "Blue 488 nm",
+                                "key": "blue",
+                                "marker": "CD25",
+                                "fluorochrome": "BB515",
+                                "clone": "2A3",
+                                "volPerTest": "5 µL",
+                                "catNumber": "563165",
+                                "productUrl": "/"
+                            }
+                        ]
+                    }
+                ],
+                "rteData": "<div><p class='panel-accordion__table-caption'>By spreading fluorochromes across 3 lasers, this 4-color panel allows for a clear resolution of CD4+ CD127low CD25+ Tregs with virtually no spectral overlap and minimal compensation requirement.</p><div class='panel-accordion__img-section'><img src='/resources/images/modal-large.png' alt='image alt text' class='panel-accordion__img loading' data-ll-status='loading'></div><div><p class='panel-accordion__desc-title'>Figure 2. Four-color minimal spectral overlap human Treg panel on the BD FACSCelesta BVUV system</p><p class='panel-accordion__desc'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat..</p></div><div class='experimental-table panel-accordion__table'><div class='table-header-section'><p class='table-header-section__title'>Experimental Info</p></div><table class='table table-bordered'><thead><tr><th>Application</th><th>Description</th></tr></thead><tbody><tr><td class='laser-item  tbl-row__cell' rowspan='1'><span>Panel Type</span></td><td class=''>Multicolor Panel</td></tr><tr class='tbl-row'><td class='laser-item  tbl-row__cell' rowspan='2'><span>Surface Marker Stain</span></td><td class=''>PBMC Isolation</td></tr><tr class='tbl-row'><td class=''>3-Laser, 12-Color (2UV/6 violet/ 4 blue)</td></tr><tr class='tbl-row'><td class='laser-item  tbl-row__cell' rowspan='1'><span>Panel Tested on</span></td><td class=''>3-Laser, 12-Color (2UV/6 violet/ 4 blue) BD FACSCelesta</td></tr></tbody></table></div><div class='panel-accordion__table'><div class='table-header-section'><p class='table-header-section__title'>Companion Products</p></div><table class='table table-bordered'><thead><tr><th>Product</th><th>Application</th><th>Catalog Number</th></tr></thead><tbody><tr class='tbl-row'><td class='laser-item  tbl-row__cell' rowspan='1'><span>BD Horizon Brilliant Stain Buffer</span></td><td class=''>Optimal Stain Conditions</td><td class=''>563794</td></tr></tbody></table></div><a href='/' target='_blank' class='btn btn-secondary panel-accordion__learn-more'>Learn More about this Panel</a></div>"
+            }
+        },
+        {
+            "name": "Minimal spectral overlap Treg panel 1",
+            "id": "panel2",
+            "panelTypeId": "dc",
+            "data": {
+                "reagentTables": [
+                    {
+                        "sectionTitle": "Panel Reagents",
+                        "tableHeadings": [
+                            "Laser Line",
+                            "Marker",
+                            "Fluorochrome",
+                            "Clone",
+                            "Volume per Test",
+                            "Cat. Number",
+                            "Add to Cart"
+                        ],
+                        "tbodyData": [
+                            {
+                                "title": "UV 640nm",
+                                "key": "uv",
+                                "marker": "CD3",
+                                "fluorochrome": "BUV395",
+                                "clone": "UCHT1",
+                                "volPerTest": "5 µL",
+                                "catNumber": "562579",
+                                "productUrl": "/"
+                            },
+                            {
+                                "title": "Violet 405nm",
+                                "key": "violet",
+                                "marker": "CD127",
+                                "fluorochrome": "BV421",
+                                "clone": "HIL-7R-M21",
+                                "volPerTest": "5 µL",
+                                "catNumber": "56641",
+                                "productUrl": "/"
+                            },
+                            {
+                                "title": "Violet 405nm",
+                                "key": "violet",
+                                "marker": "CD4",
+                                "fluorochrome": "PerCP-Cy5.5",
+                                "clone": "SK3",
+                                "volPerTest": "5 µL",
+                                "catNumber": "566286",
+                                "productUrl": "/"
+                            },
+                            {
+                                "title": "Blue 488 nm",
+                                "key": "blue",
+                                "marker": "CD25",
+                                "fluorochrome": "BB515",
+                                "clone": "2A3",
+                                "volPerTest": "5 µL",
+                                "catNumber": "563165",
+                                "productUrl": "/"
+                            }
+                        ]
+                    }
+                ],
+                "rteData": "<div><p class='panel-accordion__table-caption'>By spreading fluorochromes across 3 lasers, this 4-color panel allows for a clear resolution of CD4+ CD127low CD25+ Tregs with virtually no spectral overlap and minimal compensation requirement.</p><div class='panel-accordion__img-section'><img src='/resources/images/modal-large.png' alt='image alt text' class='panel-accordion__img loading' data-ll-status='loading'></div><div><p class='panel-accordion__desc-title'>Figure 2. Four-color minimal spectral overlap human Treg panel on the BD FACSCelesta BVUV system</p><p class='panel-accordion__desc'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat..</p></div><div class='experimental-table panel-accordion__table'><div class='table-header-section'><p class='table-header-section__title'>Experimental Info</p></div><table class='table table-bordered'><thead><tr><th>Application</th><th>Description</th></tr></thead><tbody><tr><td class='laser-item  tbl-row__cell' rowspan='1'><span>Panel Type</span></td><td class=''>Multicolor Panel</td></tr><tr><td class='laser-item  tbl-row__cell' rowspan='2'><span>Surface Marker Stain</span></td><td class=''>PBMC Isolation</td></tr><tr><td class=''>3-Laser, 12-Color (2UV/6 violet/ 4 blue)</td></tr><tr><td class='laser-item  tbl-row__cell' rowspan='1'><span>Panel Tested on</span></td><td class=''>3-Laser, 12-Color (2UV/6 violet/ 4 blue) BD FACSCelesta</td></tr></tbody></table></div><div class='panel-accordion__table'><div class='table-header-section'><p class='table-header-section__title'>Companion Products</p></div><table class='table table-bordered'><thead><tr><th>Product</th><th>Application</th><th>Catalog Number</th></tr></thead><tbody><tr><td class='laser-item  tbl-row__cell' rowspan='1'><span>BD Horizon Brilliant Stain Buffer</span></td><td class=''>Optimal Stain Conditions</td><td class=''>563794</td></tr></tbody></table></div><a href='/' target='_blank' class='btn btn-secondary panel-accordion__learn-more'>Learn More about this Panel</a></div>"
+            }
+        },
+        {
+            "name": "BD Horizon Dri Treg Panel",
+            "panelTypeId": "bdp",
+            "data": {}
+        },
+
+        {
+            "name": "CD4+ T cell subset Panel",
+            "panelTypeId": "bdp",
+            "data": {}
+        },
+
+        {
+            "name": "Treg Backbone Panel",
+            "panelTypeId": "bdp",
+            "data": {}
+        }
+    ]
+}

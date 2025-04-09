@@ -1,0 +1,30 @@
+<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html"
+data-sly-call="${templates.placeholder @ isEmpty = true}"></sly>
+<sly data-sly-use.bdbvideo="com.bdb.aem.core.models.BDBBrightcoveVideo"></sly>
+
+<article class="brightcove-video-player app-js__brightcove-video-player ${bdbvideo.backgroundColor =='grey'?'gray-background-container':'white-background-container'} ${bdbvideo.togglePaddingTop?'pt-2':''} ${bdbvideo.togglePaddingBottom?'pb-2':''}">
+    <div class="container">
+        <div class="brightcove-video-player__wrapper video-${bdbvideo.videoAlignment}">
+            <div class="brightcove-video-player__content text-${bdbvideo.TextAlignment}">
+                <sly data-sly-test="${bdbvideo.title}">
+                <div class="brightcove-video-player__content-title ${bdbvideo.titleSize}" role="heading">${bdbvideo.title @context='html'}</div>
+                </sly>
+                <sly data-sly-test="${bdbvideo.subTitle}">
+                <div class="brightcove-video-player__content-sub-title">${bdbvideo.subTitle @context='html'}</div>
+                </sly>
+                <sly data-sly-test="${bdbvideo.description}">
+                <div class="brightcove-video-player__content-description">${bdbvideo.description @context='html'}</div>
+                </sly>
+            </div>
+            <div class="brightcove-video-player__container">
+                <div class="brightcove-video-player__container-video ${bdbvideo.resolution} ${bdbvideo.border?'has-border':''}">
+                    <div class="video-js"   data-accountId="${bdbvideo.brightcoveAccountId}" data-playerId="${bdbvideo.brightcovePlayerId}" data-videoId="${bdbvideo.videoId}">
+                    </div>
+                </div>
+                <sly data-sly-test="${bdbvideo.caption}">
+                <div class="brightcove-video-player__caption image-caption">${bdbvideo.caption @context='html'}</div>
+                </sly>
+            </div>
+        </div>
+    </div>
+</article>

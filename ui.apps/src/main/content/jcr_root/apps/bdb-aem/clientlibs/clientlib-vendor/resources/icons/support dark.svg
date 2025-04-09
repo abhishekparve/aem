@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="31px" height="26px" viewBox="0 0 31 26" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>9E259E17-A9BC-4812-9288-4190195BC125</title>
+    <g id="Home" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Home-2" transform="translate(-771.000000, -4731.000000)" stroke="#404041">
+            <g id="Group-15" transform="translate(770.000000, 4726.000000)">
+                <g id="icon/support" transform="translate(2.000000, 6.000000)">
+                    <g id="Group-37">
+                        <g id="Group-36" stroke-width="1.22488038">
+                            <path d="M2.97479544,14.0861244 L1.22488038,14.0861244 C0.548397627,14.0861244 0,13.5377268 0,12.861244 L0,1.22488038 C0,0.548397627 0.548397627,0 1.22488038,0 L21.4354067,0 C22.1118895,0 22.6602871,0.548397627 22.6602871,1.22488038 L22.6602871,12.861244 C22.6602871,13.5377268 22.1118895,14.0861244 21.4354067,14.0861244 L8.8632778,14.0861244 L3.25324428,19.6304079 L2.97479544,19.9160505 L2.97479544,14.0861244 Z" id="Path" stroke-linejoin="round"></path>
+                            <line x1="4.28708134" y1="4.89952153" x2="17.7607656" y2="4.89952153" id="Line-6" stroke-linecap="round"></line>
+                            <line x1="4.28708134" y1="9.49282297" x2="10.1052632" y2="9.49282297" id="Line-6-Copy" stroke-linecap="round"></line>
+                        </g>
+                        <g id="Group-35" transform="translate(12.861244, 9.186603)">
+                            <path d="M2.0903968,9.96276349 L0.860726755,9.96276349 C0.385360495,9.96276349 0,9.57489557 0,9.09643623 L0,0.86632726 C0,0.387867926 0.385360495,0 0.860726755,0 L15.0627182,0 C15.5380845,0 15.923445,0.387867926 15.923445,0.86632726 L15.923445,9.09643623 C15.923445,9.57489557 15.5380845,9.96276349 15.0627182,9.96276349 L6.22824926,9.96276349 L2.28606355,13.8840966 L2.0903968,14.0861244 L2.0903968,9.96276349 Z" id="Path-Copy" stroke-width="1.22488038" fill="#FFFFFF" stroke-linejoin="round" transform="translate(7.961722, 7.043062) scale(-1, 1) translate(-7.961722, -7.043062) "></path>
+                            <g id="Group-34" transform="translate(3.368421, 4.287081)" fill="#404041" stroke-width="0.612440191">
+                                <circle id="Oval" cx="0.918660287" cy="0.918660287" r="1"></circle>
+                                <circle id="Oval-Copy-3" cx="4.59330144" cy="0.918660287" r="1"></circle>
+                                <circle id="Oval-Copy-4" cx="8.26794258" cy="0.918660287" r="1"></circle>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

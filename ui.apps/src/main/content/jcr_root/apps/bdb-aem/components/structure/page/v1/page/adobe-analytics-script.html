@@ -1,0 +1,15 @@
+<script>
+var head = document.getElementsByTagName('head')[0];
+var script = document.createElement('script');
+script.type = 'text/javascript';
+
+ if (window.location.href.includes("dev-gl") || window.location.href.includes("localhost") || window.location.href.includes("qa-gl") || window.location.href.includes("qa2-gl")|| window.location.href.includes("adobeaemcloud.com")) {
+    script.src="https://assets.adobedtm.com/d7aa18028aaa/a282df00cec9/launch-acb8b19cfc34-development.min.js";
+
+  } else if (window.location.href.includes("stg-gl")) {
+    script.src="https://assets.adobedtm.com/d7aa18028aaa/a282df00cec9/launch-9291afe3f67f-staging.min.js";
+  } else if (window.location.href.includes("https://www.bdbiosciences.com")){
+	script.src="https://assets.adobedtm.com/d7aa18028aaa/a282df00cec9/launch-c20d4886bc34.min.js";
+  }
+  head.appendChild(script);
+</script>

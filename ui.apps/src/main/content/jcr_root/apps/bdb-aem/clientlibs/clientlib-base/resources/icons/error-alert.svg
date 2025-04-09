@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Icons / Password-Show</title>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="text-input/icon/08-activated-error" transform="translate(-336.000000, -18.000000)">
+            <g id="Icons-/-Password-Show" transform="translate(336.000000, 18.000000)">
+                <circle id="Oval" stroke="#CF2026" stroke-width="1.5" cx="10" cy="10" r="9.25"></circle>
+                <path d="M10.362,13.228 C10.614,13.228 10.704,13.12 10.704,12.886 L10.92,3.886 C10.92,3.634 10.848,3.544 10.596,3.544 L9.156,3.544 C8.904,3.544 8.832,3.634 8.832,3.886 L9.03,12.868 C9.03,13.12 9.102,13.228 9.39,13.228 L10.362,13.228 Z M9.84,16.216 C10.416,16.216 11.046,15.784 11.046,15.064 C11.046,14.326 10.452,13.912 9.84,13.912 C9.228,13.912 8.616,14.326 8.616,15.082 C8.616,15.82 9.264,16.216 9.84,16.216 Z" id="!" fill="#CF2026" fill-rule="nonzero"></path>
+            </g>
+        </g>
+    </g>
+</svg>

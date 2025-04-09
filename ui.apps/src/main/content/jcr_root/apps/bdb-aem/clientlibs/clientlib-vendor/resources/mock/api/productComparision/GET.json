@@ -1,0 +1,232 @@
+{
+    "products": [
+        {
+            "catalogNumber": "550534",
+            "imageUrl": "/resources/images/compare-img1.jpg",
+            "thumbnailImageUrl": "/resources/images/Bitmap-preview.png",
+            "productUrl": "/content/bdb/{region}/{country}/{language-country}/products/reagents/flow-cytometry-reagents/research-reagents/single-color-antibodies-ruo/pdp.biotin-mouse-anti-mouse-igg1[a].553500.html",
+            "name": "BUV661 Mouse Anti-Human CD31",
+            "brand": "BD OptiBuild™",
+            "alternativeName": "PECAM-1",
+            "volPerTest": "",
+            "isoType": "Ms",
+            "reactivity": "Human(TDSTESTEDINDEVELOPMENT)",
+            "application": "FCM(QF)",
+            "immunogen": "",
+            "workshopNumber": "IgG2a",
+            "entrezGeneId": null,
+            "storageBuffer": "Aqueous buffered solution containing ≤0.09% sodium azide.",
+            "thumbnailImage": "RUO",
+            "emissionMax": "660 nm",
+            "excitationMax": "350 nm",
+            "currentFormat": "BUV661",
+            "excitationSource": "Ultraviolet 355 nm",
+            "variants": {
+                "options": [
+                    {
+                        "label": "50 tests",
+                        "id": "561172"
+                    }
+                ]
+            },
+            "otherFormats": [
+                {
+                    "formartId": "Alexa 488",
+                    "url": "/content/bdb/{region}/{country}/{language-country}/products/reagents/flow-cytometry-reagents/research-reagents/single-color-antibodies-(ruo)/pdp.Alexa-Fluor-488-Mouse-Anti-Human-CD31.558068.html"
+                },
+                {
+                    "formartId": "Alexa 647",
+                    "url": "/content/bdb/{region}/{country}/{language-country}/products/reagents/flow-cytometry-reagents/research-reagents/single-color-antibodies-(ruo)/pdp.Alexa-Fluor-647-Mouse-anti-Human-CD31.558094.html"
+                },
+                {
+                    "formartId": "BUV496",
+                    "url": "/content/bdb/{region}/{country}/{language-country}/products/reagents/flow-cytometry-reagents/research-reagents/single-color-antibodies-(ruo)/pdp.BUV496-Mouse-Anti-Human-CD31.750674.html"
+                },
+                {
+                    "formartId": "BUV615",
+                    "url": "/content/bdb/{region}/{country}/{language-country}/products/reagents/flow-cytometry-reagents/research-reagents/single-color-antibodies-(ruo)/pdp.BUV615-Mouse-Anti-Human-CD31.751494.html"
+                },
+                {
+                    "formartId": "BUV563",
+                    "url": "/content/bdb/{region}/{country}/{language-country}/products/reagents/flow-cytometry-reagents/research-reagents/single-color-antibodies-(ruo)/pdp.BUV563-Mouse-Anti-Human-CD31.749327.html"
+                },
+                {
+                    "formartId": "BUV805",
+                    "url": "/content/bdb/{region}/{country}/{language-country}/products/reagents/flow-cytometry-reagents/research-reagents/single-color-antibodies-(ruo)/pdp.BUV805-Mouse-Anti-Human-CD31.749325.html"
+                },
+                {
+                    "formartId": "BUV737",
+                    "url": "/content/bdb/{region}/{country}/{language-country}/products/reagents/flow-cytometry-reagents/research-reagents/single-color-antibodies-(ruo)/pdp.BUV737-Mouse-Anti-Human-CD31.749326.html"
+                },
+                {
+                    "formartId": "BUV395",
+                    "url": "/content/bdb/{region}/{country}/{language-country}/products/reagents/flow-cytometry-reagents/research-reagents/single-color-antibodies-(ruo)/pdp.BUV395-Mouse-Anti-Human-CD31.744468.html"
+                },
+                {
+                    "formartId": "BV786",
+                    "url": "/content/bdb/{region}/{country}/{language-country}/products/reagents/flow-cytometry-reagents/research-reagents/single-color-antibodies-(ruo)/pdp.BV786-Mouse-Anti-Human-CD31.744467.html"
+                },
+                {
+                    "formartId": "BV711",
+                    "url": "/content/bdb/{region}/{country}/{language-country}/products/reagents/flow-cytometry-reagents/research-reagents/single-color-antibodies-(ruo)/pdp.BV711-Mouse-Anti-Human-CD31.744466.html"
+                }
+            ]
+        },
+        {
+            "catalogNumber": "750673",
+            "imageUrl": "/resources/images/compare-img2.jpg",
+            "thumbnailImageUrl": "/resources/images/Bitmap-preview.png",
+            "productUrl": "/content/bdb/{region}/{country}/{language-country}/products/reagents/flow-cytometry-reagents/research-reagents/single-color-antibodies-ruo/pdp.biotin-mouse-anti-mouse-igg1[a].550874.html",
+            "name": "APC Mouse anti-Human CD64 ",
+            "brand": "BD Pharmingen™",
+            "alternativeName": "FCGR1; FcRI; Fc-gamma RI; IgG Fc Receptor I; High affinity IgG FcR1",
+            "volPerTest": "5 µl",
+            "isoType": "Ms",
+            "reactivity": "Human(TDSQCTESTING)",
+            "application": "FCM(RT)",
+            "immunogen": "",
+            "workshopNumber": "IgG1Kappa",
+            "entrezGeneId": null,
+            "storageBuffer": "Aqueous buffered solution containing BSA and ≤0.09% sodium azide.",
+            "thumbnailImage": "RUO",
+            "emissionMax": "660 nm",
+            "excitationMax": "651 nm",
+            "currentFormat": "APC",
+            "excitationSource": "Red 627-640 nm",
+            "variants": {
+                "options": [
+                    {
+                        "label": "50 tests",
+                        "id": "561172"
+                    },
+                    {
+                        "label": "100 tests",
+                        "id": "566599"
+                    },
+                    {
+                        "label": "150 tests",
+                        "id": "340991"
+                    }
+                ]
+            },
+            "otherFormats": [
+                {
+                    "formartId": "Purified",
+                    "url": "/content/bdb/{region}/{country}/{language-country}/products/reagents/flow-cytometry-reagents/research-reagents/single-color-antibodies-(ruo)/pdp.Purified-Mouse-Anti-Human-CD64.555525.html"
+                },
+                {
+                    "formartId": "Biotin",
+                    "url": "/content/bdb/{region}/{country}/{language-country}/products/reagents/flow-cytometry-reagents/research-reagents/single-color-antibodies-(ruo)/pdp.Biotin-Mouse-Anti-Human-CD64.555526.html"
+                },
+                {
+                    "formartId": "PE",
+                    "url": "/content/bdb/{region}/{country}/{language-country}/products/reagents/flow-cytometry-reagents/research-reagents/single-color-antibodies-(ruo)/pdp.PE-Mouse-anti-Human-CD64.561926.html"
+                },
+                {
+                    "formartId": "PE",
+                    "url": "/content/bdb/{region}/{country}/{language-country}/products/reagents/flow-cytometry-reagents/research-reagents/single-color-antibodies-(ruo)/pdp.PE-Mouse-anti-Human-CD64.558592.html"
+                },
+                {
+                    "formartId": "FITC",
+                    "url": "/content/bdb/{region}/{country}/{language-country}/products/reagents/flow-cytometry-reagents/research-reagents/single-color-antibodies-(ruo)/pdp.FITC-Mouse-Anti-Human-CD64.560970.html"
+                },
+                {
+                    "formartId": "FITC",
+                    "url": "/content/bdb/{region}/{country}/{language-country}/products/reagents/flow-cytometry-reagents/research-reagents/single-color-antibodies-(ruo)/pdp.FITC-Mouse-Anti-Human-CD64.555527.html"
+                },
+                {
+                    "formartId": "BV510",
+                    "url": "/content/bdb/{region}/{country}/{language-country}/products/reagents/flow-cytometry-reagents/research-reagents/single-color-antibodies-(ruo)/pdp.BV510-Mouse-Anti-Human-CD64.563459.html"
+                },
+                {
+                    "formartId": "PerCP-Cy5.5",
+                    "url": "/content/bdb/{region}/{country}/{language-country}/products/reagents/flow-cytometry-reagents/research-reagents/single-color-antibodies-(ruo)/pdp.PerCP-Cy5.5-Mouse-anti-Human-CD64.561194.html"
+                },
+                {
+                    "formartId": "V450",
+                    "url": "/content/bdb/{region}/{country}/{language-country}/products/reagents/flow-cytometry-reagents/research-reagents/single-color-antibodies-(ruo)/pdp.V450-Mouse-anti-Human-CD64.561202.html"
+                },
+                {
+                    "formartId": "PE-Cy7",
+                    "url": "/content/bdb/{region}/{country}/{language-country}/products/reagents/flow-cytometry-reagents/research-reagents/single-color-antibodies-(ruo)/pdp.PE-Cy7-Mouse-anti-Human-CD64.561191.html"
+                }
+            ]
+        },
+        {
+            "catalogNumber": "553066",
+            "imageUrl": "/resources/images/compare-img3.jpg",
+            "thumbnailImageUrl": "/resources/images/Bitmap-preview.png",
+            "productUrl": "/content/bdb/{region}/{country}/{language-country}/products/reagents/flow-cytometry-reagents/research-reagents/single-color-antibodies-ruo/pdp.biotin-mouse-anti-mouse-igg1[a].553066.html",
+            "name": "Purified Rat Anti-Mouse Flk-1",
+            "brand": "BD Pharmingen™",
+            "alternativeName": "CD309; Fetal liver kinase 1; Kdr; VEGF Receptor-2; VEGFR-2; AVAS12;",
+            "volPerTest": "",
+            "isoType": "Rat",
+            "reactivity": "Mouse(TDSQCTESTING)",
+            "application": "FCM(RT), IHC(RP), WB(RP)",
+            "immunogen": "",
+            "workshopNumber": "IgG2aKappa",
+            "entrezGeneId": null,
+            "storageBuffer": "Aqueous buffered solution containing ≤0.09% sodium azide.",
+            "thumbnailImage": "RUO",
+            "emissionMax": " nm",
+            "excitationMax": " nm",
+            "currentFormat": "Purified",
+            "excitationSource": "  nm",
+            "variants": {
+                "options": [
+                    {
+                        "label": "50 tests",
+                        "id": "561172"
+                    },
+                    {
+                        "label": "100 tests",
+                        "id": "566599"
+                    },
+                    {
+                        "label": "150 tests",
+                        "id": "340991"
+                    }
+                ]
+            }
+        },
+        {
+            "catalogNumber": "555836",
+            "imageUrl": "/resources/images/compare-img3.jpg",
+            "thumbnailImageUrl": "/resources/images/Bitmap-preview.png",
+            "productUrl": "/content/bdb/{region}/{country}/{language-country}/products/reagents/flow-cytometry-reagents/research-reagents/single-color-antibodies-ruo/pdp.biotin-mouse-anti-mouse-igg1[a].555836.html",
+            "name": "Purified Rat Anti-Mouse Flk-1",
+            "brand": "BD Pharmingen™",
+            "alternativeName": "CD309; Fetal liver kinase 1; Kdr; VEGF Receptor-2; VEGFR-2; AVAS12;",
+            "volPerTest": "",
+            "isoType": "Rat",
+            "reactivity": "Mouse(TDSQCTESTING)",
+            "application": "FCM(RT), IHC(RP), WB(RP)",
+            "immunogen": "",
+            "workshopNumber": "IgG2aKappa",
+            "entrezGeneId": null,
+            "storageBuffer": "Aqueous buffered solution containing ≤0.09% sodium azide.",
+            "thumbnailImage": "RUO",
+            "emissionMax": " nm",
+            "excitationMax": " nm",
+            "currentFormat": "Purified",
+            "excitationSource": "  nm",
+            "variants": {
+                "options": [
+                    {
+                        "label": "50 tests",
+                        "id": "561172"
+                    },
+                    {
+                        "label": "100 tests",
+                        "id": "566599"
+                    },
+                    {
+                        "label": "150 tests",
+                        "id": "340991"
+                    }
+                ]
+            }
+        }
+    ]
+}

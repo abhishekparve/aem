@@ -1,0 +1,31 @@
+<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html"
+  data-sly-call="${templates.placeholder @ isEmpty = true}"></sly>
+<sly data-sly-use.productCarouselModel="com.bdb.aem.core.models.ProductCarouselModel"></sly>
+<article data-sly-test="${productCarouselModel.title}" class="product-carousel app-js__product-carousel research-reagents ${properties.togglePaddingBottom?'pb-2':''}">
+  <div class="product-carousel__container bd-container">
+    <div class="product-carousel__header  text-center">
+      <h2>${productCarouselModel.title @context='html'}</h2>
+    </div>
+
+    <div class="product-carousel__carousel" data-slidesInMobile=1.28>
+      <sly data-sly-list.item="${productCarouselModel.products}">
+        <article class="product-tiles app-js__product-tiles  research-reagents">
+          <div class="product-tiles__slides d-flex flex-column  research-reagents-mobile  text-center p-0 mx-auto">
+            <div class="product-tiles__img-container mx-auto">
+            <sly data-sly-test="${item.imageLinkUrl}">
+               <a href="${item.imageLinkUrl}" target="${item.openNewImageLinkTab == 'true' ? '_blank' : '_self'}">
+                <img class="m-auto" src="${item.imagePath}" alt="${item.altText}">
+              </a>
+            </sly> 
+            <sly data-sly-test="${!item.imageLinkUrl}">
+                <img class="m-auto" src="${item.imagePath}" alt="${item.altText}">
+            </sly> 
+            </div>
+            <a class="product-tiles__slides_title" href="${item.productUrl}" target=""> ${item.productLabel @context='html'}</a>
+            <div class="product-tiles__slides__label"></div>
+          </div>
+        </article>
+      </sly>
+    </div>
+  </div>
+</article>

@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Amount Summary / Ship To"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/container">
+        <items jcr:primaryType="nt:unstructured">
+            <tabs
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/tabs"
+                maximized="{Boolean}false">
+                <items jcr:primaryType="nt:unstructured">
+                    <amountSummary
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Amount Summary"
+                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <columns
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                                margin="{Boolean}true">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <column
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <heading
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldDescription="Amount Summary label"
+                                                fieldLabel="Amount Summary"
+                                                name="./heading"/>
+                                            <shippingHandling
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldDescription="Shipping and handling label"
+                                                fieldLabel="Shipping and handling"
+                                                name="./shippingHandling"/>
+                                            <taxes
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldDescription="Taxes label"
+                                                fieldLabel="Taxes"
+                                                name="./taxes"/>
+                                            <surcharge
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldDescription="Surcharge label"
+                                                fieldLabel="Surcharge"
+                                                name="./surcharge"/>
+                                            <total
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldDescription="Total label"
+                                                fieldLabel="Total"
+                                                name="./total"/>
+                                            <amountSummaryCTABtn
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldDescription="Proceed to checkout label"
+                                                fieldLabel="Proceed to checkout"
+                                                name="./amountSummaryCTABtn"/>
+                                            <disclaimer
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldDescription="Out of stock message label"
+                                                fieldLabel="Out of stock message"
+                                                maxlength="150"
+                                                name="./disclaimer"/>
+                                            <taxDisclaimerText
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldDescription="Estimated tax text message label"
+                                                fieldLabel="Estimated tax message"
+                                                maxlength="150"
+                                                name="./taxDisclaimerText"/>
+                                            <vatExempt
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldDescription="VAT exempt text label"
+                                                fieldLabel="VAT exempt text"
+                                                name="./vatExempt"/>
+                                            <surchargesToolTip
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldDescription="Surcharge information text label"
+                                                fieldLabel="Surcharge information text"
+                                                name="./surchargesToolTip"/>
+                                            <taxToolTip
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldDescription="Tax information text label"
+                                                fieldLabel="Tax information text"
+                                                name="./taxToolTip"/>
+                                            <toolTipAltText
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldDescription="Tooltip Alt text label"
+                                                fieldLabel="Tooltip Alt text"
+                                                name="./toolTipAltText"/>
+                                            <termsOfUse
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="cq/gui/components/authoring/dialog/richtext"
+                                                fieldDescription="Terms and conditions label"
+                                                fieldLabel="Terms and conditions"
+                                                name="./termsOfUse"
+                                                useFixedInlineToolbar="{Boolean}true">
+                                                <rtePlugins
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceSuperType="/apps/bdb-aem/components/authoring/dialog/richtext/rtePlugins"/>
+                                                <uiSettings
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceSuperType="/apps/bdb-aem/components/authoring/dialog/richtext/uiSettings"/>
+                                                <granite:data
+                                                    jcr:primaryType="nt:unstructured"
+                                                    char-limit="250"/>
+                                            </termsOfUse>
+                                            <requestQuoteCTALink
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldDescription="Request Quote label"
+                                                fieldLabel="Request Quote"
+                                                name="./requestQuoteCTALink"/>
+											<totalPromoSavings
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldDescription="Total Promo Savings label"
+                                                fieldLabel="Total Promo Savings"
+                                                name="./totalPromoSavings"/>
+                                   			<confirmOrder
+												jcr:primaryType="nt:unstructured"
+												sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+												fieldDescription="Confirm Order label"
+												fieldLabel="Confirm Order"
+												name="./confirmOrder"/>
+											<specialhandlingmessage
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldDescription="Special Message label"
+                                                fieldLabel="Special Handling Message"
+                                                maxlength="{Long}150"
+                                                name="./message"/>
+                                            <specialmessagesrc
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                fieldDescription="Src path"
+                                                fieldLabel="Special Message Icon Src"
+                                                name="./src"
+                                                rootPath="/content/dam/bdb"/>
+                                            <specialiconaltText
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldDescription="Alt Text label"
+                                                fieldLabel="Special Icon Alt Text"
+                                                name="./altText"/>
+                                            <oemNotificationMessage
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldDescription="OEM Notification Message label (Char limit not to exceed 200)"
+                                                    fieldLabel="OEM Notification Message"
+                                                    name="./oemNotificationMessage"/>
+                                            <oemNotificationIcon
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                    fieldDescription="OEM Notification Icon path"
+                                                    fieldLabel="OEM Notification Icon"
+                                                    name="./oemNotificationIcon"
+                                                    rootPath="/content/dam/bdb"/>
+                                            <oemNotificationIconAltText
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldDescription="OEM Notification Icon Alt Text"
+                                                    fieldLabel="OEM Notification Icon Alt Text"
+                                                    name="./oemNotificationIconAltText"/>
+                                            <taxExemptMsg
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldDescription="Tax Exempt Message label (Char limit not to exceed 200)"
+                                                    fieldLabel="Tax Exempt Message"
+                                                    name="./taxExemptMsg"/>
+                                            <taxExemptIconSrc
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                    fieldDescription="Tax Exempt Icon path"
+                                                    fieldLabel="Tax Exempt Icon"
+                                                    name="./taxExemptIconSrc"
+                                                    rootPath="/content/dam/bdb"/>
+                                            <taxExemptIconAltText
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldDescription="Tax Exempt Icon Alt Text"
+                                                    fieldLabel="Tax Exempt Icon Alt Text"
+                                                    name="./taxExemptIconAltText"/>
+                                            <totalpromotionalsrc
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                fieldDescription="Src path"
+                                                fieldLabel="Promotional Message Icon Src"
+                                                name="./totalPromotionalSrc"
+                                                rootPath="/content/dam/bdb"/>
+                                            <totalpromotionalaltText
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldDescription="Promotional Icon Alt Text"
+                                                fieldLabel="Promotional Icon Alt Text"
+                                                name="./totalPromotionAltText"/>
+											<promotion
+												jcr:primaryType="nt:unstructured"
+												sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+												fieldDescription="Promotion label"
+												fieldLabel="Promotion"
+												name="./promotion"/>
+                                            <promotionsDisclaimer
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldDescription="Promotions Disclaimer"
+                                                    fieldLabel="Promotions Disclaimer"
+                                                    name="./promotionsDisclaimer"/>
+                                            <transmitrequest
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldDescription="Transmit Cart Label"
+                                                fieldLabel="Transmit Cart"
+                                                name="./transmitRequest"/>
+                                            <cancelcart
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldDescription="Cancel Cart Label"
+                                                fieldLabel="Cancel Cart"
+                                                name="./cancelCart"/>
+                                           <free
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldDescription="Free Label"
+                                                fieldLabel="Free"
+                                                name="./free"/>	
+                                        </items>
+                                    </column>
+                                </items>
+                            </columns>
+                        </items>
+                    </amountSummary>
+                    <shipTo
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Ship To"
+                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <columns
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                                margin="{Boolean}true">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <column
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                                        <items jcr:primaryType="nt:unstructured">
+											<noAddressLabel
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldDescription="No Address label"
+                                                fieldLabel="No Address"
+                                                name="./noAddressLabel"/>
+											<selectAddressCTALabel
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldDescription="Select Address CTA label"
+                                                fieldLabel="Select Address CTA"
+                                                name="./selectAddressCTALabel"/>
+											<selectAddressTitle
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldDescription="Selected Address Label"
+                                                fieldLabel="Selected Address Label"
+                                                name="./selectAddressTitle"/>
+											<linkedAddressTitle
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldDescription="Linked Address Title label"
+                                                fieldLabel="Linked Address Title"
+                                                name="./linkedAddressTitle"/>
+											<changeAddressCTATitle
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldDescription="Change Address CTA label"
+                                                fieldLabel="Change Address CTA (Modal)"
+                                                name="./changeAddressCTATitle"/>
+											<shipToLabel
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldDescription="Ship To Address label"
+                                                fieldLabel="Ship To Address"
+                                                name="./shipToLabel"/>
+                                            <soldToLabel
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldDescription="Sold To Address label"
+                                                fieldLabel="Sold To Address"
+                                                name="./soldToLabel"/>
+											<shippingAddressLabel
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldDescription="Shipping Address Label"
+                                                fieldLabel="Shipping Address"
+                                                name="./shippingAddressLabel"/>
+											<defaultLabel
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldDescription="Default Label"
+                                                fieldLabel="Default"
+                                                name="./defaultLabel"/>
+											<shipToNumberLabel
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldDescription="Ship To Number Label"
+                                                fieldLabel="Ship To Number"
+                                                name="./shipToNumberLabel"/>
+                                            <soldToNumberLabel
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldDescription="Sold To Number Label"
+                                                fieldLabel="Sold To Number"
+                                                name="./soldToNumberLabel"/>
+											<changeAddress
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldDescription="Change CTA label"
+                                                fieldLabel="Change CTA"
+                                                name="./changeAddress"/>
+											<saveCTA
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldDescription="Confirm CTA label"
+                                                fieldLabel="Confirm CTA"
+                                                name="./saveCTA"/>
+											<cancelCTA
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldDescription="Cancel CTA label"
+                                                fieldLabel="Cancel CTA"
+                                                name="./cancelCTA"/>
+											<title
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldDescription="Note for changing address Label"
+                                                fieldLabel="Note for changing address"
+                                                name="./title"/>
+											<searchPlaceHolder
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldDescription="Placeholder text for search address Label"
+                                                fieldLabel="Placeholder text for search address"
+                                                name="./searchPlaceHolder"/>
+											<noSearchResults
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldDescription="Search Results Error Label"
+                                                fieldLabel="Search Results Error"
+                                                name="./noSearchResults"/>
+											<favoriteAddress
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldDescription="Favorite Shipping addresses Label"
+                                                fieldLabel="Favorite Shipping addresses"
+                                                name="./favoriteAddress"/>
+                                            <favIcon
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                fieldDescription="Favourite Icon Label"
+                                                fieldLabel="Favourite Icon"
+												rootPath="/content/dam/bdb"
+                                                name="./favIcon"/>
+											<favIconAltTxt
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldDescription="Favourite Alt Text Label"
+                                                fieldLabel="Favourite Alt Text"
+                                                name="./favIconAltTxt"/>
+											<upArrowIcon
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                fieldDescription="Up Arrow Icon Label"
+                                                fieldLabel="Up Arrow Icon"
+												rootPath="/content/dam/bdb"
+                                                name="./upArrowIcon"/>
+											<downArrowIcon
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                fieldDescription="Down Arrow Icon Label"
+                                                fieldLabel="Down Arrow Icon"
+												rootPath="/content/dam/bdb"
+                                                name="./downArrowIcon"/>
+										</items>
+                                    </column>
+                                </items>
+                            </columns>
+                        </items>
+                    </shipTo>
+                </items>
+            </tabs>
+        </items>
+    </content>
+</jcr:root>

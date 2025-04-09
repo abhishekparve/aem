@@ -1,0 +1,123 @@
+[
+    {
+        "targetMolecule": "human",
+        "antigenName": "Sort Data",
+        "geneName": "gene name",
+        "distribution": "cortical thermocytes, Langerhans cells, DC",
+        "availableFormats": [
+            {
+                "title": "Violet",
+                "numberOfFormats": 8
+            },
+            {
+                "title": "Red",
+                "numberOfFormats": 6
+            },
+            {
+                "title": "Blue",
+                "numberOfFormats": 1
+            },
+            {
+                "title": "YG",
+                "numberOfFormats": 2
+            },
+            {
+                "title": "UV",
+                "numberOfFormats": 7
+            },
+            {
+                "title": "Antibody-Oligo",
+                "numberOfFormats": 7
+            },
+            {
+                "title": "Others",
+                "numberOfFormats": 2
+            }
+        ],
+        "cloneCount": 5,
+        "antigenDetails": [
+            {
+                "title": "Alias",
+                "detail": "T6"
+            },
+            {
+                "title": "Available Formats",
+                "availableFormats": [
+                    {
+                        "formatName": "APC",
+                        "formatUrl": "#",
+                        "formatFullName": "Lorem Ipsum"
+                    },
+                    {
+                        "formatName": "BUV615",
+                        "formatUrl": "#",
+                        "formatFullName": "Lorem Ipsum"
+                    },
+                    {
+                        "formatName": "BV605",
+                        "formatUrl": "#",
+                        "formatFullName": "Lorem Ipsum"
+                    },
+                    {
+                        "formatName": "PE",
+                        "formatUrl": "#",
+                        "formatFullName": "Lorem Ipsum"
+                    },
+                    {
+                        "formatName": "BAV600",
+                        "formatUrl": "#",
+                        "formatFullName": "Lorem Ipsum"
+                    },
+                    {
+                        "formatName": "BALB",
+                        "formatUrl": "#",
+                        "formatFullName": "Lorem Ipsum"
+                    }
+                ]
+            },
+            {
+                "title": "Description",
+                "detail": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+            },
+            {
+                "title": "Structure",
+                "detail": "IgSF, MHC-like"
+            },
+            {
+                "title": "MW",
+                "detail": "46KD"
+            },
+            {
+                "title": "Function",
+                "detail": "Antigen presentation, with beta2m"
+            },
+            {
+                "title": "Biology",
+                "detail": "Lorem Ipsum"
+            },
+            {
+                "title": "Link to Catalog",
+                "detail": "Lorem Ipsum"
+            },
+            {
+                "title": "Feature Panel Link",
+                "detail": "Lorem Ipsum"
+            },
+            {
+                "title": "Publications",
+                "list": [
+                    {
+                        "name": "Detection of lymphocyte subsets using three-color/single-laser flow cytometry and the fluorescent dye peridinin chlorophyll-alpha protein.",
+                        "linkUrl": "#",
+                        "detail": "Afar B, Merrill J, Clark EA. J Clin Immunol. 1991; 11(5):254-261."
+                    },
+                    {
+                        "name": "Morphological, biochemical, and flow cytometric assays of apoptosis.",
+                        "linkUrl": "#",
+                        "detail": "Duke RC, Cohen JJ, Boehme SA, et al. In: Coligan J, Kruisbeek AM, Margulies D, Shevach EM, Strober W, ed. Current Protocols in Immunology. New York: John Wiley and Sons; 1995; :3.17.1-3.17.33."
+                    }
+                ]
+            }
+        ]
+    }
+]

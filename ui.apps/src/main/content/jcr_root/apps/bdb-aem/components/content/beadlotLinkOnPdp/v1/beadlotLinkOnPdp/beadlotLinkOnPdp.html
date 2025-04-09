@@ -1,0 +1,48 @@
+<sly
+	data-sly-use.templates="core/wcm/components/commons/v1/templates.html"
+	data-sly-call="${templates.placeholder @ isEmpty = true}"> </sly>
+<sly data-sly-use.time="com.bdb.aem.core.models.TimerModel"></sly>
+<sly
+	data-sly-use.beadlotLinkOnPdpModel="com.bdb.aem.core.models.BeadlotLinkOnPdpModel">
+</sly>
+<sly data-sly-test="${beadlotLinkOnPdpModel.hasBeadlot}">
+<div class="my-5 pdp-instruments-beadLotFiles">
+	<article class="data-sheets app-js__data-sheets">
+		<div class="d-flex">
+			<p data-sly-test="${beadlotLinkOnPdpModel.headerText}"
+				class="data-sheets_heading">${beadlotLinkOnPdpModel.headerText @context='html'}</p>
+		</div>
+		<div class="data-sheets_list">
+			<a class="data-sheets_list_item cta-link"
+				href="${beadlotLinkOnPdpModel.landingPageUrl}" target="_self"> <img
+				src="/../../etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/Download.svg"
+				alt="download Icon" /> <span
+				data-sly-test=${beadlotLinkOnPdpModel.titleOfBeadlotFile}
+				class="data-sheets_list_item_text">${beadlotLinkOnPdpModel.titleOfBeadlotFile @context='html'}</span>
+			</a>
+		</div>
+	</article>
+</div>
+
+</sly>
+<sly data-sly-test="${!beadlotLinkOnPdpModel.hasBeadlot}">
+<div class="my-5 pdp-instruments-beadLotFiles">
+	<article class="data-sheets app-js__data-sheets">
+		<div class="d-flex">
+			<p data-sly-test="${beadlotLinkOnPdpModel.headerText}"
+				class="data-sheets_heading">${beadlotLinkOnPdpModel.headerText @context='html'}</p>
+			<a class="data-sheets_view-all-cta cta-link ml-auto"
+				data-sly-test="${beadlotLinkOnPdpModel.viewAllText}"
+				href="${beadlotLinkOnPdpModel.landingPageUrl}" target="_self"> <span
+				class="data-sheets_view-all-cta_text">${beadlotLinkOnPdpModel.viewAllText @context='html'}</span>
+			</a>
+		</div>
+		<div class="data-sheets_list">
+			<span data-sly-test="${beadlotLinkOnPdpModel.noBeadlotText}"
+				class="data-sheets_list_item_sectionTitle">${beadlotLinkOnPdpModel.noBeadlotText @context='html'}</span>
+		</div>
+	</article>
+</div>
+
+</sly>
+<p data-sly-test="${inheritedPageProperties.enableTimer}">BeadLot:${time.endTime}</p>

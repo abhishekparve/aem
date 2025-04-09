@@ -1,0 +1,10 @@
+{
+  "ruoFields": {
+    "jcr:primaryType": "nt:unstructured",
+    "item0": {
+      "jcr:primaryType": "nt:unstructured",
+      "description": "For research use only.",
+      "label": "RUO"
+    }
+  }
+}

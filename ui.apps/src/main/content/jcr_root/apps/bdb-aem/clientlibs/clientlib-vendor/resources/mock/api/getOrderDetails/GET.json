@@ -1,0 +1,220 @@
+{
+    "type": "orderWsDTO",
+    "quoteReferenceNumber": "9999999990",
+    "appliedOrderPromotions": [
+        {
+            "amountSaved": {
+                "currencyIso": "USD",
+                "formattedValue": "$99.00",
+                "priceType": "BUY",
+                "value": 99.0
+            },
+            "consumedEntries": [],
+            "freeGift": false,
+            "promotion": {
+                "code": "bd_prod_promo",
+                "description": "Marketing messages for the PDP",
+                "endDate": "2029-12-30T00:10:00+0000",
+                "priority": 999999999,
+                "promotionType": "Rule Based Promotion"
+            },
+            "promotionalFreeShipping": false,
+            "shippingDiscount": 0.0
+        }
+    ],
+    "appliedProductPromotions": [],
+    "billingAddress": {
+        "active": false,
+        "addressId": "1001019857",
+        "billingAddress": true,
+        "country": {
+            "isocode": "US",
+            "name": "United States"
+        },
+        "defaultAddress": false,
+        "email": "ccarlson@qcmetro.com",
+        "line1": "1814",
+        "line2": "E LOCUST ST",
+        "organizationName": "",
+        "pendingAddress": false,
+        "postalCode": "52803-0000",
+        "region": {
+            "countryIso": "US",
+            "isocode": "US-IA",
+            "isocodeShort": "IA",
+            "name": "Iowa"
+        },
+        "shippingAddress": false,
+        "visibleInAddressBook": false
+    },
+    "code": "5611355017",
+    "encryptedOrderCode": "123456789",
+    "deliveryAddress": {
+        "active": false,
+        "addressId": "1001003677",
+        "billingAddress": false,
+        "country": {
+            "isocode": "US",
+            "name": "United States"
+        },
+        "defaultAddress": false,
+        "email": "us@bd.com",
+        "line1": "1520",
+        "line2": "7TH ST",
+        "organizationName": "",
+        "pendingAddress": false,
+        "postalCode": "61265-2917",
+        "region": {
+            "countryIso": "US",
+            "isocode": "US-IL",
+            "isocodeShort": "IL",
+            "name": "Illinois"
+        },
+        "shippingAddress": true,
+        "visibleInAddressBook": false
+    },
+    "deliveryCost": {
+        "currencyIso": "USD",
+        "formattedValue": "$35.00",
+        "priceType": "BUY",
+        "value": 35.0
+    },
+    "displayHyphenForShippingHandling": false,
+    "displayHyphenForSurcharge": false,
+    "displayHyphenForTax": false,
+    "isDistributorSoldTo": false,
+    "net": false,
+    "soldToAddress": {
+        "active": false,
+        "addressId": "1001019857",
+        "billingAddress": false,
+        "country": {
+            "isocode": "US",
+            "name": "United States"
+        },
+        "defaultAddress": false,
+        "email": "ccarlson@qcmetro.com",
+        "line1": "1814",
+        "line2": "E LOCUST ST",
+        "organizationName": "",
+        "pendingAddress": false,
+        "postalCode": "52803-0000",
+        "region": {
+            "countryIso": "US",
+            "isocode": "US-IA",
+            "isocodeShort": "IA",
+            "name": "Iowa"
+        },
+        "shippingAddress": false,
+        "visibleInAddressBook": false
+    },
+    "specialInstructions": "Tax Exempt Document Needs Review",
+    "subTotal": {
+        "currencyIso": "USD",
+        "formattedValue": "$495.00",
+        "priceType": "BUY",
+        "value": 495.0
+    },
+    "totalDiscounts": {
+        "currencyIso": "USD",
+        "formattedValue": "$99.00",
+        "priceType": "BUY",
+        "value": 99.0
+    },
+    "totalPrice": {
+        "currencyIso": "USD",
+        "formattedValue": "$530.00",
+        "priceType": "BUY",
+        "value": 530.0
+    },
+    "totalPriceWithTax": {
+        "currencyIso": "USD",
+        "formattedValue": "$560.94",
+        "priceType": "BUY",
+        "value": 560.94
+    },
+    "totalSurcharge": {
+        "currencyIso": "USD",
+        "formattedValue": "$35.00",
+        "priceType": "BUY",
+        "value": 35.0
+    },
+    "totalTax": {
+        "currencyIso": "USD",
+        "formattedValue": "$30.94",
+        "priceType": "BUY",
+        "value": 30.94
+    },
+    "user": {
+        "name": "us approved",
+        "uid": "caweb_788511004"
+    },
+    "PODate": "02/24/2021",
+    "PONumber": "444422",
+    "cancellable": false,
+    "invoiceList": ["9106705444", "910670534", "9106705424", "9106705414"],
+    "orderApprovalStatus": "APPROVED",
+    "orderCancellationAllowed": false,
+    "reOrderAllowed": true,
+    "selfOrder": true,
+    "shipments": [
+        {
+            "carrier": "0005000003",
+            "carrierName": "CLARK BROS TRANSFER INC",
+            "entries": [
+                {
+                    "cancellableQuantity": 0,
+                    "deliveryDetails": [
+                        {
+                            "estimatedDeliveryDate": "03/05/2021",
+                            "pendingQuantity": 0,
+                            "totalOrderedQuantity": 1,
+                            "totalShippedQuantity": 1
+                        }
+                    ],
+                    "entryNumber": 0,
+                    "giveAway": false,
+                    "itemCategory": "ZTAN",
+                    "listPrice": {
+                        "currencyIso": "USD",
+                        "formattedValue": "$495.00",
+                        "priceType": "BUY",
+                        "value": 495.0
+                    },
+                    "netPrice": {
+                        "currencyIso": "USD",
+                        "formattedValue": "$495.00",
+                        "priceType": "BUY",
+                        "value": 495.0
+                    },
+                    "product": {
+                        "batchManaged": false,
+                        "code": "750673",
+                        "name": "Hu CD31 BUV661 M89D3 50ug",
+                        "pictureUrl": "https://qa-gl.bdbiosciences.com/content/dam/bdb/general/placeholder/placeholder.png",
+                        "productUrl": "/{language-country}/products/reagents/flow-cytometry-reagents/research-reagents/single-color-antibodies-ruo/buv661-mouse-anti-human-cd31.750673"
+                    },
+                    "requestSameLot": false,
+                    "returnableQuantity": 0,
+                    "surchargeApplied": false,
+                    "totalPrice": {
+                        "currencyIso": "USD",
+                        "formattedValue": "$495.00",
+                        "priceType": "BUY",
+                        "value": 495.0
+                    },
+                    "updateable": false
+                }
+            ],
+            "invoiceNumber": ["9106705444"],
+            "packingList": ["7110900216"],
+            "shipmentNumber": "7110900216",
+            "shipmentTotal": "1.000",
+            "shippedDate": "03/10/2021",
+            "status": "Shipped",
+            "trackingNumber": "5599123410/5599123411"
+        }
+    ],
+    "source": "WEB",
+    "statusDisplay": "Complete"
+}

@@ -1,0 +1,24 @@
+{
+    "catalogNumber": "753067",
+    "contractualPrice": {
+        "currencyIso": "USD",
+        "value": "226.43",
+        "formattedValue": "$626.43"
+    },
+    "listPrice": {
+        "currencyIso": "USD",
+        "value": "308.26",
+        "formattedValue": "$508.26"
+    },
+    "estimatedDeliveryDate": "May 30, 2020",
+    "unit": {
+        "name": "Each",
+        "code": "EA",
+        "unitType": "each",
+        "value": 6
+    },
+    "derivedProductStatus": "PURCHASEABLE",
+    "anonymousUser": "false",
+    "purchasable": true,
+    "inventoryStatus": 0
+}

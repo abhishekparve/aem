@@ -1,0 +1,72 @@
+<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html" data-sly-call="${templates.placeholder @ isEmpty = true}"> </sly>
+<sly data-sly-use.carouselModel="com.bdb.aem.core.models.EventBlogCarouselModel"></sly>
+<div>
+	<article class="events-carousel ${properties.whiteBackgroundOption?'white-background':''}">
+		<div class="events-carousel__navigators-prev d-none d-lg-flex"> <img src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/slide-prev.svg" class="bdb-events-carousel-prev" alt="prev" tabindex="0"> </div>
+		<div class="events-carousel__navigators-next mr-3 d-none d-lg-flex"> <img src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/slide-next.svg" class="bdb-events-carousel-next" alt="next" tabindex="0"> </div>
+		<div class="container">
+			<div class="row">
+				<div class="app-js__events-carousel w-100">
+					<sly data-sly-list.item="${carouselModel.slides}">
+						<div class="events-carousel__banner d-flex">
+							<div class="events-carousel__banner-text-wrapper row">
+								<!-- Events carousel -->
+								<sly data-sly-test="${item.selection=='event'}">
+									<div class="events-carousel__banner-text col-12 col-lg-7 d-flex flex-column">
+										<div class="events-carousel__banner-text-header bd-rte"> ${item.title @context='html'} </div>
+										<div class="events-carousel__banner-text-desc bd-rte"> ${item.description @context='html'} </div>
+										<div class="events-carousel__banner-event-text"> <span class="events-carousel__banner-event-type angle ${item.eventType}">${item.eventType}</span></div>
+										<div class="events-carousel__banner-text-info">
+											<div class="events-carousel__banner-text-inst"> <span class="events-carousel__banner-text-inst-type">${item.eventTimeLabel}</span> <span>${item.eventDate}</span> </div> <a data-sly-test="${item.ctaLabel}" class="events-carousel__banner-cta-link btn btn-primary-blue" type="button" href="${item.ctaUrl}">${item.ctaLabel @context='html'}</a> </div>
+									</div>
+									<div class="events-carousel__banner-img col-12 col-lg-5">
+										<picture data-sly-test="${item.imageUrl}" class="custom-picture">
+											<sly data-sly-test="${!item.imageLinkUrl}">
+												<source media="(max-width: 991px)" srcset="${item.imageUrl}" onload="window.aos && window.aos.refresh()"> <img src="${item.imageUrl}" alt="${item.imageAltText}" onload="window.aos && window.aos.refresh()" onerror='this.onerror=null;this.src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/images/product-default.png";'> </sly>
+											<sly data-sly-test="${item.imageLinkUrl}">
+												<source media="(max-width: 991px)" srcset="${item.imageUrl}" onload="window.aos && window.aos.refresh()">
+												<a href="${item.imageLinkUrl}" target="${item.openNewImageLinkTab == 'true' ? '_blank' : '_self'}">
+													<img src="${item.imageUrl}" alt="${item.imageAltText}" onload="window.aos && window.aos.refresh()" onerror='this.onerror=null;this.src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/images/product-default.png";'> 
+												</a>
+											</sly>	
+										</picture>
+										<picture data-sly-test="${!item.imageUrl}" class="custom-picture">
+											<source media="(max-width: 991px)" srcset="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/images/product-default.png" onload="window.aos && window.aos.refresh()"> <img src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/images/product-default.png" alt="${item.imageAltText ? item.imageAltText : 'Default Image'}" onload="window.aos && window.aos.refresh()" onerror='this.onerror=null;this.src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/images/product-default.png";'> </picture>
+									</div>
+								</sly>
+								<!-- Blog carousel -->
+								<sly data-sly-test="${item.selection=='blog'}">
+									<div class="events-carousel__banner-text col-12 col-lg-7 d-flex flex-column">
+										<div class="events-carousel__banner-text-header bd-rte"> ${item.title @context='html'} </div>
+										<div class="events-carousel__banner-text-blog-desc bd-rte"> ${item.subTitle @context='html'} </div>
+										<div class="events-carousel__banner-text-desc bd-rte"> ${item.description @context='html'} </div>
+										<div data-sly-test="${item.ctaLabel}" class="events-carousel__banner-text-info"> <a class="events-carousel__banner-cta-link btn btn-primary-blue" type="button" href="${item.ctaUrl}">${item.ctaLabel @context='html'}</a> </div>
+									</div>
+									<div class="events-carousel__banner-img col-12 col-lg-5">
+										<picture data-sly-test="${item.imageUrl}" class="">
+											<sly data-sly-test="${!item.imageLinkUrl}">
+												<source media="(max-width: 991px)" srcset="${item.imageUrl}" onload="window.aos && window.aos.refresh()"> <img src="${item.imageUrl}" alt="${item.imageAltText}" onload="window.aos && window.aos.refresh()" onerror='this.onerror=null;this.src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/images/product-default.png";'> </sly>
+											<sly data-sly-test="${item.imageLinkUrl}">
+												<source media="(max-width: 991px)" srcset="${item.imageUrl}" onload="window.aos && window.aos.refresh()"> 
+												<a href="${item.imageLinkUrl}" target="${item.openNewImageLinkTab == 'true' ? '_blank' : '_self'}">
+													<img src="${item.imageUrl}" alt="${item.imageAltText}" onload="window.aos && window.aos.refresh()" onerror='this.onerror=null;this.src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/images/product-default.png";'> 
+												</a>
+											</sly>
+										</picture>
+										<picture data-sly-test="${!item.imageUrl}" class="">
+											<source media="(max-width: 991px)" srcset="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/images/product-default.png" onload="window.aos && window.aos.refresh()"> <img src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/images/product-default.png" alt="${item.imageAltText ? item.imageAltText : 'Default Image'}" onload="window.aos && window.aos.refresh()" onerror='this.onerror=null;this.src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/images/product-default.png";'> </picture>
+									</div>
+								</sly>
+							</div>
+						</div>
+					</sly>
+				</div>
+				<div class="d-flex justify-content-between align-items-center events-carousel__navigators-mobile">
+					<div class="events-carousel__navigators-mobile-prev d-flex d-lg-none"> <img src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/prev-arrow-active.svg" class="bdb-events-carousel-prev" alt="prev" tabindex="0"> </div>
+					<div class="events-carousel-slick-m-dots mx-2 px-2"> </div>
+					<div class="events-carousel__navigators-mobile-next d-flex d-lg-none"> <img src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/next-arrow-active.svg" class="bdb-events-carousel-next" alt="next" tabindex="0"> </div>
+				</div>
+			</div>
+		</div>
+	</article>
+</div>

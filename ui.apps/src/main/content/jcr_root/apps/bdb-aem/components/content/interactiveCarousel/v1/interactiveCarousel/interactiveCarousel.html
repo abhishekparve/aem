@@ -1,0 +1,91 @@
+<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html"
+     data-sly-call="${templates.placeholder @ isEmpty = true}"></sly>
+
+<sly data-sly-use.interactiveCarouselModel="com.bdb.aem.core.models.InteractiveCarouselModel">
+    <div class="workflow-carousel-main ${interactiveCarouselModel.backgroundImage ? 'bg-background-image' : ''}"
+        data-background-color="${properties.backgroundColor}" data-font-color="${properties.fontColor}">
+        <div data-sly-test="${interactiveCarouselModel.backgroundImage}" class="workflow-carousel__bg-wrapper">
+            <img class="workflow-carousel__bg-wrapper-image" src="${interactiveCarouselModel.backgroundImage}" alt="Background Image"/>
+        </div>
+        <div data-sly-test="${properties.sectionTitle}" class="workflow-carousel-title">${properties.sectionTitle}</div>
+        <article class="workflow-carousel ${properties.togglePaddingTop?'pt-2':''} ${properties.togglePaddingBottom?'pb-2':''}">
+            <div class="container d-none d-sm-flex justify-content-between workflow-carousel__navigators">
+                <div data-sly-test="${interactiveCarouselModel.slideCount > 1}" class="workflow-carousel__navigators-prev ml-3">
+                    <img src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/slide-prev.svg" class="bdb-workflow-carousel-prev"
+                        alt="prev" tabindex="0">
+                </div>
+                <div class="workflow-carousel__navigators-next mr-3">
+                    <img src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/slide-next.svg" class="bdb-workflow-carousel-next"
+                        alt="next" tabindex="0">
+                </div>
+            </div>
+            <div class="app-js__workflow-carousel container px-0">
+                <sly data-sly-list.item="${interactiveCarouselModel.slidesList}">
+
+                <div class="workflow-carousel__banner">
+                    <div class="workflow-carousel__banner-text-wrapper row">
+                        <div class="workflow-carousel__banner-text px-0 col-sm-12">
+                            <div data-sly-test="${item.title}" class="col-12 flex-column workflow-carousel__banner-text-header bd-rte">
+                                ${item.title @context='html'}
+                            </div>
+                            
+                            <div data-sly-test="${item.subTitle}" class="col-12 flex-column workflow-carousel__banner-text-description bd-rte">
+                                ${item.subTitle @context='html'}
+                            </div>
+                            <div class="w-80 icon-wrapper">
+                                <sly data-sly-list.icons="${item.iconsList}">
+                                    <div class="workflow-carousel__banner-text-icon-content mx-auto">
+                                        <div data-sly-test="${icons.iconPath}" class="flex-column workflow-carousel__banner-text-icon bd-rte">
+											<sly data-sly-test="${icons.imageLinkUrl}">
+												<a href="${icons.imageLinkUrl}" target="${icons.openNewImageLinkTab == 'true' ? '_blank' : '_self'}">
+													<img src="${icons.iconPath}" alt="${icons.altText}"
+                                                	class="banner-icon" />
+                                                </a>
+                                            </sly>
+											<sly data-sly-test="${!icons.imageLinkUrl}">
+												<img src="${icons.iconPath}" alt="${icons.altText}"
+												class="banner-icon"/>
+											</sly>
+                                        </div>
+                                        <div data-sly-test="${icons.subHeading}" class="flex-column workflow-carousel__banner-text-icon-header bd-rte">
+                                            ${icons.subHeading @context='html'}
+                                        </div>
+                                        <div data-sly-test="${icons.subDescription}" class="flex-column workflow-carousel__banner-text-icon-description bd-rte">
+                                            ${icons.subDescription @context='html'}
+                                        </div>
+                                    </div>
+                                </sly>
+                            </div>
+
+                            <div class="d-block text-align-center workflow-carousel__banner-text-icon-links bd-rte pt-4">
+                                <a data-sly-test="${item.ctaPath}" data-font-color="${properties.ctaTxtColor}" data-background-color="${properties.ctaBgColor}" href="${item.ctaPath}" class="workflow-carousel__banner-text-icon-link-1">${item.ctaLabel @context='html'} > </a>
+                                <a data-sly-test="${item.secondaryCtaPath}" data-font-color="${properties.ctaTxtColor}" data-background-color="${properties.ctaBgColor}" href="${item.secondaryCtaPath}" class="workflow-carousel__banner-text-icon-link-2">${item.secondaryCtaLabel @context='html'} > </a>
+                            </div>
+        
+                        </div>
+                    </div>
+                </div>
+
+            </sly>
+
+            </div>
+            
+            <div data-sly-test="${interactiveCarouselModel.slideCount > 1}" class="container d-flex justify-content-between align-items-center workflow-carousel__navigators-mobile">
+                <div class="workflow-carousel__navigators-mobile-prev d-sm-none">
+                    <img src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/images/prev-arrow-m.png" class="bdb-workflow-carousel-prev"
+                        alt="prev" tabindex="0">
+                </div>
+                <div class="workflow-carousel-slick-m-dots mx-2" data-icondata='${interactiveCarouselModel.slideBarJson}'>
+                    <div class="line" >
+                        <span class="highlight">&nbsp;</span>
+                    </div>
+                </div>
+                <div class="workflow-carousel__navigators-mobile-next d-sm-none">
+                    <img src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/images/next-arrow-m.png" class="bdb-workflow-carousel-next"
+                        alt="next" tabindex="0">
+                </div>
+            </div>
+
+        </article>
+    </div>
+</sly>

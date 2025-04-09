@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+          jcr:primaryType="nt:unstructured"
+          jcr:title="Global Error Messages and Labels"
+          sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+        <items jcr:primaryType="nt:unstructured">
+            <tabs
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/coral/foundation/tabs"
+                    maximized="{Boolean}false">
+                <items jcr:primaryType="nt:unstructured">
+                    <passwordLabelErrorMessages
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="Password"
+                            sling:resourceType="granite/ui/components/coral/foundation/container"
+                            margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <column
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <rulesHeading
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            fieldLabel="Heading Label"
+                                            name="./rulesHeading"/>
+                                    <lengthRuleLabel
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            fieldLabel="Password Length Rule Label"
+                                            name="./lengthRuleLabel"/>
+                                    <caseRuleLabel
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            fieldLabel="Password Case Rule Label"
+                                            name="./caseRuleLabel"/>
+                                    <numericRuleLabel
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            fieldLabel="Password Numeric Rule Label"
+                                            name="./numericRuleLabel"/>
+                                    <symbolRuleLabel
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            fieldLabel="Password Symbol Rule Label"
+                                            name="./symbolRuleLabel"/>
+                                    <noSpacesLabel
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            fieldLabel="No Spaces Label"
+                                            name="./noSpacesLabel"/>
+                                    <currentPwdRequiredError
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            fieldLabel="Current Password Required Error"
+                                            name="./currentPwdRequiredError"/>
+                                    <passwordError
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            fieldLabel="Password Error Message"
+                                            name="./passwordError"/>
+                                    <passwordFLNameError
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            fieldLabel="Password First Name and Last Name Rule error message"
+                                            name="./passwordFLNameError"/>
+                                    <passwordPatternError
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            fieldLabel="Password Pattern Error Message"
+                                            name="./passwordPatternError"/>
+                                    <confPasswordError
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            fieldLabel="Confirm Password Error Message"
+                                            name="./confPasswordError"/>
+                                    <confPasswordNotMatchError
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            fieldLabel="Confirm Password Not Matching Error Message"
+                                            name="./confPasswordNotMatchError"/>
+                                </items>
+                            </column>
+                        </items>
+                    </passwordLabelErrorMessages>
+                    <errorMessages
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="Error Messages"
+                            sling:resourceType="granite/ui/components/coral/foundation/container"
+                            margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <column
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <mandatoryFieldError
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            fieldLabel="Mandatory Field Error"
+                                            name="./mandatoryFieldError"/>
+                                    <phoneNumberLabelError
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            fieldLabel="Phone Number Label Error"
+                                            name="./phoneNumberLabelError"/>
+                                    <firstNameError
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            fieldLabel="First Name Error Text"
+                                            name="./firstNameError"/>
+                                    <lastNameError
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            fieldLabel="Last Name Error Text"
+                                            name="./lastNameError"/>
+                                    <phoneNumberValidationText
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            fieldLabel="Phone Number Validation Text"
+                                            name="./phoneNumberValidationText"/>
+                                    <phoneNumPatternError
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            fieldLabel="Phone Number Pattern Error Text"
+                                            name="./phoneNumPatternError"/>
+                                </items>
+                            </column>
+                        </items>
+                    </errorMessages>
+                    <apiErrorMessages
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="API Error Messages"
+                            sling:resourceType="granite/ui/components/coral/foundation/container"
+                            margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <column
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <apiErrorFieldSet
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <apiErrorMultiField
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                                    composite="{Boolean}true"
+                                                    fieldDescription="API Error Messages and Codes"
+                                                    fieldLabel="Author API Error Messages">
+                                                <field
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                                                        name="./apiErrorMessagesMultiField">
+                                                    <items jcr:primaryType="nt:unstructured">
+                                                        <id
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="Error Code"
+                                                                required="{Boolean}true"
+                                                                name="./errorCode"/>
+                                                        <title
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="Error Message"
+                                                                required="{Boolean}true"
+                                                                name="./errorMessage"/>
+                                                    </items>
+                                                </field>
+                                            </apiErrorMultiField>
+                                        </items>
+                                    </apiErrorFieldSet>
+                                </items>
+                            </column>
+                        </items>
+                    </apiErrorMessages>
+                </items>
+            </tabs>
+        </items>
+    </content>
+</jcr:root>

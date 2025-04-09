@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2020-02-10T17:04:20.219+05:30"
+        cq:lastModifiedBy="admin"
+        jcr:primaryType="nt:unstructured"
+        jcr:title="Australia"
+        sling:resourceType="acs-commons/components/utilities/genericlist"
+        value="AU">
+        <image
+            jcr:primaryType="nt:unstructured"
+            fileReference="/apps/acs-commons/components/utilities/genericlist/generic-list.png"/>
+        <list jcr:primaryType="nt:unstructured">
+            <item0
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Australian Capital Territory"
+                value="AU-ACT"/>
+            <item1
+                jcr:primaryType="nt:unstructured"
+                jcr:title="New South Wales"
+                value="AU-NSW"/>
+            <item2
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Northern Territory"
+                value="AU-NT"/>
+            <item3
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Queensland"
+                value="AU-QLD"/>
+            <item4
+                jcr:primaryType="nt:unstructured"
+                jcr:title="South Australia"
+                value="AU-SA"/>
+            <item5
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Tasmania"
+                value="AU-TAS"/>
+            <item6
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Victoria"
+                value="AU-VIC"/>
+            <item7
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Western Australia"
+                value="AU-WA"/>
+        </list>
+    </jcr:content>
+</jcr:root>

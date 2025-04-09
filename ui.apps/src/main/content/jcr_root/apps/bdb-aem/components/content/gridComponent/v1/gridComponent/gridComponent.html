@@ -1,0 +1,53 @@
+<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html"
+     data-sly-call="${templates.placeholder @ isEmpty = true}"></sly>
+
+<sly data-sly-use.gridComponentModel="com.bdb.aem.core.models.GridComponentModel"></sly>
+
+<div> 
+  <div class="bd-featured-products container app-js__bd-featured-products d-flex flex-row flex-wrap flex-grow-0 flex-shrink-1 ${properties.togglePaddingTop?'pt-2':'pt-5'}">
+    <div class="container bd-featured-products__intro d-flex flex-column text-sm-center justify-content-center mx-auto px-3 py-4">
+      <p data-sly-test="${properties.gridComponentTitle}" class="bd-featured-products__intro-heading">
+        ${properties.gridComponentTitle @context='html'}
+      </p>
+      <div data-sly-test="${properties.gridComponentDescription}" class="bd-featured-products__intro-sub-heading pt-2 pt-sm-2 pl-lg-4 pl-sm-0 bd-rte">
+        ${properties.gridComponentDescription @context='html'}
+      </div>
+    </div>
+    <div class="container bd-featured-products__card-container d-flex hide-mobile-padding">
+      <div class="row" >
+        <sly data-sly-list.item="${gridComponentModel.cells}">
+          <div class="col-sm-4 d-flex  bd-featured-products__card-layout pb-3">
+            <div class="card bd-featured-products__card h-100">
+            	<sly data-sly-test="${item.imageLinkUrl}">
+            		 <a href="${item.imageLinkUrl}" target="${item.openNewImageLinkTab == 'true' ? '_blank' : '_self'}">
+						<img data-sly-test="${item.productImage}" class="card-img-top  bd-featured-products__card-image"
+                		data-src="${item.productImage}" alt="${item.altImage}" width="320" width="240">
+                	</a>
+                </sly>
+				<sly data-sly-test="${!item.imageLinkUrl}">
+					<img data-sly-test="${item.productImage}" class="card-img-top  bd-featured-products__card-image"
+                	data-src="${item.productImage}" alt="${item.altImage}" width="320" width="240">
+ 				</sly>
+              <p data-sly-test="${item.productTitle}" class="card-title bd-featured-products__card-title pl-2 mx-auto">
+                ${item.productTitle @context='html'}
+              </p>
+              <div data-sly-test="${item.productDescription}" class="card-body bd-featured-products__card-body mb-2">
+                <div class="card-text bd-featured-products__card-text bd-rte">
+                  ${item.productDescription @context='html'}
+                </div>
+              </div>
+              <a data-sly-test="${item.buttonURL||item.buttonLabel}" href="${item.buttonURL}" class="bd-featured-products__a">
+                <button class="btn btn-primary-blue btn-md bd-featured-products__btn mx-4 mb-4">
+                  ${item.buttonLabel @context='html'}
+                </button>
+              </a>
+            </div>
+          </div>
+        </sly>
+      </div>
+    </div>
+	  <div data-sly-test="${properties.gridComponentQuote}" class="container bd-featured-products__quote d-flex flex-column text-center justify-content-center mx-auto px-3">
+      <p class="bd-featured-products__quote-content">${properties.gridComponentQuote @context='html'}</p>
+    </div>
+  </div>
+</div>

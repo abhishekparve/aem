@@ -1,0 +1,59 @@
+<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html" />
+<sly data-sly-use.newsLetterRegistrationModel="com.bdb.aem.core.models.NewsLetterRegistrationModel"></sly>
+<article class="news-letter app-js__news-letter ${properties.nameEmailVariaion ? 'container' : ''}">
+    <div class="d-flex flex-column flex-sm-row news-letter__container ${newsLetterRegistrationModel.newsLetterRegImagePath ? '' : 'no-img'}">
+        <div data-sly-test="${newsLetterRegistrationModel.newsLetterRegImagePath}" class="news-letter__img-container">
+            <a href="${newsLetterRegistrationModel.imageLinkUrl}" target="${properties.openNewImageLinkTab == 'true' ? '_blank' : '_self'}">
+			<sly data-sly-test="${newsLetterRegistrationModel.imageLinkUrl}">
+				<img src="${newsLetterRegistrationModel.newsLetterRegImagePath}" alt="${properties.newsLetterRegImageAltTxt}">
+			</a>
+			<sly data-sly-test="${!newsLetterRegistrationModel.imageLinkUrl}">
+				<img src="${newsLetterRegistrationModel.newsLetterRegImagePath}" alt="${properties.newsLetterRegImageAltTxt}">
+        </div>
+        <div class="news-letter__main-content">
+            <div class="news-letter__heading">${properties.newsLetterRegHeading}</div>
+            <div class="news-letter__desc">${properties.newsLetterRegDesc @context='html'}</div>
+            <sly data-sly-test="${properties.newsLetterRegLatestArticle}">
+            <div class="news-letter__article">
+                <div class="news-letter__article-heading">${properties.newsLetterRegLatestHeading @context='html'}</div>
+                <div class="news-letter__article-date">${properties.newsLetterRegLatestDate}</div>
+                <a href="${newsLetterRegistrationModel.newsLetterRegLatestArticleLink}" class="news-letter__article-link">${properties.newsLetterRegLatestArticle @context='html'}</a>
+            </div>
+            </sly>
+            <sly data-sly-test="${properties.newsLetterRegViewAllTxt}">
+                <a href="${newsLetterRegistrationModel.newsLetterRegViewAllUrl}" class="news-letter__article-cta-link">${properties.newsLetterRegViewAllTxt @context='html'}</a>
+            </sly>
+            <sly data-sly-test="${properties.newsLetterRegFormHeading}">
+            <form class="news-letter__form" action=" ">
+                <h3 class="news-letter__form-heading">
+                    ${properties.newsLetterRegFormHeading}
+                </h3>
+
+                <div class="${properties.nameEmailVariaion ? 'form-in-block' : 'd-flex flex-column flex-sm-row'}">
+                    <div class="${properties.nameEmailVariaion ? 'form-field thought-leadership-form__form-field' : 'form-field news-letter__form-field'}">
+                        <input id="userName" class="form-control news-letter__form-field-input" type="text"
+                               placeholder="${properties.newsLetterRegName}" />
+                        <label class="news-letter__form-field-lbl" for="userName">${properties.newsLetterRegName}</label>
+                    </div>
+                    <div class="${properties.nameEmailVariaion ? 'form-field thought-leadership-form__form-field' : 'form-field news-letter__form-field'}">
+                        <input id="email" class="form-control news-letter__form-field-input" type="text"
+                               placeholder="${properties.newsLetterRegEmail}" />
+                        <label class="news-letter__form-field-lbl" for="email">${properties.newsLetterRegEmail}</label>
+                    </div>
+                </div>
+                <sly data-sly-test="${properties.nameEmailVariaion}">
+                    <label for="confirm" class="checkbox">
+                        <input data-val="true" data-val-required="" id="confirm" name="confirm" type="checkbox" value="true"
+                            class="checkbox__input" />
+                        <div class="checkbox__box"></div>
+                        <sly data-sly-test="${properties.confirmationText}">${properties.confirmationText @context='html'}</sly>
+                    </label>
+                </sly>
+                <button data-sly-test="${properties.newsLetterRegisterLabel}" type="submit"
+                        class="${properties.nameEmailVariaion ? 'btn btn-primary-blue btn-lg thought-leadership-form__form-submit' : 'btn btn-primary-blue btn-lg news-letter__form-submit'}">${properties.newsLetterRegisterLabel @context='html'}</button>
+            </form>
+            </sly>
+            <a data-sly-test="${properties.newsLetterCtaLabel}" class="btn btn-secondary btn-lg" tabindex="0" href="${properties.newsLetterCtaLink}">${properties.newsLetterCtaLabel @context='html'}</a>
+        </div>
+    </div>
+</article>

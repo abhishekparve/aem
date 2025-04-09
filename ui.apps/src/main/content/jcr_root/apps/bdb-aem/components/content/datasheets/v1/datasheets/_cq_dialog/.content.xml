@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Data Sheets"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        granite:class="cmp-button__editor"
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/container">
+        <items jcr:primaryType="nt:unstructured">
+            <container
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Properties"
+                sling:resourceType="granite/ui/components/coral/foundation/container"
+                margin="{Boolean}true">
+                <items jcr:primaryType="nt:unstructured">
+                    <columns
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <column
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                	 <togglePaddingTop
+				                        jcr:primaryType="nt:unstructured"
+				                        sling:resourceType="granite/ui/components/coral/foundation/form/switch"
+				                        checked="{Boolean}false"
+				                        fieldLabel="Reduce Top Padding"
+				                        fieldDescription="Switch between Default Padding (Off) and Reduced Padding (On)"
+				                        name="./togglePaddingTop"/>
+				                    <togglePaddingBottom
+				                        jcr:primaryType="nt:unstructured"
+				                        sling:resourceType="granite/ui/components/coral/foundation/form/switch"
+				                        checked="{Boolean}false"
+				                        fieldLabel="Reduce Bottom Padding"
+				                        fieldDescription="Switch between Default Padding (Off) and Reduced Padding (On)"
+				                        name="./togglePaddingBottom"/>
+                                    <heading
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldLabel="Heading"
+                                        name="./heading"/>
+                                    <downloadAltText
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldLabel="Download Alt Text"
+                                        name="./downloadAltText"/>
+                                    <viewMore
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldLabel="View More"
+                                        name="./viewMore"/>
+                                    <viewLess
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldLabel="View Less"
+                                        name="./viewLess"/>
+                                    <upArrowAltText
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldLabel="Up Arrow Alt Text"
+                                        name="./upArrowAltText"/>
+                                    <downArrowAltText
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldLabel="Down Arrow Alt Text"
+                                        name="./downArrowAltText"/>
+                                    <popoverTitle
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldLabel="Popover Title"
+                                        name="./popoverTitle"/>
+                                    <rightArrowALtText
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldLabel="Right Arrow Alt Text"
+                                        name="./rightArrowAltText"/>
+                                    <count
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldLabel="Count"
+                                        name="./count"/>
+                                    <doctype
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Doc Types"
+                                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                                        margin="{Boolean}true">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <heading
+                                                granite:class="coral-Heading coral-Heading--4"
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/heading"
+                                                level="{Long}4"
+                                                text="Document Types"/>
+                                            <columns
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                                                margin="{Boolean}true">
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <column
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                                                        <items jcr:primaryType="nt:unstructured">
+                                                            <types
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                                                composite="{Boolean}true"
+                                                                eaem-show-on-collapse="EAEM.showProductName"
+                                                                fieldLabel="Types">
+                                                                <field
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    sling:resourceType="granite/ui/components/coral/foundation/container"
+                                                                    name="./docTypes">
+                                                                    <items jcr:primaryType="nt:unstructured">
+                                                                        <column
+                                                                            jcr:primaryType="nt:unstructured"
+                                                                            sling:resourceType="granite/ui/components/coral/foundation/container">
+                                                                            <items jcr:primaryType="nt:unstructured">
+                                                                                <productdetails
+                                                                                    jcr:primaryType="nt:unstructured"
+                                                                                    sling:resourceType="granite/ui/components/foundation/form/select"
+                                                                                    fieldLabel="Document Type"
+                                                                                    name="./documentType">
+                                                                                    <datasource
+                                                                                        jcr:primaryType="nt:unstructured"
+                                                                                        sling:resourceType="acs-commons/components/utilities/genericlist/datasource"
+                                                                                        path="/etc/acs-commons/lists/bdb/data-sheets-doc-types/doc-type-attributes"/>
+                                                                                </productdetails>
+                                                                                <documentlabel
+											                                        jcr:primaryType="nt:unstructured"
+											                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+											                                        fieldLabel="Doument Label"
+											                                        name="./documentLabel"/>
+                                                                            </items>
+                                                                        </column>
+                                                                    </items>
+                                                                </field>
+                                                            </types>
+                                                        </items>
+                                                    </column>
+                                                </items>
+                                            </columns>
+                                        </items>
+                                    </doctype>
+                                </items>
+                            </column>
+                        </items>
+                    </columns>
+                </items>
+            </container>
+        </items>
+    </content>
+</jcr:root>

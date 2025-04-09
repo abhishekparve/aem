@@ -1,0 +1,97 @@
+{
+    "distributors": [
+        {
+            "country": "JP",
+            "distributorAddress": {
+                "addressId": "0a5d32b3-8481-479a-9647-974a42188418",
+                "billingAddress": true,
+                "building": "Building - 1",
+                "country": {
+                    "isocode": "US"
+                },
+                "defaultAddress": false,
+                "department": "Science",
+                "district": "DK",
+                "floor": "2",
+                "formattedAddress": "Address Line 1, Address Line 2, Alabama, Birmingham, 91345",
+                "line1": "Address Line 1",
+                "line2": "Address Line 2",
+                "pendingAddress": false,
+                "phone": "123456789",
+                "postalCode": "91345",
+                "region": {
+                    "isocode": "US-AL"
+                },
+                "room": "001",
+                "shippingAddress": false,
+                "town": "Birmingham"
+            },
+            "email": "harry@bd.com",
+            "id": "Dis-1",
+            "name": "Harry",
+            "phone": "1234567890"
+        },
+        {
+            "country": "JP",
+            "distributorAddress": {
+                "addressId": "0a5d32b3-8481-479a-9647-974a42188418",
+                "billingAddress": true,
+                "building": "Building - 1",
+                "country": {
+                    "isocode": "US"
+                },
+                "defaultAddress": false,
+                "department": "Science",
+                "district": "DK",
+                "floor": "2",
+                "formattedAddress": "Address Line 1, Address Line 2, Alabama, Birmingham, 91345",
+                "line1": "Address Line 1",
+                "line2": "Address Line 2",
+                "pendingAddress": false,
+                "phone": "123456789",
+                "postalCode": "91345",
+                "region": {
+                    "isocode": "US-AL"
+                },
+                "room": "001",
+                "shippingAddress": false,
+                "town": "Birmingham"
+            },
+            "email": "harry@bd.com",
+            "id": "Dis-2",
+            "name": "Hendrics",
+            "phone": "1234567890"
+        },
+        {
+            "country": "JP",
+            "distributorAddress": {
+                "addressId": "0a5d32b3-8481-479a-9647-974a42188418",
+                "billingAddress": true,
+                "building": "Building - 1",
+                "country": {
+                    "isocode": "US"
+                },
+                "defaultAddress": false,
+                "department": "Science",
+                "district": "DK",
+                "floor": "2",
+                "formattedAddress": "Address Line 1, Address Line 2, Alabama, Birmingham, 91345",
+                "line1": "Address Line 1",
+                "line2": "Address Line 2",
+                "pendingAddress": false,
+                "phone": "123456789",
+                "postalCode": "91345",
+                "region": {
+                    "isocode": "US-AL"
+                },
+                "room": "001",
+                "shippingAddress": false,
+                "town": "Birmingham"
+            },
+            "email": "harry@bd.com",
+            "id": "Dis-3",
+            "name": "Harry harris",
+            "phone": "1234567890"
+        }
+    ]
+}

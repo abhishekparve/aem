@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="News Letter Registration"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/container">
+        <items jcr:primaryType="nt:unstructured">
+            <tabs
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/tabs"
+                maximized="{Boolean}false">
+                <items jcr:primaryType="nt:unstructured">
+                    <newsletterRegistration
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="News Letter Registration"
+                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <columns
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                                margin="{Boolean}true">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <column
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <newsLetterRegImagePath
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                fieldDescription="News Letter Image Path"
+                                                fieldLabel="Image Path"
+                                                name="./newsLetterRegImagePath"
+                                                rootPath="/content/dam/bdb"/>
+                                             <imageLinkUrl
+												jcr:primaryType="nt:unstructured"
+												sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+												fieldDescription="Image Link URL"
+												fieldLabel="Image Link URL"
+												name="./imageLinkUrl"
+												rootPath="/content"/>
+											<openNewImageLinkTab
+												jcr:primaryType="nt:unstructured"
+												sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+												fieldDescription="Check to open link in New Tab. By default, link opens in same tab."
+												name="./openNewImageLinkTab"
+												text="Open Link in New Tab"
+												uncheckedValue="{Boolean}false"
+												value="{Boolean}true"/>
+                                            <newsLetterRegImageAltTxt
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldDescription="News Letter Image Alt Txt"
+                                                fieldLabel="Image Alt Text"
+                                                name="./newsLetterRegImageAltTxt"/>
+                                            <newsLetterRegHeading
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldDescription="News Letter Heading"
+                                                fieldLabel="News Letter Heading"
+                                                name="./newsLetterRegHeading"/>
+                                            <newsLetterRegDesc
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="cq/gui/components/authoring/dialog/richtext"
+                                                fieldDescription="News Letter Description"
+                                                fieldLabel="News Letter Description"
+                                                name="./newsLetterRegDesc"
+                                                useFixedInlineToolbar="{Boolean}true">
+                                                <rtePlugins
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceSuperType="/apps/bdb-aem/components/authoring/dialog/richtext/rtePlugins"/>
+                                                <uiSettings
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceSuperType="/apps/bdb-aem/components/authoring/dialog/richtext/uiSettings"/>
+                                            </newsLetterRegDesc>
+                                            <newsLetterRegLatestHeading
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldDescription="Latest Article Heading"
+                                                fieldLabel="Latest Article Heading"
+                                                name="./newsLetterRegLatestHeading"/>
+                                            <newsLetterRegLatestDate
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldDescription="Latest Article Date"
+                                                fieldLabel="Latest Article Date"
+                                                name="./newsLetterRegLatestDate"/>
+                                            <newsLetterRegLatestArticle
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldDescription="Latest Article Name"
+                                                fieldLabel="Latest Article Name"
+                                                name="./newsLetterRegLatestArticle"/>
+                                            <newsLetterRegLatestArticleLink
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                                                fieldDescription="Latest Article Link"
+                                                fieldLabel="Latest Article Link"
+                                                name="./newsLetterRegLatestArticleLink"
+                                                rootPath="/content/bdb"/>
+                                            <newsLetterRegViewAllTxt
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldDescription="View All Articles Text"
+                                                fieldLabel="View All Articles Text"
+                                                name="./newsLetterRegViewAllTxt"/>
+                                            <newsLetterRegViewAllUrl
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                                                fieldDescription="View All Articles Link"
+                                                fieldLabel="View All Articles Link"
+                                                name="./newsLetterRegViewAllUrl"
+                                                rootPath="/content/bdb"/>
+                                            <newsLetterRegFormHeading
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldDescription="Registration Form Heading"
+                                                fieldLabel="Registration Form Heading"
+                                                name="./newsLetterRegFormHeading"/>
+                                            <newsLetterRegName
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldDescription="Registration Form Field - Name"
+                                                fieldLabel="Registration Form Field - Name"
+                                                name="./newsLetterRegName"/>
+                                            <newsLetterRegEmail
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldDescription="Registration Form Field - Email"
+                                                fieldLabel="Registration Form Field - Email"
+                                                name="./newsLetterRegEmail"/>
+                                            <newsLetterRegisterLabel
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldDescription="Registration Form Submit Label"
+                                                fieldLabel="Registration Form Submit Label"
+                                                name="./newsLetterRegisterLabel"/>
+                                            <nameEmailVariaion
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                                fieldDescription="On Checking, Email would be Stacked below Name on the Page and Checkbox Confirmation Text will be shown along with Thought Leadership Formatting"
+                                                name="./nameEmailVariaion"
+                                                text="Thought Leadership Variation"
+                                                uncheckedValue="false"
+                                                value="true"/>
+                                            <confirmationText
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
+                                                fieldDescription="Confirmation Text for Check Box - Thought Leadership Variation"
+                                                fieldLabel="Confirmation Text"
+                                                name="./confirmationText"/>
+                                            <newsLetterCtaLabel
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldDescription="Author this CTA label if no registration form is required"
+                                                fieldLabel="Register CTA Label"
+                                                name="./newsLetterCtaLabel"/>
+                                            <newsLetterCtaLink
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                                                fieldDescription="Author this CTA link if no registration form is required"
+                                                fieldLabel="Register CTA Link"
+                                                name="./newsLetterCtaLink"
+                                                rootPath="/content/bdb"/>
+                                        </items>
+                                    </column>
+                                </items>
+                            </columns>
+                        </items>
+                    </newsletterRegistration>
+                </items>
+            </tabs>
+        </items>
+    </content>
+</jcr:root>

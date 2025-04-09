@@ -1,0 +1,43 @@
+<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html" data-sly-call="${templates.placeholder @ isEmpty = true}"></sly>
+<sly data-sly-use.addressCard="com.bdb.aem.core.models.AddressCardModel">
+   <div class="contact-us-page container ${properties.togglePaddingTop?'pt-2':''} ${properties.togglePaddingBottom?'pb-2':''}">
+      <div class="col-sm-12 bdb-contact-info__container__content-container__address ${properties.noPaddingOnTop ? 'p-0' : ''}">
+         <div class="bdb-contact-info__container">
+            <div class="card">
+               <div class="card-body ${addressCard.bgColor}">
+                  <sly data-sly-test="${addressCard.sections}" data-sly-list="${addressCard.sections}">
+                     <sly data-sly-test="${itemList.count ==1 && item.sectionTitle }">
+                        <div class="card-body__headquarter"> ${item.sectionTitle} </div>
+                     </sly>
+                     <div class="card-body__address address-wrapper">
+                     <sly data-sly-test="${itemList.count >1 && item.sectionTitle }">
+                        <div class="card-body__additionalInfo">
+                           <p class="info-text"> ${item.sectionTitle}</p>
+                        </div>
+                     </sly>
+                     <sly data-sly-test="${item.subSections}" data-sly-list.subItems="${item.subSections}">
+                        <div class="card-body__address address1-box">
+                           <sly data-sly-test="${subItems.sectionSubTitle}">
+                              <p class="bold-address">${subItems.sectionSubTitle @context='html'}</p>
+                           </sly>
+                           <sly data-sly-test="${subItems.description}">
+                              <div class="card-body__address-label bd-rte"> ${subItems.description @context='html'} </div>
+                           </sly>
+                           <sly data-sly-test="${subItems.linkUrl}">
+                           		<sly data-sly-test="${subItems.eventName}">
+                           			<a href="${subItems.linkUrl}" data-event="${subItems.eventName}" class="card-body__additional-links d-flex align-items-center"> <img src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/images/link-icon.svg" alt="" tabindex="-1" class="card-body__additional-links-image" /> ${subItems.linkTitle @context='html'} </a>
+                         		</sly>
+                         		<sly data-sly-test="${!subItems.eventName}">
+                           			<a href="${subItems.linkUrl}" class="card-body__additional-links d-flex align-items-center"> <img src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/images/link-icon.svg" alt="" tabindex="-1" class="card-body__additional-links-image" /> ${subItems.linkTitle @context='html'} </a>
+                         		</sly>
+                           </sly>
+                        </div>
+                     </sly>
+                     </div>
+                  </sly>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</sly>

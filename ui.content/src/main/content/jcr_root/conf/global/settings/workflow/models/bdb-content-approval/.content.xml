@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:rep="internal"
+    jcr:mixinTypes="[rep:AccessControllable]"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:designPath="/libs/settings/wcm/designs/default"
+        cq:lastModified="{Date}2021-07-15T12:34:55.420+05:30"
+        cq:lastModifiedBy="admin"
+        cq:template="/libs/cq/workflow/templates/model"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="BDB Content Approval"
+        sling:resourceType="cq/workflow/components/pages/model"
+        lastSynced="{Date}2020-11-16T00:21:18.750+05:30">
+        <flow
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="foundation/components/parsys">
+            <process
+                jcr:created="{Date}2020-11-12T20:13:22.783+05:30"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2020-11-13T01:44:34.072+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Inform Workflow Initiator"
+                sling:resourceType="cq/workflow/components/model/process">
+                <metaData
+                    jcr:primaryType="nt:unstructured"
+                    PROCESS="com.bdb.aem.core.workflows.SendEmailComplianceWorkflow"
+                    PROCESS_ARGS="group:workflowInit#template:contentproducer"
+                    PROCESS_AUTO_ADVANCE="true"/>
+            </process>
+            <process_566989799
+                jcr:created="{Date}2020-11-12T20:31:01.434+05:30"
+                jcr:createdBy="admin"
+                jcr:description="content reviewers to accept or reject the content"
+                jcr:lastModified="{Date}2020-11-14T01:59:53.450+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="inform content reviewers"
+                sling:resourceType="cq/workflow/components/model/process">
+                <metaData
+                    jcr:primaryType="nt:unstructured"
+                    PROCESS="com.bdb.aem.core.workflows.SendEmailComplianceWorkflow"
+                    PROCESS_ARGS="group:checkContentReviewerSelection#template:contentproducer"
+                    PROCESS_AUTO_ADVANCE="true"/>
+            </process_566989799>
+            <dynamic_participant_2037330387
+                jcr:created="{Date}2020-11-12T20:35:01.737+05:30"
+                jcr:createdBy="admin"
+                jcr:description="Content Reviewer Reject or assign it to BD Legal or Admin for Publishing"
+                jcr:lastModified="{Date}2021-07-15T12:33:20.913+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Content Reviewer  Accept / Reject"
+                sling:resourceType="cq/workflow/components/model/dynamic_participant">
+                <metaData
+                    jcr:primaryType="nt:unstructured"
+                    DYNAMIC_PARTICIPANT="com.bdb.aem.core.workflows.WorkFlowParticipantChooser"
+                    PROCESS_ARGS="BDB_Authors_Publisher_#publisher"/>
+            </dynamic_participant_2037330387>
+            <or
+                jcr:created="{Date}2020-11-12T20:37:24.484+05:30"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2021-06-08T20:30:47.738+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="cq/workflow/components/model/or"
+                branches="3"
+                branchName1="Rejected"
+                branchName2="Approved"
+                branchName3="Send to Legal Review"
+                branchOrder="[0,1,2]"
+                orSplit="true">
+                <_x0031_
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="cq/flow/components/parsys">
+                    <process_copy_copy
+                        jcr:created="{Date}2020-11-12T20:58:56.781+05:30"
+                        jcr:createdBy="admin"
+                        jcr:description="Content Rejected (Inform Workflow Initiator)"
+                        jcr:lastModified="{Date}2020-11-16T00:16:43.762+05:30"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Content Rejected"
+                        sling:resourceType="cq/workflow/components/model/process">
+                        <metaData
+                            jcr:primaryType="nt:unstructured"
+                            PROCESS="com.bdb.aem.core.workflows.SendEmailComplianceWorkflow"
+                            PROCESS_ARGS="group:workflowInit#template:rejectedmail"
+                            PROCESS_AUTO_ADVANCE="true"/>
+                    </process_copy_copy>
+                </_x0031_>
+                <_x0032_
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="cq/flow/components/parsys">
+                    <process_566989799_co
+                        jcr:created="{Date}2020-11-12T20:31:01.434+05:30"
+                        jcr:createdBy="admin"
+                        jcr:description="content reviewers to accept or reject the content"
+                        jcr:lastModified="{Date}2021-07-15T11:55:36.962+05:30"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Inform admin for Publishing / Reject"
+                        sling:resourceType="cq/workflow/components/model/process">
+                        <metaData
+                            jcr:primaryType="nt:unstructured"
+                            PROCESS="com.bdb.aem.core.workflows.SendEmailComplianceWorkflow"
+                            PROCESS_ARGS="group:checkAdminSelection#template:contentproducer"
+                            PROCESS_AUTO_ADVANCE="true"/>
+                    </process_566989799_co>
+                    <participant
+                        jcr:created="{Date}2021-07-15T12:00:08.684+05:30"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2021-07-15T12:34:55.411+05:30"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Admin Publish or Reject"
+                        sling:resourceType="cq/workflow/components/model/participant">
+                        <metaData
+                            jcr:primaryType="nt:unstructured"
+                            PARTICIPANT="BDB_Admin_Authors_Content"/>
+                    </participant>
+                    <or
+                        jcr:created="{Date}2021-07-15T11:57:57.786+05:30"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2021-07-15T11:58:31.648+05:30"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="cq/workflow/components/model/or"
+                        branches="2"
+                        branchName1="Publish"
+                        branchName2="Reject Publishing"
+                        branchOrder="[0,1]"
+                        orSplit="true">
+                        <_x0031_
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="cq/flow/components/parsys">
+                            <process_copy
+                                jcr:created="{Date}2020-11-12T21:47:48.778+05:30"
+                                jcr:createdBy="admin"
+                                jcr:description="Publishes the content to publish server"
+                                jcr:lastModified="{Date}2020-11-16T00:17:03.014+05:30"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Approved"
+                                sling:resourceType="cq/workflow/components/model/process">
+                                <metaData
+                                    jcr:primaryType="nt:unstructured"
+                                    PROCESS="com.day.cq.wcm.workflow.process.ActivatePageProcess"
+                                    PROCESS_AUTO_ADVANCE="true"/>
+                            </process_copy>
+                        </_x0031_>
+                        <_x0032_
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="cq/flow/components/parsys">
+                            <process_copy_copy_co
+                                jcr:created="{Date}2020-11-12T20:58:56.781+05:30"
+                                jcr:createdBy="admin"
+                                jcr:description="Content Rejected (Inform Workflow Initiator)"
+                                jcr:lastModified="{Date}2020-11-16T00:16:43.762+05:30"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Content Rejected"
+                                sling:resourceType="cq/workflow/components/model/process">
+                                <metaData
+                                    jcr:primaryType="nt:unstructured"
+                                    PROCESS="com.bdb.aem.core.workflows.SendEmailComplianceWorkflow"
+                                    PROCESS_ARGS="group:workflowInit#template:rejectedmail"
+                                    PROCESS_AUTO_ADVANCE="true"/>
+                            </process_copy_copy_co>
+                        </_x0032_>
+                    </or>
+                </_x0032_>
+                <_x0033_
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="cq/flow/components/parsys">
+                    <process
+                        jcr:created="{Date}2020-11-12T21:49:00.285+05:30"
+                        jcr:createdBy="admin"
+                        jcr:description="Inform Legal reviewers"
+                        jcr:lastModified="{Date}2020-11-16T00:17:26.388+05:30"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Request legal reviewers"
+                        sling:resourceType="cq/workflow/components/model/process">
+                        <metaData
+                            jcr:primaryType="nt:unstructured"
+                            PROCESS="com.bdb.aem.core.workflows.SendEmailComplianceWorkflow"
+                            PROCESS_ARGS="group:checkLegalAdminSelection#template:contentproducer"
+                            PROCESS_AUTO_ADVANCE="true"/>
+                    </process>
+                    <dynamic_participant
+                        jcr:created="{Date}2020-11-12T21:55:54.631+05:30"
+                        jcr:createdBy="admin"
+                        jcr:description="bdlegal"
+                        jcr:lastModified="{Date}2021-06-01T18:45:24.148+05:30"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Legal reviewers accept / reject"
+                        sling:resourceType="cq/workflow/components/model/dynamic_participant">
+                        <metaData
+                            jcr:primaryType="nt:unstructured"
+                            DYNAMIC_PARTICIPANT="com.bdb.aem.core.workflows.WorkFlowParticipantChooser"
+                            PROCESS_ARGS="BDB_Legal_#legal"/>
+                    </dynamic_participant>
+                    <or
+                        jcr:created="{Date}2020-11-12T21:57:54.061+05:30"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2020-11-12T21:58:24.123+05:30"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="cq/workflow/components/model/or"
+                        branches="2"
+                        branchName1="Accept"
+                        branchName2="Reject"
+                        branchOrder="[0,1]"
+                        orSplit="true">
+                        <_x0031_
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="cq/flow/components/parsys">
+                            <process_copy
+                                jcr:created="{Date}2020-11-12T21:13:23.237+05:30"
+                                jcr:createdBy="admin"
+                                jcr:description="Inform Content Admins for Approval"
+                                jcr:lastModified="{Date}2021-06-08T20:33:44.315+05:30"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Accept"
+                                sling:resourceType="cq/workflow/components/model/process">
+                                <metaData
+                                    jcr:primaryType="nt:unstructured"
+                                    PROCESS="com.bdb.aem.core.workflows.SendEmailComplianceWorkflow"
+                                    PROCESS_ARGS="group:checkContentReviewerSelection#template:contentproducer"
+                                    PROCESS_AUTO_ADVANCE="true"/>
+                            </process_copy>
+                            <goto
+                                jcr:created="{Date}2020-11-12T21:59:10.825+05:30"
+                                jcr:createdBy="admin"
+                                jcr:description="Goto Step"
+                                jcr:lastModified="{Date}2021-06-08T20:33:59.045+05:30"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Goto Step"
+                                sling:resourceType="cq/workflow/components/model/goto">
+                                <metaData
+                                    jcr:primaryType="nt:unstructured"
+                                    PROCESS="com.adobe.granite.workflow.core.process.GotoProcess"
+                                    PROCESS_AUTO_ADVANCE="false"
+                                    script="function check() {&#xd;&#xa;return true;&#xd;&#xa;}"
+                                    TARGET_NODE_PATH="/conf/global/settings/workflow/models/bdb-content-approval/jcr:content/flow/dynamic_participant_2037330387"/>
+                            </goto>
+                        </_x0031_>
+                        <_x0032_
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="cq/flow/components/parsys">
+                            <process_copy_copy
+                                jcr:created="{Date}2020-11-12T21:13:23.237+05:30"
+                                jcr:createdBy="admin"
+                                jcr:description="Inform Content Admins for Rejection"
+                                jcr:lastModified="{Date}2021-06-08T20:34:36.306+05:30"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Reject"
+                                sling:resourceType="cq/workflow/components/model/process">
+                                <metaData
+                                    jcr:primaryType="nt:unstructured"
+                                    PROCESS="com.bdb.aem.core.workflows.SendEmailComplianceWorkflow"
+                                    PROCESS_ARGS="group:checkContentReviewerSelection#template:rejectedmail"
+                                    PROCESS_AUTO_ADVANCE="true"/>
+                            </process_copy_copy>
+                            <goto_copy
+                                jcr:created="{Date}2020-11-12T21:59:10.825+05:30"
+                                jcr:createdBy="admin"
+                                jcr:description="Goto Step"
+                                jcr:lastModified="{Date}2021-06-08T20:34:45.550+05:30"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Goto Step"
+                                sling:resourceType="cq/workflow/components/model/goto">
+                                <metaData
+                                    jcr:primaryType="nt:unstructured"
+                                    PROCESS="com.adobe.granite.workflow.core.process.GotoProcess"
+                                    PROCESS_AUTO_ADVANCE="false"
+                                    script="function check() {&#xd;&#xa;return true;&#xd;&#xa;}"
+                                    TARGET_NODE_PATH="/conf/global/settings/workflow/models/bdb-content-approval/jcr:content/flow/dynamic_participant_2037330387"/>
+                            </goto_copy>
+                        </_x0032_>
+                    </or>
+                </_x0033_>
+            </or>
+        </flow>
+    </jcr:content>
+</jcr:root>

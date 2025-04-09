@@ -1,0 +1,29 @@
+<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html"
+     data-sly-call="${templates.placeholder @ isEmpty = true}"></sly>
+
+<sly data-sly-use.icmCellHierarchyModel="com.bdb.aem.core.models.IcmCellHierarchyModel">
+     <script>
+          if (typeof window.AEM_DATA === 'undefined') {
+               window.AEM_DATA = {};
+          }
+          if (typeof window.AEM_DATA.labels === 'undefined') {
+               window.AEM_DATA.labels = {};
+          }
+
+ 		  if (typeof window.AEM_DATA.labels.icmToolLabels === 'undefined') {
+				window.AEM_DATA.labels.icmToolLabels={};
+			}
+          window.AEM_DATA.labels.icmToolLabels = ${icmCellHierarchyModel.cellPageLabels || '{}' @context='scriptComment'};
+
+
+		  if (typeof window.AEM_DATA.config === 'undefined') {
+               window.AEM_DATA.config = {};
+          }
+
+          window.AEM_DATA.config.icmToolConfig = ${icmCellHierarchyModel.cellPageConfig || '{}' @context='scriptComment'};
+      </script>
+</sly>
+
+<div class="icm-icmToolLabels">
+	<bd-icm-tool labels="icmToolLabels" config="icmToolConfig"></bd-icm-tool>
+</div>

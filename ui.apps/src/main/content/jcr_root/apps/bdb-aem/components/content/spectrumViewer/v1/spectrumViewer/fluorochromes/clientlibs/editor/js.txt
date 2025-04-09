@@ -1,0 +1,4 @@
+#base=js
+delete-fluor-icon.js
+info-fluor-icon.js
+search-fluor-icon.js

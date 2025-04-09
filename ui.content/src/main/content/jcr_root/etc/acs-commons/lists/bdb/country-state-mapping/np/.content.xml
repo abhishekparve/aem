@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2020-02-10T17:04:20.219+05:30"
+        cq:lastModifiedBy="admin"
+        jcr:primaryType="nt:unstructured"
+        jcr:title="Nepal"
+        sling:resourceType="acs-commons/components/utilities/genericlist"
+        value="NP">
+        <image
+            jcr:primaryType="nt:unstructured"
+            fileReference="/apps/acs-commons/components/utilities/genericlist/generic-list.png"/>
+        <list jcr:primaryType="nt:unstructured">
+            <item0
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Province 1"
+                value="NP-P1"/>
+            <item1
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Province 2"
+                value="NP-P2"/>
+            <item2
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Bagmati"
+                value="NP-P3"/>
+            <item3
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Gandaki"
+                value="NP-P4"/>
+            <item4
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Lumbini"
+                value="NP-P5"/>
+            <item5
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Karnali"
+                value="NP-P6"/>
+            <item6
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Sudurpashchim"
+                value="NP-P7"/>
+        </list>
+    </jcr:content>
+</jcr:root>

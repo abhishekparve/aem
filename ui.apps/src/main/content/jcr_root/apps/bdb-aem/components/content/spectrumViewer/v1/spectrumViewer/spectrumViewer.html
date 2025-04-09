@@ -1,0 +1,29 @@
+<sly data-sly-test="${wcmmode.edit}">
+    <p data-emptytext="Configure ${component.title} main component here" class="cq-placeholder"></p>
+    <div data-sly-resource="${'graphs' @ resourceType='bdb-aem/components/content/spectrumViewer/v1/spectrumViewer/graph'}" ></div>
+    <div data-sly-resource="${'instrument-config' @ resourceType='bdb-aem/components/content/spectrumViewer/v1/spectrumViewer/instrument-configuration'}"></div>
+    <div data-sly-resource="${'fluorochromes' @ resourceType = 'bdb-aem/components/content/spectrumViewer/v1/spectrumViewer/fluorochromes'}"></div>
+</sly>
+
+<sly data-sly-use.spectrumViewerModel="com.bdb.aem.core.models.SpectrumViewerModel"/>
+    <script>
+        if (typeof window.AEM_DATA.labels === 'undefined') {
+            window.AEM_DATA.labels = {};
+        }
+        if (typeof window.AEM_DATA.config === 'undefined') {
+            window.AEM_DATA.config = {};
+        }
+        window.AEM_DATA.labels.spectrumViewerLebels= ${spectrumViewerModel.spectrumViewerLables @context='scriptComment' };
+        window.AEM_DATA.config.spectrumViewerConfig = ${spectrumViewerModel.spectrumViewerConfig @context='scriptComment' };
+    </script>
+
+<!-- Spectrum Viewer react Component starts here -->
+    <bd-spectrum-viewer labels="spectrumViewerLebels" class="newSpectrumScientificTool" config="spectrumViewerConfig"></bd-spectrum-viewer>
+<!-- Spectrum Viewer react Component ends here -->
+
+
+<div id="encryptedJsonStr" data-value="${SpectrumViewerModel.encryptedJsonStr}">
+</div>
+
+<div id="secureKeyFirstPart" data-value="${SpectrumViewerModel.secureKeyPart1}">
+</div>

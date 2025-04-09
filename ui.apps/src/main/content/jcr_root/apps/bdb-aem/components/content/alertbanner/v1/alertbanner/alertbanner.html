@@ -1,0 +1,74 @@
+<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html"
+     data-sly-call="${templates.placeholder @ isEmpty = true}"></sly>
+
+<sly data-sly-test="${properties.allowAlert == 'yes'}"
+     data-sly-use.alertBannerModel="com.bdb.aem.core.models.AlertBannerModel">
+    <article class="w-100 container full-width bdb-alert app-js__alert bdb-maintainence-alert">
+        <div class="d-flex align-items-center">
+        <span class="bdb-alert__icon">
+            <img class="d-none d-lg-block"
+                 src="${alertBannerModel.alertIcon}"
+                 alt="${properties.iconAltText}">
+        </span>
+            <div class="bdb-alert__info bd-rte ml-lg-3">
+                ${properties.alertDesc @context='html'}
+                <a data-sly-test="${properties.mobileLabel}"
+                   class="d-inline-flex d-lg-none align-items-center bdb-alert__info-link"
+                   href="${alertBannerModel.alertInfoLink}">${properties.mobileLabel @context='html'}
+                    <img src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/see-more-m.svg" role="presentation"></a>
+
+                <a data-sly-test="${properties.desktopLabel}"
+                   class="d-none d-lg-inline-flex align-items-center bdb-alert__info-link "
+                   href="${alertBannerModel.alertInfoLink}">${properties.desktopLabel @context='html'}
+                    <img src=" /etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/see-more-m.svg" role="presentation"></a>
+
+                <a data-sly-test.msgPopup="${properties.msgPopupLabel ? properties.msgPopupLabel : 'Read More'}" class="d-none align-items-center bdb-alert__info-link bdb-alert__readMore-link"
+                        href="#" data-toggle="modal" data-target="#bdMaintenanceModal">${msgPopup}
+                    <img src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/see-more-m.svg" role="presentation"></a>
+
+            </div>
+        </div>
+        <div data-sly-test="${properties.alertDescOptional}" class="d-none d-lg-flex mt-3 mt-lg-0 align-items-center second-alert">
+        <span class="bdb-alert__icon">
+            <img class="d-none d-lg-block"
+                 src="${alertBannerModel.alertIconOptional}"
+                 alt="${properties.iconAltTextOptional}">
+        </span>
+            <div class="bdb-alert__info bd-rte">
+                ${properties.alertDescOptional @context='html'}
+                <a data-sly-test="${properties.mobileLabelOptional}"
+                   class="d-inline-flex d-lg-none align-items-center bdb-alert__info-link"
+                   href="${alertBannerModel.alertInfoLinkOptional}">${properties.mobileLabelOptional @context='html'}
+                    <img src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/see-more-m.svg" role="presentation"></a>
+
+                <a data-sly-test="${properties.desktopLabelOptional}"
+                   class="d-none d-lg-inline-flex align-items-center bdb-alert__info-link "
+                   href="${alertBannerModel.alertInfoLinkOptional}">${properties.desktopLabelOptional @context='html'}
+                    <img src=" /etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/see-more-m.svg" role="presentation"></a>
+
+            </div>
+        </div>
+    </article>
+
+    <div data-sly-test="${properties.alertDesc}" class="modal fade bd-maintenance-modal" id="bdMaintenanceModal" tabindex="-1" role="dialog" aria-labelledby="bdb maintainence information"
+         aria-hidden="true" data-backdrop="static">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="closeCta" data-dismiss="modal" aria-label="Close">
+                        <img src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/Close-dark.svg" alt="close" />
+                    </button>
+                </div>
+                <div class="modal-body">
+                    ${properties.alertDesc @context='html'}
+
+                    <a data-sly-test="${properties.mobileLabel}"
+                       class="d-inline-flex d-lg-none align-items-center bdb-alert__info-link"
+                       href="${alertBannerModel.alertInfoLink}">${properties.mobileLabel @context='html'}
+                        <img src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/see-more-m.svg" role="presentation"></a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</sly>

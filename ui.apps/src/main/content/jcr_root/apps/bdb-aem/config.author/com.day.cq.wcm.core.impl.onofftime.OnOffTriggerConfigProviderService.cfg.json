@@ -1,0 +1,6 @@
+// Configuration created by Apache Sling JCR Installer
+{
+  "getBatchSize:Integer":0,
+  "getJobWindow:Integer":0,
+  "isAutoReplicationEnabled":true
+}

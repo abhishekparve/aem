@@ -1,0 +1,27 @@
+<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html"
+     data-sly-call="${templates.placeholder @ isEmpty = true}"></sly>
+
+<sly data-sly-use.bulletPointModel="com.bdb.aem.core.models.BulletPointIconsModel">
+     <div class="bullet-point-content-page ${properties.backgroundColor=='white'?'bg-white':''}">
+          <div class="bullet-point-content container ${properties.togglePaddingTop?'pt-2':''} ${properties.togglePaddingBottom?'pb-2':''}">
+               <p class=" bullet-point-content-secheading hide-mobile-padding">${properties.sectionTitle}</p>
+               <h1 class="bullet-point-content-heading hide-mobile-padding">${properties.title @context='html'}</h1>
+               <p class="bullet-point-content-description hide-mobile-padding">${properties.subTitle @context='html'}</p>
+               <ol class="bullets-lists">
+                    <sly data-sly-test="${properties.listSelection == 'Iconic' }">
+                         <sly data-sly-list.item="${bulletPointModel.bulletPointIconList}">
+                              <li data-sly-test="${item.path}" class="d-flex bullets-lists-icons">
+                                   <img src="${item.path}" alt="${item.altText}" class="bullets-lists_image loading" data-ll-status="loading">
+                                   <div class="bullets-lists_content">${item.label @context='html'}</div>
+                              </li>
+                         </sly>
+                    </sly>
+                    <sly data-sly-test="${properties.listSelection == 'Numbered' }">
+                         <sly data-sly-list.item="${bulletPointModel.descriptionMultifield}">
+                              <li class="bullets-lists_content">${item.descriptionText @context='html'}</li>
+                         </sly>
+                    </sly>
+               </ol>
+          </div>
+     </div>
+</sly>

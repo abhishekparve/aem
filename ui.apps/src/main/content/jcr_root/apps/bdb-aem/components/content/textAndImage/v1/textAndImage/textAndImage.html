@@ -1,0 +1,235 @@
+<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html"
+     data-sly-call="${templates.placeholder @ isEmpty = true}"></sly>
+<sly data-sly-use.textImageModel="com.bdb.aem.core.models.TextAndImageModel"></sly>
+<article class="text-and-image app-js__text-and-image ${properties.videoEnabled == 'true' ? 'isVideo' : ''} ${properties.bgColor} ${properties.togglePaddingTop?'pt-2':''} ${properties.togglePaddingBottom?'pb-2':''}" id= "${textImageModel.articleId}">
+	<div class="bd-container container px-0">
+		<div class="col-12 text-and-image__text text-and-image__${properties.textAlign}">
+			<div class="sitecontent">
+				<p data-sly-test="${properties.sectionTitle}" class="sitecontent__section-heading">${properties.sectionTitle}</p>
+				<h2 data-sly-test="${properties.title}" class="sitecontent__title">${properties.title @context='html'}</h2>
+				<div data-sly-test="${textImageModel.description}" class="sitecontent__sub-title bd-rte ${properties.togglePaddingBottom && !textImageModel.imageList && !textImageModel.largeUrl ?'mb-0':''}">${textImageModel.description @context='html'}</div>
+			</div>
+		</div>
+		<sly data-sly-test="${properties.videoEnabled == 'true'}">
+			<div class="d-flex justify-content-${properties.imageAlign}">
+				<div class="d-flex flex-sm-row text-and-image__container">
+					<div class="text-and-image__vdo-container" data-toggle="modal" data-target="#trainingVideo-1">
+						<img src="${textImageModel.largeUrl}" alt="${properties.largeAltText}" title="${properties.largeAltText}" tabindex="0"/>
+						<img src="${textImageModel.playVideoIcon}" alt="playIcon" tabindex="0" class="play-btn"/>
+					</div>
+					<div class="modal fade text-and-image__banner-img-modal" id="trainingVideo-1" tabindex="-1" role="dialog" aria-labelledby="trainingVideoTitle" aria-hidden="true" data-backdrop="static">
+						<div class="modal-dialog modal-dialog-centered" role="document">
+							<div class="modal-content">
+								<div class="modal-header">
+									<button type="button" class="close text-and-image__banner-modal-close" data-dismiss="modal" aria-label="Close">
+										<span aria-hidden="true">&times;</span>
+									</button>
+								</div>
+								<div class="modal-body text-and-image__banner-img-modal-body is-video" data-accountId="${textImageModel.brightcoveAccountId}" data-playerId="${textImageModel.brightcovePlayerId}" data-videoId="${properties.brightcoveVideoId}">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</sly>
+		<sly data-sly-test="${properties.videoEnabled != 'true'}">
+			<p data-sly-test="${properties.secondTitle}" class="image-title text-${properties.textAlign}">${properties.secondTitle @context='html'}</p>
+
+			<div class="d-flex flex-column justify-content-${properties.imageAlign}">
+				<div class="row px-3 justify-content-${properties.imageAlign}">
+
+					<sly data-sly-test="${properties.imageType == 'small' && textImageModel.imageList}">
+
+						<sly data-sly-list.item="${textImageModel.imageList}">
+							<div class="text-and-image__image-wrapper">
+
+								<sly data-sly-test="${properties.modalImgFlag =='true' && item.enlargedImagePath}">
+									<div class="text-and-image__image-container_images col-6 col-lg-3 sec mx-0 bd-rte ${properties.borderEnable=='false'?'':'text-and-image__border-image'} ${item.backgroundColorSmallImage}" data-toggle="modal"
+										data-target="#dynamicModal-${resource.parent.name}-${resource.name}" data-title="${item.smallImageTitle}"
+										data-desc="${item.smallImageDescription}" data-src="${item.enlargedImagePath}"
+										data-alt="${item.label}" data-size="${item.imageEnlargeSize}">
+										<div class="text-and-image__image-container_images_image col-12 d-flex align-items-center justify-content-center position-relative px-0">
+											<div class="d-flex align-items-center justify-content-center position-relative ">
+												<picture>
+													<source media="(max-width: 900px)"
+										 				srcset=${item.path}  onload="window.aos && window.aos.refresh()">						 
+													<img  data-src=${item.path} class="lazy"
+														alt="${item.label}" title="${item.label}" onload="window.aos && window.aos.refresh()"
+										 				onerror='this.onerror=null;this.src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/images/product-default.png";' width="200" height="200">											     
+												</picture>
+											</div>
+										</div>
+										<!-- Trigger the modal and overlay -->
+										<div class="text-and-image__image-container_overlay">
+											<div class="text-and-image__image-container_icon">
+												<div class="d-flex align-items-center justify-content-center position-relative ">
+												
+													<sly data-sly-test="${textImageModel.magnifiyGlassColor == 'dark-blue'}">
+													<picture>
+														<source media="(max-width: 900px)"
+																srcset=/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/search-icon-M.svg  onload="window.aos && window.aos.refresh()">
+														<img  data-src=/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/Search-icon-new.svg
+															alt="apps1" onload="window.aos && window.aos.refresh()"
+															onerror='this.onerror=null;this.src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/images/product-default.png";'>
+													</picture>
+													</sly>
+													
+													<sly data-sly-test="${textImageModel.magnifiyGlassColor == 'white'}">
+													<picture>
+														<source media="(max-width: 900px)"
+																srcset=/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/icon_zoom_white.svg  onload="window.aos && window.aos.refresh()">
+														<img  data-src=/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/icon_zoom_white.svg
+															alt="apps1" onload="window.aos && window.aos.refresh()"
+															onerror='this.onerror=null;this.src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/images/product-default.png";'>
+													</picture>
+													</sly>
+												</div>
+											</div>
+										</div>
+									</div>
+								</sly>
+
+								<sly data-sly-test="${properties.modalImgFlag =='false' || !item.enlargedImagePath}">
+									<div class="text-and-image__image-container_images col-6 col-lg-3 sec mx-0 ${properties.borderEnable=='false'?'':'text-and-image__border-image'} ${item.backgroundColorSmallImage}">
+										<div class="text-and-image__image-container_images_image col-12 d-flex align-items-center justify-content-center position-relative px-0">
+											<div class="d-flex align-items-center justify-content-center position-relative ">
+												<picture>
+													<source media="(max-width: 900px)"
+															srcset=${item.path}  onload="window.aos && window.aos.refresh()">
+													<sly data-sly-test="${item.smallImageLinkUrl}">
+														<a href="${item.smallImageLinkUrl}" target="${item.openNewImageLinkTab == 'true' ? '_blank' : '_self'}">
+															<img  data-src=${item.path} class="lazy" alt="${item.label}" title="${item.label}" onload="window.aos && window.aos.refresh()" onerror='this.onerror=null;this.src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/images/product-default.png";'>
+												        </a>
+												   </sly>
+												   <sly data-sly-test="${!item.smallImageLinkUrl}">
+														<img  data-src=${item.path} class="lazy" alt="${item.label}" title="${item.label}" onload="window.aos && window.aos.refresh()" onerror='this.onerror=null;this.src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/images/product-default.png";'>
+												   </sly>
+												</picture>
+											</div>
+										</div>
+										<!-- No modal and No overlay -->
+									</div>
+								</sly>
+
+								<div data-sly-test="${item.smallImageCaption}" class="text-and-image__image-container_images_caption text-left col-12 col-lg-12 bd-rte">
+									${item.smallImageCaption @context='html'}
+								</div>
+							</div>
+						</sly>
+					</sly>
+
+					<sly data-sly-test="${properties.imageType == 'large' && textImageModel.largeUrl}">
+
+						<sly data-sly-test="${properties.modalImgFlag =='true' && textImageModel.largeEnlargedImagePath}">
+							<div class="col-12 px-0 text-and-image__single-img bd-rte" data-toggle="modal"
+								data-target="#dynamicModal-${resource.parent.name}-${resource.name}" data-title="${properties.largeImageTitle}"
+								data-desc="${properties.largeImageDescription}"
+								data-src="${textImageModel.largeEnlargedImagePath}"
+								data-alt="${properties.largeAltText}" data-size="${properties.largeImageEnlargeSize}">
+								<div class="d-flex align-items-center justify-content-center position-relative ${properties.borderEnable=='true'?'text-and-image__border-image':''} ${properties.backgroundColorLargeImage}">
+									<picture>
+										<source media="(max-width: 900px)"
+												srcset=${textImageModel.largeUrl}  onload="window.aos && window.aos.refresh()">
+										<img  data-src=${textImageModel.largeUrl} class="lazy"
+											alt="${properties.largeAltText}" title="${properties.largeAltText}" onload="window.aos && window.aos.refresh()"
+											onerror='this.onerror=null;this.src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/images/product-default.png";'>
+									</picture>
+									<!-- Trigger the modal and overlay -->
+									<div class="text-and-image__image-container_overlay">
+										<div class="text-and-image__image-container_icon">
+											<div class="d-flex align-items-center justify-content-center position-relative ">
+												<sly data-sly-test="${textImageModel.magnifiyGlassColor == 'dark-blue'}">
+												<picture>
+													<source media="(max-width: 900px)"
+															srcset=/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/search-icon-M.svg  onload="window.aos && window.aos.refresh()">
+													<img  data-src=/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/Search-icon-new.svg
+														alt="apps1" onload="window.aos && window.aos.refresh()"
+														onerror='this.onerror=null;this.src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/images/product-default.png";'>
+												</picture>
+												</sly>
+												<sly data-sly-test="${textImageModel.magnifiyGlassColor == 'white'}">
+												<picture>
+													<source media="(max-width: 900px)"
+															srcset=/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/icon_zoom_white.svg  onload="window.aos && window.aos.refresh()">
+													<img  data-src=/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/icon_zoom_white.svg
+														alt="apps1" onload="window.aos && window.aos.refresh()"
+														onerror='this.onerror=null;this.src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/images/product-default.png";'>
+												</picture>
+												</sly>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div data-sly-test="${properties.largeImageCaption}" class="image-caption text-left bd-rte">
+									${properties.largeImageCaption @context='html'}
+								</div>
+							</div>
+						</sly>
+
+						<sly data-sly-test="${properties.modalImgFlag =='false' || !textImageModel.largeEnlargedImagePath}">
+							<div class="col-12 px-0">
+								<div class="d-flex align-items-center justify-content-center position-relative ${properties.borderEnable=='true'?'text-and-image__border-image':''} ${properties.backgroundColorLargeImage}">
+									<picture>
+										<source media="(max-width: 900px)"
+												srcset=${textImageModel.largeUrl}  onload="window.aos && window.aos.refresh()">
+										 <sly data-sly-test="${textImageModel.largeImageLinkUrl}">
+										 	<a href="${textImageModel.largeImageLinkUrl}" target="${properties.openNewImageTab == 'true' ? '_blank' : '_self'}">
+												<img  data-src=${textImageModel.largeUrl} class="lazy" alt="${properties.largeAltText}" title="${properties.largeAltText}" onload="window.aos && window.aos.refresh()" onerror='this.onerror=null;this.src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/images/product-default.png";'>
+									        </a>
+									    </sly> 
+									    <sly data-sly-test="${!textImageModel.largeImageLinkUrl}">
+											<img  data-src=${textImageModel.largeUrl} class="lazy" alt="${properties.largeAltText}" title="${properties.largeAltText}" onload="window.aos && window.aos.refresh()" onerror='this.onerror=null;this.src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/images/product-default.png";'>
+									    </sly> 
+									</picture>
+									<!-- No modal and No overlay -->
+								</div>
+								<div data-sly-test="${properties.largeImageCaption}" class="large-images__caption text-left bd-rte">
+									${properties.largeImageCaption @context='html'}
+								</div>
+							</div>
+						</sly>
+					</sly>
+				</div>
+				<sly data-sly-test="${properties.modalImgFlag}">
+					<article class="dynamic-modal app-js__dynamic-modal">
+						<div class="modal" id="dynamicModal-${resource.parent.name}-${resource.name}" tabindex="-1" role="dialog" aria-labelledby="dynamicModal-${resource.parent.name}-${resource.name}" aria-hidden="true">
+							<div class="modal-dialog modal-dialog-centered " role="document">
+								<div class="modal-content">
+									<div class="modal-header">
+										<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+											<img src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/modalClose.svg" alt="close" />
+										</button>
+									</div>
+									<div class="modal-body">
+										<div class="dynamic-modal__image-container">
+											<img src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/blankimage.png" alt="">
+										</div>
+										<div class="dynamic-modal__text-container">
+											<div class="dynamic-modal__text-container_title bd-rte">
+											</div>
+											<div class="dynamic-modal__text-container_description bd-rte">
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</article>
+				</sly>
+                <sly  data-sly-test="${properties.ctaAlign}">
+				<div class="text-and-image__cta-container ${properties.imageType == 'small' ? 'small-images-margin' : ''} px-3 row justify-content-${properties.ctaAlign}">
+					<a data-sly-test="${textImageModel.labelCta}" href="${textImageModel.urlCta}" target="${properties.openNewTabCta == 'true' ? '_blank' : '_self'}" class="text-and-image-cta btn ${properties.bluePrimaryCta ? 'btn-primary-blue text-white' : 'btn-secondary'} btn-md">${textImageModel.labelCta @context='html'}</a>
+					<a data-sly-test="${textImageModel.labelCtaAdd}" href="${textImageModel.urlCtaAdd}" target="${properties.openNewTabCtaAdd == 'true' ? '_blank' : '_self'}" class="text-and-image-cta btn ${properties.secondaryCtaWhiteBorder?'btn-transparent-white':'btn-transparent-blue'} ${textImageModel.labelCtaAdd ? '' : 'ml-0'} btn-md">${textImageModel.labelCtaAdd @context='html'}</a>
+				</div>
+                </sly>
+                <sly  data-sly-test="${!properties.ctaAlign}">
+                <div class="text-and-image__cta-container ${properties.imageType == 'small' ? 'small-images-margin' : ''} px-3 row justify-content-${properties.imageAlign}">
+					<a data-sly-test="${textImageModel.labelCta}" href="${textImageModel.urlCta}" target="${properties.openNewTabCta == 'true' ? '_blank' : '_self'}" class="text-and-image-cta btn ${properties.bluePrimaryCta ? 'btn-primary-blue text-white' : 'btn-secondary'} btn-md">${textImageModel.labelCta @context='html'}</a>
+					<a data-sly-test="${textImageModel.labelCtaAdd}" href="${textImageModel.urlCtaAdd}" target="${properties.openNewTabCtaAdd == 'true' ? '_blank' : '_self'}" class="text-and-image-cta btn ${properties.secondaryCtaWhiteBorder?'btn-transparent-white':'btn-transparent-blue'} ${textImageModel.labelCtaAdd ? '' : 'ml-0'} btn-md">${textImageModel.labelCtaAdd @context='html'}</a>
+				</div>
+                </sly>
+			</div>
+		</sly>
+	</div>
+</article>

@@ -1,0 +1,20 @@
+<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html"
+     data-sly-call="${templates.placeholder @ isEmpty = true}"></sly>
+<sly data-sly-use.errorPageModel="com.bdb.aem.core.models.ErrorPageModel">
+     <div class="error-page-container">
+          <div class='error-page-container-content'>
+               <img data-sly-test="${errorPageModel.imageSrc}" src="${errorPageModel.imageSrc}" alt="${errorPageModel.imageAltText}"/>
+               <h1 data-sly-test="${errorPageModel.title && currentPage.name!='503'}">${errorPageModel.title}</h1>
+               <h2 data-sly-test="${errorPageModel.title && currentPage.name=='503'}">${errorPageModel.title}</h2>
+			   <h3 data-sly-test="${errorPageModel.subtitle}">${errorPageModel.subtitle}</h3>
+               <p data-sly-test="${errorPageModel.description}" class='description'>${errorPageModel.description}</p>
+
+               <sly data-sly-test ="${errorPageModel.linkInfoText}" data-sly-unwrap>
+                    <p class='linkInfo'>${errorPageModel.linkInfoText}</p>
+                    <div data-sly-list.item = "${errorPageModel.ctaList}" class="btngroup">
+                         <a href="${item.path}" type="button" class="btn btn-secondary link-button btn-md">${item.label}</a>
+                    </div>
+               </sly>
+          </div>
+     </div>
+</sly>

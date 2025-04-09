@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+	jcr:primaryType="sling:OsgiConfig"
+		emailMessage="$[env:emailMessage;default=Attached is the list of resources which are missing from the dam asset.]"
+		damAssetPath="$[env:damAssetPath;default=/content/dam/bdb/products/global]"
+		fromEmail="$[env:fromEmail;default=noreply@bd.com]"
+		reportRecipientUserGroup = "$[env:reportRecipientUserGroup;default=bdlegal]"
+        resourceMissingEmailTemplate = "$[env:resourceMissingEmailTemplate;default=/etc/notification/email/bdb/email-missing-assets-report.html]"
+        commerceContentPath = "$[env:commerceContentPath;default=/content/commerce/products/bdb/products]"
+        emailSubject = "$[env:emailSubject;default=Attached are the list of resources that are missing in the DAM asset in comparision to commerce media data.]"/>

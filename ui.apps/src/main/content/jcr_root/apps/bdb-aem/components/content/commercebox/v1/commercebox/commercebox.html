@@ -1,0 +1,169 @@
+<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html" />
+<sly data-sly-use.time="com.bdb.aem.core.models.TimerModel"></sly>
+<sly data-sly-call="${templates.placeholder @ isEmpty = !properties.type, classAppend='cmp-commerceBox'}"></sly>
+<sly data-sly-use.commerceModel="com.bdb.aem.core.models.CommerceBoxModel"
+data-sly-use.pdpTemplateModel="com.bdb.aem.core.models.PDPTemplateModel"></sly>
+
+<sly data-sly-test="${pdpTemplateModel.templateId != 'Instruments' &&
+pdpTemplateModel.templateId != 'Kit' && pdpTemplateModel.templateId != 'Other'}">
+	<sly data-sly-test="${inheritedPageProperties.enableAddToQuoteCheckBox}">
+		<script>
+			if (typeof window.AEM_DATA.labels === 'undefined') {
+				window.AEM_DATA.labels = {};
+			}
+			window.AEM_DATA.labels.cookieNames = ${ commerceModel.cookiesJson @context='scriptComment' };
+			window.AEM_DATA.labels.addToQuoteCommerceBoxLabels = ${ commerceModel.quoteCommerceBoxLabels @context='scriptComment' };
+			window.AEM_DATA.labels.addToQuoteCommerceBoxLabels.promotions = ${ commerceModel.quotePromotionLabels @context='scriptComment' };
+
+			if (typeof window.AEM_DATA.config === 'undefined') {
+				window.AEM_DATA.config = {};
+			}
+			window.AEM_DATA.config.addToQuoteConfig = ${ commerceModel.addToCartConfigJson @context='scriptComment' };
+			window.AEM_DATA.config.addToQuoteCommerceBoxConfig = ${ commerceModel.commerceBoxJsonConfigs @context='scriptComment' };
+		</script>
+		<bd-pdp-commerce-box labels="addToQuoteCommerceBoxLabels" config="addToQuoteCommerceBoxConfig">
+		</bd-pdp-commerce-box>
+	</sly>
+
+	<sly data-sly-test="${!inheritedPageProperties.enableAddToQuoteCheckBox}">
+		<script>
+			if (typeof window.AEM_DATA.labels === 'undefined') {
+				window.AEM_DATA.labels = {};
+			}
+			window.AEM_DATA.labels.commerceBoxLabels = ${ commerceModel.commerceBoxJsonLabels @context='scriptComment' };
+			window.AEM_DATA.labels.commerceBoxLabels.promotions = ${ commerceModel.promotionsJsonLabels @context='scriptComment' };
+			window.AEM_DATA.labels.cookieNames = ${ commerceModel.cookiesJson @context='scriptComment' };
+
+			if (typeof window.AEM_DATA.config === 'undefined') {
+				window.AEM_DATA.config = {};
+			}
+			window.AEM_DATA.config.commerceBoxConfig = ${ commerceModel.commerceBoxJsonConfigs @context='scriptComment' };
+			window.AEM_DATA.config.commerceBoxConfig.promotion = ${ commerceModel.promotionsJsonConfig @context='scriptComment' };
+			window.AEM_DATA.config.addToCartConfig = ${ commerceModel.addToCartConfigJson @context='scriptComment' };
+		</script>
+		<bd-pdp-commerce-box labels="commerceBoxLabels" config="commerceBoxConfig">
+		</bd-pdp-commerce-box>
+	</sly>
+</sly>
+
+<sly data-sly-test="${pdpTemplateModel.templateId == 'Other'}">
+	<sly data-sly-test="${inheritedPageProperties.enableAddToQuoteCheckBox}">
+		<script>
+			if (typeof window.AEM_DATA.labels === 'undefined') {
+					window.AEM_DATA.labels = {};
+			}
+
+			window.AEM_DATA.labels.cookieNames = ${ commerceModel.cookiesJson @context='scriptComment' };
+			window.AEM_DATA.labels.otherProductsAddToQuoteCommerceBoxLabels = ${ commerceModel.otherProductsQuoteLabels @context='scriptComment' };
+			if (typeof window.AEM_DATA.config === 'undefined') {
+				window.AEM_DATA.config = {};
+			}
+
+			window.AEM_DATA.config.addToQuoteCommerceBoxConfig = ${ commerceModel.commerceBoxJsonConfigs @context='scriptComment' };
+			window.AEM_DATA.config.addToQuoteConfig = ${ commerceModel.addToCartConfigJson @context='scriptComment' };
+		</script>
+		<bd-pdp-commerce-box labels="otherProductsAddToQuoteCommerceBoxLabels" config="addToQuoteCommerceBoxConfig">
+		</bd-pdp-commerce-box>
+	</sly>
+	<sly data-sly-test="${!inheritedPageProperties.enableAddToQuoteCheckBox}">
+		<script>
+			if (typeof window.AEM_DATA.labels === 'undefined') {
+					window.AEM_DATA.labels = {};
+			}
+
+			window.AEM_DATA.labels.cookieNames = ${ commerceModel.cookiesJson @context='scriptComment' };
+			window.AEM_DATA.labels.otherProductsCommerceLabels = ${ commerceModel.otherProductsCommerceLabels @context='scriptComment' };
+			window.AEM_DATA.labels.otherProductsCommerceLabels.promotions = ${ commerceModel.otherProductsPromotionLabels @context='scriptComment' };
+			if (typeof window.AEM_DATA.config === 'undefined') {
+				window.AEM_DATA.config = {};
+			}
+
+			window.AEM_DATA.config.commerceBoxConfig = ${ commerceModel.commerceBoxJsonConfigs @context='scriptComment' };
+			window.AEM_DATA.config.commerceBoxConfig.promotion = ${ commerceModel.promotionsJsonConfig @context='scriptComment' };
+			window.AEM_DATA.config.addToCartConfig = ${ commerceModel.addToCartConfigJson @context='scriptComment' };
+		</script>
+		<bd-pdp-commerce-box labels="otherProductsCommerceLabels" config="commerceBoxConfig">
+		</bd-pdp-commerce-box>
+	</sly>
+</sly>
+
+<sly data-sly-test="${pdpTemplateModel.templateId == 'Kit'}">
+	<sly data-sly-test="${inheritedPageProperties.enableAddToQuoteCheckBox}">
+		<script>
+			if (typeof window.AEM_DATA.labels === 'undefined') {
+					window.AEM_DATA.labels = {};
+			}
+			window.AEM_DATA.labels.cookieNames = ${ commerceModel.cookiesJson @context='scriptComment' };
+			window.AEM_DATA.labels.kitsAndSetsAddToQuoteCommerceBoxLabels = ${ commerceModel.kitsAndSetsQuoteLabels @context='scriptComment' };
+			if (typeof window.AEM_DATA.config === 'undefined') {
+				window.AEM_DATA.config = {};
+			}
+			window.AEM_DATA.config.kitsAndSetsAddToQuoteCommerceBoxConfig = ${ commerceModel.kitsAndSetsConfig @context='scriptComment' };
+			window.AEM_DATA.config.addToQuoteConfig = ${ commerceModel.addToCartConfigJson @context='scriptComment' };
+		</script>
+		<bd-pdp-commerce-box labels="kitsAndSetsAddToQuoteCommerceBoxLabels" config="kitsAndSetsAddToQuoteCommerceBoxConfig">
+		</bd-pdp-commerce-box>
+	</sly>
+	<sly data-sly-test="${!inheritedPageProperties.enableAddToQuoteCheckBox}">
+		<script>
+			if (typeof window.AEM_DATA.labels === 'undefined') {
+					window.AEM_DATA.labels = {};
+			}
+			window.AEM_DATA.labels.cookieNames = ${ commerceModel.cookiesJson @context='scriptComment' };
+			window.AEM_DATA.labels.kitsAndSetsCommerceBoxLabels = ${ commerceModel.kitsAndSetsCommerceBoxLabels @context='scriptComment' };
+			window.AEM_DATA.labels.otherProductsCommerceLabels = ${ commerceModel.otherProductsCommerceLabels @context='scriptComment' };
+			window.AEM_DATA.labels.otherProductsCommerceLabels.promotions = ${ commerceModel.otherProductsPromotionLabels @context='scriptComment' };
+			if (typeof window.AEM_DATA.config === 'undefined') {
+				window.AEM_DATA.config = {};
+			}
+
+			window.AEM_DATA.config.kitsAndSetsCommerceBoxConfig = ${ commerceModel.kitsAndSetsConfig @context='scriptComment' };
+			window.AEM_DATA.config.kitsAndSetsCommerceBoxConfig.promotion = ${ commerceModel.promotionsJsonConfig @context='scriptComment' };
+			window.AEM_DATA.config.addToCartConfig = ${ commerceModel.addToCartConfigJson @context='scriptComment' };
+		</script>
+		<bd-pdp-commerce-box labels="otherProductsCommerceLabels" config="kitsAndSetsCommerceBoxConfig">
+		</bd-pdp-commerce-box>
+	</sly>
+</sly>
+
+<sly data-sly-test="${pdpTemplateModel.templateId == 'Instruments'}">
+	<sly data-sly-test="${inheritedPageProperties.enableAddToQuoteCheckBox}">
+		<script>
+			if (typeof window.AEM_DATA.labels === 'undefined') {
+					window.AEM_DATA.labels = {};
+			}
+			window.AEM_DATA.labels.cookieNames = ${ commerceModel.cookiesJson @context='scriptComment' };
+			window.AEM_DATA.labels.pdpInstrumentsAddToQuoteCommerceBoxLabels = ${ commerceModel.pdpQuoteInstrumentsCommerceBoxLabels @context='scriptComment' };
+			if (typeof window.AEM_DATA.config === 'undefined') {
+				window.AEM_DATA.config = {};
+			}
+			window.AEM_DATA.config.pdpInstrumentsAddToQuoteCommerceBoxConfig = ${ commerceModel.pdpInstrumentsCommerceBoxconfig @context='scriptComment' };
+			window.AEM_DATA.config.addToQuoteConfig = ${ commerceModel.addToCartConfigJson @context='scriptComment' };
+		</script>
+		<bd-pdp-commerce-box labels="pdpInstrumentsAddToQuoteCommerceBoxLabels" config="pdpInstrumentsAddToQuoteCommerceBoxConfig">
+		</bd-pdp-commerce-box>
+	</sly>
+
+	<sly data-sly-test="${!inheritedPageProperties.enableAddToQuoteCheckBox}">
+		<script>
+			if (typeof window.AEM_DATA.labels === 'undefined') {
+					window.AEM_DATA.labels = {};
+			}
+			window.AEM_DATA.labels.cookieNames = ${ commerceModel.cookiesJson @context='scriptComment' };
+			window.AEM_DATA.labels.pdpInstrumentsCommerceBoxLabels = ${ commerceModel.pdpInstrumentsCommerceBoxLabels @context='scriptComment' };
+			window.AEM_DATA.labels.pdpInstrumentsCommerceBoxLabels.promotions = ${ commerceModel.otherProductsPromotionLabels @context='scriptComment' };
+			if (typeof window.AEM_DATA.config === 'undefined') {
+				window.AEM_DATA.config = {};
+			}
+			window.AEM_DATA.config.pdpInstrumentsCommerceBoxConfig = ${ commerceModel.pdpInstrumentsCommerceBoxconfig @context='scriptComment' };
+			window.AEM_DATA.config.pdpInstrumentsCommerceBoxConfig.promotion = ${ commerceModel.promotionsJsonConfig @context='scriptComment' };
+			window.AEM_DATA.config.addToCartConfig = ${ commerceModel.addToCartConfigJson @context='scriptComment' };
+		</script>
+		<bd-pdp-commerce-box labels="pdpInstrumentsCommerceBoxLabels" config="pdpInstrumentsCommerceBoxConfig">
+		</bd-pdp-commerce-box>
+	</sly>
+</sly>
+<p data-sly-test="${inheritedPageProperties.enableTimer}">CommerceBox:${time.endTime}</p>
+
+
+

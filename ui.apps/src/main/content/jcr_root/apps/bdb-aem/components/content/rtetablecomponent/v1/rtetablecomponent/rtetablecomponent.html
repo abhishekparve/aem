@@ -1,0 +1,33 @@
+<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html"
+     data-sly-call="${templates.placeholder @ isEmpty = true}"></sly>
+<sly data-sly-use.rteTableModel="com.bdb.aem.core.models.RteTableModel"></sly>
+
+<div class="${properties.togglePaddingTop?'pt-2':''} ${properties.togglePaddingBottom?'pb-2':''}"
+     id="${rteTableModel.articleId}">
+    <sly data-sly-test="${properties.bgColor=='enable'}">
+        <div class="gray-background-container">
+            <div class="container enable-bullets ${properties.isTableCaption?'asTableCaption':''} ${properties.togglePaddingTop?'pt-2':''} ${properties.togglePaddingBottom?'pb-2':''}">
+                <p data-sly-test="${rteTableModel.sectionTitle}"
+                   class="sitecontent__section-heading">${rteTableModel.sectionTitle @context='html'}</p>
+
+                <h2 data-sly-test="${rteTableModel.title}"
+                    class="sitecontent__title">${rteTableModel.title @context='html'}</h2>
+
+                ${properties.rteTable @context='html'}
+            </div>
+        </div>
+    </sly>
+    <sly data-sly-test="${properties.bgColor=='disable'}">
+        <div class="white-background-container">
+            <div class="container enable-bullets ${properties.isTableCaption?'asTableCaption':''} ${properties.togglePaddingTop?'pt-2':''} ${properties.togglePaddingBottom?'pb-2':''}">
+                <p data-sly-test="${rteTableModel.sectionTitle}"
+                   class="sitecontent__section-heading">${rteTableModel.sectionTitle @context='html'}</p>
+
+                <h2 data-sly-test="${rteTableModel.title}"
+                    class="sitecontent__title">${rteTableModel.title @context='html'}</h2>
+
+                ${properties.rteTable @context='html'}
+            </div>
+        </div>
+    </sly>
+</div>

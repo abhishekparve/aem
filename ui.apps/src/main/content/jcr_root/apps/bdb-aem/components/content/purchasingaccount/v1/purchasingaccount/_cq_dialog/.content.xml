@@ -1,0 +1,682 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0"
+          xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+          jcr:primaryType="nt:unstructured"
+          jcr:title="Purchasing Account"
+          sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="granite/ui/components/coral/foundation/container">
+        <items jcr:primaryType="nt:unstructured">
+            <tabs
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/coral/foundation/tabs"
+                    maximized="{Boolean}false">
+                <items jcr:primaryType="nt:unstructured">
+                    <GeneralTab
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="General"
+                            sling:resourceType="granite/ui/components/coral/foundation/container"
+                            margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <columns
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                                    margin="{Boolean}true">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <column
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/container">
+                                        <items jcr:primaryType="nt:unstructured">
+                                                <title
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                        fieldLabel="Title"
+                                                        name="./title"/>                                     
+                                                <existingAccount
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                        fieldLabel="Existing Account with BD Biosciences"
+                                                        name="./existingAccount"/>
+                                                <yesLabel
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                        fieldLabel="Yes Label"
+                                                        name="./yesLabel"/>
+                                                <noWithNotSureLabel
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                        fieldLabel="No with Not Sure Label"
+                                                        name="./noWithNotSureLabel"/>
+                                                <noLabel
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                        fieldLabel="No Label"
+                                                        name="./noLabel"/>  
+                                                 <internalApproval
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                        fieldLabel="Internal Approval"
+                                                        name="./internalApproval"/> 
+                                                 <internalApprovalLabelInfo
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                        fieldLabel="Internal Approval Label Info"
+                                                        name="./internalApprovalLabelInfo"/>                                          
+                                                <existingDistributor
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                        fieldLabel="Existing Distributer Or Shipper"
+                                                        name="./existingDistributor"/>
+												<distributorLabel
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                        fieldLabel="Distributor Label"
+                                                        name="./distributorLabel"/>
+												<agencyselectLabel
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="cq/gui/components/authoring/dialog/richtext"
+                                                    fieldLabel="AgencySelect Text Label"
+                                                    name="./agencyselectLabel"
+                                                    useFixedInlineToolbar="{Boolean}true">
+                                                        <rtePlugins
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceSuperType="/apps/bdb-aem/components/authoring/dialog/richtext/rtePlugins"/>
+                                                            <uiSettings
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceSuperType="/apps/bdb-aem/components/authoring/dialog/richtext/uiSettings"/>
+                                           		</agencyselectLabel>
+                                                <shipToFieldSet
+                                                        jcr:primaryType="nt:unstructured"
+                                                        jcr:title="Ship To"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                                                        <items jcr:primaryType="nt:unstructured">
+                                                        <shipToAccountNumberLabel                                                
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="Ship-To Account Number Field Text Label"
+                                                                name="./shipToAccountNumberLabel"/>
+                                                        <shiptoAccountNumberLabelInfo
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="Ship-To Account Number Help Text/Label Info"
+                                                                name="./shiptoAccountNumberLabelInfo"/>
+                                                        <shipToAccountNumberPlaceHolder
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="Ship-To Account Number Placeholder Text"
+                                                                name="./shipToAccountNumberPlaceHolder"/>
+                                                        </items>
+                                                </shipToFieldSet>
+                                                
+                                                <soldToFieldSet
+                                                        jcr:primaryType="nt:unstructured"
+                                                        jcr:title="Sold To"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                                                        <items jcr:primaryType="nt:unstructured">
+                                                        <soldToAccountNumberLabel                                                
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="Sold-To Account Number Field Text Label"
+                                                                name="./soldToAccountNumberLabel"/>
+                                                        <soldToAccountNumberLabelInfo
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="Sold-To Account Number Help Text/Label Info"
+                                                                name="./soldToAccountNumberLabelInfo"/>
+                                                        <soldToAccountNumberPlaceHolder
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="Sold-To Account Number Placeholder Text"
+                                                                name="./soldToAccountNumberPlaceHolder"/>
+                                                        </items>
+                                                </soldToFieldSet>
+
+                                                <accountNumberValidationError
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                        fieldLabel="Account Number Validation Error"
+                                                        name="./accountNumberValidationError"/>
+
+                                                <addressSectionTitle
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                        fieldLabel="Address Section Title"
+                                                        name="./addressSectionTitle"/>
+                                                <saveAndContinueLabel
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                        fieldLabel="Save and Continue Label"
+                                                        name="./saveAndContinueLabel"/>
+                                                <backLabel
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                        fieldLabel="Back Label"
+                                                        name="./backLabel"/>
+
+                                        </items>
+                                    </column>
+                                </items>
+                            </columns>
+                        </items>
+                    </GeneralTab>
+                    <PaymentTab
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Payment"
+                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                        <columns
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                                margin="{Boolean}true">
+                                <items jcr:primaryType="nt:unstructured">
+                                <column
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                                        <items jcr:primaryType="nt:unstructured">
+                                                <paymentTitle
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                        fieldLabel="Payment Title"
+                                                        name="./paymentTitle"/>
+                                                <purchaseOrder
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                        fieldLabel="Purchase Order Label"
+                                                        name="./purchaseOrder"/>
+                                                <creditCard 
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                        fieldLabel="Credit Card Label"
+                                                        name="./creditCard"/>
+                                                <downloadCreditAppCTALabel
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                        fieldLabel="Download Credit Application Label"
+                                                        name="./downloadCreditAppCTALabel"/>
+                                                <downloadCreditNoteUrl
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                                                        fieldLabel="Download Credit Application - File Path"
+                                                        rootPath="/content/dam/bdb"
+                                                        name="./downloadCreditNoteUrl"/>
+                                                <downloadCreditAppFormatAndSize
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                        fieldLabel="Download Credit Application Format And Size"
+                                                        name="./downloadCreditAppFormatAndSize"/>
+                                                <taxExemptLabel
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                        fieldLabel="Tax Exempt Label"
+                                                        name="./taxExemptLabel"/>
+                                                <fileUploadFieldSet
+                                                        jcr:primaryType="nt:unstructured"
+                                                        jcr:title="File Upload"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                                                        <items jcr:primaryType="nt:unstructured">
+                                                        <fileUploadTitleLabel
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="File Upload - Title Label"
+                                                                name="./fileUploadTitleLabel"/>
+                                                        <fileUploadInfoLabel
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="File Upload - Info Label"
+                                                                name="./fileUploadInfoLabel"/>                                                
+                                                        <dropZoneLabel
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="File Upload - Drop Zone Label"
+                                                                name="./dropZoneLabel"/>
+                                                        <dropZoneInfo
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="File Upload - Drop Zone Info Label"
+                                                                name="./dropZoneInfo"/>
+                                                        <chooseFileCTALabel
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="File Upload - Choose File CTA Label"
+                                                                name="./chooseFileCTALabel"/>
+                                                        </items>
+                                                </fileUploadFieldSet>
+                                                                                                 
+                                                <editlabel
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                        fieldLabel="Edit Label"
+                                                        name="./editlabel"/>
+                                                <submitCTALabel
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                        fieldLabel="Submit CTA Label"
+                                                        name="./submitCTALabel"/>  
+                                                </items>
+                                        </column>
+                                </items>
+                                </columns>
+                        </items>
+                    </PaymentTab>
+                    <addressTab
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="Address"
+                            sling:resourceType="granite/ui/components/coral/foundation/container"
+                            margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <columns
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                                    margin="{Boolean}true">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <column
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/container">
+                                        <items jcr:primaryType="nt:unstructured">
+                                                <shippingAddressTitle
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                        fieldLabel="Shipping Address Title"
+                                                        name="./shippingAddressTitle"/>
+                                                <shippingAddressSubTitle
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                        fieldLabel="Shipping Address Subtitle"
+                                                        name="./shippingAddressSubTitle"/>
+                                                <soldToAddressTitle
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                        fieldLabel="Sold-To Address Title"
+                                                        name="./soldToAddressTitle"/>
+                                                <billingAddressTitle
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                        fieldLabel="Billing Address Title"
+                                                        name="./billingAddressTitle"/>
+                                                <billingAddressSubTitle
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                        fieldLabel="Billing Address Subtitle"
+                                                        name="./billingAddressSubTitle"/>
+                                                <payerAddressTitle
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                        fieldLabel="Payer Address Title"
+                                                        name="./payerAddressTitle"/>
+                                                <payerAddressSubTitle
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                        fieldLabel="Payer Address Subtitle"
+                                                        name="./payerAddressSubTitle"/>
+                                                <sameAsShiptoAddressLabel
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                        fieldLabel="Same as Ship-To Address Label"
+                                                        name="./sameAsShiptoAddressLabel"/>
+                                                <addressfields
+                                                        jcr:primaryType="nt:unstructured"
+                                                        jcr:title="Address Field Labels"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                                                        <items jcr:primaryType="nt:unstructured">
+                                                        <companyLabel
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="Company Label"
+                                                                name="./companyLabel"/>
+                                                        <addressLabelFirst
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="Address Line 1 Label"
+                                                                name="./addressLabelFirst"/>
+                                                        <addressLabelSecond
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="Address Line 2 Label"
+                                                                name="./addressLabelSecond"/>
+                                                        <streetAddressLabel
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="Street Address Label"
+                                                                name="./streetAddressLabel"/>
+                                                        <detailAddressLabel
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="Detail Address Label"
+                                                                name="./detailAddressLabel"/>
+                                                        <addressLabel
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="Address Label"
+                                                                name="./addressLabel"/>
+                                                        <buildingLabel
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="Building Label" 
+                                                                name="./buildingLabel"/>
+                                                        <floorLabel
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="Floor Label"
+                                                                name="./floorLabel"/>
+                                                        <roomLabel
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="Room Label"
+                                                                name="./roomLabel"/>
+                                                        <departmentLabel
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="Department Label"
+                                                                name="./departmentLabel"/>                                                
+                                                        <phoneNumberLabel
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="Phone Number Label"
+                                                                name="./phoneNumberLabel"/>
+                                                        <districtLabel
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="District Label"
+                                                                name="./districtLabel"/>
+                                                        <cityLabel
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="City Label"
+                                                                name="./cityLabel"/>
+                                                        <stateLabel
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="State Label"
+                                                                name="./stateLabel"/>     
+                                                        <provinceLabel
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="Province Label"
+                                                                name="./provinceLabel"/>                                                   
+                                                        <postalCodeLabel
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="Postal Code Label"
+                                                                name="./postalCodeLabel"/>
+                                                        <pinCodeLabel
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="PIN Code Label"
+                                                                name="./pinCodeLabel"/>
+                                                        <zipCodeLabel
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="ZIP Code Label"
+                                                                name="./zipCodeLabel"/>
+                                                        <countryLabel
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="Country Label"
+                                                                name="./countryLabel"/>
+                                                        <labNameLabel
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="Lab Name Label"
+                                                                name="./labNameLabel"/>
+                                                        <postalCodeLabelError
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="Postal Code Label Error"
+                                                                name="./postalCodeLabelError"/>
+                                                        </items>
+                                                </addressfields>
+                                        </items>
+                                </column>
+                            </items>
+                        </columns>
+                    </items>
+                    </addressTab>
+                    <TaxTab
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Tax"
+                                sling:resourceType="granite/ui/components/coral/foundation/container"
+                                margin="{Boolean}true">
+                                <items jcr:primaryType="nt:unstructured">
+                                <columns
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                                        margin="{Boolean}true">
+                                        <items jcr:primaryType="nt:unstructured">
+                                        <column
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                                <items jcr:primaryType="nt:unstructured">
+
+                                                        <EANCodeLabel
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="EAN Code Label"
+                                                                name="./EANCodeLabel"/>                                                
+                                                        <VATNumberLabel
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="VAT Number Label"
+                                                                name="./VATNumberLabel"/>
+                                                        <vatExemptLabel
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="VAT Exempt Label"
+                                                                name="./vatExemptLabel"/>    
+                                                                                                           
+                                                        <dutyExemptLabel
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="Duty Exempt Label"
+                                                                name="./dutyExemptLabel"/>
+                                                        <gstPanTitle
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="GST Pan Title"
+                                                                name="./gstPanTitle"/>
+                                                        <gstNumberLabel
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="GST Number Label"
+                                                                name="./gstNumberLabel"/>
+                                                        <panNumberLabel
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="PAN Number Label"
+                                                                name="./panNumberLabel"/>
+
+                                                		<typeOfBusinessLabel
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="Type of Business Label"
+                                                                name="./typeOfBusinessLabel"/>
+                                                		<publicLabel
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="Public"
+                                                                name="./publicLabel"/>
+                                               			<privateLabel
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="Private"
+                                                                name="./privateLabel"/>
+                                                		<accountOfficeLabel
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="Account Office Label"
+                                                                name="./accountOfficeLabel"
+                                                                required="{Boolean}true"/>
+                                                		<processingUnitLabel
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="Processing Unit Label"
+                                                                name="./processingUnitLabel"
+                                                                required="{Boolean}true"/>
+                                                		<transactingUnitLabel
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="Transacting Unit Label"
+                                                                name="./transactingUnitLabel"
+                                                                required="{Boolean}true"/>
+                                                </items>
+                                        </column>
+                                        </items>
+                                </columns>
+                                </items>
+                    </TaxTab>
+                    <confirmationTab
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="Confirmation"
+                            sling:resourceType="granite/ui/components/coral/foundation/container"
+                            margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <columns
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                                    margin="{Boolean}true">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <column
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/container">
+                                        <items jcr:primaryType="nt:unstructured">
+                                                <purchaseAccountConfirmationImage
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                                                        fieldLabel="Image Path"
+                                                        rootPath="/content/dam/bdb"
+                                                        name="./purchaseAccountConfirmationImage"/>
+                                                <purchaseAccountConfirmationTitle
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                        fieldLabel="Title"
+                                                        name="./purchaseAccountConfirmationTitle"/>
+                                                <purchaseAccountConfirmationPendingTitle
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                        fieldLabel="Pending Title"
+                                                        name="./purchaseAccountConfirmationPendingTitle"/>
+                                                <purchaseAccountConfirmationSuccessTitle
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                        fieldLabel="Success Title"
+                                                        name="./purchaseAccountConfirmationSuccessTitle"/>
+                                            <purchaseAccountCompletedContent
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="cq/gui/components/authoring/dialog/richtext"
+                                                    fieldLabel="Completed Content Text"
+                                                    name="./purchaseAccountCompletedContent"
+                                                    useFixedInlineToolbar="{Boolean}true">
+                                                <rtePlugins
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceSuperType="/apps/bdb-aem/components/authoring/dialog/richtext/rtePlugins"/>
+                                                        <uiSettings
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceSuperType="/apps/bdb-aem/components/authoring/dialog/richtext/uiSettings"/>
+                                            </purchaseAccountCompletedContent>
+                                            <purchaseAccountPendingContent
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="cq/gui/components/authoring/dialog/richtext"
+                                                    fieldLabel="Pending Content Text"
+                                                    name="./purchaseAccountPendingContent"
+                                                    useFixedInlineToolbar="{Boolean}true">
+                                                <rtePlugins
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceSuperType="/apps/bdb-aem/components/authoring/dialog/richtext/rtePlugins"/>
+                                                            <uiSettings
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceSuperType="/apps/bdb-aem/components/authoring/dialog/richtext/uiSettings"/>
+                                            </purchaseAccountPendingContent>
+                                                <purchaseAccountRewardsCTALabel
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                        fieldLabel="Rewards CTA Label"
+                                                        name="./purchaseAccountRewardsCTALabel"/>
+                                                <purchaseAccountContinueCTALabel
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                        fieldLabel="Continue CTA Label"
+                                                        description="Author Start Browsing Button for Smart Cart countries"
+                                                        name="./purchaseAccountContinueCTALabel"/>
+                                                <purchaseAccountContinueCTALink
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                                                        fieldLabel="Continue CTA Link"
+                                                        rootPath="/content/bdb"
+                                                        name="./purchaseAccountContinueCTALink"/>
+                                                <joinRewardsFieldSet
+                                                        jcr:primaryType="nt:unstructured"
+                                                        jcr:title="Join Rewards"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                                                        <items jcr:primaryType="nt:unstructured">
+                                                                <joinRewardsTitle
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                        fieldLabel="Title"
+                                                                        name="./joinRewardsTitle"/>
+                                                                <joinRewardsSubtitle
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                        fieldLabel="Subtitle"
+                                                                        name="./joinRewardsSubtitle"/>
+                                                                <notHealthCareProfessionalLabel
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                        fieldLabel="Not a Health Care Professional Label"
+                                                                        name="./notHealthCareProfessionalLabel"/>
+                                                                <notGovtEmployeeLabel
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                        fieldLabel="Not a Govt Employee Label"
+                                                                        name="./notGovtEmployeeLabel"/>
+                                                                <notProhibitedGiftsAccept
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                        fieldLabel="Not Prohibited from Accepting Gifts Label"
+                                                                        name="./notProhibitedGiftsAccept"/>
+                                                                <rewardsTnCLabel
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        sling:resourceType="cq/gui/components/authoring/dialog/richtext"
+                                                                        fieldDescription="Author Rewards Terms and Conditions"
+                                                                        fieldLabel="Rewards TnC Label"
+                                                                        name="./rewardsTnCLabel"
+                                                                        required="{Boolean}false"
+                                                                        useFixedInlineToolbar="{Boolean}true">
+                                                                <rtePlugins
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        sling:resourceSuperType="/apps/bdb-aem/components/authoring/dialog/richtext/rtePlugins"/>
+                                                                <uiSettings
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        sling:resourceSuperType="/apps/bdb-aem/components/authoring/dialog/richtext/uiSettings"/>
+                                                                </rewardsTnCLabel>
+                                                                <joinBdRewardsCTALabel
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                        fieldLabel="Join BD Rewards CTA Label"
+                                                                        name="./joinBdRewardsCTALabel"/>
+                                                                <joinBdRewardsCTALink
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                                                                        fieldLabel="Join BD Rewards CTA Link"
+                                                                        rootPath="/content/bdb"
+                                                                        name="./joinBdRewardsCTALink"/>
+                                                            <redirectionUrl
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                                                                    rootPath="/content/bdb"
+                                                                    fieldLabel="BD Rewards Redirection Url"
+                                                                    name="./redirectionUrl"/>
+                                                        </items>
+                                                </joinRewardsFieldSet>
+                                        </items>
+                                </column>
+                            </items>
+                        </columns>
+                    </items>
+                    </confirmationTab>      
+                </items>
+            </tabs>
+        </items>
+    </content>
+</jcr:root>

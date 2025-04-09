@@ -1,0 +1,10 @@
+{
+    "errors": [
+        {
+            "errorCode": "AMxxx",
+            "message": "exception message",
+            "type": "exception type",
+            "field": "optional attribute for form validation fields"
+        }
+    ]
+}

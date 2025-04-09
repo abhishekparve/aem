@@ -1,0 +1,229 @@
+<sly data-sly-use.globalConfigModel="com.bdb.aem.core.models.GlobalConfigModel"
+     data-sly-use.pageModel="com.bdb.aem.core.models.PageModel" data-sly-use.quickAdd="com.bdb.aem.core.models.QuickAddModel" data-sly-use.commerceModel="com.bdb.aem.core.models.CommerceBoxModel" data-sly-use.dataLayerModel="com.bdb.aem.core.models.BDBDatalayerDataModel">
+    <script>
+        if (typeof window.AEM_DATA === 'undefined') {
+            window.AEM_DATA = {};
+        }
+         if (typeof window.AEM_DATA.config === 'undefined') {
+            window.AEM_DATA.config = {};
+		}
+		 if (typeof window.AEM_DATA.config.globalConfig === 'undefined') {
+            window.AEM_DATA.config.globalConfig = {};
+		}
+		if (typeof window.AEM_DATA.config.globalConfig.userRegion === 'undefined') {
+            window.AEM_DATA.config.globalConfig.userRegion = {};
+		}
+
+		if (typeof window.AEM_DATA.config.globalConfig.myCartUrl === 'undefined') {
+            window.AEM_DATA.config.globalConfig.myCartUrl = {};
+		}
+		
+		if (typeof window.AEM_DATA.config.globalConfig.checkOutUrl === 'undefined') {
+            window.AEM_DATA.config.globalConfig.checkOutUrl = {};
+		}
+		
+		if (typeof window.AEM_DATA.config.globalConfig.signInUrl === 'undefined') {
+            window.AEM_DATA.config.globalConfig.signInUrl = {};
+		}
+		
+		if (typeof window.AEM_DATA.config.globalConfig.dashBoardUrl === 'undefined') {
+            window.AEM_DATA.config.globalConfig.dashBoardUrl = {};
+		}
+
+		if (typeof window.AEM_DATA.labels === 'undefined') {
+            window.AEM_DATA.labels = {};
+		}
+
+            if (typeof window.AEM_DATA.labels.globalLabels === 'undefined') {
+                  window.AEM_DATA.labels.globalLabels = {};
+		}
+
+ 		window.AEM_DATA.config.globalConfig.userRegion.country = "${pageModel.getCountry || '{}' @context='scriptComment'}";
+        window.AEM_DATA.config.globalConfig.userRegion.region = "${pageModel.getRegion || '{}' @context='scriptComment'}";
+        window.AEM_DATA.config.globalConfig.userRegion.language = "${pageModel.getLanguage || '' @context='scriptComment'}";
+        window.AEM_DATA.config.globalConfig.isContentSite = "${inheritedPageProperties.isContentSite || 'false' @context='scriptComment'}";
+		window.AEM_DATA.config.globalConfig.showAnnouncement = "${inheritedPageProperties.showAnnouncement || 'false' @context='scriptComment'}";
+        window.AEM_DATA.config.globalConfig.hybrisApiTimeout = ${inheritedPageProperties.hybrisApiTimeout || 30000 @context='scriptComment'};
+        window.AEM_DATA.config.globalConfig.typeAHeadDelay = ${inheritedPageProperties.typeAHeadDelay || 200 @context='scriptComment'};
+        window.AEM_DATA.config.globalConfig.loaderDelay = ${inheritedPageProperties.loaderDelay || 2000 @context='scriptComment'};
+        window.AEM_DATA.config.globalConfig.refreshTokenTime = ${inheritedPageProperties.refreshTokenTime || 7200 @context='scriptComment'};
+
+        window.AEM_DATA.config.globalConfig.userRegion.defaultState = "${inheritedPageProperties.defaultState || '{}' @context='scriptComment'}";
+        window.AEM_DATA.config.globalConfig.userRegion.hybrisSiteId = "${pageModel.getHybrisSiteId || '{}' @context='scriptComment'}";
+        window.AEM_DATA.config.globalConfig.myCartUrl = "${globalConfigModel.myCartPagePath || '{}' @context='scriptComment'}";
+		window.AEM_DATA.config.globalConfig.checkOutUrl = "${globalConfigModel.checkoutPagePath || '{}' @context='scriptComment'}";
+		window.AEM_DATA.config.globalConfig.myQuoteUrl = "${globalConfigModel.myQuotePagePath || '{}' @context='scriptComment'}";
+		window.AEM_DATA.config.globalConfig.orderConfirmationUrl = "${globalConfigModel.orderConfirmationPagePath || '{}' @context='scriptComment'}";
+		window.AEM_DATA.config.globalConfig.quoteConfirmationUrl = "${globalConfigModel.quoteConfirmationPagePath || '{}' @context='scriptComment'}";
+        window.AEM_DATA.config.globalConfig.cookieNames = ${ globalConfigModel.cookiesJson @context='scriptComment' };
+        window.AEM_DATA.config.globalConfig.getStatesPayload = ${pageModel.getStatesPayload || '{}' @context='scriptComment'};
+        window.AEM_DATA.config.globalConfig.getCountriesPayload = ${pageModel.getCountriesPayload || '{}' @context='scriptComment'};
+        window.AEM_DATA.config.globalConfig.idleTime = ${pageModel.getIdleTime || '{}' @context='scriptComment'};
+        window.AEM_DATA.config.globalConfig.logOutUrl = "${pageModel.getLogOutUrl || '{}' @context='scriptComment'}";
+        window.AEM_DATA.config.globalConfig.mergeAnonymousCart = ${pageModel.mergeAnonymousCart || '{}' @context='scriptComment'};
+        window.AEM_DATA.config.globalConfig.signInUrl = "${globalConfigModel.signInUrl || '{}' @context='scriptComment'}";
+        window.AEM_DATA.config.globalConfig.dashBoardUrl = "${globalConfigModel.dashBoardUrl || '{}' @context='scriptComment'}";
+        window.AEM_DATA.config.globalConfig.enableFELogging  = ${pageModel.feLog @context='scriptComment'};
+        
+        window.AEM_DATA.config.globalConfig.publicEmailDomains = ${pageModel.publicEmailDomains || '{}' @context='scriptComment'};
+
+        window.AEM_DATA.labels.errorMessages = ${pageModel.errorMessages || '{}' @context='scriptComment'};
+        window.AEM_DATA.labels.globalLabels.certificationsStatus = ${pageModel.certificationsStatus || '{}' @context='scriptComment'};
+        window.AEM_DATA.labels.globalLabels.orderSource = ${pageModel.orderSource || '{}' @context='scriptComment'};
+        window.AEM_DATA.labels.globalLabels.orderStatus = ${pageModel.orderStatus || '{}' @context='scriptComment'};
+        window.AEM_DATA.labels.globalLabels.quoteStatus = ${pageModel.quoteStatus || '{}' @context='scriptComment'};
+        window.AEM_DATA.labels.globalLabels.orderInquiryTypes = ${pageModel.orderInquiryTypes || '{}' @context='scriptComment'};
+        window.AEM_DATA.config.globalConfig.homePageUrl = "${pageModel.homePageUrl || '{}' @context='scriptComment'}";
+        window.AEM_DATA.labels.globalLabels.yesterday = "${pageModel.yesterday || '{}' @context='scriptComment'}";
+        window.AEM_DATA.labels.globalLabels.today = "${pageModel.today || '{}' @context='scriptComment'}";
+        window.AEM_DATA.labels.globalLabels.certificationsType = ${pageModel.certificationsType || '{}' @context='scriptComment'};
+        window.AEM_DATA.labels.globalLabels.orderApprovalPromotions = ${pageModel.orderApprovalPromotions || '{}' @context='scriptComment'};
+        window.AEM_DATA.labels.globalLabels.saveToQuoteList = "${pageModel.saveToQuoteList || '{}' @context='scriptComment'}";
+		window.AEM_DATA.labels.globalLabels.addToQuote = "${pageModel.addToQuote || '{}' @context='scriptComment'}";
+		window.AEM_DATA.labels.globalLabels.standard = "${pageModel.standard || '{}' @context='scriptComment'}";
+		window.AEM_DATA.labels.globalLabels.defaultServerError = "${pageModel.defaultServerError || '{}' @context='scriptComment'}";
+		window.AEM_DATA.config.globalConfig.refreshToken = ${pageModel.refreshToken || '{}' @context='scriptComment'};
+		window.AEM_DATA.labels.globalLabels.pending = "${inheritedPageProperties.pendingLabel || 'Pending' @context='scriptComment'}";
+		window.AEM_DATA.labels.globalLabels.loginErrorAlertLabels = ${pageModel.loginErrorAlertLabels || '{}' @context='scriptComment'};
+		window.AEM_DATA.labels.globalLabels.marektoSubmitCta = "${pageModel.marektoSubmitCta || '{}' @context='scriptComment'}";
+		window.AEM_DATA.labels.globalLabels.loaderMsg = "${pageProperties.loaderMsg || 'Retrieving latest availability and your pricing, it may take up to 2 minutes' @context='scriptComment'}";
+		window.AEM_DATA.labels.globalLabels.cancelCTA = "${inheritedPageProperties.cancelQuickAdd || 'Cancel' @context='scriptComment'}";
+        window.AEM_DATA.labels.globalLabels.currentPageName = "${dataLayerModel.name || '' @context='scriptComment'}";
+        window.AEM_DATA.labels.globalLabels.environment = "${dataLayerModel.runModes || '' @context='scriptComment'}";
+		window.AEM_DATA.labels.quickAddLabels = ${quickAdd.quickAddLabels @context='scriptComment' };
+		window.AEM_DATA.labels.quickQuoteLabels = ${quickAdd.quickAddLabels @context='scriptComment' };
+		window.AEM_DATA.config.quickAddConfig = ${quickAdd.quickAddConfig @context='scriptComment' };
+		window.AEM_DATA.config.quickQuoteConfig = ${quickAdd.quickAddConfig @context='scriptComment' };
+		window.AEM_DATA.config.addToQuoteConfig = ${ commerceModel.addToCartConfigJson  || '{}'@context='scriptComment' };
+		window.AEM_DATA.config.addToCartConfig = ${ commerceModel.addToCartConfigJson || '{}' @context='scriptComment' };
+        window.AEM_DATA.config.globalConfig.contactUsUrl = "${pageModel.contactUsUrl || '{}' @context='scriptComment'}";
+        window.AEM_DATA.config.globalConfig.productInquireUrl = "${pageModel.productInquireUrl || '{}' @context='scriptComment'}";
+
+    </script>
+    <sly data-sly-test="${(properties.isPrivatePage && !wcmmode.edit && !wcmmode.design)}">
+        <script type="text/javascript">
+        var ssoURL = "${pageModel.signInUrl || '{}' @context='scriptComment'}";
+        function modifySignInURL(signInUrl) {
+            let rUrl = window.location.href;
+            rUrl = rUrl.replace('#/', '@@hash@@');
+            function generateToken(length) {
+                const chars = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+                let result = '';
+                for (var i = length; i > 0; --i) {
+                    result += chars[Math.floor(Math.random() * chars.length)];
+                }
+                return result;
+            };
+            const rtoken = generateToken(64);
+            const tokenCookieName = 'state_security_code';
+            signInUrl = signInUrl.replace('@@token@@', rtoken);
+            signInUrl = signInUrl.replace('@@url@@', rUrl);
+            document.cookie = tokenCookieName + '=' + rtoken +'; path=/';
+            return signInUrl;
+        }
+        function getCookie(name) {
+            var dc = document.cookie;
+            var prefix = name + "=";
+            var begin = dc.indexOf("; " + prefix);
+            if (begin == -1) {
+                begin = dc.indexOf(prefix);
+                if (begin != 0) return null;
+            }
+            else {
+                begin += 2;
+                var end = document.cookie.indexOf(";", begin);
+                if (end == -1) {
+                    end = dc.length;
+                }
+            }
+            return decodeURI(dc.substring(begin + prefix.length, end));
+        }
+        function validateUser() {
+            var homePageUrl = "${pageModel.homePageUrl || '{}' @context='scriptComment'}";
+            var loginCookie = getCookie("auth_token");
+            var loginError = getCookie("login_error");
+            if (loginError !== null) {
+                window.location.href = homePageUrl;
+            }
+            if (loginCookie === null) {
+                window.location.href = modifySignInURL(ssoURL);
+            }
+        }
+        validateUser();
+		
+        </script>
+    </sly>
+    <sly data-sly-test="${(!properties.isPrivatePage && !wcmmode.edit && !wcmmode.design)}">
+        <script type="text/javascript">
+
+        function setAnonymousCookie() {
+            var anonymousTokenUrl = "${pageModel.anonymousTokenUrl || '{}' @context='scriptComment'}";
+            var xhr = new XMLHttpRequest();
+            xhr.open("GET", anonymousTokenUrl, true);
+
+            //Send the proper header information along with the request
+            xhr.setRequestHeader("Content-Type", "application/json");
+
+            xhr.onreadystatechange = function () { // Call a function when the state changes.
+                if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
+                    // Request finished. Do processing here.
+                    var parseResponse = JSON.parse(this.responseText);
+                    if (parseResponse && parseResponse.access_token) {
+                    var now = new Date();
+                     var time = now.getTime();
+                     var expireTime = time + 1000*parseInt(parseResponse.expires_in, 10);
+                     now.setTime(expireTime);
+                     document.cookie = 'hybris_guest_cookie' + "=" + parseResponse.access_token + ';expires='+now.toUTCString()+';path=/';
+
+                        document.cookie = 'is_guest_user=true; path=/';
+                        timeOut = parseResponse.expires_in*1000;
+                        setTimeout(function() {
+                            setAnonymousCookie();
+                        }, timeOut); // get token after token expires
+                    }
+                }
+            }
+            xhr.send();
+        }
+        function getCookie(name) {
+            var dc = document.cookie;
+            var prefix = name + "=";
+            var begin = dc.indexOf("; " + prefix);
+            if (begin == -1) {
+                begin = dc.indexOf(prefix);
+                if (begin != 0) return null;
+            }
+            else {
+                begin += 2;
+                var end = document.cookie.indexOf(";", begin);
+                if (end == -1) {
+                    end = dc.length;
+                }
+            }
+            return decodeURI(dc.substring(begin + prefix.length, end));
+        }
+        
+         var loginCookie = getCookie("auth_token");
+            var guestCookie = getCookie("hybris_guest_cookie");
+            var timeOut;
+            if (loginCookie === null && guestCookie === null) {
+                setAnonymousCookie();
+            }
+
+
+        </script>
+    </sly>
+	<script type="text/javascript">
+		// Rewards code
+        var sa_uni = sa_uni || [];
+        sa_uni.push(['sa_pg', '5']);
+        uid = getCookie('user_details_uid');
+        let id = uid ? uid.split('_')[1] : '';
+        if (id && id.length < 9) {
+            id = '000000000'.substring(0, 9 - id.length).concat(id);
+        }
+        var sa_emailid = id;
+        var sa_customerid = id;
+	</script>
+</sly>
+

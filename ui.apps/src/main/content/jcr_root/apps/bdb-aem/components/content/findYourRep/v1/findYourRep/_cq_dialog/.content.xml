@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0"
+          xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          jcr:primaryType="nt:unstructured"
+          jcr:title="Find Your Representative"
+          sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="granite/ui/components/coral/foundation/container">
+        <items jcr:primaryType="nt:unstructured">
+            <tabs
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/coral/foundation/tabs"
+                    maximized="{Boolean}false">
+                <items jcr:primaryType="nt:unstructured">
+                    <general
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="General Labels"
+                            sling:resourceType="granite/ui/components/coral/foundation/container"
+                            margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <columns
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                                    margin="{Boolean}true">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <column
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/container">
+                                        <items jcr:primaryType="nt:unstructured">
+                                        	<heading
+		                                        jcr:primaryType="nt:unstructured"
+		                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+		                                        fieldLabel="Heading Text"
+		                                        name="./heading"/>
+		                                    <subHeading
+		                                        jcr:primaryType="nt:unstructured"
+		                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+		                                        fieldLabel="Sub Heading Text"
+		                                        name="./subHeading"/>   
+		                                    <description
+		                                        jcr:primaryType="nt:unstructured"
+		                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+		                                        fieldLabel="Description"
+		                                        name="./description"/>
+			                                    <mandatoryNote
+			                                        jcr:primaryType="nt:unstructured"
+			                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+			                                        fieldLabel="Mandatory Note Text"
+			                                        name="./mandatoryNote"/>
+			                                    <zipCodeLabel
+			                                        jcr:primaryType="nt:unstructured"
+			                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+			                                        fieldLabel="Zip Code Label"
+			                                        name="./zipCodeLabel"/>
+			                                    <zipCodeError
+			                                        jcr:primaryType="nt:unstructured"
+			                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+			                                        fieldLabel="Zip Code Error Message"
+			                                        name="./zipCodeError"/>
+			                                    <areaOfInterestLabel
+			                                        jcr:primaryType="nt:unstructured"
+			                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+			                                        fieldLabel="Area of Interest Label"
+			                                        name="./areaOfInterestLabel"/>
+			                                    <areaOfInterestLabels
+			                                        jcr:primaryType="nt:unstructured"
+			                                        sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+			                                        composite="{Boolean}true"
+			                                        fieldLabel="Area of Interest Labels">
+			                                        <granite:data
+			                                            jcr:primaryType="nt:unstructured"
+			                                            max-items=""/>
+			                                        <field
+			                                            jcr:primaryType="nt:unstructured"
+			                                            sling:resourceType="granite/ui/components/coral/foundation/container"
+			                                            name="./areaOfInterestLabels">
+			                                            <items jcr:primaryType="nt:unstructured">
+			                                                <column
+			                                                    jcr:primaryType="nt:unstructured"
+			                                                    sling:resourceType="granite/ui/components/coral/foundation/container">
+			                                                    <items jcr:primaryType="nt:unstructured">
+			                                                        <areaOfInterestLabel
+			                                                            jcr:primaryType="nt:unstructured"
+			                                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+			                                                            fieldLabel="Area of Interest Label"
+			                                                            name="./areaOfInterestLabel"/>
+			                                                    </items>
+			                                                </column>
+			                                            </items>
+			                                        </field>
+			                                    </areaOfInterestLabels>
+			                                    <areaOfInterestError
+			                                        jcr:primaryType="nt:unstructured"
+			                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+			                                        fieldLabel="Area of Interest Error Message"
+			                                        name="./areaOfInterestError"/>
+			                                    <tncNote
+			                                    	jcr:primaryType="nt:unstructured"
+		                                            sling:resourceType="cq/gui/components/authoring/dialog/richtext"
+		                                            fieldLabel="Terms and Conditions"
+		                                            name="./tncNote"
+		                                            useFixedInlineToolbar="{Boolean}true">
+			                                        <rtePlugins
+														jcr:primaryType="nt:unstructured"
+														sling:resourceSuperType="/apps/bdb-aem/components/authoring/dialog/richtext/rtePlugins"/>
+													<uiSettings
+														jcr:primaryType="nt:unstructured"
+														sling:resourceSuperType="/apps/bdb-aem/components/authoring/dialog/richtext/uiSettings"/>               
+		                                    </tncNote>
+		                                    <submitBtnLabel
+		                                        jcr:primaryType="nt:unstructured"
+		                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+		                                        fieldLabel="Agree and Submit CTA Label"
+		                                        name="./submitBtnLabel"/>
+                                         </items>
+                                    </column>
+                                </items>
+                            </columns>
+                        </items>
+                    </general>
+                    <salesRep
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Sales Rep Labels"
+                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                        <columns
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                                margin="{Boolean}true">
+                                <items jcr:primaryType="nt:unstructured">
+                                <column
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                                        <items jcr:primaryType="nt:unstructured">
+                                        	<salesRepHeading
+		                                        jcr:primaryType="nt:unstructured"
+		                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+		                                        fieldLabel="Heading Text"
+		                                        name="./salesRepHeading"/>
+		                                    <salesRepSubHeading
+		                                        jcr:primaryType="nt:unstructured"
+		                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+		                                        fieldLabel="Sub Heading Text"
+		                                        name="./salesRepSubHeading"/>   
+		                                    <nameLabel
+		                                        jcr:primaryType="nt:unstructured"
+		                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+		                                        fieldLabel="Sales Rep Name Label"
+		                                        name="./nameLabel"/>
+		                                    <areaofSpecialtyLabel
+		                                        jcr:primaryType="nt:unstructured"
+		                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+		                                        fieldLabel="Area of Speciality Label"
+		                                        name="./areaofSpecialtyLabel"/>
+		                                    <phoneLabel
+		                                        jcr:primaryType="nt:unstructured"
+		                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+		                                        fieldLabel="Phone Number Label"
+		                                        name="./phoneLabel"/>
+		                                    <contactMeBtnLabel
+		                                        jcr:primaryType="nt:unstructured"
+		                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+		                                        fieldLabel="Contact Me Button Label"
+		                                        name="./contactMeBtnLabel"/>
+		                                    <backToRepHomePageButton
+		                                        jcr:primaryType="nt:unstructured"
+		                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+		                                        fieldLabel="Back to Sales Rep Home Page Button Label"
+		                                        name="./backToRepHomePageButton"/>
+                                        </items>
+                                </column>
+                            </items>
+                        </columns>
+                    </items>
+                    </salesRep>
+                    <salesRepPersonalPage
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Sales Rep Personal Page Labels"
+                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                        	<columns
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                                margin="{Boolean}true">
+                                <items jcr:primaryType="nt:unstructured">
+	                                <column
+	                                        jcr:primaryType="nt:unstructured"
+	                                        sling:resourceType="granite/ui/components/coral/foundation/container">
+	                                        <items jcr:primaryType="nt:unstructured">
+	                                        	<salesRepPersonalPageHeading
+			                                        jcr:primaryType="nt:unstructured"
+			                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+			                                        fieldLabel="Heading Text"
+			                                        name="./salesRepPersonalPageHeading"/>
+			                                    <salesRepPersonalPageSubHeading
+			                                        jcr:primaryType="nt:unstructured"
+			                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+			                                        fieldLabel="Sub Heading Text"
+			                                        name="./salesRepPersonalPageSubHeading"/>
+			                                    <marketoFormId
+			                                        jcr:primaryType="nt:unstructured"
+			                                        sling:resourceType="granite/ui/components/coral/foundation/form/numberfield"
+			                                        fieldLabel="Marketo Form Id"
+			                                        name="./marketoFormId"/>
+			                                    <backToRepPageButton
+			                                        jcr:primaryType="nt:unstructured"
+			                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+			                                        fieldLabel="Back to Sales Rep Page Button Label"
+			                                        name="./backToRepPageButton"/>
+	                                        </items>
+	                                </column>
+                            	</items>
+                        	</columns>
+                    	</items>
+                    </salesRepPersonalPage>
+                </items>
+            </tabs>
+        </items>
+    </content>
+</jcr:root>

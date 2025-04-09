@@ -1,0 +1,98 @@
+<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html"
+     data-sly-call="${templates.placeholder @ isEmpty = true}"></sly>
+
+
+<div class="${properties.hasGreyBackground ? 'gray-background-container' : ''}">
+
+
+    <sly data-sly-test="${properties.selection=='image-text'}">
+        <div class="bd-advancing-items container app-js__bd-advancing-items d-flex flex-row flex-wrap flex-grow-0 flex-shrink-1">
+            <div class="container bd-advancing-items__intro d-flex flex-column bd-rte text-sm-center justify-content-center mb-sm-5  mx-auto">
+                <p class="bd-advancing-items__intro-heading">${properties.columnContainerTitle}</p>
+                <p class="bd-advancing-items__intro-sub-heading pt-2 pl-lg-4 pl-sm-0">
+                    ${properties.columnContainerDescription  @context='html'}
+                </p>
+            </div>
+            
+            <sly data-sly-test.noOfColumns="${properties.columnSelection || '1'}" />
+            
+            <div class="container bd-advancing-items__card-container d-flex justify-content-center pt-3 ">
+                <div class="row justify-content-center">
+        
+                    <sly data-sly-test="${noOfColumns=='1'}">
+                        <div class="col-sm-5 bd-advancing-items__card-layout">
+                                <div data-sly-resource="${ @path='par', resourceType='foundation/components/parsys'}" data-sly-unwrap> </div>
+                        </div>
+                    </sly>
+        
+                    <sly data-sly-test="${noOfColumns=='2'}">
+                        <div class="col-sm-3 bd-advancing-items__card-layout">
+                            <div data-sly-resource="${ @path='par1', resourceType='foundation/components/parsys'}" data-sly-unwrap> </div>
+                        </div>
+                        <div class="col-sm-3 bd-advancing-items__card-layout">
+                            <div data-sly-resource="${ @path='par2', resourceType='foundation/components/parsys'}" data-sly-unwrap> </div>
+                        </div>
+                    </sly>
+        
+                    <sly data-sly-test="${noOfColumns=='3'}">
+                        <div class="col-sm-3 bd-advancing-items__card-layout">
+                            <div data-sly-resource="${ @path='par1', resourceType='foundation/components/parsys'}" data-sly-unwrap> </div>
+                        </div>
+                        <div class="col-sm-3 bd-advancing-items__card-layout">
+                            <div data-sly-resource="${ @path='par2', resourceType='foundation/components/parsys'}" data-sly-unwrap> </div>
+                        </div>
+                        <div class="col-sm-3 bd-advancing-items__card-layout">
+                            <div data-sly-resource="${ @path='par3', resourceType='foundation/components/parsys'}" data-sly-unwrap> </div>
+                        </div>
+                    </sly>
+        
+                    <sly data-sly-test="${noOfColumns=='4'}">
+                        <div class="col-sm-3 bd-advancing-items__card-layout">
+                            <div data-sly-resource="${ @path='par1', resourceType='foundation/components/parsys'}" data-sly-unwrap> </div>
+                        </div>
+                        <div class="col-sm-3 bd-advancing-items__card-layout">
+                            <div data-sly-resource="${ @path='par2', resourceType='foundation/components/parsys'}" data-sly-unwrap> </div>
+                        </div>
+                        <div class="col-sm-3 bd-advancing-items__card-layout">
+                            <div data-sly-resource="${ @path='par3', resourceType='foundation/components/parsys'}" data-sly-unwrap> </div>
+                        </div>
+                        <div class="col-sm-3 bd-advancing-items__card-layout">
+                            <div data-sly-resource="${ @path='par4', resourceType='foundation/components/parsys'}" data-sly-unwrap> </div>
+                        </div>
+                    </sly>
+                    
+                </div>
+            </div>
+        </div>
+    </sly>
+
+
+    <sly data-sly-test="${properties.selection=='list'}">
+        <div class="container">
+            <div class="row justify-content-between">
+                    <div class="col__5-6-12 col-md__5-6-12 pr-sm-0">
+                        <div data-sly-resource="${ @path='par1', resourceType='foundation/components/parsys'}" data-sly-unwrap> </div>
+                    </div>
+                    <div class="col__5-6-12 col-md__5-6-12 pr-sm-0">
+                        <div data-sly-resource="${ @path='par2', resourceType='foundation/components/parsys'}" data-sly-unwrap> </div>
+                    </div>
+            </div>
+        </div>
+    </sly>
+
+
+    <sly data-sly-test="${properties.selection=='contactUs'}">
+        <div class="container px-lg-0">
+            <div class="row justify-content-between">
+                    <div class="col-lg-8 col-sm-12 pr-sm-0">
+                        <div data-sly-resource="${ @path='par1', resourceType='foundation/components/parsys'}" data-sly-unwrap> </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-12 pr-sm-0">
+                        <div data-sly-resource="${ @path='par2', resourceType='foundation/components/parsys'}" data-sly-unwrap> </div>
+                    </div>
+            </div>
+        </div>
+    </sly>
+
+
+</div>

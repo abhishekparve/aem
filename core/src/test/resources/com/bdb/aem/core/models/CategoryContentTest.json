@@ -1,0 +1,20 @@
+{
+  "jcr:primaryType": "nt:unstructured",
+  "description": "Test Description",
+  "title": "title",
+  "sectionLabel": "Section Label",
+  "iconAlignment": "center",
+  "sling:resourceType": "bdb-aem/proxy/components/content/categorycontent",
+  "textIsRich": "true",
+  "columnFields": {
+    "jcr:primaryType": "nt:unstructured",
+    "item0": {
+      "jcr:primaryType": "nt:unstructured",
+      "iconType": "image",
+      "iconDescription": "<p>Proven platform for high reliabilityProven platform for high reliability</p>\r\n",
+      "iconHeading": "Proven platform for high reliability",
+      "iconAlt": "alt text",
+      "iconUrl": "/content/dam/bdb/icons/Account-lists.svg"
+    }
+  }
+}

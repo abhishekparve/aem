@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2021-02-16T14:31:09.266+05:30"
+        cq:lastModifiedBy="admin"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="nt:unstructured"
+        jcr:title="Doc Type Attributes"
+        jcr:uuid="8a3a35e8-6e7a-4ea8-b194-1affe9ba1246"
+        sling:resourceType="acs-commons/components/utilities/genericlist">
+        <image
+            jcr:primaryType="nt:unstructured"
+            fileReference="/apps/acs-commons/components/utilities/genericlist/generic-list.png"/>
+        <list jcr:primaryType="nt:unstructured">
+            <item0
+                jcr:primaryType="nt:unstructured"
+                jcr:title="SELECT"/>
+            <item1
+                jcr:primaryType="nt:unstructured"
+                jcr:title="HSC - Cell Id:e9c37901-3a09-4173-96a1-340f128252de"
+                value="e9c37901-3a09-4173-96a1-340f128252de"/>
+            <item2
+                jcr:primaryType="nt:unstructured"
+                jcr:title="CMP - Cell Id:ef19ff64-8ae5-4057-9e94-d63e5161b55d"
+                value="ef19ff64-8ae5-4057-9e94-d63e5161b55d"/>
+            <item3
+                jcr:primaryType="nt:unstructured"
+                jcr:title="CLP - Cell Id:b63fb0ca-8788-4c5e-bb2e-d5ad894a5d20"
+                value="b63fb0ca-8788-4c5e-bb2e-d5ad894a5d20"/>
+            <item4
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Granulocytes - Cell Id:4c8b4814-b827-4237-94ed-f3608a2ea1b2"
+                value="4c8b4814-b827-4237-94ed-f3608a2ea1b2"/>
+            <item5
+                jcr:primaryType="nt:unstructured"
+                jcr:title="MDSCs - Cell Id:ae5456bf-0cfd-4c4a-bc28-5cc359a2affe"
+                value="ae5456bf-0cfd-4c4a-bc28-5cc359a2affe"/>
+            <item6
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Dendritic Cells - Cell Id:9d65f235-e5b5-4df7-834f-97395e258917"
+                value="9d65f235-e5b5-4df7-834f-97395e258917"/>
+            <item7
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Monocyte - Cell Id: 75794fd2-0192-4ecf-b6db-f703dd8ceab4"
+                value="75794fd2-0192-4ecf-b6db-f703dd8ceab4"/>
+            <item8
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Innate Lymphoid Cells - Cell Id:45758609-aba4-402e-910b-7d781189654c"
+                value="45758609-aba4-402e-910b-7d781189654c"/>
+            <item9
+                jcr:primaryType="nt:unstructured"
+                jcr:title="B Cells - Cell Id:e88d6b55-8aa9-47ef-942b-8679368c0aac"
+                value="e88d6b55-8aa9-47ef-942b-8679368c0aac"/>
+            <item10
+                jcr:primaryType="nt:unstructured"
+                jcr:title="T cells - Cell Id:2f925af3-6a7c-41f1-822a-70d229f35b4d"
+                value="2f925af3-6a7c-41f1-822a-70d229f35b4d"/>
+            <item11
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Neutrophil - Cell Id:9325f016-0910-44b6-9614-5edff2556dfa"
+                value="9325f016-0910-44b6-9614-5edff2556dfa"/>
+            <item12
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Eosinophil - Cell Id:0b862f34-f07c-47f0-a790-480937edc1ee"
+                value="0b862f34-f07c-47f0-a790-480937edc1ee"/>
+            <item13
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Basophil - Cell Id:66b57575-134e-4929-8f81-ae2e15a371b2"
+                value="66b57575-134e-4929-8f81-ae2e15a371b2"/>
+            <item14
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Classical Monocytes - Cell Id:72bd8bef-bcb2-47e4-ad76-1f3756e1164a"
+                value="72bd8bef-bcb2-47e4-ad76-1f3756e1164a"/>
+            <item15
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Macro-phage - Cell Id:3e851233-61bd-41a1-bc50-88462decb4da"
+                value="3e851233-61bd-41a1-bc50-88462decb4da"/>
+            <item16
+                jcr:primaryType="nt:unstructured"
+                jcr:title="NK Cells - Cell Id:a1180969-fcf0-4fcd-889f-3a6211cfc6de"
+                value="a1180969-fcf0-4fcd-889f-3a6211cfc6de"/>
+            <item17
+                jcr:primaryType="nt:unstructured"
+                jcr:title="ILC1 - Cell Id:e6c1cfd7-103a-464d-82c8-1f7d52cea0ae"
+                value="e6c1cfd7-103a-464d-82c8-1f7d52cea0ae"/>
+            <item18
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Conventional T Cells - Cell Id:fa6ab341-28b6-4b69-8cec-faf8884391ed"
+                value="fa6ab341-28b6-4b69-8cec-faf8884391ed"/>
+            <item19
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Unconventional T Cells - Cell Id:8b82b9a7-36bf-4fa1-9b41-702fdc8ba309"
+                value="8b82b9a7-36bf-4fa1-9b41-702fdc8ba309"/>
+        </list>
+    </jcr:content>
+</jcr:root>

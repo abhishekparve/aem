@@ -1,0 +1,308 @@
+{
+    "type": "cartWsDTO",
+    "appliedOrderPromotions": [
+        {
+            "amountSaved": {
+                "currencyIso": "USD",
+                "value": 2.0,
+                "formattedValue": "$2.0"
+            },
+            "consumedEntries": [],
+            "couponCode": "S1111",
+            "couponDiscount": "$110",
+            "description": "You have received $2.00 discount on cart using the coupon code [S1111]",
+            "freeGift": false,
+            "promotion": {
+                "code": "coupon_code_fixed_discount",
+                "couldFireMessages": [],
+                "description": "A fixed discount is added to the cart when a valid coupon code is entered",
+                "firedMessages": [],
+                "priority": 800,
+                "promotionType": "Rule Based Promotion"
+            }
+        }
+    ],
+    "appliedProductPromotions": [
+        {
+            "amountSaved": {
+                "currencyIso": "USD",
+                "value": 16.92
+            },
+            "consumedEntries": [
+                {
+                    "adjustedUnitPrice": 829.08,
+                    "orderEntryNumber": 0,
+                    "quantity": 9
+                }
+            ],
+            "couponCode": "S3333",
+            "description": "You have received 2% discount on products Bacteriostatic Concentrate Solution or categories [] using coupon code [S3333]",
+            "freeGift": false,
+            "promotion": {
+                "code": "coupon_code_percentage_discount_on_products",
+                "couldFireMessages": [],
+                "description": "A percentage discount is applied on qualifying products when a valid coupon code is entered",
+                "firedMessages": [],
+                "priority": 0,
+                "promotionType": "Rule Based Promotion"
+            }
+        }
+    ],
+    "appliedVouchers": [
+        {
+            "code": "S3333",
+            "freeShipping": false,
+            "voucherCode": "S3333"
+        },
+        {
+            "code": "S1111",
+            "freeShipping": false,
+            "voucherCode": "S1111"
+        }
+    ],
+    "calculated": true,
+    "code": "00003000",
+    "deliveryCost": {
+        "currencyIso": "USD",
+        "formattedValue": "$0.00",
+        "priceType": "BUY",
+        "value": 0.0
+    },
+    "deliveryItemsQuantity": 9,
+    "deliveryOrderGroups": [
+        {
+            "entries": [
+                {
+                    "basePrice": {
+                        "currencyIso": "USD",
+                        "formattedValue": "$846.00",
+                        "priceType": "BUY",
+                        "value": 846.0
+                    },
+                    "cancellableQuantity": 0,
+                    "configurationInfos": [],
+                    "contractPrice": {
+                        "currencyIso": "USD",
+                        "formattedValue": "$829.08",
+                        "priceType": "BUY",
+                        "value": 829.08
+                    },
+                    "entryNumber": 0,
+                    "isContractualPrice": false,
+                    "listPrice": {
+                        "currencyIso": "USD",
+                        "formattedValue": "$846.00",
+                        "priceType": "BUY",
+                        "value": 846.0
+                    },
+                    "product": {
+                        "availableForPickup": false,
+                        "baseOptions": [
+                            {
+                                "selected": {
+                                    "code": "653156",
+                                    "priceData": {
+                                        "currencyIso": "USD",
+                                        "formattedValue": "$846.00",
+                                        "priceType": "BUY",
+                                        "value": 846.0
+                                    },
+                                    "stock": {
+                                        "isValueRounded": false,
+                                        "stockLevel": 0,
+                                        "stockLevelStatus": "inStock"
+                                    },
+                                    "url": "/c/Bacteriostatic-Concentrate-Solution/p/653156",
+                                    "variantOptionQualifiers": []
+                                },
+                                "variantType": "GenericVariantProduct"
+                            }
+                        ],
+                        "baseProduct": "base_1",
+                        "batchManaged": false,
+                        "categories": [
+                            {
+                                "code": "dummyVariantValueCategory",
+                                "name": "Dummy Variant Value Category",
+                                "url": "/Dummy-Variant-Category/Dummy-Variant-Value-Category/c/dummyVariantValueCategory"
+                            }
+                        ],
+                        "code": "653156",
+                        "maxPurchasableQuantity": 0,
+                        "name": "Bacteriostatic Concentrate Solution",
+                        "purchasable": false,
+                        "stock": {
+                            "isValueRounded": false,
+                            "stockLevel": 0,
+                            "stockLevelStatus": "inStock"
+                        },
+                        "url": "/c/Bacteriostatic-Concentrate-Solution/p/653156"
+                    },
+                    "quantity": 9,
+                    "requestSameLot": false,
+                    "returnableQuantity": 0,
+                    "statusSummaryList": [],
+                    "totalPrice": {
+                        "currencyIso": "USD",
+                        "formattedValue": "$7,461.72",
+                        "priceType": "BUY",
+                        "value": 7461.72
+                    },
+                    "updateable": true
+                }
+            ],
+            "totalPriceWithTax": {
+                "currencyIso": "USD",
+                "formattedValue": "$7,461.72",
+                "priceType": "BUY",
+                "value": 7461.72
+            }
+        }
+    ],
+    "entries": [
+        {
+            "basePrice": {
+                "currencyIso": "USD",
+                "formattedValue": "$846.00",
+                "priceType": "BUY",
+                "value": 846.0
+            },
+            "cancellableQuantity": 0,
+            "configurationInfos": [],
+            "contractPrice": {
+                "currencyIso": "USD",
+                "formattedValue": "$829.08",
+                "priceType": "BUY",
+                "value": 829.08
+            },
+            "entryNumber": 0,
+            "isContractualPrice": false,
+            "listPrice": {
+                "currencyIso": "USD",
+                "formattedValue": "$846.00",
+                "priceType": "BUY",
+                "value": 846.0
+            },
+            "product": {
+                "availableForPickup": false,
+                "baseOptions": [
+                    {
+                        "selected": {
+                            "code": "653156",
+                            "priceData": {
+                                "currencyIso": "USD",
+                                "formattedValue": "$846.00",
+                                "priceType": "BUY",
+                                "value": 846.0
+                            },
+                            "stock": {
+                                "isValueRounded": false,
+                                "stockLevel": 0,
+                                "stockLevelStatus": "inStock"
+                            },
+                            "url": "/c/Bacteriostatic-Concentrate-Solution/p/653156",
+                            "variantOptionQualifiers": []
+                        },
+                        "variantType": "GenericVariantProduct"
+                    }
+                ],
+                "baseProduct": "base_1",
+                "batchManaged": false,
+                "categories": [
+                    {
+                        "code": "dummyVariantValueCategory",
+                        "name": "Dummy Variant Value Category",
+                        "url": "/Dummy-Variant-Category/Dummy-Variant-Value-Category/c/dummyVariantValueCategory"
+                    }
+                ],
+                "code": "653156",
+                "maxPurchasableQuantity": 0,
+                "name": "Bacteriostatic Concentrate Solution",
+                "purchasable": false,
+                "stock": {
+                    "isValueRounded": false,
+                    "stockLevel": 0,
+                    "stockLevelStatus": "inStock"
+                },
+                "url": "/c/Bacteriostatic-Concentrate-Solution/p/653156"
+            },
+            "quantity": 9,
+            "requestSameLot": false,
+            "returnableQuantity": 0,
+            "statusSummaryList": [],
+            "totalPrice": {
+                "currencyIso": "USD",
+                "formattedValue": "$7,461.72",
+                "priceType": "BUY",
+                "value": 7461.72
+            },
+            "updateable": true
+        }
+    ],
+    "guid": "bb6d3529-e728-46d0-bfd7-6c6a9a5b13fa",
+    "net": true,
+    "orderDiscounts": {
+        "currencyIso": "USD",
+        "formattedValue": "$2.00",
+        "priceType": "BUY",
+        "value": 2.0
+    },
+    "pickupItemsQuantity": 0,
+    "pickupOrderGroups": [],
+    "productDiscounts": {
+        "currencyIso": "USD",
+        "formattedValue": "$152.28",
+        "priceType": "BUY",
+        "value": 152.28
+    },
+    "site": "bdbUS",
+    "store": "US",
+    "subTotal": {
+        "currencyIso": "USD",
+        "formattedValue": "$7,459.72",
+        "priceType": "BUY",
+        "value": 7459.72
+    },
+    "totalDiscounts": {
+        "currencyIso": "USD",
+        "formattedValue": "$154.28",
+        "priceType": "BUY",
+        "value": 154.28
+    },
+    "totalItems": 1,
+    "totalPrice": {
+        "currencyIso": "USD",
+        "formattedValue": "$7,459.72",
+        "priceType": "BUY",
+        "value": 7459.72
+    },
+    "totalPriceWithTax": {
+        "currencyIso": "USD",
+        "formattedValue": "$7,459.72",
+        "priceType": "BUY",
+        "value": 7459.72
+    },
+    "totalTax": {
+        "currencyIso": "USD",
+        "formattedValue": "$0.00",
+        "priceType": "BUY",
+        "value": 0.0
+    },
+    "displayHyphen": true,
+    "isVATEligible": false,
+    "isVATExempt": false,
+    "paymentType": {
+        "code": "CARD",
+        "displayName": "Card Payment"
+    },
+    "potentialOrderPromotions": [],
+    "potentialProductPromotions": [],
+    "savedForLater": false,
+    "totalSurcharge": {
+        "currencyIso": "USD",
+        "formattedValue": "$0.00",
+        "priceType": "BUY",
+        "value": 0.0
+    },
+    "totalUnitCount": 9
+}

@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2021-02-11T09:38:24.230Z"
+        cq:lastModifiedBy="divya.doddi@bd.com"
+        cq:lastReplicated="{Date}2021-02-11T09:38:42.152Z"
+        cq:lastReplicatedBy="divya.doddi@bd.com"
+        cq:lastReplicationAction="Activate"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[cq:ReplicationStatus,mix:versionable]"
+        jcr:primaryType="nt:unstructured"
+        jcr:title="Japan"
+        jcr:uuid="217ae899-5fed-490a-8486-cc329322e08c"
+        sling:resourceType="acs-commons/components/utilities/genericlist"
+        value="JP">
+        <image
+            jcr:primaryType="nt:unstructured"
+            fileReference="/apps/acs-commons/components/utilities/genericlist/generic-list.png"/>
+        <list jcr:primaryType="nt:unstructured">
+            <item0
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Aichi prefecture"
+                value="JP-23"/>
+            <item1
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Akita"
+                value="JP-05"/>
+            <item2
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Aomori Prefecture"
+                value="JP-02"/>
+            <item3
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Chiba"
+                value="JP-12"/>
+            <item4
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Ehime Prefecture"
+                value="JP-38"/>
+            <item5
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Fukui prefecture"
+                value="JP-18"/>
+            <item6
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Fukuoka Prefecture"
+                value="JP-40"/>
+            <item7
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Fukushima Prefecture"
+                value="JP-07"/>
+            <item8
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Gifu Prefecture"
+                value="JP-21"/>
+            <item9
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Gunma Prefecture"
+                value="JP-10"/>
+            <item10
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Hiroshima Prefecture"
+                value="JP-34"/>
+            <item11
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Hokkaido"
+                value="JP-01"/>
+            <item12
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Hyogo prefecture"
+                value="JP-28"/>
+            <item13
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Ibaraki Prefecture"
+                value="JP-08"/>
+            <item14
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Ishikawa Prefecture"
+                value="JP-17"/>
+            <item15
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Iwate Prefecture"
+                value="JP-03"/>
+            <item16
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Kagawa Prefecture"
+                value="JP-37"/>
+            <item17
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Kagoshima prefecture"
+                value="JP-46"/>
+            <item18
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Kanagawa Prefecture"
+                value="JP-14"/>
+            <item19
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Kochi Prefecture"
+                value="JP-39"/>
+            <item20
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Kumamoto Prefecture"
+                value="JP-43"/>
+            <item21
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Kyoto"
+                value="JP-26"/>
+            <item22
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Mie Prefecture"
+                value="JP-24"/>
+            <item23
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Miyagi Prefecture"
+                value="JP-04"/>
+            <item24
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Miyazaki prefecture"
+                value="JP-45"/>
+            <item25
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Nagano Prefecture"
+                value="JP-20"/>
+            <item26
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Nagasaki Prefecture"
+                value="JP-42"/>
+            <item27
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Nara Prefecture"
+                value="JP-29"/>
+            <item28
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Niigata Prefecture"
+                value="JP-15"/>
+            <item29
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Oita Prefecture"
+                value="JP-44"/>
+            <item30
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Okayama Prefecture"
+                value="JP-33"/>
+            <item31
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Okinawa Prefecture"
+                value="JP-47"/>
+            <item32
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Osaka"
+                value="JP-27"/>
+            <item33
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Saga Prefecture"
+                value="JP-41"/>
+            <item34
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Saitama"
+                value="JP-11"/>
+            <item35
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Shiga Prefecture"
+                value="JP-25"/>
+            <item36
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Shimane Prefecture"
+                value="JP-32"/>
+            <item37
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Shizuoka Prefecture"
+                value="JP-22"/>
+            <item38
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Tochigi Prefecture"
+                value="JP-09"/>
+            <item39
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Tokushima Prefecture"
+                value="JP-36"/>
+            <item40
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Tokyo"
+                value="JP-13"/>
+            <item41
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Tottori prefecture"
+                value="JP-31"/>
+            <item42
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Toyama Prefecture"
+                value="JP-16"/>
+            <item43
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Wakayama Prefecture"
+                value="JP-30"/>
+            <item44
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Yamagata Prefecture"
+                value="JP-06"/>
+            <item45
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Yamaguchi Prefecture"
+                value="JP-35"/>
+            <item46
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Yamanashi Prefecture"
+                value="JP-19"/>
+        </list>
+    </jcr:content>
+</jcr:root>

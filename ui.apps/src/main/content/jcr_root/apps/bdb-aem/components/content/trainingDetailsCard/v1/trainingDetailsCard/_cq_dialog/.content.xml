@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0"
+          jcr:primaryType="nt:unstructured"
+          jcr:title="Training Details Card"
+          sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="granite/ui/components/coral/foundation/container">
+        <items jcr:primaryType="nt:unstructured">
+            <tabs
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/tabs"
+                maximized="{Boolean}false">
+                <items jcr:primaryType="nt:unstructured">
+                <trainingDetailsCardTab
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Training Details Card"
+                    sling:resourceType="granite/ui/components/coral/foundation/container"
+                    margin="{Boolean}true">
+                    <items jcr:primaryType="nt:unstructured">
+                        <column
+                             jcr:primaryType="nt:unstructured"
+                             sling:resourceType="granite/ui/components/coral/foundation/container">
+                            <items jcr:primaryType="nt:unstructured">
+                                  <togglePaddingTop
+                                       jcr:primaryType="nt:unstructured"
+                                       sling:resourceType="granite/ui/components/coral/foundation/form/switch"
+                                       checked="{Boolean}false"
+                                       fieldLabel="Reduce Top Padding"
+                                       fieldDescription="Switch between Default Padding (Off) and Reduced Padding (On)"
+                                       name="./togglePaddingTop"/>      
+                                <sectionNameText
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                    fieldLabel="Section Name Text"
+                                    fieldDescription="Author the Section Name Text"
+                                    name="./sectionNameText"/>
+                                <subTitle
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                    fieldLabel="Section Sub-Title"
+                                    fieldDescription="Author the Section Sub-Title or Training Type"
+                                    name="./subTitle"/>
+                                <disableBottomBorder
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                    fieldDescription="Disable Bottom Border"
+                                    name="./disableBottomBorder"
+                                    text="Disable Bottom Border"
+                                    value="{Boolean}true"/>
+                                <trainingDetailsFieldset
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="Training Details Card"
+                                    sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                                    <items jcr:primaryType="nt:unstructured">
+                                    <trainingDetailsMultiField
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                            composite="{Boolean}true"
+                                            fieldLabel="Training Details"
+                                            fieldDescription="Author Training Details Cards">
+                                            <field
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/container"
+                                                name="./trainingDetailsMultiField">
+                                            <items jcr:primaryType="nt:unstructured">
+                                            <title
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Title"
+                                                fieldDescription="Author the Title"
+                                                required="{Boolean}true"
+                                                name="./title"/>
+                                            <descriptionList
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="Description List"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                                                <items jcr:primaryType="nt:unstructured">
+                                                <descriptionMultiField
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                                    composite="{Boolean}true"
+                                                    fieldLabel="Description Title and Detail"
+                                                    fieldDescription="uthor the Description Titles and Details">
+                                                <granite:data
+                                                    jcr:primaryType="nt:unstructured"
+                                                    max-items="4"/>
+                                                    <field
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                                                        name="./descriptionMultiField">
+                                                        <items jcr:primaryType="nt:unstructured">
+                                                            <errorCode
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="Description Caption"
+                                                                fieldDescription="Author the short Description Title"
+                                                                required="{Boolean}true"
+                                                                name="./errorCode"/>
+                                                            <errorMessage
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="Description Detail"
+                                                                fieldDescription="Author the Description Message"
+                                                                required="{Boolean}true"
+                                                                name="./errorMessage"/>
+                                                        </items>
+                                                    </field>
+                                                </descriptionMultiField>
+                                                </items>
+                                            </descriptionList>
+                                            <videoEnabled
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                                fieldDescription="Please author the associated video fields in case this is enabled"
+                                                name="./videoEnabled"
+                                                text="Enable Video"
+                                                uncheckedValue="{Boolean}false"
+                                                value="{Boolean}true"/>
+                                            <fieldSetImage
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="Associated Video"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                                                <items jcr:primaryType="nt:unstructured">
+                                                <brightcoveVideoId
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldDescription="Brightcove Video ID"
+                                                    fieldLabel="Brightcove Video ID"
+                                                    name="./brightcoveVideoId"/>
+                                                <imagePath
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                                                    rootPath="/content/dam/bdb"
+                                                    fieldLabel="Image/Video Thumbnail Path"
+                                                    fieldDescription="Author Path for the Image/Video Thumbnail"
+                                                    required="{Boolean}true"
+                                                    name="./imagePath"/>
+                                                <imageVideoAltText
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldLabel="Image/Video Alt Text"
+                                                    fieldDescription="Author the Alt Text for the Image/Video"
+                                                    name="./imageVideoAltText"/>
+	                                           <imageLinkUrl
+							                        jcr:primaryType="nt:unstructured"
+							                        sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+							                        fieldDescription="Image Link URL"
+							                        fieldLabel="Image Link URL"
+							                        name="./imageLinkUrl"
+							                        rootPath="/content"/>
+							                    <openNewImageLinkTab
+													jcr:primaryType="nt:unstructured"
+													sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+													fieldDescription="Check to open link in New Tab. By default, link opens in same tab."
+													name="./openNewImageLinkTab"
+													text="Open Link in New Tab"
+													uncheckedValue="{Boolean}false"
+													value="{Boolean}true"/>                                                     
+                                                <captionUnderImage
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldLabel="Caption Under Image/Video Text"
+                                                    fieldDescription="Author the caption under Image/Video"
+                                                    name="./captionUnderImage"/>
+                                                </items>
+                                            </fieldSetImage>
+                                            <fieldSetCTA
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="CTA"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                                                <items jcr:primaryType="nt:unstructured">
+                                                <primaryCtaLabel
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldLabel="CTA Label"
+                                                    fieldDescription="Author the CTA Label"
+                                                    name="./primaryCtaLabel"/>
+                                                <primaryCtaPath
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                                                    rootPath="/content/bdb"
+                                                    fieldLabel="CTA Path"
+                                                    fieldDescription="Author Link/URL for the CTA"
+                                                    name="./primaryCtaPath"/>
+                                                <optionalCtaLabel
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldLabel="CTA (Optional) Label"
+                                                    fieldDescription="Author the CTA (Optional) Label"
+                                                    name="./optionalCtaLabel"/>
+                                                <optionalCtaPath
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                                                    rootPath="/content/bdb"
+                                                    fieldLabel="CTA (Optional) Path"
+                                                    fieldDescription="Author Link/URL for the CTA (Optional)"
+                                                    name="./optionalCtaPath"/>
+                                                </items>
+                                            </fieldSetCTA>
+                                            <isFeatured
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                                fieldDescription="On Checking this will be marked as Featured"
+                                                name="./isFeatured"
+                                                granite:class="cq-dialog-checkbox-showhide"
+                                                text="Is Featured"
+                                                uncheckedValue="{Boolean}false"
+                                                value="{Boolean}true">
+                                                <granite:data
+                                                    jcr:primaryType="nt:unstructured"
+                                                    cq-dialog-checkbox-showhide-target=".togglefield"/>
+                                            </isFeatured>
+                                            <featuredTab
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="Featured Details"
+                                                sling:resourceType="granite/ui/components/coral/foundation/container"
+                                                granite:class="togglefield"
+                                                margin="{Boolean}true">
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <miniThumbnailImage
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                                                        rootPath="/content/dam/bdb"
+                                                        fieldLabel="Thumbnail Image"
+                                                        fieldDescription="Author Path for the Mini Thumbnail Image"
+                                                        name="./miniThumbnailImage"/>
+                                                    <miniThumbnailAltText
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                        fieldLabel="Thumbnail Image Alt Text"
+                                                        fieldDescription="Author the Alt Text for Mini Thumbnail Image"
+                                                        name="./miniThumbnailAltText"/>
+                                                </items>
+                                            </featuredTab>
+                                            <align
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                fieldDescription="Component Section Alignment"
+                                                fieldLabel="Section Alignment"
+                                                name="./sectionAlign">
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <def
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Select Alignment"
+                                                        value=""/>
+                                                    <left
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Left aligned"
+                                                        value="isAlignedLeft"/>
+                                                    <right
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Right aligned"
+                                                        value="isAlignedRight"/>
+                                                </items>
+                                            </align>
+                                            </items>
+                                            </field>
+                                    </trainingDetailsMultiField>
+                                    </items>
+                                </trainingDetailsFieldset>
+                            </items>
+                        </column>
+                    </items>
+                </trainingDetailsCardTab>
+                </items>
+            </tabs>
+        </items>
+    </content>
+</jcr:root>

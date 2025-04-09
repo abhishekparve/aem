@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Training Details"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+        <items jcr:primaryType="nt:unstructured">
+            <column
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/container">
+                <items jcr:primaryType="nt:unstructured">
+                    <trainingDetailsList
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Training Details"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                        <items jcr:primaryType="nt:unstructured">
+                            <sectionTitle
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldLabel="Section Title"
+                                name="./sectionTitle"
+                                required="{Boolean}true"/>
+                            <cell
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Section"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                composite="{Boolean}true">
+                                <granite:data jcr:primaryType="nt:unstructured"/>
+                                <field
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="Section"
+                                    sling:resourceType="granite/ui/components/coral/foundation/container"
+                                    name="./trainingDetails">
+                                    <items jcr:primaryType="nt:unstructured">
+                                        <column
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/container">
+                                            <items jcr:primaryType="nt:unstructured">
+                                                <image
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                    fieldLabel="Image"
+                                                    name="./trainingImage"
+                                                    required="{Boolean}true"
+                                                    rootPath="/content/dam"/>
+                                                <alt
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldLabel="Alt Text"
+                                                    name="./trainingAlt"
+                                                    required="{Boolean}true"/>
+                                                <imageLinkUrl
+							                        jcr:primaryType="nt:unstructured"
+							                        sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+							                        fieldDescription="Image Link URL"
+							                        fieldLabel="Image Link URL"
+							                        name="./imageLinkUrl"
+							                        rootPath="/content"/>
+							                    <openNewImageLinkTab
+													jcr:primaryType="nt:unstructured"
+													sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+													fieldDescription="Check to open link in New Tab. By default, link opens in same tab."
+													name="./openNewImageLinkTab"
+													text="Open Link in New Tab"
+													uncheckedValue="{Boolean}false"
+													value="{Boolean}true"/>                                             
+                                                <title
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldLabel="Title"
+                                                    name="./trainingTitle"
+                                                    required="{Boolean}true"/>
+                                                <description
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="cq/gui/components/authoring/dialog/richtext"
+                                                    fieldLabel="Description"
+                                                    name="./description"
+                                                    required="{Boolean}true"
+                                                    useFixedInlineToolbar="{Boolean}true">
+                                                    <rtePlugins
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceSuperType="/apps/bdb-aem/components/authoring/dialog/richtext/rtePlugins"/>
+                                                    <uiSettings
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceSuperType="/apps/bdb-aem/components/authoring/dialog/richtext/uiSettings"/>
+                                                    <granite:data
+                                                        jcr:primaryType="nt:unstructured"
+                                                        char-limit="255"/>
+                                                </description>
+                                                <contactModel
+                                                    jcr:primaryType="nt:unstructured"
+                                                    jcr:title="Contact Model"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                                                    <items jcr:primaryType="nt:unstructured">
+                                                        <label
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                            fieldDescription="Label for Model Link"
+                                                            fieldLabel="Label"
+                                                            name="./modelLabel"/>
+                                                        <url
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                            fieldDescription="Model URL"
+                                                            fieldLabel="URL"
+                                                            name="./modelUrl"
+                                                            rootPath="/content"/>
+                                                        <text
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                            fieldDescription="Contact Model Info text"
+                                                            fieldLabel="Text"
+                                                            name="./modelText"/>
+                                                    </items>
+                                                </contactModel>
+                                                <ctaButton
+                                                    jcr:primaryType="nt:unstructured"
+                                                    jcr:title="CTA"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                                                    <items jcr:primaryType="nt:unstructured">
+                                                        <label
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                            fieldDescription="Label for CTA Link"
+                                                            fieldLabel="Label"
+                                                            name="./ctaLabel"
+                                                            required="{Boolean}true"/>
+                                                        <url
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                            fieldDescription="CTA URL"
+                                                            fieldLabel="URL"
+                                                            name="./ctaUrl"
+                                                            required="{Boolean}true"
+                                                            rootPath="/content"/>
+                                                        <color
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                            fieldDescription="Please select the type of Color"
+                                                            fieldLabel="Select the type of Color"
+                                                            name="./color"
+                                                            required="{Boolean}true">
+                                                            <items jcr:primaryType="nt:unstructured">
+                                                                <primaryBlue
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    text="Primary Blue"
+                                                                    value="btn-primary-blue"/>
+                                                                <secondary
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    text="Secondary Button"
+                                                                    value="btn-secondary"/>
+                                                            </items>
+                                                        </color>
+                                                    </items>
+                                                </ctaButton>
+                                            </items>
+                                        </column>
+                                    </items>
+                                </field>
+                            </cell>
+                        </items>
+                    </trainingDetailsList>
+                </items>
+            </column>
+        </items>
+    </content>
+</jcr:root>

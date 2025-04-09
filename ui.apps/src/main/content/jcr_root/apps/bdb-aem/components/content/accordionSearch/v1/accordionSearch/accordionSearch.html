@@ -1,0 +1,94 @@
+<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html"
+    data-sly-call="${templates.placeholder @ isEmpty = true}"></sly>
+ 
+<sly data-sly-test.placeholderText = "${properties.searchPlaceHolderLabel ? properties.searchPlaceHolderLabel : 'Search here'}"/>
+
+<div class="accordion-table-search app-js__accordion-table-search">
+	<div class="container">
+	    <div class="accordion-table-search__search-bar w-100 d-flex align-items-center">
+	        <img
+	            src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/search-gray.svg"
+	            alt="Search"
+	            class="accordion-table-search__search-bar-icon"
+	        />
+	        <input
+	            id="accordion-table-search__search-bar-input"
+	            class="w-100"
+	            type="text"
+	            aria-label="searchplaceholder"
+	            placeholder=${placeholderText}
+	        />
+	    </div>
+	</div> 
+</div>
+
+<script>
+    function highlight(element, searchString) {
+        var innerHTML = element.textContent;
+        var index = innerHTML.toLowerCase().indexOf(searchString);
+        if (index >= 0) {
+            innerHTML = innerHTML.substring(0, index) + '<mark>' + innerHTML.substring(index, index + searchString.length) + '</mark>' + innerHTML.substring(index + searchString.length);
+            element.innerHTML = innerHTML;
+        }
+    }
+
+    function idDecendentOfListItemContainer(element) {
+        return element.parentNode.classList.contains('accordion-list__items-container');
+    }
+
+    function getAccordionTable(element) {
+        var current = element;
+        while(current.parentNode != null && current.parentNode != document.documentElement) {
+            current = current.parentNode;
+            if (current.classList.contains('accordionTable')) {
+                return current;
+            }
+        }
+        return null;
+    }
+
+    document.getElementById("accordion-table-search__search-bar-input").addEventListener("keyup", function(event) {
+        var searchString = event.target.value.replace(/^\s+/, '').replace(/\s+$/, '').toLowerCase();
+        if (searchString !== '') {
+            var accordionList = document.querySelectorAll("#accordion-table");
+            if (accordionList !== null && accordionList.length > 0) {
+                accordionList.forEach(listDomElement => {
+                    var listHeaderContainer = listDomElement.querySelectorAll('.accordion-list__items .accordion-list__items-header');
+                    if (listHeaderContainer !== null && listHeaderContainer.length > 0) {
+                        var hideParent = true;
+                        listHeaderContainer.forEach(listItem => {
+                            var listHeader = listItem.querySelector('.accordion-list__items-header-text');
+                            var headerText = listHeader.textContent.toLowerCase().replace(/^\s+/, '').replace(/\s+$/, '');
+                            idDecendentOfListItemContainer(listItem) ? listItem.parentNode.classList.remove("hide") : listItem.classList.remove("hide");
+                            if (headerText.includes(searchString)) {
+                                hideParent = false;
+                                highlight(listHeader, searchString);
+                            } else {
+                                idDecendentOfListItemContainer(listItem) ? listItem.parentNode.classList.add("hide") : listItem.classList.add("hide");
+                                listHeader.innerHTML = listHeader.textContent;
+                            }
+                        });
+                        var accordionTable = getAccordionTable(listDomElement);
+                        if (hideParent) {
+                            accordionTable !== null ? accordionTable.classList.add("hide") : listDomElement.classList.add("hide");
+                        } else {
+                            accordionTable !== null ? accordionTable.classList.remove("hide") : listDomElement.classList.remove("hide");
+                        }
+                    }
+                });
+            }
+        } else {
+            event.target.value = '';
+            document.querySelectorAll('#accordion-table').forEach(el =>{
+                var accordionTable = getAccordionTable(el);
+                accordionTable !== null ? accordionTable.classList.remove("hide") : el.classList.remove("hide");
+            });
+            document.querySelectorAll('#accordion-table .accordion-list__items .accordion-list__items-header').forEach(el => {
+                idDecendentOfListItemContainer(el) ? el.parentNode.classList.remove("hide") : el.classList.remove("hide");
+                var item = el.querySelector('.accordion-list__items-header-text');
+                item.innerHTML = item.textContent;
+            });
+        }
+    });
+</script>
+    

@@ -1,0 +1,53 @@
+<sly data-sly-template.image="${@ teaser}">
+	<sly data-sly-use.bdbVideo="com.bdb.aem.core.models.BDBBrightcoveVideo"
+    	 data-sly-use.bdbTeaser="com.bdb.aem.core.models.BDBTeaserModel">
+        <div class="cmp-teaser__image" data-sly-test="${properties.fileReference}">
+        	<sly data-sly-test="${properties.disableLazyLoading}">
+        		<sly data-sly-test="${properties.imageLinkUrl}">
+        			<a href="${properties.imageLinkUrl}" target="${properties.openLinkInNewTab == 'true' ? '_blank' : '_self'}">
+        				<img class="main-image" src="${bdbTeaser.fileReference}" alt="${properties.alt}"/>
+        			</a>
+            	</sly>
+            	<sly data-sly-test="${!properties.imageLinkUrl}">
+        			<img class="main-image" src="${bdbTeaser.fileReference}" alt="${properties.alt}"/>
+            	</sly>
+        	</sly>
+        	<sly data-sly-test="${!properties.disableLazyLoading}">
+        		<sly data-sly-test="${properties.imageLinkUrl}">
+    				<picture>
+						<source media="(max-width: 900px)"
+			 				srcset= "${properties.moibleImage}"  onload="window.aos && window.aos.refresh()">						 
+						<a href="${properties.imageLinkUrl}" target="${properties.openLinkInNewTab == 'true' ? '_blank' : '_self'}">
+							<img  data-src= "${properties.fileReference}" class="main-image"
+								alt="${properties.alt}" onload="window.aos && window.aos.refresh()"/>
+						</a>
+					</picture>
+            	</sly>
+            	<sly data-sly-test="${!properties.imageLinkUrl}">
+        			<picture>
+						<source media="(max-width: 900px)"
+			 				srcset= "${properties.moibleImage}"  onload="window.aos && window.aos.refresh()">						 
+						<img  data-src= "${properties.fileReference}" class="main-image"
+							alt="${properties.alt}" onload="window.aos && window.aos.refresh()"/>
+					</picture>
+            	</sly>
+        	</sly>
+            
+            <sly data-sly-test="${bdbTeaser.videoEnabled == 'yes'}">
+                <button
+                    type="button"
+                    class="icon"
+                    data-toggle="modal"
+                    data-target="#brightcove-video-modal"
+                    data-accountId="${bdbvideo.brightcoveAccountId}"
+                    data-playerId="${bdbvideo.brightcovePlayerId}"
+                    data-videoId="${bdbTeaser.brightcoveVideoId}">
+                    <img src="${bdbTeaser.playIcon}" alt="play icon"/>
+                </button>
+            </sly>
+			<sly data-sly-test="${properties.darkMode == 'true'}">
+				<div class="dark-mode-overlay"></div>
+			</sly>
+        </div> 
+    </sly>
+</sly>

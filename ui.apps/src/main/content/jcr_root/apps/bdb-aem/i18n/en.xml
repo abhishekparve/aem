@@ -1,0 +1,868 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:language="en"
+    jcr:mixinTypes="[mix:language]"
+    jcr:primaryType="sling:Folder">
+    <accountSettings jcr:primaryType="nt:folder">
+        <company
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="company"
+            sling:message="COMPANY"/>
+        <eANCode
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="eANCode"
+            sling:message="EAN CODE"/>
+        <edit
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="edit"
+            sling:message="Edit"/>
+        <emailAddress
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="emailAddress"
+            sling:message="EMAIL ADDRESS"/>
+        <firstName
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="firstName"
+            sling:message="FIRST NAME"/>
+        <lastName
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="lastName"
+            sling:message="LAST NAME"/>
+        <password
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="password"
+            sling:message="PASSWORD"/>
+        <phoneNumber
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="phoneNumber"
+            sling:message="PHONE NUMBER"/>
+        <update
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="update"
+            sling:message="Update"/>
+        <vATNumber
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="vATNumber"
+            sling:message="VAT NUMBER"/>
+        <editPwd
+                jcr:primaryType="sling:MessageEntry"
+                sling:key="editPwd"
+                sling:message="Enter Current Password"/>
+        <enterNewPwd
+                jcr:primaryType="sling:MessageEntry"
+                sling:key="enterNewPwd"
+                sling:message="Enter New Password"/>
+        <confirmNewPwd
+                jcr:primaryType="sling:MessageEntry"
+                sling:key="confirmNewPwd"
+                sling:message="Confirm New Password"/>
+    </accountSettings>
+    <addresses jcr:primaryType="nt:folder">
+        <address
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="address"
+            sling:message="Address"/>
+        <AddressLineOne
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="AddressLineOne"
+            sling:message="Address line 1"/>
+        <addressLineTwo
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="addressLineTwo"
+            sling:message="Address line 2"/>
+        <streetAddress
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="streetAddress"
+            sling:message="Street Address"/>
+        <billingAddress
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="billingAddress"
+            sling:message="Billing Address"/>
+        <building
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="building"
+            sling:message="Building"/>
+        <city
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="city"
+            sling:message="City"/>
+        <companyAddress
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="companyAddress"
+            sling:message="Company"/>
+        <country
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="country"
+            sling:message="Country"/>
+        <nicknamePlaceholder
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="nicknamePlaceholder"
+            sling:message="Nickname (optional)"/>
+        <department
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="department"
+            sling:message="Department"/>
+        <floor
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="floor"
+            sling:message="Floor"/>
+        <phone
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="phone"
+            sling:message="Phone"/>
+        <okay
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="okay"
+            sling:message="Okay"/>
+        <room
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="room"
+            sling:message="Room"/>
+        <shippingAddress
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="shippingAddress"
+            sling:message="Shipping Address"/>
+        <shipToNumber
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="shipToNumber"
+            sling:message="Ship-To Number"/>
+        <state
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="state"
+            sling:message="State"/>
+        <province
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="province"
+            sling:message="Province"/>
+        <district
+                jcr:primaryType="sling:MessageEntry"
+                sling:key="district"
+                sling:message="District"/>
+        <postalCode
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="postalCode"
+            sling:message="Postal Code"/>
+        <pinCode
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="pinCode"
+            sling:message="PIN Code"/>
+        <zipcode
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="zipcode"
+            sling:message="ZIP Code"/>
+        <setAsDefault
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="setAsDefault"
+            sling:message="Set As Default"/>
+        <defaultLabel
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="defaultLabel"
+            sling:message="Default"/>
+    </addresses>
+    <certificates jcr:primaryType="nt:folder">
+        <cancel
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="cancel"
+            sling:message="Cancel"/>
+        <certificationType
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="certificationType"
+            sling:message="CERTIFICATION TYPE"/>
+        <confirm
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="confirm"
+            sling:message="Confirm"/>
+        <documentName
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="documentName"
+            sling:message="DOCUMENT NAME"/>
+        <expiryDate
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="expiryDate"
+            sling:message="EXPIRY DATE"/>
+        <linkedAddress
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="linkedAddress"
+            sling:message="Linked Address"/>
+        <remove
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="remove"
+            sling:message="Remove"/>
+        <status
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="status"
+            sling:message="STATUS"/>
+    </certificates>
+    <communicationSettings jcr:primaryType="nt:folder">
+        <email
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="email"
+            sling:message="Email"/>
+    </communicationSettings>
+    <dashboard jcr:primaryType="nt:folder">
+        <date
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="date"
+            sling:message="DATE"/>
+        <orderTotal
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="orderTotal"
+            sling:message="ORDER TOTAL"/>
+        <viewAll
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="viewAll"
+            sling:message="View All"/>
+        <viewLess
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="viewLess"
+            sling:message="View Less"/>
+        <welcome
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="welcome"
+            sling:message="Welcome"/>
+    </dashboard>
+    <orders jcr:primaryType="nt:folder">
+        <approvalStatus
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="approvalStatus"
+            sling:message="APPROVAL STATUS"/>
+        <billTo
+                jcr:primaryType="sling:MessageEntry"
+                sling:key="billTo"
+                sling:message="BILL-TO"/>
+        <billToNumber
+                jcr:primaryType="sling:MessageEntry"
+                sling:key="billToNumber"
+                sling:message="Bill-To Number"/>
+        <carrierNumber
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="carrierNumber"
+            sling:message="CARRIER NUMBER"/>
+        <contactUs
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="contactUs"
+            sling:message="Contact Us"/>
+        <datePlaced
+                jcr:primaryType="sling:MessageEntry"
+                sling:key="datePlaced"
+                sling:message="Date Placed"/>
+        <deliveryMethod
+                jcr:primaryType="sling:MessageEntry"
+                sling:key="deliveryMethod"
+                sling:message="DELIVERY METHOD"/>
+        <eSTDelivery
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="eSTDelivery"
+            sling:message="EST.DELIVERY"/>
+        <eSTDeliveryDate
+                jcr:primaryType="sling:MessageEntry"
+                sling:key="eSTDeliveryDate"
+                sling:message="EST.DELIVERY DATE"/>
+        <invoiceNumber
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="invoiceNumber"
+            sling:message="INVOICE NUMBER"/>
+        <invoices
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="invoices"
+            sling:message="INVOICE(S)"/>
+        <ordered
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="ordered"
+            sling:message="ORDERED"/>
+        <orderNumber
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="orderNumber"
+            sling:message="ORDER NUMBER"/>
+        <orderStatus
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="orderStatus"
+            sling:message="ORDER STATUS"/>
+        <packingList
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="packingList"
+            sling:message="PACKING LIST"/>
+        <paymentType
+                jcr:primaryType="sling:MessageEntry"
+                sling:key="paymentType"
+                sling:message="Payment Type"/>
+        <pendingQty
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="pendingQty"
+            sling:message="PENDING QTY"/>
+        <orderedBy
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="orderedBy"
+            sling:message="ORDERED BY"/>
+        <pODate
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="pODate"
+            sling:message="PO DATE"/>
+        <pONumber
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="pONumber"
+            sling:message="PO NUMBER"/>
+        <quoteReferenceNumber
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="quoteReferenceNumber"
+            sling:message="Quote Reference Number"/>
+        <pricePerUnit
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="pricePerUnit"
+            sling:message="PRICE/UNIT"/>
+        <promotion
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="promotion"
+            sling:message="Promotion"/>
+        <quantity
+                jcr:primaryType="sling:MessageEntry"
+                sling:key="quantity"
+                sling:message="QUANTITY"/>
+        <save
+                jcr:primaryType="sling:MessageEntry"
+                sling:key="save"
+                sling:message="Save"/>
+        <search
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="search"
+            sling:message="Search"/>
+        <shippingAndHandling
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="shippingAndHandling"
+            sling:message="Shipping &amp; Handling"/>
+        <shipTo
+                jcr:primaryType="sling:MessageEntry"
+                sling:key="shipTo"
+                sling:message="SHIP-TO"/>
+        <shipToNumber
+                jcr:primaryType="sling:MessageEntry"
+                sling:key="shipToNumber"
+                sling:message="Ship-To Number"/>
+        <soldTo
+                jcr:primaryType="sling:MessageEntry"
+                sling:key="soldTo"
+                sling:message="SOLD-TO"/>
+        <soldToNumber
+                jcr:primaryType="sling:MessageEntry"
+                sling:key="soldToNumber"
+                sling:message="Sold-To Number"/>
+        <source
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="source"
+            sling:message="SOURCE"/>
+        <subtotal
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="subtotal"
+            sling:message="Subtotal"/>
+        <surcharge
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="surcharge"
+            sling:message="Surcharge"/>
+        <taxes
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="taxes"
+            sling:message="Taxes"/>
+        <total
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="total"
+            sling:message="Total"/>
+        <totalCaps
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="total"
+            sling:message="TOTAL"/>
+        <totalPrice
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="totalPrice"
+            sling:message="TOTAL PRICE"/>
+        <trackingNumber
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="trackingNumber"
+            sling:message="TRACKING NUMBER"/>
+    </orders>
+    <shoppingLists jcr:primaryType="nt:folder">
+        <share
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="share"
+            sling:message="Share"/>
+        <viewDetails
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="viewDetails"
+            sling:message="View Details"/>
+        <send
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="send"
+            sling:message="Send"/>
+        <moreInfo
+                jcr:primaryType="sling:MessageEntry"
+                sling:key="moreInfo"
+                sling:message="More Information"/>
+        <addMoreItems
+                jcr:primaryType="sling:MessageEntry"
+                sling:key="addMoreItems"
+                sling:message="Add More Items"/>
+    </shoppingLists>
+    <promotions jcr:primaryType="nt:folder">
+    	<clone
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="clone"
+            sling:message="CLONE"/>
+        <size
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="size"
+            sling:message="SIZE"/>
+        <status
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="status"
+            sling:message="STATUS"/>
+        <listPrice
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="listPrice"
+            sling:message="List Price: "/>
+        <addToCart
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="addToCart"
+            sling:message="Add to Cart"/>
+        <catNo
+                jcr:primaryType="sling:MessageEntry"
+                sling:key="catNo"
+                sling:message="Cat No"/>
+    </promotions>
+    <searchadmin jcr:primaryType="nt:folder">
+    	<synonym
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="synonym"
+            sling:message="Synonym"/>
+        <stopWords
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="stopWords"
+            sling:message="Stop Words"/>
+        <stopWord
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="stopWord"
+            sling:message="Stop Word"/>
+        <stopWordsCaps
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="stopWordsCaps"
+            sling:message="STOP WORDS"/>
+        <existing
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="existing"
+            sling:message="Existing"/>
+        <addNewStopWord
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="addNewStopWord"
+            sling:message="Add New StopWord"/>
+        <managedMappings
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="managedMappings"
+            sling:message="Managed Mappings"/>
+        <addNewSynonym
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="addNewSynonym"
+            sling:message="Add New Synonym"/>
+        <from
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="from"
+            sling:message="From"/>
+        <to
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="to"
+            sling:message="To"/>
+        <language
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="language"
+            sling:message="Language"/>
+        <english
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="english"
+            sling:message="English"/>
+        <spanish
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="spanish"
+            sling:message="Spanish"/>
+        <french
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="french"
+            sling:message="French"/>
+        <japanese
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="japanese"
+            sling:message="Japanese"/>
+        <delete
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="delete"
+            sling:message="Delete"/>
+        <deleteQuestion
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="deleteQuestion"
+            sling:message="Do you want to delete this Stop Word"/>
+    </searchadmin>
+    <spectrumviewer jcr:primaryType="nt:folder">
+    	<apps.sv.fluor.btn.save_panel
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="apps.sv.fluor.btn.save_panel"
+            sling:message="Save Combination"/>
+    	<apps.sv.fluor.btn.clear_all
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="apps.sv.fluor.btn.clear_all"
+            sling:message="Clear"/>
+    	<apps.sv.fluor.select.select_criteria
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="apps.sv.fluor.select.select_criteria"
+            sling:message="Selection Criteria"/>
+    	<apps.sv.fluor.table.col.name
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="apps.sv.fluor.table.col.name"
+            sling:message="Name"/>
+        <apps.sv.fluor.table.col.shortName
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="apps.sv.fluor.table.col.shortName"
+            sling:message="Short Name"/>
+        <apps.sv.fluor.table.col.fluoroAdded
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="apps.sv.fluor.table.col.fluoroAdded"
+            sling:message="Fluorochromes Added"/>
+        <apps.sv.fluor.table.col.em
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="apps.sv.fluor.table.col.em"
+            sling:message="Em"/>
+        <apps.sv.fluor.table.col.ex
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="apps.sv.fluor.table.col.ex"
+            sling:message="Ex"/>
+        <apps.sv.fluor.table.col.action
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="apps.sv.fluor.table.col.action"
+            sling:message="Action"/>
+        <apps.sv.inst_conf.or
+			jcr:primaryType="sling:MessageEntry"
+			sling:key="apps.sv.inst_conf.or"
+			sling:message="OR"/>
+        <apps.sv.inst_conf.btn.add_laser_filter
+			jcr:primaryType="sling:MessageEntry"
+			sling:key="apps.sv.inst_conf.btn.add_laser_filter"
+			sling:message="Add Laser(s) &amp; Filter(s)"/>
+        <apps.sv.inst_conf.btn.save_configuration
+			jcr:primaryType="sling:MessageEntry"
+			sling:key="apps.sv.inst_conf.btn.save_configuration"
+			sling:message="Save Configuration"/>
+        <apps.sv.inst_conf.btn.clear_all
+			jcr:primaryType="sling:MessageEntry"
+			sling:key="apps.sv.inst_conf.btn.clear_all"
+			sling:message="Clear"/>
+        <apps.sv.inst_conf.table.hr.btn.delete_laser
+			jcr:primaryType="sling:MessageEntry"
+			sling:key="apps.sv.inst_conf.table.hr.btn.delete_laser"
+			sling:message="Delete Laser"/>
+        <apps.sv.inst_conf.table.hr.laser
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="apps.sv.inst_conf.table.hr.laser"
+            sling:message="Laser"/>
+        <apps.sv.inst_conf.table.hr.wavelength
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="apps.sv.inst_conf.table.hr.wavelength"
+            sling:message="Wavelength (nm)"/>
+        <apps.sv.inst_conf.table.hr.correctRangeMsg
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="apps.sv.inst_conf.table.hr.correctRangeMsg"
+            sling:message="Correct Range: {{minRange}} - {{maxRange}}"/>
+        <apps.sv.inst_conf.table.hr.power
+			jcr:primaryType="sling:MessageEntry"
+			sling:key="apps.sv.inst_conf.table.hr.power"
+			sling:message="Power (mw)"/>
+    	<apps.sv.inst_conf.table.col.primary_filter
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="apps.sv.inst_conf.table.col.primary_filter"
+            sling:message="Primary Filter"/>
+        <apps.sv.inst_conf.table.col.type
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="apps.sv.inst_conf.table.col.type"
+            sling:message="Type"/>
+        <apps.sv.inst_conf.table.col.type.bp
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="apps.sv.inst_conf.table.col.type.bp"
+            sling:message="BP"/>
+        <apps.sv.inst_conf.table.col.type.lp
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="apps.sv.inst_conf.table.col.type.lp"
+            sling:message="LP"/>
+        <apps.sv.inst_conf.table.col.type.sp
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="apps.sv.inst_conf.table.col.type.sp"
+            sling:message="SP"/>
+        <apps.sv.inst_conf.table.col.type.none
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="apps.sv.inst_conf.table.col.type.none"
+            sling:message="None"/>
+        <apps.sv.inst_conf.table.col.wavelength
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="apps.sv.inst_conf.table.col.wavelength"
+            sling:message="Wavelength (nm)"/>
+        <apps.sv.inst_conf.table.col.power
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="apps.sv.inst_conf.table.col.power"
+            sling:message="Power (mw)"/>
+        <apps.sv.inst_conf.table.col.bandwidth
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="apps.sv.inst_conf.table.col.bandwidth"
+            sling:message="Bandwidth (nm)"/>
+        <apps.sv.inst_conf.table.col.secondary_filter
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="apps.sv.inst_conf.table.col.secondary_filter"
+            sling:message="Secondary Filter"/>
+        <apps.sv.inst_conf.table.col.show_all
+			jcr:primaryType="sling:MessageEntry"
+			sling:key="apps.sv.inst_conf.table.col.show_all"
+			sling:message="Show"/>
+        <apps.sv.inst_conf.table.col.actions
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="apps.sv.inst_conf.table.col.actions"
+            sling:message="Actions"/>
+        <apps.sv.inst_conf.table.btn.add_detector
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="apps.sv.inst_conf.table.btn.add_detector"
+            sling:message="Add Detector"/>
+        <apps.sv.inst_conf.table.btn.add_laser
+			jcr:primaryType="sling:MessageEntry"
+			sling:key="apps.sv.inst_conf.table.btn.add_laser"
+			sling:message="Add Laser"/>
+        <apps.sv.graph.select.single_graph_view
+			jcr:primaryType="sling:MessageEntry"
+			sling:key="apps.sv.graph.select.single_graph_view"
+			sling:message="Combined Ex/Em Graph"/>
+        <apps.sv.graph.select.stacked_graph_view
+			jcr:primaryType="sling:MessageEntry"
+			sling:key="apps.sv.graph.select.stacked_graph_view"
+			sling:message="Stacked Ex/Em Graphs"/>
+        <apps.sv.graph.select.spectral_signature_graph
+			jcr:primaryType="sling:MessageEntry"
+			sling:key="apps.sv.graph.select.spectral_signature_graph"
+			sling:message="Spectral Signature Graph"/>
+        <apps.sv.graph.select.seS6InstDataMsg
+			jcr:primaryType="sling:MessageEntry"
+			sling:key="apps.sv.graph.select.seS6InstDataMsg"
+			sling:message="Spectral signatures were collected using the BD FACSymphony™ A5 SE Analyzer"/>
+		<apps.sv.graph.select.a8InstDataMsg
+			jcr:primaryType="sling:MessageEntry"
+			sling:key="apps.sv.graph.select.a8InstDataMsg"
+			sling:message="Spectral signatures were collected using the BD FACSDiscover™ S8 Sorter"/>
+		<apps.sv.graph.select.noFilterDisplayError
+			jcr:primaryType="sling:MessageEntry"
+			sling:key="apps.sv.graph.select.noFilterDisplayError"
+			sling:message="The values entered can’t produce a filter"/>
+        <apps.sv.graph.select.heat_map_graph_view
+			jcr:primaryType="sling:MessageEntry"
+			sling:key="apps.sv.graph.select.heat_map_graph_view"
+			sling:message="Heatmap Graph View"/>
+       <apps.sv.graph.select.heat_map
+			jcr:primaryType="sling:MessageEntry"
+			sling:key="apps.sv.graph.select.heat_map"
+			sling:message="Spectral Signature Heat Map"/>
+       <apps.sv.graph.heat_map.show_details_on_hover
+			jcr:primaryType="sling:MessageEntry"
+			sling:key="apps.sv.graph.heat_map.show_details_on_hover"
+			sling:message="Enable Mouseover Details"/>
+       <apps.sv.graph.heat_map.detector
+                jcr:primaryType="sling:MessageEntry"
+                sling:key="apps.sv.graph.heat_map.detector"
+                sling:message="Detector"/>
+
+		<apps.sv.graph.select.fluorochrome_info 
+			jcr:primaryType="sling:MessageEntry"
+			sling:key="apps.sv.graph.select.fluorochrome_info"
+			sling:message="Fluorochrome Info"/>
+		<apps.sv.graph.select.fluorochrome 
+			jcr:primaryType="sling:MessageEntry"
+			sling:key="apps.sv.graph.select.fluorochrome"
+			sling:message="Fluorochrome"/>
+		<apps.sv.graph.select.excitation_max 
+			jcr:primaryType="sling:MessageEntry"
+			sling:key="apps.sv.graph.select.excitation_max"
+			sling:message="Excitation Max"/>
+		<apps.sv.graph.select.emission_max 
+			jcr:primaryType="sling:MessageEntry"
+			sling:key="apps.sv.graph.select.emission_max"
+			sling:message="Emission Max"/>
+		<apps.sv.graph.select.nm
+			jcr:primaryType="sling:MessageEntry"
+			sling:key="apps.sv.graph.select.nm"
+			sling:message="nm"/>
+		<apps.sv.graph.select.primary_laser
+			jcr:primaryType="sling:MessageEntry"
+			sling:key="apps.sv.graph.select.primary_laser"
+			sling:message="Primary Laser"/>
+		<apps.sv.graph.select.common_filters
+			jcr:primaryType="sling:MessageEntry"
+			sling:key="apps.sv.graph.select.common_filters"
+			sling:message="Common Filter(s)"/>
+		<apps.sv.graph.select.available_conjugates 
+			jcr:primaryType="sling:MessageEntry"
+			sling:key="apps.sv.graph.select.available_conjugates"
+			sling:message="Available Products"/>
+		<apps.sv.graph.select.colon 
+			jcr:primaryType="sling:MessageEntry"
+			sling:key="apps.sv.graph.select.colon"
+			sling:message=":"/>
+		<apps.sv.graph.select.export 
+			jcr:primaryType="sling:MessageEntry"
+			sling:key="apps.sv.graph.select.export"
+			sling:message="Export"/>
+		<apps.sv.graph.select.normalise_em_to_laser_ex
+			jcr:primaryType="sling:MessageEntry"
+			sling:key="apps.sv.graph.select.normalise_em_to_laser_ex"
+			sling:message="Normalize Emission to Laser Excitation"/>
+		<apps.sv.graph.select.alt_color_scheme
+			jcr:primaryType="sling:MessageEntry"
+			sling:key="apps.sv.graph.select.alt_color_scheme"
+			sling:message="Alternate Color Scheme"/>		
+		<apps.sv.graph.select.show_filled_filters 
+			jcr:primaryType="sling:MessageEntry"
+			sling:key="apps.sv.graph.select.show_filled_filters"
+			sling:message="Use Filled Filter Windows"/>
+		<apps.sv.graph.select.use_filled_em_curves 
+			jcr:primaryType="sling:MessageEntry"
+			sling:key="apps.sv.graph.select.use_filled_em_curves"
+			sling:message="Use Filled Emission Curves"/>
+		<apps.sv.graph.select.show_grid 
+			jcr:primaryType="sling:MessageEntry"
+			sling:key="apps.sv.graph.select.show_grid"
+			sling:message="Show Background Grid"/>
+		<apps.sv.graph.select.show_labels
+			jcr:primaryType="sling:MessageEntry"
+			sling:key="apps.sv.graph.select.show_labels"
+			sling:message="Show Fluorochrome Labels"/>
+		<apps.sv.graph.select.show_ex 
+			jcr:primaryType="sling:MessageEntry"
+			sling:key="apps.sv.graph.select.show_ex"
+			sling:message="Show Ex"/>
+		<apps.sv.graph.menu.expand_graph
+			jcr:primaryType="sling:MessageEntry"
+			sling:key="apps.sv.graph.menu.expand_graph"
+			sling:message="Graph"/>
+		<apps.sv.graph.menu.import
+			jcr:primaryType="sling:MessageEntry"
+			sling:key="apps.sv.graph.menu.import"
+			sling:message="Import"/>
+		<apps.sv.graph.menu.export_and_import
+			jcr:primaryType="sling:MessageEntry"
+			sling:key="apps.sv.graph.menu.export_and_import"
+			sling:message="Export and Import"/>
+		<apps.sv.graph.menu.load_instrument_and_fluorochrome
+			jcr:primaryType="sling:MessageEntry"
+			sling:key="apps.sv.graph.menu.load_instrument_and_fluorochrome"
+			sling:message="Load"/>
+		<apps.sv.graph.menu.delete_instrument_and_fluorochrome
+			jcr:primaryType="sling:MessageEntry"
+			sling:key="apps.sv.graph.menu.delete_instrument_and_fluorochrome"
+			sling:message="Delete"/>
+		<apps.sv.graph.menu.export_fluorochrome
+			jcr:primaryType="sling:MessageEntry"
+			sling:key="apps.sv.graph.menu.export_fluorochrome"
+			sling:message="Fluorochrome Combination"/>
+		<apps.sv.graph.menu.export_instrument_configuration
+			jcr:primaryType="sling:MessageEntry"
+			sling:key="apps.sv.graph.menu.export_instrument_configuration"
+			sling:message="Instrument Configuration"/>
+		<apps.sv.graph.menu.show_laser_Filter
+			jcr:primaryType="sling:MessageEntry"
+			sling:key="apps.sv.graph.menu.show_laser_Filter"
+			sling:message="Show Laser and Filter Labels on Hover"/>
+		<apps.sv.graph.menu.highlight_spectra_on_hover
+			jcr:primaryType="sling:MessageEntry"
+			sling:key="apps.sv.graph.menu.highlight_spectra_on_hover"
+			sling:message="Enable Mouseover Details"/>
+		<apps.sv.graph.menu.resolve_filter_overlap
+			jcr:primaryType="sling:MessageEntry"
+			sling:key="apps.sv.graph.menu.resolve_filter_overlap"
+			sling:message="Resolve Filter Overlap"/>
+		<apps.sv.graph.menu.show_fluorochrome_name
+			jcr:primaryType="sling:MessageEntry"
+			sling:key="apps.sv.graph.menu.show_fluorochrome_name"
+			sling:message="Show Fluorochrome name on Hover"/>
+		<apps.sv.fluor.select.ex_max
+			jcr:primaryType="sling:MessageEntry"
+			sling:key="apps.sv.fluor.select.ex_max"
+			sling:message="Ex Max"/>
+		<apps.sv.fluor.select.em_max
+			jcr:primaryType="sling:MessageEntry"
+			sling:key="apps.sv.fluor.select.em_max"
+			sling:message="Em Max"/>
+		<apps.sv.fluor.select.add
+			jcr:primaryType="sling:MessageEntry"
+			sling:key="apps.sv.fluor.select.add"
+			sling:message="Add"/>
+		<apps.sv.fluor.select.spectral_signature
+			jcr:primaryType="sling:MessageEntry"
+			sling:key="apps.sv.fluor.select.spectral_signature"
+			sling:message="Spectral signature data not available"/>
+		<apps.sv.fluor.select.list_row_hover_high
+			jcr:primaryType="sling:MessageEntry"
+			sling:key="apps.sv.fluor.select.list_row_hover_high"
+			sling:message="Click to highlight the corresponding curve"/>
+		<apps.sv.fluor.select.list_row_hover_unhigh
+			jcr:primaryType="sling:MessageEntry"
+			sling:key="apps.sv.fluor.select.list_row_hover_unhigh"
+			sling:message="Click to remove highlight from corresponding curve"/>
+		<apps.sv.error.invalid_entry
+			jcr:primaryType="sling:MessageEntry"
+			sling:key="apps.sv.error.invalid_entry"
+			sling:message="Invalid Entry"/>
+		<apps.sv.error.error
+			jcr:primaryType="sling:MessageEntry"
+			sling:key="apps.sv.error.error"
+			sling:message="Error"/>
+		<apps.sv.error.required
+			jcr:primaryType="sling:MessageEntry"
+			sling:key="apps.sv.error.required"
+			sling:message="Required"/>
+		<apps.sv.form.field.optional
+			jcr:primaryType="sling:MessageEntry"
+			sling:key="apps.sv.form.field.optional"
+			sling:message="optional"/>
+		<apps.sv.form.field.choose_file
+			jcr:primaryType="sling:MessageEntry"
+			sling:key="apps.sv.form.field.choose_file"
+			sling:message="Choose file"/>
+		<apps.sv.form.field.import_csv
+			jcr:primaryType="sling:MessageEntry"
+			sling:key="apps.sv.form.field.import_csv"
+			sling:message="Import CSV"/>
+		<apps.sv.form.field.download_jpg
+			jcr:primaryType="sling:MessageEntry"
+			sling:key="apps.sv.form.field.download_jpg"
+			sling:message="JPG"/>
+		<apps.sv.form.field.download_png
+			jcr:primaryType="sling:MessageEntry"
+			sling:key="apps.sv.form.field.download_png"
+			sling:message="PNG"/>
+		<apps.sv.form.field.download_jpeg
+			jcr:primaryType="sling:MessageEntry"
+			sling:key="apps.sv.form.field.download_jpeg"
+			sling:message="JPEG"/>
+		<apps.sv.form.field.download_tiff
+			jcr:primaryType="sling:MessageEntry"
+			sling:key="apps.sv.form.field.download_tiff"
+			sling:message="TIFF"/>
+		<apps.sv.mobile.inst_conf.show_all_detectors
+			jcr:primaryType="sling:MessageEntry"
+			sling:key="apps.sv.mobile.inst_conf.show_all_detectors"
+			sling:message="Show all detectors"/>
+		<apps.sv.mobile.inst_conf.clear_all
+			jcr:primaryType="sling:MessageEntry"
+			sling:key="apps.sv.mobile.inst_conf.clear_all"
+			sling:message="Clear all"/>
+		<apps.sv.mobile.inst_conf.show_hide
+			jcr:primaryType="sling:MessageEntry"
+			sling:key="apps.sv.mobile.inst_conf.show_hide"
+			sling:message="Show/Hide"/>
+        <apps.sv.mobile.description.show_more
+                jcr:primaryType="sling:MessageEntry"
+                sling:key="apps.sv.mobile.description.show_more"
+                sling:message="Show More"/>
+        <apps.sv.mobile.description.show_less
+                jcr:primaryType="sling:MessageEntry"
+                sling:key="apps.sv.mobile.description.show_less"
+                sling:message="Show Less"/>
+
+	</spectrumviewer>
+</jcr:root>

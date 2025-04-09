@@ -1,0 +1,35 @@
+<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html"
+     data-sly-call="${templates.placeholder @ isEmpty = true}"></sly>
+
+<sly data-sly-use.searchAdminPageModel="com.bdb.aem.core.models.SearchAdminPageModel">
+</sly>
+
+<script>
+        if (typeof window.AEM_DATA.labels === 'undefined') {
+            window.AEM_DATA.labels = {};
+        }
+        window.AEM_DATA.labels.synonymScreenLabels = ${ searchAdminPageModel.synonymScreenLabels || '{}' @context='scriptComment' };
+        window.AEM_DATA.labels.synonymScreenLabels.languageList = ${ searchAdminPageModel.languageList || '{}' @context='scriptComment' };
+        
+        if (typeof window.AEM_DATA.config === 'undefined') {
+            window.AEM_DATA.config = {};
+        }
+        window.AEM_DATA.config.synonymScreenConfig = {
+            requestPayload: {
+                getSynonymResults: ${searchAdminPageModel.getSynonymResults @context='scriptComment' },
+                deleteSynonym: ${searchAdminPageModel.deleteSynonym @context='scriptComment' },
+                createSynonym: ${searchAdminPageModel.createSynonym @context='scriptComment' },
+                getStopWordResults: ${searchAdminPageModel.getStopWordResults @context='scriptComment'},
+                createStopWord: ${searchAdminPageModel.createStopWord @context='scriptComment' },
+                removeSelectedStopWord: ${searchAdminPageModel.removeSelectedStopWord @context='scriptComment'},
+                reloadSolrServer: ${searchAdminPageModel.reloadSolrServer @context='scriptComment'}
+            }
+        }
+        
+    </script>
+
+<div class="container">
+    <bd-synonym-screen labels="synonymScreenLabels" config="synonymScreenConfig">
+    </bd-synonym-screen>
+</div>
+

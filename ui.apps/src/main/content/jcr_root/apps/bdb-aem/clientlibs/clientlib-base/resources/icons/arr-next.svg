@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="37px" height="55px" viewBox="0 0 37 55" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>EB5D4B72-FE2C-499E-95CF-866DA1ADEB00</title>
+    <defs>
+        <polyline id="path-1" points="1283 28 1301.5 9 1320 28"></polyline>
+        <filter x="-38.7%" y="-60.5%" width="177.4%" height="246.5%" filterUnits="objectBoundingBox" id="filter-2">
+            <feMorphology radius="2" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="0" dy="2" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feMorphology radius="2" operator="erode" in="SourceAlpha" result="shadowInner"></feMorphology>
+            <feOffset dx="0" dy="2" in="shadowInner" result="shadowInner"></feOffset>
+            <feComposite in="shadowOffsetOuter1" in2="shadowInner" operator="out" result="shadowOffsetOuter1"></feComposite>
+            <feGaussianBlur stdDeviation="3.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.734975962 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Instrument-Overview---D" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.683296131" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Instrument-Overview" transform="translate(-1345.000000, -1543.000000)">
+            <g id="Features" transform="translate(0.000000, 1217.000000)">
+                <g id="Group-23" transform="translate(64.000000, 335.000000)">
+                    <g id="Path-2-Copy-5" transform="translate(1301.500000, 18.500000) rotate(90.000000) translate(-1301.500000, -18.500000) ">
+                        <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                        <use stroke="#FFFFFF" stroke-width="4" xlink:href="#path-1"></use>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

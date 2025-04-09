@@ -1,0 +1,7 @@
+{
+  "mapping": [
+    "/content/dam/bdb/products/global/reagents/flow-cytometry-reagents/research-reagents/single-color-antibodies-ruo/\\w+xxx/\\w+xx/([\\w\\-]+)->/content/dam/bdb/products/global/reagents/flow-cytometry-reagents/research-reagents/single-color-antibodies-ruo/$1",
+    "/content/commerce/products/bdb/products/reagents/flow-cytometry-reagents/research-reagents/single-color-antibodies-ruo/\\w+xxx/\\w+xx/([\\w\\-]+)->/content/commerce/products/bdb/products/reagents/flow-cytometry-reagents/research-reagents/single-color-antibodies-ruo/$1",
+    "/content/cq:tags/bdb/products/reagents/flow-cytometry-reagents/research-reagents/single-color-antibodies-ruo/\\w+xxx/\\w+xx/([\\w\\-]+)->/content/cq:tags/bdb/products/reagents/flow-cytometry-reagents/research-reagents/single-color-antibodies-ruo/$1"
+  ]
+}

@@ -1,0 +1,29 @@
+<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html" />
+<sly data-sly-use.newsLetterRegistrationModel="com.bdb.aem.core.models.NewsLetterRegistrationModel"></sly>
+<article class="news-letter app-js__news-letter">
+   <div class="d-flex flex-column flex-sm-row news-letter__container ${newsLetterRegistrationModel.newsLetterRegImagePath ? '' : 'no-img'}">
+      <div data-sly-test="${newsLetterRegistrationModel.newsLetterRegImagePath}" class="news-letter__img-container">
+         <a href="${newsLetterRegistrationModel.imageLinkUrl}" target="${properties.openNewImageLinkTab == 'true' ? '_blank' : '_self'}">
+            <sly data-sly-test="${newsLetterRegistrationModel.imageLinkUrl}">
+            <img src="${newsLetterRegistrationModel.newsLetterRegImagePath}" alt="${properties.newsLetterRegImageAltTxt}">
+         </a>
+         <sly data-sly-test="${!newsLetterRegistrationModel.imageLinkUrl}">
+         <img src="${newsLetterRegistrationModel.newsLetterRegImagePath}">
+      </div>
+      <div class="news-letter__main-content">
+         <div data-sly-test="${properties.newsLetterRegHeading}" class="news-letter__heading">${properties.newsLetterRegHeading}</div>
+		 <div data-sly-test="${properties.newsLetterRegDesc}" class="news-letter__desc">${properties.newsLetterRegDesc @context='html'}</div>
+         <sly data-sly-test="${properties.newsLetterRegLatestArticle}">
+            <div class="news-letter__article">
+               <div class="news-letter__article-heading">${properties.newsLetterRegLatestHeading @context='html'}</div>
+               <div class="news-letter__article-date">${properties.newsLetterRegLatestDate}</div>
+               <a href="${newsLetterRegistrationModel.newsLetterRegLatestArticleLink}" class="news-letter__article-link">${properties.newsLetterRegLatestArticle @context='html'}</a>
+            </div>
+         </sly>
+         <sly data-sly-test="${properties.newsLetterRegViewAllTxt}">
+            <a href="${newsLetterRegistrationModel.newsLetterRegViewAllUrl}" class="news-letter__article-cta-link">${properties.newsLetterRegViewAllTxt @context='html'}</a>
+         </sly>
+         <sly data-sly-include="marketoForm.html"/>
+      </div>
+   </div>
+</article>

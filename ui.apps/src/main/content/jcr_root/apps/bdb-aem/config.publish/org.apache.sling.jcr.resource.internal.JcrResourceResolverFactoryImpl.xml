@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          jcr:primaryType="sling:OsgiConfig"
+          resource.resolver.mapping="[/content/bdb/country-selector:/country-selector,/content/bdb/([a-z]{2\,5})/([a-z]{2})/([a-z]{2}-[a-z]{2})&lt;/$3,/content/bdb/([a-z]{2\,5})/([a-z]{2})/([a-z]{2}-[a-z]{2})/(.*)&lt;/$3/$4,/content/bdb/([a-z]{2\,5})/([a-z]{2})/([a-z]{2}-[a-z]{2})/products/(.*)/pdp.([^/]+)&lt;/$3/products/$4/$5]"/>

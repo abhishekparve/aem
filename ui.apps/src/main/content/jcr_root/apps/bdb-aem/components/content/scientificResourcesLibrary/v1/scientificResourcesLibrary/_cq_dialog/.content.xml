@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Scientific Resources Library"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/container">
+        <items jcr:primaryType="nt:unstructured">
+            <tabs
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/tabs"
+                maximized="{Boolean}false">
+                <items jcr:primaryType="nt:unstructured">
+                    <scientificLibraryMain
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Scientific Resources Library"
+                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <column
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <headerLabel
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldDescription="Author the Scientific Resources Header"
+                                        fieldLabel="Header Title"
+                                        name="./headerLabel"
+                                        required="{Boolean}true"/>
+                                    <searchPlaceholder
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldDescription="Author the placeholder text in the Search Bar"
+                                        fieldLabel="Search Placeholder Text"
+                                        name="./searchPlaceholder"
+                                        required="{Boolean}true"/>
+                                    <filterByCategoryLabel
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldDescription="Author the Filter by Category Label"
+                                        fieldLabel="Filter By Category Label"
+                                        name="./filterByCategoryLabel"
+                                        required="{Boolean}true"/>
+                                    <clearAllLabel
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldDescription="Author the Clear All Filters Label"
+                                        fieldLabel="Clear All Label"
+                                        name="./clearAllLabel"
+                                        required="{Boolean}true"/>
+                                    <closeProductIcon
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldLabel="Close Product Icon"
+                                        name="./closeProductIcon"
+                                        required="{Boolean}true"/>
+                                    <upArrowImage
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                                        fieldDescription="Author Path for Up Arrow Icon"
+                                        fieldLabel="Up Arrow Icon"
+                                        name="./upArrowImage"
+                                        required="{Boolean}true"
+                                        rootPath="/content/dam/bdb"/>
+                                    <upArrowAltText
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldLabel="Up Arrow Icon Alt Text"
+                                        name="./upArrowAltText"
+                                        required="{Boolean}true"/>
+                                    <downArrowImage
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                                        fieldDescription="Author Path for Down Arrow Icon"
+                                        fieldLabel="Down Arrow Icon"
+                                        name="./downArrowImage"
+                                        required="{Boolean}true"
+                                        rootPath="/content/dam/bdb"/>
+                                    <downArrowMobile
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                                        fieldDescription="Author Down Arrow Icon Path for Mobile Devices"
+                                        fieldLabel="Down Arrow Icon - Mobile"
+                                        name="./downArrowMobile"
+                                        required="{Boolean}true"
+                                        rootPath="/content/dam/bdb"/>
+                                    <downArrowAltText
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldLabel="Down Arrow Icon Alt Text"
+                                        name="./downArrowAltText"
+                                        required="{Boolean}true"/>
+                                    <closeIcon
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                                        fieldLabel="Close Icon Path"
+                                        name="./closeIcon"
+                                        required="{Boolean}true"
+                                        rootPath="/content/dam/bdb"/>
+                                    <closeIconText
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldLabel="Close Icon Alt Text"
+                                        name="./closeIconText"
+                                        required="{Boolean}true"/>
+                                    <cartAltText
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldLabel="Cart Icon Alt Text"
+                                        name="./cartAltText"
+                                        required="{Boolean}true"/>
+                                    <statusItemsFieldSet
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Status"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <allLabel
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="All Label"
+                                                name="./allLabel"
+                                                required="{Boolean}true"/>
+                                            <upcomingLabel
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Upcoming Label"
+                                                name="./upcomingLabel"
+                                                required="{Boolean}true"/>
+                                            <currentLabel
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Current Label"
+                                                name="./currentLabel"
+                                                required="{Boolean}true"/>
+                                            <pastLabel
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Past Label"
+                                                name="./pastLabel"
+                                                required="{Boolean}true"/>
+                                        </items>
+                                    </statusItemsFieldSet>
+                                    <dropdownItemsFieldSet
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Dropdown for Labels and Values"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <dropdownItemsMultifield
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                                composite="{Boolean}true"
+                                                fieldDescription="Author Labels and Numeric Values for the Labels"
+                                                fieldLabel="Author Labels and Values">
+                                                <field
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/container"
+                                                    name="./dropdownItemsMultifield">
+                                                    <items jcr:primaryType="nt:unstructured">
+                                                        <label
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                            fieldDescription="Author Label for the Dropdown"
+                                                            fieldLabel="Label"
+                                                            name="./label"
+                                                            required="{Boolean}true"/>
+                                                        <value
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                            fieldDescription="Author the Numeric Value for the Label in the Dropdown"
+                                                            fieldLabel="Value"
+                                                            name="./value"
+                                                            required="{Boolean}true"/>
+                                                    </items>
+                                                </field>
+                                            </dropdownItemsMultifield>
+                                        </items>
+                                    </dropdownItemsFieldSet>
+                                    <showLabel
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldLabel="Show Label"
+                                        name="./showLabel"
+                                        required="{Boolean}true"/>
+                                    <pdfIcon
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                                        fieldDescription="Author Path for PDF Icon"
+                                        fieldLabel="PDF Icon"
+                                        name="./pdfIcon"
+                                        required="{Boolean}true"
+                                        rootPath="/content/dam/bdb"/>
+                                    <pdfAltText
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldDescription="PDF Icon Alt Text"
+                                        fieldLabel="PDF Icon Alt Text"
+                                        name="./pdfAltTxt"
+                                        required="{Boolean}true"/>
+                                    <videoIcon
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                                        fieldDescription="Author Path for Video Icon"
+                                        fieldLabel="Video Icon"
+                                        name="./videoIcon"
+                                        required="{Boolean}true"
+                                        rootPath="/content/dam/bdb"/>
+                                    <videoAltText
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldDescription="Video Icon Alt Text"
+                                        fieldLabel="Video Icon Alt Text"
+                                        name="./videoAltText"
+                                        required="{Boolean}true"/>
+                                    <imgIcon
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                                        fieldDescription="Author Path for Image Icon"
+                                        fieldLabel="Image Icon"
+                                        name="./imgIcon"
+                                        required="{Boolean}true"
+                                        rootPath="/content/dam/bdb"/>
+                                    <ImgAltText
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldDescription="Image Icon Alt Text "
+                                        fieldLabel="Image Icon Alt Text"
+                                        name="./imgAltText"
+                                        required="{Boolean}true"/>
+                                    <downloadIcon
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                                        fieldDescription="Author Path for Download Icon"
+                                        fieldLabel="Download Icon"
+                                        name="./downloadIcon"
+                                        required="{Boolean}true"
+                                        rootPath="/content/dam/bdb"/>
+									<noResultIcon
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                                        fieldDescription="Author Path for No Result Icon"
+                                        fieldLabel="No Result Icon"
+                                        name="./emptyIcon"
+                                        required="{Boolean}true"
+                                        rootPath="/content/dam/bdb"/>
+                                    <noResultAltText
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldDescription="No Result Icon Alt Text"
+                                        fieldLabel="No Result Icon Alt Text"
+                                        name="./emptyAltText"
+                                        required="{Boolean}true"/>
+                                    <noResultHeading
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldDescription="Author the No Result Heading"
+                                        fieldLabel="No Result Heading"
+                                        name="./emptyHeading"
+                                        required="{Boolean}true"/>
+                                    <noResultSubHeading
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldDescription="Author the No Result Sub-Heading"
+                                        fieldLabel="No Result Sub-Heading"
+                                        name="./emptySubHeading"
+                                        required="{Boolean}true"/>
+                                </items>
+                            </column>
+                        </items>
+                    </scientificLibraryMain>
+                    <resourceTypesTab
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Resource Types"
+                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <column
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <nameLabel
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldLabel="Name"
+                                        name="./nameLabel"
+                                        required="{Boolean}true"/>
+                                    <resourceTypeFieldSet
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Resource Types"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <resourceTypesMultiField
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                                composite="{Boolean}true"
+                                                fieldDescription="Resource Types Name and Code"
+                                                fieldLabel="Author Resource Types Name and Code">
+                                                <field
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/container"
+                                                    name="./resourceTypesMultiField">
+                                                    <items jcr:primaryType="nt:unstructured">
+                                                        <resourceName
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                            fieldLabel="Name"
+                                                            name="./resourceName"
+                                                            required="{Boolean}true"/>
+                                                        <resourceCode
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                            fieldLabel="Code"
+                                                            name="./resourceCode"
+                                                            required="{Boolean}true"/>
+                                                    </items>
+                                                </field>
+                                            </resourceTypesMultiField>
+                                        </items>
+                                    </resourceTypeFieldSet>
+                                </items>
+                            </column>
+                        </items>
+                    </resourceTypesTab>
+                </items>
+            </tabs>
+        </items>
+    </content>
+</jcr:root>

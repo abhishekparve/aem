@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="120px" height="120px" viewBox="0 0 120 120" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>11900DD0-A370-4776-8B58-25F1E71F0751</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Shopping-List---with-no-items" transform="translate(-846.000000, -579.000000)">
+            <g id="Group-9" transform="translate(506.000000, 272.000000)">
+                <g id="Group-2" transform="translate(340.000000, 307.000000)">
+                    <circle id="Oval" fill="#E7EBF1" cx="60" cy="60" r="60"></circle>
+                    <g id="Group-6" transform="translate(33.372781, 19.881657)" stroke-width="1.47370771">
+                        <g id="Group-5" transform="translate(8.105392, 14.763872)" fill="#EEEEEE" stroke="#979797">
+                            <rect id="Rectangle" transform="translate(22.493721, 31.186192) scale(-1, 1) translate(-22.493721, -31.186192) " x="0" y="0" width="44.9874425" height="62.3723832" rx="1.47370771"></rect>
+                        </g>
+                        <g id="Group-4" transform="translate(0.521008, 0.000779)">
+                            <rect id="Rectangle" stroke="#979797" fill="#FFFFFF" x="0" y="7.98185462" width="44.9874425" height="62.3723832" rx="1.47370771"></rect>
+                            <rect id="Rectangle" stroke="#979797" fill="#EEEEEE" x="11.6289532" y="5.04537174" width="21.8476075" height="5.1678163" rx="0.736853857"></rect>
+                            <path d="M22.552757,0 C21.3177473,0 20.2043445,0.743951928 19.7317267,1.88495216 C19.259109,3.0259524 19.5203501,4.33930048 20.3936339,5.21258426 C21.2669177,6.08586803 22.5802658,6.34710921 23.721266,5.87449143 C24.8622662,5.40187366 25.6062182,4.28847092 25.6062182,3.05346116 C25.6062182,1.36708113 24.239137,0 22.552757,0 L22.552757,0 Z" id="Path" stroke="#979797" fill="#FFFFFF" fill-rule="nonzero"></path>
+                            <line x1="8.68598143" y1="22.4963739" x2="36.686428" y2="22.4963739" id="Line" stroke="#999999" stroke-linecap="round"></line>
+                            <line x1="8.68598143" y1="43.3161795" x2="36.686428" y2="43.3161795" id="Line-Copy-2" stroke="#999999" stroke-linecap="round"></line>
+                            <line x1="8.68598143" y1="38.1582025" x2="36.686428" y2="38.1582025" id="Line-Copy" stroke="#999999" stroke-linecap="round"></line>
+                            <line x1="8.68598143" y1="53.6321335" x2="36.686428" y2="53.6321335" id="Line-Copy-2" stroke="#999999" stroke-linecap="round"></line>
+                            <line x1="8.68598143" y1="48.4741565" x2="36.686428" y2="48.4741565" id="Line-Copy" stroke="#999999" stroke-linecap="round"></line>
+                            <line x1="8.68598143" y1="58.7901105" x2="36.686428" y2="58.7901105" id="Line-Copy-2" stroke="#999999" stroke-linecap="round"></line>
+                            <line x1="8.68598143" y1="27.6543509" x2="36.686428" y2="27.6543509" id="Line" stroke="#999999" stroke-linecap="round"></line>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

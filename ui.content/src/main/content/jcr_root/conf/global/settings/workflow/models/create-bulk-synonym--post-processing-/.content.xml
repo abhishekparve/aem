@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:designPath="/libs/settings/wcm/designs/default"
+        cq:lastModified="{Date}2023-03-03T13:18:33.332Z"
+        cq:lastModifiedBy="Abhishek.Madhukar.Parve@bd.com"
+        cq:tags="[workflow:dam,workflow:wcm]"
+        cq:template="/libs/cq/workflow/templates/model"
+        jcr:description="The workflow is used to update the bulk synonyms/hypernyms on Solr "
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Create Bulk Synonym (Post Processing)"
+        sling:resourceType="cq/workflow/components/pages/model"
+        lastSynced="{Date}2023-03-03T13:18:38.011Z"
+        transient="true">
+        <flow
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="foundation/components/parsys">
+            <process
+                jcr:created="{Date}2023-03-03T13:13:56.692Z"
+                jcr:createdBy="Abhishek.Madhukar.Parve@bd.com"
+                jcr:lastModified="{Date}2023-03-03T13:14:46.680Z"
+                jcr:lastModifiedBy="Abhishek.Madhukar.Parve@bd.com"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Create Bulk Synonym"
+                sling:resourceType="cq/workflow/components/model/process">
+                <metaData
+                    jcr:primaryType="nt:unstructured"
+                    PROCESS="com.bdb.aem.core.workflows.CreateBulkSynonymWorkflow"
+                    PROCESS_AUTO_ADVANCE="true"/>
+            </process>
+            <damupdateassetworkfl
+                jcr:created="{Date}2023-03-03T13:13:30.979Z"
+                jcr:createdBy="Abhishek.Madhukar.Parve@bd.com"
+                jcr:description="This process will send DamEvent.Type.DAM_UPDATE_ASSET_WORKFLOW_COMPLETED event when DAM update asset workflow is completed"
+                jcr:lastModified="{Date}2023-03-03T13:13:30.979Z"
+                jcr:lastModifiedBy="Abhishek.Madhukar.Parve@bd.com"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="DAM Update Asset Workflow Completed"
+                sling:resourceType="dam/components/workflow/damupdateassetworkflowcompletedprocess">
+                <metaData
+                    jcr:primaryType="nt:unstructured"
+                    PROCESS="com.day.cq.dam.core.impl.process.DamUpdateAssetWorkflowCompletedProcess"
+                    PROCESS_AUTO_ADVANCE="true"/>
+            </damupdateassetworkfl>
+        </flow>
+    </jcr:content>
+</jcr:root>

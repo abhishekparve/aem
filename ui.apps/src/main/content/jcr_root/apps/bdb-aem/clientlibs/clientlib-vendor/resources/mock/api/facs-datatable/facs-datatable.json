@@ -1,0 +1,464 @@
+{
+    "reportsList": [
+        {
+            "specificity": {
+                "clone": "10/PLCgamma",
+                "target": {
+                    "label": "PLC-y1",
+                    "linkHref": "/content/bdb/language-masters/en/fac-select/CL-1"
+                }
+            },
+            "species": [
+                {
+                    "label": "Human",
+                    "reagentsDataAvailable": true,
+                    "onlyReagentsAvailable": false,
+                    "notSuggestedAvailable": true
+                },
+                {
+                    "label": "Mouse",
+                    "reagentsDataAvailable": false,
+                    "onlyReagentsAvailable": false,
+                    "notSuggestedAvailable": false
+                },
+                {
+                    "label": "Surface",
+                    "reagentsDataAvailable": true,
+                    "onlyReagentsAvailable": false,
+                    "notSuggestedAvailable": true
+                },
+                {
+                    "label": "Intracellular",
+                    "reagentsDataAvailable": true,
+                    "onlyReagentsAvailable": false,
+                    "notSuggestedAvailable": false
+                }
+            ],
+            "source": "Jurkat & J.gamma1\t",
+            "sourceAltText": "Jurkat T leukemia cells & J.gamma1 PLCγ1-deficient Jurkat cells",
+            "protocol": "std",
+            "protocolAltText": "Standard protocol",
+            "fluorochromes": [
+                {
+                    "band": "violet",
+                    "bandName": "Violet 405nm",
+                    "items": [
+                        {
+                            "label": "BD Horizon&tradeTM V450",
+                            "reagentsDataAvailable": true,
+                            "onlyReagentsAvailable": false
+                        },
+                        {
+                            "label": "Pacific Blue&tradeTM",
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": false
+                        },
+                        {
+                            "label": "AmCyan",
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": false
+                        },
+                        {
+                            "label": "BD Horizon&tradeTM V400",
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": true
+                        }
+                    ]
+                },
+                {
+                    "band": "blue",
+                    "bandName": "Blue 488nm",
+                    "items": [
+                        {
+                            "label": "Alexa Fluor® 488",
+                            "reagentsDataAvailable": true,
+                            "onlyReagentsAvailable": false
+                        },
+                        {
+                            "label": "FITC",
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": false
+                        },
+                        {
+                            "label": "PE",
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": false
+                        },
+                        {
+                            "label": "PE-Texas Red®",
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": true
+                        },
+                        {
+                            "label": "PE-Cy™5",
+                            "reagentsDataAvailable": true,
+                            "onlyReagentsAvailable": false
+                        },
+                        {
+                            "label": "PerCP",
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": false
+                        },
+                        {
+                            "label": "PerCP-Cy™5.5",
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": false
+                        },
+                        {
+                            "label": "PE-Cy™7",
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": true
+                        }
+                    ]
+                },
+                {
+                    "band": "green",
+                    "bandName": "YG 561nm",
+                    "items": [
+                        {
+                            "label": "BD Horizon™ V400",
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": false
+                        },
+                        {
+                            "label": "Alexa Fluor 488",
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": false
+                        },
+                        {
+                            "label": "FITC",
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": false
+                        }
+                    ]
+                },
+                {
+                    "band": "red",
+                    "bandName": "Red 640nm",
+                    "items": [
+                        {
+                            "label": "PE",
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": true
+                        },
+                        {
+                            "label": "PE-Texas Red",
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": false
+                        },
+                        {
+                            "label": "PE CyTM",
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": false
+                        }
+                    ]
+                }
+            ],
+            "path": "/content/bdb/language-masters/en/fac-select/CL-1"
+        },
+        {
+            "specificity": {
+                "clone": "Stat1 (pY701)",
+                "target": {
+                    "label": "Stat1 (pY701)",
+                    "linkHref": "/content/bdb/language-masters/en/fac-select/CL-1"
+                }
+            },
+            "source": "BALB/c SP",
+            "sourceAltText": "BALB/c spleen",
+            "protocol": "std",
+            "protocolAltText": "Standard protocol",
+            "species": [
+                {
+                    "label": "Human",
+                    "reagentsDataAvailable": false,
+                    "onlyReagentsAvailable": false
+                },
+                {
+                    "label": "Mouse",
+                    "reagentsDataAvailable": true,
+                    "onlyReagentsAvailable": false
+                },
+                {
+                    "label": "Surface",
+                    "reagentsDataAvailable": false,
+                    "onlyReagentsAvailable": false
+                },
+                {
+                    "label": "Intracellular",
+                    "reagentsDataAvailable": false,
+                    "onlyReagentsAvailable": false
+                }
+            ],
+            "fluorochromes": [
+                {
+                    "band": "violet",
+                    "bandName": "Violet 405nm",
+                    "items": [
+                        {
+                            "label": "BD Horizon&tradeTM V450",
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": false
+                        },
+                        {
+                            "label": "Pacific Blue&tradeTM",
+                            "reagentsDataAvailable": true,
+                            "onlyReagentsAvailable": false
+                        },
+                        {
+                            "label": "AmCyan",
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": false
+                        },
+                        {
+                            "label": "BD Horizon&tradeTM V400",
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": false
+                        }
+                    ]
+                },
+                {
+                    "band": "blue",
+                    "bandName": "Blue 488nm",
+                    "items": [
+                        {
+                            "label": "Alexa Fluor® 488",
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": false
+                        },
+                        {
+                            "label": "FITC",
+                            "reagentsDataAvailable": true,
+                            "onlyReagentsAvailable": false
+                        },
+                        {
+                            "label": "PE",
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": false
+                        },
+                        {
+                            "label": "PE-Texas Red®",
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": false
+                        },
+                        {
+                            "label": "PE-Cy™5",
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": false
+                        },
+                        {
+                            "label": "PerCP",
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": false
+                        },
+                        {
+                            "label": "PerCP-Cy™5.5",
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": false
+                        },
+                        {
+                            "label": "PE-Cy™7",
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": false
+                        }
+                    ]
+                },
+                {
+                    "band": "green",
+                    "bandName": "YG 561nm",
+                    "items": [
+                        {
+                            "label": "BD Horizon™ V400",
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": false
+                        },
+                        {
+                            "label": "Alexa Fluor 488",
+                            "reagentsDataAvailable": true,
+                            "onlyReagentsAvailable": false
+                        },
+                        {
+                            "label": "FITC",
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": false
+                        }
+                    ]
+                },
+                {
+                    "band": "red",
+                    "bandName": "Red 640nm",
+                    "items": [
+                        {
+                            "label": "PE",
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": false
+                        },
+                        {
+                            "label": "PE-Texas Red",
+                            "reagentsDataAvailable": true,
+                            "onlyReagentsAvailable": false
+                        },
+                        {
+                            "label": "PE CyTM",
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": false
+                        }
+                    ]
+                }
+            ],
+            "path": "/content/bdb/language-masters/en/fac-select/CL-1"
+        },
+        {
+            "specificity": {
+                "clone": "10/PLCgamma",
+                "target": {
+                    "label": "PLC-y2",
+                    "linkHref": "/content/bdb/language-masters/en/fac-select/CL-1"
+                }
+            },
+            "source": "Jurkat & J.gamma1\t",
+            "sourceAltText": "Jurkat T leukemia cells & J.gamma1 PLCγ1-deficient Jurkat cells",
+            "protocol": "std",
+            "protocolAltText": "Standard protocol",
+            "species": [
+                {
+                    "label": "Human",
+                    "reagentsDataAvailable": true,
+                    "onlyReagentsAvailable": false
+                },
+                {
+                    "label": "Mouse",
+                    "reagentsDataAvailable": false,
+                    "onlyReagentsAvailable": false
+                },
+                {
+                    "label": "Surface",
+                    "reagentsDataAvailable": true,
+                    "onlyReagentsAvailable": false
+                },
+                {
+                    "label": "Intracellular",
+                    "reagentsDataAvailable": false,
+                    "onlyReagentsAvailable": false
+                }
+            ],
+            "fluorochromes": [
+                {
+                    "band": "violet",
+                    "bandName": "Violet 405nm",
+                    "items": [
+                        {
+                            "label": "BD Horizon&tradeTM V450",
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": false
+                        },
+                        {
+                            "label": "Pacific Blue&tradeTM",
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": true
+                        },
+                        {
+                            "label": "AmCyan",
+                            "reagentsDataAvailable": true,
+                            "onlyReagentsAvailable": false
+                        },
+                        {
+                            "label": "BD Horizon&tradeTM V400",
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": false
+                        }
+                    ]
+                },
+                {
+                    "band": "blue",
+                    "bandName": "Blue 488nm",
+                    "items": [
+                        {
+                            "label": "Alexa Fluor® 488",
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": false
+                        },
+                        {
+                            "label": "FITC",
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": true
+                        },
+                        {
+                            "label": "PE",
+                            "reagentsDataAvailable": true,
+                            "onlyReagentsAvailable": false
+                        },
+                        {
+                            "label": "PE-Texas Red®",
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": false
+                        },
+                        {
+                            "label": "PE-Cy™5",
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": false
+                        },
+                        {
+                            "label": "PerCP",
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": false
+                        },
+                        {
+                            "label": "PerCP-Cy™5.5",
+                            "reagentsDataAvailable": true,
+                            "onlyReagentsAvailable": false
+                        },
+                        {
+                            "label": "PE-Cy™7",
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": false
+                        }
+                    ]
+                },
+                {
+                    "band": "green",
+                    "bandName": "YG 561nm",
+                    "items": [
+                        {
+                            "label": "BD Horizon™ V400",
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": false
+                        },
+                        {
+                            "label": "Alexa Fluor 488",
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": false
+                        },
+                        {
+                            "label": "FITC",
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": false
+                        }
+                    ]
+                },
+                {
+                    "band": "red",
+                    "bandName": "Red 640nm",
+                    "items": [
+                        {
+                            "label": "PE",
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": false
+                        },
+                        {
+                            "label": "PE-Texas Red",
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": false
+                        },
+                        {
+                            "label": "PE CyTM",
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": true
+                        }
+                    ]
+                }
+            ],
+            "path": "/content/bdb/language-masters/en/fac-select/CL-1"
+        }
+    ]
+}

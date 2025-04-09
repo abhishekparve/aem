@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="nt:unstructured"
+        jcr:title="facet values"
+        jcr:uuid="2f589239-48e3-4c22-a9af-3159bf84f541"
+        sling:resourceType="acs-commons/components/utilities/genericlist">
+        <image
+            jcr:primaryType="nt:unstructured"
+            fileReference="/apps/acs-commons/components/utilities/genericlist/generic-list.png"/>
+        <list jcr:primaryType="nt:unstructured">
+            <item0
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Select a facet"
+                value=""/>
+            <item1
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Resources"
+                value="docType_facet_s"/>
+            <item2
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Laser Wavelength"
+                value="laserWavelength_is"/>
+            <item3
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Brand"
+                value="brand_facet_s"/>
+            <item4
+                jcr:primaryType="nt:unstructured"
+                jcr:title="RRID"
+                value="rrid_facet_s"/>
+            <item5
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Regulatory Status"
+                value="regulatoryStatus_facet_s"/>
+            <item6
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Host Species"
+                value="hostSpecies_facet_s"/>
+            <item7
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Isotype"
+                value="isoType_facet_s"/>
+            <item8
+                jcr:primaryType="nt:unstructured"
+                jcr:title="TDS Clone Name"
+                value="tdsCloneName_facet_s"/>
+            <item9
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Product Type"
+                value="productType_display_value_facet_s"/>
+            <item10
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Dye Name"
+                value="dyeName_facet_s"/>
+            <item11
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Application Name"
+                value="applicationName_facet_s"/>
+            <item12
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Species"
+                value="species_facet_s"/>
+            <item13
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Size"
+                value="size_facet_s"/>
+            <item14
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Specificity"
+                value="specificity_facet_s"/>
+            <item15
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Category"
+                value="category_facet_ss"/>
+            <item16
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Barcode Sequence"
+                value="barcodeSequence_facet_s"/>
+            <item17
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Application Description"
+                value="applicationName_facet_ss"/>
+            <item18
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Name (Boost)"
+                value="name_t"/>
+            <item19
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Reactivity Status (Boost)"
+                value="reactivityStatus_t"/>
+            <item20
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Application Name (Boost)"
+                value="applicationName_t"/>
+            <item21
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Dye Name (Boost)"
+                value="dyeName_t"/>
+            <item22
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Specificity (Boost)"
+                value="specificity_t"/>
+            <item23
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Clone (Boost)"
+                value="tdsCloneName_t"/>
+            <item24
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Regulatory Status (Boost)"
+                value="regulatoryStatus_t"/>
+            <item25
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Storage Buffer (Boost)"
+                value="storageBuffer_t"/>
+            <item26
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Immunogen (Boost)"
+                value="immunogen_t"/>
+            <item27
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Entrez Gene Id (Boost)"
+                value="entrezGeneId_t"/>
+            <item28
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Species (Boost)"
+                value="species_t"/>
+            <item29
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Isotype (Boost)"
+                value="isoType_t"/>
+            <item30
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Host Species (Boost)"
+                value="hostSpecies_t"/>
+            <item31
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Brand (Boost)"
+                value="brand_t"/>
+            <item32
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Product Type (Boost)"
+                value="productType_t"/>
+            <item33
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Size (Boost)"
+                value="size_t"/>
+            <item34
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Vol Per Test (Boost)"
+                value="volPerTest_t"/>
+            <item35
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Sequence Id (Boost)"
+                value="seqId_t"/>
+            <item36
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Alternative Name (Boost)"
+                value="alternativeName_t"/>
+            <item37
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Page Title (Boost)"
+                value="pageTitle_t"/>
+            <item38
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Nav Title (Boost)"
+                value="navTitle_t"/>
+            <item39
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Body (Boost)"
+                value="body_t"/>
+            <item40
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Document Type"
+                value="pdfxDocType_facet_s"/>
+            <item41
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Category (Boost)"
+                value="category_t"/>  
+            <item42
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Subtitle (Boost)"
+                value="subtitle_t"/> 
+            <item43
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Clone value (Boost)"
+                value="tdsCloneName_s"/>
+            <item44
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Excitation Source"
+                value="excitationSource_facet_s"/>
+            <item45
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Species Reactivity"
+                value="speciesReactivity_facet_s"/>          
+            <item46
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Specificity value (Boost)"
+                value="specificity_s"/>
+            <item47
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Format value (Boost)"
+                value="dyeName_s"/>
+            <item48
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Species Reactivity value (Boost)"
+                value="speciesReactivity_s"/>
+            <item49
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Description value (Boost)"
+                value="description_s"/>
+            <item50
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Alternative Name value (Boost)"
+                value="alternativeName_s"/>
+            <item51
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Category value (Boost)"
+                value="category_s"/>
+            <item52
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Name value (Boost)"
+                value="name_s"/> 
+            <item53
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Subtitle value (Boost)"
+                value="subtitle_s"/>
+            <item54
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Species Reactivity"
+                value="speciesReactivity_t"/>  
+            <item55
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Specificity value ci (Boost)"
+                value="specificity_ci"/>
+            <item56
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Format value ci (Boost)"
+                value="dyeName_ci"/>
+            <item57
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Species Reactivity value ci (Boost)"
+                value="speciesReactivity_ci"/>
+            <item58
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Description value ci (Boost)"
+                value="description_ci"/>
+            <item59
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Alternative Name value ci (Boost)"
+                value="alternativeName_ci"/>
+            <item60
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Category value ci (Boost)"
+                value="category_ci"/>
+            <item61
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Name value ci (Boost)"
+                value="name_ci"/> 
+            <item62
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Subtitle value ci (Boost)"
+                value="subtitle_ci"/>
+            <item63
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Clone value ci (Boost)"
+                value="tdsCloneName_ci"/>
+            <item64
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Description (Boost)"
+                value="description_t"/>
+            <item65
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Species Reactivity List"
+                value="speciesReactivity_facet_ss"/>
+            <item66
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Body (Boost)"
+                value="body_t"/>
+            <item67
+                jcr:primaryType="nt:unstructured"
+                jcr:title="BDB Content Keywords (Boost)"
+                value="bdbContentKeywords_t"/>    
+        </list>
+    </jcr:content>
+</jcr:root>

@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Home Page Carousel"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+        <items jcr:primaryType="nt:unstructured">
+            <columns
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/container">
+                <items jcr:primaryType="nt:unstructured">
+                    <allowBleed
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                        name="./isBleed"
+                        text="Allow background image to extend/bleed till header"
+                        value="yes"/>
+                    <alert
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                        name="./isAlert"
+                        text="Enable Alert section"
+                        value="yes"/>
+                    <slides
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                        composite="{Boolean}true"
+                        fieldLabel="Slides">
+                        <granite:data
+                            jcr:primaryType="nt:unstructured"
+                            max-items="8"
+                            min-items="2"/>
+                        <field
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/container"
+                            name="./slides">
+                            <items jcr:primaryType="nt:unstructured">
+                                <column
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/container">
+                                    <items jcr:primaryType="nt:unstructured">
+                                        <fieldSetImage
+                                            jcr:primaryType="nt:unstructured"
+                                            jcr:title="Background Image"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                                            <items jcr:primaryType="nt:unstructured">
+                                                <imagePath
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                    fieldDescription="Image URL"
+                                                    fieldLabel="Image URL"
+                                                    name="./imagePath"
+                                                    required="{Boolean}true"
+                                                    rootPath="/content/dam"/>
+                                                <mobileImagePath
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                    fieldDescription="Mobile Image URL"
+                                                    fieldLabel="Mobile Image URL"
+                                                    name="./mobileImagePath"
+                                                    required="{Boolean}true"
+                                                    rootPath="/content/dam"/>
+                                                <altText
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldDescription="Alt Text"
+                                                    fieldLabel="Alt Text"
+                                                    name="./altImage"/>
+                                            </items>
+                                        </fieldSetImage>
+                                        <enableVideo
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                            fieldDescription="Enabling video is optional. Please author the associated video fields in case this is enabled"
+                                            name="./videoEnabled"
+                                            text="Enable Video"
+                                            value="yes"/>
+                                        <fieldSetVideo
+                                            jcr:primaryType="nt:unstructured"
+                                            jcr:title="Associated Video"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                                            <items jcr:primaryType="nt:unstructured">
+                                                <videoId
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldDescription="Brightcove Video ID"
+                                                    fieldLabel="Brightcove Video ID"
+                                                    name="./brightcoveVideoId"/>
+                                                <playVideoButtonLabel
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldDescription="Play Video Button Label"
+                                                    fieldLabel="Play Video Button Label"
+                                                    name="./playVideoLabel"/>
+                                                <vidthumbnail
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                    fieldDescription="Play Video Thumbnail Icon"
+                                                    fieldLabel="Play Video Thumbnail"
+                                                    name="./thumbnail"
+                                                    rootPath="/content/dam"/>
+                                                <allowAudio
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                                    name="./allowAudio"
+                                                    text="Allow Audio"
+                                                    value="yes"/>
+                                            </items>
+                                        </fieldSetVideo>
+                                        <title
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            fieldDescription="Title (Optional)"
+                                            fieldLabel="Title"
+                                            name="./heroTitle"/>
+                                        <description
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="cq/gui/components/authoring/dialog/richtext"
+                                            fieldLabel="Description"
+                                            maxlength="250"
+                                            name="./description"
+                                            useFixedInlineToolbar="{Boolean}true">
+                                            <rtePlugins
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceSuperType="/apps/bdb-aem/components/authoring/dialog/richtext/rtePlugins"/>
+                                            <uiSettings
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceSuperType="/apps/bdb-aem/components/authoring/dialog/richtext/uiSettings"/>
+                                            <granite:data
+                                                jcr:primaryType="nt:unstructured"
+                                                char-limit="250"/>
+                                        </description>
+                                        <fieldSetCTA
+                                            jcr:primaryType="nt:unstructured"
+                                            jcr:title="More Info - CTA "
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                                            <items jcr:primaryType="nt:unstructured">
+                                                <label
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldDescription="Label for CTA"
+                                                    fieldLabel="Label"
+                                                    name="./labelCta"/>
+                                                <urlcta
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                    fieldDescription="CTA URL"
+                                                    fieldLabel="URL"
+                                                    name="./urlCta"
+                                                    rootPath="/content"/>
+                                            </items>
+                                        </fieldSetCTA>
+                                        <align
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                            fieldDescription="Component Text CTA Alignment"
+                                            fieldLabel="Component Text CTA Alignment"
+                                            name="./ctaAlign">
+                                            <items jcr:primaryType="nt:unstructured">
+                                                <left
+                                                    jcr:primaryType="nt:unstructured"
+                                                    text="Left aligned"
+                                                    value="left"/>
+                                                <right
+                                                    jcr:primaryType="nt:unstructured"
+                                                    text="Right aligned"
+                                                    value="end"/>
+                                                <center
+                                                    jcr:primaryType="nt:unstructured"
+                                                    text="Center aligned"
+                                                    value="center"/>
+                                            </items>
+                                        </align>
+                                        <fieldSetStyling
+                                            jcr:primaryType="nt:unstructured"
+                                            jcr:title="Specify Styling"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                                            <items jcr:primaryType="nt:unstructured">
+                                                <background
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/switch"
+                                                    fieldLabel="Enable Dark Mode"
+                                                    name="./darkMode"/>
+                                                <fontColor
+                                					jcr:primaryType="nt:unstructured"
+                                					sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                					fieldLabel="Font Color variation"
+                                					name="./fontColorVariation">
+                                					<items jcr:primaryType="nt:unstructured">
+                                    					<white
+                                        					jcr:primaryType="nt:unstructured"
+                                        					text="White"
+                                        					value="#fff"/>
+                                    					<black
+                                        					jcr:primaryType="nt:unstructured"
+                                        					text="Black"
+                                        					value="#000"/>
+                                					</items>
+                            					</fontColor>
+                                                <ctaVariation
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                    fieldLabel="Select CTA variation"
+                                                    name="./ctaVariation">
+                                                    <items jcr:primaryType="nt:unstructured">
+                                                        <white
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="White text on blue"
+                                                            value="\{&quot;ctaTxtColor&quot;:&quot;#fff&quot;, &quot;ctaBgColor&quot;:&quot;#023970&quot;}"/>
+                                                        <blue
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="Blue text on white "
+                                                            value="\{&quot;ctaTxtColor&quot;:&quot;#023970&quot;, &quot;ctaBgColor&quot;:&quot;#fff&quot;}"/>
+                                                    </items>
+                                                </ctaVariation>
+                                            </items>
+                                        </fieldSetStyling>
+                                        <fieldSetExtraButton
+                                            jcr:primaryType="nt:unstructured"
+                                            jcr:title="Extra Button section (Optional)"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                                            <items jcr:primaryType="nt:unstructured">
+                                                <urlcta
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                    fieldDescription="Extra Button URL"
+                                                    fieldLabel="URL"
+                                                    name="./urlExtra"
+                                                    rootPath="/content"/>
+                                                <label
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldDescription="Label for Extra Button"
+                                                    fieldLabel="Label"
+                                                    name="./labelExtra"/>
+                                            </items>
+                                        </fieldSetExtraButton>
+                                    </items>
+                                </column>
+                            </items>
+                        </field>
+                    </slides>
+                </items>
+            </columns>
+        </items>
+    </content>
+</jcr:root>

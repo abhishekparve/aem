@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Country Selector"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+        <items jcr:primaryType="nt:unstructured">
+            <column
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/container">
+                <items jcr:primaryType="nt:unstructured">
+                    <fieldsetTitle
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Title"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                        <items jcr:primaryType="nt:unstructured">
+                            <title
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                name="./title"/>
+                        </items>
+                    </fieldsetTitle>
+                    <fieldsetCountryselector
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Country Selector"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                        <items jcr:primaryType="nt:unstructured">
+                            <slides
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                composite="{Boolean}true">
+                                <field
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/container"
+                                    name="./regionmultifield">
+                                    <items jcr:primaryType="nt:unstructured">
+                                        <column
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/container">
+                                            <items jcr:primaryType="nt:unstructured">
+                                                <fieldsetRegion
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                                                    <items jcr:primaryType="nt:unstructured">
+                                                        <region
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                            fieldDescription="Region Label"
+                                                            fieldLabel="Region"
+                                                            name="./region"/>
+                                                        <countries
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                                            composite="{Boolean}true"
+                                                            fieldLabel="Country">
+                                                            <field
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/container"
+                                                                name="./countrymultifield">
+                                                                <items jcr:primaryType="nt:unstructured">
+                                                                    <column
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                                                                        <items jcr:primaryType="nt:unstructured">
+                                                                            <country
+                                                                                jcr:primaryType="nt:unstructured"
+                                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                                fieldDescription="Country Label"
+                                                                                fieldLabel="Country"
+                                                                                name="./country"/>
+                                                                            <urlCountry
+                                                                                jcr:primaryType="nt:unstructured"
+                                                                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                                                fieldDescription="URL"
+                                                                                fieldLabel="URL"
+                                                                                name="./urlCountry"
+                                                                                rootPath="/content/bdb"/>
+                                                                        </items>
+                                                                    </column>
+                                                                </items>
+                                                            </field>
+                                                        </countries>
+                                                    </items>
+                                                </fieldsetRegion>
+                                            </items>
+                                        </column>
+                                    </items>
+                                </field>
+                            </slides>
+                        </items>
+                    </fieldsetCountryselector>
+                </items>
+            </column>
+        </items>
+    </content>
+</jcr:root>

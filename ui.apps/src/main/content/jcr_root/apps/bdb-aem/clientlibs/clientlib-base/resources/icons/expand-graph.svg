@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Expand graph</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Laser-and-peak-emission-max" transform="translate(-1092.000000, -330.000000)" stroke="#004593">
+            <g id="Expand-Graph" transform="translate(977.000000, 329.000000)">
+                <g id="Group" transform="translate(115.000000, 1.000000)">
+                    <path d="M15.8333333,10 L15.8333333,4.16666667 L10,4.16666667 M15.8333333,4.16666667 L11.0251263,9.36376262 M4.16666667,10 L4.16666667,15.8333333 L10,15.8333333 M4.16666667,15.8333333 L8.97487373,10.6362374" id="Combined-Shape" stroke-width="1.3"></path>
+                    <rect id="Rectangle" stroke-width="2" x="1" y="1" width="18" height="18"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

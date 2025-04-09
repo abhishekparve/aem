@@ -1,0 +1,46 @@
+{
+    "email": "xyz@abc.com",
+    "firstName": "test",
+    "lastName": "test",
+    "company": "test",
+    "phone": "+12133734253",
+    "mobile": true,
+    "ean": "12345",
+    "vat": "223344",
+    "industry": [
+        {
+            "code": "001"
+        },
+        {
+            "code": "003"
+        }
+    ],
+    "role": [
+        {
+            "code": "101"
+        },
+        {
+            "code": "103"
+        },
+        {
+            "code": "303"
+        }
+    ],
+    "interest": [
+        {
+            "code": "313"
+        },
+        {
+            "code": "314"
+        },
+        {
+            "code": "315"
+        },
+        {
+            "code": "112"
+        },
+        {
+            "code": "113"
+        }
+    ]
+}

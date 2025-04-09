@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0"
+          xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+          jcr:primaryType="nt:unstructured"
+          jcr:title="Rewards Component"
+          sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="granite/ui/components/coral/foundation/container">
+        <items jcr:primaryType="nt:unstructured">
+            <tabs   jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/coral/foundation/tabs"
+                    maximized="{Boolean}false">
+                <items jcr:primaryType="nt:unstructured">
+                    <rewardsfields
+                        jcr:primaryType="nt:unstructured"
+                                jcr:title="Labels"
+                                sling:resourceType="granite/ui/components/coral/foundation/container"
+                                margin="{Boolean}true">
+                                <items jcr:primaryType="nt:unstructured">
+                                <columns
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                                        margin="{Boolean}true">
+                                        <items jcr:primaryType="nt:unstructured">
+                                        <column
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                            <items jcr:primaryType="nt:unstructured">
+                                                <title
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                        fieldLabel="Title"
+                                                        name="./title"/>
+                                                <myRewardsTitle
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                        fieldLabel="My Rewards Title for Signed in user"
+                                                        name="./myRewardsTitle"/>
+                                                <rewardsImageHeader
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                        fieldLabel="Rewards Image Header"
+                                                        name="./rewardsImageHeader"/>
+                                                <rewardsPointsText
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                        fieldLabel="Rewards Points Text"
+                                                        name="./rewardsPointsText"/>
+                                                <rewardsImageBody
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                        fieldLabel="Rewards Image Body"
+                                                        name="./rewardsImageBody"/>
+                                                <rewardsImage
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                                                        rootPath="/content/dam/bdb"
+                                                        fieldLabel="Rewards Image"
+                                                        name="./rewardsImage"/>
+                                                <rewardsMobileImage
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                                                        rootPath="/content/dam/bdb"
+                                                        fieldLabel="Rewards Mobile Image"
+                                                        name="./rewardsMobileImage"/>
+                                                <rewardsAltText
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                        fieldLabel="Rewards Alt Text"
+                                                        name="./rewardsAltText"/>		                                                                                                
+                                                <rewardsSignUpBtn
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                        fieldLabel="Rewards Sign Up Btn"
+                                                        name="./rewardsSignUpBtn"/>
+                                                <rewardsBenefitTitle
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                        fieldLabel="Rewards Benefit Title"
+                                                        name="./rewardsBenefitTitle"/>
+                                                <joinRewards
+                                                        jcr:primaryType="nt:unstructured"
+                                                        jcr:title="joinRewards"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                                                    <items jcr:primaryType="nt:unstructured">
+                                                        <joinRewardsTitle
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="Join Rewards Title"
+                                                                name="./joinRewardsTitle"/>
+                                                        <subtitle
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="Join Rewards Subtitle"
+                                                                name="./subtitle"/>
+                                                        <notHealthCareLabel
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="Not Health Care Label"
+                                                                name="./notHealthCareLabel"/>
+                                                        <notGovtLabel
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="Not Govt Label"
+                                                                name="./notGovtLabel"/>
+                                                        <noGitsPolicyLabel
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="No Gits Policy Label"
+                                                                name="./noGitsPolicyLabel"/>
+                                                        <rewardsTnCLabel
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="cq/gui/components/authoring/dialog/richtext"
+                                                                fieldDescription="Author Rewards Terms and Conditions"
+                                                                fieldLabel="Rewards TnC Label"
+                                                                name="./rewardsTnCLabel"
+                                                                required="{Boolean}false"
+                                                                useFixedInlineToolbar="{Boolean}true">
+                                                        <rtePlugins
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceSuperType="/apps/bdb-aem/components/authoring/dialog/richtext/rtePlugins"/>
+                                                            <uiSettings
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceSuperType="/apps/bdb-aem/components/authoring/dialog/richtext/uiSettings"/>
+                                                        </rewardsTnCLabel>
+                                                        <joinBdRewardsCTALabel
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="Join BD Rewards CTA Label"
+                                                                name="./joinBdRewardsCTALabel"/>
+                                                        <redirectionUrl
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                                                                rootPath="/content/bdb"
+                                                                fieldLabel="BD Rewards Redirection Url"
+                                                                name="./redirectionUrl"/>
+                                                    </items>
+                                                </joinRewards>
+                                                <tabsContainer
+                                                        jcr:primaryType="nt:unstructured"
+                                                        jcr:title="Tabs Container"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                                                    <items jcr:primaryType="nt:unstructured">
+                                                        <rewardsTabLabel
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="Rewards Tab Label"
+                                                                name="./rewardsTabLabel"/>
+                                                        <earnTabLabels
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="Earn Tab Labels"
+                                                                name="./earnTabLabels"/>
+                                                        <activityTabLabel
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="Activity Tab Label"
+                                                                name="./activityTabLabel"/>
+                                                        <benefitsTabLabel
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="Benefits Tab Label"
+                                                                name="./benefitsTabLabel"/>
+                                                        <benefitsTabContent
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="cq/gui/components/authoring/dialog/richtext"
+                                                                emptyText="Enter the table content here"
+                                                                fieldLabel="Benefits Table Content"
+                                                                name="./benefitsTabContent"
+                                                                required="{Boolean}false"
+                                                                useFixedInlineToolbar="{Boolean}true">
+                                                            <rtePlugins
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceSuperType="/apps/bdb-aem/components/authoring/dialog/richtext/rtePlugins"/>
+                                                            <uiSettings
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceSuperType="/apps/bdb-aem/components/authoring/dialog/richtext/uiSettings"/>
+                                                        </benefitsTabContent>
+                                                        <bdREwardsTnCLabel
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="BD Rewards TnC Label"
+                                                                name="./bdREwardsTnCLabel"/>
+                                                        <bdREwardsTnCLink
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                                                                rootPath="/content/bdb"
+                                                                fieldLabel="BD Rewards TnC Link"
+                                                                name="./bdREwardsTnCLink"/>
+                                                    </items>
+                                                </tabsContainer>
+                                                <successfulRewardsText
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                        fieldLabel="Successful Rewards Text"
+                                                        name="./successfulRewardsText"/>
+                                            </items>
+                                        </column>
+                                        </items>
+                                </columns>
+                                </items>
+                    </rewardsfields>>
+                </items>
+            </tabs>
+        </items>
+    </content>
+</jcr:root>

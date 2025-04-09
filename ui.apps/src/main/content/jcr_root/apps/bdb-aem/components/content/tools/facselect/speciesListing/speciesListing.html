@@ -1,0 +1,64 @@
+<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html" data-sly-call="${templates.placeholder @ isEmpty = true}"></sly>
+<sly data-sly-use.spiece="com.bdb.aem.core.models.FacselectSpieceListing">
+	<article class="facs-markers app-js__facs-markers" data-markers-url="${spiece.facDataEndpoint}" data-target-label="Target" data-clone-label="Clone">
+    <div class="facs-markers__top">
+        <div class="container">
+            <div class="row">
+                    <div class="facs-markers__top_heading">
+                        <h1 class="facs-markers__top_heading_title">${properties.title}</h1>
+                        <p class="facs-markers__top_heading_sub-title">${properties.subTitle}</p>
+                    </div>
+                    <div class="facs-markers__top_filters">
+                        <div class="d-flex flex-column">
+                            <p class="facs-markers__top_filters_heading">${properties.heading}</p>
+                            <p class="facs-markers__top_filters_sub-info">${properties.subInfo}</p>
+                        </div>
+                        <div class="facs-markers__top_filters_groups">
+                            <p class="facs-markers__top_filters_groups_heading">${properties.groupHeading}</p>
+                            <sly data-sly-test="${spiece.flurocrome}">
+								<sly data-sly-list.fl="${spiece.flurocrome}">
+                                	<button type="button" class="${fl.color}">${fl.label}</button>
+                           		</sly>
+                           	</sly>		
+                        </div>
+                    </div>
+                    <div class="facs-markers__top_info flex-grow-1 pb-2 d-flex justify-content-start justify-content-lg-between">
+                        <div class="facs-markers__top_info_left">
+                            <span>${properties.showingLabel}&nbsp;<span class="totalMarkers"></span>&nbsp;${properties.reagentsLabel}</span>
+                        </div>
+                        <div class="facs-markers__top_info_nav">
+                                <div class="facs-markers__top_info_nav_message">
+                                <sly data-sly-test="${properties.dataAndReagents}"><span class="reagentsDataAvailable mr-2"></span>
+                                    ${properties.dataAndReagents}</sly>
+                                <sly data-sly-test="${properties.onlyReagents}"><span class="onlyReagents mr-2"></span>
+                                    ${properties.onlyReagents}</sly>
+                                <sly data-sly-test="${properties.notSuggested}"><span class="onlyReagents mr-2"></span>
+                                    ${properties.notSuggested}</sly>
+                                   
+                                </div>
+                                <div class="d-flex">
+                                    <button type="button" class="btn-left-disabled mr-4" disabled><span class="sr-only">${properties.btnLeft}</span></button>
+                                    <button type="button" class="btn-left mr-4"><span class="sr-only">{properties.btnLeftDisabled}</span></button>
+                                    <button type="button" class="btn-right"><span class="sr-only">${properties.btnRight}</span></button>
+                                    <button type="button" class="btn-right-disabled" disabled><span class="sr-only">${properties.btnRightDisabled}</span></button>
+                                </div>
+                        </div>
+                    </div>
+                <table id="facsMarkers" class="facs-markers__top_table table table-bordered row-border nowrap"></table>
+            </div>
+        </div>
+    </div>
+
+        <div class="facs-markers__desc">
+            <div class="container">
+                <div class="row">
+                    <div class="d-flex flex-column">
+                        <p><strong>${properties.descHeading}</strong></p>
+                        <p>${properties.descText @context="html"}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+</article>
+</sly>

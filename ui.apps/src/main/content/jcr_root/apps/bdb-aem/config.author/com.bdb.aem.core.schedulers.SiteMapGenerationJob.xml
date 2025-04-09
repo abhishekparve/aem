@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="sling:OsgiConfig"
+        schedulerName = "SiteMap Generation Configuration"
+        scheduler.expression = "0 0 */12 ? * *"
+        isEnabled = "true"
+        scheduler.concurrent = "false"
+        contentPaths = "[/content/bdb/na/us/en-us,/content/bdb/na/ca/en-ca,/content/bdb/eu/at/en-at,/content/bdb/eu/be/en-be,/content/bdb/eu/dk/en-dk,/content/bdb/eu/fi/en-fi,/content/bdb/eu/fr/en-fr,/content/bdb/eu/de/en-de,/content/bdb/eu/ie/en-ie,/content/bdb/eu/it/en-it,/content/bdb/eu/lu/en-lu,/content/bdb/eu/nl/en-nl,/content/bdb/eu/no/en-no,/content/bdb/eu/pl/en-pl,/content/bdb/eu/pt/en-pt,/content/bdb/eu/es/en-es,/content/bdb/eu/eu/en-eu,/content/bdb/eu/se/en-se,/content/bdb/eu/ch/en-ch,/content/bdb/eu/gb/en-gb,/content/bdb/apac/au/en-au,/content/bdb/apac/nz/en-nz,/content/bdb/apac/tw/en-tw,/content/bdb/apac/kr/ko-kr,/content/bdb/apac/in/en-in,/content/bdb/apac/sg/en-sg,/content/bdb/apac/jp/ja-jp,/content/bdb/cn/cn/zh-cn,/content/bdb/latam/br/en-br]"
+        countryPaths = "[/content/bdb/na/us,/content/bdb/na/ca,/content/bdb/eu/at,/content/bdb/eu/be,/content/bdb/eu/dk,/content/bdb/eu/fi,/content/bdb/eu/fr,/content/bdb/eu/de,/content/bdb/eu/ie,/content/bdb/eu/it,/content/bdb/eu/lu,/content/bdb/eu/nl,/content/bdb/eu/no,/content/bdb/eu/pl,/content/bdb/eu/pt,/content/bdb/eu/es,/content/bdb/eu/se,/content/bdb/eu/ch,/content/bdb/eu/gb,/content/bdb/eu/il,/content/bdb/eu/eu,/content/bdb/apac/au,/content/bdb/apac/nz,/content/bdb/apac/tw,/content/bdb/apac/kr,/content/bdb/apac/in,/content/bdb/apac/sg,/content/bdb/apac/jp,/content/bdb/cn/cn,/content/bdb/latam/br]"
+        regionPaths = "[/content/bdb/na,/content/bdb/apac,/content/bdb/eu,/content/bdb/cn,/content/bdb/latam]"
+        rootPath = "[/content/bdb]"
+        defaultLimit = "$[env:defaultLimit;default=10000]"
+        />

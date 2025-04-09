@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+		  jcr:primaryType="nt:unstructured"
+		  jcr:title="Download List Component"
+		  sling:resourceType="cq/gui/components/authoring/dialog">
+	<content
+			jcr:primaryType="nt:unstructured"
+			sling:resourceType="granite/ui/components/coral/foundation/container">
+		<items jcr:primaryType="nt:unstructured">
+			<properties
+					jcr:primaryType="nt:unstructured"
+					jcr:title="Properties"
+					sling:resourceType="granite/ui/components/coral/foundation/container"
+					margin="{Boolean}true">
+				<items jcr:primaryType="nt:unstructured">
+					<columns
+							jcr:primaryType="nt:unstructured"
+							sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+							margin="{Boolean}true">
+						<items jcr:primaryType="nt:unstructured">
+							<column
+									jcr:primaryType="nt:unstructured"
+									sling:resourceType="granite/ui/components/coral/foundation/container">
+								<items jcr:primaryType="nt:unstructured">
+								    <togglePaddingTop
+										jcr:primaryType="nt:unstructured"
+										sling:resourceType="granite/ui/components/coral/foundation/form/switch"
+										checked="{Boolean}false"
+										fieldDescription="Switch between Default Padding (Off) and Reduced Padding (On)"
+										fieldLabel="Reduce Top Padding"
+										name="./togglePaddingTop"/>
+									<togglePaddingBottom
+										jcr:primaryType="nt:unstructured"
+										sling:resourceType="granite/ui/components/coral/foundation/form/switch"
+										checked="{Boolean}false"
+										fieldDescription="Switch between Default Padding (Off) and Reduced Padding (On)"
+										fieldLabel="Reduce Bottom Padding"
+										name="./togglePaddingBottom"/>
+									<enableAnchorIdentifier
+										jcr:primaryType="nt:unstructured"
+										sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+										fieldDescription="Anchor Identifier for Anchor Component"
+										name="./enableAnchorIdentifier"
+										text="Enable Anchor Identifier"
+										uncheckedValue="{Boolean}false"
+										value="{Boolean}true"/>
+									<anchorIdDescription
+										jcr:primaryType="nt:unstructured"
+										sling:resourceType="cq/gui/components/authoring/dialog/richtext"
+										fieldDescription="AnchorIdDescription"
+										fieldLabel="Anchor Id Description"
+										name="./anchorIdDescription"
+										useFixedInlineToolbar="{Boolean}true">
+										<rtePlugins
+											jcr:primaryType="nt:unstructured"
+											sling:resourceSuperType="/apps/bdb-aem/components/authoring/dialog/richtext/rtePlugins"/>
+										<uiSettings
+											jcr:primaryType="nt:unstructured"
+											sling:resourceSuperType="/apps/bdb-aem/components/authoring/dialog/richtext/uiSettings"/>
+										<granite:data
+											jcr:primaryType="nt:unstructured"
+											char-limit="150"/>
+									</anchorIdDescription>
+									<sectionTitle
+											jcr:primaryType="nt:unstructured"
+											sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+											fieldDescription="Section Title must be authored if Anchor Identifier is Enabled."
+											fieldLabel="Section Title"
+											name="./sectionTitle"/>									
+									<bgColor
+										jcr:primaryType="nt:unstructured"
+										sling:resourceType="granite/ui/components/coral/foundation/form/select"
+										fieldLabel="Select Background Color"
+										name="./bgColor">
+										<items jcr:primaryType="nt:unstructured">
+											<white
+												jcr:primaryType="nt:unstructured"
+												text="White"
+												value="white-background-container"/>
+											<grey
+												jcr:primaryType="nt:unstructured"
+												text="Grey"
+												value="gray-background-container"/>
+										</items>
+									</bgColor>
+									<imagePath
+											jcr:primaryType="nt:unstructured"
+											sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+											fieldDescription="Image Path"
+											fieldLabel="Image Path"
+											name="./imagePath"
+											rootPath="/content/dam/bdb"/>
+									<imagePathAltText
+											jcr:primaryType="nt:unstructured"
+											sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+											fieldDescription="Image Alt text"
+											fieldLabel="Image Alt text"
+											name="./imagePathAltText"/>
+									<downloadBrochure
+											jcr:primaryType="nt:unstructured"
+											sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+											fieldDescription="Label for Download the Brochure"
+											fieldLabel="Download the Brochure Label"
+											name="./downloadBrochure"/>
+									<downloadBrochureLink
+											jcr:primaryType="nt:unstructured"
+											sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+											fieldDescription="Link for Download the Brochure"
+											fieldLabel="Download the Brochure Link"
+											name="./downloadBrochureLink"
+											rootPath="/content/dam/bdb"/>
+									<accordions
+											jcr:primaryType="nt:unstructured"
+											sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+											composite="{Boolean}true"
+											fieldLabel="Accordion Fields">
+										<granite:data
+												jcr:primaryType="nt:unstructured"
+												max-items=""/>
+										<field
+												jcr:primaryType="nt:unstructured"
+												sling:resourceType="granite/ui/components/coral/foundation/container"
+												name="./accordions">
+											<items jcr:primaryType="nt:unstructured">
+												<column
+														jcr:primaryType="nt:unstructured"
+														sling:resourceType="granite/ui/components/coral/foundation/container">
+													<items jcr:primaryType="nt:unstructured">
+														<accordionTitle
+																jcr:primaryType="nt:unstructured"
+																sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+																fieldDescription="Accordion Title Label"
+																fieldLabel="Accordion Title"
+																name="./accordionTitle"/>
+														<documents
+																jcr:primaryType="nt:unstructured"
+																sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+																composite="{Boolean}true"
+																fieldLabel="Document Fields">
+															<granite:data
+																	jcr:primaryType="nt:unstructured"
+																	max-items=""/>
+															<field
+																	jcr:primaryType="nt:unstructured"
+																	sling:resourceType="granite/ui/components/coral/foundation/container"
+																	name="./documents">
+																<items jcr:primaryType="nt:unstructured">
+																	<column
+																			jcr:primaryType="nt:unstructured"
+																			sling:resourceType="granite/ui/components/coral/foundation/container">
+																		<items jcr:primaryType="nt:unstructured">
+																			<uploadFields
+																					jcr:primaryType="nt:unstructured"
+																					jcr:title="Upload Documents"
+																					sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+																				<items jcr:primaryType="nt:unstructured">
+																					<uploadTypeSelection
+																							granite:class="cq-dialog-dropdown-multifield-showhide"
+																							jcr:primaryType="nt:unstructured"
+																							sling:resourceType="granite/ui/components/coral/foundation/form/select"
+																							fieldLabel="Select the Upload type"
+																							name="./uploadTypeSelection"
+																							required="{Boolean}false">
+																						<items jcr:primaryType="nt:unstructured">
+																							<autoUpload
+																									jcr:primaryType="nt:unstructured"
+																									text="Auto Upload"
+																									value="auto"/>
+																							<manualUpload
+																									jcr:primaryType="nt:unstructured"
+																									text="Manual Upload"
+																									value="manual"/>
+																						</items>
+																						<granite:data
+																								jcr:primaryType="nt:unstructured"
+																								cq-dialog-dropdown-multifield-showhide-target=".list-option-showhide-target"/>
+																					</uploadTypeSelection>
+																					<productName
+																							granite:class="list-option-showhide-target"
+																							jcr:primaryType="nt:unstructured"
+																							sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+																							fieldLabel="Product Name"
+																							name="./productName"
+																							showhidetargetvalue="auto">
+																						<granite:data
+																								jcr:primaryType="nt:unstructured"
+																								showhidetargetvalue="auto"/>
+																					</productName>
+																					<productTypeSelection
+																							granite:class="list-option-showhide-target"
+																							jcr:primaryType="nt:unstructured"
+																							sling:resourceType="granite/ui/components/coral/foundation/form/select"
+																							fieldLabel="Type of Document to be added"
+																							name="./productTypeSelection"
+																							multiple="{Boolean}true"
+																							required="{Boolean}false"
+																							showhidetargetvalue="auto">
+																						<items jcr:primaryType="nt:unstructured">
+																							<default
+																									jcr:primaryType="nt:unstructured"
+																									text="Select Type of Document"
+																									value=""/>
+																							<applicationNote
+																									jcr:primaryType="nt:unstructured"
+																									text="Application note"
+																									value="Application note"/>
+																							<article
+																									jcr:primaryType="nt:unstructured"
+																									text="Article"
+																									value="Article"/>
+																							<brochure
+																									jcr:primaryType="nt:unstructured"
+																									text="Brochure"
+																									value="Brochure"/>
+																							<caseStudies
+																									jcr:primaryType="nt:unstructured"
+																									text="Case studies"
+																									value="Case studies"/>
+																							<configurationGuide
+																									jcr:primaryType="nt:unstructured"
+																									text="Configuration guide"
+																									value="Configuration guide"/>
+																							<dataSheet
+																									jcr:primaryType="nt:unstructured"
+																									text="Datasheet"
+																									value="Datasheet"/>
+																							<eBook
+																									jcr:primaryType="nt:unstructured"
+																									text="Ebook"
+																									value="Ebook"/>
+																							<faq
+																									jcr:primaryType="nt:unstructured"
+																									text="Frequently Asked Questions"
+																									value="Frequently Asked Questions"/>
+																							<filterGuide
+																									jcr:primaryType="nt:unstructured"
+																									text="Filter guide"
+																									value="Filter guide"/>
+																							<flyer
+																									jcr:primaryType="nt:unstructured"
+																									text="Flyer"
+																									value="Flyer"/>
+																							<infographic
+																									jcr:primaryType="nt:unstructured"
+																									text="Infographic"
+																									value="Infographic"/>
+																							<interactiveAsset
+																									jcr:primaryType="nt:unstructured"
+																									text="Interactive asset"
+																									value="Interactive asset"/>
+																							<jobAid
+																									jcr:primaryType="nt:unstructured"
+																									text="Job aid"
+																									value="Job aid"/>
+																							<panelSheet
+																									jcr:primaryType="nt:unstructured"
+																									text="Panel sheet"
+																									value="Panel sheet"/>
+																							<podcast
+																									jcr:primaryType="nt:unstructured"
+																									text="Podcast"
+																									value="Podcast"/>
+																							<poster
+																									jcr:primaryType="nt:unstructured"
+																									text="Poster"
+																									value="Poster"/>
+																							<productList
+																									jcr:primaryType="nt:unstructured"
+																									text="Product list"
+																									value="Product list"/>
+																							<protocol
+																									jcr:primaryType="nt:unstructured"
+																									text="Protocol"
+																									value="Protocol"/>
+																							<publications
+																									jcr:primaryType="nt:unstructured"
+																									text="Publications"
+																									value="Publications"/>
+																							<quickReferenceGuide
+																									jcr:primaryType="nt:unstructured"
+																									text="Quick reference guide"
+																									value="Quick reference guide"/>
+																							<reportLogs
+																									jcr:primaryType="nt:unstructured"
+																									text="Reports/logs"
+																									value="Reports/logs"/>
+																							<technicalBulletin
+																									jcr:primaryType="nt:unstructured"
+																									text="Technical bulletin"
+																									value="Technical bulletin"/>
+																							<technicalSpecs
+																									jcr:primaryType="nt:unstructured"
+																									text="Technical specs"
+																									value="Technical specs"/>
+																							<training
+																									jcr:primaryType="nt:unstructured"
+																									text="Training"
+																									value="Training"/>
+																							<userGuideManual
+																									jcr:primaryType="nt:unstructured"
+																									text="User guide manual"
+																									value="User guide manual"/>
+																							<animations
+																									jcr:primaryType="nt:unstructured"
+																									text="Animations"
+																									value="Animations"/>
+																							<customerTestimonials
+																									jcr:primaryType="nt:unstructured"
+																									text="Customer testimonials"
+																									value="Customer testimonials"/>
+																							<productVideos
+																									jcr:primaryType="nt:unstructured"
+																									text="Product videos"
+																									value="Product videos"/>
+																							<protocolVideos
+																									jcr:primaryType="nt:unstructured"
+																									text="Protocol videos"
+																									value="Protocol videos"/>
+																							<webinar
+																									jcr:primaryType="nt:unstructured"
+																									text="Webinar"
+																									value="Webinar"/>
+																							<technicalBulletin
+																									jcr:primaryType="nt:unstructured"
+																									text="Technical bulletin"
+																									value="Technical bulletin"/>
+																							<whitePaper
+																									jcr:primaryType="nt:unstructured"
+																									text="White paper"
+																									value="White paper"/>
+																							<productInformationSheet
+																									jcr:primaryType="nt:unstructured"
+																									text="Product Information Sheet"
+																									value="Training"/>
+																						</items>
+																						<granite:data
+																								jcr:primaryType="nt:unstructured"
+																								showhidetargetvalue="auto"/>
+																					</productTypeSelection>
+																					<documentTitle
+																							granite:class="list-option-showhide-target"
+																							jcr:primaryType="nt:unstructured"
+																							sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+																							fieldDescription="Document Title is Mandatory for external links"
+																							fieldLabel="Document Title"
+																							name="./documentTitle"
+																							showhidetargetvalue="manual">
+																						<granite:data
+																								jcr:primaryType="nt:unstructured"
+																								showhidetargetvalue="manual"/>
+																					</documentTitle>
+																					<documentLink
+																							granite:class="list-option-showhide-target"
+																							jcr:primaryType="nt:unstructured"
+																							sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+																							fieldLabel="Document Path / Link"
+																							name="./documentLink"
+																							rootPath="/content/dam/bdb"
+																							showhidetargetvalue="manual">
+																						<granite:data
+																								jcr:primaryType="nt:unstructured"
+																								showhidetargetvalue="manual"/>
+																					</documentLink>
+																					<noDownloadIcon
+																							jcr:primaryType="nt:unstructured"
+																							sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+																							fieldDescription="Enable this checkbox to remove the download icon"
+																							name="./downloadIcon"
+																							text="No Download Icon"
+																							uncheckedValue="{Boolean}false"
+																							value="{Boolean}true">
+																					</noDownloadIcon>																					
+																				</items>
+																			</uploadFields>
+																		</items>
+																	</column>
+																</items>
+															</field>
+														</documents>
+													</items>
+												</column>
+											</items>
+										</field>
+									</accordions>
+								</items>
+							</column>
+						</items>
+					</columns>
+				</items>
+			</properties>
+		</items>
+	</content>
+</jcr:root>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0"
+          jcr:primaryType="nt:unstructured"
+          jcr:title="Featured Training Carousel"
+          sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="granite/ui/components/coral/foundation/container">
+        <items jcr:primaryType="nt:unstructured">
+            <tabs
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/tabs"
+                maximized="{Boolean}false">
+                <items jcr:primaryType="nt:unstructured">
+                <featuredCarouselTab
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Featured Training Carousel"
+                    sling:resourceType="granite/ui/components/coral/foundation/container"
+                    margin="{Boolean}true">
+                    <items jcr:primaryType="nt:unstructured">
+                        <column
+                             jcr:primaryType="nt:unstructured"
+                             sling:resourceType="granite/ui/components/coral/foundation/container">
+                            <items jcr:primaryType="nt:unstructured">
+                                <togglePaddingTop
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/form/switch"
+                                    checked="{Boolean}false"
+                                    fieldLabel="Reduce Top Padding"
+                                    fieldDescription="Switch between Default Padding (Off) and Reduced Padding (On)"
+                                    name="./togglePaddingTop"/>
+                                <togglePaddingBottom
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/form/switch"
+                                    checked="{Boolean}false"
+                                    fieldLabel="Reduce Bottom Padding"
+                                    fieldDescription="Switch between Default Padding (Off) and Reduced Padding (On)"
+                                    name="./togglePaddingBottom"/>
+                                <sectionTitle
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                    fieldLabel="Section Title"
+                                    fieldDescription="Author the Section Title"
+                                    name="./sectionTitle"/>
+                                <title
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                    fieldLabel="Title"
+                                    fieldDescription="Author the Title"
+                                    required="{Boolean}true"
+                                    name="./title"/>
+                                <commonCtaLabel
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                    fieldLabel="CTA Label"
+                                    fieldDescription="Author the CTA Label Common to all the Featured Trainings"
+                                    required="{Boolean}true"
+                                    name="./commonCtaLabel"/>
+                                <commonCtaPath
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                                    rootPath="/content/bdb"
+                                    fieldLabel="CTA Path"
+                                    fieldDescription="Author the CTA Path Common to all the Featured Trainings"
+                                    required="{Boolean}true"
+                                    name="./commonCtaPath"/>
+                                <trainingDetailsPagePath
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                                    rootPath="/content/bdb"
+                                    fieldLabel="Training Details Page Path"
+                                    fieldDescription="Author the Path for the Training Details Page"
+                                    required="{Boolean}true"
+                                    name="./trainingDetailsPagePath"/>
+                            </items>
+                        </column>
+                    </items>
+                </featuredCarouselTab>
+                </items>
+            </tabs>
+        </items>
+    </content>
+</jcr:root>

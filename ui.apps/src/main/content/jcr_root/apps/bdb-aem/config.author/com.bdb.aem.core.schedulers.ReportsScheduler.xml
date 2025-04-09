@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="sling:OsgiConfig"
+        schdulerName = "$[env:schedulerName;default=Resource Missing notification reports scheduler]"
+        cronExpression = "$[env:cronExpression;default=0 0 0 * * ?]"
+        enabled = "$[env:enabled;default=true]"/>

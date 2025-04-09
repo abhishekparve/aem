@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Event Blog Carousel"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+        <items jcr:primaryType="nt:unstructured">
+            <columns
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/container">
+                <items jcr:primaryType="nt:unstructured">
+                    <whiteBackgroundOption
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+						fieldDescription="Check to enable White background color instead of default-Grey"
+                        name="./whiteBackgroundOption"
+                        text="White Background Color"
+                        uncheckedValue="{Boolean}false"
+                        value="{Boolean}true"/>
+                    <slides
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                        composite="{Boolean}true"
+                        fieldLabel="Slide Details">
+                        <granite:data
+                            jcr:primaryType="nt:unstructured"
+                            max-items="8"
+                            min-items="2"/>
+                        <field
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/container"
+                            name="./slides">
+                            <items jcr:primaryType="nt:unstructured">
+                                <column
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/container">
+                                    <items jcr:primaryType="nt:unstructured">
+                                        <selection
+                                            granite:class="cq-dialog-dropdown-multifield-showhide"
+                                            granite:id="search"
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                            fieldLabel="Select the type of carousel to be added"
+                                            name="./selection"
+                                            required="{Boolean}true">
+                                            <items jcr:primaryType="nt:unstructured">
+                                                <event
+                                                    jcr:primaryType="nt:unstructured"
+                                                    text="Event Details"
+                                                    value="event"/>
+                                                <blog
+                                                    jcr:primaryType="nt:unstructured"
+                                                    text="Blog Details"
+                                                    value="blog"/>
+                                            </items>
+                                        </selection>
+                                        <searchField
+                                            granite:class="list-option-showhide-target"
+                                            granite:id="pathval"
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                            fieldDescription="To search for an Event/Blog Details page."
+                                            fieldLabel="Search Field"
+                                            name="./searchField"
+                                            rootPath="/content/bdb"/>
+                                        <searchButton
+                                            granite:id="autopopulate"
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="/libs/granite/ui/components/coral/foundation/button"
+                                            name="./searchButton"
+                                            text="Submit"/>
+                                        <title
+                                            granite:class="list-option-showhide-target"
+                                            granite:id="title"
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            fieldDescription="Event/Blog Title"
+                                            fieldLabel="Title"
+                                            name="./title"/>
+                                        <description
+                                            granite:id="description"
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="/libs/granite/ui/components/coral/foundation/form/textarea"
+                                            fieldDescription="Event/Blog Description "
+                                            fieldLabel="Description  "
+                                            maxlength="{Long}250"
+                                            name="./description"/>
+                                        <subTitle
+                                            granite:class="list-option-showhide-target"
+                                            granite:id="subTitle"
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="/libs/granite/ui/components/coral/foundation/form/textarea"
+                                            fieldDescription="Blog Sub Title"
+                                            fieldLabel="Sub Title"
+                                            maxlength="{Long}250"
+                                            name="./subTitle"/>
+                                        <imageUrl
+                                            granite:class="list-option-showhide-target"
+                                            granite:id="imageUrl"
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                            fieldDescription="Event/Blog Image URL"
+                                            fieldLabel="Image URL"
+                                            name="./imageUrl"
+                                            rootPath="/content/dam"/>
+                                        <imageLinkUrl
+											jcr:primaryType="nt:unstructured"
+											sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+											fieldDescription="Image Link URL"
+											fieldLabel="Image Link URL"
+											name="./imageLinkUrl"
+											rootPath="/content"/>
+										<openNewImageLinkTab
+											jcr:primaryType="nt:unstructured"
+											sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+											fieldDescription="Check to open link in New Tab. By default, link opens in same tab."
+											name="./openNewImageLinkTab"
+											text="Open Link in New Tab"
+											uncheckedValue="{Boolean}false"
+											value="{Boolean}true"/>
+                                        <imageAltText
+                                            granite:class="list-option-showhide-target"
+                                            granite:id="imageAlt"
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            fieldDescription="Event/Blog Image Alt Text"
+                                            fieldLabel="Image Alt Text"
+                                            name="./imageAltText"/>
+                                        <ctaLabel
+                                            granite:class="list-option-showhide-target"
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            fieldDescription="CTA Label for Carousel"
+                                            fieldLabel="CTA Label"
+                                            name="./ctaLabel"/>
+                                        <ctaUrl
+                                            granite:class="list-option-showhide-target"
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                            fieldDescription="CTA URL for Carousel"
+                                            fieldLabel="CTA URL"
+                                            name="./ctaUrl"
+                                            rootPath="/content"/>
+                                    </items>
+                                </column>
+                            </items>
+                        </field>
+                    </slides>
+                </items>
+            </columns>
+        </items>
+    </content>
+</jcr:root>

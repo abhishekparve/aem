@@ -1,0 +1,883 @@
+<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html" />
+<sly data-sly-call="${templates.placeholder @ isEmpty = !properties.type}"></sly>
+<sly data-sly-use.flowDiagramHorizontalModel="com.bdb.aem.core.models.FlowDiagramHorizontalModel"></sly>
+   <article class="horizontal-flow-diagram app-js__horizontal-flow-diagram ${flowDiagramHorizontalModel.backgroundColor} ${properties.togglePaddingTop?'pt-2':''} ${properties.togglePaddingBottom?'pb-2':''}" id= "${flowDiagramHorizontalModel.articleId}">
+	<div class="bd-container">
+		<h2 data-sly-test="${flowDiagramHorizontalModel.sectionTitle}" class="sitecontent__title">${flowDiagramHorizontalModel.sectionTitle @context='html'}</h2>
+		<div data-sly-test="${flowDiagramHorizontalModel.description}" class="horizontal-flow-diagram__general-sub-title bd-rte">${flowDiagramHorizontalModel.description @context='html'}</div>
+		<!--  Desktop version started -->
+		<div class="d-none d-lg-block">
+			<div class="horizontal-flow-diagram__tab">
+				<div class="horizontal-flow-diagram__tab-list">
+					<sly data-sly-list.tabData = "${flowDiagramHorizontalModel.tabsBeanList}">
+						<div data-sly-test="${tabData.tabText}" id="${tabData.trimmedTabText}_${tabDataList.index}" class="horizontal-flow-diagram__tab-list-item d-tabs-selector">${tabData.tabText}</div>
+					</sly>
+				</div>
+				<div class="horizontal-flow-diagram__tab__content has-border">
+					<sly data-sly-list.tabData = "${flowDiagramHorizontalModel.tabsBeanList}">
+						<div class="horizontal-flow-diagram__tab__content-item ${tabData.subTabDetails.size > 0 ? 'has-sub-tabs horizontal-flow-diagram__tab' : ''} ${tabData.tabContentBackground}">
+							<!-- Sub Tab Data Started -->
+							<sly data-sly-list.subTabData = "${tabData.subTabDetails.size}">
+								<sly data-sly-test="${tabData.subTabDetails.size > 0}">
+									<div class="horizontal-flow-diagram__tab-list ${tabData.subTabDetails.size > 0 ? 'sub-list' : ''}">
+										<sly data-sly-list.subTabData = "${tabData.subTabDetails}">
+											<div class="horizontal-flow-diagram__tab-list-item sub-tab" id="${subTabData.trimmedSubTabText}_${subTabDataList.index}">
+												<img data-sly-test="${subTabData.subTabIcon}" class="tab-icon" src="${subTabData.subTabIcon}" />
+												<span>${subTabData.subTabText}</span>
+											</div>
+										</sly>
+									</div>
+									<div class="horizontal-flow-diagram__tab__content">
+										<sly data-sly-list.subTabData = "${tabData.subTabDetails}">
+											<div class="horizontal-flow-diagram__tab__content-item ${subTabData.tabContentBackground}">
+												<h3 class="horizontal-flow-diagram__tab__content-title">
+													<img data-sly-test="${subTabData.contentIcon}" class="vertical-tabs-component__title-icon" src="${subTabData.contentIcon}" alt="title-icon" />
+													<span>${subTabData.tabTitle}</span>
+												</h3>
+												<h4 class="horizontal-flow-diagram__tab__content-sub-title">${subTabData.subTitle}</h4>
+												<div class="horizontal-flow-diagram__tab__content-description bd-rte">
+													<p>${subTabData.description @context='html'}</p>
+												</div>
+												<!--  Video is enabled Started -->
+												<sly data-sly-test="${subTabData.videoEnabled == 'true' && subTabData.brightcoveVideoId}">
+													<div class="d-flex justify-content-start}">
+														<div class="d-flex flex-sm-row text-and-image__container">
+															<div class="text-and-image__vdo-container" data-toggle="modal" data-target="#trainingVideo-${tabData.trimmedTabText}_${subTabData.trimmedSubTabText}_${subTabDataList.index}">
+																<img src="${subTabData.largeImageUrl}" alt="${subTabData.largeAltText}" title="${subTabData.largeAltText}" tabindex="0"/>
+																<img src="${subTabData.playVideoIcon}" alt="playIcon" tabindex="0" class="play-btn"/>
+															</div>
+															<div class="modal fade text-and-image__banner-img-modal-horizontal" id="trainingVideo-${tabData.trimmedTabText}_${subTabData.trimmedSubTabText}_${subTabDataList.index}" tabindex="-1" role="dialog" aria-labelledby="trainingVideoTitle" aria-hidden="true" data-backdrop="static">
+																<div class="modal-dialog modal-dialog-centered" role="document">
+																	<div class="modal-content">
+																		<div class="modal-header">
+																			<button type="button" class="close text-and-image__banner-modal-horizontal-close" data-dismiss="modal" aria-label="Close">
+																				<span aria-hidden="true">&times;</span>
+																			</button>
+																		</div>
+																		<div class="modal-body text-and-image__banner-img-modal-horizontal-body is-video" data-accountId="${flowDiagramHorizontalModel.brightcoveAccountId}" data-playerId="${flowDiagramHorizontalModel.brightcovePlayerId}" data-videoId="${subTabData.brightcoveVideoId}">
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div data-sly-test="${subTabData.largeImageCaption}" class="image-caption text-left bd-rte">
+															${subTabData.largeImageCaption @context='html'}
+													</div>
+												</sly>
+												<!--  Video is disabled Started-->
+												<sly data-sly-test="${subTabData.videoEnabled != 'true'}">
+													<div class="row px-3 justify-content-start}">
+														<sly data-sly-test="${subTabData.imageType == 'small' && subTabData.imageList}">
+															<sly data-sly-list.item="${subTabData.imageList}">
+																<div class="text-and-image__image-wrapper">
+																	<sly data-sly-test="${item.enlargedImagePath}">
+																		<div class="text-and-image__image-container_images col-6 col-lg-3 sec mx-0 bd-rte ${subTabData.borderEnable=='false'?'':'text-and-image__border-image'}" data-toggle="modal"
+																			data-target="#dynamicModal-${resource.parent.name}-${resource.name}" data-title="${item.smallImageTitle}"
+																			data-desc="${item.smallImageDescription}" data-src="${item.enlargedImagePath}"
+																			data-alt="${item.altText}" data-size="${item.imageEnlargeSize}">
+																			<div class="text-and-image__image-container_images_image col-12 d-flex align-items-center justify-content-start position-relative px-0">
+																				<div class="d-flex align-items-center justify-content-start position-relative">
+																					<picture>
+																						<source media="(max-width: 900px)"
+																			 				srcset=${item.imageUrl}  onload="window.aos && window.aos.refresh()">						 
+																						<img  data-src=${item.imageUrl} class="lazy ${item.smallImageLinkUrl ? '' : 'normal-cursor'}"
+																							alt="${item.altText}" title="${item.altText}" onload="window.aos && window.aos.refresh()"
+																			 				onerror='this.onerror=null;this.src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/images/product-default.png";'>											     
+																					</picture>
+																				</div>
+																			</div>
+																			<!-- Trigger the modal and overlay -->
+																			<div class="text-and-image__image-container_overlay">
+																				<div class="text-and-image__image-container_icon">
+																					<div class="d-flex align-items-center justify-content-start position-relative ">
+																						<sly data-sly-test="${item.magnifiyGlassColor == 'dark-blue'}">
+																						<picture>
+																							<source media="(max-width: 900px)"
+																									srcset=/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/search-icon-M.svg  onload="window.aos && window.aos.refresh()">
+																							<img  src=/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/Search-icon-new.svg
+																								alt="apps1" onload="window.aos && window.aos.refresh()"
+																								onerror='this.onerror=null;this.src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/images/product-default.png";'>
+																						</picture>
+																						</sly>
+																						
+																						<sly data-sly-test="${item.magnifiyGlassColor == 'white'}">
+																						<picture>
+																							<source media="(max-width: 900px)"
+																									srcset=/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/icon_zoom_white.svg  onload="window.aos && window.aos.refresh()">
+																							<img  src=/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/icon_zoom_white.svg
+																								alt="apps1" onload="window.aos && window.aos.refresh()"
+																								onerror='this.onerror=null;this.src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/images/product-default.png";'>
+																						</picture>
+																						</sly>
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+																	</sly>
+									
+																	<sly data-sly-test="${!item.enlargedImagePath}">
+																		<div class="text-and-image__image-container_images col-6 col-lg-3 sec mx-0 ${subTabData.borderEnable=='false'?'':'text-and-image__border-image'}">
+																			<div class="text-and-image__image-container_images_image col-12 d-flex align-items-center justify-content-start position-relative px-0">
+																				<div class="d-flex align-items-center justify-content-start position-relative ">
+																					<picture>
+																						<source media="(max-width: 900px)"
+																								srcset=${item.imageUrl}  onload="window.aos && window.aos.refresh()">
+																						<sly data-sly-test="${item.smallImageLinkUrl}">
+																							<a href="${item.smallImageLinkUrl}" target="${item.openLinkInNewTab == 'true' ? '_blank' : '_self'}">
+																								<img  data-src=${item.imageUrl} class="lazy" alt="${item.altText}" title="${item.altText}" onload="window.aos && window.aos.refresh()" onerror='this.onerror=null;this.src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/images/product-default.png";'>
+																					        </a>
+																					   </sly>
+																					   <sly data-sly-test="${!item.smallImageLinkUrl}">
+																							<img  data-src=${item.imageUrl} class="lazy" alt="${item.altText}" title="${item.altText}" onload="window.aos && window.aos.refresh()" onerror='this.onerror=null;this.src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/images/product-default.png";'>
+																					   </sly>
+																					</picture>
+																				</div>
+																			</div>
+																			<!-- No modal and No overlay -->
+																		</div>
+																	</sly>
+									
+																	<div data-sly-test="${item.smallImageCaption}" class="text-and-image__image-container_images_caption text-left col-12 col-lg-12 bd-rte">
+																		${item.smallImageCaption @context='html'}
+																	</div>
+																</div>
+															</sly>
+														</sly>
+													</div>
+													<sly data-sly-test="${subTabData.imageType == 'large' && subTabData.largeImageUrl}">
+														<sly data-sly-test="${subTabData.largeEnlargedImagePath}">
+															<div class="col-12 px-0 text-and-image__single-img bd-rte" data-toggle="modal"
+																data-target="#dynamicModal-${resource.parent.name}-${resource.name}" data-title="${subTabData.largeImageTitle}"
+																data-desc="${subTabData.largeImageDescription}"
+																data-src="${subTabData.largeEnlargedImagePath}"
+																data-alt="${subTabData.largeAltText}" data-size="${subTabData.largeImageEnlargeSize}">
+																<div class="d-flex align-items-center justify-content-start position-relative ${subTabData.borderEnable=='false'?'':'text-and-image__border-image'}">
+																	<picture>
+																		<source media="(max-width: 900px)"
+																				srcset=${subTabData.largeImageUrl}  onload="window.aos && window.aos.refresh()">
+																		<img  data-src=${subTabData.largeImageUrl} class="lazy"
+																			alt="${subTabData.largeAltText}" title="${subTabData.largeAltText}" onload="window.aos && window.aos.refresh()"
+																			onerror='this.onerror=null;this.src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/images/product-default.png";'>
+																	</picture>
+																	<!-- Trigger the modal and overlay -->
+																	<div class="text-and-image__image-container_overlay">
+																		<div class="text-and-image__image-container_icon">
+																			<div class="d-flex align-items-center justify-content-start position-relative ">
+																				<sly data-sly-test="${subTabData.magnifiyGlassColor == 'dark-blue'}">
+																				<picture>
+																					<source media="(max-width: 900px)"
+																							srcset=/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/search-icon-M.svg  onload="window.aos && window.aos.refresh()">
+																					<img  src=/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/Search-icon-new.svg
+																						alt="apps1" onload="window.aos && window.aos.refresh()"
+																						onerror='this.onerror=null;this.src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/images/product-default.png";'>
+																				</picture>
+																				</sly>
+																				<sly data-sly-test="${subTabData.magnifiyGlassColor == 'white'}">
+																				<picture>
+																					<source media="(max-width: 900px)"
+																							srcset=/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/icon_zoom_white.svg  onload="window.aos && window.aos.refresh()">
+																					<img  src=/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/icon_zoom_white.svg
+																						alt="apps1" onload="window.aos && window.aos.refresh()"
+																						onerror='this.onerror=null;this.src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/images/product-default.png";'>
+																				</picture>
+																				</sly>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+																<div data-sly-test="${subTabData.largeImageCaption}" class="image-caption text-left bd-rte">
+																	${subTabData.largeImageCaption @context='html'}
+																</div>
+															</div>
+														</sly>
+								
+														<sly data-sly-test="${!subTabData.largeEnlargedImagePath}">
+															<div class="col-12 px-0">
+																<div class="d-flex align-items-center justify-content-start position-relative ${subTabData.borderEnable=='false'?'':'text-and-image__border-image'}">
+																	<picture>
+																		<source media="(max-width: 900px)"
+																				srcset=${subTabData.largeImageUrl}  onload="window.aos && window.aos.refresh()">
+																		 <sly data-sly-test="${subTabData.largeImageLinkUrl}">
+																		 	<a href="${subTabData.largeImageLinkUrl}" target="${subTabData.openLinkInNewTab == 'true' ? '_blank' : '_self'}">
+																				<img  data-src=${subTabData.largeImageUrl} class="lazy" alt="${subTabData.largeAltText}" title="${subTabData.largeAltText}" onload="window.aos && window.aos.refresh()" onerror='this.onerror=null;this.src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/images/product-default.png";'>
+																	        </a>
+																	    </sly> 
+																	    <sly data-sly-test="${!subTabData.largeImageLinkUrl}">
+																			<img  data-src=${subTabData.largeImageUrl} class="lazy" alt="${subTabData.largeAltText}" title="${subTabData.largeAltText}" onload="window.aos && window.aos.refresh()" onerror='this.onerror=null;this.src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/images/product-default.png";'>
+																	    </sly> 
+																	</picture>
+																	<!-- No modal and No overlay -->
+																</div>
+																<div data-sly-test="${subTabData.largeImageCaption}" class="large-images__caption text-left bd-rte">
+																	${subTabData.largeImageCaption @context='html'}
+																</div>
+															</div>
+														</sly>
+													</sly>
+												</sly>
+												<div data-sly-test="${subTabData.labelCta}" class="text-and-image__cta-container mt-5 px-3 row justify-content-start">
+													<a href="${subTabData.urlCta}" target="${subTabData.openNewTabCta == 'true' ? '_blank' : '_self'}" class="text-and-image-cta btn ${subTabData.bluePrimaryCta ? 'btn-primary-blue text-white' : 'btn-secondary'} btn-md">${subTabData.labelCta @context='html'}</a>
+												</div>
+											</div>
+										</sly>
+									</div>
+								</sly>
+							</sly>
+							<!-- Sub Tab Data Ended -->
+
+							<!-- Main Tab Data Started -->
+							<sly data-sly-test="${tabData.subTabDetails.size == 0}">
+								<h3 class="horizontal-flow-diagram__tab__content-title">
+									<img data-sly-test="${tabData.contentIcon}" class="vertical-tabs-component__title-icon" src="${tabData.contentIcon}" alt="title-icon"/>
+									<span>${tabData.tabTitle}</span>
+								</h3>
+								<h4 class="horizontal-flow-diagram__tab__content-sub-title">${tabData.subTitle}</h4>
+								<div class="horizontal-flow-diagram__tab__content-description bd-rte">
+									<p>${tabData.description @context='html'}</p>
+								</div>
+								<!--  Video is enabled Started -->
+								<sly data-sly-test="${tabData.videoEnabled == 'true' && tabData.brightcoveVideoId}">
+									<div class="d-flex justify-content-start}">
+										<div class="d-flex flex-sm-row text-and-image__container">
+											<div class="text-and-image__vdo-container" data-toggle="modal" data-target="#trainingVideo-${tabData.trimmedTabText}_${tabDataList.index}">
+												<img src="${tabData.largeImageUrl}" alt="${tabData.largeAltText}" title="${tabData.largeAltText}" tabindex="0"/>
+												<img src="${tabData.playVideoIcon}" alt="playIcon" tabindex="0" class="play-btn"/>
+											</div>
+											<div class="modal fade text-and-image__banner-img-modal-horizontal" id="trainingVideo-${tabData.trimmedTabText}_${tabDataList.index}" tabindex="-1" role="dialog" aria-labelledby="trainingVideoTitle" aria-hidden="true" data-backdrop="static">
+												<div class="modal-dialog modal-dialog-centered" role="document">
+													<div class="modal-content">
+														<div class="modal-header">
+															<button type="button" class="close text-and-image__banner-modal-horizontal-close" data-dismiss="modal" aria-label="Close">
+																<span aria-hidden="true">&times;</span>
+															</button>
+														</div>
+														<div class="modal-body text-and-image__banner-img-modal-horizontal-body is-video" data-accountId="${flowDiagramHorizontalModel.brightcoveAccountId}" data-playerId="${flowDiagramHorizontalModel.brightcovePlayerId}" data-videoId="${tabData.brightcoveVideoId}">
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div data-sly-test="${tabData.largeImageCaption}" class="image-caption text-left bd-rte">
+										${tabData.largeImageCaption @context='html'}
+									</div>
+								</sly>
+								<!--  Video is enabled Ended -->
+								<sly data-sly-test="${tabData.videoEnabled != 'true'}">
+									<sly data-sly-test="${tabData.imageType == 'small' && tabData.imageList}">
+										<div class="row px-3 justify-content-start}">
+											<sly data-sly-list.item="${tabData.imageList}">
+												<div class="text-and-image__image-wrapper">
+													<sly data-sly-test="${item.enlargedImagePath}">
+														<div class="text-and-image__image-container_images col-6 col-lg-3 sec mx-0 bd-rte ${tabData.borderEnable=='false'?'':'text-and-image__border-image'}" data-toggle="modal"
+															data-target="#dynamicModal-${resource.parent.name}-${resource.name}" data-title="${item.smallImageTitle}"
+															data-desc="${item.smallImageDescription}" data-src="${item.enlargedImagePath}"
+															data-alt="${item.altText}" data-size="${item.imageEnlargeSize}">
+															<div class="text-and-image__image-container_images_image col-12 d-flex align-items-center justify-content-start position-relative px-0">
+																<div class="d-flex align-items-center justify-content-start position-relative ">
+																	<picture>
+																		<source media="(max-width: 900px)"
+															 				srcset=${item.imageUrl}  onload="window.aos && window.aos.refresh()">						 
+																		<img data-src=${item.imageUrl} class="lazy ${item.smallImageLinkUrl ? '' : 'normal-cursor'}"
+																			alt="${item.altText}" title="${item.altText}" onload="window.aos && window.aos.refresh()"
+															 				onerror='this.onerror=null;this.src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/images/product-default.png";'>											     
+																	</picture>
+																</div>
+															</div>
+															<!-- Trigger the modal and overlay -->
+															<div class="text-and-image__image-container_overlay">
+																<div class="text-and-image__image-container_icon">
+																	<div class="d-flex align-items-center justify-content-start position-relative ">
+																		<sly data-sly-test="${item.magnifiyGlassColor == 'dark-blue'}">
+																		<picture>
+																			<source media="(max-width: 900px)"
+																					srcset=/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/search-icon-M.svg  onload="window.aos && window.aos.refresh()">
+																			<img src=/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/Search-icon-new.svg
+																				alt="apps1" onload="window.aos && window.aos.refresh()"
+																				onerror='this.onerror=null;this.src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/images/product-default.png";'>
+																		</picture>
+																		</sly>
+																		
+																		<sly data-sly-test="${item.magnifiyGlassColor == 'white'}">
+																		<picture>
+																			<source media="(max-width: 900px)"
+																					srcset=/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/icon_zoom_white.svg  onload="window.aos && window.aos.refresh()">
+																			<img  src=/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/icon_zoom_white.svg
+																				alt="apps1" onload="window.aos && window.aos.refresh()"
+																				onerror='this.onerror=null;this.src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/images/product-default.png";'>
+																		</picture>
+																		</sly>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</sly>
+													<sly data-sly-test="${!item.enlargedImagePath}">
+														<div class="text-and-image__image-container_images col-6 col-lg-3 sec mx-0 ${tabData.borderEnable=='false'?'':'text-and-image__border-image'}">
+															<div class="text-and-image__image-container_images_image col-12 d-flex align-items-center justify-content-start position-relative px-0">
+																<div class="d-flex align-items-center justify-content-start position-relative ">
+																	<picture>
+																		<source media="(max-width: 900px)"
+																				srcset=${item.imageUrl}  onload="window.aos && window.aos.refresh()">
+																		<sly data-sly-test="${item.smallImageLinkUrl}">
+																			<a href="${item.smallImageLinkUrl}" target="${item.openLinkInNewTab == 'true' ? '_blank' : '_self'}">
+																				<img  data-src=${item.imageUrl} class="lazy" alt="${item.altText}" title="${item.altText}" onload="window.aos && window.aos.refresh()" onerror='this.onerror=null;this.src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/images/product-default.png";'>
+																	        </a>
+																	   </sly>
+																	   <sly data-sly-test="${!item.smallImageLinkUrl}">
+																			<img  data-src=${item.imageUrl} class="lazy" alt="${item.altText}" title="${item.altText}" onload="window.aos && window.aos.refresh()" onerror='this.onerror=null;this.src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/images/product-default.png";'>
+																	   </sly>
+																	</picture>
+																</div>
+															</div>
+															<!-- No modal and No overlay -->
+														</div>
+													</sly>
+													<div data-sly-test="${item.smallImageCaption}" class="text-and-image__image-container_images_caption text-left col-12 col-lg-12 bd-rte">
+														${item.smallImageCaption @context='html'}
+													</div>
+												</div>
+											</sly>
+										</div>
+									</sly>
+									<sly data-sly-test="${tabData.imageType == 'large' && tabData.largeImageUrl}">
+										<sly data-sly-test="${tabData.largeEnlargedImagePath}">
+											<div class="col-12 px-0 text-and-image__single-img bd-rte" data-toggle="modal"
+												data-target="#dynamicModal-${resource.parent.name}-${resource.name}" data-title="${tabData.largeImageTitle}"
+												data-desc="${tabData.largeImageDescription}"
+												data-src="${tabData.largeEnlargedImagePath}"
+												data-alt="${tabData.largeAltText}" data-size="${tabData.largeImageEnlargeSize}">
+												<div class="d-flex align-items-center justify-content-start position-relative ${tabData.borderEnable=='false'?'':'text-and-image__border-image'}">
+													<picture>
+														<source media="(max-width: 900px)"
+																srcset=${tabData.largeImageUrl}  onload="window.aos && window.aos.refresh()">
+														<img data-src=${tabData.largeImageUrl} class="lazy"
+															alt="${tabData.largeAltText}" title="${tabData.largeAltText}" onload="window.aos && window.aos.refresh()"
+															onerror='this.onerror=null;this.src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/images/product-default.png";'>
+													</picture>
+													<!-- Trigger the modal and overlay -->
+													<div class="text-and-image__image-container_overlay">
+														<div class="text-and-image__image-container_icon">
+															<div class="d-flex align-items-center justify-content-start position-relative ">
+																<sly data-sly-test="${tabData.magnifiyGlassColor == 'dark-blue'}">
+																<picture>
+																	<source media="(max-width: 900px)"
+																			srcset=/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/search-icon-M.svg  onload="window.aos && window.aos.refresh()">
+																	<img src=/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/Search-icon-new.svg
+																		alt="apps1" onload="window.aos && window.aos.refresh()"
+																		onerror='this.onerror=null;this.src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/images/product-default.png";'>
+																</picture>
+																</sly>
+																<sly data-sly-test="${tabData.magnifiyGlassColor == 'white'}">
+																<picture>
+																	<source media="(max-width: 900px)"
+																			srcset=/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/icon_zoom_white.svg  onload="window.aos && window.aos.refresh()">
+																	<img  src=/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/icon_zoom_white.svg
+																		alt="apps1" onload="window.aos && window.aos.refresh()"
+																		onerror='this.onerror=null;this.src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/images/product-default.png";'>
+																</picture>
+																</sly>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div data-sly-test="${tabData.largeImageCaption}" class="image-caption text-left bd-rte">
+													${tabData.largeImageCaption @context='html'}
+												</div>
+											</div>
+										</sly>
+										<sly data-sly-test="${!tabData.largeEnlargedImagePath}">
+											<div class="col-12 px-0">
+												<div class="d-flex align-items-center justify-content-start position-relative ${tabData.borderEnable=='false'?'':'text-and-image__border-image'}">
+													<picture>
+														<source media="(max-width: 900px)"
+																srcset=${tabData.largeImageUrl}  onload="window.aos && window.aos.refresh()">
+														 <sly data-sly-test="${tabData.largeImageLinkUrl}">
+														 	<a href="${tabData.largeImageLinkUrl}" target="${tabData.openLinkInNewTab == 'true' ? '_blank' : '_self'}">
+																<img  data-src=${tabData.largeImageUrl} class="lazy" alt="${tabData.largeAltText}" title="${tabData.largeAltText}" onload="window.aos && window.aos.refresh()" onerror='this.onerror=null;this.src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/images/product-default.png";'>
+													        </a>
+													    </sly> 
+													    <sly data-sly-test="${!tabData.largeImageLinkUrl}">
+															<img  data-src=${tabData.largeImageUrl} class="lazy" alt="${tabData.largeAltText}" title="${tabData.largeAltText}" onload="window.aos && window.aos.refresh()" onerror='this.onerror=null;this.src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/images/product-default.png";'>
+													    </sly> 
+													</picture>
+													<!-- No modal and No overlay -->
+												</div>
+												<div data-sly-test="${tabData.largeImageCaption}" class="large-images__caption text-left bd-rte">
+													${tabData.largeImageCaption @context='html'}
+												</div>
+											</div>
+										</sly>
+									</sly>
+								</sly>
+								<div data-sly-test="${tabData.labelCta}" class="text-and-image__cta-container mt-5 px-3 row justify-content-start">
+									<a href="${tabData.urlCta}" target="${tabData.openNewTabCta == 'true' ? '_blank' : '_self'}" class="text-and-image-cta btn ${tabData.bluePrimaryCta ? 'btn-primary-blue text-white' : 'btn-secondary'} btn-md">${tabData.labelCta @context='html'}</a>
+								</div>
+							</sly>
+							<!-- Main Tab Data Ended -->
+						</div>
+					</sly>
+				</div>
+			</div>
+		</div>
+		<!--  Desktop version ended -->
+		
+		<!--  Mobile version started -->
+		<div class="d-lg-none">
+            <div class="horizontal-flow-diagram__accordion" id="horizontalMainTab">
+	            <sly data-sly-list.tabData = "${flowDiagramHorizontalModel.tabsBeanList}">
+	                <div class="horizontal-flow-diagram__accordion-item">
+	                    <div class="horizontal-flow-diagram__accordion-item-header" id="${tabData.trimmedTabText}_${tabDataList.index}" aria-labelledby="bottomNavHeading_${tabDataList.index}">
+	                        <div id="bottomNavHeading_${tabDataList.index}">
+	                            <a href="#!" class="d-flex justify-content-between horizontal-flow-diagram__accordion-item-text" type="button" data-toggle="collapse"
+	                                data-target="#tab_${tabData.trimmedTabText}_${tabDataList.index}" aria-expanded="true" aria-label="${tabData.trimmedTabText}_${tabDataList.index}"
+	                                tabindex="0">
+	                                <sly data-sly-test="${tabData.tabText}">${tabData.tabText}</sly>
+	                                <img class="arrow-down"
+	                                    src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/dropdown-arrow-down.svg"
+	                                    alt="Down" />
+	                                <img class="arrow-up" src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/dropdown-arrow-up.svg"
+	                                    alt="Up" />
+	                            </a>
+	                        </div>
+	                        <div id="tab_${tabData.trimmedTabText}_${tabDataList.index}" class="collapse show m-tabs-selector horizontal-flow-diagram__accordion-item-body ${tabData.subTabDetails.size > 0 ? 'has-sub-tabs horizontal-flow-diagram__tab' : ''} ${tabData.tabContentBackground}"
+	                            aria-labelledby="${tabData.trimmedTabText}_${tabDataList.index}" data-parent="#horizontalMainTab">
+	                            <sly data-sly-list.subTabData = "${tabData.subTabDetails.size}">
+	                            	<ul class="horizontal-flow-diagram__accordion-item-body-list horizontal-flow-diagram__accordion-level-2" id="horizontalSubtab">
+										<sly data-sly-list.subTabData = "${tabData.subTabDetails}">
+											<div class="horizontal-flow-diagram__accordion-item-header" id="${subTabData.trimmedSubTabText}_${subTabDataList.index}" aria-labelledby="${tabData.trimmedTabText}_${subTabData.trimmedSubTabText}_${subTabDataList.index}">
+						                    	<div class="py-2" id="subHeading_${subTabDataList.index}">
+						                    		<span class="d-flex justify-content-between horizontal-flow-diagram__accordion-item-text" type="button" data-toggle="collapse"
+						                                data-target="#sub_${subTabData.trimmedSubTabText}_${subTabDataList.index}" aria-expanded="true" aria-label="${tabData.trimmedTabText}_${subTabData.trimmedSubTabText}_${subTabDataList.index}"
+						                                tabindex="0">
+						                                <sly data-sly-test="${subTabData.subTabText}">
+						                                	<span>${subTabData.subTabText}</span>
+						                                </sly>
+						                                <img class="arrow-down"
+						                                    src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/dropdown-arrow-down.svg"
+						                                    alt="Down" />
+						                                <img class="arrow-up" src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/dropdown-arrow-up.svg"
+						                                    alt="Up" />
+						                            </span>
+						                    	</div>
+						                    	<div id="sub_${subTabData.trimmedSubTabText}_${subTabDataList.index}"
+                                                	class="collapse show horizontal-flow-diagram__accordion-item-body px-0 py-3"
+                                                	aria-labelledby="${subTabData.trimmedSubTabText}" data-parent="#horizontalSubtab">
+													<h3 class="horizontal-flow-diagram__tab__content-title">
+														<img data-sly-test="${subTabData.contentIcon}" class="vertical-tabs-component__title-icon" src="${subTabData.contentIcon}" alt="title-icon" />
+														<span>${subTabData.tabTitle}</span>
+													</h3>
+													<h4 class="horizontal-flow-diagram__tab__content-sub-title">${subTabData.subTitle}</h4>
+													<div class="horizontal-flow-diagram__tab__content-description bd-rte">
+														<p>${subTabData.description @context='html'}</p>
+													</div>
+													<!--  Video is enabled Started -->
+													<sly data-sly-test="${subTabData.videoEnabled == 'true' && subTabData.brightcoveVideoId}">
+														<div class="d-flex justify-content-start}">
+															<div class="d-flex flex-sm-row text-and-image__container">
+																<div class="text-and-image__vdo-container" data-toggle="modal" data-target="#mb-trainingVideo-${tabData.trimmedTabText}_${subTabData.trimmedSubTabText}_${subTabDataList.index}">
+																	<img src="${subTabData.largeImageUrl}" alt="${subTabData.largeAltText}" title="${subTabData.largeAltText}" tabindex="0"/>
+																	<img src="${subTabData.playVideoIcon}" alt="playIcon" tabindex="0" class="play-btn"/>
+																</div>
+																<div class="modal fade text-and-image__banner-img-modal-horizontal" id="mb-trainingVideo-${tabData.trimmedTabText}_${subTabData.trimmedSubTabText}_${subTabDataList.index}" tabindex="-1" role="dialog" aria-labelledby="trainingVideoTitle" aria-hidden="true" data-backdrop="static">
+																	<div class="modal-dialog modal-dialog-centered" role="document">
+																		<div class="modal-content">
+																			<div class="modal-header">
+																				<button type="button" class="close text-and-image__banner-modal-horizontal-close" data-dismiss="modal" aria-label="Close">
+																					<span aria-hidden="true">&times;</span>
+																				</button>
+																			</div>
+																			<div class="modal-body text-and-image__banner-img-modal-horizontal-body is-video" data-accountId="${flowDiagramHorizontalModel.brightcoveAccountId}" data-playerId="${flowDiagramHorizontalModel.brightcovePlayerId}" data-videoId="${subTabData.brightcoveVideoId}">
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div data-sly-test="${subTabData.largeImageCaption}" class="image-caption text-left bd-rte">
+															${subTabData.largeImageCaption @context='html'}
+														</div>
+													</sly>
+													<!--  Video is disabled Started-->
+													<sly data-sly-test="${subTabData.videoEnabled != 'true'}">
+														<div class="row px-3 justify-content-start}">
+															<sly data-sly-test="${subTabData.imageType == 'small' && subTabData.imageList}">
+																<sly data-sly-list.item="${subTabData.imageList}">
+																	<div class="text-and-image__image-wrapper">
+																		<sly data-sly-test="${item.enlargedImagePath}">
+																			<div class="text-and-image__image-container_images col-6 col-lg-3 sec mx-0 bd-rte ${subTabData.borderEnable=='false'?'':'text-and-image__border-image'}" data-toggle="modal"
+																				data-target="#dynamicModal-${resource.parent.name}-${resource.name}" data-title="${item.smallImageTitle}"
+																				data-desc="${item.smallImageDescription}" data-src="${item.enlargedImagePath}"
+																				data-alt="${item.altText}" data-size="${item.imageEnlargeSize}">
+																				<div class="text-and-image__image-container_images_image col-12 d-flex align-items-center justify-content-start position-relative px-0">
+																					<div class="d-flex align-items-center justify-content-start position-relative">
+																						<picture>
+																							<source media="(max-width: 900px)"
+																				 				srcset=${item.imageUrl}  onload="window.aos && window.aos.refresh()">						 
+																							<img  data-src=${item.imageUrl} class="lazy ${item.smallImageLinkUrl ? '' : 'normal-cursor'}"
+																								alt="${item.altText}" title="${item.altText}" onload="window.aos && window.aos.refresh()"
+																				 				onerror='this.onerror=null;this.src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/images/product-default.png";'>											     
+																						</picture>
+																					</div>
+																				</div>
+																				<!-- Trigger the modal and overlay -->
+																				<div class="text-and-image__image-container_overlay">
+																					<div class="text-and-image__image-container_icon">
+																						<div class="d-flex align-items-center justify-content-start position-relative ">
+																							<sly data-sly-test="${item.magnifiyGlassColor == 'dark-blue'}">
+																							<picture>
+																								<source media="(max-width: 900px)"
+																										srcset=/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/search-icon-M.svg  onload="window.aos && window.aos.refresh()">
+																								<img  src=/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/Search-icon-new.svg
+																									alt="apps1" onload="window.aos && window.aos.refresh()"
+																									onerror='this.onerror=null;this.src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/images/product-default.png";'>
+																							</picture>
+																							</sly>
+																							
+																							<sly data-sly-test="${item.magnifiyGlassColor == 'white'}">
+																							<picture>
+																								<source media="(max-width: 900px)"
+																										srcset=/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/icon_zoom_white.svg  onload="window.aos && window.aos.refresh()">
+																								<img  src=/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/icon_zoom_white.svg
+																									alt="apps1" onload="window.aos && window.aos.refresh()"
+																									onerror='this.onerror=null;this.src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/images/product-default.png";'>
+																							</picture>
+																							</sly>
+																						</div>
+																					</div>
+																				</div>
+																			</div>
+																		</sly>
+										
+																		<sly data-sly-test="${!item.enlargedImagePath}">
+																			<div class="text-and-image__image-container_images col-6 col-lg-3 sec mx-0 ${subTabData.borderEnable=='false'?'':'text-and-image__border-image'}">
+																				<div class="text-and-image__image-container_images_image col-12 d-flex align-items-center justify-content-start position-relative px-0">
+																					<div class="d-flex align-items-center justify-content-start position-relative ">
+																						<picture>
+																							<source media="(max-width: 900px)"
+																									srcset=${item.imageUrl}  onload="window.aos && window.aos.refresh()">
+																							<sly data-sly-test="${item.smallImageLinkUrl}">
+																								<a href="${item.smallImageLinkUrl}" target="${item.openLinkInNewTab == 'true' ? '_blank' : '_self'}">
+																									<img  data-src=${item.imageUrl} class="lazy" alt="${item.altText}" title="${item.altText}" onload="window.aos && window.aos.refresh()" onerror='this.onerror=null;this.src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/images/product-default.png";'>
+																						        </a>
+																						   </sly>
+																						   <sly data-sly-test="${!item.smallImageLinkUrl}">
+																								<img  data-src=${item.imageUrl} class="lazy" alt="${item.altText}" title="${item.altText}" onload="window.aos && window.aos.refresh()" onerror='this.onerror=null;this.src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/images/product-default.png";'>
+																						   </sly>
+																						</picture>
+																					</div>
+																				</div>
+																				<!-- No modal and No overlay -->
+																			</div>
+																		</sly>
+										
+																		<div data-sly-test="${item.smallImageCaption}" class="text-and-image__image-container_images_caption text-left col-12 col-lg-12 bd-rte">
+																			${item.smallImageCaption @context='html'}
+																		</div>
+																	</div>
+																</sly>
+															</sly>
+														</div>
+														<sly data-sly-test="${subTabData.imageType == 'large' && subTabData.largeImageUrl}">
+															<sly data-sly-test="${subTabData.largeEnlargedImagePath}">
+																<div class="col-12 px-0 text-and-image__single-img bd-rte" data-toggle="modal"
+																	data-target="#dynamicModal-${resource.parent.name}-${resource.name}" data-title="${subTabData.largeImageTitle}"
+																	data-desc="${subTabData.largeImageDescription}"
+																	data-src="${subTabData.largeEnlargedImagePath}"
+																	data-alt="${subTabData.largeAltText}" data-size="${subTabData.largeImageEnlargeSize}">
+																	<div class="d-flex align-items-center justify-content-start position-relative ${subTabData.borderEnable=='false'? '':'text-and-image__border-image'}">
+																		<picture>
+																			<source media="(max-width: 900px)"
+																					srcset=${subTabData.largeImageUrl}  onload="window.aos && window.aos.refresh()">
+																			<img  data-src=${subTabData.largeImageUrl} class="lazy"
+																				alt="${subTabData.largeAltText}" title="${subTabData.largeAltText}" onload="window.aos && window.aos.refresh()"
+																				onerror='this.onerror=null;this.src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/images/product-default.png";'>
+																		</picture>
+																		<!-- Trigger the modal and overlay -->
+																		<div class="text-and-image__image-container_overlay">
+																			<div class="text-and-image__image-container_icon">
+																				<div class="d-flex align-items-center justify-content-start position-relative ">
+																					<sly data-sly-test="${subTabData.magnifiyGlassColor == 'dark-blue'}">
+																					<picture>
+																						<source media="(max-width: 900px)"
+																								srcset=/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/search-icon-M.svg  onload="window.aos && window.aos.refresh()">
+																						<img  src=/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/Search-icon-new.svg
+																							alt="apps1" onload="window.aos && window.aos.refresh()"
+																							onerror='this.onerror=null;this.src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/images/product-default.png";'>
+																					</picture>
+																					</sly>
+																					<sly data-sly-test="${subTabData.magnifiyGlassColor == 'white'}">
+																					<picture>
+																						<source media="(max-width: 900px)"
+																								srcset=/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/icon_zoom_white.svg  onload="window.aos && window.aos.refresh()">
+																						<img  src=/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/icon_zoom_white.svg
+																							alt="apps1" onload="window.aos && window.aos.refresh()"
+																							onerror='this.onerror=null;this.src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/images/product-default.png";'>
+																					</picture>
+																					</sly>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																	<div data-sly-test="${subTabData.largeImageCaption}" class="image-caption text-left bd-rte">
+																		${subTabData.largeImageCaption @context='html'}
+																	</div>
+																</div>
+															</sly>
+									
+															<sly data-sly-test="${!subTabData.largeEnlargedImagePath}">
+																<div class="col-12 px-0">
+																	<div class="d-flex align-items-center justify-content-start position-relative ${subTabData.borderEnable=='false'?'':'text-and-image__border-image'}">
+																		<picture>
+																			<source media="(max-width: 900px)"
+																					srcset=${subTabData.largeImageUrl}  onload="window.aos && window.aos.refresh()">
+																			 <sly data-sly-test="${subTabData.largeImageLinkUrl}">
+																			 	<a href="${subTabData.largeImageLinkUrl}" target="${subTabData.openLinkInNewTab == 'true' ? '_blank' : '_self'}">
+																					<img  data-src=${subTabData.largeImageUrl} class="lazy" alt="${subTabData.largeAltText}" title="${subTabData.largeAltText}" onload="window.aos && window.aos.refresh()" onerror='this.onerror=null;this.src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/images/product-default.png";'>
+																		        </a>
+																		    </sly> 
+																		    <sly data-sly-test="${!subTabData.largeImageLinkUrl}">
+																				<img  data-src=${subTabData.largeImageUrl} class="lazy" alt="${subTabData.largeAltText}" title="${subTabData.largeAltText}" onload="window.aos && window.aos.refresh()" onerror='this.onerror=null;this.src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/images/product-default.png";'>
+																		    </sly> 
+																		</picture>
+																		<!-- No modal and No overlay -->
+																	</div>
+																	<div data-sly-test="${subTabData.largeImageCaption}" class="large-images__caption text-left bd-rte">
+																		${subTabData.largeImageCaption @context='html'}
+																	</div>
+																</div>
+															</sly>
+														</sly>
+													</sly>
+													<div data-sly-test="${subTabData.labelCta}" class="text-and-image__cta-container mt-5 px-3 row justify-content-start">
+														<a href="${subTabData.urlCta}" target="${subTabData.openNewTabCta == 'true' ? '_blank' : '_self'}" class="text-and-image-cta btn ${subTabData.bluePrimaryCta ? 'btn-primary-blue text-white' : 'btn-secondary'} btn-md">${subTabData.labelCta @context='html'}</a>
+													</div>
+                                                </div>
+						                    </div>
+										</sly>
+	                            	</ul>
+	                            </sly>
+	                            <!-- Sub Tab Data Ended -->
+								<!-- Main Tab Data Started -->
+								<sly data-sly-test="${tabData.subTabDetails.size == 0}">
+									<h3 class="horizontal-flow-diagram__tab__content-title">
+										<img data-sly-test="${tabData.contentIcon}" class="vertical-tabs-component__title-icon" src="${tabData.contentIcon}" alt="title-icon"/>
+										<span>${tabData.tabTitle}</span>
+									</h3>
+									<h4 class="horizontal-flow-diagram__tab__content-sub-title">${tabData.subTitle}</h4>
+									<div class="horizontal-flow-diagram__tab__content-description bd-rte">
+										<p>${tabData.description @context='html'}</p>
+									</div>
+									<!--  Video enabled Started -->
+									<sly data-sly-test="${tabData.videoEnabled == 'true' && tabData.brightcoveVideoId}">
+										<div class="d-flex justify-content-start}">
+											<div class="d-flex flex-sm-row text-and-image__container">
+												<div class="text-and-image__vdo-container" data-toggle="modal" data-target="#mb-trainingVideo-${tabData.trimmedTabText}_${tabDataList.index}">
+													<img src="${tabData.largeImageUrl}" alt="${tabData.largeAltText}" title="${tabData.largeAltText}" tabindex="0"/>
+													<img src="${tabData.playVideoIcon}" alt="playIcon" tabindex="0" class="play-btn"/>
+												</div>
+												<div class="modal fade text-and-image__banner-img-modal-horizontal" id="mb-trainingVideo-${tabData.trimmedTabText}_${tabDataList.index}" tabindex="-1" role="dialog" aria-labelledby="trainingVideoTitle" aria-hidden="true" data-backdrop="static">
+													<div class="modal-dialog modal-dialog-centered" role="document">
+														<div class="modal-content">
+															<div class="modal-header">
+																<button type="button" class="close text-and-image__banner-modal-horizontal-close" data-dismiss="modal" aria-label="Close">
+																	<span aria-hidden="true">&times;</span>
+																</button>
+															</div>
+															<div class="modal-body text-and-image__banner-img-modal-horizontal-body is-video" data-accountId="${flowDiagramHorizontalModel.brightcoveAccountId}" data-playerId="${flowDiagramHorizontalModel.brightcovePlayerId}" data-videoId="${tabData.brightcoveVideoId}">
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div data-sly-test="${tabData.largeImageCaption}" class="image-caption text-left bd-rte">
+											${tabData.largeImageCaption @context='html'}
+										</div>
+									</sly>
+									<!--  Video is enabled Ended -->
+									<sly data-sly-test="${tabData.videoEnabled != 'true'}">
+										<sly data-sly-test="${tabData.imageType == 'small' && tabData.imageList}">
+											<sly data-sly-list.item="${tabData.imageList}">
+												<div class="text-and-image__image-wrapper">
+													<sly data-sly-test="${item.enlargedImagePath}">
+														<div class="text-and-image__image-container_images col-6 col-lg-3 sec mx-0 bd-rte ${tabData.borderEnable=='false'?'':'text-and-image__border-image'}" data-toggle="modal"
+															data-target="#dynamicModal-${resource.parent.name}-${resource.name}" data-title="${item.smallImageTitle}"
+															data-desc="${item.smallImageDescription}" data-src="${item.enlargedImagePath}"
+															data-alt="${item.altText}" data-size="${item.imageEnlargeSize}">
+															<div class="text-and-image__image-container_images_image col-12 d-flex align-items-center justify-content-start position-relative px-0">
+																<div class="d-flex align-items-center justify-content-start position-relative ">
+																	<picture>
+																		<source media="(max-width: 900px)"
+															 				srcset=${item.imageUrl}  onload="window.aos && window.aos.refresh()">						 
+																		<img data-src=${item.imageUrl} class="lazy ${item.smallImageLinkUrl ? '' : 'normal-cursor'}"
+																			alt="${item.altText}" title="${item.altText}" onload="window.aos && window.aos.refresh()"
+															 				onerror='this.onerror=null;this.src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/images/product-default.png";'>											     
+																	</picture>
+																</div>
+															</div>
+															<!-- Trigger the modal and overlay -->
+															<div class="text-and-image__image-container_overlay">
+																<div class="text-and-image__image-container_icon">
+																	<div class="d-flex align-items-center justify-content-start position-relative ">
+																		<sly data-sly-test="${item.magnifiyGlassColor == 'dark-blue'}">
+																		<picture>
+																			<source media="(max-width: 900px)"
+																					srcset=/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/search-icon-M.svg  onload="window.aos && window.aos.refresh()">
+																			<img src=/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/Search-icon-new.svg
+																				alt="apps1" onload="window.aos && window.aos.refresh()"
+																				onerror='this.onerror=null;this.src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/images/product-default.png";'>
+																		</picture>
+																		</sly>
+																		
+																		<sly data-sly-test="${item.magnifiyGlassColor == 'white'}">
+																		<picture>
+																			<source media="(max-width: 900px)"
+																					srcset=/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/icon_zoom_white.svg  onload="window.aos && window.aos.refresh()">
+																			<img  src=/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/icon_zoom_white.svg
+																				alt="apps1" onload="window.aos && window.aos.refresh()"
+																				onerror='this.onerror=null;this.src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/images/product-default.png";'>
+																		</picture>
+																		</sly>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</sly>
+													<sly data-sly-test="${!item.enlargedImagePath}">
+														<div class="text-and-image__image-container_images col-6 col-lg-3 sec mx-0 ${tabData.borderEnable=='false'?'':'text-and-image__border-image'}">
+															<div class="text-and-image__image-container_images_image col-12 d-flex align-items-center justify-content-start position-relative px-0">
+																<div class="d-flex align-items-center justify-content-start position-relative ">
+																	<picture>
+																		<source media="(max-width: 900px)"
+																				srcset=${item.imageUrl}  onload="window.aos && window.aos.refresh()">
+																		<sly data-sly-test="${item.smallImageLinkUrl}">
+																			<a href="${item.smallImageLinkUrl}" target="${item.openLinkInNewTab == 'true' ? '_blank' : '_self'}">
+																				<img  data-src=${item.imageUrl} class="lazy" alt="${item.altText}" title="${item.altText}" onload="window.aos && window.aos.refresh()" onerror='this.onerror=null;this.src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/images/product-default.png";'>
+																	        </a>
+																	   </sly>
+																	   <sly data-sly-test="${!item.smallImageLinkUrl}">
+																			<img  data-src=${item.imageUrl} class="lazy" alt="${item.altText}" title="${item.altText}" onload="window.aos && window.aos.refresh()" onerror='this.onerror=null;this.src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/images/product-default.png";'>
+																	   </sly>
+																	</picture>
+																</div>
+															</div>
+															<!-- No modal and No overlay -->
+														</div>
+													</sly>
+													<div data-sly-test="${item.smallImageCaption}" class="text-and-image__image-container_images_caption text-left col-12 col-lg-12 bd-rte">
+														${item.smallImageCaption @context='html'}
+													</div>
+												</div>
+											</sly>
+										</sly>
+										<sly data-sly-test="${tabData.imageType == 'large' && tabData.largeImageUrl}">
+											<sly data-sly-test="${tabData.largeEnlargedImagePath}">
+												<div class="col-12 px-0 text-and-image__single-img bd-rte" data-toggle="modal"
+													data-target="#dynamicModal-${resource.parent.name}-${resource.name}" data-title="${tabData.largeImageTitle}"
+													data-desc="${tabData.largeImageDescription}"
+													data-src="${tabData.largeEnlargedImagePath}"
+													data-alt="${tabData.largeAltText}" data-size="${tabData.largeImageEnlargeSize}">
+													<div class="d-flex align-items-center justify-content-start position-relative ${tabData.borderEnable=='false'?'':'text-and-image__border-image'}">
+														<picture>
+															<source media="(max-width: 900px)"
+																	srcset=${tabData.largeImageUrl}  onload="window.aos && window.aos.refresh()">
+															<img data-src=${tabData.largeImageUrl} class="lazy"
+																alt="${tabData.largeAltText}" title="${tabData.largeAltText}" onload="window.aos && window.aos.refresh()"
+																onerror='this.onerror=null;this.src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/images/product-default.png";'>
+														</picture>
+														<!-- Trigger the modal and overlay -->
+														<div class="text-and-image__image-container_overlay">
+															<div class="text-and-image__image-container_icon">
+																<div class="d-flex align-items-center justify-content-start position-relative ">
+																	<sly data-sly-test="${tabData.magnifiyGlassColor == 'dark-blue'}">
+																	<picture>
+																		<source media="(max-width: 900px)"
+																				srcset=/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/search-icon-M.svg  onload="window.aos && window.aos.refresh()">
+																		<img src=/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/Search-icon-new.svg
+																			alt="apps1" onload="window.aos && window.aos.refresh()"
+																			onerror='this.onerror=null;this.src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/images/product-default.png";'>
+																	</picture>
+																	</sly>
+																	<sly data-sly-test="${tabData.magnifiyGlassColor == 'white'}">
+																	<picture>
+																		<source media="(max-width: 900px)"
+																				srcset=/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/icon_zoom_white.svg  onload="window.aos && window.aos.refresh()">
+																		<img  src=/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/icon_zoom_white.svg
+																			alt="apps1" onload="window.aos && window.aos.refresh()"
+																			onerror='this.onerror=null;this.src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/images/product-default.png";'>
+																	</picture>
+																	</sly>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div data-sly-test="${tabData.largeImageCaption}" class="image-caption text-left bd-rte">
+														${tabData.largeImageCaption @context='html'}
+													</div>
+												</div>
+											</sly>
+											<sly data-sly-test="${!tabData.largeEnlargedImagePath}">
+												<div class="col-12 px-0">
+													<div class="d-flex align-items-center justify-content-start position-relative ${tabData.borderEnable=='false'?'':'text-and-image__border-image'}">
+														<picture>
+															<source media="(max-width: 900px)"
+																	srcset=${tabData.largeImageUrl}  onload="window.aos && window.aos.refresh()">
+															 <sly data-sly-test="${tabData.largeImageLinkUrl}">
+															 	<a href="${tabData.largeImageLinkUrl}" target="${tabData.openLinkInNewTab == 'true' ? '_blank' : '_self'}">
+																	<img  data-src=${tabData.largeImageUrl} class="lazy" alt="${tabData.largeAltText}" title="${tabData.largeAltText}" onload="window.aos && window.aos.refresh()" onerror='this.onerror=null;this.src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/images/product-default.png";'>
+														        </a>
+														    </sly> 
+														    <sly data-sly-test="${!tabData.largeImageLinkUrl}">
+																<img  data-src=${tabData.largeImageUrl} class="lazy" alt="${tabData.largeAltText}" title="${tabData.largeAltText}" onload="window.aos && window.aos.refresh()" onerror='this.onerror=null;this.src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/images/product-default.png";'>
+														    </sly> 
+														</picture>
+														<!-- No modal and No overlay -->
+													</div>
+													<div data-sly-test="${tabData.largeImageCaption}" class="large-images__caption text-left bd-rte">
+														${tabData.largeImageCaption @context='html'}
+													</div>
+												</div>
+											</sly>
+										</sly>
+									</sly>
+									<div data-sly-test="${tabData.labelCta}" class="text-and-image__cta-container mt-5 px-3 row justify-content-start">
+										<a href="${tabData.urlCta}" target="${tabData.openNewTabCta == 'true' ? '_blank' : '_self'}" class="text-and-image-cta btn ${tabData.bluePrimaryCta ? 'btn-primary-blue text-white' : 'btn-secondary'} btn-md">${tabData.labelCta @context='html'}</a>
+									</div>
+								</sly>
+								<!-- Main Tab Data Ended -->
+	                        </div>
+	                    </div>
+	                </div>
+                </sly>
+            </div>
+        </div>
+        <!--  Mobile version ended -->
+
+	</div>
+	<article class="dynamic-modal app-js__dynamic-modal">
+		<div class="modal" id="dynamicModal-${resource.parent.name}-${resource.name}" tabindex="-1" role="dialog" aria-labelledby="dynamicModal-${resource.parent.name}-${resource.name}" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered " role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<img src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/modalClose.svg" alt="close" />
+						</button>
+					</div>
+					<div class="modal-body">
+						<div class="dynamic-modal__image-container">
+							<img src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/blankimage.png" alt="">
+						</div>
+						<div class="dynamic-modal__text-container">
+							<div class="dynamic-modal__text-container_title bd-rte">
+							</div>
+							<div class="dynamic-modal__text-container_description bd-rte">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</article>
+</article>

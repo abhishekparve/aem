@@ -1,0 +1,46 @@
+#
+# This file contains the filter ACL, and can be customized.
+#
+# By default, it includes the default filter ACL.
+#
+
+$include "./default_filters.any"
+
+# Allow components JSON model
+/0101 { /type "allow" /extension "json" /selectors "model" /path "/content/*" }
+
+# Allow SKU Selectors in URL for PDP Pages
+/0102 { /type "allow" /selectors '[0-9-]+' /extension 'html' }
+
+## changes for allowing servlet
+/0103 { /type "deny" /url "/bin/*"    }  ## allow bin path access
+/0104 { /type "allow" /url "/bin/permissioncheck"    }  ## allow bin/permissioncheck path access
+
+
+# Allow Publish Instance Login for enabling CUG
+/0105 { /type "allow" /url "/libs/granite/core/content/login.html*"    }
+
+
+# This rule allows content to be access
+/0106 { /type "allow" /extension '(css|eot|gif|ico|jpeg|jpg|js|gif|pdf|png|PNG|zip|ZIP|svg|swf|ttf|woff|woff2|html|xls|xlsx|docx|database|ud|webp|avif)' /path "/content/*" }  # disable this rule to allow mapped content only
+
+# Enable specific mime types in non-public content directories
+/0107 { /type "allow" /method "GET" /extension '(css|eot|gif|ico|jpeg|jpg|js|gif|png|PNG|zip|ZIP|svg|swf|ttf|woff|woff2|xls|xlsx|pdf|docx|database|ud|webp|avif)' }
+
+## changes for allowing sitemap
+/0108 { /type "allow" /method "GET" /url "*/sitemap_index.xml" }
+/0109 { /type "allow" /method "GET" /url "*/*sitemap*.xml" }
+/0110 { /type "allow" /method "GET" /url "*/*robots*.txt" }
+/0111 { /type "allow" /method "GET" /url "/p/*" }
+/0112 { /type "allow" /method "GET" /url "/c/*" }
+
+# Changes for dictionary files
+/0113 { /type "allow" /method "GET" /url "/libs/cq/i18n/dict.*.json" }
+/0114 { /type "allow" /method "GET" /url "/libs/cq/security/userinfo.json" }
+
+## Allow Paths for servlets
+/0115 { /type "allow" /method "POST" /url "/content/bdb/paths/*" }
+/0116 { /type "allow" /method "GET" /url "/content/bdb/paths/*" }
+/0117 { /type "allow" /method "HEAD" /url "/bin/permissioncheck" }
+/0118 { /type "allow" /method "POST" /url "/content/bdb/*/jcr:content/*spectrumviewer*.json" }
+/0119 { /type "allow" /method "GET" /url "/content/bdb/*/jcr:content/*spectrumviewer*.json" }

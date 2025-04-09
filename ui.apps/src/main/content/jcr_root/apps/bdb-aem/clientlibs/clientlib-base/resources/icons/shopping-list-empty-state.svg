@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200px" height="200px" viewBox="0 0 200 200" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>DBF78075-E78C-4E7B-AFDE-1E3756F598A0</title>
+    <g id="Desktop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="My-Cart---empty-state" transform="translate(-620.000000, -360.000000)">
+            <g id="Group-3" transform="translate(353.000000, 360.000000)">
+                <g id="Shopping-list---empty-state-part-1" transform="translate(267.000000, 0.000000)">
+                    <circle id="Oval" fill="#E7EBF1" cx="100" cy="100" r="100"></circle>
+                    <g id="Group-46" transform="translate(43.214286, 54.285714)">
+                        <path d="M17.9380702,17.2453123 L102.103333,17.2453123 C103.99688,17.2453123 105.531904,18.7803359 105.531904,20.6738835 C105.531904,20.9033076 105.508876,21.1321523 105.463167,21.3569768 L95.8365104,68.70625 L95.8365104,68.70625 L28.8340121,68.70625 L23.9999986,65.0522882 L17.9380702,17.2453123 Z" id="Path-20" fill="#FFFFFF"></path>
+                        <path d="M0,1.88801344e-13 L13.6707728,1.88801344e-13 C14.5266875,1.88644115e-13 15.2514545,0.631321812 15.3688555,1.47914668 L24.0945459,64.4927165 C24.4467489,67.0361911 26.6210498,68.9301565 29.188794,68.9301565 L97.0953408,68.9301565 C100.166097,68.9301565 102.655436,71.419496 102.655436,74.490252 C102.655436,77.5610079 100.166097,80.0503474 97.0953408,80.0503474 L24.7090124,80.0503474 L24.7090124,80.0503474" id="Path-16" stroke="#999A9C" stroke-width="3.42857143" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path d="M17.9380702,17.2453123 L102.103333,17.2453123 C103.99688,17.2453123 105.531904,18.7803359 105.531904,20.6738835 C105.531904,20.9033076 105.508876,21.1321523 105.463167,21.3569768 L95.8365104,68.70625 L95.8365104,68.70625" id="Path-20" stroke="#999A9C" stroke-width="3.42857143"></path>
+                        <line x1="20.9590126" y1="42.9757811" x2="100.941151" y2="42.9757811" id="Path-21" stroke="#999A9C" stroke-width="3.42857143"></line>
+                        <line x1="40.8340114" y1="17.8098071" x2="40.8340114" y2="67.5240898" id="Line-11" stroke="#999A9C" stroke-width="3.42857143" stroke-linecap="square"></line>
+                        <line x1="61.4054388" y1="17.8098071" x2="61.4054388" y2="67.5240898" id="Line-11" stroke="#999A9C" stroke-width="3.42857143" stroke-linecap="square"></line>
+                        <line x1="81.9768661" y1="17.8098071" x2="81.9768661" y2="67.5240898" id="Line-11" stroke="#999A9C" stroke-width="3.42857143" stroke-linecap="square"></line>
+                        <circle id="Oval" stroke="#999A9C" stroke-width="3.42857143" fill="#FFFFFF" cx="38.5482974" cy="87.2383744" r="6.85714245"></circle>
+                        <circle id="Oval" stroke="#999A9C" stroke-width="3.42857143" fill="#FFFFFF" cx="90.5482942" cy="87.2383744" r="6.85714245"></circle>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

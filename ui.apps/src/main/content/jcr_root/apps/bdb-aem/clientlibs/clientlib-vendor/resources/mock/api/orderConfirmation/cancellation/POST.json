@@ -1,0 +1,273 @@
+{
+    "type": "orderWsDTO",
+    "appliedOrderPromotions": [],
+    "appliedProductPromotions": [],
+    "appliedVouchers": [],
+    "billingAddress": {
+        "addressId": "1001025610",
+        "billingAddress": true,
+        "country": {
+            "isocode": "US",
+            "name": "United States"
+        },
+        "defaultAddress": false,
+        "district": "MORRIS",
+        "formattedAddress": "300 AMERICAN RD, New Jersey, MORRIS PLAINS, 07950-0000",
+        "line1": "300 AMERICAN RD",
+        "organizationName": "IMMUNOMEDICS INC",
+        "pendingAddress": false,
+        "phone": "973 605 1330",
+        "postalCode": "07950-0000",
+        "region": {
+            "countryIso": "US",
+            "isocode": "US-NJ",
+            "isocodeShort": "NJ",
+            "name": "New Jersey"
+        },
+        "shippingAddress": false,
+        "status": "APPROVED",
+        "town": "MORRIS PLAINS",
+        "visibleInAddressBook": true
+    },
+    "code": "5611103000",
+    "deliveryAddress": {
+        "addressId": "1001025609",
+        "billingAddress": false,
+        "country": {
+            "isocode": "US",
+            "name": "United States"
+        },
+        "defaultAddress": false,
+        "district": "MORRIS",
+        "formattedAddress": "300 AMERICAN RD, New Jersey, MORRIS PLAINS, 07950-0000",
+        "line1": "300 AMERICAN RD",
+        "organizationName": "IMMUNOMEDICS INC",
+        "pendingAddress": false,
+        "phone": "973 605 1330",
+        "postalCode": "07950-0000",
+        "region": {
+            "countryIso": "US",
+            "isocode": "US-NJ",
+            "isocodeShort": "NJ",
+            "name": "New Jersey"
+        },
+        "shippingAddress": true,
+        "status": "APPROVED",
+        "town": "MORRIS PLAINS",
+        "visibleInAddressBook": true
+    },
+    "deliveryCost": {
+        "currencyIso": "USD",
+        "formattedValue": "$50.00",
+        "priceType": "BUY",
+        "value": 50.0
+    },
+    "displayHyphen": false,
+    "entries": [
+        {
+            "basePrice": {
+                "currencyIso": "USD",
+                "formattedValue": "$35.00",
+                "priceType": "BUY",
+                "value": 35.0
+            },
+            "cancellableQuantity": 2,
+            "configurationInfos": [],
+            "contractPrice": {
+                "currencyIso": "USD",
+                "formattedValue": "$35.00",
+                "priceType": "BUY",
+                "value": 35.0
+            },
+            "deliveryDetails": [
+                {
+                    "deliveryQuantity": 2,
+                    "estimatedDeliveryDate": "Dec 03, 2020"
+                }
+            ],
+            "entryNumber": 0,
+            "isContractualPrice": false,
+            "isGrantEligible": true,
+            "listPrice": {
+                "currencyIso": "USD",
+                "formattedValue": "$35.00",
+                "priceType": "BUY",
+                "value": 35.0
+            },
+            "product": {
+                "availableForPickup": false,
+                "baseOptions": [
+                    {
+                        "selected": {
+                            "code": "342003",
+                            "priceData": {
+                                "currencyIso": "USD",
+                                "formattedValue": "$35.00",
+                                "priceType": "BUY",
+                                "value": 35.0
+                            },
+                            "stock": {
+                                "isValueRounded": false,
+                                "stockLevel": 0,
+                                "stockLevelStatus": "inStock"
+                            },
+                            "url": "/bdProductCategory//p/342003",
+                            "variantOptionQualifiers": []
+                        },
+                        "variantType": "GenericVariantProduct"
+                    }
+                ],
+                "baseProduct": "342003_base",
+                "batchManaged": true,
+                "canUpdateShipTo": true,
+                "categories": [
+                    {
+                        "code": "20 L",
+                        "name": "20 L",
+                        "url": "/size/20-L/c/20%20L"
+                    }
+                ],
+                "code": "342003",
+                "displayable": true,
+                "name": "BD FACSFlow Sheath Fluid 20L",
+                "pictureUrl": "",
+                "productUrl": "/content/bdb/{region}/{country}/{language-country}/products-/-instruments-/-flow-cytometers-/-research-cell-analyzers-/-facscanto-ii/sheath-fluid.342003_base",
+                "purchasable": true,
+                "ruoQualified": true,
+                "stock": {
+                    "isValueRounded": false,
+                    "stockLevel": 0,
+                    "stockLevelStatus": "inStock"
+                },
+                "url": "/bdProductCategory//p/342003"
+            },
+            "quantity": 2,
+            "requestSameLot": false,
+            "returnableQuantity": 0,
+            "statusSummaryList": [],
+            "surchargeApplied": true,
+            "totalPrice": {
+                "currencyIso": "USD",
+                "formattedValue": "$70.00",
+                "priceType": "BUY",
+                "value": 70.0
+            },
+            "updateable": true
+        }
+    ],
+    "net": true,
+    "orderDiscounts": {
+        "currencyIso": "USD",
+        "formattedValue": "$0.00",
+        "priceType": "BUY",
+        "value": 0.0
+    },
+    "orderNotificationEmails": "maheshFE@deloitte.com",
+    "productDiscounts": {
+        "currencyIso": "USD",
+        "formattedValue": "$0.00",
+        "priceType": "BUY",
+        "value": 0.0
+    },
+    "specialInstructions": "Tax Exempt Document Needs Review",
+    "subTotal": {
+        "currencyIso": "USD",
+        "formattedValue": "$70.00",
+        "priceType": "BUY",
+        "value": 70.0
+    },
+    "totalDiscounts": {
+        "currencyIso": "USD",
+        "formattedValue": "$0.00",
+        "priceType": "BUY",
+        "value": 0.0
+    },
+    "totalPrice": {
+        "currencyIso": "USD",
+        "formattedValue": "$160.00",
+        "priceType": "BUY",
+        "value": 160.0
+    },
+    "totalPriceWithTax": {
+        "currencyIso": "USD",
+        "formattedValue": "$160.00",
+        "priceType": "BUY",
+        "value": 160.0
+    },
+    "totalSurcharge": {
+        "currencyIso": "USD",
+        "formattedValue": "$40.00",
+        "priceType": "BUY",
+        "value": 40.0
+    },
+    "totalTax": {
+        "currencyIso": "USD",
+        "formattedValue": "$0.00",
+        "priceType": "BUY",
+        "value": 0.0
+    },
+    "user": {
+        "name": "Mahesh Reddy",
+        "uid": "caweb_788271000"
+    },
+    "PODate": "November 23, 2020",
+    "PONumber": "123123123",
+    "cancellable": false,
+    "deliveryOptionAddons": [],
+    "orderOnHold": false,
+    "orgCustomer": {
+        "name": "Mahesh Reddy",
+        "uid": "caweb_788271000",
+        "active": true,
+        "approvers": [],
+        "currency": {
+            "active": true,
+            "defaultCurrency": false,
+            "isocode": "USD",
+            "name": "US Dollar",
+            "symbol": "$"
+        },
+        "customerId": "36bc083e-6f1d-44aa-ab14-55645630ef04",
+        "displayUid": "caweb_788271000",
+        "firstName": "Mahesh",
+        "language": {
+            "active": true,
+            "isocode": "en",
+            "name": "English",
+            "nativeName": "English"
+        },
+        "lastName": "Reddy",
+        "roles": ["b2bcustomergroup"],
+        "selected": false
+    },
+    "permissionResults": [],
+    "purchaseOrderNumber": "123123123",
+    "soldToAddress": {
+        "addressId": "1001025610",
+        "billingAddress": false,
+        "country": {
+            "isocode": "US",
+            "name": "United States"
+        },
+        "defaultAddress": false,
+        "district": "MORRIS",
+        "formattedAddress": "300 AMERICAN RD, New Jersey, MORRIS PLAINS, 07950-0000",
+        "line1": "300 AMERICAN RD",
+        "pendingAddress": false,
+        "phone": "973 605 1330",
+        "postalCode": "07950-0000",
+        "region": {
+            "countryIso": "US",
+            "isocode": "US-NJ",
+            "isocodeShort": "NJ",
+            "name": "New Jersey"
+        },
+        "shippingAddress": false,
+        "status": "APPROVED",
+        "town": "MORRIS PLAINS",
+        "visibleInAddressBook": true
+    },
+    "source": "WEB",
+    "status": "CANCELLED",
+    "totalUnitCount": 2
+}

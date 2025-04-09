@@ -1,0 +1,43 @@
+<sly
+	data-sly-use.templates="core/wcm/components/commons/v1/templates.html"
+	data-sly-call="${templates.placeholder @ isEmpty = true}"> </sly>
+<sly data-sly-use.contentCardModel="com.bdb.aem.core.models.ContentCardModel">
+</sly>
+
+<div data-sly-test="${contentCardModel.contentCard}" class="technical-procurement-cards app-js__technical-procurement-cards ${properties.fullBleed ? '' : 'container'} ${properties.togglePaddingTop?'pt-2':''}">
+	<h2 data-sly-test="${contentCardModel.sectionTitleText}" class="technical-procurement-cards__heading">${contentCardModel.sectionTitleText}</h2>
+	<span data-sly-test="${contentCardModel.sectionDescription}" class="technical-procurement-cards__subText">${contentCardModel.sectionDescription @context='html'}</span>
+	<div data-sly-test="${contentCardModel.subtitleText}" class="technical-procurement-cards__subTitle">${contentCardModel.subtitleText @context='html'}</div>
+	<div class="d-flex text-center flex-wrap ${properties.cardsThreeInARow ? 'three-in-row' : ''} contactUs-arrow-variation">
+		<sly data-sly-list.item="${contentCardModel.contentCard}">
+		<div class="card">
+			<div class="card-body">
+				<div class="card-body-inline">
+					
+					<sly data-sly-test="${item.imageLinkUrl}">
+						<a href="${item.imageLinkUrl}" target="${item.openNewImageLinkTab == 'true' ? '_blank' : '_self'}">
+							<img src="${item.iconImagePath}" alt="${item.altText}" tabindex="0"
+						class="bdb-support-image"> 
+						</a>
+					</sly>
+					<sly data-sly-test="${!item.imageLinkUrl}">
+							<img src="${item.iconImagePath}" alt="${item.altText}" tabindex="0">
+					</sly>
+					<sly data-sly-test="${item.titleLink && item.title}">
+						<a href="${item.titleLink}">
+							<p class="card-body__heading">${item.title @context='html'}</p>
+						</a>
+					</sly>	
+					<sly data-sly-test="${!item.titleLink && item.title}">
+						<p class="card-body__heading">${item.title @context='html'}</p>
+					</sly>
+					<a href="${item.titleLink}" class="ml-auto">
+						<span class="icon-arrow-right d-none"></span>
+					</a>
+				</div>
+				<span class="card-body__desc">${item.description @context='html'}</span>
+			</div>
+		</div>
+		</sly>
+	</div>
+</div>

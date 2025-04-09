@@ -1,0 +1,38 @@
+{
+    "payments": [
+        {
+            "accountHolderName": "Bret Lee1",
+            "cardNumber": "4111111111111111",
+            "cardExpired": false,
+            "cardExpiring": true,
+            "cardType": {
+                "code": "visa"
+            },
+            "creationDate": "Tue Oct 13 09:03:36 PDT 2020",
+            "defaultPayment": true,
+            "expiryMonth": "12",
+            "expiryYear": "2020",
+            "id": "8797731455018",
+            "nickName": "Jan Expiry Card",
+            "prepayCustomer": false,
+            "saved": true,
+            "selectedCard": true
+        },
+        {
+            "accountHolderName": "Bret Lee2",
+            "cardNumber": "4111111111111111",
+            "cardType": {
+                "code": "visa"
+            },
+            "creationDate": "Tue Oct 13 09:03:36 PDT 2020",
+            "defaultPayment": false,
+            "expiryMonth": "04",
+            "expiryYear": "2022",
+            "id": "8797731455019",
+            "nickName": "Jan Expiry Card",
+            "prepayCustomer": false,
+            "saved": true,
+            "selectedCard": false
+        }
+    ]
+}

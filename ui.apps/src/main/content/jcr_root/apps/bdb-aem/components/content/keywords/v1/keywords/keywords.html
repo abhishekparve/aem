@@ -1,0 +1,18 @@
+<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html" />
+
+<sly data-sly-call="${templates.placeholder @ isEmpty = !properties.type, classAppend='cmp-searchResults'}"></sly>
+
+<sly data-sly-use.keywordModel="com.bdb.aem.core.models.KeywordsModel">
+	<sly data-sly-test="${keywordModel.keywordOptions.listChildren}">
+	<sly data-sly-list.child="${keywordModel.keywordOptions.listChildren}">
+	<div>
+		<p> Keyword --	${child.keyword} </p>
+		<p> URL		--	${child.urlRedirect} </p>
+	</div>
+	</sly>
+	</sly>
+
+</sly>
+
+
+

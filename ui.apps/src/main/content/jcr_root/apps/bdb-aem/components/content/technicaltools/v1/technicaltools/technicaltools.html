@@ -1,0 +1,34 @@
+<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html" />
+<sly data-sly-call="${templates.placeholder @ isEmpty = !properties.type, classAppend='cmp-commerceBox'}"></sly>
+<sly data-sly-use.time="com.bdb.aem.core.models.TimerModel"></sly>
+<sly data-sly-use.techTools="com.bdb.aem.core.models.TechnicalToolsModel"></sly>
+<article class="pdp-tools app-js__pdp-tools">
+    <div class="pdp-tools__container d-flex justify-content-center">
+	<sly data-sly-test="${techTools.displaySpectrumViewerTool}">
+        <a data-sly-test="${techTools.link1 || techTools.icon1 || techTools.text1}" class="pdp-tools__container_link"
+            href="${techTools.link1}" target="_self">
+            <div class="pdp-tools__container_link_block d-flex flex-column justify-content-center text-center">
+                <img class="pdp-tools__container_link_block_img" src="${techTools.icon1}" alt=alt text />
+                <span class="pdp-tools__container_link_block_text">${techTools.text1 @context='html'}</span>
+            </div>
+        </a>
+    </sly>
+
+        <a data-sly-test="${techTools.link2 || techTools.icon2 || techTools.text2}" class="pdp-tools__container_link"
+            href="${techTools.link2}" target="_self">
+            <div class="pdp-tools__container_link_block d-flex flex-column justify-content-center text-center">
+                <img class="pdp-tools__container_link_block_img" src="${techTools.icon2}" alt=alt text />
+                <span class="pdp-tools__container_link_block_text">${techTools.text2 @context='html'}</span>
+            </div>
+        </a>
+
+        <a data-sly-test="${techTools.link3 || techTools.icon3 || techTools.text3}" class="pdp-tools__container_link"
+            href="${techTools.link3}" target="_self">
+            <div class="pdp-tools__container_link_block d-flex flex-column justify-content-center text-center">
+                <img class="pdp-tools__container_link_block_img" src="${techTools.icon3}" alt=alt text />
+                <span class="pdp-tools__container_link_block_text">${techTools.text3 @context='html'}</span>
+            </div>
+        </a>
+    </div>
+</article>
+<p data-sly-test="${inheritedPageProperties.enableTimer}">TechicalTools:${time.endTime}</p>

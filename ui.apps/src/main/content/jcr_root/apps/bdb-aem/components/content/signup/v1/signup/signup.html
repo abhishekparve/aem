@@ -1,0 +1,41 @@
+<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html"
+     data-sly-call="${templates.placeholder @ isEmpty = true}"></sly>
+
+
+<sly data-sly-use.signUpModel="com.bdb.aem.core.models.SignUpModel">
+<script>
+if (typeof window.AEM_DATA === 'undefined') {
+            window.AEM_DATA = {};
+        }
+        if (typeof window.AEM_DATA.labels === 'undefined') {
+            window.AEM_DATA.labels = {};
+        }
+        window.AEM_DATA.labels.signUpLabels = ${signUpModel.signUpLabels  || '{}' @context='scriptComment'};
+        window.AEM_DATA.labels.passwordRuleLabels = ${signUpModel.passwordRuleLabels  || '{}' @context='scriptComment'};
+        window.AEM_DATA.labels.signUpLabels.passwordRuleLabels = ${signUpModel.passwordRuleLabels  || '{}' @context='scriptComment'};
+        window.AEM_DATA.labels.basicConformationLabels = ${signUpModel.confirmationLabels  || '{}' @context='scriptComment'};
+        window.AEM_DATA.labels.areaFocusLabels = ${signUpModel.iriLabels  || '{}' @context='scriptComment'};
+        if (typeof window.AEM_DATA.config === 'undefined') {
+            window.AEM_DATA.config = {};
+        }
+        window.AEM_DATA.config.areaFocusConfig = ${signUpModel.areaFocusConfig  || '{}' @context='scriptComment'};
+        window.AEM_DATA.config.signUpConfig = ${signUpModel.signUpConfig  || '{}' @context='scriptComment'};
+
+		window.AEM_DATA.labels.signupPageLabels= {
+            areaFocusLabels: 'areaFocusLabels',
+            signUpLabels: 'signUpLabels',
+            basicConformationLabels: 'basicConformationLabels',
+            basicConformationConfig: '',
+            signUpConfig: 'signUpConfig',
+            areaFocusConfig: 'areaFocusConfig',
+            purchaseAccountLabels: 'purchaseAccountLabels',
+            purchaseAccountConfig: 'purchaseAccountConfig',
+            purchaseAccountConfirmationLabels: 'purchaseAccountConfirmationLabels',
+            purchaseAccountConfirmationConfig: 'purchaseAccountConfirmationConfig'
+        };
+window.AEM_DATA.labels.globalLabels.noResult = "${properties.noResult|| 'No Results' @context='scriptComment'}";
+</script>
+<div class="signup-container">
+        <bd-signup-page labels="signupPageLabels" config=""></bd-signup-page>
+ </div>
+</sly>

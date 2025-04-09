@@ -1,0 +1,7 @@
+{
+    "emptyTable": "No data available in table",
+    "info": "Showing all _TOTAL_ reagents",
+    "infoEmpty": "Showing 0 to 0 of 0 entries",
+    "infoFiltered": "(filtered from _MAX_ total reagents)",
+    "searchPlaceholder": "type with multiple keyword(s)"
+}

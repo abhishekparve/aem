@@ -1,0 +1,156 @@
+[
+    {
+        "catalogNumber": "750673",
+        "imageUrl": "/resources/images/cloned-image-2.png",
+        "productUrl": "",
+        "name": "PerCP Mouse Anti-Mouse CD3e",
+        "brand": "BD Pharmingen™",
+        "cloneId": "123-45A56",
+        "regulatoryStatus": "RUO",
+        "regulatoryStatusDisplayValue": "体外診断用医薬品",
+        "dyeName": "BV489",
+        "isComparable": true
+    },
+    {
+        "catalogNumber": "7506731",
+        "imageUrl": "/resources/images/cloned-image-2.png",
+        "productUrl": "",
+        "name": "PerCP Mouse Anti-Mouse CD3e",
+        "brand": "BD Pharmingen™",
+        "cloneId": "123-45A561",
+        "regulatoryStatus": "RUO",
+        "regulatoryStatusDisplayValue": "",
+        "dyeName": "BV489",
+        "isComparable": true
+    },
+    {
+        "catalogNumber": "7506732",
+        "imageUrl": "/resources/images/cloned-image-2.png",
+        "productUrl": "",
+        "name": "PerCP Mouse Anti-Mouse CD3e",
+        "brand": "BD Pharmingen™",
+        "cloneId": "123-45A562",
+        "regulatoryStatus": "RUO",
+        "dyeName": "BV4819",
+        "isComparable": true
+    },
+    {
+        "catalogNumber": "7506733",
+        "imageUrl": "/resources/images/cloned-image-2.png",
+        "productUrl": "",
+        "name": "PerCP Mouse Anti-Mouse CD3e",
+        "brand": "BD Pharmingen™",
+        "cloneId": "123-45A563",
+        "regulatoryStatus": "RUO",
+        "dyeName": "BV4893",
+        "isComparable": true
+    },
+    {
+        "catalogNumber": "7506734",
+        "imageUrl": "/resources/images/cloned-image-2.png",
+        "productUrl": "",
+        "name": "PerCP Mouse Anti-Mouse CD3e",
+        "brand": "BD Pharmingen™",
+        "cloneId": "123-45A564",
+        "regulatoryStatus": "RUO",
+        "dyeName": "BV48904",
+        "isComparable": true
+    },
+    {
+        "catalogNumber": "7506735",
+        "imageUrl": "/resources/images/cloned-image-2.png",
+        "productUrl": "",
+        "name": "PerCP Mouse Anti-Mouse CD3e",
+        "brand": "BD Pharmingen™",
+        "cloneId": "123-45A565",
+        "regulatoryStatus": "RUO",
+        "dyeName": "BV4895",
+        "isComparable": true
+    },
+    {
+        "catalogNumber": "7506736",
+        "imageUrl": "/resources/images/cloned-image-2.png",
+        "productUrl": "",
+        "name": "PerCP Mouse Anti-Mouse CD3e",
+        "brand": "BD Pharmingen™",
+        "cloneId": "123-45A566",
+        "regulatoryStatus": "RUO",
+        "dyeName": "BV4896",
+        "isComparable": true
+    },
+    {
+        "catalogNumber": "7506737",
+        "imageUrl": "/resources/images/cloned-image-2.png",
+        "productUrl": "",
+        "name": "PerCP Mouse Anti-Mouse CD3e",
+        "brand": "BD Pharmingen™",
+        "cloneId": "123-45A567",
+        "regulatoryStatus": "RUO",
+        "dyeName": "BV4897",
+        "isComparable": true
+    },
+    {
+        "catalogNumber": "7506738",
+        "imageUrl": "/resources/images/cloned-image-2.png",
+        "productUrl": "",
+        "name": "PerCP Mouse Anti-Mouse CD3e",
+        "brand": "BD Pharmingen™",
+        "cloneId": "123-45A568",
+        "regulatoryStatus": "RUO",
+        "dyeName": "BV4898",
+        "isComparable": true
+    },
+    {
+        "catalogNumber": "7506739",
+        "imageUrl": "/resources/images/cloned-image-2.png",
+        "productUrl": "",
+        "name": "PerCP Mouse Anti-Mouse CD3e",
+        "brand": "BD Pharmingen™",
+        "cloneId": "123-45A569",
+        "regulatoryStatus": "RUO",
+        "dyeName": "BV4899",
+        "isComparable": true
+    },
+    {
+        "catalogNumber": "7506730",
+        "imageUrl": "/resources/images/cloned-image-2.png",
+        "productUrl": "",
+        "name": "PerCP Mouse Anti-Mouse CD3e",
+        "brand": "BD Pharmingen™",
+        "cloneId": "123-45A560",
+        "regulatoryStatus": "RUO",
+        "dyeName": "BV48990",
+        "isComparable": true
+    },
+    {
+        "catalogNumber": "553441",
+        "imageUrl": "/resources/images/cloned-image-2.png",
+        "productUrl": "",
+        "name": "PerCP Mouse Anti-Mouse CD3e",
+        "brand": "BD Pharmingen™",
+        "cloneId": "123-45A56",
+        "regulatoryStatus": "RUO",
+        "dyeName": "BV4891",
+        "isComparable": true
+    },
+    {
+        "catalogNumber": "305180",
+        "imageUrl": "/resources/images/cloned-image-2.png",
+        "productUrl": "",
+        "name": "PerCP Mouse Anti-Mouse CD3e",
+        "brand": "BD Pharmingen™",
+        "cloneId": "123-45A56",
+        "regulatoryStatus": "RUO",
+        "dyeName": "BV4892"
+    },
+    {
+        "catalogNumber": "609866432",
+        "imageUrl": "/resources/images/cloned-image-2.png",
+        "productUrl": "",
+        "name": "PerCP Mouse Anti-Mouse CD3e",
+        "brand": "BD Pharmingen™",
+        "cloneId": "123-9A46",
+        "regulatoryStatus": "RUO",
+        "dyeName": "BTRR429"
+    }
+]

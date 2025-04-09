@@ -1,0 +1,88 @@
+{
+    "facets": {
+        "selected-fields": [],
+        "id": "name:RAT",
+        "facet-fields": [
+            {
+                "label": "Result Type",
+                "value": "docType_facet_s",
+                "isRangeSelector": false
+            },
+            {
+                "label": "Product Type",
+                "value": "productType_display_value_facet_s",
+                "isRangeSelector": false
+            },
+            {
+                "label": "Product Sub Category",
+                "value": "category_facet_ss",
+                "isRangeSelector": false
+            },
+            {
+                "label": "Target Species",
+                "value": "speciesReactivity_facet_s",
+                "isRangeSelector": false
+            },
+            {
+                "label": "Applications",
+                "value": "applicationName_facet_ss",
+                "isRangeSelector": false
+            },
+            {
+                "label": "Conjugate / Format",
+                "value": "dyeName_facet_s",
+                "isRangeSelector": false
+            },
+            {
+                "label": "Clone",
+                "value": "tdsCloneName_facet_s",
+                "isRangeSelector": false
+            },
+            {
+                "label": "Isotype",
+                "value": "isoType_facet_s",
+                "isRangeSelector": false
+            },
+            {
+                "label": "Host Species",
+                "value": "hostSpecies_facet_s",
+                "isRangeSelector": false
+            },
+            {
+                "label": "Laser Line",
+                "value": "excitationSource_facet_s",
+                "isRangeSelector": false
+            },
+            {
+                "label": "Regulatory Status",
+                "value": "regulatoryStatus_facet_s",
+                "isRangeSelector": false
+            },
+            {
+                "label": "Brand",
+                "value": "brand_facet_s",
+                "isRangeSelector": false
+            },
+            {
+                "label": "Size",
+                "value": "size_facet_s",
+                "isRangeSelector": false
+            },
+            {
+                "label": "Specificity",
+                "value": "specificity_facet_s",
+                "isRangeSelector": false
+            },
+            {
+                "label": "Document Type",
+                "value": "pdfxDocType_facet_s",
+                "isRangeSelector": false
+            }
+        ],
+        "rows": 25,
+        "start": 0,
+        "boostrules": "/content/bdb/apac/in/en-in/datapage/boost-rules-page"
+    },
+    "country": "US",
+    "language": "EN"
+}

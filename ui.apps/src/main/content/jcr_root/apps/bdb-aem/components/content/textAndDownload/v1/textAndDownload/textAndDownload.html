@@ -1,0 +1,44 @@
+<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html"
+     data-sly-call="${templates.placeholder @ isEmpty = true}"></sly>
+
+<sly data-sly-use.textDownloadModel="com.bdb.aem.core.models.TextAndDownloadModel">
+    <article class="text-with-download app-js__text-with-download ${properties.imageAlign} ${properties.backgroundColor}" id="${textDownloadModel.articleId}">
+
+        <sly data-sly-test="${textDownloadModel.imagePath}">
+            <div class="text-with-download__image-wrapper col-4">
+                <img src="${textDownloadModel.imagePath}" alt="${properties.imageAltText}" tabindex="0" />
+                <sly data-sly-test="${properties.caption}">
+                    <p>${properties.caption @context='html'}</p>
+                </sly>
+            </div>
+        </sly>
+
+        <div class="${properties.imagePath} ? 'col-7':''">
+
+            <div data-sly-test="${properties.sectionTitle}" class="text-with-download__section-title">${properties.sectionTitle}</div>
+            <div data-sly-test="${properties.title}" class="text-with-download__title">${properties.title @context='html'}</div>
+            <div data-sly-test="${properties.description}" class="text-with-download__description bd-rte">
+                ${properties.description @context='html'}&nbsp;
+                <a data-sly-test="${!properties.showCTAButton && textDownloadModel.linkPath && textDownloadModel.linkLabel}" href="${textDownloadModel.linkPath}" tabindex="0">
+                    ${textDownloadModel.linkLabel @context='html'}
+                </a>
+            </div>
+
+            <button data-sly-test="${properties.showCTAButton && textDownloadModel.primaryCtaLabel && textDownloadModel.primaryCtaPath}"
+                    class="btn btn-primary-blue text-with-download__downLoad-cta p-0">
+                <a href="${textDownloadModel.primaryCtaPath}" download="${textDownloadModel.primaryCtaPath}" tabindex="0">
+                    <img src="/content/dam/bdb/icons/download.svg" alt="Download Icon">
+                    <span>${textDownloadModel.primaryCtaLabel @context='html'}</span>
+                </a>
+            </button>
+
+            <button data-sly-test="${properties.showCTAButton && textDownloadModel.optionalCtaLabel && textDownloadModel.optionalCtaPath}"
+                    class="btn btn-primary-blue text-with-download__optional-cta p-0">
+                <a href="${textDownloadModel.optionalCtaPath}" tabindex="0">
+                    <img src="/content/dam/bdb/icons/download.svg" alt="Download Icon">
+                    <span>${textDownloadModel.optionalCtaLabel @context='html'}</span>
+                </a>
+            </button>
+        </div>
+    </article>
+</sly>

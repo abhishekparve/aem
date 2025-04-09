@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0"
+          jcr:primaryType="nt:unstructured"
+          jcr:title="Free Form HTML"
+          sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="granite/ui/components/coral/foundation/container">
+        <items jcr:primaryType="nt:unstructured">
+            <tabs
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/tabs"
+                maximized="{Boolean}false">
+                <items jcr:primaryType="nt:unstructured">
+                <freeFormDialogTab
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Free Form HTML Dialog"
+                    sling:resourceType="granite/ui/components/coral/foundation/container"
+                    margin="{Boolean}true">
+                    <items jcr:primaryType="nt:unstructured">
+                        <column
+                             jcr:primaryType="nt:unstructured"
+                             sling:resourceType="granite/ui/components/coral/foundation/container">
+                            <items jcr:primaryType="nt:unstructured">
+                            <enableAnchorIdentifier
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                fieldDescription="Anchor Identifier for Anchor Component"
+                                name="./enableAnchorIdentifier"
+                                text="Enable Anchor Identifier"
+                                uncheckedValue="{Boolean}false"
+                                value="{Boolean}true"/>
+							<anchorIdDescription
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="cq/gui/components/authoring/dialog/richtext"
+                                fieldDescription="AnchorIdDescription"
+                                fieldLabel="Anchor Id Description"
+                                name="./anchorIdDescription"
+                                useFixedInlineToolbar="{Boolean}true">
+                                <rtePlugins
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceSuperType="/apps/bdb-aem/components/authoring/dialog/richtext/rtePlugins"/>
+                                <uiSettings
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceSuperType="/apps/bdb-aem/components/authoring/dialog/richtext/uiSettings"/>
+                                <granite:data
+                                    jcr:primaryType="nt:unstructured"
+                                    char-limit="150"/>
+                            </anchorIdDescription>
+                            <title
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldLabel="Title for Anchor"
+                                fieldDescription="Title must be authored if Anchor Identifier is Enabled."
+                                name="./title"/>
+                            <description
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="cq/gui/components/authoring/dialog/richtext"
+                                emptyText="Enter the description"
+                                fieldDescription="Add iframe data directly on RTE panel not in Source panel"
+                                fieldLabel="Description"
+                                name="./description"
+                                required="{Boolean}false"
+                                useFixedInlineToolbar="{Boolean}true">
+                                <rtePlugins
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceSuperType="/apps/bdb-aem/components/authoring/dialog/richtext/rtePlugins"/>
+                                <uiSettings
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceSuperType="/apps/bdb-aem/components/authoring/dialog/richtext/uiSettings"/>
+                            </description>
+                            </items>
+                        </column>
+                    </items>
+                </freeFormDialogTab>
+                <embededcode
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Embed code"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
+                        emptyText="Paste embed code"
+                        fieldDescription="The code to support scripts and styles"
+                        fieldLabel="HTML"
+                        name="./embededcode"
+                        wrapperClass="foundation-toggleable">
+                </embededcode>
+                </items>
+            </tabs>
+        </items>
+    </content>
+</jcr:root>

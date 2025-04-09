@@ -1,0 +1,28 @@
+<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html"
+     data-sly-call="${templates.placeholder @ isEmpty = true}"></sly>
+
+<sly data-sly-use.findYourRepModel="com.bdb.aem.core.models.FindYourRepModel">
+    <script>
+if (typeof window.AEM_DATA === 'undefined') {
+            window.AEM_DATA = {};
+        }
+        if (typeof window.AEM_DATA.labels === 'undefined') {
+            window.AEM_DATA.labels = {};
+        }
+        window.AEM_DATA.config.repToolConfig = ${findYourRepModel.repToolConfig || '{}' @context='scriptComment' };
+        
+        window.AEM_DATA.labels.fyrWelcomePageLabels = ${findYourRepModel.fyrWelcomePageLabels  || '{}' @context='scriptComment'};
+        window.AEM_DATA.labels.fyrSalesRepListPageLabels = ${findYourRepModel.fyrSalesRepListPageLabels  || '{}' @context='scriptComment'};
+        window.AEM_DATA.labels.fyrSalesRepListPageLabels.salesrepCardLabels = ${findYourRepModel.fyrSalesRepCardLabels  || '{}' @context='scriptComment'};
+        window.AEM_DATA.labels.fyrContactSalesRepPageLabels = ${findYourRepModel.fyrContacttSalesRepPageLabels  || '{}' @context='scriptComment'};
+        window.AEM_DATA.labels.fyrToolLabels = {
+        		fyrWelcomePageLabels: 'fyrWelcomePageLabels',
+        		fyrSalesRepListPageLabels: 'fyrSalesRepListPageLabels',
+        		fyrContactSalesRepPageLabels: 'fyrContactSalesRepPageLabels',
+        		repToolConfig: 'repToolConfig'
+            };
+    </script>
+    <div class="fyrtool-container">
+        <bd-fyr-tool-page labels="fyrToolLabels" config="repToolConfig"></bd-fyr-tool-page>
+	</div>
+</sly>

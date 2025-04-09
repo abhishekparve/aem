@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="PDP Look up"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+        <items jcr:primaryType="nt:unstructured">
+            <column
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/container">
+                <items jcr:primaryType="nt:unstructured">
+                    <PDPContent
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="PDP Content"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                        <items jcr:primaryType="nt:unstructured">
+                            <sfa
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                fieldDescription="Author Exp Fragment of SFA Template"
+                                fieldLabel="SFA Experience Fragment"
+                                rootPath="/content/experience-fragments/bdb"
+                                name="./sfa"/>
+                            <scm
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                fieldDescription="Author Exp Fragment of SCM Template"
+                                fieldLabel="SCM Experience Fragment"
+                                rootPath="/content/experience-fragments/bdb"
+                                name="./scm"/>
+                            <otherProducts
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                fieldDescription="Author Exp Fragment of Other Products Template"
+                                fieldLabel="Other Products Experience Fragment"
+                                rootPath="/content/experience-fragments/bdb"
+                                name="./otherProducts"/>
+                            <kitsAndSets
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                fieldDescription="Author Exp Fragment of Kits and Sets Template"
+                                fieldLabel="Kits and Sets Experience Fragment"
+                                rootPath="/content/experience-fragments/bdb"
+                                name="./kitsAndSets"/>
+                            <instruments
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                fieldDescription="Author Exp Fragment of Instruments Template"
+                                fieldLabel="Instruments Experience Fragment"
+                                rootPath="/content/experience-fragments/bdb"
+                                name="./instruments"/>
+                        </items>
+                    </PDPContent>
+                </items>
+            </column>
+        </items>
+    </content>
+</jcr:root>

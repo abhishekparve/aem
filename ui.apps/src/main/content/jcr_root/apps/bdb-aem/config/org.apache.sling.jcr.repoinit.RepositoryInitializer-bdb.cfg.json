@@ -1,0 +1,7 @@
+// Configuration created by Apache Sling JCR Installer
+{
+  "scripts":[
+    "create service user content-reader-service-helper",
+    "set ACL for content-reader-service-helper \r\n   allow jcr:read on /etc \r\nend"
+  ]
+}

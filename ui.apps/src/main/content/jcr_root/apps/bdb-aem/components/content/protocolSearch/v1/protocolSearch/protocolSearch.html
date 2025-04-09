@@ -1,0 +1,30 @@
+<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html"
+     data-sly-call="${templates.placeholder @ isEmpty = true}"></sly>
+
+<sly data-sly-use.protocolMainModel="com.bdb.aem.core.models.ProtocolModel">
+  <div class="container protocol-page__search-anchor hide-mobile-padding">
+    <div class="protocol-search app-js__protocol-search ">
+    <form class="row">
+        <div class="form-field col-lg-12">
+            <div class="protocol-search__btn-container d-flex">
+                <img src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/search-gray.svg" alt="Search"
+                    class="search-icon" />
+            </div>
+            <input aria-label="Search Protocol" id="protocolSearchInput" class="form-control" type="text"
+                autocomplete="off" placeholder="${properties.searchPlaceholder}" value="">
+            <div class="protocol-search__close-btn d-flex">
+                <img src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/Close-dark.svg" alt="close" class="close-icon" />
+            </div>
+        </div>
+    </form>
+    <div class="row search-results">
+        <div class="search-results-content protocol-search__results-container col-lg-6">
+        </div>
+    </div>
+    <div class="search-results-links">
+      <a class="cta-link protocol-search__cta__expand-all" href="">${properties.expandAllLabel}</a>
+      <a class="cta-link protocol-search__cta__collapse-all hide" href="">${properties.collapseAllLabel}</a>
+    </div>
+    </div>
+  </div>
+</sly>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="sling:OrderedFolder"
+    jcr:title="BD Biosciences">
+    <region_country_language_mappings/>
+    <facet_values/>
+    <comparison_table_values/>
+    <event_types/>
+    <event_topics/>
+    <event_locations/>
+	<event_facet_values/>
+    <region-country-mapping/>
+    <country-state-mapping/>
+	<language_list_for_search/>
+	<data-sheets-doc-types/>
+	<Regulatory-Status-translation/>
+	<data-sheets-cell-types/>
+	<Country-To-Region-And-Language-Mapping/>
+</jcr:root>

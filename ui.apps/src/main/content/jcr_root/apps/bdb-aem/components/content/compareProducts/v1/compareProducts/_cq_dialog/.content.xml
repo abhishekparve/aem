@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Compare Products"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        granite:class="cmp-button__editor"
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/container">
+        <items jcr:primaryType="nt:unstructured">
+            <container
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Properties"
+                sling:resourceType="granite/ui/components/coral/foundation/container"
+                margin="{Boolean}true">
+                <items jcr:primaryType="nt:unstructured">
+                    <columns
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <column
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <productComparisonLabel
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldDescription="Product Comparison Label"
+                                        fieldLabel="Product Comparison Label"
+                                        name="./productComparisonLabel"/>
+                                    <compareHistogramsLabel
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldDescription="Compare Histograms Label"
+                                        fieldLabel="Compare Histograms Label"
+                                        name="./compareHistogramsLabel"/>
+                                    <noResult
+                                      jcr:primaryType="nt:unstructured"
+                                      sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                      fieldLabel="No Result"
+                                      name="./noResult"/>
+                                    <compareHistogramHeadingLabel
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldDescription="Compare Histogram Heading Label"
+                                        fieldLabel="Compare Histogram Heading Label"
+                                        name="./compareHistogramHeadingLabel"/>
+                                    <estDeliveryDateLabel
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldDescription="Est. Delivery Date Label"
+                                        fieldLabel="Est. Delivery Date Label"
+                                        name="./estDeliveryDateLabel"/>
+                                    <addToShoppingListLabel
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldDescription="Add To Shopping List Label"
+                                        fieldLabel="Add To Shopping List Label"
+                                        name="./addToShoppingListLabel"/>
+                                    <cloneLabel
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldDescription="Clone Label"
+                                        fieldLabel="Clone Label"
+                                        name="./cloneLabel"/>
+                                    <brandLabel
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldDescription="Brand Label"
+                                        fieldLabel="Brand Label"
+                                        name="./brandLabel"/>
+                                    <alternativeNameLabel
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldDescription="Alternative Name Label"
+                                        fieldLabel="Alternative Name Label"
+                                        name="./alternativeNameLabel"/>
+                                    <volPerTestLabel
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldDescription="Vol. Per Test Label"
+                                        fieldLabel="Vol. Per Test Label"
+                                        name="./volPerTestLabel"/>
+                                    <isotypeLabel
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldDescription="Isotype Label"
+                                        fieldLabel="Isotype Label"
+                                        name="./isotypeLabel"/>
+                                    <reactivityLabel
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldDescription="Reactivity Label"
+                                        fieldLabel="Reactivity Label"
+                                        name="./reactivityLabel"/>
+                                    <applicationLabel
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldDescription="Application Label"
+                                        fieldLabel="Application Label"
+                                        name="./applicationLabel"/>
+                                    <immunogenLabel
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldDescription="Immunogen Label"
+                                        fieldLabel="Immunogen Label"
+                                        name="./immunogenLabel"/>
+                                    <workshopNumberLabel
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+										fieldDescription="Workshop Number Label"
+                                        fieldLabel="Workshop Number Label"
+                                        name="./workshopNumberLabel"/>
+                                    <entrezGeneIDLabel
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldDescription="Entrez Gene ID Label"
+                                        fieldLabel="Entrez Gene ID Label"
+                                        name="./entrezGeneIDLabel"/>
+                                    <storageBufferLabel
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldDescription="Storage Buffer Label"
+                                        fieldLabel="Storage Buffer Label"
+                                        name="./storageBufferLabel"/>
+                                    <regulatoryStatusLabel
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldDescription="Regulatory Status Label"
+                                        fieldLabel="Regulatory Status Label"
+                                        name="./regulatoryStatusLabel"/>
+                                    <excitationSourceLabel
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldDescription="Excitation Source Label"
+                                        fieldLabel="Excitation Source Label"
+                                        name="./excitationSourceLabel"/>
+                                    <excitationMaxLabel
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldDescription="Excitation Max Label"
+                                        fieldLabel="Excitation Max Label"
+                                        name="./excitationMaxLabel"/>
+                                    <emissionMaxLabel
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldDescription="Emission Max Label"
+                                        fieldLabel="Emission Max Label"
+                                        name="./emissionMaxLabel"/>
+                                    <currentFormatLabel
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldDescription="Current Format Label"
+                                        fieldLabel="Current Format Label"
+                                        name="./currentFormatLabel"/>
+                                    <otherFormatsLabel
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldDescription="Other Formats Label"
+                                        fieldLabel="Other Formats Label"
+                                        name="./otherFormatsLabel"/>
+                                    <viewMoreLabel
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldDescription="View More Label"
+                                        fieldLabel="View More Label"
+                                        name="./viewMoreLabel"/> 
+                                    <backButtonLabel
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldDescription="Back Button Label"
+                                        fieldLabel="Back Button Label"
+                                        name="./backButtonLabel"/>    
+                                </items>
+                            </column>
+                        </items>
+                    </columns>
+                </items>
+            </container>
+        </items>
+    </content>
+</jcr:root>

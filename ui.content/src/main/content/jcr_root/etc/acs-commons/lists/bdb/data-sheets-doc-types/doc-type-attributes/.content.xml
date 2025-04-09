@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2021-02-16T14:31:09.266+05:30"
+        cq:lastModifiedBy="admin"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="nt:unstructured"
+        jcr:title="Doc Type Attributes"
+        jcr:uuid="302e0ef0-aa04-4093-ae73-68937af5e668"
+        sling:resourceType="acs-commons/components/utilities/genericlist">
+        <image
+            jcr:primaryType="nt:unstructured"
+            fileReference="/apps/acs-commons/components/utilities/genericlist/generic-list.png"/>
+        <list jcr:primaryType="nt:unstructured">
+            <item0
+                jcr:primaryType="nt:unstructured"
+                jcr:title="SELECT"/>
+            <item1
+                jcr:primaryType="nt:unstructured"
+                jcr:title="CFDA License"
+                value="CFDA license"/>
+            <item2
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Instruction For Use (IFU)"
+                value="Instruction for use (IFU)"/>
+            <item3
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Ingredient Disclosure"
+                value="Ingredient disclosure"/>
+            <item4
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Package/product Insert"
+                value="Package/product insert"/>
+            <item5
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Technical Data Sheet (TDS)"
+                value="Technical data sheet (TDS)"/>
+            <item6
+                jcr:primaryType="nt:unstructured"
+                jcr:title="User Guide/Manual"
+                value="User guide/manual"/>
+            <item7
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Safety Data Sheets"
+                value="Safety Data Sheets"/>
+			<item8
+                jcr:primaryType="nt:unstructured"
+                jcr:title="eBook"
+                value="eBook"/>
+        </list>
+    </jcr:content>
+</jcr:root>

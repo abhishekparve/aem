@@ -1,0 +1,127 @@
+{
+    "_header": {
+        "nvPairs": [
+            "status",
+            0,
+            "QTime",
+            0,
+            "params",
+            {
+                "nvPairs": ["q", "*:*", "wt", "javabin", "version", "2"]
+            }
+        ]
+    },
+    "_results": [
+        {
+            "id": "popsrch1",
+            "keyword_t": "mice",
+            "date_t": "2020-11-17",
+            "frequency_i": 10,
+            "market_t": "bdbio-uk",
+            "language_t": "en",
+            "_version_": 1679152381529423872
+        },
+        {
+            "id": "popsrch2",
+            "keyword_t": "reagent",
+            "date_t": "2020-09-23",
+            "frequency_i": 20,
+            "market_t": "bdbio-uk",
+            "language_t": "en",
+            "_version_": 1679152381560881152
+        },
+        {
+            "id": "popsrch3",
+            "keyword_t": "pharmingen",
+            "date_t": "2020-09-23",
+            "frequency_i": 9,
+            "market_t": "bdbio-uk",
+            "language_t": "en",
+            "_version_": 1679152381561929728
+        },
+        {
+            "id": "popsrch4",
+            "keyword_t": "610703",
+            "date_t": "2020-09-23",
+            "frequency_i": 15,
+            "market_t": "bdbio-uk",
+            "language_t": "en",
+            "_version_": 1679152381561929729
+        },
+        {
+            "id": "popsrch5",
+            "keyword_t": "buv496",
+            "date_t": "2020-09-23",
+            "frequency_i": 30,
+            "market_t": "bdbio-uk",
+            "language_t": "en",
+            "_version_": 1679152381562978304
+        }
+    ],
+    "elapsedTime": 47,
+    "response": {
+        "nvPairs": [
+            "responseHeader",
+            {
+                "nvPairs": [
+                    "status",
+                    0,
+                    "QTime",
+                    0,
+                    "params",
+                    {
+                        "nvPairs": ["q", "*:*", "wt", "javabin", "version", "2"]
+                    }
+                ]
+            },
+            "response",
+            [
+                {
+                    "id": "popsrch1",
+                    "keyword_t": "mice",
+                    "date_t": "2020-09-23",
+                    "frequency_i": 10,
+                    "market_t": "bdbio-uk",
+                    "language_t": "en",
+                    "_version_": 1679152381529423872
+                },
+                {
+                    "id": "popsrch2",
+                    "keyword_t": "reagent",
+                    "date_t": "2020-09-23",
+                    "frequency_i": 20,
+                    "market_t": "bdbio-uk",
+                    "language_t": "en",
+                    "_version_": 1679152381560881152
+                },
+                {
+                    "id": "popsrch3",
+                    "keyword_t": "pharmingen",
+                    "date_t": "2020-09-23",
+                    "frequency_i": 9,
+                    "market_t": "bdbio-uk",
+                    "language_t": "en",
+                    "_version_": 1679152381561929728
+                },
+                {
+                    "id": "popsrch4",
+                    "keyword_t": "610703",
+                    "date_t": "2020-09-23",
+                    "frequency_i": 15,
+                    "market_t": "bdbio-uk",
+                    "language_t": "en",
+                    "_version_": 1679152381561929729
+                },
+                {
+                    "id": "popsrch5",
+                    "keyword_t": "buv496",
+                    "date_t": "2020-09-23",
+                    "frequency_i": 30,
+                    "market_t": "bdbio-uk",
+                    "language_t": "en",
+                    "_version_": 1679152381562978304
+                }
+            ]
+        ]
+    }
+}

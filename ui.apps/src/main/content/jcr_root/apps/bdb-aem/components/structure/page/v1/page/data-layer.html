@@ -1,0 +1,6 @@
+<script>
+  dataLayer = window.dataLayer || [];
+</script>
+<sly data-sly-test="${inheritedPageProperties.isJiraEnable == 'true' && inheritedPageProperties.jiraURL}">
+    <script type="text/javascript" async src="${inheritedPageProperties.jiraURL}"></script>
+</sly>

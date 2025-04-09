@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+        />
+        <title>Sign In/Register | BD Biosciences - US</title>
+        <link rel="shortcut icon" href="./assets/images/favicon.png" />
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="https://sso.bdbiosciences.com/prebuilt/css/screen.css"
+        />
+        <script
+            type="text/javascript"
+            src="https://sso.bdbiosciences.com/prebuilt/js/jquery.js"
+        ></script>
+        <script
+            type="text/javascript"
+            src="https://sso.bdbiosciences.com/prebuilt/js/jquery-ui.js"
+        ></script>
+        <script
+            type="text/javascript"
+            src="https://sso.bdbiosciences.com/prebuilt/js/height.js"
+        ></script>
+        <script
+            type="text/javascript"
+            src="https://sso.bdbiosciences.com/prebuilt/js/popup.js"
+        ></script>
+        <script
+            type="text/javascript"
+            src="https://sso.bdbiosciences.com/prebuilt/js/scrollbar.js"
+        ></script>
+        <script
+            type="text/javascript"
+            src="https://sso.bdbiosciences.com/prebuilt/js/scrolltabs.js"
+        ></script>
+        <script
+            type="text/javascript"
+            src="https://sso.bdbiosciences.com/prebuilt/js/scrolltables.js"
+        ></script>
+        <script
+            type="text/javascript"
+            src="https://sso.bdbiosciences.com/prebuilt/js/select.js"
+        ></script>
+        <script
+            type="text/javascript"
+            src="https://sso.bdbiosciences.com/prebuilt/js/slider.js"
+        ></script>
+        <script
+            type="text/javascript"
+            src="https://sso.bdbiosciences.com/prebuilt/js/scripts.js"
+        ></script>
+        <script
+            type="text/javascript"
+            src="https://sso.bdbiosciences.com/prebuilt/js/igx-dev.js"
+        ></script>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        />
+        <link rel="stylesheet" href="./fonts.css" />
+        <link rel="stylesheet" href="./signin.css" />
+    </head>
+
+    <body>
+        <div id="page" class="signIn">
+            <header class="transparent">
+                <div class="container">
+                    <a class="logo" href="/"
+                        ><img src="./assets/images/bd-griffin.png" alt="BD Griffin"
+                    /></a>
+                    <a class="logo" href="https://sso.bdbiosciences.com">
+                        <img src="./assets/images/bd-griffin-white.png" alt="BD Griffin"
+                    /></a>
+                    <div class="links"></div>
+                </div>
+            </header>
+
+            <main class="off-white">
+                <div class="container">
+                    <h1 class="xl align-center gray-text">
+                        Login with your BD Account ID
+                    </h1>
+                    <div class="register-login">
+                        <form action="/US/Account/Login" id="form-login" method="post">
+                            <div class="error-message" style="display: none;">
+                                <img src="./assets/icons/caution.svg" alt="caution" />
+                                <p>
+                                    The account has been locked due to 5 failed login attempts.
+                                </p>
+                            </div>
+                            <p class="signInFormHeader">Sign In</p>
+                            <div class="error-message">
+                                <img src="./assets/icons/caution.svg" alt="caution" />
+                                <p>
+                                    Either your email or password was incorrect, please try again.
+                                </p>
+                            </div>
+                            <div class="form-group">
+                                <input
+                                    data-val="true"
+                                    data-val-length="Please limit email to 255 characters"
+                                    data-val-length-max="255"
+                                    data-val-required="The Email field is required"
+                                    id="Username"
+                                    maxlength="100"
+                                    name="Username"
+                                    placeholder="Email Address"
+                                    tabindex="1"
+                                    type="email"
+                                    onkeyup="enableSignInBtn(this)"
+                                    onfocus="moveLabelToTop(this)"
+                                    onfocusout="moveLabelToDown(this)"
+                                    class="invalidInputField"
+                                />
+                                <label for="Username" class="formLabel">Email Address</label>
+                                <label id="validateemailllabel"
+                                    >Please enter a valid email address</label
+                                >
+                            </div>
+                            <div class="form-group pwdInput">
+                                <input
+                                    class="watermark invalidInputField"
+                                    data-val="true"
+                                    data-val-length="Please limit password to 255 characters"
+                                    data-val-length-max="255"
+                                    data-val-required="The Password field is required."
+                                    id="Password"
+                                    maxlength="20"
+                                    name="Password"
+                                    placeholder="Password"
+                                    tabindex="2"
+                                    type="password"
+                                    onkeyup="enableSignInBtn(this)"
+                                    onfocus="moveLabelToTop(this)"
+                                    onfocusout="moveLabelToDown(this)"
+                                />
+                                <label for="Password" class="formLabel">Password</label>
+                                <img
+                                    src="./assets/icons/view-password.svg"
+                                    class="fa-eye"
+                                    alt="password"
+                                    onclick="togglepwdicon(this)"
+                                />
+                                <label id="validatepwdlabel">Please enter the Password</label>
+                            </div>
+                            <div class="form-group forgotpwdblock">
+                                <label for="Remember" class="rememberMeLabel checkbox">
+                                    <input
+                                        data-val="true"
+                                        data-val-required="The Remember field is required."
+                                        id="Remember"
+                                        name="Remember"
+                                        type="checkbox"
+                                        value="true"
+                                        class="checkbox__input"
+                                    />
+                                    <div class="checkbox__box"></div>
+                                    Remember Me
+                                </label>
+
+                                <a class="open-modal forgotPwd" href="/forgotpwd.html"
+                                    >Forgot Password?</a
+                                >
+                            </div>
+                            <div class="align-center">
+                                <p>
+                                    <button
+                                        class="large signInBtn"
+                                        type="submit"
+                                        id="signin2"
+                                        name="signin2"
+                                        disabled
+                                    >
+                                        Sign In
+                                    </button>
+                                </p>
+                            </div>
+                            <div class="align-center">
+                                <p class="createAccountHeader">Don't have an account?</p>
+                                <p class="shoppingListText">
+                                    See prices, create and share shopping lists, and more
+                                </p>
+                                <button class="createAccountBtn">
+                                    <a href="https://www.bdbiosciences.com/us/register/registerHome"
+                                        >Create Account</a
+                                    >
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </main>
+
+            <section class="sub footerLinks">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 footerLinksBlock">
+                            <div class="">
+                                <input
+                                    type="radio"
+                                    id="products"
+                                    name="example_accordion"
+                                    class="accordion__input"
+                                />
+                                <label for="products" class="accordion__label">Products</label>
+                                <img
+                                    src="./assets/icons/Arrow-down.svg"
+                                    class="arrow"
+                                    alt="arrow-down"
+                                />
+                                <div class="accordion__content">
+                                    <ul>
+                                        <li><a href="#">Instruments</a></li>
+                                        <li><a href="#">Reagents</a></li>
+                                        <li><a href="#">Software & Informatics</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="">
+                                <input
+                                    type="radio"
+                                    id="discover"
+                                    name="example_accordion"
+                                    class="accordion__input"
+                                />
+                                <label for="discover" class="accordion__label"
+                                    >Discover and Learn</label
+                                ><img
+                                    src="./assets/icons/Arrow-down.svg"
+                                    class="arrow"
+                                    alt="arrow-down"
+                                />
+                                <div class="accordion__content">
+                                    <ul>
+                                        <li><a href="#">Clinical Areas</a></li>
+                                        <li><a href="#">Research Areas</a></li>
+                                        <li><a href="#">Applications / Techniques</a></li>
+                                        <li><a href="#">Thought Leadership</a></li>
+                                        <li><a href="#">Training</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="">
+                                <input
+                                    type="radio"
+                                    id="resources"
+                                    name="example_accordion"
+                                    class="accordion__input"
+                                />
+                                <label for="resources" class="accordion__label"
+                                    >Resources & Tools</label
+                                ><img
+                                    src="./assets/icons/Arrow-down.svg"
+                                    class="arrow"
+                                    alt="arrow-down"
+                                />
+                                <div class="accordion__content">
+                                    <ul>
+                                        <li><a href="#">Research Cloud</a></li>
+                                        <li><a href="#">Spectrum Viewer</a></li>
+                                        <li><a href="#">Guided Panel Solution</a></li>
+                                        <li><a href="#">Bead Lot Files</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="">
+                                <input
+                                    type="radio"
+                                    id="support"
+                                    name="example_accordion"
+                                    class="accordion__input"
+                                />
+                                <label for="support" class="accordion__label">Support</label
+                                ><img
+                                    src="./assets/icons/Arrow-down.svg"
+                                    class="arrow"
+                                    alt="arrow-down"
+                                />
+                                <div class="accordion__content">
+                                    <ul>
+                                        <li><a href="#">Contact Us</a></li>
+                                        <li><a href="#">Website Feedback</a></li>
+                                        <li><a href="#">Promotions</a></li>
+                                        <li><a href="#">Technical Support</a></li>
+                                        <li><a href="#">Shipping & Returns</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="">
+                                <input
+                                    type="radio"
+                                    id="biosciences"
+                                    name="example_accordion"
+                                    class="accordion__input"
+                                />
+                                <label for="biosciences" class="accordion__label"
+                                    >BD Biosciences</label
+                                ><img
+                                    src="./assets/icons/Arrow-down.svg"
+                                    class="arrow"
+                                    alt="arrow-down"
+                                />
+                                <div class="accordion__content">
+                                    <ul>
+                                        <li><a href="#">About Us</a></li>
+                                        <li><a href="#">Quality Control</a></li>
+                                        <li><a href="#">Events</a></li>
+                                        <li><a href="#">Careers</a></li>
+                                        <li><a href="#">BD Worldwide</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <footer>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="col-lg-4 col-md-4 col-sm-5 col-xs-12 socialIconsBlock">
+                                <a class="logo" href="/">
+                                    <img
+                                        src="./assets/images/bd-logo-white-footer.png"
+                                        alt="BD-logo"
+                                    />
+                                </a>
+
+                                <div class="social">
+                                    <a
+                                        href="https://www.facebook.com/BectonDickinsonandCo?ref=bookmarks"
+                                        ><i class="fa fa-facebook" aria-hidden="true"></i
+                                    ></a>
+                                    <a href="https://twitter.com/BDandCo"
+                                        ><i class="fa fa-twitter" aria-hidden="true"></i
+                                    ></a>
+                                    <a
+                                        href="https://www.linkedin.com/company/bd1?trk=biz-companies-cym"
+                                        ><i class="fa fa-linkedin" aria-hidden="true"></i
+                                    ></a>
+                                    <a
+                                        href="https://www.youtube.com/channel/UCPGmutY43EjP_3ijOugNGnA"
+                                        ><i class="fa fa-youtube" aria-hidden="true"></i
+                                    ></a>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-8 col-md-8 col-sm-7 col-xs-12 copyRightBlock">
+                                <div class="links">
+                                    <a href="/en-us/privacy-policy" title="Privacy Policy">
+                                        Privacy Policy </a
+                                    ><span class="pipe">|</span>
+                                    <a href="/en-us/terms-of-use" title="Terms of Use">
+                                        Terms of Use </a
+                                    ><span class="pipe">|</span>
+                                    <a id="ot-sdk-btn" class="ot-sdk-show-settings">
+                                        Cookie Settings</a
+                                    >
+                                </div>
+                                <p class="copyRightText">
+                                    &copy; 2020 BD. All rights reserved. Unless otherwise noted, BD,
+                                    the BD Logo and all other trademarks are property of Becton,
+                                    Dickinson and Company.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+
+            <a id="top" href="#"><i class="fa fa-angle-double-up" aria-hidden="true"></i></a>
+        </div>
+
+        <script>
+            $(function () {
+                var cRedir = $('#country-redirect');
+                if (cRedir != null && cRedir.length > 0) {
+                    $('#redirLink').click();
+                    $('#proceed').on('click', function () {
+                        $('#ProceedForm').submit();
+                    });
+                    $('#cancel').on('click', function () {
+                        window.location.href = '/us/account/logoff';
+                    });
+                }
+            });
+
+            function enableSignInBtn(element) {
+                let username = document.querySelector('#Username');
+                let password = document.querySelector('#Password');
+                let signInBtn = document.querySelector('.signInBtn');
+                let formLabel = document.querySelector('#' + element.id).nextElementSibling;
+                let errMsg = formLabel.nextElementSibling;
+                let regex = /^([a-zA-Z0-9\.-]+)@([a-zA-Z0-9]+)\.([a-z]{2,8})(.[a-z]{2,8})?$/;
+                let isEnabled = false;
+
+                if (regex.test(username.value)) {
+                    if (element.type == 'email') {
+                        element.removeAttribute('class');
+                        formLabel.classList.remove('invalidFormLabel');
+                        errMsg.classList.remove('errMsgText');
+                    }
+                    if (password.value.length > 0) {
+                        signInBtn.disabled = isEnabled;
+                        signInBtn.classList.add('enablesignInBtn');
+                        element.removeAttribute('class');
+                    } else {
+                        signInBtn.classList.remove('enablesignInBtn');
+                        signInBtn.disabled = !isEnabled;
+                    }
+                } else {
+                    if (element.type == 'email') {
+                        formLabel.classList.add('invalidFormLabel');
+                        element.setAttribute('class', 'invalidInputField');
+                        errMsg.classList.add('errMsgText');
+                    }
+                    if (element.type == 'password' && element.value.length > 0) {
+                        element.removeAttribute('class');
+                    } else element.setAttribute('class', 'invalidInputField');
+
+                    signInBtn.disabled = !isEnabled;
+                    signInBtn.classList.remove('enablesignInBtn');
+                }
+            }
+
+            function moveLabelToTop(element) {
+                document
+                    .querySelector('#' + element.id + ' ~ .formLabel')
+                    .classList.add('moveLabelToTop');
+            }
+
+            function moveLabelToDown(element) {
+                let label = document.querySelector('#' + element.id + ' ~ .formLabel');
+                if (element.value.length > 0) label.classList.add('moveLabelToTop');
+                else label.classList.remove('moveLabelToTop');
+            }
+
+            function togglepwdicon(element) {
+                let pwd = document.querySelector('#Password');
+                if (pwd.type == 'password') {
+                    element.src = './assets/icons/hide-password.svg';
+                    pwd.type = 'text';
+                } else {
+                    element.src = './assets/icons/view-password.svg';
+                    pwd.type = 'password';
+                }
+            }
+        </script>
+        <script src="/d3e102b0f5123172c24210c54b2ebef7f99e44415117f563482180642a4ceee4/ns.js"></script>
+    </body>
+</html>

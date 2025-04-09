@@ -1,0 +1,337 @@
+<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html"
+    data-sly-call="${templates.placeholder @ isEmpty = true}"></sly>
+
+<sly data-sly-use.categoryCaseStudyModel="com.bdb.aem.core.models.CategoryCaseStudyModel">
+    <sly data-sly-test.isImageVideo="${properties.brightcoveVideoId || categoryCaseStudyModel.foregroundImage}"></sly>
+    <div class="clp-case-study app-js__clp-case-study">
+
+        <article class="text-with-image app-js__text-with-image left-align with-bg-image video-section" id="${categoryCaseStudyModel.articleId}" data-sly-attribute.class="text-with-image app-js__text-with-image ${isImageVideo ? categoryCaseStudyModel.sectionAlignment : ''}${isImageVideo && (categoryCaseStudyModel.sectionAlignment == 'right' || categoryCaseStudyModel.sectionAlignment == 'left') ? '-align' : ''} with-bg-image video-section">
+	
+            <!-- starting Grey or No Color varation if condition is true -->
+
+            <sly data-sly-test="${categoryCaseStudyModel.backgroundOverlay=='grey'|| categoryCaseStudyModel.backgroundOverlay=='no'}">
+                <div class="text-with-image__bg-image d-flex grey">
+                    <sly data-sly-test="${categoryCaseStudyModel.backgroundImage}">
+                        <div class="d-flex align-items-center justify-content-center position-relative clp-case-study-bg-container w-100">
+                            <picture>
+                                <source media="(max-width: 900px)" srcset=${categoryCaseStudyModel.backgroundImageMobile}  data-srcset=${categoryCaseStudyModel.backgroundImageMobile}
+                                    onload="window.aos && window.aos.refresh()">
+                                <img src=${categoryCaseStudyModel.backgroundImage} data-src=${categoryCaseStudyModel.backgroundImage} alt="BD’s History &amp; Leadership"
+                                    onload="window.aos && window.aos.refresh()" class="loaded w-100 lazy"
+                                    data-ll-status="loaded">
+                            </picture>
+                        </div>
+                        <sly data-sly-test="${categoryCaseStudyModel.backgroundOverlay=='grey'}">
+                            <div class="text-with-image__bg-gradient"></div>
+                        </sly>
+                    </sly>
+                </div>
+
+                <div class="container text-with-image__container ${properties.togglePaddingTop?'pt-2':''}">
+                    <div class="row text-with-image__section">
+                        <div class="${isImageVideo || (categoryCaseStudyModel.backgroundImage && categoryCaseStudyModel.backgroundOverlay=='no') ? 'col-lg-6' : 'col-12'} text-with-image__details">
+                            <article class="category-info app-js__category-info video-section"  >
+                                <div data-sly-test="${categoryCaseStudyModel.sectionTitle}"
+                                    class="category-info__sec ${properties.txtColor}-text">
+                                    ${categoryCaseStudyModel.sectionTitle}
+                                </div>
+                                <h2 data-sly-test="${categoryCaseStudyModel.title}"
+                                    class="category-info__title ${properties.txtColor}-text">
+                                    ${categoryCaseStudyModel.title @context='html'}
+                                </h2>
+                                <div data-sly-test="${categoryCaseStudyModel.subTitle}"
+                                    class="category-info__subtitle ${properties.txtColor}-text">
+                                    ${categoryCaseStudyModel.subTitle @context='html'}
+                                </div>
+                                <div data-sly-test="${categoryCaseStudyModel.description}"
+                                    class="category-info__desc bd-rte ${properties.txtColor}-text"
+                                    data-img-src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/case-study-read-more-arrow.svg">
+                                    <span class="category-info__desc_section" 
+                                        data-read-more-modal-id="${resource.path.hashCode}">${categoryCaseStudyModel.description @context='html'}</span>
+                                </div>
+
+                                <sly data-sly-test="${categoryCaseStudyModel.foregroundImage}">
+                                    <div class="category-info__media d-lg-none">
+
+                                        <div class="category-info__video" data-toggle="modal"
+                                            data-target="#category-info-${categoryCaseStudyModel.articleId}">
+                                            <div
+                                                class="d-flex align-items-center justify-content-center position-relative">
+                                                <picture>
+                                                    <source media="(max-width: 900px)"
+                                                        srcset=${categoryCaseStudyModel.foregroundImage}
+                                                        onload="window.aos && window.aos.refresh()">
+                                                    <img src=${categoryCaseStudyModel.foregroundImage}
+                                                        alt="BD’s History &amp; Leadership"
+                                                        onload="window.aos && window.aos.refresh()"
+                                                        onerror='this.onerror=null;this.src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/images/product-default.png";'>
+                                                </picture>
+
+                                                <sly data-sly-test="${properties.brightcoveVideoId}">
+                                                    <img class="position-absolute"
+                                                        src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/playButton.svg"
+                                                        data-toggle="modal">
+                                                </sly>
+
+                                            </div>
+
+                                            <sly data-sly-test="${properties.brightcoveVideoId}">
+                                                <div class="modal fade category-info__video-modal brightcove-modal"
+                                                    id="category-info--${categoryCaseStudyModel.articleId}" tabindex="-1"
+                                                    role="dialog" aria-labelledby="categoryInfoVideoTitle"
+                                                    aria-hidden="true" data-backdrop="static">
+                                                    <div class="modal-dialog modal-dialog-centered" role="document">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <button type="button"
+                                                                    class="close category-info__video-modal-close"
+                                                                    data-dismiss="modal" aria-label="Close">
+                                                                    <span aria-hidden="true">&times;</span>
+                                                                </button>
+                                                            </div>
+                                                            <div class="modal-body category-info__video-modal-body is-video"
+                                                                data-accountId="1752604059001"
+                                                                data-playerId="B1xXFuBodW"
+                                                                data-videoId="${properties.brightcoveVideoId}">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </sly>
+                                        </div>
+                                    </div>
+
+                                </sly>
+
+                                <sly data-sly-test="${categoryCaseStudyModel.ctaLink}">
+                                    <a href="${categoryCaseStudyModel.ctaLink}"
+                                        class="btn btn-primary-white btn-lg py-4 px-5 category-info__cta ${properties.btnColor}-bg ${properties.btnLabel}-text">${categoryCaseStudyModel.ctaLabel @context='html'}</a>
+                                </sly>
+                                <sly data-sly-test="${categoryCaseStudyModel.additionalCtaLink}">
+                                    <a href="${categoryCaseStudyModel.additionalCtaLink}"
+                                        class="btn btn-primary-blue btn-lg category-info__cta-additional ${properties.btnColorCTA}-bg ${properties.btnCTALabel}-text">${categoryCaseStudyModel.additionalCtaLabel @context='html'}</a>
+                                </sly>
+
+                            </article>
+                        </div>
+                        <div data-sly-test="${isImageVideo}" class="col-lg-1 text-with-image__spacer">&nbsp;</div>
+
+                        <sly data-sly-test="${categoryCaseStudyModel.foregroundImage}">
+                            <div class="${isImageVideo ? 'col-lg-5 text-with-image__media' : ''} d-none d-lg-block">
+                                <div class="text-with-image__media__video" data-toggle="modal"
+                                    data-target="#text-with-img-bd-history">
+                                    <div class="d-flex align-items-center justify-content-center position-relative">
+                                        <picture>
+                                            <source media="(max-width: 900px)"
+                                                srcset=${categoryCaseStudyModel.foregroundImage}
+                                                onload="window.aos && window.aos.refresh()">
+                                            <img src=${categoryCaseStudyModel.foregroundImage}
+                                                alt="BD’s History &amp; Leadership"
+                                                onload="window.aos && window.aos.refresh()"
+                                                onerror='this.onerror=null;this.src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/images/product-default.png";'>
+                                        </picture>
+
+                                        <sly data-sly-test="${properties.brightcoveVideoId}">
+                                            <img class="position-absolute"
+                                                src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/playButton.svg"
+                                                data-toggle="modal">
+                                        </sly>
+                                    </div>
+                                    <sly data-sly-test="${properties.brightcoveVideoId}">
+                                        <div class="modal fade text-with-image__media__video-modal brightcove-modal"
+                                            id="text-with-img-bd-history" tabindex="-1" role="dialog"
+                                            aria-labelledby="textWithImgVideoTitle" aria-hidden="true"
+                                            data-backdrop="static">
+                                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <button type="button"
+                                                            class="close text-with-image__media__video-modal-close"
+                                                            data-dismiss="modal" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body text-with-image__media__video-modal-body is-video"
+                                                        data-accountId="1752604059001" data-playerId="B1xXFuBodW"
+                                                        data-videoId="${properties.brightcoveVideoId}">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </sly>
+                                </div>
+                            </div>
+                        </sly>
+                    </div>
+                </div>
+
+            </sly>
+
+            <!-- starting blue varation if condition is true -->
+
+            <sly data-sly-test="${categoryCaseStudyModel.backgroundOverlay=='blue'}">
+                <div class="blue-background text-with-image__bg-image d-flex">
+                    <div class="container text-with-image__blueVarContainer">
+                        <div class="row text-with-image__section">
+                            <div class="${isImageVideo ? 'col-lg-6' : 'col-12'} text-with-image__details">
+                                <article class="category-info app-js__category-info video-section">
+                                    <div data-sly-test="${categoryCaseStudyModel.sectionTitle}"
+                                        class="category-info__sec ${properties.txtColor}-text">
+                                        ${categoryCaseStudyModel.sectionTitle}
+                                    </div>
+                                    <h2 data-sly-test="${categoryCaseStudyModel.title}"
+                                        class="category-info__title ${properties.txtColor}-text">
+                                        ${categoryCaseStudyModel.title @context='html'}
+                                    </h2>
+                                    <div data-sly-test="${categoryCaseStudyModel.subTitle}"
+                                        class="category-info__subtitle ${properties.txtColor}-text">
+                                        ${categoryCaseStudyModel.subTitle @context='html'}
+                                    </div>
+                                    <div data-sly-test="${categoryCaseStudyModel.description}"
+                                        class="category-info__desc bd-rte ${properties.txtColor}-text"
+                                        data-img-src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/case-study-read-more-arrow.svg">
+                                    </div>
+
+                                    <sly data-sly-test="${categoryCaseStudyModel.foregroundImage}">
+                                        <div class="category-info__media d-lg-none">
+
+
+                                            <div class="category-info__video" data-toggle="modal"
+                                                data-target="#category-info-${categoryCaseStudyModel.articleId}">
+                                                <div
+                                                    class="d-flex align-items-center justify-content-center position-relative">
+                                                    <picture>
+                                                        <source media="(max-width: 900px)"
+                                                            srcset=${categoryCaseStudyModel.foregroundImage}
+                                                            onload="window.aos && window.aos.refresh()">
+                                                        <img src=${categoryCaseStudyModel.foregroundImage}
+                                                            alt="BD’s History &amp; Leadership"
+                                                            onload="window.aos && window.aos.refresh()"
+                                                            onerror='this.onerror=null;this.src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/images/product-default.png";'>
+                                                    </picture>
+
+                                                    <sly data-sly-test="${properties.brightcoveVideoId}">
+                                                        <img class="position-absolute"
+                                                            src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/playButton.svg"
+                                                            data-toggle="modal">
+                                                    </sly>
+
+                                                </div>
+
+                                                <sly data-sly-test="${properties.brightcoveVideoId}">
+                                                    <div class="modal fade category-info__video-modal brightcove-modal"
+                                                        id="category-info--${categoryCaseStudyModel.articleId}" tabindex="-1"
+                                                        role="dialog" aria-labelledby="categoryInfoVideoTitle"
+                                                        aria-hidden="true" data-backdrop="static">
+                                                        <div class="modal-dialog modal-dialog-centered" role="document">
+                                                            <div class="modal-content">
+                                                                <div class="modal-header">
+                                                                    <button type="button"
+                                                                        class="close category-info__video-modal-close"
+                                                                        data-dismiss="modal" aria-label="Close">
+                                                                        <span aria-hidden="true">&times;</span>
+                                                                    </button>
+                                                                </div>
+                                                                <div class="modal-body category-info__video-modal-body is-video"
+                                                                    data-accountId="1752604059001"
+                                                                    data-playerId="B1xXFuBodW"
+                                                                    data-videoId="${properties.brightcoveVideoId}">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                </sly>
+                                            </div>
+                                        </div>
+
+                                    </sly>
+
+                                    <sly data-sly-test="${categoryCaseStudyModel.ctaLink}">
+                                        <a href="${categoryCaseStudyModel.ctaLink}"
+                                            class="btn btn-primary-white btn-lg py-4 px-5 category-info__cta ${properties.btnColor}-bg ${properties.btnLabel}-text">${categoryCaseStudyModel.ctaLabel @context='html'}</a>
+                                    </sly>
+                                    <sly data-sly-test="${categoryCaseStudyModel.additionalCtaLink}">
+                                        <a href="${categoryCaseStudyModel.additionalCtaLink}"
+                                            class="btn btn-primary-blue btn-lg category-info__cta-additional ${properties.btnColorCTA}-bg ${properties.btnCTALabel}-text">${categoryCaseStudyModel.additionalCtaLabel @context='html'}</a>
+                                    </sly>
+
+                                </article>
+                            </div>
+                            <div data-sly-test="${isImageVideo}" class="col-lg-1 text-with-image__spacer">&nbsp;</div>
+
+                            <sly data-sly-test="${categoryCaseStudyModel.foregroundImage}">
+                                <div class="${isImageVideo ? 'col-lg-5 text-with-image__media' : ''} d-lg-block">
+                                    <div class="text-with-image__media__video" data-toggle="modal"
+                                        data-target="#text-with-img-bd-history">
+                                        <div class="d-flex align-items-center justify-content-center position-relative">
+                                            <picture>
+                                                <source media="(max-width: 900px)"
+                                                    srcset=${categoryCaseStudyModel.foregroundImage}
+                                                    onload="window.aos && window.aos.refresh()">
+                                                <img src=${categoryCaseStudyModel.foregroundImage}
+                                                    alt="BD’s History &amp; Leadership"
+                                                    onload="window.aos && window.aos.refresh()"
+                                                    onerror='this.onerror=null;this.src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/images/product-default.png";'>
+                                            </picture>
+
+                                            <sly data-sly-test="${properties.brightcoveVideoId}">
+                                                <img class="position-absolute"
+                                                    src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/playButton.svg"
+                                                    data-toggle="modal">
+                                            </sly>
+                                        </div>
+                                        <sly data-sly-test="${properties.brightcoveVideoId}">
+                                            <div class="modal fade text-with-image__media__video-modal brightcove-modal"
+                                                id="text-with-img-bd-history" tabindex="-1" role="dialog"
+                                                aria-labelledby="textWithImgVideoTitle" aria-hidden="true"
+                                                data-backdrop="static">
+                                                <div class="modal-dialog modal-dialog-centered" role="document">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <button type="button"
+                                                                class="close text-with-image__media__video-modal-close"
+                                                                data-dismiss="modal" aria-label="Close">
+                                                                <span aria-hidden="true">&times;</span>
+                                                            </button>
+                                                        </div>
+                                                        <div class="modal-body text-with-image__media__video-modal-body is-video"
+                                                            data-accountId="1752604059001" data-playerId="B1xXFuBodW"
+                                                            data-videoId="${properties.brightcoveVideoId}">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </sly>
+                            </sly>
+                        </div>
+                    </div>
+                </div>
+            </sly>
+        </article>
+
+        <!-- clp-case-study read more modal -->
+        <article class="clp-case-study-modal app-js__clp-case-study-modal">
+            <div class="modal px-0" id="clp-case-study-modal-${resource.path.hashCode}" tabindex="-1" role="dialog"
+                aria-labelledby="clp-case-study-modal" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered clp-case-study-modal__modal-dimensions " role="document">
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class=" clp-case-study-modal__modal-close p-0">
+                            <button type="button" class="close p-0" data-dismiss="modal" aria-label="Close" data-role="none"
+                                role="button">
+                                <img src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/Close-dark.svg" alt="close"/>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <p class="clp-modal-title">${categoryCaseStudyModel.title}</p>
+                            <p class="clp-modal-subtitle">${categoryCaseStudyModel.subTitle}</p>
+                            <div class="clp-modal-desc bd-rte">${categoryCaseStudyModel.description @context='html'}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </div>
+</sly>

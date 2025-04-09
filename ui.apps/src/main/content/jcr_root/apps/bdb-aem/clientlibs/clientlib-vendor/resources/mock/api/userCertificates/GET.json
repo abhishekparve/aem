@@ -1,0 +1,76 @@
+[
+    {
+        "format": "JPEG",
+        "documentType": "TAX_EXEMPT",
+        "ownerId": "patrick@bd.com",
+        "name": "Certification_GETReq",
+        "status": "EXPIRED",
+        "documentId": "Certification_TAX_EXCEMPT",
+        "url": "/medias/Test-Copy.jpg?context=bWFzdGVyfHJvb3R8MjcyMTc1fGltYWdlL2pwZWd8aDA2L2g5Mi84ODA1MDQxMTc2NjA2L0dFLTIxMjkgLSBDb3B5LmpwZ3w0YTQ2OTc0YjFhNmViYTI0NGViMmRhZWFhMTI5ODgxMzc0NjlkYmRiMjE2NjEwZDdkZmZmMGQyODQ1N2NlMjBl",
+        "expiryDate": null,
+        "soldtoId": "12345"
+    },
+    {
+        "format": "JPEG",
+        "documentType": "RUO",
+        "ownerId": "patrick@bd.com",
+        "name": "Certification_GETReq",
+        "status": "APPROVED",
+        "documentId": "Certification_RUO1",
+        "url": "/medias/Test-Copy.jpg?context=bWFzdGVyfHJvb3R8MjcyMTc1fGltYWdlL2pwZWd8aDA2L2g5Mi84ODA1MDQxMTc2NjA2L0dFLTIxMjkgLSBDb3B5LmpwZ3w0YTQ2OTc0YjFhNmViYTI0NGViMmRhZWFhMTI5ODgxMzc0NjlkYmRiMjE2NjEwZDdkZmZmMGQyODQ1N2NlMjBl",
+        "expiryDate": "01/30/2021",
+        "soldtoId": "12345",
+        "shipTo": {
+            "addressId": 123456,
+            "companyName": "test company",
+            "line1": "Address Line 1",
+            "line2": "Address Line 2",
+            "building": "Building - 1",
+            "floor": "2",
+            "room": "001",
+            "department": "Science",
+            "phone": "123456789",
+            "town": "Birmingham",
+            "region": null,
+            "postalCode": "91345",
+            "district": "DK",
+            "country": {
+                "isocode": "US"
+            }
+        }
+    },
+    {
+        "format": "PDF",
+        "documentType": "RUO",
+        "ownerId": "patrick@bd.com",
+        "name": "Certifications_PDF",
+        "status": "DECLINED",
+        "documentId": "Certification_RUO2",
+        "url": "/medias/Certifications-testpdf.pdf?context=bWFzdGVyfHJvb3R8MzIyNjh8YXBwbGljYXRpb24vcGRmfGgxMC9oMTcvODgwNTA0MjY4MzkzNC9DZXJ0aWZpY2F0aW9uc190ZXN0cGRmLnBkZnxiMjk4MzRmMTYwYzZlODFjNTU5YWM3NWJlNjE0ZDI5ZmIyYmE0NDUzYTE3ZTgzYThlNTFiZmMwYTAzMDJiZjVj",
+        "expiryDate": "01/30/2021",
+        "soldtoId": "12345",
+        "shipTo": {
+            "addressId": 123457,
+            "companyName": "test company",
+            "line1": "Address Line 1",
+            "line2": "Address Line 2",
+            "building": "Building - 1",
+            "floor": "2",
+            "room": "001",
+            "department": "Science",
+            "phone": "123456789",
+            "town": "Birmingham",
+            "region": {
+                "countryIso": "US",
+                "isocode": "US-IA",
+                "isocodeShort": "IA",
+                "name": "Iowa"
+            },
+            "postalCode": "91345",
+            "district": "DK",
+            "country": {
+                "isocode": "US"
+            }
+        }
+    }
+]

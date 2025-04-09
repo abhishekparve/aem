@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <filter root="/apps/bdb-aem" mode="replace"/>
+	<filter root="/apps/msm/bdb-aem" mode="replace"/>
+	<filter root="/apps/sling" mode="replace"/>
+	<filter root="/apps/wcm/msm" mode="replace"/>
+	<filter root="/apps/cq/gui" mode="replace"/>
+	<filter root="/etc/map" mode="replace"/>
+	<filter root="/etc/map.publish" mode="replace"/>
+	<filter root="/apps/granite" mode="replace"/>
+	<filter root="/oak:index/bdb.product-custom-4"/>
+	<filter root="/apps/settings/granite"/>
+	<filter root="/apps/settings/granite/operations/maintenance"/>
+	<filter root="/apps/settings/granite/operations/maintenance/granite_weekly"/>
+</workspaceFilter>

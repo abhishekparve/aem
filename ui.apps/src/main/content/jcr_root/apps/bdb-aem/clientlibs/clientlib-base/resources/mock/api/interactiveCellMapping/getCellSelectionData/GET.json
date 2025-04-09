@@ -1,0 +1,108 @@
+{
+    "cellSelectionList": [
+        {
+            "cellId": "1",
+            "cellName": "HSC",
+            "cellDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed deiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            "cellImg": "/resources/images/t_cell.png",
+            "subSetCellIds": ["1001", "1002"],
+            "panelIds": [],
+            "reactivity": "human",
+            "markersList": [
+                {
+                    "categoryName": "cellSurface",
+                    "linksList": []
+                },
+                {
+                    "categoryName": "intracellularTxn",
+                    "linksList": [
+                        "CD45R (B220)",
+                        "CD103",
+                        "CD180 (RP105)",
+                        "CD1d [UPREGULATED)]",
+                        "CD21/35[superscript]hi",
+                        "CD268 (BAFF-Receptor)",
+                        "CD307d (FcRL4)",
+                        "CD81 [upregulated]",
+                        "CD9 [subset]",
+                        "IgM"
+                    ]
+                },
+                {
+                    "categoryName": "secretedProteins",
+                    "linksList": ["AID", "Bach2", "Bcl-6", "IRF8", "Pax5"]
+                }
+            ]
+        },
+        {
+            "cellId": "1001",
+            "cellName": "Monocyte",
+            "cellDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed deiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            "cellImg": "/resources/images/t_cell.png",
+            "subSetCellIds": ["1001", "1002"],
+            "panelIds": [],
+            "reactivity": "human",
+            "markersList": [
+                {
+                    "categoryName": "cellSurface",
+                    "linksList": []
+                },
+                {
+                    "categoryName": "intracellularTxn",
+                    "linksList": [
+                        "CD21/35[SUPERSCRIPT]hi",
+                        "CD45R (B220)",
+                        "CD103 [alpha]",
+                        "CD180 (RP105)",
+                        "CD1d [UPREGULATED)]",
+                        "CD21/35[superscript]hi",
+                        "CD268 (BAFF-Receptor)",
+                        "CD307d (FcRL4)",
+                        "CD81 [upregulated] [Subset]",
+                        "CD9 [Subset]",
+                        "IgM"
+                    ]
+                },
+                {
+                    "categoryName": "secretedProteins",
+                    "linksList": ["AID [ALPHA]", "Bach2", "Bcl-6", "IRF8", "Pax5"]
+                }
+            ]
+        },
+        {
+            "cellId": "1002",
+            "cellName": "CD4+",
+            "cellDescription": "",
+            "cellImg": "/resources/images/t_cell.png",
+            "subSetCellIds": ["1001", "1002", "1003"],
+            "panelIds": ["panel1", "panel2"],
+            "reactivity": "human",
+            "markersList": [
+                {
+                    "categoryName": "cellSurface",
+                    "linksList": ["CD103"]
+                },
+                {
+                    "categoryName": "intracellularTxn",
+                    "linksList": [
+                        "CD21/35[SUPERSCRIPT]hi",
+                        "CD45R (B220)",
+                        "CD103",
+                        "CD180 (RP105)",
+                        "CD1d",
+                        "CD21/35[superscript]hi",
+                        "CD268 (BAFF-Receptor)",
+                        "CD307d (FcRL4)",
+                        "CD81",
+                        "CD9",
+                        "IgM"
+                    ]
+                },
+                {
+                    "categoryName": "secretedProteins",
+                    "linksList": []
+                }
+            ]
+        }
+    ]
+}

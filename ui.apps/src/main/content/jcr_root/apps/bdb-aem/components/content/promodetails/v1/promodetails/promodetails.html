@@ -1,0 +1,44 @@
+<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html"
+     data-sly-call="${templates.placeholder @ isEmpty = true}"></sly>
+<sly data-sly-use.promoDetailsModel="com.bdb.aem.core.models.PromoDetailsModel"></sly>
+<article data-sly-test="${promoDetailsModel.title}" class="promo-details-banner app-js__promo-details-banner">
+    <div class="promo-details-banner__container container">
+        <div class="row">
+            <div class="promo-details-banner__image col-sm-3 col-md-6 col-lg-4">
+            	<sly data-sly-test="${promoDetailsModel.imageLinkUrl}">
+                	<a href="${promoDetailsModel.imageLinkUrl}" target="${properties.openNewImageLinkTab == 'true' ? '_blank' : '_self'}">
+                		<img class="promo-details-banner__promotions-image" src="${promoDetailsModel.imagePath}" alt="${promoDetailsModel.altText}" title="${promoDetailsModel.altText}"/>
+                	</a>
+                </sly>	
+                <sly data-sly-test="${!promoDetailsModel.imageLinkUrl}">
+                	<img class="promo-details-banner__promotions-image" src="${promoDetailsModel.imagePath}" alt="${promoDetailsModel.altText}" title="${promoDetailsModel.altText}"/>
+                </sly>
+            </div>
+            <div class="promo-details-banner__information col-lg-8 col-sm-9 col-md-6">
+                <div class="promo-details-banner__information-heading bd-rte">
+                    ${promoDetailsModel.title @context='html'}
+                </div>
+                <p class="promo-details-banner__description">
+                    ${promoDetailsModel.shortDescription @context='html'}
+                </p>
+                <p class="promo-details-banner__expiry">
+                    <span class="promo-details-banner__expiry-title">
+                        ${promoDetailsModel.expirationLabel}
+                    </span> ${promoDetailsModel.expirationDate}
+                </p>
+                <span class="promo-details-banner__promocode">
+                    <span class="promo-details-banner__promocode-title">
+                        ${promoDetailsModel.promoLabel}
+                    </span> ${promoDetailsModel.promoCodeValue}
+                </span>
+                <p data-sly-test="${promoDetailsModel.promoDescription}" class="promo-details-banner__promocode-description">
+                    ${promoDetailsModel.promoDescription @context='html'}
+                </p>
+                <a data-sly-test="${promoDetailsModel.labelCta}" href="${promoDetailsModel.urlCta}" target="" type="button" class="btn btn-primary-blue btn-md">${promoDetailsModel.labelCta @context='html'}</a>
+                <p data-sly-test="${promoDetailsModel.longDescription}" class="promo-details-banner__details">
+                    ${promoDetailsModel.longDescription @context='html'}
+                </p>
+            </div>
+        </div>
+    </div>
+</article>

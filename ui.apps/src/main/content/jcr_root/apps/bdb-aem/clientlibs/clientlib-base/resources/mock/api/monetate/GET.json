@@ -1,0 +1,86 @@
+{
+    "data": {
+        "name": "My Merchandiser Set",
+        "feed_type": "bestsellers",
+        "fallbackfeedtype": "newest",
+        "fallbackfeedid": 8940,
+        "apiversion": "2",
+        "productsdata": [
+            {
+                "producturl": "https://www.example.com/shop/mens-ultra-fastpack-ii-mid-gore-tex-cdl8",
+                "rank": "5",
+                "alternateprice": "",
+                "name": "MEN’s ULTRA FASTPACK II MID GORE-TEX;",
+                "price": "155.00",
+                "outofstock": false,
+                "pid": "555836",
+                "securethumbnailimage": "/resources/images/customerviewed2.png",
+                "cartable": true,
+                "thumbnailimage": "/resources/images/customerviewed2.png"
+            },
+            {
+                "producturl": "https://www.example.com/shop/mens-hedgehog-fastpack-mid-gore-tex-cxu5",
+                "rank": "8",
+                "alternateprice": "",
+                "name": "MEN’S HEDGEHOG FASTPACK MID GORE-TEX;",
+                "price": "130.00",
+                "outofstock": false,
+                "pid": "550534",
+                "securethumbnailimage": "/resources/images/customerviewed2.png",
+                "cartable": true,
+                "thumbnailimage": "/resources/images/customerviewed2.png"
+            },
+            {
+                "producturl": "https://www.example.com/shop/mens-ultra-fastpack-ii-mid-gore-tex-cdl8",
+                "rank": "5",
+                "alternateprice": "",
+                "name": "MEN’s ULTRA FASTPACK II MID GORE-TEX;",
+                "price": "155.00",
+                "outofstock": false,
+                "pid": "555836",
+                "securethumbnailimage": "/resources/images/customerviewed2.png",
+                "cartable": true,
+                "thumbnailimage": "/resources/images/customerviewed2.png"
+            },
+            {
+                "producturl": "https://www.example.com/shop/mens-hedgehog-fastpack-mid-gore-tex-cxu5",
+                "rank": "8",
+                "alternateprice": "",
+                "name": "MEN’S HEDGEHOG FASTPACK MID GORE-TEX;",
+                "price": "130.00",
+                "outofstock": false,
+                "pid": "550534",
+                "securethumbnailimage": "/resources/images/customerviewed2.png",
+                "cartable": true,
+                "thumbnailimage": "/resources/images/customerviewed2.png"
+            },
+            {
+                "producturl": "https://www.example.com/shop/mens-ultra-fastpack-ii-mid-gore-tex-cdl8",
+                "rank": "5",
+                "alternateprice": "",
+                "name": "MEN’s ULTRA FASTPACK II MID GORE-TEX;",
+                "price": "155.00",
+                "outofstock": false,
+                "pid": "555836",
+                "securethumbnailimage": "/resources/images/customerviewed2.png",
+                "cartable": true,
+                "thumbnailimage": "/resources/images/customerviewed2.png"
+            },
+            {
+                "producturl": "https://www.example.com/shop/mens-hedgehog-fastpack-mid-gore-tex-cxu5",
+                "rank": "8",
+                "alternateprice": "",
+                "name": "MEN’S HEDGEHOG FASTPACK MID GORE-TEX;",
+                "price": "130.00",
+                "outofstock": false,
+                "pid": "550534",
+                "securethumbnailimage": "/resources/images/customerviewed2.png",
+                "cartable": true,
+                "thumbnailimage": "/resources/images/customerviewed2.png"
+            }
+        ],
+        "noitemsaction": "use-fallback-feed",
+        "notenoughitemsaction": "use-fallback-feed"
+    },
+    "ref": ""
+}

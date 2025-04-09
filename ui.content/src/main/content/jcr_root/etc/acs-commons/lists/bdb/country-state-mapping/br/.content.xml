@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
+          xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+          jcr:primaryType="cq:Page">
+    <jcr:content
+            cq:lastModified="{Date}2020-02-10T17:17:02.919+05:30"
+            cq:lastModifiedBy="admin"
+            jcr:primaryType="nt:unstructured"
+            jcr:title="Brazil"
+            sling:resourceType="acs-commons/components/utilities/genericlist"
+            value="BR">
+        <image
+                jcr:primaryType="nt:unstructured"
+                fileReference="/apps/acs-commons/components/utilities/genericlist/generic-list.png"/>
+        <list jcr:primaryType="nt:unstructured">
+            <item0
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Acre"
+                    value="BR-AC"/>
+            <item1
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Tocantins"
+                    value="BR-TO"/>
+            <item2
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="São Paulo"
+                    value="BR-SP"/>
+            <item3
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Sergipe"
+                    value="BR-SE"/>
+            <item4
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Santa Catarina"
+                    value="BR-SC"/>
+            <item5
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Rio Grande do Sul"
+                    value="BR-RS"/>
+            <item6
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Roraima"
+                    value="BR-RR"/>
+            <item7
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Rondônia"
+                    value="BR-RO"/>
+            <item8
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Rio Grande do Norte"
+                    value="BR-RN"/>
+            <item9
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Rio de Janeiro"
+                    value="BR-RJ"/>
+            <item10
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="ParanÃ¡"
+                    value="BR-PR"/>
+            <item11
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="PiauÃ­"
+                    value="BR-PA"/>
+            <item12
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Pernambuco"
+                    value="BR-PE"/>
+            <item13
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="ParaÃ­ba"
+                    value="BR-PB"/>
+            <item14
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="ParÃ¡"
+                    value="BR-PA"/>
+            <item15
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Mato Grosso"
+                    value="BR-MT"/>
+            <item16
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Mato Grosso do Sul"
+                    value="BR-MS"/>
+            <item17
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Minas Gerais"
+                    value="BR-MG"/>
+            <item18
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="MaranhÃ£o"
+                    value="BR-MA"/>
+            <item19
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="GoiÃ¡s"
+                    value="BR-GO"/>
+            <item20
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="EspÃ­rito Santo"
+                    value="BR-ES"/>
+            <item21
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Distrito Federal"
+                    value="BR-DF"/>
+            <item22
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="CearÃ¡"
+                    value="BR-CE"/>
+            <item23
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Bahia"
+                    value="BR-BA"/>
+            <item24
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="AmapÃ¡"
+                    value="BR-AP"/>
+            <item25
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Amazonas"
+                    value="BR-AM"/>
+            <item26
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Alagoas"
+                    value="BR-AL"/>
+        </list>
+    </jcr:content>
+</jcr:root>

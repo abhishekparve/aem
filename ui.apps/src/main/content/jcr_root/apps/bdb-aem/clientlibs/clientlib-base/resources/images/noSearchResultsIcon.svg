@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="140px" height="140px" viewBox="0 0 140 140" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>76F122E6-05FA-4E22-AC68-E84FD7260C40</title>
+    <g id="Web" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Bead-Lot-Files-Default-Copy-4" transform="translate(-654.000000, -514.000000)">
+            <g id="Group-3" transform="translate(654.000000, 514.000000)">
+                <circle id="Oval" fill="#E7EBF1" cx="70" cy="70" r="70"></circle>
+                <g id="Group" transform="translate(70.500000, 70.000000) scale(-1, 1) translate(-70.500000, -70.000000) translate(34.000000, 30.000000)">
+                    <rect id="Rectangle" stroke="#999A9C" stroke-width="2" fill="#EEEEEE" x="27.071856" y="0" width="45.2694599" height="60.3592798" rx="3.01796399"></rect>
+                    <rect id="Rectangle" fill="#FFFFFF" x="15" y="7.54490998" width="49.0419149" height="61.8682618" rx="3.01796399"></rect>
+                    <path d="M15,54.428963 L15,54.428963 L15,10.562874 C15,8.89609848 16.254675,7.54490998 17.8023951,7.54490998 L61.2395197,7.54490998 C62.7872398,7.54490998 64.0419149,8.89609848 64.0419149,10.562874 L64.0419149,66.3952078 C64.0419149,68.0619833 62.7872398,69.4131718 61.2395197,69.4131718 L27.2926281,69.4131718 L27.2926281,69.4131718" id="Path" stroke="#999A9C" stroke-width="2" stroke-linecap="round"></path>
+                    <circle id="Oval" stroke="#999A9C" stroke-width="1.79999995" fill="#EEEEEE" cx="11" cy="69" r="11"></circle>
+                    <circle id="Oval" stroke="#999A9C" stroke-width="1.79999995" stroke-linecap="round" cx="11" cy="69" r="11"></circle>
+                    <g id="Group-9" transform="translate(7.000000, 65.000000)" stroke="#999A9C" stroke-linecap="round" stroke-width="1.79999995">
+                        <line x1="7.90597794" y1="0" x2="0" y2="8.62470321" id="Line-2"></line>
+                        <line x1="7.90597794" y1="0" x2="0" y2="8.62470321" id="Line-2-Copy" transform="translate(3.952989, 4.312352) scale(1, -1) translate(-3.952989, -4.312352) "></line>
+                    </g>
+                    <g id="Group-4" transform="translate(23.299401, 25.652694)" stroke="#999A9C" stroke-linecap="round" stroke-width="2">
+                        <line x1="12.071856" y1="0.377245499" x2="31.6886219" y2="0.377245499" id="Line"></line>
+                        <line x1="12.071856" y1="15.4670655" x2="31.6886219" y2="15.4670655" id="Line"></line>
+                        <line x1="12.071856" y1="30.5568854" x2="31.6886219" y2="30.5568854" id="Line"></line>
+                        <line x1="0" y1="7.92215548" x2="31.6886219" y2="7.92215548" id="Line"></line>
+                        <line x1="0" y1="23.0119754" x2="31.6886219" y2="23.0119754" id="Line"></line>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

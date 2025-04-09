@@ -1,0 +1,254 @@
+{
+    "facetsConfig": [
+        {
+            "name": "Events",
+            "code": "eventType",
+            "codeTarget": "#events",
+            "children": [
+                {
+                    "name": "Webinar",
+                    "code": "webinar",
+                    "isSelected": false,
+                    "count": 0
+                },
+                {
+                    "name": "Tradeshow",
+                    "code": "tradeshow",
+                    "isSelected": false,
+                    "count": 0
+                },
+                {
+                    "name": "Conference",
+                    "code": "conference",
+                    "isSelected": false,
+                    "count": 0
+                },
+                {
+                    "name": "Tradeshow",
+                    "code": "tradeshow",
+                    "isSelected": false,
+                    "count": 0
+                },
+                {
+                    "name": "Meeting",
+                    "code": "meeting",
+                    "isSelected": false,
+                    "count": 0
+                },
+                {
+                    "name": "Online",
+                    "code": "online",
+                    "isSelected": false,
+                    "count": 0
+                },
+                {
+                    "name": "Offline",
+                    "code": "offline",
+                    "isSelected": false,
+                    "count": 0
+                },
+                {
+                    "name": "Teams",
+                    "code": "teams",
+                    "isSelected": false,
+                    "count": 0
+                },
+                {
+                    "name": "Skype",
+                    "code": "skype",
+                    "isSelected": false,
+                    "count": 0
+                }
+            ]
+        },
+        {
+            "name": "Topics",
+            "code": "topicType",
+            "codeTarget": "#topics",
+            "children": [
+                {
+                    "name": "Diabetes Care",
+                    "code": "bioimaging",
+                    "isSelected": false,
+                    "count": 1
+                },
+                {
+                    "name": "Healthcare Worker Safety",
+                    "code": "healthcare_worker_safety",
+                    "isSelected": false,
+                    "count": 16
+                },
+                {
+                    "name": "Infection Prevention",
+                    "code": "infection_prevention",
+                    "isSelected": false,
+                    "count": 9
+                }
+            ]
+        }
+    ],
+    "cardData": [
+        {
+            "title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tellus in hac habitasse platea. Sapien pellentesque habitant morbi tristique. Gravida dictum fusce ut placerat orci nulla pellentesque dignissim",
+            "imageUrl": "",
+            "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tellus in hac habitasse platea. Sapien pellentesque habitant morbi tristique. Gravida dictum fusce ut placerat orci nulla pellentesque dignissim. Fringilla est ullamcorper eget nulla. Dui id ornare arcu odio ut sem nulla pharetra diam. Sit amet cursus sit amet dictum sit. Neque egestas congue quisque egestas diam. Velit ut tortor pretium viverra suspendisse potenti nullam ac. In fermentum et sollicitudin ac orci phasellus egestas tellus rutrum. Nisi quis eleifend quam adipiscing vitae. Facilisis magna etiam tempor orci eu lobortis elementum. Euismod nisi porta lorem mollis. Eget nunc lobortis mattis aliquam faucibus purus in. In fermentum et sollicitudin ac orci phasellus egestas tellus. Faucibus interdum posuere lorem ipsum dolor. Velit euismod in pellentesque massa placerat duis ultricies lacus. Feugiat in fermentum posuere urna nec tincidunt.</p><p>Et ligula ullamcorper malesuada proin libero nunc consequat interdum varius.</p>",
+            "redirectUrl": "https: //www.bdbiosciences.com/en-us",
+            "scheduleTime": "04/08/2024",
+            "eventType": "webinar",
+            "topicType": "infection_prevention,bioimaging"
+        },
+        {
+            "title": "BD volunteers bring clean drinking water to village in Mexico",
+            "imageUrl": "",
+            "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tellus in hac habitasse platea. Sapien pellentesque habitant morbi tristique. Gravida dictum fusce ut placerat orci nulla pellentesque dignissim. Fringilla est ullamcorper eget nulla. Dui id ornare arcu odio ut sem nulla pharetra diam. Sit amet cursus sit amet dictum sit. Neque egestas congue quisque egestas diam. Velit ut tortor pretium viverra suspendisse potenti nullam ac. In fermentum et sollicitudin ac orci phasellus egestas tellus rutrum. Nisi quis eleifend quam adipiscing vitae. Facilisis magna etiam tempor orci eu lobortis elementum. Euismod nisi porta lorem mollis. Eget nunc lobortis mattis aliquam faucibus purus in. In fermentum et sollicitudin ac orci phasellus egestas tellus. Faucibus interdum posuere lorem ipsum dolor. Velit euismod in pellentesque massa placerat duis ultricies lacus. Feugiat in fermentum posuere urna nec tincidunt.</p><p>Et ligula ullamcorper malesuada proin libero nunc consequat interdum varius.</p>",
+            "redirectUrl": "https: //www.bdbiosciences.com/en-us",
+            "scheduleTime": "04/09/2024",
+            "eventType": "webinar",
+            "topicType": "infection_prevention"
+        },
+        {
+            "title": "consectetur adipiscing elit, sed do eiusmod, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tellus in hac habitasse platea. Sapien pellentesque habitant morbi tristique. Gravida dictum fusce ut placerat orci nulla pellentesque dignissim. Fringilla est ullamcorper eget nulla. Dui id ornare arcu odio ut sem nulla pharetra diam. Sit amet cursus sit amet dictum sit.",
+            "imageUrl": "/resources/images/clp-t-i-2.png",
+            "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tellus in hac habitasse platea. Sapien pellentesque habitant morbi tristique. Gravida dictum fusce ut placerat orci nulla pellentesque dignissim. Fringilla est ullamcorper eget nulla. Dui id ornare arcu odio ut sem nulla pharetra diam. Sit amet cursus sit amet dictum sit. Neque egestas congue quisque egestas diam. Velit ut tortor pretium viverra suspendisse potenti nullam ac. In fermentum et sollicitudin ac orci phasellus egestas tellus rutrum. Nisi quis eleifend quam adipiscing vitae. Facilisis magna etiam tempor orci eu lobortis elementum. Euismod nisi porta lorem mollis. Eget nunc lobortis mattis aliquam faucibus purus in. In fermentum et sollicitudin ac orci phasellus egestas tellus. Faucibus interdum posuere lorem ipsum dolor. Velit euismod in pellentesque massa placerat duis ultricies lacus. Feugiat in fermentum posuere urna nec tincidunt.</p><p>Et ligula ullamcorper malesuada proin libero nunc consequat interdum varius.</p>",
+            "redirectUrl": "https: //www.bdbiosciences.com/en-us",
+            "scheduleTime": "04/07/2024",
+            "eventType": "webinar",
+            "topicType": "infection_prevention,healthcare_worker_safety"
+        },
+        {
+            "title": "Mexico BD volunteers bring clean drinking water to village in Mexico",
+            "imageUrl": "/resources/images/clp-t-i-3.png",
+            "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tellus in hac habitasse platea. Sapien pellentesque habitant morbi tristique. Gravida dictum fusce ut placerat orci nulla pellentesque dignissim. Fringilla est ullamcorper eget nulla. Dui id ornare arcu odio ut sem nulla pharetra diam. Sit amet cursus sit amet dictum sit. Neque egestas congue quisque egestas diam. Velit ut tortor pretium viverra suspendisse potenti nullam ac. In fermentum et sollicitudin ac orci phasellus egestas tellus rutrum. Nisi quis eleifend quam adipiscing vitae. Facilisis magna etiam tempor orci eu lobortis elementum. Euismod nisi porta lorem mollis. Eget nunc lobortis mattis aliquam faucibus purus in. In fermentum et sollicitudin ac orci phasellus egestas tellus. Faucibus interdum posuere lorem ipsum dolor. Velit euismod in pellentesque massa placerat duis ultricies lacus. Feugiat in fermentum posuere urna nec tincidunt.</p><p>Et ligula ullamcorper malesuada proin libero nunc consequat interdum varius.</p>",
+            "redirectUrl": "https: //www.bdbiosciences.com/en-us",
+            "scheduleTime": "04/02/2024",
+            "eventType": "webinar",
+            "topicType": "healthcare_worker_safety"
+        },
+        {
+            "title": "sed do eiusmod: BD volunteers bring clean drinking water to village in Mexico",
+            "imageUrl": "/resources/images/Background.png",
+            "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non congue purus, tincidunt mollis urna. Quisque maximus tincidunt massa sed rutrum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non congue purus, tincidunt mollis urna. Quisque maximus tincidunt massa sed rutrum.</p>",
+            "redirectUrl": "https: //www.bdbiosciences.com/en-us",
+            "scheduleTime": "05/07/2024",
+            "eventType": "tradeshow",
+            "topicType": "healthcare_worker_safety,bioimaging"
+        },
+        {
+            "title": "clean drinking water: BD volunteers bring clean drinking water to village in Mexico",
+            "imageUrl": "/resources/images/clp-t-i-2.png",
+            "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non congue purus, tincidunt mollis urna. Quisque maximus tincidunt massa sed rutrum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non congue purus, tincidunt mollis urna. Quisque maximus tincidunt massa sed rutrum.</p>",
+            "redirectUrl": "https: //www.bdbiosciences.com/en-us",
+            "scheduleTime": "01/07/2021",
+            "eventType": "tradeshow",
+            "topicType": "infection_prevention"
+        },
+        {
+            "title": "BD volunteers bring clean drinking water to village in Mexico",
+            "imageUrl": "/resources/images/clp-t-i-3.png",
+            "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non congue purus, tincidunt mollis urna. Quisque maximus tincidunt massa sed rutrum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non congue purus, tincidunt mollis urna. Quisque maximus tincidunt massa sed rutrum.</p>",
+            "redirectUrl": "https: //www.bdbiosciences.com/en-us",
+            "scheduleTime": "02/25/2023",
+            "eventType": "tradeshow",
+            "topicType": "infection_prevention"
+        },
+        {
+            "title": "BD volunteers bring clean drinking water to village in Mexico",
+            "imageUrl": "/resources/images/cls-slider5.png",
+            "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non congue purus, tincidunt mollis urna. Quisque maximus tincidunt massa sed rutrum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non congue purus, tincidunt mollis urna. Quisque maximus tincidunt massa sed rutrum.</p>",
+            "redirectUrl": "https: //www.bdbiosciences.com/en-us",
+            "scheduleTime": "06/28/2024",
+            "eventType": "tradeshow",
+            "topicType": "infection_prevention,bioimaging"
+        },
+        {
+            "title": "BD volunteers bring clean drinking water to village in Mexico",
+            "imageUrl": "/resources/images/carousels_img.png",
+            "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non congue purus, tincidunt mollis urna. Quisque maximus tincidunt massa sed rutrum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non congue purus, tincidunt mollis urna. Quisque maximus tincidunt massa sed rutrum.</p>",
+            "redirectUrl": "https: //www.bdbiosciences.com/en-us",
+            "scheduleTime": "03/28/2024",
+            "eventType": "tradeshow",
+            "topicType": "bioimaging"
+        },
+        {
+            "title": "BD volunteers bring clean drinking water to village in Mexico",
+            "imageUrl": "/resources/images/covid-19.png",
+            "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non congue purus, tincidunt mollis urna. Quisque maximus tincidunt massa sed rutrum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non congue purus, tincidunt mollis urna. Quisque maximus tincidunt massa sed rutrum.</p>",
+            "redirectUrl": "https: //www.bdbiosciences.com/en-us",
+            "scheduleTime": "06/28/2020",
+            "eventType": "conference",
+            "topicType": "bioimaging"
+        },
+        {
+            "title": "BD volunteers bring clean drinking water to village in Mexico",
+            "imageUrl": "/resources/images/hotspot.png",
+            "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non congue purus, tincidunt mollis urna. Quisque maximus tincidunt massa sed rutrum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non congue purus, tincidunt mollis urna. Quisque maximus tincidunt massa sed rutrum.</p>",
+            "redirectUrl": "https: //www.bdbiosciences.com/en-us",
+            "scheduleTime": "12/22/2020",
+            "eventType": "conference",
+            "topicType": "bioimaging"
+        },
+        {
+            "title": "BD volunteers bring clean drinking water to village in Mexico",
+            "imageUrl": "/resources/images/events-carousel.png",
+            "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non congue purus, tincidunt mollis urna. Quisque maximus tincidunt massa sed rutrum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non congue purus, tincidunt mollis urna. Quisque maximus tincidunt massa sed rutrum.</p>",
+            "redirectUrl": "https: //www.bdbiosciences.com/en-us",
+            "scheduleTime": "10/18/2023",
+            "eventType": "conference",
+            "topicType": "bioimaging"
+        },
+        {
+            "title": "BD volunteers bring clean drinking water to village in Mexico",
+            "imageUrl": "/resources/images/events-carousel.png",
+            "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non congue purus, tincidunt mollis urna. Quisque maximus tincidunt massa sed rutrum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non congue purus, tincidunt mollis urna. Quisque maximus tincidunt massa sed rutrum.</p>",
+            "redirectUrl": "https: //www.bdbiosciences.com/en-us",
+            "scheduleTime": "03/18/2024",
+            "eventType": "conference",
+            "topicType": "bioimaging"
+        },
+        {
+            "title": "BD volunteers bring clean drinking water to village in Mexico",
+            "imageUrl": "/resources/images/events-carousel.png",
+            "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non congue purus, tincidunt mollis urna. Quisque maximus tincidunt massa sed rutrum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non congue purus, tincidunt mollis urna. Quisque maximus tincidunt massa sed rutrum.</p>",
+            "redirectUrl": "https: //www.bdbiosciences.com/en-us",
+            "scheduleTime": "10/18/2023",
+            "eventType": "conference",
+            "topicType": "healthcare_worker_safety"
+        },
+        {
+            "title": "BD volunteers bring clean drinking water to village in Mexico",
+            "imageUrl": "/resources/images/events-carousel.png",
+            "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non congue purus, tincidunt mollis urna. Quisque maximus tincidunt massa sed rutrum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non congue purus, tincidunt mollis urna. Quisque maximus tincidunt massa sed rutrum.</p>",
+            "redirectUrl": "https: //www.bdbiosciences.com/en-us",
+            "scheduleTime": "10/18/2023",
+            "eventType": "conference",
+            "topicType": "bioimaging"
+        },
+        {
+            "title": "BD volunteers bring clean drinking water to village in Mexico",
+            "imageUrl": "/resources/images/events-carousel.png",
+            "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non congue purus, tincidunt mollis urna. Quisque maximus tincidunt massa sed rutrum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non congue purus, tincidunt mollis urna. Quisque maximus tincidunt massa sed rutrum.</p>",
+            "redirectUrl": "https: //www.bdbiosciences.com/en-us",
+            "scheduleTime": "03/18/2024",
+            "eventType": "conference",
+            "topicType": "healthcare_worker_safety"
+        },
+        {
+            "title": "BD volunteers bring clean drinking water to village in Mexico",
+            "imageUrl": "/resources/images/events-carousel.png",
+            "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non congue purus, tincidunt mollis urna. Quisque maximus tincidunt massa sed rutrum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non congue purus, tincidunt mollis urna. Quisque maximus tincidunt massa sed rutrum.</p>",
+            "redirectUrl": "https: //www.bdbiosciences.com/en-us",
+            "scheduleTime": "01/18/2024",
+            "eventType": "conference",
+            "topicType": "healthcare_worker_safety"
+        },
+        {
+            "title": "BD volunteers bring clean drinking water to village in Mexico",
+            "imageUrl": "/resources/images/events-carousel.png",
+            "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non congue purus, tincidunt mollis urna. Quisque maximus tincidunt massa sed rutrum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non congue purus, tincidunt mollis urna. Quisque maximus tincidunt massa sed rutrum.</p>",
+            "redirectUrl": "https: //www.bdbiosciences.com/en-us",
+            "scheduleTime": "03/18/2024",
+            "eventType": "conference",
+            "topicType": ""
+        }
+    ]
+}

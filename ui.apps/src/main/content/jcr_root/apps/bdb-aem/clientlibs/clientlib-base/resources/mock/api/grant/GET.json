@@ -1,0 +1,133 @@
+{
+    "grants": [
+        {
+            "grantId": "grant0001",
+            "name": "Student Grants",
+            "remainingGrant": {
+                "currencyIso": "USD",
+                "formattedValue": "$5000.00",
+                "priceType": "BUY",
+                "value": 5000.0
+            },
+            "shipToId": "000000000000001000",
+            "totalGrant": {
+                "currencyIso": "USD",
+                "formattedValue": "$10000.00",
+                "priceType": "BUY",
+                "value": 10000.0
+            },
+            "validFrom": "01/30/2021",
+            "validTo": "01/30/2021",
+            "shipTo": {
+                "addressId": "0000000000",
+                "billingAddress": false,
+                "companyName": "BDB",
+                "country": { "isocode": "US", "name": "United States" },
+                "defaultAddress": false,
+                "firstName": "Ben",
+                "formattedAddress": "D02, Street Suite 501, California, San Francisco, 91345",
+                "lastName": "ES",
+                "line1": "D02",
+                "line2": "Street Suite 501",
+                "phone": "000105291",
+                "postalCode": "91345",
+                "region": {
+                    "countryIso": "US",
+                    "isocode": "US-CA",
+                    "isocodeShort": "CA",
+                    "name": "California"
+                },
+                "room": "33",
+                "shippingAddress": true,
+                "town": "San Francisco",
+                "visibleInAddressBook": true
+            }
+        },
+        {
+            "grantId": "grant0001",
+            "name": "Student Grants one",
+            "remainingGrant": {
+                "currencyIso": "USD",
+                "formattedValue": "$300.00",
+                "priceType": "BUY",
+                "value": 300.0
+            },
+            "shipToId": "000000000000001000",
+            "totalGrant": {
+                "currencyIso": "USD",
+                "formattedValue": "$500.00",
+                "priceType": "BUY",
+                "value": 500.0
+            },
+            "validFrom": "01/30/2021",
+            "validTo": "01/30/2021",
+            "shipTo": {
+                "addressId": "0000000000",
+                "billingAddress": false,
+                "companyName": "BDB",
+                "country": { "isocode": "US", "name": "United States" },
+                "defaultAddress": false,
+                "firstName": "Ben",
+                "formattedAddress": "D02, Street Suite 501, California, San Francisco, 91345",
+                "lastName": "ES",
+                "line1": "D02",
+                "line2": "Street Suite 501",
+                "phone": "000105291",
+                "postalCode": "91345",
+                "region": {
+                    "countryIso": "US",
+                    "isocode": "US-CA",
+                    "isocodeShort": "CA",
+                    "name": "California"
+                },
+                "room": "33",
+                "shippingAddress": true,
+                "town": "San Francisco",
+                "visibleInAddressBook": true
+            }
+        },
+        {
+            "grantId": "grant0002",
+            "name": "Student Grants Two",
+            "remainingGrant": {
+                "currencyIso": "USD",
+                "formattedValue": "$100.00",
+                "priceType": "BUY",
+                "value": 100.0
+            },
+            "shipToId": "000000000000001000",
+            "totalGrant": {
+                "currencyIso": "USD",
+                "formattedValue": "$34000.00",
+                "priceType": "BUY",
+                "value": 34000.0
+            },
+            "validFrom": "01/30/2021",
+            "validTo": "01/30/2021",
+            "shipTo": {
+                "addressId": "0000000000",
+                "billingAddress": false,
+                "companyName": "BDB",
+                "country": { "isocode": "US", "name": "United States" },
+                "defaultAddress": false,
+                "firstName": "Ben",
+                "formattedAddress": "D02, Street Suite 501, California, San Francisco, 91345",
+                "lastName": "ES",
+                "line1": "D02",
+                "line2": "Street Suite 501",
+                "phone": "000105291",
+                "postalCode": "91345",
+                "region": {
+                    "countryIso": "US",
+                    "isocode": "US-CA",
+                    "isocodeShort": "CA",
+                    "name": "California"
+                },
+                "room": "33",
+                "shippingAddress": true,
+                "town": "San Francisco",
+                "visibleInAddressBook": true
+            }
+        }
+    ]
+}

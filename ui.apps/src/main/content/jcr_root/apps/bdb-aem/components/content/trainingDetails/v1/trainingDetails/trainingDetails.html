@@ -1,0 +1,30 @@
+<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html"
+     data-sly-call="${templates.placeholder @ isEmpty = true}"></sly>
+
+<sly data-sly-use.trainingDetailsModel = "com.bdb.aem.core.models.TrainingDetailsModel"></sly>
+<div class="container" data-sly-test="${trainingDetailsModel.sectionTitle}">
+    <div class="training-featured-section app-js__training-featured-section">
+		<div class="training-featured-section__title">${trainingDetailsModel.sectionTitle}</div>
+        <div class="d-flex text-center flex-wrap training-featured-section__card-body">
+			<sly data-sly-list.details=${trainingDetailsModel.trainingDetailsList}>
+				<div class="card">
+					<div class="card-body">
+						<sly data-sly-test="${details.imageLinkUrl}">
+						 	<a href="${details.imageLinkUrl}" target="${details.openNewImageLinkTab == 'true' ? '_blank' : '_self'}">
+								<img src="${details.trainingImage}" alt="${details.trainingAlt}" tabindex="0" class="bdb-support-image"/>
+						 	</a>
+						</sly>
+						<sly data-sly-test="${!details.imageLinkUrl}">
+							<img src="${details.trainingImage}" alt="${details.trainingAlt}" tabindex="0" class="bdb-support-image"/>
+						</sly> 	
+						<p class="card-body__heading">${details.trainingTitle @context='html'}</p>
+						<span class="card-body__desc bd-rte">${details.description @context='html'}</span>
+						<div class="card-body__contact-info" data-sly-test="${details.modelText}">${details.modelText @context='html'}</div>
+						<a data-sly-test="${details.modelLabel}" href="${details.modelUrl}" tabindex="0" class="card-body__link">${details.modelLabel @context='html'}</a>
+						<a href="${details.ctaUrl}" tabindex="0" class="btn ${details.color} btn-lg card-body__btn">${details.ctaLabel @context='html'}</a>
+					</div>
+      			</div>
+			</sly>
+ 		</div>
+    </div>
+</div>

@@ -1,0 +1,24 @@
+<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html"
+     data-sly-call="${templates.placeholder @ isEmpty = true}"></sly>
+    <sly data-sly-use.myCartGrants="com.bdb.aem.core.models.MyCartGrantsModel"></sly>
+    <script>
+        if (typeof window.AEM_DATA.labels === 'undefined') {
+            window.AEM_DATA.labels = {};
+        }
+        window.AEM_DATA.labels.myCartGrantLabels = ${ myCartGrants.myCartGrantLabels @context='scriptComment' };
+
+        if (typeof window.AEM_DATA.config === 'undefined') {
+            window.AEM_DATA.config = {};
+        }
+        if (typeof window.AEM_DATA.config.myCartConfig === 'undefined') {
+            window.AEM_DATA.config.myCartConfig = {};
+        }
+         if (typeof window.AEM_DATA.config.myCartConfig.saveForLater === 'undefined') {
+            window.AEM_DATA.config.myCartConfig.saveForLater = {};
+        }
+        window.AEM_DATA.config.myCartGrantConfig = ${ myCartGrants.myCartGrantConfig @context='scriptComment' };
+        window.AEM_DATA.config.myCartConfig.bulkRemoveFromCart = ${ myCartGrants.bulkRemoveFromCartConfig @context='scriptComment' };
+        window.AEM_DATA.config.myCartConfig.saveForLater.bulkAddToSaveForLater = ${ myCartGrants.bulkAddToSaveForLaterConfig @context='scriptComment' };
+
+    </script>
+

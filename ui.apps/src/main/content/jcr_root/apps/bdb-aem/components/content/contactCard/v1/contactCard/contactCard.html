@@ -1,0 +1,63 @@
+<sly
+	data-sly-use.templates="core/wcm/components/commons/v1/templates.html"
+	data-sly-call="${templates.placeholder @ isEmpty = true}"></sly>
+
+<sly data-sly-use.cards="com.bdb.aem.core.models.ContactCardModel">
+	<div class="contact-us-page container px-lg-0">
+		<div>
+			<article class="bdb-contact-info app-js__bdb-contact-info">
+				<div class="bdb-contact-info__container">
+					<div class="bdb-contact-info__container__header">
+						<sly data-sly-test="${cards.pageTitle}">
+							<span class="bdb-contact-info__container__header__title-text" role="heading" aria-level="1">${cards.pageTitle @context='html'}</span>
+						</sly>
+						<sly data-sly-test="${cards.pageSubTitle}">
+							<div class="bdb-contact-info__container__header__description-text bd-rte col-sm-12" style="padding:0;">${cards.pageSubTitle @context='html'} </div>
+						</sly>
+					</div>
+					<div class="bdb-contact-info__container__content-container">
+						<div class="row justify-content-md-between">
+							<div class="col-sm-12 bdb-contact-info__container__content-container__support-card-container">
+								<sly data-sly-list.item="${cards.contactCards}">
+									<div class="card">
+										<div class="card-body">
+											<div class="row">
+												<div class="col-sm-12 col-md-2">	
+												<sly data-sly-test="${item.iconLinkUrl}">
+													<a href="${item.iconLinkUrl}" target="${item.openNewIconLinkTab == 'true' ? '_blank' : '_self'}">
+														<img src="${item.icon}" alt="${item.iconAltText}" class="bdb-support-image"> 
+													</a> 
+												</sly>
+												<sly data-sly-test="${!item.iconLinkUrl}">
+														<img src="${item.icon}" alt="${item.iconAltText}" class="bdb-support-image">
+												</sly>
+												</div>
+												<div class="col-sm-12 col-md-10">
+													<sly data-sly-test="${item.contactTypeTitle}">
+														<div class="card-title-text bd-rte"> ${item.contactTypeTitle @context='html'} </div>
+													</sly>
+													<div class="details-container row">
+														<sly data-sly-test="${item.modes}" data-sly-list.mode="${item.modes}">
+															<div class="phone-details col-sm-12  ${modeList.even ? 'col-md-7' : 'col-md-5'}">
+																<sly data-sly-test="${mode.modeTitle}">
+																	<p class="phone-details-label bold-text">${mode.modeTitle @context='html'}</p>
+																</sly>
+																<sly data-sly-test="${mode.modeDescription}">
+																	<div class="contact-desc bd-rte">${mode.modeDescription @context='html'}</div>
+																</sly>
+															</div>
+														</sly>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</sly>
+							</div>
+						</div>
+					</div>
+				</div>
+			</article>
+		</div>
+	</div>
+</sly>

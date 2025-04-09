@@ -1,0 +1,120 @@
+<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html"
+     data-sly-call="${templates.placeholder @ isEmpty = true}"></sly>
+<sly data-sly-use.time="com.bdb.aem.core.models.TimerModel"></sly>
+ <sly data-sly-use.globalFooterModel="com.bdb.aem.core.models.GlobalFooterModel"></sly>
+<footer class="bdb-footer app-js__bdb-footer d-flex">
+    <div class="bdb-footer__container px-0 ${pageProperties.isCheckoutPage? 'bdb-footer__transparent-container':''}">
+ 
+
+        <div data-sly-test="${!pageProperties.isCheckoutPage}" class="bdb-footer__link-container container d-flex flex-column justify-content-center">
+            <div class="row justify-content-center bdb-footer__normal-device">
+                <sly data-sly-list.category="${globalFooterModel.categories}">
+                    <ul class="bdb-footer__setwidth bdb-footer__link-container-items  flex-column col-lg-2 col-md-2"
+                        id="list-head--${categoryList.index}">
+                        <li data-sly-test="${category.title}" class=" bdb-footer__link-header"
+                            id="list-head-itm--${categoryList.index}">
+                            ${category.title @context='html'}
+                        </li>
+                        <sly data-sly-list.subcategory="${category.subcategories}">
+                            <li data-sly-test="${subcategory.title}" class="bdb-footer__link-sub-item" tabindex="0">
+							<a data-sly-test="${!((subcategory.title == globalFooterModel.subCatName) && (globalFooterModel.loadInModal == true))}"
+                                    href="${subcategory.url}"
+                                    class=" bdb-footer__link-sub-items" tabindex="-1">${subcategory.title @context='html'}
+                            </a>
+
+							<a data-sly-test="${((subcategory.title == globalFooterModel.subCatName) && (globalFooterModel.loadInModal == true))}"
+                                  data-toggle="modal" data-target="#bdb-feedback-form-modal"
+                                    class=" bdb-footer__link-sub-items" tabindex="-1">${subcategory.title @context='html'}
+                            </a>
+
+							</li>
+                        </sly>
+                    </ul>
+                </sly>
+            </div>
+            <div class="row justify-content-center bdb-footer__smaller-device accordion" id="accordian-list">
+                <sly data-sly-list.category="${globalFooterModel.categories}">
+                    <ul class="bdb-footer__link-container-items flex-column col-sm-12 col-md-1" tabindex="0" id="list-head-sm--${categoryList.index}">
+                        <li data-sly-test="${category.title}" class="bdb-footer__link-header collapsed"
+                            data-toggle="collapse" data-target="#list-content--${categoryList.index}" aria-expanded="false"
+                            aria-controls="list-content" tabindex="0">
+                            ${category.title @context='html'}
+                            <img src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/images/arrowd.svg" class="bdb-footer__link-dwn-arrow"
+                                 alt="down-arrow"/>
+                        </li>
+                        <div class="collapse show" aria-labelledby="list-head-sm--${categoryList.index}" data-parent="#accordian-list"
+                             id="list-content--${categoryList.index}">
+                            <sly data-sly-list.subcategory="${category.subcategories}">
+                                <li data-sly-test="${subcategory.title}" class="bdb-footer__link-sub-item" tabindex="0">
+                                    <a data-sly-test="${!((subcategory.title == globalFooterModel.subCatName) && (globalFooterModel.loadInModal == true))}"
+                                        href="${subcategory.url}"
+                                        class=" bdb-footer__link-sub-items" tabindex="-1">${subcategory.title @context='html'}
+                                    </a>
+                                    <a data-sly-test="${((subcategory.title == globalFooterModel.subCatName) && (globalFooterModel.loadInModal == true))}"
+                                        data-toggle="modal" data-target="#bdb-feedback-form-modal"
+                                        class=" bdb-footer__link-sub-items" tabindex="-1">${subcategory.title @context='html'}
+                                    </a>
+                                </li>
+                            </sly>
+                        </div>
+                    </ul>
+                </sly>
+
+            </div>
+        </div>
+        <div class="bdb-footer__icon-container ">
+            <div class=" d-flex container bdb-footer__bottom-container">
+                <div class="row align-items-center w-100 mx-auto">
+                    <div class="col-6 col-lg-2 bdb-footer__logo ">
+                        <div class="col-sm-12 col-md-6 col-lg-12 bdb-footer__bottom-container-logo px-0">
+                            <a href="${globalFooterModel.urlLogo}" aria-label="${properties.logoAltText}">
+                                <img src="${globalFooterModel.urlIcon}" tabindex="-1" alt="${properties.logoAltText}" />
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-6 col-lg-2 d-flex px-md-5 justify-content-lg-start justify-content-md-end bdb-footer__social-media ">
+                        <sly data-sly-list.item="${globalFooterModel.social}">
+                            <div class="bdb-footer__social-media-items">
+                                <a href="${item.socialURL}" aria-label="${item.socialAlt}" target="_blank">
+                                    <img src="${item.socialIcon}" alt="${item.socialAlt}" tabindex="-1"/>
+                                </a>
+                            </div>
+                        </sly>
+                    </div>
+                    <div class="col-lg-7 col-sm-12 col-md-12 text-left bdb-footer__info-items-box offset-lg-1">
+                        <div class="d-flex justify-content-start bdb-footer__info-items-container ${globalFooterModel.footerLinksSize > 4 ? 'flex-wrap' : ''}">
+                            <sly data-sly-list.item="${globalFooterModel.footerLinks}">
+                                <sly data-sly-test.isCookieSettings="${item.isCookieSettings=='yes'}">
+                                <div class="bdb-footer__info-items pr-1 mr-2">
+                                    <a href="#" id="ot-sdk-btn"
+                                       class="ot-sdk-show-settings bdb-footer__info-itm pl-0"
+                                       onclick="event.preventDefault(); OneTrust.ToggleInfoDisplay();"
+                                       tabindex="0">${item.linkLabel @context='html'}</a>
+                                </div>
+                                </sly>
+                                <sly data-sly-test="${!isCookieSettings}">
+                                <div class="bdb-footer__info-items pr-1 mr-2">
+                                    <a href="${item.linkURL}" class="bdb-footer__info-itm pl-0" tabindex="0">${item.linkLabel @context='html'}</a>
+                                </div>
+                                </sly>
+                            </sly>
+                        </div>
+                        <div class="bdb-footer__copyright">${properties.trademark @context='html'}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Back to top button -->
+    <button type="button" class="back-to-top-cta">
+        <img src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/back-to-top-disabled-arrow.svg" alt="Back to top scroll button" class="disabled-arrow" />
+        <img src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/back-to-top-enabled-arrow.svg" alt="Back to top scroll button" class="enabled-arrow d-none" />
+    </button>
+</footer>
+
+<sly data-sly-test="${globalFooterModel.embededFormCode}">${globalFooterModel.embededFormCode @context = 'unsafe'}</sly>
+
+<p data-sly-test="${inheritedPageProperties.enableTimer}">Global Footer:${time.endTime}</p>
+<!-- GE-18832 Monetate Functionality to work globally-->
+<script type="text/javascript">var monetateT = new Date().getTime();</script>
+<script type="text/javascript" src="${inheritedPageProperties.monetateUrl}"></script>

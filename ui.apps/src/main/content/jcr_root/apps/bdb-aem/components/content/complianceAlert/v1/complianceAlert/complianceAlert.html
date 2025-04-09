@@ -1,0 +1,28 @@
+<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html"
+     data-sly-call="${templates.placeholder @ isEmpty = true}"></sly>
+<sly data-sly-use.compliancealertmodel="com.bdb.aem.core.models.ComplianceAlertModel"></sly>
+<div class="bdb-jp-compliance-redirection app-js__bdb-jp-compliance-redirection">
+    <div class="modal fade" id="bdb-jp-compliance-redirection-modal" tabindex="-1" role="dialog"
+        aria-labelledby="bdb-jp-compliance-redirection-modal-label" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                   ${compliancealertmodel.compTitle} 
+ 				</div>
+                <div class="modal-body">
+                    <br/>
+                    <p>
+                         ${compliancealertmodel.compMsg1}
+                    </p><br/>
+                    <p>
+                         ${compliancealertmodel.compMsg2}
+                    </p>
+                </div>
+                <div class="modal-footer text-right">
+                    <button type="button" class="btn btn-secondary compliance-button-yes" data-dismiss="modal"> ${compliancealertmodel.compYes}</button>
+                    <button class="btn btn-primary-blue compliance-button" onclick="window.open(`${compliancealertmodel.compLink @context='scriptComment'}`,'_self');">${compliancealertmodel.compNo}</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

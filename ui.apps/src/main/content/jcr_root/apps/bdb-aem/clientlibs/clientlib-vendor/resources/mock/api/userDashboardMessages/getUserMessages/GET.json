@@ -1,0 +1,72 @@
+{
+    "notification": [
+        {
+            "code": "87688700",
+            "notificationType": "SHIPPING_ADDRESS_APPROVED",
+            "notificationObjectList": [],
+            "creationDate": "09/17/2020 11:17:46",
+            "read": false
+        },
+        {
+            "code": "87601010",
+            "notificationType": "BILLING_ADDRESS_APPROVED",
+            "notificationObjectList": [],
+            "creationDate": "09/17/2020 11:17:46",
+            "read": false
+        },
+        {
+            "code": "87688700",
+            "notificationType": "ORDER_SUCCESSFULLY_DELIVERED",
+            "notificationObjectList": [
+                {
+                    "key": "code",
+                    "value": "12340985"
+                },
+                {
+                    "key": "encryptedOrderCode",
+                    "value": "5610265001"
+                }
+            ],
+            "creationDate": "09/16/2020 11:17:46",
+            "read": true
+        },
+        {
+            "code": "87601010",
+            "notificationType": "SHIPPING_ADDRESS_APPROVED",
+            "notificationObjectList": [],
+            "creationDate": "03/12/2020 11:17:46",
+            "read": true
+        },
+        {
+            "code": "87688700",
+            "notificationType": "ORDER_CANCELLED",
+            "notificationObjectList": [
+                {
+                    "key": "code",
+                    "value": "12344556"
+                },
+                {
+                    "key": "encryptedOrderCode",
+                    "value": "5610265000"
+                }
+            ],
+            "creationDate": "03/12/2020 11:17:46"
+        },
+        {
+            "code": "80198000",
+            "creationDate": "04/01/2021",
+            "notificationObjectList": [
+                {
+                    "key": "code",
+                    "value": "5610265000"
+                },
+                {
+                    "key": "approvalCode",
+                    "value": "12345"
+                }
+            ],
+            "notificationType": "PENDING_ORDER_NEED_ACTION",
+            "read": true
+        }
+    ]
+}

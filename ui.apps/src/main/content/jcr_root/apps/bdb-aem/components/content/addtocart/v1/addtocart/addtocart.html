@@ -1,0 +1,36 @@
+<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html" />
+
+<sly data-sly-call="${templates.placeholder @ isEmpty = !properties.type, classAppend='cmp-addtocart'}"></sly>
+    <sly data-sly-use.addToCartModel="com.bdb.aem.core.models.AddToCartModel" data-sly-use.globalConfigModel="com.bdb.aem.core.models.GlobalConfigModel" data-sly-use.commerceModel="com.bdb.aem.core.models.CommerceBoxModel"></sly>
+    <script>
+        if (typeof window.AEM_DATA.labels === 'undefined') {
+            window.AEM_DATA.labels = {};
+        }
+        window.AEM_DATA.labels.myCartLabels = ${ addToCartModel.myCartLabels  || '{}' @context='scriptComment' };
+		window.AEM_DATA.labels.myCartLabels.myCartPrintPDFLabels = ${ addToCartModel.myCartPrintPDFLabels  || '{}' @context='scriptComment' };
+        window.AEM_DATA.labels.cookieNames = ${ globalConfigModel.cookiesJson || '{}' @context='scriptComment' };
+
+		 if (typeof window.AEM_DATA.config === 'undefined') {
+            window.AEM_DATA.config = {};
+        }
+
+		if(${ addToCartModel.enableAddToQuoteCheckBox @context='scriptComment' }===true){
+			 window.AEM_DATA.labels.myQuoteLabels = ${ addToCartModel.myQuoteLabels  || '{}' @context='scriptComment' };
+			 window.AEM_DATA.config.myQuoteConfig = ${ addToCartModel.myQuoteConfig  || '{}'@context='scriptComment' };
+			 window.AEM_DATA.config.addToQuoteConfig = ${ commerceModel.addToCartConfigJson  || '{}'@context='scriptComment' };
+		}else{
+			 window.AEM_DATA.config.myCartConfig = ${ addToCartModel.myCartConfig  || '{}' @context='scriptComment' };
+		}
+
+		window.AEM_DATA.config.addToCartConfig = ${ commerceModel.addToCartConfigJson || '{}' @context='scriptComment' };
+    </script>
+
+
+<div class="wrapper">
+	<sly data-sly-test="${!addToCartModel.enableAddToQuoteCheckBox}">
+    	<bd-my-cart labels="myCartLabels" config="myCartConfig"></bd-my-cart>
+	</sly>
+	<sly data-sly-test="${addToCartModel.enableAddToQuoteCheckBox}">
+    	<bd-my-cart labels="myQuoteLabels" config="myQuoteConfig"></bd-my-cart>
+	</sly>
+</div>

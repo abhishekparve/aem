@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          jcr:primaryType="sling:OsgiConfig"
+          schedulerName="$[env:IWS_NAME;default=Flat File Image Processing Scheduler]"
+          enabled="$[env:IWS_TOGGLE;default=true]"
+          flatFileImageCronExpression="$[env:flatFileImageCronExpression;default=0 */3 * * *]"
+          assetsPathListInDAM="$[env:failedRecordsInVar;default=/content/dam/bdb/temp-assets/products/images]"
+          failedRecordsRepPathListInVar="$[env:failedRecordsRepPathListInVar;default=/var/bdb/products/images/failed-records]"
+          assetsReferencePathListInVar="$[env:assetsReferencePathListInVar;default=/var/bdb/products/images/unprocessed-records]"/>

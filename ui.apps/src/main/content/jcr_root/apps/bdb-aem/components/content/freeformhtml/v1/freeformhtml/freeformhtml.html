@@ -1,0 +1,9 @@
+<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html"
+     data-sly-call="${templates.placeholder @ isEmpty = true}"></sly>
+
+<sly data-sly-use.freeFormModel="com.bdb.aem.core.models.FreeFormHtmlModel"></sly>
+<sly data-sly-test="${freeFormModel.title}">
+     <article id="${freeFormModel.articleId}"></article>
+</sly>
+<sly data-sly-test="${properties.embededcode}">${properties.embededcode @context = 'unsafe'}</sly>
+<sly data-sly-test="${properties.description}">${freeFormModel.description @context='html'}</sly>

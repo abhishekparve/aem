@@ -1,0 +1,14 @@
+<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html"
+     data-sly-call="${templates.placeholder @ isEmpty = true}"></sly>
+
+<sly data-sly-use.basicConfirmationModel="com.bdb.aem.core.models.BasicConfirmationModel">
+<script>
+if (typeof window.AEM_DATA === 'undefined') {
+            window.AEM_DATA = {};
+        }
+        if (typeof window.AEM_DATA.labels === 'undefined') {
+            window.AEM_DATA.labels = {};
+        }
+        window.AEM_DATA.labels.basicConformationLabels = ${basicConfirmationModel.confirmationLabels  || '{}' @context='scriptComment'};
+   </script>
+</sly>

@@ -1,0 +1,145 @@
+<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html" data-sly-call="${templates.placeholder @ isEmpty = true}"></sly>
+<sly data-sly-use.conjugates="com.bdb.aem.core.models.FACSelectConjugateModel">
+	<article id="${conjugates.conjugateId}" class="facselect-report-table container app-js__facselect-report-table">
+		<h3 class="table-title">${properties.conjugateName}</h3>
+		<button class="btn facselect-report-table__backToTop" type="button" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });"><img class="arrow-up pr-2" src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/arrow-upward.svg"/>${properties.backToTopLabel ? properties.backToTopLabel : 'Back To Top'}</button>
+		<div class="comparision-table-container">
+			<div class="bdb-comparison-table styled-table bg-white">
+				<div class="styled-table-wrap">
+					<table class="styled-table-content statistics-image-table table-responsive">
+						<thead>
+							<tr>
+								<th></th>
+								<sly data-sly-list.item="${conjugates.statisticsImageTable.tableHeadings}">
+									<th>${item.thText} </th>
+								</sly>
+							</tr>
+						</thead>
+						<tbody>
+							<sly data-sly-list.item="${conjugates.statisticsImageTable.tbodyData}">
+								
+								<sly data-sly-test="${properties.barImage}">
+									<tr data-sly-test="${itemList.index == 0}">
+										<sly data-sly-list.subitem="${item.trData}">
+											<sly data-sly-test="${conjugates.combineColumnName}">
+													<td data-sly-test="${subitemList.index == 0}"><div class="row-heading-combo">
+														<sly data-sly-list.names="${conjugates.combineColumnName}">
+															<p>${names}</p>
+														</sly></div> </td>
+											</sly>
+											<sly data-sly-test="${subitem.image != ''}">
+												<td>
+												<sly data-sly-test="${subitem.imageLinkUrl}"> 
+													<a href="${subitem.imageLinkUrl}" target="${subitem.openNewImageLinkTab == 'true' ? '_blank' : '_self'}">
+														<img class="statistics-image" src="${subitem.image}"> 
+													</a>
+												</sly>	
+												<sly data-sly-test="${!subitem.imageLinkUrl}"> 
+														<img class="statistics-image" src="${subitem.image}"> 
+												</sly>
+												</td>
+											</sly>
+											<sly data-sly-test="${subitem.tdData == '' && subitem.image == ''}">
+												<td class="no-data-available">
+													<div class="no-data-available">
+														<p>${properties.noDataAvLabel ? properties.noDataAvLabel : 'No Data Available'}</p>
+													</div>
+												</td>
+											</sly>
+										</sly>
+									</tr>
+								</sly>
+
+								<sly data-sly-test="${!properties.barImage}">
+								<tr>
+									<sly data-sly-list.subitem="${item.trData}">
+										<sly data-sly-test="${subitem.tdData && subitem.tdData != ''}">
+											<td> ${subitem.tdData} </td>
+										</sly>
+										<sly data-sly-test="${subitem.image != ''}">
+											<td>
+											<sly data-sly-test="${subitem.imageLinkUrl}"> 
+												 <a href="${subitem.imageLinkUrl}" target="${subitem.openNewImageLinkTab == 'true' ? '_blank' : '_self'}">
+													<img class="statistics-image" src="${subitem.image}"> 
+												</a>
+											</sly>
+											<sly data-sly-test="${!subitem.imageLinkUrl}"> 
+													<img class="statistics-image" src="${subitem.image}"> 
+											</sly>												
+											</td>
+										</sly>
+										<sly data-sly-test="${subitem.tdData == '' && subitem.image == ''}">
+											<td class="no-data-available">
+												<div class="no-data-available">
+													<p>${properties.noDataAvLabel ? properties.noDataAvLabel : 'No Data Available'}</p>
+												</div>
+											 </td>
+										</sly>
+									</sly>
+								</tr>
+								</sly>
+								
+							</sly>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+		
+		<sly data-sly-test="${properties.barImage}">
+			<div class="text-left mt-3 ml-5 pl-5">
+			<sly data-sly-test="${conjugates.barImageLinkUrl}"> 
+				 <a href="${conjugates.barImageLinkUrl}" target="${properties.openNewTab == 'true' ? '_blank' : '_self'}">
+					<img src="${properties.barImage}" class="ml-5 pl-3"/>
+				</a>
+			</sly>
+			<sly data-sly-test="${!conjugates.barImageLinkUrl}"> 
+					<img src="${properties.barImage}" class="ml-5 pl-3"/>
+			</sly>	
+			</div>
+		</sly>
+		
+		<sly data-sly-test="${properties.enableDataTable == 'true'}">
+			<div class="comparision-table-container">
+				<div class="bdb-comparison-table styled-table bg-white">
+					<div class="styled-table-wrap">
+						<div class="facselect-report-table__table-heading">${properties.datatableTitle}</div>
+						<table class="styled-table-content table-responsive">
+							<thead>
+								<tr>
+									<th></th>
+									<sly data-sly-list.item="${conjugates.statisticsImageTable.tableHeadings}">
+										<th>${item.thText} </th>
+									</sly>
+								</tr>
+							</thead>
+							<tbody>
+								<sly data-sly-list.item="${conjugates.statisticsImageTable.tbodyData}">							
+									<tr>
+										<sly data-sly-list.subitem="${item.trData}">
+											 <sly data-sly-test="${subitem.tdData && subitem.tdData != ''}">
+													<td> ${subitem.tdData} </td>
+											  </sly>
+											  <sly data-sly-test="${subitem.readingData && subitem.readingData != ''}">
+													<td> ${subitem.readingData == 'X' ? '-':subitem.readingData} </td>
+											  </sly>
+											  <sly data-sly-test="${subitem.readingData == ''}">
+													<td>  </td>
+											  </sly>
+										</sly>
+									</tr>
+								</sly>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</sly>
+		<sly data-sly-test="${properties.gatingHierarchyLabel && conjugates.gatingHierarchyURL}"> <a class="facselect-report-table__jump-btn" href="${conjugates.gatingHierarchyURL}" aria-label="${properties.gatingHierarchyLabel}">${properties.gatingHierarchyLabel}</a> </sly>
+		<sly data-sly-test="${properties.viewProductLabel && conjugates.viewProductURL}">
+			<a href="${conjugates.viewProductURL}" target="_blank"><button class="btn btn-primary-blue facselect-report-table__view-btn" type="button">${properties.viewProductLabel}</button></a>
+		</sly>
+	</article>
+	<!--/* For testing purpose only */-->
+	<!--/*${conjugates.componentJson}*/-->
+</sly>

@@ -1,0 +1,156 @@
+{
+    "addresses": [
+        {
+            "addressId": "1001046754",
+            "billingAddress": false,
+            "country": {
+                "isocode": "US"
+            },
+            "defaultAddress": true,
+            "district": "SCOTT",
+            "favouriteAddress": true,
+            "formattedAddress": "1814 E LOCUST ST, Iowa, DAVENPORT, 52803-0000",
+            "line1": "1814 E LOCUST ST",
+            "organizationName": "METROPOLITAN MEDICAL LABORATORY PLC",
+            "pendingAddress": false,
+            "phone": "563 324 0471",
+            "postalCode": "52803-0000",
+            "region": {
+                "isocode": "US-IA"
+            },
+            "selectedAddress": true,
+            "shippingAddress": true,
+            "town": "DAVENPORT"
+        },
+        {
+            "addressId": "1001619098",
+            "billingAddress": false,
+            "country": {
+                "isocode": "US"
+            },
+            "defaultAddress": false,
+            "district": "ROCK ISLAND",
+            "favouriteAddress": true,
+            "formattedAddress": "1520 7TH ST, Illinois, MOLINE, 61265-2917",
+            "line1": "1520 7TH ST",
+            "organizationName": "METROPOLITAN MEDICAL LABORATORY PLC",
+            "pendingAddress": false,
+            "phone": "309 762 7295",
+            "postalCode": "61265-2917",
+            "region": {
+                "isocode": "US-IL"
+            },
+            "shippingAddress": true,
+            "town": "MOLINE"
+        },
+        {
+            "addressId": "1001063551",
+            "billingAddress": false,
+            "country": {
+                "isocode": "US"
+            },
+            "defaultAddress": false,
+            "district": "SCOTT",
+            "favouriteAddress": true,
+            "formattedAddress": "1828 E LOCUST ST, Iowa, DAVENPORT, 52803-0000",
+            "line1": "1828 E LOCUST ST",
+            "organizationName": "METROPOLITAN MEDICAL LABORATORY PLC",
+            "pendingAddress": false,
+            "phone": "563 324 0471",
+            "postalCode": "52803-0000",
+            "region": {
+                "isocode": "US-IA"
+            },
+            "shippingAddress": true,
+            "town": "DAVENPORT"
+        },
+        {
+            "addressId": "1001057728",
+            "billingAddress": false,
+            "country": {
+                "isocode": "US"
+            },
+            "defaultAddress": false,
+            "district": "ROCK ISLAND",
+            "favouriteAddress": true,
+            "formattedAddress": "1504 7TH ST, Illinois, MOLINE, 61265-2964",
+            "line1": "1504 7TH ST",
+            "organizationName": "METROPOLITAN MEDICAL LABORATORY PLC",
+            "pendingAddress": false,
+            "phone": "306 762 8555",
+            "postalCode": "61265-2964",
+            "region": {
+                "isocode": "US-IL"
+            },
+            "shippingAddress": true,
+            "town": "MOLINE"
+        },
+        {
+            "addressId": "1001045324",
+            "billingAddress": false,
+            "country": {
+                "isocode": "US"
+            },
+            "defaultAddress": false,
+            "district": "ROCK ISLAND",
+            "favouriteAddress": true,
+            "formattedAddress": "500 JOHN DEERE RD, Illinois, MOLINE, 61265-0000",
+            "line1": "500 JOHN DEERE RD",
+            "organizationName": "METROPOLITAN MEDICAL LABORATORY PLC",
+            "pendingAddress": false,
+            "phone": "309 762 8555",
+            "postalCode": "61265-0000",
+            "region": {
+                "isocode": "US-IL"
+            },
+            "shippingAddress": true,
+            "town": "MOLINE"
+        },
+        {
+            "addressId": "1001003677",
+            "billingAddress": false,
+            "country": {
+                "isocode": "US"
+            },
+            "defaultAddress": false,
+            "district": "ROCK ISLAND",
+            "favouriteAddress": true,
+            "formattedAddress": "1520 7TH ST, Illinois, MOLINE, 61265-2917",
+            "line1": "1520 7TH ST",
+            "organizationName": "METROPOLITAN MEDICAL LABORATORY PLC",
+            "pendingAddress": false,
+            "phone": "309 762 7295",
+            "postalCode": "61265-2917",
+            "region": {
+                "isocode": "US-IL"
+            },
+            "shippingAddress": true,
+            "town": "MOLINE"
+        },
+        {
+            "addressId": "fa4837af-19f2-4ab9-a123-4c99ef853654",
+            "billingAddress": false,
+            "building": "Building - 1",
+            "country": {
+                "isocode": "US"
+            },
+            "defaultAddress": false,
+            "department": "Science",
+            "district": "DK",
+            "floor": "22",
+            "formattedAddress": "Address Line 11, Address Line 22, Alabama, Birmingham, 91345",
+            "line1": "Address Line 11",
+            "line2": "Address Line 22",
+            "pendingAddress": true,
+            "phone": "123456789",
+            "postalCode": "91345",
+            "region": {
+                "isocode": "US-AL"
+            },
+            "room": "001",
+            "shippingAddress": true,
+            "status": "PENDING_APPROVAL",
+            "town": "Birmingham"
+        }
+    ]
+}

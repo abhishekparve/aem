@@ -1,0 +1,29 @@
+<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html"
+     data-sly-call="${templates.placeholder @ isEmpty = true}"></sly>
+<sly data-sly-use.imageTextModel="com.bdb.aem.core.models.ImageTextModel"></sly>
+
+<sly data-sly-test="${imageTextModel.imagePath}">
+    <div class="card bd-advancing-items__card h-100 ${properties.borderEnable == 'false' ? '' : 'enable-border'} ${properties.backgroundColor == 'bg-grey' ? 'gray-background-container' : 'bg-white'}">
+        <sly data-sly-test="${imageTextModel.imageLinkUrl}">
+        	<a href="${imageTextModel.imageLinkUrl}" target="${properties.openNewImageLinkTab == 'true' ? '_blank' : '_self'}">
+        		<img class="card-img-top  bd-advancing-items__card-image" src="${imageTextModel.imagePath}" alt="${properties.altimage}">
+       	   </a>
+       	</sly>  
+       	<sly data-sly-test="${!imageTextModel.imageLinkUrl}">
+        	<img class="card-img-top  bd-advancing-items__card-image" src="${imageTextModel.imagePath}" alt="${properties.altimage}">
+       	</sly> 
+        <p class="card-title bd-advancing-items__card-title pt-3">
+            ${properties.imagetitle @context='html'}
+        </p>
+        <div class="card-body bd-advancing-items__card-body pr-0 pb-0 pl-0">
+            <div class="card-text bd-advancing-items__card-text bd-rte">
+                ${properties.description @context='html'}
+            </div>
+        </div>
+		<div data-sly-test="${properties.labelcta}" class="bd-advancing-items__btn-show w-100">
+            <a class="btn ${properties.whiteCta ? 'btn-secondary' : 'btn-primary-blue'} btn-md bd-advancing-items__btn mx-auto mb-2" type="button" href="${imageTextModel.ctaUrl}">
+              ${properties.labelcta @context='html'}
+            </a>
+        </div>
+    </div>
+</sly>

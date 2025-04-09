@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:designPath="/libs/settings/wcm/designs/default"
+        cq:lastModified="{Date}2023-04-17T12:47:18.797Z"
+        cq:lastModifiedBy="Abhishek.Madhukar.Parve@bd.com"
+        cq:tags="[workflow:dam,workflow:wcm]"
+        cq:template="/libs/cq/workflow/templates/model"
+        jcr:description="The workflow is used to import the custom metadata of marketing documents into the BDB PDF Metadata tab."
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Document Metadata Import Workflow"
+        sling:resourceType="cq/workflow/components/pages/model"
+        lastSynced="{Date}2023-04-17T12:47:24.477Z"
+        transient="true">
+        <flow
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="foundation/components/parsys">
+            <process
+                jcr:description="The workflow is used to import the custom metadata of marketing documents into the BDB PDF Metadata tab."
+                jcr:lastModified="{Date}2023-04-17T12:45:52.130Z"
+                jcr:lastModifiedBy="Abhishek.Madhukar.Parve@bd.com"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Document Metadata Import Workflow"
+                sling:resourceType="cq/workflow/components/model/process">
+                <metaData
+                    jcr:primaryType="nt:unstructured"
+                    PROCESS="com.bdb.aem.core.workflows.DocumentMetadataImportWorkflow"
+                    PROCESS_AUTO_ADVANCE="true"/>
+            </process>
+            <damupdateassetworkfl
+                jcr:description="This process will send DamEvent.Type.DAM_UPDATE_ASSET_WORKFLOW_COMPLETED event when DAM update asset workflow is completed"
+                jcr:lastModified="{Date}2023-04-17T12:44:27.521Z"
+                jcr:lastModifiedBy="Abhishek.Madhukar.Parve@bd.com"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="DAM Update Asset Workflow Completed"
+                sling:resourceType="dam/components/workflow/damupdateassetworkflowcompletedprocess">
+                <metaData
+                    jcr:primaryType="nt:unstructured"
+                    PROCESS="com.day.cq.dam.core.impl.process.DamUpdateAssetWorkflowCompletedProcess"
+                    PROCESS_AUTO_ADVANCE="true"/>
+            </damupdateassetworkfl>
+        </flow>
+    </jcr:content>
+</jcr:root>

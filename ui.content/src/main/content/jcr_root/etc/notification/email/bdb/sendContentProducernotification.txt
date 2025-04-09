@@ -1,0 +1,14 @@
+emal from : noreply@bdbiosciences.com
+
+Sub: Request for Page Review
+
+Hi BD Content Team,
+ 
+The page - ${payload} has been queued to be reviewed before activation.
+ 
+Details of review process:
+Author : ${userid}
+Comments by author : ${feedback}
+ 
+-----------------------------------------------------------------
+Please do not reply to this mail as it is a system-generated email

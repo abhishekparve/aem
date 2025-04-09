@@ -1,0 +1,532 @@
+@font-face {
+    font-display: swap;
+    font-family: 'FS Albert Pro';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../../../../resources/fonts/FSAlbertPro/Latin/Regular/FSAlbertWeb-Regular.eot');
+    src: url('../../../../resources/fonts/FSAlbertPro/Latin/Regular/FSAlbertWeb-Regular.eot?#iefix')
+            format('embedded-opentype'),
+        url('../../../../resources/fonts/FSAlbertPro/Latin/Regular/FSAlbertWeb-Regular.woff2')
+            format('woff2'),
+        url('../../../../resources/fonts/FSAlbertPro/Latin/Regular/FSAlbertWeb-Regular.woff')
+            format('woff'),
+        url('../../../../resources/fonts/FSAlbertPro/Latin/Regular/FSAlbertWeb-Regular.ttf')
+            format('truetype'),
+        url('../../../../resources/fonts/FSAlbertPro/Latin/Regular/FSAlbertWeb-Regular.svg')
+            format('svg');
+}
+@font-face {
+    font-display: swap;
+    font-family: 'FS Albert Pro';
+    font-style: normal;
+    font-weight: 200;
+    src: url('../../../../resources/fonts/FSAlbertPro/Latin/Thin/FSAlbertWeb-Thin.eot');
+    src: url('../../../../resources/fonts/FSAlbertPro/Latin/Thin/FSAlbertWeb-Thin.eot?#iefix')
+            format('embedded-opentype'),
+        url('../../../../resources/fonts/FSAlbertPro/Latin/Thin/FSAlbertWeb-Thin.woff2')
+            format('woff2'),
+        url('../../../../resources/fonts/FSAlbertPro/Latin/Thin/FSAlbertWeb-Thin.woff')
+            format('woff'),
+        url('../../../../resources/fonts/FSAlbertPro/Latin/Thin/FSAlbertWeb-Thin.ttf')
+            format('truetype'),
+        url('../../../../resources/fonts/FSAlbertPro/Latin/Thin/FSAlbertWeb-Thin.svg') format('svg');
+}
+@font-face {
+    font-display: swap;
+    font-family: 'FS Albert Pro';
+    font-style: italic;
+    font-weight: 200;
+    src: url('../../../../resources/fonts/FSAlbertPro/Latin/ThinItalic/FSAlbertWeb-ThinItalic.eot');
+    src: url('../../../../resources/fonts/FSAlbertPro/Latin/ThinItalic/FSAlbertWeb-ThinItalic.eot?#iefix')
+            format('embedded-opentype'),
+        url('../../../../resources/fonts/FSAlbertPro/Latin/ThinItalic/FSAlbertWeb-ThinItalic.woff2')
+            format('woff2'),
+        url('../../../../resources/fonts/FSAlbertPro/Latin/ThinItalic/FSAlbertWeb-ThinItalic.woff')
+            format('woff'),
+        url('../../../../resources/fonts/FSAlbertPro/Latin/ThinItalic/FSAlbertWeb-ThinItalic.ttf')
+            format('truetype'),
+        url('../../../../resources/fonts/FSAlbertPro/Latin/ThinItalic/FSAlbertWeb-ThinItalic.svg')
+            format('svg');
+}
+@font-face {
+    font-display: swap;
+    font-family: 'FS Albert Pro';
+    font-style: normal;
+    font-weight: 300;
+    src: url('../../../../resources/fonts/FSAlbertPro/Latin/Light/FSAlbertWeb-Light.eot');
+    src: url('../../../../resources/fonts/FSAlbertPro/Latin/Light/FSAlbertWeb-Light.eot?#iefix')
+            format('embedded-opentype'),
+        url('../../../../resources/fonts/FSAlbertPro/Latin/Light/FSAlbertWeb-Light.woff2')
+            format('woff2'),
+        url('../../../../resources/fonts/FSAlbertPro/Latin/Light/FSAlbertWeb-Light.woff')
+            format('woff'),
+        url('../../../../resources/fonts/FSAlbertPro/Latin/Light/FSAlbertWeb-Light.ttf')
+            format('truetype'),
+        url('../../../../resources/fonts/FSAlbertPro/Latin/Light/FSAlbertWeb-Light.svg')
+            format('svg');
+}
+@font-face {
+    font-display: swap;
+    font-family: 'FS Albert Pro';
+    font-style: italic;
+    font-weight: 300;
+    src: url('../../../../resources/fonts/FSAlbertPro/Latin/LightItalic/FSAlbertWeb-LightItalic.eot');
+    src: url('../../../../resources/fonts/FSAlbertPro/Latin/LightItalic/FSAlbertWeb-LightItalic.eot?#iefix')
+            format('embedded-opentype'),
+        url('../../../../resources/fonts/FSAlbertPro/Latin/LightItalic/FSAlbertWeb-LightItalic.woff2')
+            format('woff2'),
+        url('../../../../resources/fonts/FSAlbertPro/Latin/LightItalic/FSAlbertWeb-LightItalic.woff')
+            format('woff'),
+        url('../../../../resources/fonts/FSAlbertPro/Latin/LightItalic/FSAlbertWeb-LightItalic.ttf')
+            format('truetype'),
+        url('../../../../resources/fonts/FSAlbertPro/Latin/LightItalic/FSAlbertWeb-LightItalic.svg')
+            format('svg');
+}
+@font-face {
+    font-display: swap;
+    font-family: 'FS Albert Pro';
+    font-style: italic;
+    font-weight: 400;
+    src: url('../../../../resources/fonts/FSAlbertPro/Latin/Italic/FSAlbertWeb-Italic.eot');
+    src: url('../../../../resources/fonts/FSAlbertPro/Latin/Italic/FSAlbertWeb-Italic.eot?#iefix')
+            format('embedded-opentype'),
+        url('../../../../resources/fonts/FSAlbertPro/Latin/Italic/FSAlbertWeb-Italic.woff2')
+            format('woff2'),
+        url('../../../../resources/fonts/FSAlbertPro/Latin/Italic/FSAlbertWeb-Italic.woff')
+            format('woff'),
+        url('../../../../resources/fonts/FSAlbertPro/Latin/Italic/FSAlbertWeb-Italic.ttf')
+            format('truetype'),
+        url('../../../../resources/fonts/FSAlbertPro/Latin/Italic/FSAlbertWeb-Italic.svg')
+            format('svg');
+}
+@font-face {
+    font-display: swap;
+    font-family: 'FS Albert Pro';
+    font-style: normal;
+    font-weight: 600;
+    src: url('../../../../resources/fonts/FSAlbertPro/Latin/Bold/FSAlbertWeb-Bold.eot');
+    src: url('../../../../resources/fonts/FSAlbertPro/Latin/Bold/FSAlbertWeb-Bold.eot?#iefix')
+            format('embedded-opentype'),
+        url('../../../../resources/fonts/FSAlbertPro/Latin/Bold/FSAlbertWeb-Bold.woff2')
+            format('woff2'),
+        url('../../../../resources/fonts/FSAlbertPro/Latin/Bold/FSAlbertWeb-Bold.woff')
+            format('woff'),
+        url('../../../../resources/fonts/FSAlbertPro/Latin/Bold/FSAlbertWeb-Bold.ttf')
+            format('truetype'),
+        url('../../../../resources/fonts/FSAlbertPro/Latin/Bold/FSAlbertWeb-Bold.svg') format('svg');
+}
+@font-face {
+    font-display: swap;
+    font-family: 'FS Albert Pro';
+    font-style: italic;
+    font-weight: 600;
+    src: url('../../../../resources/fonts/FSAlbertPro/Latin/BoldItalic/FSAlbertWeb-BoldItalic.eot');
+    src: url('../../../../resources/fonts/FSAlbertPro/Latin/BoldItalic/FSAlbertWeb-BoldItalic.eot?#iefix')
+            format('embedded-opentype'),
+        url('../../../../resources/fonts/FSAlbertPro/Latin/BoldItalic/FSAlbertWeb-BoldItalic.woff2')
+            format('woff2'),
+        url('../../../../resources/fonts/FSAlbertPro/Latin/BoldItalic/FSAlbertWeb-BoldItalic.woff')
+            format('woff'),
+        url('../../../../resources/fonts/FSAlbertPro/Latin/BoldItalic/FSAlbertWeb-BoldItalic.ttf')
+            format('truetype'),
+        url('../../../../resources/fonts/FSAlbertPro/Latin/BoldItalic/FSAlbertWeb-BoldItalic.svg')
+            format('svg');
+}
+@font-face {
+    font-display: swap;
+    font-family: 'FS Albert Pro';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../../../../resources/fonts/FSAlbertPro/Latin/ExtraBold/FSAlbertWeb-ExtraBold.eot');
+    src: url('../../../../resources/fonts/FSAlbertPro/Latin/ExtraBold/FSAlbertWeb-ExtraBold.eot?#iefix')
+            format('embedded-opentype'),
+        url('../../../../resources/fonts/FSAlbertPro/Latin/ExtraBold/FSAlbertWeb-ExtraBold.woff2')
+            format('woff2'),
+        url('../../../../resources/fonts/FSAlbertPro/Latin/ExtraBold/FSAlbertWeb-ExtraBold.woff')
+            format('woff'),
+        url('../../../../resources/fonts/FSAlbertPro/Latin/ExtraBold/FSAlbertWeb-ExtraBold.ttf')
+            format('truetype'),
+        url('../../../../resources/fonts/FSAlbertPro/Latin/ExtraBold/FSAlbertWeb-ExtraBold.svg')
+            format('svg');
+}
+@font-face {
+    font-display: swap;
+    font-family: 'FS Albert Pro Greek';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../../../../resources/fonts/FSAlbertPro/Greek/Regular/FSAlbertGrWeb-Regular.eot');
+    src: url('../../../../resources/fonts/FSAlbertPro/Greek/Regular/FSAlbertGrWeb-Regular.eot?#iefix')
+            format('embedded-opentype'),
+        url('../../../../resources/fonts/FSAlbertPro/Greek/Regular/FSAlbertGrWeb-Regular.woff2')
+            format('woff2'),
+        url('../../../../resources/fonts/FSAlbertPro/Greek/Regular/FSAlbertGrWeb-Regular.woff')
+            format('woff'),
+        url('../../../../resources/fonts/FSAlbertPro/Greek/Regular/FSAlbertGrWeb-Regular.ttf')
+            format('truetype'),
+        url('../../../../resources/fonts/FSAlbertPro/Greek/Regular/FSAlbertGrWeb-Regular.svg')
+            format('svg');
+}
+@font-face {
+    font-display: swap;
+    font-family: 'FS Albert Pro Greek';
+    font-style: normal;
+    font-weight: 200;
+    src: url('../../../../resources/fonts/FSAlbertPro/Greek/Thin/FSAlbertGrWeb-Thin.eot');
+    src: url('../../../../resources/fonts/FSAlbertPro/Greek/Thin/FSAlbertGrWeb-Thin.eot?#iefix')
+            format('embedded-opentype'),
+        url('../../../../resources/fonts/FSAlbertPro/Greek/Thin/FSAlbertGrWeb-Thin.woff2')
+            format('woff2'),
+        url('../../../../resources/fonts/FSAlbertPro/Greek/Thin/FSAlbertGrWeb-Thin.woff')
+            format('woff'),
+        url('../../../../resources/fonts/FSAlbertPro/Greek/Thin/FSAlbertGrWeb-Thin.ttf')
+            format('truetype'),
+        url('../../../../resources/fonts/FSAlbertPro/Greek/Thin/FSAlbertGrWeb-Thin.svg')
+            format('svg');
+}
+@font-face {
+    font-display: swap;
+    font-family: 'FS Albert Pro Greek';
+    font-style: italic;
+    font-weight: 200;
+    src: url('../../../../resources/fonts/FSAlbertPro/Greek/ThinItalic/FSAlbertGrWeb-ThinItalic.eot');
+    src: url('../../../../resources/fonts/FSAlbertPro/Greek/ThinItalic/FSAlbertGrWeb-ThinItalic.eot?#iefix')
+            format('embedded-opentype'),
+        url('../../../../resources/fonts/FSAlbertPro/Greek/ThinItalic/FSAlbertGrWeb-ThinItalic.woff2')
+            format('woff2'),
+        url('../../../../resources/fonts/FSAlbertPro/Greek/ThinItalic/FSAlbertGrWeb-ThinItalic.woff')
+            format('woff'),
+        url('../../../../resources/fonts/FSAlbertPro/Greek/ThinItalic/FSAlbertGrWeb-ThinItalic.ttf')
+            format('truetype'),
+        url('../../../../resources/fonts/FSAlbertPro/Greek/ThinItalic/FSAlbertGrWeb-ThinItalic.svg')
+            format('svg');
+}
+@font-face {
+    font-display: swap;
+    font-family: 'FS Albert Pro Greek';
+    font-style: normal;
+    font-weight: 300;
+    src: url('../../../../resources/fonts/FSAlbertPro/Greek/Light/FSAlbertGrWeb-Light.eot');
+    src: url('../../../../resources/fonts/FSAlbertPro/Greek/Light/FSAlbertGrWeb-Light.eot?#iefix')
+            format('embedded-opentype'),
+        url('../../../../resources/fonts/FSAlbertPro/Greek/Light/FSAlbertGrWeb-Light.woff2')
+            format('woff2'),
+        url('../../../../resources/fonts/FSAlbertPro/Greek/Light/FSAlbertGrWeb-Light.woff')
+            format('woff'),
+        url('../../../../resources/fonts/FSAlbertPro/Greek/Light/FSAlbertGrWeb-Light.ttf')
+            format('truetype'),
+        url('../../../../resources/fonts/FSAlbertPro/Greek/Light/FSAlbertGrWeb-Light.svg')
+            format('svg');
+}
+@font-face {
+    font-display: swap;
+    font-family: 'FS Albert Pro Greek';
+    font-style: italic;
+    font-weight: 300;
+    src: url('../../../../resources/fonts/FSAlbertPro/Greek/LightItalic/FSAlbertGrWeb-LightItalic.eot');
+    src: url('../../../../resources/fonts/FSAlbertPro/Greek/LightItalic/FSAlbertGrWeb-LightItalic.eot?#iefix')
+            format('embedded-opentype'),
+        url('../../../../resources/fonts/FSAlbertPro/Greek/LightItalic/FSAlbertGrWeb-LightItalic.woff2')
+            format('woff2'),
+        url('../../../../resources/fonts/FSAlbertPro/Greek/LightItalic/FSAlbertGrWeb-LightItalic.woff')
+            format('woff'),
+        url('../../../../resources/fonts/FSAlbertPro/Greek/LightItalic/FSAlbertGrWeb-LightItalic.ttf')
+            format('truetype'),
+        url('../../../../resources/fonts/FSAlbertPro/Greek/LightItalic/FSAlbertGrWeb-LightItalic.svg')
+            format('svg');
+}
+@font-face {
+    font-display: swap;
+    font-family: 'FS Albert Pro Greek';
+    font-style: italic;
+    font-weight: 400;
+    src: url('../../../../resources/fonts/FSAlbertPro/Greek/Italic/FSAlbertGrWeb-Italic.eot');
+    src: url('../../../../resources/fonts/FSAlbertPro/Greek/Italic/FSAlbertGrWeb-Italic.eot?#iefix')
+            format('embedded-opentype'),
+        url('../../../../resources/fonts/FSAlbertPro/Greek/Italic/FSAlbertGrWeb-Italic.woff2')
+            format('woff2'),
+        url('../../../../resources/fonts/FSAlbertPro/Greek/Italic/FSAlbertGrWeb-Italic.woff')
+            format('woff'),
+        url('../../../../resources/fonts/FSAlbertPro/Greek/Italic/FSAlbertGrWeb-Italic.ttf')
+            format('truetype'),
+        url('../../../../resources/fonts/FSAlbertPro/Greek/Italic/FSAlbertGrWeb-Italic.svg')
+            format('svg');
+}
+@font-face {
+    font-display: swap;
+    font-family: 'FS Albert Pro Greek';
+    font-style: normal;
+    font-weight: 600;
+    src: url('../../../../resources/fonts/FSAlbertPro/Greek/Bold/FSAlbertGrWeb-Bold.eot');
+    src: url('../../../../resources/fonts/FSAlbertPro/Greek/Bold/FSAlbertGrWeb-Bold.eot?#iefix')
+            format('embedded-opentype'),
+        url('../../../../resources/fonts/FSAlbertPro/Greek/Bold/FSAlbertGrWeb-Bold.woff2')
+            format('woff2'),
+        url('../../../../resources/fonts/FSAlbertPro/Greek/Bold/FSAlbertGrWeb-Bold.woff')
+            format('woff'),
+        url('../../../../resources/fonts/FSAlbertPro/Greek/Bold/FSAlbertGrWeb-Bold.ttf')
+            format('truetype'),
+        url('../../../../resources/fonts/FSAlbertPro/Greek/Bold/FSAlbertGrWeb-Bold.svg')
+            format('svg');
+}
+@font-face {
+    font-display: swap;
+    font-family: 'FS Albert Pro Greek';
+    font-style: italic;
+    font-weight: 600;
+    src: url('../../../../resources/fonts/FSAlbertPro/Greek/BoldItalic/FSAlbertGrWeb-BoldItalic.eot');
+    src: url('../../../../resources/fonts/FSAlbertPro/Greek/BoldItalic/FSAlbertGrWeb-BoldItalic.eot?#iefix')
+            format('embedded-opentype'),
+        url('../../../../resources/fonts/FSAlbertPro/Greek/BoldItalic/FSAlbertGrWeb-BoldItalic.woff2')
+            format('woff2'),
+        url('../../../../resources/fonts/FSAlbertPro/Greek/BoldItalic/FSAlbertGrWeb-BoldItalic.woff')
+            format('woff'),
+        url('../../../../resources/fonts/FSAlbertPro/Greek/BoldItalic/FSAlbertGrWeb-BoldItalic.ttf')
+            format('truetype'),
+        url('../../../../resources/fonts/FSAlbertPro/Greek/BoldItalic/FSAlbertGrWeb-BoldItalic.svg')
+            format('svg');
+}
+@font-face {
+    font-display: swap;
+    font-family: 'FS Albert Pro Greek';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../../../../resources/fonts/FSAlbertPro/Greek/ExtraBold/FSAlbertGrWeb-ExtraBold.eot');
+    src: url('../../../../resources/fonts/FSAlbertPro/Greek/ExtraBold/FSAlbertGrWeb-ExtraBold.eot?#iefix')
+            format('embedded-opentype'),
+        url('../../../../resources/fonts/FSAlbertPro/Greek/ExtraBold/FSAlbertGrWeb-ExtraBold.woff2')
+            format('woff2'),
+        url('../../../../resources/fonts/FSAlbertPro/Greek/ExtraBold/FSAlbertGrWeb-ExtraBold.woff')
+            format('woff'),
+        url('../../../../resources/fonts/FSAlbertPro/Greek/ExtraBold/FSAlbertGrWeb-ExtraBold.ttf')
+            format('truetype'),
+        url('../../../../resources/fonts/FSAlbertPro/Greek/ExtraBold/FSAlbertGrWeb-ExtraBold.svg')
+            format('svg');
+}
+@font-face {
+    font-display: swap;
+    font-family: 'FS Albert Pro Cyrillic';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../../../../resources/fonts/FSAlbertPro/Cyrillic/Regular/FSAlbertCyWeb-Regular.eot');
+    src: url('../../../../resources/fonts/FSAlbertPro/Cyrillic/Regular/FSAlbertCyWeb-Regular.eot?#iefix')
+            format('embedded-opentype'),
+        url('../../../../resources/fonts/FSAlbertPro/Cyrillic/Regular/FSAlbertCyWeb-Regular.woff2')
+            format('woff2'),
+        url('../../../../resources/fonts/FSAlbertPro/Cyrillic/Regular/FSAlbertCyWeb-Regular.woff')
+            format('woff'),
+        url('../../../../resources/fonts/FSAlbertPro/Cyrillic/Regular/FSAlbertCyWeb-Regular.ttf')
+            format('truetype'),
+        url('../../../../resources/fonts/FSAlbertPro/Cyrillic/Regular/FSAlbertCyWeb-Regular.svg')
+            format('svg');
+}
+@font-face {
+    font-display: swap;
+    font-family: 'FS Albert Pro Cyrillic';
+    font-style: normal;
+    font-weight: 200;
+    src: url('../../../../resources/fonts/FSAlbertPro/Cyrillic/Thin/FSAlbertCyWeb-Thin.eot');
+    src: url('../../../../resources/fonts/FSAlbertPro/Cyrillic/Thin/FSAlbertCyWeb-Thin.eot?#iefix')
+            format('embedded-opentype'),
+        url('../../../../resources/fonts/FSAlbertPro/Cyrillic/Thin/FSAlbertCyWeb-Thin.woff2')
+            format('woff2'),
+        url('../../../../resources/fonts/FSAlbertPro/Cyrillic/Thin/FSAlbertCyWeb-Thin.woff')
+            format('woff'),
+        url('../../../../resources/fonts/FSAlbertPro/Cyrillic/Thin/FSAlbertCyWeb-Thin.ttf')
+            format('truetype'),
+        url('../../../../resources/fonts/FSAlbertPro/Cyrillic/Thin/FSAlbertCyWeb-Thin.svg')
+            format('svg');
+}
+@font-face {
+    font-display: swap;
+    font-family: 'FS Albert Pro Cyrillic';
+    font-style: italic;
+    font-weight: 200;
+    src: url('../../../../resources/fonts/FSAlbertPro/Cyrillic/ThinItalic/FSAlbertCyWeb-ThinItalic.eot');
+    src: url('../../../../resources/fonts/FSAlbertPro/Cyrillic/ThinItalic/FSAlbertCyWeb-ThinItalic.eot?#iefix')
+            format('embedded-opentype'),
+        url('../../../../resources/fonts/FSAlbertPro/Cyrillic/ThinItalic/FSAlbertCyWeb-ThinItalic.woff2')
+            format('woff2'),
+        url('../../../../resources/fonts/FSAlbertPro/Cyrillic/ThinItalic/FSAlbertCyWeb-ThinItalic.woff')
+            format('woff'),
+        url('../../../../resources/fonts/FSAlbertPro/Cyrillic/ThinItalic/FSAlbertCyWeb-ThinItalic.ttf')
+            format('truetype'),
+        url('../../../../resources/fonts/FSAlbertPro/Cyrillic/ThinItalic/FSAlbertCyWeb-ThinItalic.svg')
+            format('svg');
+}
+@font-face {
+    font-display: swap;
+    font-family: 'FS Albert Pro Cyrillic';
+    font-style: normal;
+    font-weight: 300;
+    src: url('../../../../resources/fonts/FSAlbertPro/Cyrillic/Light/FSAlbertCyWeb-Light.eot');
+    src: url('../../../../resources/fonts/FSAlbertPro/Cyrillic/Light/FSAlbertCyWeb-Light.eot?#iefix')
+            format('embedded-opentype'),
+        url('../../../../resources/fonts/FSAlbertPro/Cyrillic/Light/FSAlbertCyWeb-Light.woff2')
+            format('woff2'),
+        url('../../../../resources/fonts/FSAlbertPro/Cyrillic/Light/FSAlbertCyWeb-Light.woff')
+            format('woff'),
+        url('../../../../resources/fonts/FSAlbertPro/Cyrillic/Light/FSAlbertCyWeb-Light.ttf')
+            format('truetype'),
+        url('../../../../resources/fonts/FSAlbertPro/Cyrillic/Light/FSAlbertCyWeb-Light.svg')
+            format('svg');
+}
+@font-face {
+    font-display: swap;
+    font-family: 'FS Albert Pro Cyrillic';
+    font-style: italic;
+    font-weight: 300;
+    src: url('../../../../resources/fonts/FSAlbertPro/Cyrillic/LightItalic/FSAlbertCyWeb-LightItalic.eot');
+    src: url('../../../../resources/fonts/FSAlbertPro/Cyrillic/LightItalic/FSAlbertCyWeb-LightItalic.eot?#iefix')
+            format('embedded-opentype'),
+        url('../../../../resources/fonts/FSAlbertPro/Cyrillic/LightItalic/FSAlbertCyWeb-LightItalic.woff2')
+            format('woff2'),
+        url('../../../../resources/fonts/FSAlbertPro/Cyrillic/LightItalic/FSAlbertCyWeb-LightItalic.woff')
+            format('woff'),
+        url('../../../../resources/fonts/FSAlbertPro/Cyrillic/LightItalic/FSAlbertCyWeb-LightItalic.ttf')
+            format('truetype'),
+        url('../../../../resources/fonts/FSAlbertPro/Cyrillic/LightItalic/FSAlbertCyWeb-LightItalic.svg')
+            format('svg');
+}
+@font-face {
+    font-display: swap;
+    font-family: 'FS Albert Pro Cyrillic';
+    font-style: italic;
+    font-weight: 400;
+    src: url('../../../../resources/fonts/FSAlbertPro/Cyrillic/Italic/FSAlbertCyWeb-Italic.eot');
+    src: url('../../../../resources/fonts/FSAlbertPro/Cyrillic/Italic/FSAlbertCyWeb-Italic.eot?#iefix')
+            format('embedded-opentype'),
+        url('../../../../resources/fonts/FSAlbertPro/Cyrillic/Italic/FSAlbertCyWeb-Italic.woff2')
+            format('woff2'),
+        url('../../../../resources/fonts/FSAlbertPro/Cyrillic/Italic/FSAlbertCyWeb-Italic.woff')
+            format('woff'),
+        url('../../../../resources/fonts/FSAlbertPro/Cyrillic/Italic/FSAlbertCyWeb-Italic.ttf')
+            format('truetype'),
+        url('../../../../resources/fonts/FSAlbertPro/Cyrillic/Italic/FSAlbertCyWeb-Italic.svg')
+            format('svg');
+}
+@font-face {
+    font-display: swap;
+    font-family: 'FS Albert Pro Cyrillic';
+    font-style: normal;
+    font-weight: 600;
+    src: url('../../../../resources/fonts/FSAlbertPro/Cyrillic/Bold/FSAlbertCyWeb-Bold.eot');
+    src: url('../../../../resources/fonts/FSAlbertPro/Cyrillic/Bold/FSAlbertCyWeb-Bold.eot?#iefix')
+            format('embedded-opentype'),
+        url('../../../../resources/fonts/FSAlbertPro/Cyrillic/Bold/FSAlbertCyWeb-Bold.woff2')
+            format('woff2'),
+        url('../../../../resources/fonts/FSAlbertPro/Cyrillic/Bold/FSAlbertCyWeb-Bold.woff')
+            format('woff'),
+        url('../../../../resources/fonts/FSAlbertPro/Cyrillic/Bold/FSAlbertCyWeb-Bold.ttf')
+            format('truetype'),
+        url('../../../../resources/fonts/FSAlbertPro/Cyrillic/Bold/FSAlbertCyWeb-Bold.svg')
+            format('svg');
+}
+@font-face {
+    font-display: swap;
+    font-family: 'FS Albert Pro Cyrillic';
+    font-style: italic;
+    font-weight: 600;
+    src: url('../../../../resources/fonts/FSAlbertPro/Cyrillic/BoldItalic/FSAlbertCyWeb-BoldItalic.eot');
+    src: url('../../../../resources/fonts/FSAlbertPro/Cyrillic/BoldItalic/FSAlbertCyWeb-BoldItalic.eot?#iefix')
+            format('embedded-opentype'),
+        url('../../../../resources/fonts/FSAlbertPro/Cyrillic/BoldItalic/FSAlbertCyWeb-BoldItalic.woff2')
+            format('woff2'),
+        url('../../../../resources/fonts/FSAlbertPro/Cyrillic/BoldItalic/FSAlbertCyWeb-BoldItalic.woff')
+            format('woff'),
+        url('../../../../resources/fonts/FSAlbertPro/Cyrillic/BoldItalic/FSAlbertCyWeb-BoldItalic.ttf')
+            format('truetype'),
+        url('../../../../resources/fonts/FSAlbertPro/Cyrillic/BoldItalic/FSAlbertCyWeb-BoldItalic.svg')
+            format('svg');
+}
+@font-face {
+    font-display: swap;
+    font-family: 'FS Albert Pro Cyrillic';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../../../../resources/fonts/FSAlbertPro/Cyrillic/ExtraBold/FSAlbertCyWeb-ExtraBold.eot');
+    src: url('../../../../resources/fonts/FSAlbertPro/Cyrillic/ExtraBold/FSAlbertCyWeb-ExtraBold.eot?#iefix')
+            format('embedded-opentype'),
+        url('../../../../resources/fonts/FSAlbertPro/Cyrillic/ExtraBold/FSAlbertCyWeb-ExtraBold.woff2')
+            format('woff2'),
+        url('../../../../resources/fonts/FSAlbertPro/Cyrillic/ExtraBold/FSAlbertCyWeb-ExtraBold.woff')
+            format('woff'),
+        url('../../../../resources/fonts/FSAlbertPro/Cyrillic/ExtraBold/FSAlbertCyWeb-ExtraBold.ttf')
+            format('truetype'),
+        url('../../../../resources/fonts/FSAlbertPro/Cyrillic/ExtraBold/FSAlbertCyWeb-ExtraBold.svg')
+            format('svg');
+}
+@font-face {
+    font-display: swap;
+    font-family: 'FS Albert Arabic';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../../../../resources/fonts/FSAlbertArabic/Regular/FSAlbertArabicWeb-Regular.eot');
+    src: url('../../../../resources/fonts/FSAlbertArabic/Regular/FSAlbertArabicWeb-Regular.eot?#iefix')
+            format('embedded-opentype'),
+        url('../../../../resources/fonts/FSAlbertArabic/Regular/FSAlbertArabicWeb-Regular.woff')
+            format('woff'),
+        url('../../../../resources/fonts/FSAlbertArabic/Regular/FSAlbertArabicWe        f')
+            format('truetype'),
+        url('../../../../resources/fonts/FSAlbertArabic/Regular/FSAlbertArabicWeb-Regular.svg')
+            format('svg');
+}
+@font-face {
+    font-display: swap;
+    font-family: 'FS Albert Arabic';
+    font-style: normal;
+    font-weight: 200;
+    src: url('../../../../resources/fonts/FSAlbertArabic/Thin/FSAlbertArabicWeb-Thin.eot');
+    src: url('../../../../resources/fonts/FSAlbertArabic/Thin/FSAlbertArabicWeb-Thin.eot?#iefix')
+            format('embedded-opentype'),
+        url('../../../../resources/fonts/FSAlbertArabic/Thin/FSAlbertArabicWeb-Thin.woff')
+            format('woff'),
+        url('../../../../resources/fonts/FSAlbertArabic/Thin/FSAlbertArabicWeb-Thin.ttf')
+            format('truetype'),
+        url('../../../../resources/fonts/FSAlbertArabic/Thin/FSAlbertArabicWeb-Thin.svg')
+            format('svg');
+}
+@font-face {
+    font-display: swap;
+    font-family: 'FS Albert Arabic';
+    font-style: normal;
+    font-weight: 300;
+    src: url('../../../../resources/fonts/FSAlbertArabic/Light/FSAlbertArabicWeb-Light.eot');
+    src: url('../../../../resources/fonts/FSAlbertArabic/Light/FSAlbertArabicWeb-Light.eot?#iefix')
+            format('embedded-opentype'),
+        url('../../../../resources/fonts/FSAlbertArabic/Light/FSAlbertArabicWeb-Light.woff')
+            format('woff'),
+        url('../../../../resources/fonts/FSAlbertArabic/Light/FSAlbertArabicWeb-Light.ttf')
+            format('truetype'),
+        url('../../../../resources/fonts/FSAlbertArabic/Light/FSAlbertArabicWeb-Light.svg')
+            format('svg');
+}
+@font-face {
+    font-display: swap;
+    font-family: 'FS Albert Arabic';
+    font-style: normal;
+    font-weight: 600;
+    src: url('../../../../resources/fonts/FSAlbertArabic/Bold/FSAlbertArabicWeb-Bold.eot');
+    src: url('../../../../resources/fonts/FSAlbertArabic/Bold/FSAlbertArabicWeb-Bold.eot?#iefix')
+            format('embedded-opentype'),
+        url('../../../../resources/fonts/FSAlbertArabic/Bold/FSAlbertArabicWeb-Bold.woff')
+            format('woff'),
+        url('../../../../resources/fonts/FSAlbertArabic/Bold/FSAlbertArabicWeb-Bold.ttf')
+            format('truetype'),
+        url('../../../../resources/fonts/FSAlbertArabic/Bold/FSAlbertArabicWeb-Bold.svg')
+            format('svg');
+}
+@font-face {
+    font-display: swap;
+    font-family: 'FS Albert Arabic';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../../../../resources/fonts/FSAlbertArabic/ExtraBold/FSAlbertArabicWeb-ExtraBold.eot');
+    src: url('../../../../resources/fonts/FSAlbertArabic/ExtraBold/FSAlbertArabicWeb-ExtraBold.eot?#iefix')
+            format('embedded-opentype'),
+        url('../../../../resources/fonts/FSAlbertArabic/ExtraBold/FSAlbertArabicWeb-ExtraBold.woff')
+            format('woff'),
+        url('../../../../resources/fonts/FSAlbertArabic/ExtraBold/FSAlbertArabicWeb-        f')
+            format('truetype'),
+        url('../../../../resources/fonts/FSAlbertArabic/ExtraBold/FSAlbertArabic        d.svg')
+            format('svg');
+}

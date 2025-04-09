@@ -1,0 +1,191 @@
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html">
+    <sly data-sly-call="${clientlib.js @ categories='product.admin.page'}"/>
+</sly>
+<sly data-sly-use.time="com.bdb.aem.core.models.TimerModel"></sly>
+<div class="container">
+  <h1>PDP Admin Page </h1> <br>
+
+  <p>This page is used to view or modify the product announcemt at regional and global level </p>
+
+  <p >Product SKU :</p><p class="productSku"></p>
+
+  <p >Product Title :</p><p class="productTitle"></p>	
+  <form class="example" id="my_form">
+
+    <p>Product Announcement on/off :</p>
+    <div class="form-check-inline">
+      <label class="form-check-label" for="on">
+        <input type="radio" style="cursor:default;" class="form-check-input" class="turnOn" name="productAnnouncement" value="true">On
+      </label>
+    </div>
+    <div class="form-check-inline">
+      <label class="form-check-label" for="off">
+        <input type="radio" style="cursor:default;" class="form-check-input" class="turnOff" name="productAnnouncement" value="false">Off
+      </label>
+    </div></br></br>
+
+    <div class="form-group">
+      <label for="description">Announcement Description:</label>
+      <textarea class="form-control description" rows="5" id="description" name="paDescription"></textarea>
+    </div>
+    
+     <div class="form-group">
+      <label for="startDate">Product Announcement Start Date:</label>
+      <input style="width:231px" type="date" class="form-control startDate" id="startDate" name="startDate" value="">
+    </div>
+    
+     <div class="form-group">
+      <label for="endDate">Product Announcement End Date:</label>
+       <input style="width:231px" type="date" class="form-control endDate" id="endDate" name="endDate" value="">
+    </div>
+    
+    <div class="form-group">
+      <label for="replacedProductId">Replaced Product Id:</label>
+      <input type="text" class="form-control replacedProductId" id="replacedProductId" name="replacedProductId" value="">
+    </div>
+    <div class="form-group">
+      <label for="moreInfo">More Information Label:</label>
+      <input type="text" class="form-control moreInfo" id="moreInfo" name="paViewMoreCTA" value="">
+    </div>
+    <div class="form-group">
+      <label for="pwd">More Information Link(Add placeholder "{en-us}" before content page url):</label>
+      <input type="text" class="form-control moreInfoLink" name="moreInfoLink" value="">
+    </div>
+<p>Display Bulk Reagent Quote Link on/off :</p>
+    <div class="form-check-inline">
+      <label class="form-check-label" for="on">
+        <input type="radio" style="cursor:default;" class="form-check-input" class="bulkReagentQuoteLinkTurnOn" name="displayBulkReagentQuote" value="true" checked>On
+      </label>
+    </div>
+    <div class="form-check-inline">
+      <label class="form-check-label" for="off">
+        <input type="radio" style="cursor:default;" class="form-check-input" class="bulkReagentQuoteLinkTurnOff" name="displayBulkReagentQuote" value="false">Off
+      </label>
+    </div></br></br>
+    <p>Check to Open in New Tab:</p>
+    <div class="form-check">
+      <label class="form-check-label" for="check1">
+        <input type="checkbox" style="cursor:default;" class="form-check-input openNewTab" name="openNewTab" value="true">New Tab
+      </label>
+    </div></br>
+    <div class="form-group">
+      <label for="faqLabel">FAQ Title:</label>
+      <input type="text" class="form-control faqLabel" id="faqLabel" name="paFAQTitle" value="">
+    </div>
+
+    <div id="faqForm">
+
+      <div class="form-group" id="FAQFileds"></div>
+      <fieldset id="buildyourform">
+        <legend>Click add button to add FAQs</legend>
+      </fieldset>
+
+    </div>
+
+    <input type="button" value="Add a field" class="add btn btn-secondary" id="add" />
+
+
+    <div class="form-group">
+      <label for="moreInfo">View More FAQs Label:</label>
+      <input type="text" class="form-control viewMoreFaqLabel" id="viewMoreFaqLabel" name="viewMoreFaqLabel" value="">
+    </div>
+    
+    <p>Regional disclaimer on/off :</p>
+
+    <div class="form-check-inline">
+      <label class="form-check-label" for="radio1">
+        <input type="radio" style="cursor:default;" class="form-check-input disclaimerOn" name="disclaimerStatus" value="true">On
+      </label>
+    </div>
+    <div class="form-check-inline">
+      <label class="form-check-label" for="radio2">
+        <input type="radio" style="cursor:default;" class="form-check-input disclaimeroff" name="disclaimerStatus" value="false">Off
+      </label>
+    </div></br></br>
+
+
+    <div class="form-group">
+      <label for="disclaimer">Regional disclaimer:</label>
+      <textarea class="form-control disclaimer" id="disclaimer" rows="5" name="regionalDisclaimers"
+        value="disclaimer"></textarea>
+    </div>
+
+
+	<p>Special Handling Message on/off :</p>
+
+    <div class="form-check-inline">
+      <label class="form-check-label" for="radio3">
+        <input type="radio" style="cursor:default;" class="form-check-input smessageOn" name="smessageStatus" value="true">On
+      </label>
+    </div>
+    <div class="form-check-inline">
+      <label class="form-check-label" for="radio4">
+        <input type="radio" style="cursor:default;" class="form-check-input smessageOff" name="smessageStatus" value="false">Off
+      </label>
+    </div></br></br>
+
+
+    <div class="form-group">
+      <label for="specialMessage">Special Handling Message:</label>
+      <textarea class="form-control specialMessage" id="specialMessage" rows="5" name="specialMessage"
+        value="specialMessage"></textarea>
+    </div>
+
+	<div class="form-group">
+      <label for="altText">Alt Text:</label>
+      <input type="text" class="form-control altText" id="altText" name="altText" value="">
+    </div>
+    <div class="form-group">
+      <label for="testimonial_id">Testimonial Id:</label>
+      <input type="text" class="form-control testimonial_id" id="testimonial_id" name="testimonialId" value="">
+    </div>
+
+    <div class="form-group">
+      <label for="videoId">Video Id:</label>
+      <input type="text" class="form-control videoId" id="videoId" name="videoId" value="">
+    </div>
+
+    <div style="border: double;">
+        <p style="color:red;">PDP Attributes (Only turn it ON if you want to update the below values at the product level) :</p>
+    
+        <div class="form-check-inline">
+          <label class="form-check-label" for="radio5">
+            <input type="radio" style="cursor:default;" class="form-check-input pdpAttributesOn" name="pdpAttributesStatus" value="true">On
+          </label>
+        </div>
+        <div class="form-check-inline">
+          <label class="form-check-label" for="radio6">
+            <input type="radio" style="cursor:default;" class="form-check-input pdpAttributesOff" name="pdpAttributesStatus" value="false">Off
+          </label>
+        </div></br></br>
+
+ 
+
+
+        <div class="form-group">
+          <label for="neutralActivity">Neutralization Activity:</label>
+          <input type="text" class="form-control neutralActivity" id="neutralActivity" name="neutralizationActivity" value="">
+        </div>
+
+ 
+
+        <div class="form-group">
+          <label for="target_MW">Target_MW:</label>
+          <input type="text" class="form-control target_MW" id="target_MW" name="targetMW" value="">
+        </div>
+
+ 
+
+        <div class="form-group">
+          <label for="assay_Range">Assay Range:</label>
+          <input type="text" class="form-control assay_Range" id="assay_Range" name="assayRange" value="">
+        </div>
+    </div>
+
+	<button type="button" id ="activateToPublish" class="btn btn-primary">Activate to Publish</button><br><br>
+    <button type="submit" class="btn btn-primary">save</button>
+    
+  </form>
+
+</div>
+<p data-sly-test="${inheritedPageProperties.enableTimer}">PDP admin Page:${time.endTime}</p>

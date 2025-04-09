@@ -1,0 +1,18 @@
+{
+    "promotions": [
+        {
+            "code": "coupon_code_fixed_discount_AutomationMultiProduct1",
+            "description": "A fixed discount is added to the cart when a valid coupon code is entered",
+            "priority": 0,
+            "promotionType": "Rule Based Promotion",
+            "couponCode": "[\"USD\"]"
+        },
+        {
+            "code": "coupon_code_percentage_discount_AutomationMultiProduct1",
+            "description": "A percentage discount is added to the cart when a valid coupon code is entered",
+            "priority": 1,
+            "promotionType": "Rule Based Promotion",
+            "couponCode": "[\"SLTieredTest\"]"
+        }
+    ]
+}

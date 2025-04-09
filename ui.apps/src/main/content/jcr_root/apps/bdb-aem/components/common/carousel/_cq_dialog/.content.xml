@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="BDB Carousel"
+    sling:resourceType="cq/gui/components/authoring/dialog"
+    extraClientlibs="[core.wcm.components.commons.editor.dialog.childreneditor.v1,core.wcm.components.carousel.v1.editor]"
+    helpPath="https://www.adobe.com/go/aem_cmp_carousel_v1"
+    trackingFeature="core-components:carousel:v1">
+    <content
+        granite:class="cmp-carousel__editor"
+        jcr:primaryType="nt:unstructured">
+        <items jcr:primaryType="nt:unstructured">
+            <tabs jcr:primaryType="nt:unstructured">
+                <items jcr:primaryType="nt:unstructured">
+					<accessibility
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Accessibility"
+                        sling:orderBefore="cq:styles"
+                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <columns
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                                margin="{Boolean}true">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <column
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <accessibilityLabel
+                                                jcr:primaryType="nt:unstructured"
+                                                value="Label"/>
+                                            <accessibilityPrevious
+                                                jcr:primaryType="nt:unstructured"
+                                                value="Previous"/>
+                                            <accessibilityNext
+                                                jcr:primaryType="nt:unstructured"
+                                                value="Next"/>
+                                            <accessibilityPlay
+                                                jcr:primaryType="nt:unstructured"
+                                                value="Play"/>
+                                            <accessibilityPause
+                                                jcr:primaryType="nt:unstructured"
+                                                value="Pause"/>
+                                            <accessibilityTablist
+                                                jcr:primaryType="nt:unstructured"
+                                                value="Tabllist"/>
+                                            <accessibilityAutoItemTitles
+                                                jcr:primaryType="nt:unstructured"
+                                                checked="true"/>
+                                        </items>
+                                    </column>
+                                </items>
+                            </columns>
+                        </items>
+                    </accessibility>
+                    <anchor
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Anchor Details"
+                        sling:orderBefore="cq:styles"
+                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <columns
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                                margin="{Boolean}true">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <column
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <enableAnchorIdentifier
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                                fieldDescription="Anchor Identifier for Anchor Component"
+                                                name="./enableAnchorIdentifier"
+                                                text="Enable Anchor Identifier"
+                                                uncheckedValue="{Boolean}false"
+                                                value="{Boolean}true"/>
+                                            <anchorIdDescription
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="cq/gui/components/authoring/dialog/richtext"
+                                                fieldDescription="AnchorIdDescription"
+                                                fieldLabel="Anchor Id Description"
+                                                name="./anchorIdDescription"
+                                                useFixedInlineToolbar="{Boolean}true">
+                                                <rtePlugins
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceSuperType="/apps/bdb-aem/components/authoring/dialog/richtext/rtePlugins"/>
+                                                <uiSettings
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceSuperType="/apps/bdb-aem/components/authoring/dialog/richtext/uiSettings"/>
+                                                <granite:data
+                                                    jcr:primaryType="nt:unstructured"
+                                                    char-limit="150"/>
+                                            </anchorIdDescription>
+                                        </items>
+                                    </column>
+                                </items>
+                            </columns>
+                        </items>
+                    </anchor>
+                </items>
+            </tabs>
+        </items>
+    </content>
+</jcr:root>

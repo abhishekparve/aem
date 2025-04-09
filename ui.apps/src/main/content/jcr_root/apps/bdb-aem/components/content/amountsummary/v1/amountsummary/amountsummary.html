@@ -1,0 +1,44 @@
+<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html"
+     data-sly-call="${templates.placeholder @ isEmpty = true}"></sly>
+
+
+<sly data-sly-use.amountSummaryModel="com.bdb.aem.core.models.AmountSummaryModel"></sly>
+<script>
+		if (typeof window.AEM_DATA === 'undefined') {
+            window.AEM_DATA = {};
+        }
+        if (typeof window.AEM_DATA.labels === 'undefined') {
+            window.AEM_DATA.labels = {};
+        }
+
+		if (typeof window.AEM_DATA.labels.myCartAmountSummaryLabels === 'undefined') {
+            window.AEM_DATA.labels.myCartAmountSummaryLabels = {};
+        }
+        window.AEM_DATA.labels.myCartAmountSummaryLabels.amountSummary = ${ amountSummaryModel.amountSummary @context='scriptComment' };
+        window.AEM_DATA.labels.shipToAddressLabels = ${ amountSummaryModel.shipTo @context='scriptComment' };
+
+		if (typeof window.AEM_DATA.labels.myCartLabels === 'undefined') {
+            window.AEM_DATA.labels.myCartLabels = {};
+			if (typeof window.AEM_DATA.labels.myCartLabels.myCartPrintPDFLabels === 'undefined') {
+				window.AEM_DATA.labels.myCartLabels.myCartPrintPDFLabels = {};
+			}
+        }
+		window.AEM_DATA.labels.myCartLabels.myCartPrintPDFLabels.shippingAddress = ${ amountSummaryModel.shipToAddressLabels @context='scriptComment' };
+
+        if (typeof window.AEM_DATA.config === 'undefined') {
+            window.AEM_DATA.config = {};
+        }
+        window.AEM_DATA.config.myCartAmountSummaryConfig = ${ amountSummaryModel.myCartAmountSummaryConfig @context='scriptComment' };
+        window.AEM_DATA.config.shipToAddressConfig = ${ amountSummaryModel.shipToConfig @context='scriptComment' };
+		if (typeof window.AEM_DATA.labels.checkoutLabels === 'undefined') {
+            window.AEM_DATA.labels.checkoutLabels = {};
+        }
+		window.AEM_DATA.labels.checkoutLabels.amountSummary = ${ amountSummaryModel.amountSummaryForCheckout @context='scriptComment' };
+		window.AEM_DATA.labels.checkoutLabels.shipToAddressLabels = ${ amountSummaryModel.shipTo @context='scriptComment' };
+		
+		if (typeof window.AEM_DATA.labels.orderconfirmationLabels === 'undefined') {
+            window.AEM_DATA.labels.orderconfirmationLabels = {};
+        }
+		window.AEM_DATA.labels.orderconfirmationLabels.amountSummary =${amountSummaryModel.orderConfirmationAmountSummary  @ context='scriptComment'};
+
+</script>

@@ -1,0 +1,58 @@
+<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html"
+     data-sly-call="${templates.placeholder @ isEmpty = true}"></sly>
+     
+    <sly data-sly-use.trainingDetailsContainerModel="com.bdb.aem.core.models.TrainingDetailsContainerModel">
+        <div class="training-video-section app-js__training-video-section container ${properties.disableBottomBorder?'border-bottom-0':''}  ${properties.togglePaddingTop?'pt-2':''}"> <!--Add class conditionally  border-bottom-0  -->
+            <div data-sly-test="${trainingDetailsContainerModel.sectionNameText}" class="training-video-section__section-title">${trainingDetailsContainerModel.sectionNameText}</div>
+            <div data-sly-test="${trainingDetailsContainerModel.subTitle}" class="training-video-section__title">${trainingDetailsContainerModel.subTitle @context='html'}</div>
+            <sly data-sly-list.cardModel="${trainingDetailsContainerModel.trainingDetailsList}">
+                <div class="d-flex flex-sm-row training-video-section__container  ${cardModel.sectionAlign}">
+                    <div class="training-video-section__main-content">
+                        <h2 class="training-video-section__heading" tabindex="0">${cardModel.title @context='html'}</h2>
+                        <sly data-sly-list.item = "${cardModel.descriptionList}">
+                            <div class="training-about-section__desc"><strong>${item.errorCode}:</strong>${item.errorMessage}</div>  
+                        </sly>
+                        <a data-sly-test="${cardModel.primaryCtaLabel}" href="${cardModel.primaryCtaPath}" tabindex="0" class="btn btn-primary-blue btn-lg training-video-section__btn">${cardModel.primaryCtaLabel @context='html'}</a>
+                        <a data-sly-test="${cardModel.optionalCtaLabel}" href="${cardModel.optionalCtaPath}" tabindex="0" class="btn btn-primary-blue btn-lg training-video-section__btn">${cardModel.optionalCtaLabel @context='html'}</a>
+                    </div>
+
+                    <div data-sly-test="${!cardModel.videoEnabled}" class="training-about-section__img-container">
+                    	<sly data-sly-test="${cardModel.imageLinkUrl}">
+                        	<a href="${cardModel.imageLinkUrl}" target="${cardModel.openNewImageLinkTab == 'true' ? '_blank' : '_self'}">
+                       			<img src="${cardModel.imagePath}" alt="${cardModel.imageVideoAltText}" tabindex="0">
+                       	    </a>
+                       	</sly> 
+                       	<sly data-sly-test="${!cardModel.imageLinkUrl}">
+                       		<img src="${cardModel.imagePath}" alt="${cardModel.imageVideoAltText}" tabindex="0">
+                       	</sly>   
+                        <p data-sly-test="${cardModel.captionUnderImage}" class="training-about-section__img-container__caption">${cardModel.captionUnderImage @context='html'}</p>
+                    </div>
+                <!---->
+                    <div data-sly-test="${cardModel.videoEnabled}" class="training-video-section__vdo-container" data-toggle="modal" data-target="#trainingVideo-${cardModel.brightcoveVideoId}-${cardModelList.index}">                        
+                       	<img src="${cardModel.imagePath}" alt="${cardModel.imageVideoAltText}">                        
+                        <img src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/playButton.svg" class="play-btn"/>
+                        <p data-sly-test="${cardModel.captionUnderImage}" class="training-video-section__vdo-container__caption">${cardModel.captionUnderImage @context='html'}</p>
+                    </div>
+                    <div data-sly-test="${cardModel.videoEnabled}" class="modal fade training-video-section__banner-img-modal"
+                        id="trainingVideo-${cardModel.brightcoveVideoId}-${cardModelList.index}" tabindex="-1" role="dialog"
+                        aria-labelledby="trainingVideoTitle" aria-hidden="true" data-backdrop="static">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close training-video-section__banner-modal-close"
+                                        data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body training-video-section__banner-img-modal-body is-video"
+                                    data-accountId="1752604059001" data-playerId="B1xXFuBodW"
+                                    data-videoId="${cardModel.brightcoveVideoId}">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <!---->
+                </div>
+            </sly>
+        </div>        
+    </sly>  

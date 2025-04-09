@@ -1,0 +1,3630 @@
+{
+    "accountManagerInfo": {
+        "email": "string",
+        "name": "string",
+        "phone": "string"
+    },
+    "appliedOrderPromotions": [
+        {
+            "amountSaved": {
+                "conditionUnit": "string",
+                "currencyIso": "string",
+                "deletionIndicator": "string",
+                "distChannel": "string",
+                "division": "string",
+                "formattedValue": "string",
+                "materialNumber": "string",
+                "maxQuantity": 0,
+                "minQuantity": 0,
+                "priceType": "BUY",
+                "pricingUnit": "string",
+                "rate": "string",
+                "rateUnit": "string",
+                "refNumber": "string",
+                "salesOrg": "string",
+                "sourceSystem": "string",
+                "validFromDate": "string",
+                "validToDate": "string",
+                "value": 0
+            },
+            "consumedEntries": [
+                {
+                    "adjustedUnitPrice": 0,
+                    "code": "string",
+                    "orderEntryNumber": 0,
+                    "quantity": 0
+                }
+            ],
+            "couponCode": "string",
+            "description": "string",
+            "freeGift": true,
+            "promotion": {
+                "applicableCategories": ["string"],
+                "applicableProducts": ["string"],
+                "code": "string",
+                "couldFireMessages": ["string"],
+                "description": "string",
+                "enabled": true,
+                "endDate": "2020-10-21T07:22:41.416Z",
+                "excludedCategories": ["string"],
+                "excludedProducts": ["string"],
+                "firedMessages": ["string"],
+                "priority": 0,
+                "productBanner": {
+                    "altText": "string",
+                    "format": "string",
+                    "galleryIndex": 0,
+                    "imageType": "PRIMARY",
+                    "url": "string"
+                },
+                "promotionGroup": "string",
+                "promotionType": "string",
+                "restrictions": [
+                    {
+                        "description": "string",
+                        "restrictionType": "string"
+                    }
+                ],
+                "startDate": "2020-10-21T07:22:41.417Z",
+                "title": "string"
+            },
+            "promotionalFreeShipping": true,
+            "shippingDiscount": 0
+        }
+    ],
+    "appliedProductPromotions": [
+        {
+            "amountSaved": {
+                "conditionUnit": "string",
+                "currencyIso": "string",
+                "deletionIndicator": "string",
+                "distChannel": "string",
+                "division": "string",
+                "formattedValue": "string",
+                "materialNumber": "string",
+                "maxQuantity": 0,
+                "minQuantity": 0,
+                "priceType": "BUY",
+                "pricingUnit": "string",
+                "rate": "string",
+                "rateUnit": "string",
+                "refNumber": "string",
+                "salesOrg": "string",
+                "sourceSystem": "string",
+                "validFromDate": "string",
+                "validToDate": "string",
+                "value": 0
+            },
+            "consumedEntries": [
+                {
+                    "adjustedUnitPrice": 0,
+                    "code": "string",
+                    "orderEntryNumber": 0,
+                    "quantity": 0
+                }
+            ],
+            "couponCode": "string",
+            "description": "string",
+            "freeGift": true,
+            "promotion": {
+                "applicableCategories": ["string"],
+                "applicableProducts": ["string"],
+                "code": "string",
+                "couldFireMessages": ["string"],
+                "description": "string",
+                "enabled": true,
+                "endDate": "2020-10-21T07:22:41.417Z",
+                "excludedCategories": ["string"],
+                "excludedProducts": ["string"],
+                "firedMessages": ["string"],
+                "priority": 0,
+                "productBanner": {
+                    "altText": "string",
+                    "format": "string",
+                    "galleryIndex": 0,
+                    "imageType": "PRIMARY",
+                    "url": "string"
+                },
+                "promotionGroup": "string",
+                "promotionType": "string",
+                "restrictions": [
+                    {
+                        "description": "string",
+                        "restrictionType": "string"
+                    }
+                ],
+                "startDate": "2020-10-21T07:22:41.417Z",
+                "title": "string"
+            },
+            "promotionalFreeShipping": true,
+            "shippingDiscount": 0
+        }
+    ],
+    "appliedVouchers": [
+        {
+            "appliedValue": {
+                "conditionUnit": "string",
+                "currencyIso": "string",
+                "deletionIndicator": "string",
+                "distChannel": "string",
+                "division": "string",
+                "formattedValue": "string",
+                "materialNumber": "string",
+                "maxQuantity": 0,
+                "minQuantity": 0,
+                "priceType": "BUY",
+                "pricingUnit": "string",
+                "rate": "string",
+                "rateUnit": "string",
+                "refNumber": "string",
+                "salesOrg": "string",
+                "sourceSystem": "string",
+                "validFromDate": "string",
+                "validToDate": "string",
+                "value": 0
+            },
+            "code": "string",
+            "currency": {
+                "active": true,
+                "defaultCurrency": true,
+                "isocode": "string",
+                "name": "string",
+                "symbol": "string"
+            },
+            "description": "string",
+            "freeShipping": true,
+            "name": "string",
+            "value": 0,
+            "valueFormatted": "string",
+            "valueString": "string",
+            "voucherCode": "string"
+        }
+    ],
+    "billingAddress": {
+        "addressId": "string",
+        "billTo": "string",
+        "billToName": "string",
+        "billingAddress": true,
+        "building": "string",
+        "cellphone": "string",
+        "companyName": "string",
+        "country": {
+            "isocode": "string",
+            "name": "string"
+        },
+        "defaultAddress": true,
+        "department": "string",
+        "district": "string",
+        "email": "string",
+        "favouriteAddress": true,
+        "firstName": "string",
+        "floor": "string",
+        "formattedAddress": "string",
+        "id": "string",
+        "lastName": "string",
+        "line1": "string",
+        "line2": "string",
+        "nickName": "string",
+        "organizationName": "string",
+        "pendingAddress": true,
+        "phone": "string",
+        "postalCode": "string",
+        "region": {
+            "countryIso": "string",
+            "isocode": "string",
+            "isocodeShort": "string",
+            "name": "string"
+        },
+        "room": "string",
+        "selectedAddress": true,
+        "shipTo": "string",
+        "shipToName": "string",
+        "shippingAddress": true,
+        "status": "string",
+        "title": "string",
+        "titleCode": "string",
+        "town": "string",
+        "visibleInAddressBook": true
+    },
+    "calculated": true,
+    "code": "string",
+    "currency": {
+        "active": true,
+        "defaultCurrency": true,
+        "isocode": "string",
+        "name": "string",
+        "symbol": "string"
+    },
+    "date": "2020-10-21T07:22:41.417Z",
+    "deliveryAddress": {
+        "addressId": "string",
+        "billTo": "string",
+        "billToName": "string",
+        "billingAddress": true,
+        "building": "string",
+        "cellphone": "string",
+        "companyName": "string",
+        "country": {
+            "isocode": "string",
+            "name": "string"
+        },
+        "defaultAddress": true,
+        "department": "string",
+        "district": "string",
+        "email": "string",
+        "favouriteAddress": true,
+        "firstName": "string",
+        "floor": "string",
+        "formattedAddress": "string",
+        "id": "string",
+        "lastName": "string",
+        "line1": "string",
+        "line2": "string",
+        "nickName": "string",
+        "organizationName": "string",
+        "pendingAddress": true,
+        "phone": "string",
+        "postalCode": "string",
+        "region": {
+            "countryIso": "string",
+            "isocode": "string",
+            "isocodeShort": "string",
+            "name": "string"
+        },
+        "room": "string",
+        "selectedAddress": true,
+        "shipTo": "string",
+        "shipToName": "string",
+        "shippingAddress": true,
+        "status": "string",
+        "title": "string",
+        "titleCode": "string",
+        "town": "string",
+        "visibleInAddressBook": true
+    },
+    "deliveryCost": {
+        "conditionUnit": "string",
+        "currencyIso": "string",
+        "deletionIndicator": "string",
+        "distChannel": "string",
+        "division": "string",
+        "formattedValue": "string",
+        "materialNumber": "string",
+        "maxQuantity": 0,
+        "minQuantity": 0,
+        "priceType": "BUY",
+        "pricingUnit": "string",
+        "rate": "string",
+        "rateUnit": "string",
+        "refNumber": "string",
+        "salesOrg": "string",
+        "sourceSystem": "string",
+        "validFromDate": "string",
+        "validToDate": "string",
+        "value": 0
+    },
+    "deliveryItemsQuantity": 0,
+    "deliveryMode": {
+        "code": "string",
+        "deliveryCost": {
+            "conditionUnit": "string",
+            "currencyIso": "string",
+            "deletionIndicator": "string",
+            "distChannel": "string",
+            "division": "string",
+            "formattedValue": "string",
+            "materialNumber": "string",
+            "maxQuantity": 0,
+            "minQuantity": 0,
+            "priceType": "BUY",
+            "pricingUnit": "string",
+            "rate": "string",
+            "rateUnit": "string",
+            "refNumber": "string",
+            "salesOrg": "string",
+            "sourceSystem": "string",
+            "validFromDate": "string",
+            "validToDate": "string",
+            "value": 0
+        },
+        "description": "string",
+        "name": "string"
+    },
+    "deliveryOrderGroups": [
+        {
+            "deliveryAddress": {
+                "addressId": "string",
+                "billTo": "string",
+                "billToName": "string",
+                "billingAddress": true,
+                "building": "string",
+                "cellphone": "string",
+                "companyName": "string",
+                "country": {
+                    "isocode": "string",
+                    "name": "string"
+                },
+                "defaultAddress": true,
+                "department": "string",
+                "district": "string",
+                "email": "string",
+                "favouriteAddress": true,
+                "firstName": "string",
+                "floor": "string",
+                "formattedAddress": "string",
+                "id": "string",
+                "lastName": "string",
+                "line1": "string",
+                "line2": "string",
+                "nickName": "string",
+                "organizationName": "string",
+                "pendingAddress": true,
+                "phone": "string",
+                "postalCode": "string",
+                "region": {
+                    "countryIso": "string",
+                    "isocode": "string",
+                    "isocodeShort": "string",
+                    "name": "string"
+                },
+                "room": "string",
+                "selectedAddress": true,
+                "shipTo": "string",
+                "shipToName": "string",
+                "shippingAddress": true,
+                "status": "string",
+                "title": "string",
+                "titleCode": "string",
+                "town": "string",
+                "visibleInAddressBook": true
+            },
+            "entries": [
+                {
+                    "basePrice": {
+                        "conditionUnit": "string",
+                        "currencyIso": "string",
+                        "deletionIndicator": "string",
+                        "distChannel": "string",
+                        "division": "string",
+                        "formattedValue": "string",
+                        "materialNumber": "string",
+                        "maxQuantity": 0,
+                        "minQuantity": 0,
+                        "priceType": "BUY",
+                        "pricingUnit": "string",
+                        "rate": "string",
+                        "rateUnit": "string",
+                        "refNumber": "string",
+                        "salesOrg": "string",
+                        "sourceSystem": "string",
+                        "validFromDate": "string",
+                        "validToDate": "string",
+                        "value": 0
+                    },
+                    "cancellableQuantity": 5,
+                    "cancelledItemsPrice": {
+                        "conditionUnit": "string",
+                        "currencyIso": "string",
+                        "deletionIndicator": "string",
+                        "distChannel": "string",
+                        "division": "string",
+                        "formattedValue": "string",
+                        "materialNumber": "string",
+                        "maxQuantity": 0,
+                        "minQuantity": 0,
+                        "priceType": "BUY",
+                        "pricingUnit": "string",
+                        "rate": "string",
+                        "rateUnit": "string",
+                        "refNumber": "string",
+                        "salesOrg": "string",
+                        "sourceSystem": "string",
+                        "validFromDate": "string",
+                        "validToDate": "string",
+                        "value": 0
+                    },
+                    "configurationInfos": [
+                        {
+                            "configurationLabel": "string",
+                            "configurationValue": "string",
+                            "configuratorType": "string",
+                            "status": "string"
+                        }
+                    ],
+                    "contractPrice": {
+                        "conditionUnit": "string",
+                        "currencyIso": "string",
+                        "deletionIndicator": "string",
+                        "distChannel": "string",
+                        "division": "string",
+                        "formattedValue": "string",
+                        "materialNumber": "string",
+                        "maxQuantity": 0,
+                        "minQuantity": 0,
+                        "priceType": "BUY",
+                        "pricingUnit": "string",
+                        "rate": "string",
+                        "rateUnit": "string",
+                        "refNumber": "string",
+                        "salesOrg": "string",
+                        "sourceSystem": "string",
+                        "validFromDate": "string",
+                        "validToDate": "string",
+                        "value": 0
+                    },
+                    "deliveryDetails": [
+                        {
+                            "deliveryQuantity": 0,
+                            "estimatedDeliveryDate": "string"
+                        }
+                    ],
+                    "deliveryMode": {
+                        "code": "string",
+                        "deliveryCost": {
+                            "conditionUnit": "string",
+                            "currencyIso": "string",
+                            "deletionIndicator": "string",
+                            "distChannel": "string",
+                            "division": "string",
+                            "formattedValue": "string",
+                            "materialNumber": "string",
+                            "maxQuantity": 0,
+                            "minQuantity": 0,
+                            "priceType": "BUY",
+                            "pricingUnit": "string",
+                            "rate": "string",
+                            "rateUnit": "string",
+                            "refNumber": "string",
+                            "salesOrg": "string",
+                            "sourceSystem": "string",
+                            "validFromDate": "string",
+                            "validToDate": "string",
+                            "value": 0
+                        },
+                        "description": "string",
+                        "name": "string"
+                    },
+                    "deliveryPointOfService": {
+                        "address": {
+                            "addressId": "string",
+                            "billTo": "string",
+                            "billToName": "string",
+                            "billingAddress": true,
+                            "building": "string",
+                            "cellphone": "string",
+                            "companyName": "string",
+                            "country": {
+                                "isocode": "string",
+                                "name": "string"
+                            },
+                            "defaultAddress": true,
+                            "department": "string",
+                            "district": "string",
+                            "email": "string",
+                            "favouriteAddress": true,
+                            "firstName": "string",
+                            "floor": "string",
+                            "formattedAddress": "string",
+                            "id": "string",
+                            "lastName": "string",
+                            "line1": "string",
+                            "line2": "string",
+                            "nickName": "string",
+                            "organizationName": "string",
+                            "pendingAddress": true,
+                            "phone": "string",
+                            "postalCode": "string",
+                            "region": {
+                                "countryIso": "string",
+                                "isocode": "string",
+                                "isocodeShort": "string",
+                                "name": "string"
+                            },
+                            "room": "string",
+                            "selectedAddress": true,
+                            "shipTo": "string",
+                            "shipToName": "string",
+                            "shippingAddress": true,
+                            "status": "string",
+                            "title": "string",
+                            "titleCode": "string",
+                            "town": "string",
+                            "visibleInAddressBook": true
+                        },
+                        "description": "string",
+                        "displayName": "string",
+                        "distanceKm": 0,
+                        "features": {
+                            "additionalProp1": "string",
+                            "additionalProp2": "string",
+                            "additionalProp3": "string"
+                        },
+                        "formattedDistance": "string",
+                        "geoPoint": {
+                            "latitude": 0,
+                            "longitude": 0
+                        },
+                        "mapIcon": {
+                            "altText": "string",
+                            "format": "string",
+                            "galleryIndex": 0,
+                            "imageType": "PRIMARY",
+                            "url": "string"
+                        },
+                        "name": "string",
+                        "openingHours": {
+                            "code": "string",
+                            "name": "string",
+                            "specialDayOpeningList": [
+                                {
+                                    "closed": true,
+                                    "closingTime": {
+                                        "formattedHour": "string",
+                                        "hour": 0,
+                                        "minute": 0
+                                    },
+                                    "comment": "string",
+                                    "date": "2020-10-21T07:22:41.418Z",
+                                    "formattedDate": "string",
+                                    "name": "string",
+                                    "openingTime": {
+                                        "formattedHour": "string",
+                                        "hour": 0,
+                                        "minute": 0
+                                    }
+                                }
+                            ],
+                            "weekDayOpeningList": [
+                                {
+                                    "closed": true,
+                                    "closingTime": {
+                                        "formattedHour": "string",
+                                        "hour": 0,
+                                        "minute": 0
+                                    },
+                                    "openingTime": {
+                                        "formattedHour": "string",
+                                        "hour": 0,
+                                        "minute": 0
+                                    },
+                                    "weekDay": "string"
+                                }
+                            ]
+                        },
+                        "storeContent": "string",
+                        "storeImages": [
+                            {
+                                "altText": "string",
+                                "format": "string",
+                                "galleryIndex": 0,
+                                "imageType": "PRIMARY",
+                                "url": "string"
+                            }
+                        ],
+                        "url": "string",
+                        "warehouseCodes": ["string"]
+                    },
+                    "entryNumber": 0,
+                    "isContractualPrice": true,
+                    "isGrantEligible": true,
+                    "listPrice": {
+                        "conditionUnit": "string",
+                        "currencyIso": "string",
+                        "deletionIndicator": "string",
+                        "distChannel": "string",
+                        "division": "string",
+                        "formattedValue": "string",
+                        "materialNumber": "string",
+                        "maxQuantity": 0,
+                        "minQuantity": 0,
+                        "priceType": "BUY",
+                        "pricingUnit": "string",
+                        "rate": "string",
+                        "rateUnit": "string",
+                        "refNumber": "string",
+                        "salesOrg": "string",
+                        "sourceSystem": "string",
+                        "validFromDate": "string",
+                        "validToDate": "string",
+                        "value": 0
+                    },
+                    "product": {
+                        "availableForPickup": true,
+                        "averageRating": 0,
+                        "baseOptions": [
+                            {
+                                "options": [
+                                    {
+                                        "code": "string",
+                                        "priceData": {
+                                            "conditionUnit": "string",
+                                            "currencyIso": "string",
+                                            "deletionIndicator": "string",
+                                            "distChannel": "string",
+                                            "division": "string",
+                                            "formattedValue": "string",
+                                            "materialNumber": "string",
+                                            "maxQuantity": 0,
+                                            "minQuantity": 0,
+                                            "priceType": "BUY",
+                                            "pricingUnit": "string",
+                                            "rate": "string",
+                                            "rateUnit": "string",
+                                            "refNumber": "string",
+                                            "salesOrg": "string",
+                                            "sourceSystem": "string",
+                                            "validFromDate": "string",
+                                            "validToDate": "string",
+                                            "value": 0
+                                        },
+                                        "stock": {
+                                            "isValueRounded": true,
+                                            "stockLevel": 0,
+                                            "stockLevelStatus": "string"
+                                        },
+                                        "url": "string",
+                                        "variantOptionQualifiers": [
+                                            {
+                                                "image": {
+                                                    "altText": "string",
+                                                    "format": "string",
+                                                    "galleryIndex": 0,
+                                                    "imageType": "PRIMARY",
+                                                    "url": "string"
+                                                },
+                                                "name": "string",
+                                                "qualifier": "string",
+                                                "value": "string"
+                                            }
+                                        ]
+                                    }
+                                ],
+                                "selected": {
+                                    "code": "string",
+                                    "priceData": {
+                                        "conditionUnit": "string",
+                                        "currencyIso": "string",
+                                        "deletionIndicator": "string",
+                                        "distChannel": "string",
+                                        "division": "string",
+                                        "formattedValue": "string",
+                                        "materialNumber": "string",
+                                        "maxQuantity": 0,
+                                        "minQuantity": 0,
+                                        "priceType": "BUY",
+                                        "pricingUnit": "string",
+                                        "rate": "string",
+                                        "rateUnit": "string",
+                                        "refNumber": "string",
+                                        "salesOrg": "string",
+                                        "sourceSystem": "string",
+                                        "validFromDate": "string",
+                                        "validToDate": "string",
+                                        "value": 0
+                                    },
+                                    "stock": {
+                                        "isValueRounded": true,
+                                        "stockLevel": 0,
+                                        "stockLevelStatus": "string"
+                                    },
+                                    "url": "string",
+                                    "variantOptionQualifiers": [
+                                        {
+                                            "image": {
+                                                "altText": "string",
+                                                "format": "string",
+                                                "galleryIndex": 0,
+                                                "imageType": "PRIMARY",
+                                                "url": "string"
+                                            },
+                                            "name": "string",
+                                            "qualifier": "string",
+                                            "value": "string"
+                                        }
+                                    ]
+                                },
+                                "variantType": "string"
+                            }
+                        ],
+                        "baseProduct": "string",
+                        "batchManaged": true,
+                        "brand": "string",
+                        "categories": [
+                            {
+                                "code": "string",
+                                "image": {
+                                    "altText": "string",
+                                    "format": "string",
+                                    "galleryIndex": 0,
+                                    "imageType": "PRIMARY",
+                                    "url": "string"
+                                },
+                                "name": "string",
+                                "url": "string"
+                            }
+                        ],
+                        "classifications": [
+                            {
+                                "code": "string",
+                                "features": [
+                                    {
+                                        "code": "string",
+                                        "comparable": true,
+                                        "description": "string",
+                                        "featureUnit": {
+                                            "name": "string",
+                                            "symbol": "string",
+                                            "unitType": "string"
+                                        },
+                                        "featureValues": [
+                                            {
+                                                "value": "string"
+                                            }
+                                        ],
+                                        "name": "string",
+                                        "range": true,
+                                        "type": "string"
+                                    }
+                                ],
+                                "name": "string"
+                            }
+                        ],
+                        "code": "string",
+                        "configurable": true,
+                        "configuratorType": "string",
+                        "description": "string",
+                        "displayable": true,
+                        "firstVariantCode": "string",
+                        "firstVariantImage": "string",
+                        "futureStocks": [
+                            {
+                                "date": "2020-10-21T07:22:41.418Z",
+                                "formattedDate": "string",
+                                "stock": {
+                                    "isValueRounded": true,
+                                    "stockLevel": 0,
+                                    "stockLevelStatus": "string"
+                                }
+                            }
+                        ],
+                        "images": [
+                            {
+                                "altText": "string",
+                                "format": "string",
+                                "galleryIndex": 0,
+                                "imageType": "PRIMARY",
+                                "url": "string"
+                            }
+                        ],
+                        "manufacturer": "string",
+                        "maxPurchasableQuantity": 0,
+                        "multidimensional": true,
+                        "name": "string",
+                        "numberOfReviews": 0,
+                        "pictureUrl": "string",
+                        "potentialPromotions": [
+                            {
+                                "applicableCategories": ["string"],
+                                "applicableProducts": ["string"],
+                                "code": "string",
+                                "couldFireMessages": ["string"],
+                                "description": "string",
+                                "enabled": true,
+                                "endDate": "2020-10-21T07:22:41.418Z",
+                                "excludedCategories": ["string"],
+                                "excludedProducts": ["string"],
+                                "firedMessages": ["string"],
+                                "priority": 0,
+                                "productBanner": {
+                                    "altText": "string",
+                                    "format": "string",
+                                    "galleryIndex": 0,
+                                    "imageType": "PRIMARY",
+                                    "url": "string"
+                                },
+                                "promotionGroup": "string",
+                                "promotionType": "string",
+                                "restrictions": [
+                                    {
+                                        "description": "string",
+                                        "restrictionType": "string"
+                                    }
+                                ],
+                                "startDate": "2020-10-21T07:22:41.418Z",
+                                "title": "string"
+                            }
+                        ],
+                        "price": {
+                            "conditionUnit": "string",
+                            "currencyIso": "string",
+                            "deletionIndicator": "string",
+                            "distChannel": "string",
+                            "division": "string",
+                            "formattedValue": "string",
+                            "materialNumber": "string",
+                            "maxQuantity": 0,
+                            "minQuantity": 0,
+                            "priceType": "BUY",
+                            "pricingUnit": "string",
+                            "rate": "string",
+                            "rateUnit": "string",
+                            "refNumber": "string",
+                            "salesOrg": "string",
+                            "sourceSystem": "string",
+                            "validFromDate": "string",
+                            "validToDate": "string",
+                            "value": 0
+                        },
+                        "priceRange": {
+                            "maxPrice": {
+                                "conditionUnit": "string",
+                                "currencyIso": "string",
+                                "deletionIndicator": "string",
+                                "distChannel": "string",
+                                "division": "string",
+                                "formattedValue": "string",
+                                "materialNumber": "string",
+                                "maxQuantity": 0,
+                                "minQuantity": 0,
+                                "priceType": "BUY",
+                                "pricingUnit": "string",
+                                "rate": "string",
+                                "rateUnit": "string",
+                                "refNumber": "string",
+                                "salesOrg": "string",
+                                "sourceSystem": "string",
+                                "validFromDate": "string",
+                                "validToDate": "string",
+                                "value": 0
+                            },
+                            "minPrice": {
+                                "conditionUnit": "string",
+                                "currencyIso": "string",
+                                "deletionIndicator": "string",
+                                "distChannel": "string",
+                                "division": "string",
+                                "formattedValue": "string",
+                                "materialNumber": "string",
+                                "maxQuantity": 0,
+                                "minQuantity": 0,
+                                "priceType": "BUY",
+                                "pricingUnit": "string",
+                                "rate": "string",
+                                "rateUnit": "string",
+                                "refNumber": "string",
+                                "salesOrg": "string",
+                                "sourceSystem": "string",
+                                "validFromDate": "string",
+                                "validToDate": "string",
+                                "value": 0
+                            }
+                        },
+                        "productHierarchy": "string",
+                        "productId": "string",
+                        "productReferences": [
+                            {
+                                "description": "string",
+                                "preselected": true,
+                                "quantity": 0,
+                                "referenceType": "string"
+                            }
+                        ],
+                        "productType": "string",
+                        "productUrl": "string",
+                        "purchasable": true,
+                        "reviews": [
+                            {
+                                "alias": "string",
+                                "comment": "string",
+                                "date": "2020-10-21T07:22:41.418Z",
+                                "headline": "string",
+                                "id": "string",
+                                "principal": {
+                                    "active": true,
+                                    "approvers": [null],
+                                    "country": "string",
+                                    "currency": {
+                                        "active": true,
+                                        "defaultCurrency": true,
+                                        "isocode": "string",
+                                        "name": "string",
+                                        "symbol": "string"
+                                    },
+                                    "customerId": "string",
+                                    "deactivationDate": "2020-10-21T07:22:41.418Z",
+                                    "defaultAddress": {
+                                        "addressId": "string",
+                                        "billTo": "string",
+                                        "billToName": "string",
+                                        "billingAddress": true,
+                                        "building": "string",
+                                        "cellphone": "string",
+                                        "companyName": "string",
+                                        "country": {
+                                            "isocode": "string",
+                                            "name": "string"
+                                        },
+                                        "defaultAddress": true,
+                                        "department": "string",
+                                        "district": "string",
+                                        "email": "string",
+                                        "favouriteAddress": true,
+                                        "firstName": "string",
+                                        "floor": "string",
+                                        "formattedAddress": "string",
+                                        "id": "string",
+                                        "lastName": "string",
+                                        "line1": "string",
+                                        "line2": "string",
+                                        "nickName": "string",
+                                        "organizationName": "string",
+                                        "pendingAddress": true,
+                                        "phone": "string",
+                                        "postalCode": "string",
+                                        "region": {
+                                            "countryIso": "string",
+                                            "isocode": "string",
+                                            "isocodeShort": "string",
+                                            "name": "string"
+                                        },
+                                        "room": "string",
+                                        "selectedAddress": true,
+                                        "shipTo": "string",
+                                        "shipToName": "string",
+                                        "shippingAddress": true,
+                                        "status": "string",
+                                        "title": "string",
+                                        "titleCode": "string",
+                                        "town": "string",
+                                        "visibleInAddressBook": true
+                                    },
+                                    "displayUid": "string",
+                                    "email": "mark.rivers@rustic-hw.com",
+                                    "firstName": "string",
+                                    "language": {
+                                        "active": true,
+                                        "isocode": "string",
+                                        "name": "string",
+                                        "nativeName": "string"
+                                    },
+                                    "lastName": "string",
+                                    "ldapLogin": "string",
+                                    "name": "string",
+                                    "orgUnit": {
+                                        "active": true,
+                                        "addresses": [
+                                            {
+                                                "addressId": "string",
+                                                "billTo": "string",
+                                                "billToName": "string",
+                                                "billingAddress": true,
+                                                "building": "string",
+                                                "cellphone": "string",
+                                                "companyName": "string",
+                                                "country": {
+                                                    "isocode": "string",
+                                                    "name": "string"
+                                                },
+                                                "defaultAddress": true,
+                                                "department": "string",
+                                                "district": "string",
+                                                "email": "string",
+                                                "favouriteAddress": true,
+                                                "firstName": "string",
+                                                "floor": "string",
+                                                "formattedAddress": "string",
+                                                "id": "string",
+                                                "lastName": "string",
+                                                "line1": "string",
+                                                "line2": "string",
+                                                "nickName": "string",
+                                                "organizationName": "string",
+                                                "pendingAddress": true,
+                                                "phone": "string",
+                                                "postalCode": "string",
+                                                "region": {
+                                                    "countryIso": "string",
+                                                    "isocode": "string",
+                                                    "isocodeShort": "string",
+                                                    "name": "string"
+                                                },
+                                                "room": "string",
+                                                "selectedAddress": true,
+                                                "shipTo": "string",
+                                                "shipToName": "string",
+                                                "shippingAddress": true,
+                                                "status": "string",
+                                                "title": "string",
+                                                "titleCode": "string",
+                                                "town": "string",
+                                                "visibleInAddressBook": true
+                                            }
+                                        ],
+                                        "administrators": [null],
+                                        "approvalProcess": {
+                                            "code": "accApproval",
+                                            "name": "Escalation Approval with Merchant Check"
+                                        },
+                                        "approvers": [null],
+                                        "costCenters": [
+                                            {
+                                                "active": true,
+                                                "activeFlag": true,
+                                                "code": "Custom_Retail",
+                                                "currency": {
+                                                    "active": true,
+                                                    "defaultCurrency": true,
+                                                    "isocode": "string",
+                                                    "name": "string",
+                                                    "symbol": "string"
+                                                },
+                                                "name": "Custom Retail",
+                                                "originalCode": "Custom_Retail"
+                                            }
+                                        ],
+                                        "customers": [null],
+                                        "managers": [null],
+                                        "name": "Pronto",
+                                        "uid": "Pronto"
+                                    },
+                                    "roles": ["string"],
+                                    "selected": true,
+                                    "status": "string",
+                                    "title": "string",
+                                    "titleCode": "string",
+                                    "uid": "string",
+                                    "userType": "string"
+                                },
+                                "rating": 0
+                            }
+                        ],
+                        "ruoQualified": true,
+                        "specialHandling": true,
+                        "stock": {
+                            "isValueRounded": true,
+                            "stockLevel": 0,
+                            "stockLevelStatus": "string"
+                        },
+                        "summary": "string",
+                        "tags": ["string"],
+                        "url": "string",
+                        "variantMatrix": [
+                            {
+                                "elements": [null],
+                                "isLeaf": true,
+                                "parentVariantCategory": {
+                                    "hasImage": true,
+                                    "name": "string",
+                                    "priority": 0
+                                },
+                                "variantOption": {
+                                    "code": "string",
+                                    "priceData": {
+                                        "conditionUnit": "string",
+                                        "currencyIso": "string",
+                                        "deletionIndicator": "string",
+                                        "distChannel": "string",
+                                        "division": "string",
+                                        "formattedValue": "string",
+                                        "materialNumber": "string",
+                                        "maxQuantity": 0,
+                                        "minQuantity": 0,
+                                        "priceType": "BUY",
+                                        "pricingUnit": "string",
+                                        "rate": "string",
+                                        "rateUnit": "string",
+                                        "refNumber": "string",
+                                        "salesOrg": "string",
+                                        "sourceSystem": "string",
+                                        "validFromDate": "string",
+                                        "validToDate": "string",
+                                        "value": 0
+                                    },
+                                    "stock": {
+                                        "isValueRounded": true,
+                                        "stockLevel": 0,
+                                        "stockLevelStatus": "string"
+                                    },
+                                    "url": "string",
+                                    "variantOptionQualifiers": [
+                                        {
+                                            "image": {
+                                                "altText": "string",
+                                                "format": "string",
+                                                "galleryIndex": 0,
+                                                "imageType": "PRIMARY",
+                                                "url": "string"
+                                            },
+                                            "name": "string",
+                                            "qualifier": "string",
+                                            "value": "string"
+                                        }
+                                    ]
+                                },
+                                "variantValueCategory": {
+                                    "name": "string",
+                                    "sequence": 0,
+                                    "superCategories": [
+                                        {
+                                            "hasImage": true,
+                                            "name": "string",
+                                            "priority": 0
+                                        }
+                                    ]
+                                }
+                            }
+                        ],
+                        "variantOptions": [
+                            {
+                                "code": "string",
+                                "priceData": {
+                                    "conditionUnit": "string",
+                                    "currencyIso": "string",
+                                    "deletionIndicator": "string",
+                                    "distChannel": "string",
+                                    "division": "string",
+                                    "formattedValue": "string",
+                                    "materialNumber": "string",
+                                    "maxQuantity": 0,
+                                    "minQuantity": 0,
+                                    "priceType": "BUY",
+                                    "pricingUnit": "string",
+                                    "rate": "string",
+                                    "rateUnit": "string",
+                                    "refNumber": "string",
+                                    "salesOrg": "string",
+                                    "sourceSystem": "string",
+                                    "validFromDate": "string",
+                                    "validToDate": "string",
+                                    "value": 0
+                                },
+                                "stock": {
+                                    "isValueRounded": true,
+                                    "stockLevel": 0,
+                                    "stockLevelStatus": "string"
+                                },
+                                "url": "string",
+                                "variantOptionQualifiers": [
+                                    {
+                                        "image": {
+                                            "altText": "string",
+                                            "format": "string",
+                                            "galleryIndex": 0,
+                                            "imageType": "PRIMARY",
+                                            "url": "string"
+                                        },
+                                        "name": "string",
+                                        "qualifier": "string",
+                                        "value": "string"
+                                    }
+                                ]
+                            }
+                        ],
+                        "variantType": "string",
+                        "volumePrices": [
+                            {
+                                "conditionUnit": "string",
+                                "currencyIso": "string",
+                                "deletionIndicator": "string",
+                                "distChannel": "string",
+                                "division": "string",
+                                "formattedValue": "string",
+                                "materialNumber": "string",
+                                "maxQuantity": 0,
+                                "minQuantity": 0,
+                                "priceType": "BUY",
+                                "pricingUnit": "string",
+                                "rate": "string",
+                                "rateUnit": "string",
+                                "refNumber": "string",
+                                "salesOrg": "string",
+                                "sourceSystem": "string",
+                                "validFromDate": "string",
+                                "validToDate": "string",
+                                "value": 0
+                            }
+                        ],
+                        "volumePricesFlag": true
+                    },
+                    "quantity": 0,
+                    "quantityAllocated": 0,
+                    "quantityCancelled": 0,
+                    "quantityPending": 0,
+                    "quantityReturned": 0,
+                    "quantityShipped": 0,
+                    "quantityUnallocated": 0,
+                    "requestSameLot": true,
+                    "returnableQuantity": 5,
+                    "returnedItemsPrice": {
+                        "conditionUnit": "string",
+                        "currencyIso": "string",
+                        "deletionIndicator": "string",
+                        "distChannel": "string",
+                        "division": "string",
+                        "formattedValue": "string",
+                        "materialNumber": "string",
+                        "maxQuantity": 0,
+                        "minQuantity": 0,
+                        "priceType": "BUY",
+                        "pricingUnit": "string",
+                        "rate": "string",
+                        "rateUnit": "string",
+                        "refNumber": "string",
+                        "salesOrg": "string",
+                        "sourceSystem": "string",
+                        "validFromDate": "string",
+                        "validToDate": "string",
+                        "value": 0
+                    },
+                    "statusSummaryList": [
+                        {
+                            "numberOfIssues": 3,
+                            "status": "ERROR"
+                        }
+                    ],
+                    "surchargeApplied": true,
+                    "totalPrice": {
+                        "conditionUnit": "string",
+                        "currencyIso": "string",
+                        "deletionIndicator": "string",
+                        "distChannel": "string",
+                        "division": "string",
+                        "formattedValue": "string",
+                        "materialNumber": "string",
+                        "maxQuantity": 0,
+                        "minQuantity": 0,
+                        "priceType": "BUY",
+                        "pricingUnit": "string",
+                        "rate": "string",
+                        "rateUnit": "string",
+                        "refNumber": "string",
+                        "salesOrg": "string",
+                        "sourceSystem": "string",
+                        "validFromDate": "string",
+                        "validToDate": "string",
+                        "value": 0
+                    },
+                    "updateable": true,
+                    "url": "string"
+                }
+            ],
+            "quantity": 0,
+            "totalPriceWithTax": {
+                "conditionUnit": "string",
+                "currencyIso": "string",
+                "deletionIndicator": "string",
+                "distChannel": "string",
+                "division": "string",
+                "formattedValue": "string",
+                "materialNumber": "string",
+                "maxQuantity": 0,
+                "minQuantity": 0,
+                "priceType": "BUY",
+                "pricingUnit": "string",
+                "rate": "string",
+                "rateUnit": "string",
+                "refNumber": "string",
+                "salesOrg": "string",
+                "sourceSystem": "string",
+                "validFromDate": "string",
+                "validToDate": "string",
+                "value": 0
+            }
+        }
+    ],
+    "distributorInfo": {
+        "accountNumber": "string",
+        "email": "string",
+        "name": "string",
+        "phone": "string",
+        "soldtoAddress": {
+            "addressId": "string",
+            "billTo": "string",
+            "billToName": "string",
+            "billingAddress": true,
+            "building": "string",
+            "cellphone": "string",
+            "companyName": "string",
+            "country": {
+                "isocode": "string",
+                "name": "string"
+            },
+            "defaultAddress": true,
+            "department": "string",
+            "district": "string",
+            "email": "string",
+            "favouriteAddress": true,
+            "firstName": "string",
+            "floor": "string",
+            "formattedAddress": "string",
+            "id": "string",
+            "lastName": "string",
+            "line1": "string",
+            "line2": "string",
+            "nickName": "string",
+            "organizationName": "string",
+            "pendingAddress": true,
+            "phone": "string",
+            "postalCode": "string",
+            "region": {
+                "countryIso": "string",
+                "isocode": "string",
+                "isocodeShort": "string",
+                "name": "string"
+            },
+            "room": "string",
+            "selectedAddress": true,
+            "shipTo": "string",
+            "shipToName": "string",
+            "shippingAddress": true,
+            "status": "string",
+            "title": "string",
+            "titleCode": "string",
+            "town": "string",
+            "visibleInAddressBook": true
+        }
+    },
+    "entries": [
+        {
+            "basePrice": {
+                "conditionUnit": "string",
+                "currencyIso": "string",
+                "deletionIndicator": "string",
+                "distChannel": "string",
+                "division": "string",
+                "formattedValue": "string",
+                "materialNumber": "string",
+                "maxQuantity": 0,
+                "minQuantity": 0,
+                "priceType": "BUY",
+                "pricingUnit": "string",
+                "rate": "string",
+                "rateUnit": "string",
+                "refNumber": "string",
+                "salesOrg": "string",
+                "sourceSystem": "string",
+                "validFromDate": "string",
+                "validToDate": "string",
+                "value": 0
+            },
+            "cancellableQuantity": 5,
+            "cancelledItemsPrice": {
+                "conditionUnit": "string",
+                "currencyIso": "string",
+                "deletionIndicator": "string",
+                "distChannel": "string",
+                "division": "string",
+                "formattedValue": "string",
+                "materialNumber": "string",
+                "maxQuantity": 0,
+                "minQuantity": 0,
+                "priceType": "BUY",
+                "pricingUnit": "string",
+                "rate": "string",
+                "rateUnit": "string",
+                "refNumber": "string",
+                "salesOrg": "string",
+                "sourceSystem": "string",
+                "validFromDate": "string",
+                "validToDate": "string",
+                "value": 0
+            },
+            "configurationInfos": [
+                {
+                    "configurationLabel": "string",
+                    "configurationValue": "string",
+                    "configuratorType": "string",
+                    "status": "string"
+                }
+            ],
+            "contractPrice": {
+                "conditionUnit": "string",
+                "currencyIso": "string",
+                "deletionIndicator": "string",
+                "distChannel": "string",
+                "division": "string",
+                "formattedValue": "string",
+                "materialNumber": "string",
+                "maxQuantity": 0,
+                "minQuantity": 0,
+                "priceType": "BUY",
+                "pricingUnit": "string",
+                "rate": "string",
+                "rateUnit": "string",
+                "refNumber": "string",
+                "salesOrg": "string",
+                "sourceSystem": "string",
+                "validFromDate": "string",
+                "validToDate": "string",
+                "value": 0
+            },
+            "deliveryDetails": [
+                {
+                    "deliveryQuantity": 0,
+                    "estimatedDeliveryDate": "string"
+                }
+            ],
+            "deliveryMode": {
+                "code": "string",
+                "deliveryCost": {
+                    "conditionUnit": "string",
+                    "currencyIso": "string",
+                    "deletionIndicator": "string",
+                    "distChannel": "string",
+                    "division": "string",
+                    "formattedValue": "string",
+                    "materialNumber": "string",
+                    "maxQuantity": 0,
+                    "minQuantity": 0,
+                    "priceType": "BUY",
+                    "pricingUnit": "string",
+                    "rate": "string",
+                    "rateUnit": "string",
+                    "refNumber": "string",
+                    "salesOrg": "string",
+                    "sourceSystem": "string",
+                    "validFromDate": "string",
+                    "validToDate": "string",
+                    "value": 0
+                },
+                "description": "string",
+                "name": "string"
+            },
+            "deliveryPointOfService": {
+                "address": {
+                    "addressId": "string",
+                    "billTo": "string",
+                    "billToName": "string",
+                    "billingAddress": true,
+                    "building": "string",
+                    "cellphone": "string",
+                    "companyName": "string",
+                    "country": {
+                        "isocode": "string",
+                        "name": "string"
+                    },
+                    "defaultAddress": true,
+                    "department": "string",
+                    "district": "string",
+                    "email": "string",
+                    "favouriteAddress": true,
+                    "firstName": "string",
+                    "floor": "string",
+                    "formattedAddress": "string",
+                    "id": "string",
+                    "lastName": "string",
+                    "line1": "string",
+                    "line2": "string",
+                    "nickName": "string",
+                    "organizationName": "string",
+                    "pendingAddress": true,
+                    "phone": "string",
+                    "postalCode": "string",
+                    "region": {
+                        "countryIso": "string",
+                        "isocode": "string",
+                        "isocodeShort": "string",
+                        "name": "string"
+                    },
+                    "room": "string",
+                    "selectedAddress": true,
+                    "shipTo": "string",
+                    "shipToName": "string",
+                    "shippingAddress": true,
+                    "status": "string",
+                    "title": "string",
+                    "titleCode": "string",
+                    "town": "string",
+                    "visibleInAddressBook": true
+                },
+                "description": "string",
+                "displayName": "string",
+                "distanceKm": 0,
+                "features": {
+                    "additionalProp1": "string",
+                    "additionalProp2": "string",
+                    "additionalProp3": "string"
+                },
+                "formattedDistance": "string",
+                "geoPoint": {
+                    "latitude": 0,
+                    "longitude": 0
+                },
+                "mapIcon": {
+                    "altText": "string",
+                    "format": "string",
+                    "galleryIndex": 0,
+                    "imageType": "PRIMARY",
+                    "url": "string"
+                },
+                "name": "string",
+                "openingHours": {
+                    "code": "string",
+                    "name": "string",
+                    "specialDayOpeningList": [
+                        {
+                            "closed": true,
+                            "closingTime": {
+                                "formattedHour": "string",
+                                "hour": 0,
+                                "minute": 0
+                            },
+                            "comment": "string",
+                            "date": "2020-10-21T07:22:41.419Z",
+                            "formattedDate": "string",
+                            "name": "string",
+                            "openingTime": {
+                                "formattedHour": "string",
+                                "hour": 0,
+                                "minute": 0
+                            }
+                        }
+                    ],
+                    "weekDayOpeningList": [
+                        {
+                            "closed": true,
+                            "closingTime": {
+                                "formattedHour": "string",
+                                "hour": 0,
+                                "minute": 0
+                            },
+                            "openingTime": {
+                                "formattedHour": "string",
+                                "hour": 0,
+                                "minute": 0
+                            },
+                            "weekDay": "string"
+                        }
+                    ]
+                },
+                "storeContent": "string",
+                "storeImages": [
+                    {
+                        "altText": "string",
+                        "format": "string",
+                        "galleryIndex": 0,
+                        "imageType": "PRIMARY",
+                        "url": "string"
+                    }
+                ],
+                "url": "string",
+                "warehouseCodes": ["string"]
+            },
+            "entryNumber": 0,
+            "isContractualPrice": true,
+            "isGrantEligible": true,
+            "listPrice": {
+                "conditionUnit": "string",
+                "currencyIso": "string",
+                "deletionIndicator": "string",
+                "distChannel": "string",
+                "division": "string",
+                "formattedValue": "string",
+                "materialNumber": "string",
+                "maxQuantity": 0,
+                "minQuantity": 0,
+                "priceType": "BUY",
+                "pricingUnit": "string",
+                "rate": "string",
+                "rateUnit": "string",
+                "refNumber": "string",
+                "salesOrg": "string",
+                "sourceSystem": "string",
+                "validFromDate": "string",
+                "validToDate": "string",
+                "value": 0
+            },
+            "product": {
+                "availableForPickup": true,
+                "averageRating": 0,
+                "baseOptions": [
+                    {
+                        "options": [
+                            {
+                                "code": "string",
+                                "priceData": {
+                                    "conditionUnit": "string",
+                                    "currencyIso": "string",
+                                    "deletionIndicator": "string",
+                                    "distChannel": "string",
+                                    "division": "string",
+                                    "formattedValue": "string",
+                                    "materialNumber": "string",
+                                    "maxQuantity": 0,
+                                    "minQuantity": 0,
+                                    "priceType": "BUY",
+                                    "pricingUnit": "string",
+                                    "rate": "string",
+                                    "rateUnit": "string",
+                                    "refNumber": "string",
+                                    "salesOrg": "string",
+                                    "sourceSystem": "string",
+                                    "validFromDate": "string",
+                                    "validToDate": "string",
+                                    "value": 0
+                                },
+                                "stock": {
+                                    "isValueRounded": true,
+                                    "stockLevel": 0,
+                                    "stockLevelStatus": "string"
+                                },
+                                "url": "string",
+                                "variantOptionQualifiers": [
+                                    {
+                                        "image": {
+                                            "altText": "string",
+                                            "format": "string",
+                                            "galleryIndex": 0,
+                                            "imageType": "PRIMARY",
+                                            "url": "string"
+                                        },
+                                        "name": "string",
+                                        "qualifier": "string",
+                                        "value": "string"
+                                    }
+                                ]
+                            }
+                        ],
+                        "selected": {
+                            "code": "string",
+                            "priceData": {
+                                "conditionUnit": "string",
+                                "currencyIso": "string",
+                                "deletionIndicator": "string",
+                                "distChannel": "string",
+                                "division": "string",
+                                "formattedValue": "string",
+                                "materialNumber": "string",
+                                "maxQuantity": 0,
+                                "minQuantity": 0,
+                                "priceType": "BUY",
+                                "pricingUnit": "string",
+                                "rate": "string",
+                                "rateUnit": "string",
+                                "refNumber": "string",
+                                "salesOrg": "string",
+                                "sourceSystem": "string",
+                                "validFromDate": "string",
+                                "validToDate": "string",
+                                "value": 0
+                            },
+                            "stock": {
+                                "isValueRounded": true,
+                                "stockLevel": 0,
+                                "stockLevelStatus": "string"
+                            },
+                            "url": "string",
+                            "variantOptionQualifiers": [
+                                {
+                                    "image": {
+                                        "altText": "string",
+                                        "format": "string",
+                                        "galleryIndex": 0,
+                                        "imageType": "PRIMARY",
+                                        "url": "string"
+                                    },
+                                    "name": "string",
+                                    "qualifier": "string",
+                                    "value": "string"
+                                }
+                            ]
+                        },
+                        "variantType": "string"
+                    }
+                ],
+                "baseProduct": "string",
+                "batchManaged": true,
+                "brand": "string",
+                "categories": [
+                    {
+                        "code": "string",
+                        "image": {
+                            "altText": "string",
+                            "format": "string",
+                            "galleryIndex": 0,
+                            "imageType": "PRIMARY",
+                            "url": "string"
+                        },
+                        "name": "string",
+                        "url": "string"
+                    }
+                ],
+                "classifications": [
+                    {
+                        "code": "string",
+                        "features": [
+                            {
+                                "code": "string",
+                                "comparable": true,
+                                "description": "string",
+                                "featureUnit": {
+                                    "name": "string",
+                                    "symbol": "string",
+                                    "unitType": "string"
+                                },
+                                "featureValues": [
+                                    {
+                                        "value": "string"
+                                    }
+                                ],
+                                "name": "string",
+                                "range": true,
+                                "type": "string"
+                            }
+                        ],
+                        "name": "string"
+                    }
+                ],
+                "code": "string",
+                "configurable": true,
+                "configuratorType": "string",
+                "description": "string",
+                "displayable": true,
+                "firstVariantCode": "string",
+                "firstVariantImage": "string",
+                "futureStocks": [
+                    {
+                        "date": "2020-10-21T07:22:41.421Z",
+                        "formattedDate": "string",
+                        "stock": {
+                            "isValueRounded": true,
+                            "stockLevel": 0,
+                            "stockLevelStatus": "string"
+                        }
+                    }
+                ],
+                "images": [
+                    {
+                        "altText": "string",
+                        "format": "string",
+                        "galleryIndex": 0,
+                        "imageType": "PRIMARY",
+                        "url": "string"
+                    }
+                ],
+                "manufacturer": "string",
+                "maxPurchasableQuantity": 0,
+                "multidimensional": true,
+                "name": "string",
+                "numberOfReviews": 0,
+                "pictureUrl": "string",
+                "potentialPromotions": [
+                    {
+                        "applicableCategories": ["string"],
+                        "applicableProducts": ["string"],
+                        "code": "string",
+                        "couldFireMessages": ["string"],
+                        "description": "string",
+                        "enabled": true,
+                        "endDate": "2020-10-21T07:22:41.421Z",
+                        "excludedCategories": ["string"],
+                        "excludedProducts": ["string"],
+                        "firedMessages": ["string"],
+                        "priority": 0,
+                        "productBanner": {
+                            "altText": "string",
+                            "format": "string",
+                            "galleryIndex": 0,
+                            "imageType": "PRIMARY",
+                            "url": "string"
+                        },
+                        "promotionGroup": "string",
+                        "promotionType": "string",
+                        "restrictions": [
+                            {
+                                "description": "string",
+                                "restrictionType": "string"
+                            }
+                        ],
+                        "startDate": "2020-10-21T07:22:41.421Z",
+                        "title": "string"
+                    }
+                ],
+                "price": {
+                    "conditionUnit": "string",
+                    "currencyIso": "string",
+                    "deletionIndicator": "string",
+                    "distChannel": "string",
+                    "division": "string",
+                    "formattedValue": "string",
+                    "materialNumber": "string",
+                    "maxQuantity": 0,
+                    "minQuantity": 0,
+                    "priceType": "BUY",
+                    "pricingUnit": "string",
+                    "rate": "string",
+                    "rateUnit": "string",
+                    "refNumber": "string",
+                    "salesOrg": "string",
+                    "sourceSystem": "string",
+                    "validFromDate": "string",
+                    "validToDate": "string",
+                    "value": 0
+                },
+                "priceRange": {
+                    "maxPrice": {
+                        "conditionUnit": "string",
+                        "currencyIso": "string",
+                        "deletionIndicator": "string",
+                        "distChannel": "string",
+                        "division": "string",
+                        "formattedValue": "string",
+                        "materialNumber": "string",
+                        "maxQuantity": 0,
+                        "minQuantity": 0,
+                        "priceType": "BUY",
+                        "pricingUnit": "string",
+                        "rate": "string",
+                        "rateUnit": "string",
+                        "refNumber": "string",
+                        "salesOrg": "string",
+                        "sourceSystem": "string",
+                        "validFromDate": "string",
+                        "validToDate": "string",
+                        "value": 0
+                    },
+                    "minPrice": {
+                        "conditionUnit": "string",
+                        "currencyIso": "string",
+                        "deletionIndicator": "string",
+                        "distChannel": "string",
+                        "division": "string",
+                        "formattedValue": "string",
+                        "materialNumber": "string",
+                        "maxQuantity": 0,
+                        "minQuantity": 0,
+                        "priceType": "BUY",
+                        "pricingUnit": "string",
+                        "rate": "string",
+                        "rateUnit": "string",
+                        "refNumber": "string",
+                        "salesOrg": "string",
+                        "sourceSystem": "string",
+                        "validFromDate": "string",
+                        "validToDate": "string",
+                        "value": 0
+                    }
+                },
+                "productHierarchy": "string",
+                "productId": "string",
+                "productReferences": [
+                    {
+                        "description": "string",
+                        "preselected": true,
+                        "quantity": 0,
+                        "referenceType": "string"
+                    }
+                ],
+                "productType": "string",
+                "productUrl": "string",
+                "purchasable": true,
+                "reviews": [
+                    {
+                        "alias": "string",
+                        "comment": "string",
+                        "date": "2020-10-21T07:22:41.421Z",
+                        "headline": "string",
+                        "id": "string",
+                        "principal": {
+                            "active": true,
+                            "approvers": [null],
+                            "country": "string",
+                            "currency": {
+                                "active": true,
+                                "defaultCurrency": true,
+                                "isocode": "string",
+                                "name": "string",
+                                "symbol": "string"
+                            },
+                            "customerId": "string",
+                            "deactivationDate": "2020-10-21T07:22:41.421Z",
+                            "defaultAddress": {
+                                "addressId": "string",
+                                "billTo": "string",
+                                "billToName": "string",
+                                "billingAddress": true,
+                                "building": "string",
+                                "cellphone": "string",
+                                "companyName": "string",
+                                "country": {
+                                    "isocode": "string",
+                                    "name": "string"
+                                },
+                                "defaultAddress": true,
+                                "department": "string",
+                                "district": "string",
+                                "email": "string",
+                                "favouriteAddress": true,
+                                "firstName": "string",
+                                "floor": "string",
+                                "formattedAddress": "string",
+                                "id": "string",
+                                "lastName": "string",
+                                "line1": "string",
+                                "line2": "string",
+                                "nickName": "string",
+                                "organizationName": "string",
+                                "pendingAddress": true,
+                                "phone": "string",
+                                "postalCode": "string",
+                                "region": {
+                                    "countryIso": "string",
+                                    "isocode": "string",
+                                    "isocodeShort": "string",
+                                    "name": "string"
+                                },
+                                "room": "string",
+                                "selectedAddress": true,
+                                "shipTo": "string",
+                                "shipToName": "string",
+                                "shippingAddress": true,
+                                "status": "string",
+                                "title": "string",
+                                "titleCode": "string",
+                                "town": "string",
+                                "visibleInAddressBook": true
+                            },
+                            "displayUid": "string",
+                            "email": "mark.rivers@rustic-hw.com",
+                            "firstName": "string",
+                            "language": {
+                                "active": true,
+                                "isocode": "string",
+                                "name": "string",
+                                "nativeName": "string"
+                            },
+                            "lastName": "string",
+                            "ldapLogin": "string",
+                            "name": "string",
+                            "orgUnit": {
+                                "active": true,
+                                "addresses": [
+                                    {
+                                        "addressId": "string",
+                                        "billTo": "string",
+                                        "billToName": "string",
+                                        "billingAddress": true,
+                                        "building": "string",
+                                        "cellphone": "string",
+                                        "companyName": "string",
+                                        "country": {
+                                            "isocode": "string",
+                                            "name": "string"
+                                        },
+                                        "defaultAddress": true,
+                                        "department": "string",
+                                        "district": "string",
+                                        "email": "string",
+                                        "favouriteAddress": true,
+                                        "firstName": "string",
+                                        "floor": "string",
+                                        "formattedAddress": "string",
+                                        "id": "string",
+                                        "lastName": "string",
+                                        "line1": "string",
+                                        "line2": "string",
+                                        "nickName": "string",
+                                        "organizationName": "string",
+                                        "pendingAddress": true,
+                                        "phone": "string",
+                                        "postalCode": "string",
+                                        "region": {
+                                            "countryIso": "string",
+                                            "isocode": "string",
+                                            "isocodeShort": "string",
+                                            "name": "string"
+                                        },
+                                        "room": "string",
+                                        "selectedAddress": true,
+                                        "shipTo": "string",
+                                        "shipToName": "string",
+                                        "shippingAddress": true,
+                                        "status": "string",
+                                        "title": "string",
+                                        "titleCode": "string",
+                                        "town": "string",
+                                        "visibleInAddressBook": true
+                                    }
+                                ],
+                                "administrators": [null],
+                                "approvalProcess": {
+                                    "code": "accApproval",
+                                    "name": "Escalation Approval with Merchant Check"
+                                },
+                                "approvers": [null],
+                                "costCenters": [
+                                    {
+                                        "active": true,
+                                        "activeFlag": true,
+                                        "code": "Custom_Retail",
+                                        "currency": {
+                                            "active": true,
+                                            "defaultCurrency": true,
+                                            "isocode": "string",
+                                            "name": "string",
+                                            "symbol": "string"
+                                        },
+                                        "name": "Custom Retail",
+                                        "originalCode": "Custom_Retail"
+                                    }
+                                ],
+                                "customers": [null],
+                                "managers": [null],
+                                "name": "Pronto",
+                                "uid": "Pronto"
+                            },
+                            "roles": ["string"],
+                            "selected": true,
+                            "status": "string",
+                            "title": "string",
+                            "titleCode": "string",
+                            "uid": "string",
+                            "userType": "string"
+                        },
+                        "rating": 0
+                    }
+                ],
+                "ruoQualified": true,
+                "specialHandling": true,
+                "stock": {
+                    "isValueRounded": true,
+                    "stockLevel": 0,
+                    "stockLevelStatus": "string"
+                },
+                "summary": "string",
+                "tags": ["string"],
+                "url": "string",
+                "variantMatrix": [
+                    {
+                        "elements": [null],
+                        "isLeaf": true,
+                        "parentVariantCategory": {
+                            "hasImage": true,
+                            "name": "string",
+                            "priority": 0
+                        },
+                        "variantOption": {
+                            "code": "string",
+                            "priceData": {
+                                "conditionUnit": "string",
+                                "currencyIso": "string",
+                                "deletionIndicator": "string",
+                                "distChannel": "string",
+                                "division": "string",
+                                "formattedValue": "string",
+                                "materialNumber": "string",
+                                "maxQuantity": 0,
+                                "minQuantity": 0,
+                                "priceType": "BUY",
+                                "pricingUnit": "string",
+                                "rate": "string",
+                                "rateUnit": "string",
+                                "refNumber": "string",
+                                "salesOrg": "string",
+                                "sourceSystem": "string",
+                                "validFromDate": "string",
+                                "validToDate": "string",
+                                "value": 0
+                            },
+                            "stock": {
+                                "isValueRounded": true,
+                                "stockLevel": 0,
+                                "stockLevelStatus": "string"
+                            },
+                            "url": "string",
+                            "variantOptionQualifiers": [
+                                {
+                                    "image": {
+                                        "altText": "string",
+                                        "format": "string",
+                                        "galleryIndex": 0,
+                                        "imageType": "PRIMARY",
+                                        "url": "string"
+                                    },
+                                    "name": "string",
+                                    "qualifier": "string",
+                                    "value": "string"
+                                }
+                            ]
+                        },
+                        "variantValueCategory": {
+                            "name": "string",
+                            "sequence": 0,
+                            "superCategories": [
+                                {
+                                    "hasImage": true,
+                                    "name": "string",
+                                    "priority": 0
+                                }
+                            ]
+                        }
+                    }
+                ],
+                "variantOptions": [
+                    {
+                        "code": "string",
+                        "priceData": {
+                            "conditionUnit": "string",
+                            "currencyIso": "string",
+                            "deletionIndicator": "string",
+                            "distChannel": "string",
+                            "division": "string",
+                            "formattedValue": "string",
+                            "materialNumber": "string",
+                            "maxQuantity": 0,
+                            "minQuantity": 0,
+                            "priceType": "BUY",
+                            "pricingUnit": "string",
+                            "rate": "string",
+                            "rateUnit": "string",
+                            "refNumber": "string",
+                            "salesOrg": "string",
+                            "sourceSystem": "string",
+                            "validFromDate": "string",
+                            "validToDate": "string",
+                            "value": 0
+                        },
+                        "stock": {
+                            "isValueRounded": true,
+                            "stockLevel": 0,
+                            "stockLevelStatus": "string"
+                        },
+                        "url": "string",
+                        "variantOptionQualifiers": [
+                            {
+                                "image": {
+                                    "altText": "string",
+                                    "format": "string",
+                                    "galleryIndex": 0,
+                                    "imageType": "PRIMARY",
+                                    "url": "string"
+                                },
+                                "name": "string",
+                                "qualifier": "string",
+                                "value": "string"
+                            }
+                        ]
+                    }
+                ],
+                "variantType": "string",
+                "volumePrices": [
+                    {
+                        "conditionUnit": "string",
+                        "currencyIso": "string",
+                        "deletionIndicator": "string",
+                        "distChannel": "string",
+                        "division": "string",
+                        "formattedValue": "string",
+                        "materialNumber": "string",
+                        "maxQuantity": 0,
+                        "minQuantity": 0,
+                        "priceType": "BUY",
+                        "pricingUnit": "string",
+                        "rate": "string",
+                        "rateUnit": "string",
+                        "refNumber": "string",
+                        "salesOrg": "string",
+                        "sourceSystem": "string",
+                        "validFromDate": "string",
+                        "validToDate": "string",
+                        "value": 0
+                    }
+                ],
+                "volumePricesFlag": true
+            },
+            "quantity": 0,
+            "quantityAllocated": 0,
+            "quantityCancelled": 0,
+            "quantityPending": 0,
+            "quantityReturned": 0,
+            "quantityShipped": 0,
+            "quantityUnallocated": 0,
+            "requestSameLot": true,
+            "returnableQuantity": 5,
+            "returnedItemsPrice": {
+                "conditionUnit": "string",
+                "currencyIso": "string",
+                "deletionIndicator": "string",
+                "distChannel": "string",
+                "division": "string",
+                "formattedValue": "string",
+                "materialNumber": "string",
+                "maxQuantity": 0,
+                "minQuantity": 0,
+                "priceType": "BUY",
+                "pricingUnit": "string",
+                "rate": "string",
+                "rateUnit": "string",
+                "refNumber": "string",
+                "salesOrg": "string",
+                "sourceSystem": "string",
+                "validFromDate": "string",
+                "validToDate": "string",
+                "value": 0
+            },
+            "statusSummaryList": [
+                {
+                    "numberOfIssues": 3,
+                    "status": "ERROR"
+                }
+            ],
+            "surchargeApplied": true,
+            "totalPrice": {
+                "conditionUnit": "string",
+                "currencyIso": "string",
+                "deletionIndicator": "string",
+                "distChannel": "string",
+                "division": "string",
+                "formattedValue": "string",
+                "materialNumber": "string",
+                "maxQuantity": 0,
+                "minQuantity": 0,
+                "priceType": "BUY",
+                "pricingUnit": "string",
+                "rate": "string",
+                "rateUnit": "string",
+                "refNumber": "string",
+                "salesOrg": "string",
+                "sourceSystem": "string",
+                "validFromDate": "string",
+                "validToDate": "string",
+                "value": 0
+            },
+            "updateable": true,
+            "url": "string"
+        }
+    ],
+    "guid": "string",
+    "net": true,
+    "orderDiscounts": {
+        "conditionUnit": "string",
+        "currencyIso": "string",
+        "deletionIndicator": "string",
+        "distChannel": "string",
+        "division": "string",
+        "formattedValue": "string",
+        "materialNumber": "string",
+        "maxQuantity": 0,
+        "minQuantity": 0,
+        "priceType": "BUY",
+        "pricingUnit": "string",
+        "rate": "string",
+        "rateUnit": "string",
+        "refNumber": "string",
+        "salesOrg": "string",
+        "sourceSystem": "string",
+        "validFromDate": "string",
+        "validToDate": "string",
+        "value": 0
+    },
+    "orderNotificationEmails": "string",
+    "payerAddress": {
+        "addressId": "string",
+        "billTo": "string",
+        "billToName": "string",
+        "billingAddress": true,
+        "building": "string",
+        "cellphone": "string",
+        "companyName": "string",
+        "country": {
+            "isocode": "string",
+            "name": "string"
+        },
+        "defaultAddress": true,
+        "department": "string",
+        "district": "string",
+        "email": "string",
+        "favouriteAddress": true,
+        "firstName": "string",
+        "floor": "string",
+        "formattedAddress": "string",
+        "id": "string",
+        "lastName": "string",
+        "line1": "string",
+        "line2": "string",
+        "nickName": "string",
+        "organizationName": "string",
+        "pendingAddress": true,
+        "phone": "string",
+        "postalCode": "string",
+        "region": {
+            "countryIso": "string",
+            "isocode": "string",
+            "isocodeShort": "string",
+            "name": "string"
+        },
+        "room": "string",
+        "selectedAddress": true,
+        "shipTo": "string",
+        "shipToName": "string",
+        "shippingAddress": true,
+        "status": "string",
+        "title": "string",
+        "titleCode": "string",
+        "town": "string",
+        "visibleInAddressBook": true
+    },
+    "paymentInfo": {
+        "accountHolderName": "string",
+        "billingAddress": {
+            "addressId": "string",
+            "billTo": "string",
+            "billToName": "string",
+            "billingAddress": true,
+            "building": "string",
+            "cellphone": "string",
+            "companyName": "string",
+            "country": {
+                "isocode": "string",
+                "name": "string"
+            },
+            "defaultAddress": true,
+            "department": "string",
+            "district": "string",
+            "email": "string",
+            "favouriteAddress": true,
+            "firstName": "string",
+            "floor": "string",
+            "formattedAddress": "string",
+            "id": "string",
+            "lastName": "string",
+            "line1": "string",
+            "line2": "string",
+            "nickName": "string",
+            "organizationName": "string",
+            "pendingAddress": true,
+            "phone": "string",
+            "postalCode": "string",
+            "region": {
+                "countryIso": "string",
+                "isocode": "string",
+                "isocodeShort": "string",
+                "name": "string"
+            },
+            "room": "string",
+            "selectedAddress": true,
+            "shipTo": "string",
+            "shipToName": "string",
+            "shippingAddress": true,
+            "status": "string",
+            "title": "string",
+            "titleCode": "string",
+            "town": "string",
+            "visibleInAddressBook": true
+        },
+        "cardExpired": true,
+        "cardExpiring": true,
+        "cardNumber": "string",
+        "cardType": {
+            "code": "string",
+            "name": "string"
+        },
+        "creationDate": "string",
+        "defaultPayment": true,
+        "expiryMonth": "string",
+        "expiryYear": "string",
+        "id": "string",
+        "issueNumber": "string",
+        "nickName": "string",
+        "prepayCustomer": true,
+        "refPONumber": "string",
+        "saved": true,
+        "selectedCard": true,
+        "startMonth": "string",
+        "startYear": "string",
+        "subscriptionId": "string"
+    },
+    "pickupItemsQuantity": 0,
+    "pickupOrderGroups": [
+        {
+            "deliveryPointOfService": {
+                "address": {
+                    "addressId": "string",
+                    "billTo": "string",
+                    "billToName": "string",
+                    "billingAddress": true,
+                    "building": "string",
+                    "cellphone": "string",
+                    "companyName": "string",
+                    "country": {
+                        "isocode": "string",
+                        "name": "string"
+                    },
+                    "defaultAddress": true,
+                    "department": "string",
+                    "district": "string",
+                    "email": "string",
+                    "favouriteAddress": true,
+                    "firstName": "string",
+                    "floor": "string",
+                    "formattedAddress": "string",
+                    "id": "string",
+                    "lastName": "string",
+                    "line1": "string",
+                    "line2": "string",
+                    "nickName": "string",
+                    "organizationName": "string",
+                    "pendingAddress": true,
+                    "phone": "string",
+                    "postalCode": "string",
+                    "region": {
+                        "countryIso": "string",
+                        "isocode": "string",
+                        "isocodeShort": "string",
+                        "name": "string"
+                    },
+                    "room": "string",
+                    "selectedAddress": true,
+                    "shipTo": "string",
+                    "shipToName": "string",
+                    "shippingAddress": true,
+                    "status": "string",
+                    "title": "string",
+                    "titleCode": "string",
+                    "town": "string",
+                    "visibleInAddressBook": true
+                },
+                "description": "string",
+                "displayName": "string",
+                "distanceKm": 0,
+                "features": {
+                    "additionalProp1": "string",
+                    "additionalProp2": "string",
+                    "additionalProp3": "string"
+                },
+                "formattedDistance": "string",
+                "geoPoint": {
+                    "latitude": 0,
+                    "longitude": 0
+                },
+                "mapIcon": {
+                    "altText": "string",
+                    "format": "string",
+                    "galleryIndex": 0,
+                    "imageType": "PRIMARY",
+                    "url": "string"
+                },
+                "name": "string",
+                "openingHours": {
+                    "code": "string",
+                    "name": "string",
+                    "specialDayOpeningList": [
+                        {
+                            "closed": true,
+                            "closingTime": {
+                                "formattedHour": "string",
+                                "hour": 0,
+                                "minute": 0
+                            },
+                            "comment": "string",
+                            "date": "2020-10-21T07:22:41.422Z",
+                            "formattedDate": "string",
+                            "name": "string",
+                            "openingTime": {
+                                "formattedHour": "string",
+                                "hour": 0,
+                                "minute": 0
+                            }
+                        }
+                    ],
+                    "weekDayOpeningList": [
+                        {
+                            "closed": true,
+                            "closingTime": {
+                                "formattedHour": "string",
+                                "hour": 0,
+                                "minute": 0
+                            },
+                            "openingTime": {
+                                "formattedHour": "string",
+                                "hour": 0,
+                                "minute": 0
+                            },
+                            "weekDay": "string"
+                        }
+                    ]
+                },
+                "storeContent": "string",
+                "storeImages": [
+                    {
+                        "altText": "string",
+                        "format": "string",
+                        "galleryIndex": 0,
+                        "imageType": "PRIMARY",
+                        "url": "string"
+                    }
+                ],
+                "url": "string",
+                "warehouseCodes": ["string"]
+            },
+            "distance": 0,
+            "entries": [
+                {
+                    "basePrice": {
+                        "conditionUnit": "string",
+                        "currencyIso": "string",
+                        "deletionIndicator": "string",
+                        "distChannel": "string",
+                        "division": "string",
+                        "formattedValue": "string",
+                        "materialNumber": "string",
+                        "maxQuantity": 0,
+                        "minQuantity": 0,
+                        "priceType": "BUY",
+                        "pricingUnit": "string",
+                        "rate": "string",
+                        "rateUnit": "string",
+                        "refNumber": "string",
+                        "salesOrg": "string",
+                        "sourceSystem": "string",
+                        "validFromDate": "string",
+                        "validToDate": "string",
+                        "value": 0
+                    },
+                    "cancellableQuantity": 5,
+                    "cancelledItemsPrice": {
+                        "conditionUnit": "string",
+                        "currencyIso": "string",
+                        "deletionIndicator": "string",
+                        "distChannel": "string",
+                        "division": "string",
+                        "formattedValue": "string",
+                        "materialNumber": "string",
+                        "maxQuantity": 0,
+                        "minQuantity": 0,
+                        "priceType": "BUY",
+                        "pricingUnit": "string",
+                        "rate": "string",
+                        "rateUnit": "string",
+                        "refNumber": "string",
+                        "salesOrg": "string",
+                        "sourceSystem": "string",
+                        "validFromDate": "string",
+                        "validToDate": "string",
+                        "value": 0
+                    },
+                    "configurationInfos": [
+                        {
+                            "configurationLabel": "string",
+                            "configurationValue": "string",
+                            "configuratorType": "string",
+                            "status": "string"
+                        }
+                    ],
+                    "contractPrice": {
+                        "conditionUnit": "string",
+                        "currencyIso": "string",
+                        "deletionIndicator": "string",
+                        "distChannel": "string",
+                        "division": "string",
+                        "formattedValue": "string",
+                        "materialNumber": "string",
+                        "maxQuantity": 0,
+                        "minQuantity": 0,
+                        "priceType": "BUY",
+                        "pricingUnit": "string",
+                        "rate": "string",
+                        "rateUnit": "string",
+                        "refNumber": "string",
+                        "salesOrg": "string",
+                        "sourceSystem": "string",
+                        "validFromDate": "string",
+                        "validToDate": "string",
+                        "value": 0
+                    },
+                    "deliveryDetails": [
+                        {
+                            "deliveryQuantity": 0,
+                            "estimatedDeliveryDate": "string"
+                        }
+                    ],
+                    "deliveryMode": {
+                        "code": "string",
+                        "deliveryCost": {
+                            "conditionUnit": "string",
+                            "currencyIso": "string",
+                            "deletionIndicator": "string",
+                            "distChannel": "string",
+                            "division": "string",
+                            "formattedValue": "string",
+                            "materialNumber": "string",
+                            "maxQuantity": 0,
+                            "minQuantity": 0,
+                            "priceType": "BUY",
+                            "pricingUnit": "string",
+                            "rate": "string",
+                            "rateUnit": "string",
+                            "refNumber": "string",
+                            "salesOrg": "string",
+                            "sourceSystem": "string",
+                            "validFromDate": "string",
+                            "validToDate": "string",
+                            "value": 0
+                        },
+                        "description": "string",
+                        "name": "string"
+                    },
+                    "deliveryPointOfService": {
+                        "address": {
+                            "addressId": "string",
+                            "billTo": "string",
+                            "billToName": "string",
+                            "billingAddress": true,
+                            "building": "string",
+                            "cellphone": "string",
+                            "companyName": "string",
+                            "country": {
+                                "isocode": "string",
+                                "name": "string"
+                            },
+                            "defaultAddress": true,
+                            "department": "string",
+                            "district": "string",
+                            "email": "string",
+                            "favouriteAddress": true,
+                            "firstName": "string",
+                            "floor": "string",
+                            "formattedAddress": "string",
+                            "id": "string",
+                            "lastName": "string",
+                            "line1": "string",
+                            "line2": "string",
+                            "nickName": "string",
+                            "organizationName": "string",
+                            "pendingAddress": true,
+                            "phone": "string",
+                            "postalCode": "string",
+                            "region": {
+                                "countryIso": "string",
+                                "isocode": "string",
+                                "isocodeShort": "string",
+                                "name": "string"
+                            },
+                            "room": "string",
+                            "selectedAddress": true,
+                            "shipTo": "string",
+                            "shipToName": "string",
+                            "shippingAddress": true,
+                            "status": "string",
+                            "title": "string",
+                            "titleCode": "string",
+                            "town": "string",
+                            "visibleInAddressBook": true
+                        },
+                        "description": "string",
+                        "displayName": "string",
+                        "distanceKm": 0,
+                        "features": {
+                            "additionalProp1": "string",
+                            "additionalProp2": "string",
+                            "additionalProp3": "string"
+                        },
+                        "formattedDistance": "string",
+                        "geoPoint": {
+                            "latitude": 0,
+                            "longitude": 0
+                        },
+                        "mapIcon": {
+                            "altText": "string",
+                            "format": "string",
+                            "galleryIndex": 0,
+                            "imageType": "PRIMARY",
+                            "url": "string"
+                        },
+                        "name": "string",
+                        "openingHours": {
+                            "code": "string",
+                            "name": "string",
+                            "specialDayOpeningList": [
+                                {
+                                    "closed": true,
+                                    "closingTime": {
+                                        "formattedHour": "string",
+                                        "hour": 0,
+                                        "minute": 0
+                                    },
+                                    "comment": "string",
+                                    "date": "2020-10-21T07:22:41.422Z",
+                                    "formattedDate": "string",
+                                    "name": "string",
+                                    "openingTime": {
+                                        "formattedHour": "string",
+                                        "hour": 0,
+                                        "minute": 0
+                                    }
+                                }
+                            ],
+                            "weekDayOpeningList": [
+                                {
+                                    "closed": true,
+                                    "closingTime": {
+                                        "formattedHour": "string",
+                                        "hour": 0,
+                                        "minute": 0
+                                    },
+                                    "openingTime": {
+                                        "formattedHour": "string",
+                                        "hour": 0,
+                                        "minute": 0
+                                    },
+                                    "weekDay": "string"
+                                }
+                            ]
+                        },
+                        "storeContent": "string",
+                        "storeImages": [
+                            {
+                                "altText": "string",
+                                "format": "string",
+                                "galleryIndex": 0,
+                                "imageType": "PRIMARY",
+                                "url": "string"
+                            }
+                        ],
+                        "url": "string",
+                        "warehouseCodes": ["string"]
+                    },
+                    "entryNumber": 0,
+                    "isContractualPrice": true,
+                    "isGrantEligible": true,
+                    "listPrice": {
+                        "conditionUnit": "string",
+                        "currencyIso": "string",
+                        "deletionIndicator": "string",
+                        "distChannel": "string",
+                        "division": "string",
+                        "formattedValue": "string",
+                        "materialNumber": "string",
+                        "maxQuantity": 0,
+                        "minQuantity": 0,
+                        "priceType": "BUY",
+                        "pricingUnit": "string",
+                        "rate": "string",
+                        "rateUnit": "string",
+                        "refNumber": "string",
+                        "salesOrg": "string",
+                        "sourceSystem": "string",
+                        "validFromDate": "string",
+                        "validToDate": "string",
+                        "value": 0
+                    },
+                    "product": {
+                        "availableForPickup": true,
+                        "averageRating": 0,
+                        "baseOptions": [
+                            {
+                                "options": [
+                                    {
+                                        "code": "string",
+                                        "priceData": {
+                                            "conditionUnit": "string",
+                                            "currencyIso": "string",
+                                            "deletionIndicator": "string",
+                                            "distChannel": "string",
+                                            "division": "string",
+                                            "formattedValue": "string",
+                                            "materialNumber": "string",
+                                            "maxQuantity": 0,
+                                            "minQuantity": 0,
+                                            "priceType": "BUY",
+                                            "pricingUnit": "string",
+                                            "rate": "string",
+                                            "rateUnit": "string",
+                                            "refNumber": "string",
+                                            "salesOrg": "string",
+                                            "sourceSystem": "string",
+                                            "validFromDate": "string",
+                                            "validToDate": "string",
+                                            "value": 0
+                                        },
+                                        "stock": {
+                                            "isValueRounded": true,
+                                            "stockLevel": 0,
+                                            "stockLevelStatus": "string"
+                                        },
+                                        "url": "string",
+                                        "variantOptionQualifiers": [
+                                            {
+                                                "image": {
+                                                    "altText": "string",
+                                                    "format": "string",
+                                                    "galleryIndex": 0,
+                                                    "imageType": "PRIMARY",
+                                                    "url": "string"
+                                                },
+                                                "name": "string",
+                                                "qualifier": "string",
+                                                "value": "string"
+                                            }
+                                        ]
+                                    }
+                                ],
+                                "selected": {
+                                    "code": "string",
+                                    "priceData": {
+                                        "conditionUnit": "string",
+                                        "currencyIso": "string",
+                                        "deletionIndicator": "string",
+                                        "distChannel": "string",
+                                        "division": "string",
+                                        "formattedValue": "string",
+                                        "materialNumber": "string",
+                                        "maxQuantity": 0,
+                                        "minQuantity": 0,
+                                        "priceType": "BUY",
+                                        "pricingUnit": "string",
+                                        "rate": "string",
+                                        "rateUnit": "string",
+                                        "refNumber": "string",
+                                        "salesOrg": "string",
+                                        "sourceSystem": "string",
+                                        "validFromDate": "string",
+                                        "validToDate": "string",
+                                        "value": 0
+                                    },
+                                    "stock": {
+                                        "isValueRounded": true,
+                                        "stockLevel": 0,
+                                        "stockLevelStatus": "string"
+                                    },
+                                    "url": "string",
+                                    "variantOptionQualifiers": [
+                                        {
+                                            "image": {
+                                                "altText": "string",
+                                                "format": "string",
+                                                "galleryIndex": 0,
+                                                "imageType": "PRIMARY",
+                                                "url": "string"
+                                            },
+                                            "name": "string",
+                                            "qualifier": "string",
+                                            "value": "string"
+                                        }
+                                    ]
+                                },
+                                "variantType": "string"
+                            }
+                        ],
+                        "baseProduct": "string",
+                        "batchManaged": true,
+                        "brand": "string",
+                        "categories": [
+                            {
+                                "code": "string",
+                                "image": {
+                                    "altText": "string",
+                                    "format": "string",
+                                    "galleryIndex": 0,
+                                    "imageType": "PRIMARY",
+                                    "url": "string"
+                                },
+                                "name": "string",
+                                "url": "string"
+                            }
+                        ],
+                        "classifications": [
+                            {
+                                "code": "string",
+                                "features": [
+                                    {
+                                        "code": "string",
+                                        "comparable": true,
+                                        "description": "string",
+                                        "featureUnit": {
+                                            "name": "string",
+                                            "symbol": "string",
+                                            "unitType": "string"
+                                        },
+                                        "featureValues": [
+                                            {
+                                                "value": "string"
+                                            }
+                                        ],
+                                        "name": "string",
+                                        "range": true,
+                                        "type": "string"
+                                    }
+                                ],
+                                "name": "string"
+                            }
+                        ],
+                        "code": "string",
+                        "configurable": true,
+                        "configuratorType": "string",
+                        "description": "string",
+                        "displayable": true,
+                        "firstVariantCode": "string",
+                        "firstVariantImage": "string",
+                        "futureStocks": [
+                            {
+                                "date": "2020-10-21T07:22:41.423Z",
+                                "formattedDate": "string",
+                                "stock": {
+                                    "isValueRounded": true,
+                                    "stockLevel": 0,
+                                    "stockLevelStatus": "string"
+                                }
+                            }
+                        ],
+                        "images": [
+                            {
+                                "altText": "string",
+                                "format": "string",
+                                "galleryIndex": 0,
+                                "imageType": "PRIMARY",
+                                "url": "string"
+                            }
+                        ],
+                        "manufacturer": "string",
+                        "maxPurchasableQuantity": 0,
+                        "multidimensional": true,
+                        "name": "string",
+                        "numberOfReviews": 0,
+                        "pictureUrl": "string",
+                        "potentialPromotions": [
+                            {
+                                "applicableCategories": ["string"],
+                                "applicableProducts": ["string"],
+                                "code": "string",
+                                "couldFireMessages": ["string"],
+                                "description": "string",
+                                "enabled": true,
+                                "endDate": "2020-10-21T07:22:41.423Z",
+                                "excludedCategories": ["string"],
+                                "excludedProducts": ["string"],
+                                "firedMessages": ["string"],
+                                "priority": 0,
+                                "productBanner": {
+                                    "altText": "string",
+                                    "format": "string",
+                                    "galleryIndex": 0,
+                                    "imageType": "PRIMARY",
+                                    "url": "string"
+                                },
+                                "promotionGroup": "string",
+                                "promotionType": "string",
+                                "restrictions": [
+                                    {
+                                        "description": "string",
+                                        "restrictionType": "string"
+                                    }
+                                ],
+                                "startDate": "2020-10-21T07:22:41.423Z",
+                                "title": "string"
+                            }
+                        ],
+                        "price": {
+                            "conditionUnit": "string",
+                            "currencyIso": "string",
+                            "deletionIndicator": "string",
+                            "distChannel": "string",
+                            "division": "string",
+                            "formattedValue": "string",
+                            "materialNumber": "string",
+                            "maxQuantity": 0,
+                            "minQuantity": 0,
+                            "priceType": "BUY",
+                            "pricingUnit": "string",
+                            "rate": "string",
+                            "rateUnit": "string",
+                            "refNumber": "string",
+                            "salesOrg": "string",
+                            "sourceSystem": "string",
+                            "validFromDate": "string",
+                            "validToDate": "string",
+                            "value": 0
+                        },
+                        "priceRange": {
+                            "maxPrice": {
+                                "conditionUnit": "string",
+                                "currencyIso": "string",
+                                "deletionIndicator": "string",
+                                "distChannel": "string",
+                                "division": "string",
+                                "formattedValue": "string",
+                                "materialNumber": "string",
+                                "maxQuantity": 0,
+                                "minQuantity": 0,
+                                "priceType": "BUY",
+                                "pricingUnit": "string",
+                                "rate": "string",
+                                "rateUnit": "string",
+                                "refNumber": "string",
+                                "salesOrg": "string",
+                                "sourceSystem": "string",
+                                "validFromDate": "string",
+                                "validToDate": "string",
+                                "value": 0
+                            },
+                            "minPrice": {
+                                "conditionUnit": "string",
+                                "currencyIso": "string",
+                                "deletionIndicator": "string",
+                                "distChannel": "string",
+                                "division": "string",
+                                "formattedValue": "string",
+                                "materialNumber": "string",
+                                "maxQuantity": 0,
+                                "minQuantity": 0,
+                                "priceType": "BUY",
+                                "pricingUnit": "string",
+                                "rate": "string",
+                                "rateUnit": "string",
+                                "refNumber": "string",
+                                "salesOrg": "string",
+                                "sourceSystem": "string",
+                                "validFromDate": "string",
+                                "validToDate": "string",
+                                "value": 0
+                            }
+                        },
+                        "productHierarchy": "string",
+                        "productId": "string",
+                        "productReferences": [
+                            {
+                                "description": "string",
+                                "preselected": true,
+                                "quantity": 0,
+                                "referenceType": "string"
+                            }
+                        ],
+                        "productType": "string",
+                        "productUrl": "string",
+                        "purchasable": true,
+                        "reviews": [
+                            {
+                                "alias": "string",
+                                "comment": "string",
+                                "date": "2020-10-21T07:22:41.423Z",
+                                "headline": "string",
+                                "id": "string",
+                                "principal": {
+                                    "active": true,
+                                    "approvers": [null],
+                                    "country": "string",
+                                    "currency": {
+                                        "active": true,
+                                        "defaultCurrency": true,
+                                        "isocode": "string",
+                                        "name": "string",
+                                        "symbol": "string"
+                                    },
+                                    "customerId": "string",
+                                    "deactivationDate": "2020-10-21T07:22:41.423Z",
+                                    "defaultAddress": {
+                                        "addressId": "string",
+                                        "billTo": "string",
+                                        "billToName": "string",
+                                        "billingAddress": true,
+                                        "building": "string",
+                                        "cellphone": "string",
+                                        "companyName": "string",
+                                        "country": {
+                                            "isocode": "string",
+                                            "name": "string"
+                                        },
+                                        "defaultAddress": true,
+                                        "department": "string",
+                                        "district": "string",
+                                        "email": "string",
+                                        "favouriteAddress": true,
+                                        "firstName": "string",
+                                        "floor": "string",
+                                        "formattedAddress": "string",
+                                        "id": "string",
+                                        "lastName": "string",
+                                        "line1": "string",
+                                        "line2": "string",
+                                        "nickName": "string",
+                                        "organizationName": "string",
+                                        "pendingAddress": true,
+                                        "phone": "string",
+                                        "postalCode": "string",
+                                        "region": {
+                                            "countryIso": "string",
+                                            "isocode": "string",
+                                            "isocodeShort": "string",
+                                            "name": "string"
+                                        },
+                                        "room": "string",
+                                        "selectedAddress": true,
+                                        "shipTo": "string",
+                                        "shipToName": "string",
+                                        "shippingAddress": true,
+                                        "status": "string",
+                                        "title": "string",
+                                        "titleCode": "string",
+                                        "town": "string",
+                                        "visibleInAddressBook": true
+                                    },
+                                    "displayUid": "string",
+                                    "email": "mark.rivers@rustic-hw.com",
+                                    "firstName": "string",
+                                    "language": {
+                                        "active": true,
+                                        "isocode": "string",
+                                        "name": "string",
+                                        "nativeName": "string"
+                                    },
+                                    "lastName": "string",
+                                    "ldapLogin": "string",
+                                    "name": "string",
+                                    "orgUnit": {
+                                        "active": true,
+                                        "addresses": [
+                                            {
+                                                "addressId": "string",
+                                                "billTo": "string",
+                                                "billToName": "string",
+                                                "billingAddress": true,
+                                                "building": "string",
+                                                "cellphone": "string",
+                                                "companyName": "string",
+                                                "country": {
+                                                    "isocode": "string",
+                                                    "name": "string"
+                                                },
+                                                "defaultAddress": true,
+                                                "department": "string",
+                                                "district": "string",
+                                                "email": "string",
+                                                "favouriteAddress": true,
+                                                "firstName": "string",
+                                                "floor": "string",
+                                                "formattedAddress": "string",
+                                                "id": "string",
+                                                "lastName": "string",
+                                                "line1": "string",
+                                                "line2": "string",
+                                                "nickName": "string",
+                                                "organizationName": "string",
+                                                "pendingAddress": true,
+                                                "phone": "string",
+                                                "postalCode": "string",
+                                                "region": {
+                                                    "countryIso": "string",
+                                                    "isocode": "string",
+                                                    "isocodeShort": "string",
+                                                    "name": "string"
+                                                },
+                                                "room": "string",
+                                                "selectedAddress": true,
+                                                "shipTo": "string",
+                                                "shipToName": "string",
+                                                "shippingAddress": true,
+                                                "status": "string",
+                                                "title": "string",
+                                                "titleCode": "string",
+                                                "town": "string",
+                                                "visibleInAddressBook": true
+                                            }
+                                        ],
+                                        "administrators": [null],
+                                        "approvalProcess": {
+                                            "code": "accApproval",
+                                            "name": "Escalation Approval with Merchant Check"
+                                        },
+                                        "approvers": [null],
+                                        "costCenters": [
+                                            {
+                                                "active": true,
+                                                "activeFlag": true,
+                                                "code": "Custom_Retail",
+                                                "currency": {
+                                                    "active": true,
+                                                    "defaultCurrency": true,
+                                                    "isocode": "string",
+                                                    "name": "string",
+                                                    "symbol": "string"
+                                                },
+                                                "name": "Custom Retail",
+                                                "originalCode": "Custom_Retail"
+                                            }
+                                        ],
+                                        "customers": [null],
+                                        "managers": [null],
+                                        "name": "Pronto",
+                                        "uid": "Pronto"
+                                    },
+                                    "roles": ["string"],
+                                    "selected": true,
+                                    "status": "string",
+                                    "title": "string",
+                                    "titleCode": "string",
+                                    "uid": "string",
+                                    "userType": "string"
+                                },
+                                "rating": 0
+                            }
+                        ],
+                        "ruoQualified": true,
+                        "specialHandling": true,
+                        "stock": {
+                            "isValueRounded": true,
+                            "stockLevel": 0,
+                            "stockLevelStatus": "string"
+                        },
+                        "summary": "string",
+                        "tags": ["string"],
+                        "url": "string",
+                        "variantMatrix": [
+                            {
+                                "elements": [null],
+                                "isLeaf": true,
+                                "parentVariantCategory": {
+                                    "hasImage": true,
+                                    "name": "string",
+                                    "priority": 0
+                                },
+                                "variantOption": {
+                                    "code": "string",
+                                    "priceData": {
+                                        "conditionUnit": "string",
+                                        "currencyIso": "string",
+                                        "deletionIndicator": "string",
+                                        "distChannel": "string",
+                                        "division": "string",
+                                        "formattedValue": "string",
+                                        "materialNumber": "string",
+                                        "maxQuantity": 0,
+                                        "minQuantity": 0,
+                                        "priceType": "BUY",
+                                        "pricingUnit": "string",
+                                        "rate": "string",
+                                        "rateUnit": "string",
+                                        "refNumber": "string",
+                                        "salesOrg": "string",
+                                        "sourceSystem": "string",
+                                        "validFromDate": "string",
+                                        "validToDate": "string",
+                                        "value": 0
+                                    },
+                                    "stock": {
+                                        "isValueRounded": true,
+                                        "stockLevel": 0,
+                                        "stockLevelStatus": "string"
+                                    },
+                                    "url": "string",
+                                    "variantOptionQualifiers": [
+                                        {
+                                            "image": {
+                                                "altText": "string",
+                                                "format": "string",
+                                                "galleryIndex": 0,
+                                                "imageType": "PRIMARY",
+                                                "url": "string"
+                                            },
+                                            "name": "string",
+                                            "qualifier": "string",
+                                            "value": "string"
+                                        }
+                                    ]
+                                },
+                                "variantValueCategory": {
+                                    "name": "string",
+                                    "sequence": 0,
+                                    "superCategories": [
+                                        {
+                                            "hasImage": true,
+                                            "name": "string",
+                                            "priority": 0
+                                        }
+                                    ]
+                                }
+                            }
+                        ],
+                        "variantOptions": [
+                            {
+                                "code": "string",
+                                "priceData": {
+                                    "conditionUnit": "string",
+                                    "currencyIso": "string",
+                                    "deletionIndicator": "string",
+                                    "distChannel": "string",
+                                    "division": "string",
+                                    "formattedValue": "string",
+                                    "materialNumber": "string",
+                                    "maxQuantity": 0,
+                                    "minQuantity": 0,
+                                    "priceType": "BUY",
+                                    "pricingUnit": "string",
+                                    "rate": "string",
+                                    "rateUnit": "string",
+                                    "refNumber": "string",
+                                    "salesOrg": "string",
+                                    "sourceSystem": "string",
+                                    "validFromDate": "string",
+                                    "validToDate": "string",
+                                    "value": 0
+                                },
+                                "stock": {
+                                    "isValueRounded": true,
+                                    "stockLevel": 0,
+                                    "stockLevelStatus": "string"
+                                },
+                                "url": "string",
+                                "variantOptionQualifiers": [
+                                    {
+                                        "image": {
+                                            "altText": "string",
+                                            "format": "string",
+                                            "galleryIndex": 0,
+                                            "imageType": "PRIMARY",
+                                            "url": "string"
+                                        },
+                                        "name": "string",
+                                        "qualifier": "string",
+                                        "value": "string"
+                                    }
+                                ]
+                            }
+                        ],
+                        "variantType": "string",
+                        "volumePrices": [
+                            {
+                                "conditionUnit": "string",
+                                "currencyIso": "string",
+                                "deletionIndicator": "string",
+                                "distChannel": "string",
+                                "division": "string",
+                                "formattedValue": "string",
+                                "materialNumber": "string",
+                                "maxQuantity": 0,
+                                "minQuantity": 0,
+                                "priceType": "BUY",
+                                "pricingUnit": "string",
+                                "rate": "string",
+                                "rateUnit": "string",
+                                "refNumber": "string",
+                                "salesOrg": "string",
+                                "sourceSystem": "string",
+                                "validFromDate": "string",
+                                "validToDate": "string",
+                                "value": 0
+                            }
+                        ],
+                        "volumePricesFlag": true
+                    },
+                    "quantity": 0,
+                    "quantityAllocated": 0,
+                    "quantityCancelled": 0,
+                    "quantityPending": 0,
+                    "quantityReturned": 0,
+                    "quantityShipped": 0,
+                    "quantityUnallocated": 0,
+                    "requestSameLot": true,
+                    "returnableQuantity": 5,
+                    "returnedItemsPrice": {
+                        "conditionUnit": "string",
+                        "currencyIso": "string",
+                        "deletionIndicator": "string",
+                        "distChannel": "string",
+                        "division": "string",
+                        "formattedValue": "string",
+                        "materialNumber": "string",
+                        "maxQuantity": 0,
+                        "minQuantity": 0,
+                        "priceType": "BUY",
+                        "pricingUnit": "string",
+                        "rate": "string",
+                        "rateUnit": "string",
+                        "refNumber": "string",
+                        "salesOrg": "string",
+                        "sourceSystem": "string",
+                        "validFromDate": "string",
+                        "validToDate": "string",
+                        "value": 0
+                    },
+                    "statusSummaryList": [
+                        {
+                            "numberOfIssues": 3,
+                            "status": "ERROR"
+                        }
+                    ],
+                    "surchargeApplied": true,
+                    "totalPrice": {
+                        "conditionUnit": "string",
+                        "currencyIso": "string",
+                        "deletionIndicator": "string",
+                        "distChannel": "string",
+                        "division": "string",
+                        "formattedValue": "string",
+                        "materialNumber": "string",
+                        "maxQuantity": 0,
+                        "minQuantity": 0,
+                        "priceType": "BUY",
+                        "pricingUnit": "string",
+                        "rate": "string",
+                        "rateUnit": "string",
+                        "refNumber": "string",
+                        "salesOrg": "string",
+                        "sourceSystem": "string",
+                        "validFromDate": "string",
+                        "validToDate": "string",
+                        "value": 0
+                    },
+                    "updateable": true,
+                    "url": "string"
+                }
+            ],
+            "quantity": 0,
+            "totalPriceWithTax": {
+                "conditionUnit": "string",
+                "currencyIso": "string",
+                "deletionIndicator": "string",
+                "distChannel": "string",
+                "division": "string",
+                "formattedValue": "string",
+                "materialNumber": "string",
+                "maxQuantity": 0,
+                "minQuantity": 0,
+                "priceType": "BUY",
+                "pricingUnit": "string",
+                "rate": "string",
+                "rateUnit": "string",
+                "refNumber": "string",
+                "salesOrg": "string",
+                "sourceSystem": "string",
+                "validFromDate": "string",
+                "validToDate": "string",
+                "value": 0
+            }
+        }
+    ],
+    "productDiscounts": {
+        "conditionUnit": "string",
+        "currencyIso": "string",
+        "deletionIndicator": "string",
+        "distChannel": "string",
+        "division": "string",
+        "formattedValue": "string",
+        "materialNumber": "string",
+        "maxQuantity": 0,
+        "minQuantity": 0,
+        "priceType": "BUY",
+        "pricingUnit": "string",
+        "rate": "string",
+        "rateUnit": "string",
+        "refNumber": "string",
+        "salesOrg": "string",
+        "sourceSystem": "string",
+        "validFromDate": "string",
+        "validToDate": "string",
+        "value": 0
+    },
+    "site": "string",
+    "specialInstructions": "string",
+    "store": "string",
+    "subTotal": {
+        "conditionUnit": "string",
+        "currencyIso": "string",
+        "deletionIndicator": "string",
+        "distChannel": "string",
+        "division": "string",
+        "formattedValue": "string",
+        "materialNumber": "string",
+        "maxQuantity": 0,
+        "minQuantity": 0,
+        "priceType": "BUY",
+        "pricingUnit": "string",
+        "rate": "string",
+        "rateUnit": "string",
+        "refNumber": "string",
+        "salesOrg": "string",
+        "sourceSystem": "string",
+        "validFromDate": "string",
+        "validToDate": "string",
+        "value": 0
+    },
+    "totalDiscounts": {
+        "conditionUnit": "string",
+        "currencyIso": "string",
+        "deletionIndicator": "string",
+        "distChannel": "string",
+        "division": "string",
+        "formattedValue": "string",
+        "materialNumber": "string",
+        "maxQuantity": 0,
+        "minQuantity": 0,
+        "priceType": "BUY",
+        "pricingUnit": "string",
+        "rate": "string",
+        "rateUnit": "string",
+        "refNumber": "string",
+        "salesOrg": "string",
+        "sourceSystem": "string",
+        "validFromDate": "string",
+        "validToDate": "string",
+        "value": 0
+    },
+    "totalItems": 0,
+    "totalPrice": {
+        "conditionUnit": "string",
+        "currencyIso": "string",
+        "deletionIndicator": "string",
+        "distChannel": "string",
+        "division": "string",
+        "formattedValue": "string",
+        "materialNumber": "string",
+        "maxQuantity": 0,
+        "minQuantity": 0,
+        "priceType": "BUY",
+        "pricingUnit": "string",
+        "rate": "string",
+        "rateUnit": "string",
+        "refNumber": "string",
+        "salesOrg": "string",
+        "sourceSystem": "string",
+        "validFromDate": "string",
+        "validToDate": "string",
+        "value": 0
+    },
+    "totalPriceWithTax": {
+        "conditionUnit": "string",
+        "currencyIso": "string",
+        "deletionIndicator": "string",
+        "distChannel": "string",
+        "division": "string",
+        "formattedValue": "string",
+        "materialNumber": "string",
+        "maxQuantity": 0,
+        "minQuantity": 0,
+        "priceType": "BUY",
+        "pricingUnit": "string",
+        "rate": "string",
+        "rateUnit": "string",
+        "refNumber": "string",
+        "salesOrg": "string",
+        "sourceSystem": "string",
+        "validFromDate": "string",
+        "validToDate": "string",
+        "value": 0
+    },
+    "totalSurcharge": {
+        "conditionUnit": "string",
+        "currencyIso": "string",
+        "deletionIndicator": "string",
+        "distChannel": "string",
+        "division": "string",
+        "formattedValue": "string",
+        "materialNumber": "string",
+        "maxQuantity": 0,
+        "minQuantity": 0,
+        "priceType": "BUY",
+        "pricingUnit": "string",
+        "rate": "string",
+        "rateUnit": "string",
+        "refNumber": "string",
+        "salesOrg": "string",
+        "sourceSystem": "string",
+        "validFromDate": "string",
+        "validToDate": "string",
+        "value": 0
+    },
+    "totalTax": {
+        "conditionUnit": "string",
+        "currencyIso": "string",
+        "deletionIndicator": "string",
+        "distChannel": "string",
+        "division": "string",
+        "formattedValue": "string",
+        "materialNumber": "string",
+        "maxQuantity": 0,
+        "minQuantity": 0,
+        "priceType": "BUY",
+        "pricingUnit": "string",
+        "rate": "string",
+        "rateUnit": "string",
+        "refNumber": "string",
+        "salesOrg": "string",
+        "sourceSystem": "string",
+        "validFromDate": "string",
+        "validToDate": "string",
+        "value": 0
+    },
+    "user": {
+        "name": "string",
+        "uid": "string"
+    }
+}

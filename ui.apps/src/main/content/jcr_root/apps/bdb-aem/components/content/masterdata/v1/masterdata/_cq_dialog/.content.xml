@@ -1,0 +1,472 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0"
+          jcr:primaryType="nt:unstructured"
+          jcr:title="Master Data"
+          sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="granite/ui/components/coral/foundation/container">
+        <items jcr:primaryType="nt:unstructured">
+            <tabs
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/coral/foundation/tabs"
+                    maximized="{Boolean}false">
+                <items jcr:primaryType="nt:unstructured">
+                    <certificationDataTab
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="Certification Data"
+                            sling:resourceType="granite/ui/components/coral/foundation/container"
+                            margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <column
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <certificationFieldSet
+                                            jcr:primaryType="nt:unstructured"
+                                            jcr:title="Certification Status"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <certificationMultiField
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                                    composite="{Boolean}true"
+                                                    fieldDescription="Labels and Codes"
+                                                    fieldLabel="Author Certification Status Labels and Codes">
+                                                <field
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                                                        name="./certificationMultiField">
+                                                    <items jcr:primaryType="nt:unstructured">
+                                                        <errorCode
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="Code"
+                                                                required="{Boolean}true"
+                                                                name="./errorCode"/>
+                                                        <errorMessage
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="Label"
+                                                                required="{Boolean}true"
+                                                                name="./errorMessage"/>
+                                                    </items>
+                                                </field>
+                                            </certificationMultiField>
+                                        </items>
+                                    </certificationFieldSet>
+                                    <certificationsTypeFieldSet
+                                            jcr:primaryType="nt:unstructured"
+                                            jcr:title="Certifications Type"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <certificationsTypeMultiField
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                                    composite="{Boolean}true"
+                                                    fieldDescription="Certification Types Code and Label"
+                                                    fieldLabel="Author Certifications Types Code and Label">
+                                                <granite:data
+                                                        jcr:primaryType="nt:unstructured"
+                                                        max-items="2"/>
+                                                <field
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                                                        name="./certificationsTypeMultiField">
+                                                    <items jcr:primaryType="nt:unstructured">
+                                                        <errorCode
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="Code"
+                                                                required="{Boolean}true"
+                                                                name="./errorCode"/>
+                                                        <errorMessage
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="Label"
+                                                                required="{Boolean}true"
+                                                                name="./errorMessage"/>
+                                                    </items>
+                                                </field>
+                                            </certificationsTypeMultiField>
+                                        </items>
+                                    </certificationsTypeFieldSet>
+                                </items>
+                            </column>
+                        </items>
+                    </certificationDataTab>
+                    <orderSourceTab
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="Order Source"
+                            sling:resourceType="granite/ui/components/coral/foundation/container"
+                            margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <column
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <orderSourceFieldSet
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <orderSourceMultiField
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                                    composite="{Boolean}true"
+                                                    fieldDescription="Labels and Codes"
+                                                    fieldLabel="Author Order Source Labels and Codes">
+                                                <field
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                                                        name="./orderSourceMultiField">
+                                                    <items jcr:primaryType="nt:unstructured">
+                                                        <errorCode
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="Code"
+                                                                required="{Boolean}true"
+                                                                name="./errorCode"/>
+                                                        <errorMessage
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="Label"
+                                                                required="{Boolean}true"
+                                                                name="./errorMessage"/>
+                                                    </items>
+                                                </field>
+                                            </orderSourceMultiField>
+                                        </items>
+                                    </orderSourceFieldSet>
+                                </items>
+                            </column>
+                        </items>
+                    </orderSourceTab>
+                    <orderStatusTab
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="Order Status"
+                            sling:resourceType="granite/ui/components/coral/foundation/container"
+                            margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <column
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <orderStatusFieldSet
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <orderStatusMultiField
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                                    composite="{Boolean}true"
+                                                    fieldDescription="Labels and Codes"
+                                                    fieldLabel="Author Order Status Labels and Codes">
+                                                <field
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                                                        name="./orderStatusMultiField">
+                                                    <items jcr:primaryType="nt:unstructured">
+                                                        <errorCode
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="Code"
+                                                                required="{Boolean}true"
+                                                                name="./errorCode"/>
+                                                        <errorMessage
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="Label"
+                                                                required="{Boolean}true"
+                                                                name="./errorMessage"/>
+                                                    </items>
+                                                </field>
+                                            </orderStatusMultiField>
+                                        </items>
+                                    </orderStatusFieldSet>
+                                </items>
+                            </column>
+                        </items>
+                    </orderStatusTab>
+                    <deliveryOptionsTab
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Delivery Options"
+                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <column
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <deliveryOptionsFieldSet
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <deliveryOptionsMultiField
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                                composite="{Boolean}true"
+                                                fieldDescription="Inside / Overnight"
+                                                fieldLabel="Author Inside Delivery and Overnight Delivery Labels">
+                                                <field
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/container"
+                                                    name="./deliveryOptionsMultiField">
+                                                    <items jcr:primaryType="nt:unstructured">
+                                                        <insideDelivery
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                            fieldLabel="Code"
+                                                            name="./errorCode"
+                                                            required="{Boolean}true"/>
+                                                        <overnightDelivery
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                            fieldLabel="Label"
+                                                            name="./errorMessage"
+                                                            required="{Boolean}true"/>
+                                                    </items>
+                                                </field>
+                                            </deliveryOptionsMultiField>
+                                        </items>
+                                    </deliveryOptionsFieldSet>
+                                </items>
+                            </column>
+                        </items>
+                    </deliveryOptionsTab>
+                    <dashboardMessagesTab
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="User Dashboard Messages"
+                            sling:resourceType="granite/ui/components/coral/foundation/container"
+                            margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <column
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <userDashboardMessagesFieldSet
+                                            jcr:primaryType="nt:unstructured"
+                                            jcr:title="Dashboard Messages"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <userDashboardMessagesMultifield
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                                    composite="{Boolean}true"
+                                                    fieldDescription="Messages and Codes"
+                                                    fieldLabel="Author Messages and Codes">
+                                                <field
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                                                        name="./userDashboardMessagesMultifield">
+                                                    <items jcr:primaryType="nt:unstructured">
+                                                        <errorCode
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="Code"
+                                                                required="{Boolean}true"
+                                                                name="./errorCode"/>
+                                                        <errorMessage
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="Message"
+                                                                required="{Boolean}true"
+                                                                name="./errorMessage"/>
+                                                    </items>
+                                                </field>
+                                            </userDashboardMessagesMultifield>
+                                        </items>
+                                    </userDashboardMessagesFieldSet>
+                                </items>
+                            </column>
+                        </items>
+                    </dashboardMessagesTab>
+                    <orderApprovalPromotionsTab
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="Order Approval Promotions"
+                            sling:resourceType="granite/ui/components/coral/foundation/container"
+                            margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <column
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <promotionsFieldSet
+                                            jcr:primaryType="nt:unstructured"
+                                            jcr:title="Promotions Code and Description"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <orderApprovalPromotionsMultifield
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                                    composite="{Boolean}true"
+                                                    fieldDescription="Coupon Code and Description"
+                                                    fieldLabel="Author Coupon Codes and Descriptions">
+                                                <field
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                                                        name="./orderApprovalPromotionsMultifield">
+                                                    <items jcr:primaryType="nt:unstructured">
+                                                        <errorCode
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="Coupon Code"
+                                                                required="{Boolean}true"
+                                                                name="./errorCode"/>
+                                                        <errorMessage
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="Description"
+                                                                required="{Boolean}true"
+                                                                name="./errorMessage"/>
+                                                    </items>
+                                                </field>
+                                            </orderApprovalPromotionsMultifield>
+                                        </items>
+                                    </promotionsFieldSet>
+                                </items>
+                            </column>
+                        </items>
+                    </orderApprovalPromotionsTab>
+                    <quoteStatusTab
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="Quote Status"
+                            sling:resourceType="granite/ui/components/coral/foundation/container"
+                            margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <column
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <quoteStatusFieldSet
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <quoteStatusMultiField
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                                    composite="{Boolean}true"
+                                                    fieldDescription="Labels and Codes"
+                                                    fieldLabel="Author Quote Status Labels and Codes">
+                                                <field
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                                                        name="./quoteStatusMultiField">
+                                                    <items jcr:primaryType="nt:unstructured">
+                                                        <errorCode
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="Code"
+                                                                required="{Boolean}true"
+                                                                name="./errorCode"/>
+                                                        <errorMessage
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="Label"
+                                                                required="{Boolean}true"
+                                                                name="./errorMessage"/>
+                                                    </items>
+                                                </field>
+                                            </quoteStatusMultiField>
+                                        </items>
+                                    </quoteStatusFieldSet>
+                                </items>
+                            </column>
+                        </items>
+                    </quoteStatusTab>
+                    <orderInquiryTypes
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="Country Specific Order Inquiry Types"
+                            sling:resourceType="granite/ui/components/coral/foundation/container"
+                            margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <column
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <orderInquiryTypesFieldSet
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <orderInquiryTypesMultiField
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                                    composite="{Boolean}true"
+                                                    fieldDescription="Labels and Codes"
+                                                    fieldLabel="Author Order Inquiry Types (Labels and Codes) for your country">
+                                                <field
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                                                        name="./orderInquiryTypes">
+                                                    <items jcr:primaryType="nt:unstructured">
+                                                        <errorCode
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="Code"
+                                                                required="{Boolean}true"
+                                                                name="./errorCode"/>
+                                                        <errorMessage
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="Label"
+                                                                required="{Boolean}true"
+                                                                name="./errorMessage"/>
+                                                    </items>
+                                                </field>
+                                            </orderInquiryTypesMultiField>
+                                        </items>
+                                    </orderInquiryTypesFieldSet>
+                                </items>
+                            </column>
+                        </items>
+                    </orderInquiryTypes>
+                    <communicationListTab
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="Communications List"
+                            sling:resourceType="granite/ui/components/coral/foundation/container"
+                            margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <column
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <abandonedCartLabel
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            fieldLabel="Abandoned Cart Label"
+                                            name="./abandonedCartLabel"
+                                            required="{Boolean}true"/>
+                                    <blogLabel
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            fieldLabel="Blog Label"
+                                            name="./blogLabel"
+                                            required="{Boolean}true"/>
+                                    <newsLetterLabel
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            fieldLabel="Newsletter Label"
+                                            name="./newsLetterLabel"
+                                            required="{Boolean}true"/>
+                                    <tutorialLabel
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            fieldLabel="Tutorial Label"
+                                            name="./tutorialLabel"
+                                            required="{Boolean}true"/>
+                                    <webinarLabel
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            fieldLabel="Webinar Label"
+                                            name="./webinarLabel"
+                                            required="{Boolean}true"/>
+
+                                </items>
+                            </column>
+                        </items>
+                    </communicationListTab>
+                </items>
+            </tabs>
+        </items>
+    </content>
+</jcr:root>

@@ -1,0 +1,193 @@
+<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html"
+     data-sly-call="${templates.placeholder @ isEmpty = true}"></sly>
+
+<sly data-sly-use.listModel="com.bdb.aem.core.models.ListComponentModel"></sly>
+
+
+
+<div class="${properties.thoughtLeadershipVariation ? 'thought-leadership' : 'container'}">
+
+<div class="${properties.thoughtLeadershipVariation ? '' : 'row'}">
+
+<sly data-sly-test="${properties.listSelection=='Resources'}">
+    <article class="bdb-home-list app-js__bdb-home-list resources ${properties.hasWhiteBackground ? 'white-background-container border-white' : ''}">
+        <div class="d-flex align-items-center justify-content-between bdb-home-list__heading">
+            <div class="d-flex align-items-center">
+                <img data-sly-test="${listModel.icon}" src="${listModel.icon}" alt="Resources">
+                <span class="bdb-home-list__heading-lbl ${listModel.icon ? '' : 'm-0'}">${properties.title @context='html'}</span>
+            </div>
+            <a data-sly-test="${!properties.isPlacedBelow && properties.viewAllLabel}" href="${listModel.viewAllURL}" class="bdb-home-list__heading-cta-link" aria-label="${properties.title}-${properties.viewAllLabel}">${properties.viewAllLabel @context='html'}</a>
+        </div>
+        <p data-sly-test="${properties.resourcesDescription}" class="bdb-home-list__desc bd-rte">${properties.resourcesDescription @context='html'}</p>
+
+        <div class="bdb-home-list__main-content resources">
+            <sly data-sly-list.item="${listModel.resourcesRows}">
+                <div class="d-flex bdb-home-list__row">
+                    <a href="${item.rowLink}" target="_blank">
+                        <img class="bdb-home-list__row-icon" src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/Download.svg" alt="Download link">
+                    </a>
+                    <div class="bdb-home-list__row-text">
+                        <a class="bdb-home-list__row-title" href="${item.rowLink}" target="_blank">${item.rowTitle @context='html'}</a>
+                        <div data-sly-test="${item.rowDescription}" class="bdb-home-list__row-desc bd-rte">${item.rowDescription @context='html'}</div>
+                    </div>
+                </div>                        
+            </sly>
+            <a data-sly-test="${properties.isPlacedBelow && properties.viewAllLabel}" href="${listModel.viewAllURL}" class="bdb-home-list__link" tabindex="0" aria-label="${properties.title}-${properties.viewAllLabel}">${properties.viewAllLabel @context='html'}</a>
+        </div>
+    </article>
+</sly>
+
+
+<sly data-sly-test="${properties.listSelection=='Events'}">
+    <article class="bdb-home-list app-js__bdb-home-list events ${properties.hasWhiteBackground ? 'white-background-container border-white' : ''}">
+        <div class="d-flex align-items-center justify-content-between bdb-home-list__heading">
+            <div class="d-flex align-items-center">
+                <img data-sly-test="${listModel.icon}" data-src="${listModel.icon}" alt="Events">
+                <span class="bdb-home-list__heading-lbl ${listModel.icon ? '' : 'm-0'}">${properties.title @context='html'}</span>
+            </div>
+            <a data-sly-test="${!properties.isPlacedBelow && properties.viewAllLabel}" href="${listModel.viewAllURL}" class="bdb-home-list__heading-cta-link" aria-label="${properties.title}-${properties.viewAllLabel}">${properties.viewAllLabel @context='html'}</a>
+        </div>
+
+        <div class="bdb-home-list__main-content events">
+			<sly data-sly-list.item="${listModel.listOfEvents}">
+				<div class="bdb-home-list__row events">
+                    <sly data-sly-test="${!properties.thoughtLeadershipVariation}">
+                        <p class="bdb-home-list__row-date">${item.date}</p>
+                        <p class="bdb-home-list__row-address">${item.location}</p>
+                        <a href="${item.eventLink}" class="bdb-home-list__row-title" aria-label="${item.title}-${itemList.index}">${item.title @context='html'}</a>
+                    </sly>
+                    <sly data-sly-test="${properties.thoughtLeadershipVariation}">
+                        <p class="bdb-home-list__row-heading">${item.title @context='html'}</p>
+                        <p class="bdb-home-list__row-date">${item.date}</p>
+                        <a href="${item.eventLink}" class="bdb-home-list__row-viewbtn" tabindex="0" aria-label="${item.title}-${itemList.index}">${properties.viewEventDetailsLabel @context='html'}</a>
+                    </sly>
+				</div>
+            </sly>
+            <a data-sly-test="${properties.isPlacedBelow && properties.viewAllLabel}" href="${listModel.viewAllURL}" class="bdb-home-list__link" tabindex="0" aria-label="${properties.title}-${properties.viewAllLabel}">${properties.viewAllLabel @context='html'}</a>
+        </div>
+    </article>
+</sly>
+
+<sly data-sly-test="${properties.listSelection=='Blogs'}">
+
+    <article class="bdb-home-list app-js__bdb-home-list events ${properties.hasWhiteBackground ? 'white-background-container border-white' : ''}">
+        <div class="d-flex align-items-center justify-content-between bdb-home-list__heading">
+            <div class="d-flex align-items-center">
+                <img data-sly-test="${listModel.icon}" data-src="${listModel.icon}" alt="Events">
+                <span class="bdb-home-list__heading-lbl ${listModel.icon ? '' : 'm-0'}">${properties.title @context='html'}</span>
+            </div>
+            <a data-sly-test="${!properties.isPlacedBelow && properties.viewAllLabel}" href="${listModel.viewAllURL}" class="bdb-home-list__heading-cta-link" aria-label="${properties.title}-${properties.viewAllLabel}">${properties.viewAllLabel @context='html'}</a>
+        </div>
+
+        <div class="bdb-home-list__main-content events">
+			<sly data-sly-list.item="${listModel.listOfBlogs}">
+				<div class="bdb-home-list__row events">
+                    <sly data-sly-test="${!properties.thoughtLeadershipVariation}">
+                        <p class="bdb-home-list__row-date">${item.date}</p>
+                        
+                        <a href="${item.blogLink}" class="bdb-home-list__row-title" aria-label="${item.title}-${itemList.index}">${item.title @context='html'}</a>
+                    </sly>
+                    <sly data-sly-test="${properties.thoughtLeadershipVariation}">
+                        <p class="bdb-home-list__row-heading">${item.title @context='html'}</p>
+                        <p class="bdb-home-list__row-date">${item.date}</p>
+                        <a href="${item.blogLink}" class="bdb-home-list__row-viewbtn" tabindex="0" aria-label="${item.title}-${itemList.index}">${properties.viewBlogDetailsLabel @context='html'}</a>
+                    </sly>
+				</div>
+            </sly>
+            <a data-sly-test="${properties.isPlacedBelow && properties.viewAllLabel}" href="${listModel.viewAllURL}" class="bdb-home-list__link" tabindex="0" aria-label="${properties.title}-${properties.viewAllLabel}">${properties.viewAllLabel @context='html'}</a>
+        </div>
+    </article>
+</sly>
+
+
+
+<sly data-sly-test="${properties.listSelection=='Popular Tools'}">
+    <article class="bdb-home-list app-js__bdb-home-list popular ${properties.hasWhiteBackground ? 'white-background-container border-white' : ''}">
+        <div class="d-flex align-items-center justify-content-between bdb-home-list__heading">
+            <div class="d-flex align-items-center">
+                <img data-sly-test="${listModel.icon}" src="${listModel.icon}" alt="Popular Tools">
+                <span class="bdb-home-list__heading-lbl ${listModel.icon ? '' : 'm-0'}">${properties.title @context='html'}</span>
+            </div>
+            <a data-sly-test="${!properties.isPlacedBelow && properties.viewAllLabel}" href="${listModel.viewAllURL}" class="bdb-home-list__heading-cta-link" aria-label="${properties.title}-${properties.viewAllLabel}">${properties.viewAllLabel @context='html'}</a>                
+        </div>
+        <p data-sly-test="${properties.popularToolsDescription}" class="bdb-home-list__desc bd-rte">${properties.popularToolsDescription @context='html'}</p>
+
+        <div class="bdb-home-list__main-content popular">
+            <sly data-sly-list.item="${listModel.popularToolsRows}">
+                <div class="d-flex bdb-home-list__row popular">
+                    <sly data-sly-test="${!properties.thoughtLeadershipVariation}">
+                        <img data-sly-test="${item.rowImage}" data-src="${item.rowImage}" alt="Image 1" class="${properties.enableBorder?'grey-border':''}">
+                        <div class="bdb-home-list__row-text popular ${item.rowImage?'':'m-0'}">
+                            <a class="bdb-home-list__row-title popular" href="${item.rowLink}">${item.rowTitle @context='html'}</a>
+                            <div data-sly-test="${item.rowDescription}" class="bdb-home-list__row-desc bd-rte">${item.rowDescription @context='html'}</div>
+                            <a data-sly-test="${item.rowDownloadPath}" class="bdb-home-list__row-viewbtn" href="${item.rowDownloadPath}" tabindex="0">
+                                <img src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/Download.svg" alt="Download Icon"/>${item.rowDownloadLabel @context='html'}
+                            </a>
+                        </div>
+                    </sly>
+                    <sly data-sly-test="${properties.thoughtLeadershipVariation && itemList.index <= 1}">
+                        <img data-sly-test="${item.rowImage}" data-src="${item.rowImage}" alt="Row Image" class="${properties.enableBorder?'grey-border':''}">
+                        <img data-sly-test="${!item.rowImage}" data-src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/images/product-default.png" alt="Default List Image" class="${properties.enableBorder?'grey-border':''}">
+                        <div class="bdb-home-list__row-text popular">
+                            <a class="bdb-home-list__row-title popular" href="${item.rowLink}">${item.rowTitle @context='html'}</a>
+                            <div data-sly-test="${item.rowDescription}" class="bdb-home-list__row-desc bd-rte">${item.rowDescription @context='html'}</div>
+                            <a data-sly-test="${item.rowDownloadPath}" class="bdb-home-list__row-viewbtn" href="${item.rowDownloadPath}" tabindex="0">
+                                <img src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/Download.svg" alt="Download Icon"/>${item.rowDownloadLabel @context='html'}
+                            </a>
+                        </div>
+                    </sly>
+                </div>
+            </sly>
+            <a data-sly-test="${properties.isPlacedBelow && properties.viewAllLabel}" href="${listModel.viewAllURL}" class="bdb-home-list__link" tabindex="0" aria-label="${properties.title}-${properties.viewAllLabel}">${properties.viewAllLabel @context='html'}</a>
+        </div>
+    </article>
+</sly>
+
+
+<sly data-sly-test="${properties.listSelection=='Support'}">
+    <article class="bdb-home-list app-js__bdb-home-list support ${properties.hasWhiteBackground ? 'white-background-container border-white' : ''}">
+        <div class="d-flex align-items-center justify-content-between bdb-home-list__heading">
+            <div class="d-flex align-items-center">
+                <img data-sly-test="${listModel.icon}" data-src="${listModel.icon}" alt="Support">
+                <span class="bdb-home-list__heading-lbl ${listModel.icon ? '' : 'm-0'}">${properties.title @context='html'}</span>
+            </div>
+            <a data-sly-test="${!properties.isPlacedBelow && properties.viewAllLabel}" href="${listModel.viewAllURL}" class="bdb-home-list__heading-cta-link" aria-label="${properties.title}-${properties.viewAllLabel}">${properties.viewAllLabel @context='html'}</a>
+        </div>
+
+        <div class="bdb-home-list__main-content events">
+            <sly data-sly-list.item="${listModel.supportRows}">
+                <div class="bdb-home-list__row products">
+                    <a href="${item.listRowLink}" class="bdb-home-list__row-title">${item.listRowTitle @context='html'}</a>
+                        <div data-sly-test="${item.listRowDescription}" class="bdb-home-list__row-desc bd-rte">${item.listRowDescription @context='html'}</div>
+                </div>                        
+            </sly>
+            <a data-sly-test="${properties.isPlacedBelow && properties.viewAllLabel}" href="${listModel.viewAllURL}" class="bdb-home-list__link" tabindex="0" aria-label="${properties.title}-${properties.viewAllLabel}">${properties.viewAllLabel @context='html'}</a>
+        </div>
+    </article>
+</sly>
+
+
+<sly data-sly-test="${properties.listSelection=='Flowcytometry'}">
+    <article class="bdb-home-list app-js__bdb-home-list events news-section ${properties.hasWhiteBackground ? 'white-background-container border-white' : ''}" tabindex="0">
+        <div class="d-flex align-items-center justify-content-between bdb-home-list__heading" tabindex="0">
+            <div class="d-flex align-items-center">
+                <img data-sly-test="${listModel.icon}" src="${listModel.icon}" alt="Flowcytometry News"/>
+                <span class="bdb-home-list__heading-lbl ${listModel.icon ? '' : 'm-0'}">${properties.title @context='html'}</span>
+            </div>
+        </div>
+
+        <div class="bdb-home-list__main-content events">
+            <sly data-sly-list.item="${listModel.flowcytometryRows}">
+                <div data-sly-test="${itemList.index <= 2}" class="bdb-home-list__row events">
+                    <p class="bdb-home-list__row-date">${item.publicationDate}</p>
+                    <a href="${item.newsLink}" class="bdb-home-list__row-linkText">${item.newsTitle @context='html'}</a>
+                    <a href="${item.readMoreLink}" class="bdb-home-list__row-viewbtn" tabindex="0">${item.readMoreLabel @context='html'}</a>
+                </div>
+            </sly>
+            <a data-sly-test="${properties.viewAllLabel}" href="${listModel.viewAllURL}" class="bdb-home-list__link" tabindex="0" aria-label="${properties.title}-${properties.viewAllLabel}">${properties.viewAllLabel @context='html'}</a>
+        </div>
+    </article>
+</sly>
+
+</div>
+</div>

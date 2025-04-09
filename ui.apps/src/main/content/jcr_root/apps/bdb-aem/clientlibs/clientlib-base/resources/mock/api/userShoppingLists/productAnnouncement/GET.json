@@ -1,0 +1,45 @@
+{
+    "products": [
+        {
+            "productID": "612933",
+            "productAnnouncement": "true",
+            "paDescription": "",
+            "paFAQTitle": "Faq Title",
+            "regionalDisclaimers": "hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh",
+            "paViewMoreCTA": "",
+            "openNewTab": "openNewTab",
+            "disclaimerStatus": "true",
+            "moreInfoLink": "https://www.google.co.in/?gws_rd=ssl",
+            "viewMoreFaqLabel": "",
+            "viewMoreFaqLink": "viewMoreFaqLink",
+            "faqMap": []
+        },
+        {
+            "productID": "4434",
+            "productAnnouncement": "true",
+            "paDescription": "<p><b>Attention:</b> This product will be discontinued in August 2020 globally. <a href=\"https://publish-p14102-e36686.adobeaemcloud.com/content/bdb/ca/en-ca/products/reagents/flow-cytometry-reagents/research-reagents-w-search/single-color-antibodies644444.test.644445.html\"> [612887] </a> is the replacement for 553067. </p>",
+            "paFAQTitle": "Product Notice - FAQs",
+            "regionalDisclaimers": "The information contained in this page is for healthcare professionals only and are currently not sold globally. Please contact BDB global Marketing bdbglobal_marketing@bdb.com regarding the availability of the displayed product globally",
+            "paViewMoreCTA": "More Information",
+            "openNewTab": "true",
+            "disclaimerStatus": "true",
+            "moreInfoLink": "www.google.com",
+            "viewMoreFaqLabel": "View More FAQ's",
+            "viewMoreFaqLink": "viewMoreFaqLink",
+            "faqMap": [
+                {
+                    "question": "Why will this product be discontinued?",
+                    "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sodales id diam sit amet mollis. Sed blandit magna ut augue rhoncus, eu Shopping arcu mattis. Sed vel elementum urna"
+                },
+                {
+                    "question": "What is the difference between [612887] and 553607?",
+                    "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sodales id diam sit amet mollis. Sed blandit magna ut augue rhoncus, eu Shopping arcu mattis. Sed vel elementum urna"
+                },
+                {
+                    "question": "When will this product be available again?",
+                    "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sodales id diam sit amet mollis. Sed blandit magna ut augue rhoncus, eu Shopping arcu mattis. Sed vel elementum urna"
+                }
+            ]
+        }
+    ]
+}

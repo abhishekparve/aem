@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="nt:unstructured"
+        jcr:title="Cell Reactivity"
+        jcr:uuid="a203d82b-77a6-46cb-a791-32bae98fcd90"
+        sling:resourceType="acs-commons/components/utilities/genericlist">
+        <list jcr:primaryType="nt:unstructured">
+            <item0
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Human"
+                value="Human"/>
+            <item1
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Mouse"
+                value="Mouse"/>
+        </list>
+    </jcr:content>
+</jcr:root>

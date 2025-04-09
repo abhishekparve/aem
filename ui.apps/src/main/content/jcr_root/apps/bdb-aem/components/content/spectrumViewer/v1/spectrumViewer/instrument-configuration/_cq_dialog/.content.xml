@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Instrument Configurations"
+    sling:resourceType="cq/gui/components/authoring/dialog"
+    extraClientlibs="[sv.dropdown]">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/container">
+        <items jcr:primaryType="nt:unstructured">
+            <tabs
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/tabs">
+                <items jcr:primaryType="nt:unstructured">
+                    <instrumentConfigurations
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Instrument Configurations"
+                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                        <layout
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"/>
+                        <items jcr:primaryType="nt:unstructured">
+                            <column
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <title
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldDescription="Please provide Title for Instrument Configuration"
+                                        fieldLabel="Title"
+                                        name="./title"
+                                        value="Instrument Configuration"/>
+                                    <searchSectionInstruments
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Search"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <searchCytometerPlaceholder
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldDescription="Please provide value of Search Cytometer Placeholder"
+                                                fieldLabel="Search Cytometer Placeholder text"
+                                                name="./searchCytometerPlaceholder"
+                                                value="Select Cytometer"/>
+                                            <searchConfigurationPlaceholder
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldDescription="Please provide value of Search Configuration Placeholder"
+                                                fieldLabel="Search Configuration Placeholder text"
+                                                name="./searchConfigurationPlaceholder"
+                                                value="Select Configuration"/>
+                                        </items>
+                                    </searchSectionInstruments>
+                                    <configurationSectionInstruments
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Configuration"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <defaultInstrument
+                                                granite:id="default_instrument"
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                fieldLabel="Default Instrument"
+                                                fieldDescription="Please Select value of Default Instrument"
+                                                emptyOption="{Boolean}true"
+                                                name="./defaultInstrument">
+                                                <datasource
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="/bin/cytometerJsonDataDropdown"/>
+                                            </defaultInstrument>
+                                            <defaultInstrumentConfiguration
+                                                granite:id="default_instrument_configuration"
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                fieldLabel="Default Instrument Configuration"
+                                                fieldDescription="Please Select value of Default Instrument Configuration"
+                                                name="./defaultInstrumentConfiguration"/>
+                                            <defaultInstrumentConfiguration-hidden
+                                                granite:id="default_instrument_configuration--hidden"
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/hidden"
+                                                disabled="{Boolean}[true]"
+                                                fieldLabel="Default Instrument Configuration"
+                                                name="./defaultInstrumentConfiguration"/>
+                                            <deleteLaserIcon
+                                                granite:id="deleteLaserIconList"
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                fieldLabel="Delete Laser Icon"
+                                                name="./deleteLaserIcon">
+                                                <datasource
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="/bin/svgData"
+                                                    defaultSelectedValue="remove.svg"/>
+                                            </deleteLaserIcon>
+                                            <deleteLaserIconAlt
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldDescription="Please provide Alt text for Delete Laser Icon"
+                                                fieldLabel="Delete/Remove Laser Icon Alt text"
+                                                name="./deleteLaserIconAlt"
+                                                value="Delete Laser Icon"/>
+                                        </items>
+                                    </configurationSectionInstruments>
+                                </items>
+                            </column>
+                        </items>
+                    </instrumentConfigurations>
+                </items>
+            </tabs>
+        </items>
+    </content>
+</jcr:root>

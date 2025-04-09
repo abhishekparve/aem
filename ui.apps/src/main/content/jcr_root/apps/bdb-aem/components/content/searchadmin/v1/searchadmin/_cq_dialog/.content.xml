@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Search Admin Page"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        granite:class="cmp-button__editor"
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/container">
+        <items jcr:primaryType="nt:unstructured">
+            <container
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Properties"
+                sling:resourceType="granite/ui/components/coral/foundation/container"
+                margin="{Boolean}true">
+                <items jcr:primaryType="nt:unstructured">
+                    <columns
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <column
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <synonymLabel
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldLabel="Synonyms label"
+                                        fieldDescription="SynonymLabel label"
+                                        name="./synonymLabel"/>
+                                    <stopWord
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            fieldLabel="Stop Word label"
+                                            fieldDescription="Stop Word label"
+                                            name="./stopWord"/>
+                                    <stopWordLabel
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            fieldLabel="List of Existing Stop Word title"
+                                            fieldDescription="List of Existing Stop Word title"
+                                            name="./stopWordLabel"/>
+                                    <search
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            fieldLabel="Search"
+                                            fieldDescription="Search"
+                                            name="./search"/>
+                                    <existing
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            fieldLabel="Exisiting label"
+                                            fieldDescription="Exisiting label"
+                                            name="./existing"/>
+                                    <addNewStopWord
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            fieldLabel="Add New Stop Wordl"
+                                            fieldDescription="Add New Stop Word"
+                                            name="./addNewStopWord"/>
+                                    <save
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            fieldLabel="Save"
+                                            fieldDescription="Save"
+                                            name="./save"/>
+                                    <reloadSolr
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            fieldLabel="Reload server"
+                                            fieldDescription="Reloads master and slave solr server"
+                                            name="./reloadSolr"/>
+                                    <reloadSolrSuccessMsg
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            fieldLabel="Reload solr server Success Message"
+                                            fieldDescription="Reload solr server Success Message"
+                                            name="./reloadSolrSuccessMsg"/>
+                                    <managedMappings
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            fieldLabel="Managed Mappings"
+                                            fieldDescription="Managed Mappings"
+                                            name="./managedMappings"/>
+                                    <addNewSynonym
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            fieldLabel="Add New Synonym/Hypernym"
+                                            fieldDescription="Add New Synonym/Hypernym"
+                                            name="./addNewSynonym"/>
+                                    <from
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            fieldLabel="From"
+                                            fieldDescription="From"
+                                            name="./from"/>
+                                    <to
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            fieldLabel="To"
+                                            fieldDescription="To"
+                                            name="./to"/>
+                                            
+                                    <delete
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            fieldLabel="Delete"
+                                            fieldDescription="Delete CTA"
+                                            name="./delete"/>
+                                    <deleteQuestion
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            fieldLabel="Delete Question"
+                                            fieldDescription="Delete Question"
+                                            name="./deleteQuestion"/>
+                                    <deleteSuccessMsg
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            fieldLabel="Delete Success Message"
+                                            fieldDescription="Delete Success Message"
+                                            name="./deleteSuccessMsg"/>
+                                    <cancel
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            fieldLabel="Cancel"
+                                            fieldDescription="Cancel"
+                                            name="./cancel"/>
+                                    <addedSynonym
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            fieldLabel="Added Synonym/Hypernym"
+                                            fieldDescription="Added Synonym/Hypernym"
+                                            name="./addedSynonym"/>
+                                    <language
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            fieldLabel="Language"
+                                            fieldDescription="Language"
+                                            name="./language"/>
+                                </items>
+                            </column>
+                        </items>
+                    </columns>
+                </items>
+            </container>
+        </items>
+    </content>
+</jcr:root>

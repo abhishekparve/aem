@@ -1,0 +1,13 @@
+{
+    "initArgs": {
+        "ignoreCase": false
+    },
+    "initializedOn": "2020-08-19T06:06:10.025Z",
+    "updatedSinceInit": "2020-08-19T06:24:29.912Z",
+    "managedMap": {
+        "GB": ["GiB", "Gigabytes"],
+        "TV": ["Television"],
+        "happy": ["glad", "joyful"],
+        "mad": ["angry", "upset"]
+    }
+}

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Keywords"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/container">
+        <items jcr:primaryType="nt:unstructured">
+        	<tabs
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/tabs"
+                maximized="{Boolean}false">
+                <items jcr:primaryType="nt:unstructured">
+		            <container
+		                jcr:primaryType="nt:unstructured"
+		                jcr:title="Search Container"
+		                sling:resourceType="granite/ui/components/coral/foundation/container"
+		                margin="{Boolean}true">
+		                <items jcr:primaryType="nt:unstructured">
+		                    <columns
+		                        jcr:primaryType="nt:unstructured"
+		                        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+		                        margin="{Boolean}true">
+		                        <items jcr:primaryType="nt:unstructured">
+		                            <column
+		                                jcr:primaryType="nt:unstructured"
+		                                sling:resourceType="granite/ui/components/coral/foundation/container">
+		                                <items jcr:primaryType="nt:unstructured">
+		                                    <keywordFieldSet
+		                                         jcr:primaryType="nt:unstructured"
+		                                         jcr:title="Dropdown List Options"
+		                                         sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+		                                         <items jcr:primaryType="nt:unstructured">
+		                                         <keywordOptionList
+		                                               jcr:primaryType="nt:unstructured"
+		                                               sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+		                                               composite="{Boolean}true"
+		                                               fieldDescription="Keyword Options"
+		                                               fieldLabel="Keyword Options">
+		                                               <granite:data
+		                                                   jcr:primaryType="nt:unstructured"/>
+		                                               <field
+		                                                   jcr:primaryType="nt:unstructured"
+		                                                   sling:resourceType="granite/ui/components/coral/foundation/container"
+		                                                   name="./keywordOptions">
+		                                               <items jcr:primaryType="nt:unstructured">
+		                                                   <keyword
+		                                                       jcr:primaryType="nt:unstructured"
+		                                                       sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+		                                                       fieldLabel="Keyword"
+		                                                       name="./keyword"/>
+		                                                    <urlRedirect
+		                                                       jcr:primaryType="nt:unstructured"
+		                                                       sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+		                                                       fieldLabel="URL Redirect"
+		                                                       name="./urlRedirect"/>
+		                                               </items>
+		                                               </field>
+		                                     	</keywordOptionList>
+		                                     	</items>
+		                                     </keywordFieldSet>
+		                                </items>
+		                            </column>
+		                        </items>
+		                    </columns>
+		                </items>
+		            </container>
+        		</items>
+        	</tabs>
+        </items>
+    </content>
+</jcr:root>

@@ -1,0 +1,42 @@
+{
+    "label": "Australia",
+    "id": "au",
+    "states": [
+        {
+            "label": "New South Wales",
+            "id": "us-nsw"
+        },
+        {
+            "label": "Northern Territory",
+            "id": "us-NJ"
+        },
+        {
+            "label": "Queensland",
+            "id": "us-qld"
+        },
+        {
+            "label": "South Australia",
+            "id": "us-sa"
+        },
+        {
+            "label": "Tasmania",
+            "id": "us-tas"
+        },
+        {
+            "label": "Victoria",
+            "id": "us-vic"
+        },
+        {
+            "label": "Western Australia",
+            "id": "us-wa"
+        },
+        {
+            "label": "Australian Capital Territory",
+            "id": "act"
+        },
+        {
+            "label": "Alabama",
+            "id": "us-al"
+        }
+    ]
+}

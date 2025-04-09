@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Template">
+    <jcr:content
+        cq:lastModified="{Date}2020-11-26T14:47:44.677+05:30"
+        cq:lastModifiedBy="admin"
+        cq:templateType="/conf/bdb-aem/settings/wcm/template-types/no-header-footer"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="BDB No Header Footer Template"
+        status="enabled"/>
+</jcr:root>

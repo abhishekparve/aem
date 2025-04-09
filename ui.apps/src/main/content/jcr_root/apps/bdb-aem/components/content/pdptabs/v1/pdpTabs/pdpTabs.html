@@ -1,0 +1,1105 @@
+	<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html" />
+	<sly data-sly-use.time="com.bdb.aem.core.models.TimerModel"></sly>
+	<sly data-sly-call="${templates.placeholder @ isEmpty = !properties.type, classAppend='cmp-pdpTabs'}"></sly>
+	<sly data-sly-use.pdpTabObject="com.bdb.aem.core.models.PDPTabModel"
+		data-sly-use.pdpTemplateModel="com.bdb.aem.core.models.PDPTemplateModel">
+		<div class="pdp-tabs__nav-wrapper">
+			<sly data-sly-test="${pdpTemplateModel.templateId !='Instruments'}">
+				<nav class="pdp-tabs__menu-list bd-container">
+
+					<sly data-sly-test="${pdpTemplateModel.templateId =='Kit'}">
+						<ul class="row m-0 kits-sets" role="tablist" aria-label="product details tabs"/>
+					</sly>
+					<sly data-sly-test="${pdpTemplateModel.templateId == 'Other'}">
+						<ul class="row m-0 single-format-antibody" role="tablist" aria-label="product details tabs"/>
+					</sly>
+					<sly data-sly-test="${pdpTemplateModel.templateId != 'Kit' && pdpTemplateModel.templateId != 'Other'}">
+						<ul class="row m-0 single-format-antibody" role="tablist" aria-label="product details tabs"/>
+					</sly>
+					<sly data-sly-test="${pdpTemplateModel.templateId != 'Instruments'}">
+						<li id=Product Details role="tab" data-tab=0
+							class="pdp-tabs__menu-list_item col-sm-12 col-lg-2-11 pdp-tabs__menu-list_item_product_details active"
+							aria-selected="true" aria-controls="product_details" data-tab-name="product_details">
+							<a class="pdp-tabs__menu-list_item_text d-flex justify-content-center text-center">
+								<span data-sly-test="${pdpTabObject.productDetailsTabLabel}">${pdpTabObject.productDetailsTabLabel}</span>
+							</a>
+						</li>
+					</sly>
+
+					<sly data-sly-test="${pdpTemplateModel.templateId == 'Kit'}">
+						<sly data-sly-test="${pdpTabObject.componentList}">
+							<li id=Components role="tab" data-tab=1
+								class="pdp-tabs__menu-list_item col-sm-12 col-lg-2-11 pdp-tabs__menu-list_item_components_id "
+								aria-selected="" aria-controls="components_id" data-tab-name="components_id">
+								<a class="cta-link  pdp-tabs__menu-list_item_text d-flex justify-content-center text-center">
+									<span data-sly-test="${pdpTabObject.componentsLabel}">${pdpTabObject.componentsLabel}</span>
+								</a>
+							</li>
+						</sly>
+					</sly>
+
+					<sly data-sly-test="${pdpTemplateModel.templateId == 'SFA' || pdpTemplateModel.templateId == 'SCM'}">
+						<li id=AntiBody Details role="tab" data-tab=1
+							class="pdp-tabs__menu-list_item col-sm-12 col-lg-2-11 pdp-tabs__menu-list_item_antiBody_details "
+							aria-selected="" aria-controls="antibody_details" data-tab-name="antibody_details">
+							<a class="pdp-tabs__menu-list_item_text d-flex justify-content-center text-center">
+								<span data-sly-test="${pdpTabObject.antibodyDetailsTabLabel}">${pdpTabObject.antibodyDetailsTabLabel}</span>
+							</a>
+						</li>
+					</sly>
+					<sly data-sly-test="${pdpTemplateModel.templateId == 'SFA' || pdpTemplateModel.templateId == 'SCM'}">
+						<sly data-sly-test="${pdpTabObject.name || pdpTabObject.bdFormatdescription || pdpTabObject.formatname || pdpTabObject.excitationSource 
+								|| pdpTabObject.excitationmax || pdpTabObject.emmisionmax || pdpTabObject.formatDetailsImage}">
+							<li id=Format Details role="tab" data-tab=2
+								class="pdp-tabs__menu-list_item col-sm-12 col-lg-2-11 pdp-tabs__menu-list_item_format_details "
+								aria-selected="" aria-controls="format_details" data-tab-name="format_details">
+								<a class="pdp-tabs__menu-list_item_text d-flex justify-content-center text-center">
+									<span data-sly-test="${pdpTabObject.formatDetailsTabLabel}">${pdpTabObject.formatDetailsTabLabel}</span>
+								</a>
+							</li>
+						</sly>
+					</sly>
+					<sly data-sly-test="${pdpTemplateModel.templateId != 'Instruments'}">
+						<sly data-sly-test="${pdpTabObject.showCiteabWidget == 'True'}">
+							<sly data-sly-test="${pdpTemplateModel.templateId == 'SFA'|| pdpTemplateModel.templateId == 'SCM'}">
+								<li id=Citations &amp; References role="tab" data-tab=3
+									class="pdp-tabs__menu-list_item col-sm-12 col-lg-2-11 pdp-tabs__menu-list_item_citations_references "
+									aria-selected="" aria-controls="citations_references" data-tab-name="citations_references">
+									<a class="pdp-tabs__menu-list_item_text d-flex justify-content-center text-center">
+										<span
+											data-sly-test="${pdpTabObject.referencesTabLabel}">${pdpTabObject.referencesTabLabel}</span>
+									</a>
+								</li>
+							</sly>
+						</sly>
+						<sly data-sly-test="${pdpTabObject.showCiteabWidget != 'True'}">
+							<sly data-sly-test="${pdpTabObject.referenceList}">
+								<li id=Citations &amp; References role="tab" data-tab=3
+									class="pdp-tabs__menu-list_item col-sm-12 col-lg-2-11 pdp-tabs__menu-list_item_citations_references "
+									aria-selected="" aria-controls="citations_references" data-tab-name="citations_references">
+									<a class="pdp-tabs__menu-list_item_text d-flex justify-content-center text-center">
+										<span
+											data-sly-test="${pdpTabObject.referencesTabLabel}">${pdpTabObject.referencesTabLabel}</span>
+									</a>
+								</li>
+							</sly>
+						</sly>
+					</sly>
+					</ul>
+				</nav>
+			</sly>
+			<sly data-sly-test="${pdpTemplateModel.templateId == 'Instruments'}">
+				<!-- For Instruments -->
+				<nav class="pdp-tabs__menu-list bd-container">
+					<ul role="tablist" class="row m-0 single-format-antibody">
+						<li Details aria-controls="instrumental_details" aria-selected="true"
+							class="pdp-tabs__menu-list_item col-sm-12 col-lg-2-11 pdp-tabs__menu-list_item_product_details active"
+							data-tab=0
+							id=Instrument role="tab" data-tab-name="instrumental_details">
+							<a class="pdp-tabs__menu-list_item_text d-flex justify-content-center text-center">
+								<span data-sly-test="${pdpTabObject.productDetailsTabLabel}">${pdpTabObject.instrumentDetailsTabLabel}</span>
+							</a>
+						</li>
+						<sly data-sly-test="${pdpTabObject.productUrl}">
+							<li Products aria-controls="companion_products" aria-selected="false"
+								class="pdp-tabs__menu-list_item col-sm-12 col-lg-2-11 pdp-tabs__menu-list_item_antiBody_details"
+								data-tab=1
+								id=Companion role="tab" data-tab-name="companion_products">
+								<a class="pdp-tabs__menu-list_item_text d-flex justify-content-center text-center">
+									<span data-sly-test="${pdpTabObject.productDetailsTabLabel}">${pdpTabObject.companionProductsLabel}</span>
+								</a>
+							</li>
+						</sly>
+					</ul>
+				</nav>
+			</sly>
+		</div>
+
+		<!-- For Instruments -->
+		<sly data-sly-test="${pdpTemplateModel.templateId != 'SFA' && pdpTemplateModel.templateId != 'Other'
+		&& pdpTemplateModel.templateId != 'Kit' && pdpTemplateModel.templateId != 'SCM'}">
+			<div class="bd-container">
+				<section aria-labelledby="Instrument Details" class="pdp-tabs__content d-flex flex-column"
+						 id="instrumental_details" role="tabpanel" tabindex="0" data-tab-name="instrumental_details" data-tab-id="instrumental_details" data-tab=0>
+					<div class="pdp-tabs__content__accordian d-flex pdp-tabs__content__accordian_product_details"
+						 data-accordian=0 data-tab-name="instrumental_details" data-tab-id="instrumental_details" data-tab=0>
+						<span class="pdp-tabs__content__accordian_text pt-lg-0">${pdpTabObject.instrumentDetailsTabLabel}</span>
+						<div class=" pdp-tabs__content__accordian_icons ml-auto ">
+							<img class="pdp-tabs__content__accordian_icons_down-arrow "
+								 src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/dropdown-arrow-down.svg "
+								 alt="Down Arrow " />
+							<img class="pdp-tabs__content__accordian_icons_up-arrow "
+								 src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/dropdown-arrow-up.svg "
+								 alt="Up Arrow " />
+						</div>
+					</div>
+					<div class="pdp-tabs__content__item">
+						<article class="product-details app-js__product-details">
+							<div class="product-details__block row m-0 p-0">
+								<div class="product-details__block_item col-12 col-sm-12 col-lg-6-2 p-0">
+									<article class="product-details-list app-js__product-details-list">
+										<div class="product-details-list__container">
+											<sly data-sly-test="${announcementModelObject}"
+												 data-sly-use.announcementModelObject="com.bdb.aem.core.models.ProductAnnouncementModel">
+												<sly data-sly-test="${announcementModelObject.disclaimerStatus =='true'}">
+													<article class="regional-disclaimer d-inline-flex  align-items-center bdb-alert app-js__alert">
+														<img alt="Alert icon"
+															 class=""
+															 data-sly-test="${announcementModelObject.regionalDisclaimers}"
+															 src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/information.svg">
+														<p class="bdb-alert__info_text">
+															${announcementModelObject.regionalDisclaimers @context='html'}
+														</p>
+													</article>
+												</sly>
+											</sly>
+											<br><br>
+											<sly data-sly-list.key="${pdpTabObject.productDetailsMap}"
+												 data-sly-test="${pdpTabObject.productDetailsMap}">
+												<sly data-sly-test="${pdpTabObject.productDetailsMap[key]}">
+													<div class="product-details-list__container_block d-flex">
+														<label class="product-details-list__container_block_label col-lg-2-11 p-0 pr-3"
+															   data-sly-test="${key}">${key}:</label>
+														<span class="product-details-list__container_block_description col-lg-9-11"
+															  data-sly-test="${pdpTabObject.productDetailsMap[key]}">${pdpTabObject.productDetailsMap[key]}
+                                                        <sly data-sly-test="${pdpTabObject.productDetailsMap[key] == pdpTabObject.OptiBuild}">
+                                                            <div data-sly-test="${pdpTabObject.brandDescription}">${pdpTabObject.brandDescription @context='html'}</div>
+                                                        </sly>
+											        </span>
+													</div>
+												</sly>
+											</sly>
+											<br><br>
+											<article
+													class="antibody-details app-js__antibody-details"
+													data-sly-test="${pdpTabObject.tdsDescription || pdpTabObject.otherTdsDescription}">
+												<h2 class="antibody-details-list__title with-pd">${properties.productDescription}
+												</h2>
+												<div class="antibody-details-list__description bd-rte"
+													 data-sly-test="${pdpTabObject.tdsDescription && !pdpTabObject.otherTdsDescription}">
+													${pdpTabObject.tdsDescription @context='html'}
+												</div>
+												<div class="antibody-details-list__description bd-rte"
+													 data-sly-test="${!pdpTabObject.tdsDescription && pdpTabObject.otherTdsDescription}">
+													${pdpTabObject.otherTdsDescription @context='html'}
+												</div>
+												<sly data-sly-test="${pdpTabObject.tdsDescription && pdpTabObject.otherTdsDescription}">
+													<div class="antibody-details-list__description bd-rte">
+														${pdpTabObject.tdsDescription @context='html'}
+													</div>
+													<br>
+													<div class="antibody-details-list__description bd-rte">
+														${pdpTabObject.otherTdsDescription @context='html'}
+													</div>
+												</sly>
+											</article>
+											<article class="phantom-bd-service-plan app-js_phantom-bd-service-plan">
+												<sly data-sly-test="${pdpTabObject.isPhantom && pdpTabObject.phantomProductsList}">
+													<h2 class="antibody-details-list__title">${pdpTabObject.phantomTitleText}</h2>
+													<div class="phantom-bd-service-plan_description bd-rte">${pdpTabObject.phantomSubTitleText @context='html'}</div>
+													<div class="phantom-bd-service-plan-table-container">
+														<div class="bdb-comparison-table styled-table bg-white">
+															<div class="styled-table-wrap">
+																<table class="styled-table-content">
+																	<thead class="omics-header">
+																	<tr>
+																		<th>${pdpTabObject.descriptionLabel}</th>
+																		<th>${pdpTabObject.sizeQuantityLabel @context='html'}</th>
+																		<th>${pdpTabObject.catNumberLabel}</th>
+																	</tr>
+																	</thead>
+																	<tbody>
+																	<sly data-sly-list.phantomProducts="${pdpTabObject.phantomProductsList}">
+																		<tr>
+																			<td>
+																				${phantomProducts.productTitle @context='html'}
+																			</td>
+																			<td class="text-center">
+																				${phantomProducts.sizeQuantity @context='html'}
+																			</td>
+																			<td class="text-center">
+																				<sly data-sly-test="${phantomProducts.productUrl}">
+																					<a href="${phantomProducts.productUrl}" target="_blank">${phantomProducts.materialNumber}</a>
+																				</sly>
+																			</td>
+																		</tr>
+																	</sly>
+																	</tbody>
+																</table>
+															</div>
+														</div>
+													</div>
+												</sly>
+											</article>
+										</div>
+									</article>
+								</div>
+								<div class="product-details__block_item col-12 col-sm-12 col-lg-3-7">
+									<div data-sly-unwrap="${!wcmmode.edit}">
+										<sly data-sly-resource="${'datasheets' @resourceType = 'bdb-aem/proxy/components/content/datasheets'}"
+											 data-sly-unwrap></sly>
+									</div>
+									<bd-recently-viewed labels="recentlyViewed"></bd-recently-viewed>
+								</div>
+								<div class="product-details__block_item col-12">
+									<article class="antibody-details app-js__antibody-details">
+										<h3 class="antibody-details-list__title with-ng-mr"
+											data-sly-test="${properties.iypTitleText && pdpTabObject.includedWithYourPurchase}">
+											${properties.iypTitleText}</h3>
+									</article>
+									<article class="pdp-component-details app-js__pdp-component-details">
+										<div data-sly-test="${pdpTabObject.includedWithYourPurchase}"
+											 class="pdp-component-details-block bd-container">
+											<table>
+												<thead>
+												<tr>
+													<th>${pdpTabObject.productNameLabel}</th>
+													<th>${pdpTabObject.catalogNumberLabel}</th>
+													<th>${pdpTabObject.quantityLabel}</th>
+													<th>${pdpTabObject.instrumentRegulatoryStatusLabel}</th>
+												</tr>
+												</thead>
+												<tbody>
+												<sly data-sly-list.components="${pdpTabObject.instrumentPurchaseList}">
+													<tr>
+														<td>${components.productName @context='html'}</td>
+														<td>${components.catalogNumber @context='html'}</td>
+														<td>${components.quantitySize}</td>
+														<td data-sly-list.key="${pdpTabObject.productDetailsMap}" data-sly-test="${pdpTabObject.productDetailsMap}">
+															<sly data-sly-test="${key == pdpTabObject.isregulatoryStatus}">
+																${pdpTabObject.productDetailsMap[key]}
+															</sly>
+														</td>
+													</tr>
+												</sly>
+												</tbody>
+											</table>
+										</div>
+									</article>
+									<article class="antibody-detail	s app-js__antibody-details">
+										<h3 class="antibody-details-list__title with-mr"
+											data-sly-test="${properties.resTitleText && pdpTabObject.resources}">
+											${properties.resTitleText}</h3>
+										<div data-sly-test="${pdpTabObject.resources}"
+											 class="antibody-details-list__description bd-rte">
+											${pdpTabObject.resources @context='html'}
+										</div>
+									</article>
+									<article class="list-items app-js__list-items"
+											 data-sly-test="${pdpTabObject.productNotices}">
+										<h3 class="list-items__heading"
+											data-sly-test="${properties.pnTitleText && pdpTabObject.productNotices}">
+											${properties.pnTitleText}</h3>
+										<div class="list-items__unordered-list">
+											${pdpTabObject.productNotices @context='html'}
+										</div>
+										<div class="list-items__cta">
+											<a class="cta-link list-items__cta__show-more hide" href="#" tabindex="0">
+                                            <span class="cta-content">
+                                                <span class="cta-text"
+													  data-sly-test="${pdpTabObject.showmorelabel}"
+													  tabindex="-1">
+                                                      ${pdpTabObject.showmorelabel}
+                                                </span>
+                                                <img alt="blue down arrow"
+													 src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/blue-down-arrow.svg"/>
+                                            </span>
+											</a>
+											<a class="cta-link list-items__cta__show-less hide" href="#" tabindex="0">
+                                            <span class="cta-content">
+                                                <span class="cta-text"
+													  data-sly-test="${pdpTabObject.showlesslabel}"
+													  tabindex="-1">
+                                                      ${pdpTabObject.showlesslabel}
+                                                </span>
+                                                <img lt="blue up arrow"
+													 src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/blue-up-arrow.svg"/>
+                                            </span>
+											</a>
+										</div>
+									</article>
+								</div>
+							</div>
+							<div class="">
+								<sly data-sly-unwrap="${!wcmmode.edit}">
+									<sly data-sly-resource="${'popularAndRecommendedProducts' @resourceType = 'bdb-aem/proxy/components/content/popularAndRecommendedProducts'}"
+										 data-sly-unwrap></sly>
+								</sly>
+							</div>
+						</article>
+					</div>
+				</section>
+				<section aria-labelledby="Companion Products" class="pdp-tabs__content d-flex flex-column"
+					 id="companion_products" role="tabpanel" tabindex="0" data-tab-name="companion_products" data-tab-id="companion_products" data-tab=1>
+					<div class="pdp-tabs__content__accordian d-flex pdp-tabs__content__accordian_format_details"
+						 data-accordian=1 data-tab-name="companion_products" data-tab-id="companion_products" data-tab=1>
+						<span class="pdp-tabs__content__accordian_text ">${pdpTabObject.companionProductsLabel}</span>
+						<div class=" pdp-tabs__content__accordian_icons ml-auto ">
+							<img class="pdp-tabs__content__accordian_icons_down-arrow "
+								 src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/dropdown-arrow-down.svg "
+								 alt="Down Arrow " />
+							<img class="pdp-tabs__content__accordian_icons_up-arrow "
+								 src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/dropdown-arrow-up.svg "
+								 alt="Up Arrow " />
+						</div>
+					</div>
+					<div class="pdp-tabs__content__item">
+						<article class="antibody-details app-js__antibody-details">
+							<div data-sly-unwrap="${!wcmmode.edit}">
+								<sly data-sly-resource="${'searchresults' @resourceType = 'bdb-aem/proxy/components/content/searchresults'}"
+									 data-sly-unwrap></sly>
+							</div>
+						</article>
+					</div>
+				</section>
+				<sly data-sly-test="${!pdpTabObject.productUrl && wcmmode.edit}">
+				   <sly data-sly-resource="${'searchresults' @resourceType = 'bdb-aem/proxy/components/content/searchresults'}"
+				       data-sly-unwrap></sly>
+				</sly>
+			</div>
+		</sly>
+
+		<sly data-sly-test="${pdpTemplateModel.templateId != 'Instruments'}">
+			<div class="bd-container">
+				<section tabindex="0" role="tabpanel" id="product_details" class="pdp-tabs__content d-flex flex-column"
+					aria-labelledby="Product Details" data-tab-name="product_details" data-tab-id="product_details" data-tab=0>
+					<div class="pdp-tabs__content__accordian d-flex pdp-tabs__content__accordian_product_details"
+						data-accordian=0 data-tab-name="product_details" data-tab-id="product_details" data-tab=0>
+						<span
+							class="pdp-tabs__content__accordian_text pt-lg-0">${pdpTabObject.productDetailsTabLabel}</span>
+						<div class=" pdp-tabs__content__accordian_icons ml-auto ">
+							<img class="pdp-tabs__content__accordian_icons_down-arrow "
+								src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/dropdown-arrow-down.svg "
+								alt="Down Arrow " />
+							<img class="pdp-tabs__content__accordian_icons_up-arrow "
+								src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/dropdown-arrow-up.svg "
+								alt="Up Arrow " />
+						</div>
+					</div>
+					<div class="pdp-tabs__content__item">
+						<article class="product-details app-js__product-details">
+							<div class="product-details__block row m-0 p-0">
+								<div class="product-details__block_item col-12 col-sm-12 col-lg-6-2 p-0">
+									<article class="product-details-list app-js__product-details-list">
+										<div class="product-details-list__container">
+											<sly data-sly-use.announcementModelObject="com.bdb.aem.core.models.ProductAnnouncementModel"
+												data-sly-test="${announcementModelObject}">
+												<sly data-sly-test="${announcementModelObject.disclaimerStatus =='true'}">
+													<article
+														class="regional-disclaimer d-inline-flex  align-items-center bdb-alert app-js__alert">
+														<img data-sly-test="${announcementModelObject.regionalDisclaimers}"
+															class=""
+															src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/information.svg"
+															alt="Alert icon">
+														<p class="bdb-alert__info_text">
+															${announcementModelObject.regionalDisclaimers @context='html'}
+														</p>
+													</article>
+												</sly>
+											</sly><br><br>
+											<sly data-sly-test="${pdpTemplateModel.templateId == 'Other'}">
+												<!-- TDS Description for other template-->
+												<article
+													data-sly-test="${pdpTabObject.tdsDescription || pdpTabObject.otherTdsDescription}"
+													class="antibody-details app-js__antibody-details">
+													<h2 class="antibody-details-list__title">
+														${properties.productDescription}</h2>
+													<div data-sly-test="${pdpTabObject.tdsDescription && !pdpTabObject.otherTdsDescription}"
+														class="antibody-details-list__description bd-rte">
+														${pdpTabObject.tdsDescription @context='html'}
+													</div>
+													<div data-sly-test="${!pdpTabObject.tdsDescription && pdpTabObject.otherTdsDescription}"
+														class="antibody-details-list__description bd-rte">
+														${pdpTabObject.otherTdsDescription @context='html'}
+													</div>
+													<sly
+														data-sly-test="${pdpTabObject.tdsDescription && pdpTabObject.otherTdsDescription}">
+														<div class="antibody-details-list__description bd-rte">
+															${pdpTabObject.tdsDescription @context='html'}
+														</div><br>
+														<div class="antibody-details-list__description bd-rte">
+															${pdpTabObject.otherTdsDescription @context='html'}
+														</div>
+													</sly>
+												</article>
+											</sly>
+
+											<sly data-sly-test="${pdpTabObject.productDetailsMap}"
+												data-sly-list.key="${pdpTabObject.productDetailsMap}">
+												<sly data-sly-test="${pdpTabObject.productDetailsMap[key]}">
+													<div class="product-details-list__container_block d-flex">
+														<label data-sly-test="${key}"
+															class="product-details-list__container_block_label col-lg-2-11 p-0 pr-3">${key}:</label>
+														<span data-sly-test="${pdpTabObject.productDetailsMap[key]}"
+															class="product-details-list__container_block_description col-lg-9-11">${pdpTabObject.productDetailsMap[key]}
+															 <sly data-sly-test="${pdpTabObject.productDetailsMap[key] == pdpTabObject.OptiBuild}">
+																<div data-sly-test="${pdpTabObject.brandDescription}">${pdpTabObject.brandDescription @context='html'}</div>
+															</sly>
+														</span>
+													</div>
+												</sly>
+											</sly>
+											<sly
+												data-sly-test="${pdpTemplateModel.templateId != 'Instruments' && pdpTemplateModel.templateId != 'Kit' && pdpTemplateModel.templateId != 'Other'}">
+												<sly data-sly-test="${pdpTabObject.formatname || pdpTabObject.bdFormatdescription || pdpTabObject.formatname || pdpTabObject.excitationSource || pdpTabObject.excitationmax
+																							|| pdpTabObject.emmisionmax || pdpTabObject.formatDetailsImage}">
+												   <sly data-sly-test="${pdpTabObject.tdsCloneName != 'Polyclonal' && pdpTabObject.tdsCloneName != 'Antibody-Oligo' &&  pdpTabObject.brand != pdpTabObject.abSeqBrand}">
+													<div class="product-details-list__container__ctaBlock">
+														<span data-sly-test="${pdpTabObject.viewAllFormatsLabel}">
+															<button type="button" class="product-details-list__container__view-all-formats btn-secondary"
+																aria-label="product details cta">
+																${pdpTabObject.viewAllFormatsLabel}</button>
+														</span>
+													</div>
+													</sly>
+												</sly>
+											</sly>
+										</div>
+									</article><br><br>
+
+									<sly data-sly-test="${pdpTemplateModel.templateId != 'Instruments'}">
+										<!-- TDS Description for Kit template-->
+										<sly data-sly-test="${pdpTemplateModel.templateId == 'Kit'}">
+											<article
+												data-sly-test="${pdpTabObject.tdsDescription || pdpTabObject.otherTdsDescription}"
+												class="antibody-details app-js__antibody-details">
+												<h2 class="antibody-details-list__title">
+													${properties.productDescription}</h2>
+												<div data-sly-test="${pdpTabObject.tdsDescription && !pdpTabObject.otherTdsDescription}"
+													class="antibody-details-list__description bd-rte">
+													${pdpTabObject.tdsDescription @context='html'}
+												</div>
+												<div data-sly-test="${!pdpTabObject.tdsDescription && pdpTabObject.otherTdsDescription}"
+													class="antibody-details-list__description bd-rte">
+													${pdpTabObject.otherTdsDescription @context='html'}
+												</div>
+												<sly
+													data-sly-test="${pdpTabObject.tdsDescription && pdpTabObject.otherTdsDescription}">
+													<div class="antibody-details-list__description bd-rte">
+														${pdpTabObject.tdsDescription @context='html'}
+													</div><br>
+													<div class="antibody-details-list__description bd-rte">
+														${pdpTabObject.otherTdsDescription @context='html'}
+													</div>
+												</sly>
+											</article>
+										</sly>
+										<article class="phantom-bd-service-plan app-js_phantom-bd-service-plan">
+											<sly data-sly-test="${pdpTabObject.isPhantom && pdpTabObject.phantomProductsList}">
+												<h2 class="antibody-details-list__title">${pdpTabObject.phantomTitleText}</h2>
+												<div class="phantom-bd-service-plan_description bd-rte">${pdpTabObject.phantomSubTitleText @context='html'}</div>
+												<div class="phantom-bd-service-plan-table-container">
+													<div class="bdb-comparison-table styled-table bg-white">
+														<div class="styled-table-wrap">
+															<table class="styled-table-content">
+																<thead class="omics-header">
+																<tr>
+																	<th>${pdpTabObject.descriptionLabel}</th>
+																	<th>${pdpTabObject.sizeQuantityLabel @context='html'}</th>
+																	<th>${pdpTabObject.catNumberLabel}</th>
+																</tr>
+																</thead>
+																<tbody>
+																<sly data-sly-list.phantomProducts="${pdpTabObject.phantomProductsList}">
+																	<tr>
+																		<td>
+																			${phantomProducts.productTitle @context='html'}
+																		</td>
+																		<td class="text-center">
+																			${phantomProducts.sizeQuantity @context='html'}
+																		</td>
+																		<td class="text-center">
+																			<sly data-sly-test="${phantomProducts.productUrl}">
+																				<a href="${phantomProducts.productUrl}" target="_blank">${phantomProducts.materialNumber}</a>
+																			</sly>
+																		</td>
+																	</tr>
+																</sly>
+																</tbody>
+															</table>
+														</div>
+													</div>
+												</div>
+											</sly>
+										</article>
+									   <article class="preparation-storage app-js__preparation-storage list-items">
+											<h2 class="antibody-details-list__title"
+												data-sly-test="${pdpTabObject.preparationStorage || pdpTabObject.addPreparationStorage}">
+												${properties.pasTitleText}</h2>                                        
+											<div class="list-items__unordered-list preparation-storage_list">
+												${pdpTabObject.preparationStorage @context='html'}
+											   <p data-sly-test="${pdpTabObject.addPreparationStorage}"
+											   class="preparation-storage_description">${pdpTabObject.addPreparationStorage @context='html'}
+											</p>
+											</div>
+											<div class="list-items__cta">
+												<a class="cta-link list-items__cta__show-more hide" href="#" tabindex="0">
+													<span class="cta-content">
+														<span data-sly-test="${pdpTabObject.showmorelabel}" class="cta-text"
+															tabindex="-1">
+															${pdpTabObject.showmorelabel}
+														</span>
+														<img src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/blue-down-arrow.svg"
+															alt="blue down arrow" />
+
+													</span>
+												</a>
+												<a class="cta-link list-items__cta__show-less hide" href="#" tabindex="0">
+													<span class="cta-content">
+														<span data-sly-test="${pdpTabObject.showlesslabel}" class="cta-text"
+															tabindex="-1">
+															${pdpTabObject.showlesslabel}
+														</span>
+														<img src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/blue-up-arrow.svg"
+															alt="blue up arrow" />
+													</span>
+												</a>
+											</div>
+
+
+										</article>
+										<article data-sly-test="${pdpTabObject.recomAssayProcedure}" class="list-items app-js__list-items">
+											<h3 data-sly-test="${pdpTabObject.rapTitleText && pdpTabObject.recomAssayProcedure}"
+												class="list-items__heading">
+												${pdpTabObject.rapTitleText}</h3>
+											<div class="list-items__unordered-list">
+												${pdpTabObject.recomAssayProcedure @context='html'}
+											</div>
+											<div class="list-items__cta">
+												<a class="cta-link list-items__cta__show-more hide" href="#" tabindex="0">
+													<span class="cta-content">
+														<span data-sly-test="${pdpTabObject.showmorelabel}" class="cta-text"
+															tabindex="-1">
+															${pdpTabObject.showmorelabel}
+														</span>
+														<img src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/blue-down-arrow.svg"
+															alt="blue down arrow" />
+
+													</span>
+												</a>
+												<a class="cta-link list-items__cta__show-less hide" href="#" tabindex="0">
+													<span class="cta-content">
+														<span data-sly-test="${pdpTabObject.showlesslabel}" class="cta-text"
+															tabindex="-1">
+															${pdpTabObject.showlesslabel}
+														</span>
+														<img src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/blue-up-arrow.svg"
+															alt="blue up arrow" />
+													</span>
+												</a>
+											</div>
+										</article>
+										<article data-sly-test="${pdpTabObject.productNotices}" class="list-items app-js__list-items">
+											<h3 data-sly-test="${properties.pnTitleText && pdpTabObject.productNotices}"
+												class="list-items__heading">
+												${properties.pnTitleText}</h3>
+											<div class="list-items__unordered-list">
+												${pdpTabObject.productNotices @context='html'}
+											</div>
+											<div class="list-items__cta">
+												<a class="cta-link list-items__cta__show-more hide" href="#" tabindex="0">
+													<span class="cta-content">
+														<span data-sly-test="${pdpTabObject.showmorelabel}" class="cta-text"
+															tabindex="-1">
+															${pdpTabObject.showmorelabel}
+														</span>
+														<img src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/blue-down-arrow.svg"
+															alt="blue down arrow" />
+													</span>
+												</a>
+												<a class="cta-link list-items__cta__show-less hide" href="#" tabindex="0">
+													<span class="cta-content">
+														<span data-sly-test="${pdpTabObject.showlesslabel}" class="cta-text"
+															tabindex="-1">
+															${pdpTabObject.showlesslabel}
+														</span>
+														<img src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/blue-up-arrow.svg"
+															alt="blue up arrow" />
+
+													</span>
+												</a>
+											</div>
+										</article>                                    
+									 <sly data-sly-unwrap="${!wcmmode.edit}">
+												<sly data-sly-resource="${'requiredCompanionProduct' @resourceType = 'bdb-aem/proxy/components/content/requiredCompanionProduct'}"
+													data-sly-unwrap></sly>                                                                       
+									</sly>
+									</sly>
+								</div>
+								<div class="product-details__block_item col-12 col-sm-12 col-lg-3-7">
+									<div data-sly-unwrap="${!wcmmode.edit}">
+										<sly data-sly-resource="${'datasheets' @resourceType = 'bdb-aem/proxy/components/content/datasheets'}"
+											data-sly-unwrap></sly>
+									</div>
+									<article class="pdp-companion app-js__pdp-companion">
+										<div data-sly-unwrap="${!wcmmode.edit}">
+											<sly data-sly-resource="${'companionproducts' @resourceType = 'bdb-aem/proxy/components/content/companionproducts'}"
+												data-sly-unwrap></sly>
+										</div>
+									</article>
+									<bd-recently-viewed labels="recentlyViewed"></bd-recently-viewed>
+								</div>
+							</div>
+							<div class="">
+								<sly data-sly-unwrap="${!wcmmode.edit}">
+									  <sly data-sly-resource="${'popularAndRecommendedProducts' @resourceType = 'bdb-aem/proxy/components/content/popularAndRecommendedProducts'}"
+										  data-sly-unwrap></sly>                                                                       
+								</sly>
+							</div>
+						</article>
+						<div data-sly-test="${pdpTabObject.tdsRevisionNo !=''}"
+							class="pdp-tabs__content__item-tds-revision-number bd-container product_details_tds">
+							${pdpTabObject.materialNumber} Rev. ${pdpTabObject.tdsRevisionNo}</div>
+					</div>
+				</section>
+				<sly data-sly-test="${pdpTemplateModel.templateId == 'Kit'}">
+				   <sly data-sly-test="${pdpTabObject.componentList}">
+					<section tabindex="0" role="tabpanel" id="components_id" class="pdp-tabs__content d-flex flex-column"
+						aria-labelledby="Components" data-tab-name="components_id" data-tab-id="components_id" data-tab=1>
+						<div class="pdp-tabs__content__accordian d-flex pdp-tabs__content__accordian_components_id"
+							data-accordian=1 data-tab-name="components_id" data-tab-id="components_id" data-tab=1>
+							<span class="pdp-tabs__content__accordian_text ">${pdpTabObject.componentsLabel}</span>
+							<div class=" pdp-tabs__content__accordian_icons ml-auto ">
+								<img class="pdp-tabs__content__accordian_icons_down-arrow "
+									src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/dropdown-arrow-down.svg "
+									alt="Down Arrow " />
+								<img class="pdp-tabs__content__accordian_icons_up-arrow "
+									src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/dropdown-arrow-up.svg "
+									alt="Up Arrow " />
+							</div>
+						</div>
+						<div class="pdp-tabs__content__item">
+							<article class="pdp-component-details app-js__pdp-component-details">
+								<div class="pdp-component-details-block bd-container">
+									<table>
+										<thead>
+											<tr data-sly-test="${!pdpTabObject.isAuthor}">
+
+												<th>${pdpTabObject.componentDescriptionLabel}</th>
+												<th data-sly-test="${pdpTabObject.productType == 'KitProduct'}">
+													${pdpTabObject.componentSizeLabel}</th>
+												<th data-sly-test="${pdpTabObject.productType == 'KitProduct'}">
+													${pdpTabObject.componentPartNumberLabel}</th>
+												<th data-sly-test="${pdpTabObject.productType == 'MultiColorAntibody'}">
+													${pdpTabObject.componentCloneLabel}</th>
+												<th data-sly-test="${pdpTabObject.productType == 'MultiColorAntibody'}">
+													${pdpTabObject.componentIsotypeLabel}</th>
+												<th>${pdpTabObject.componentEntrezGeneIdLabel}</th>    
+											</tr>
+											<sly data-sly-list.columns="${pdpTabObject.columnMultifield}"
+												data-sly-test="${pdpTabObject.isAuthor}" data-sly-unwrap>
+												<th>${columns.columnData}</th>
+											</sly>
+										</thead>
+										<tbody>
+											<sly data-sly-list.components="${pdpTabObject.componentList}"
+												data-sly-test="${!pdpTabObject.isAuthor}" data-sly-unwrap>
+												<tr>
+
+													<td>${components.description}</td>
+													<td data-sly-test="${pdpTabObject.productType == 'KitProduct'}">${components.size}
+													</td>
+													<td data-sly-test="${pdpTabObject.productType == 'KitProduct'}">
+														${components.componentMaterialNumber}</td>
+													<td data-sly-test="${pdpTabObject.productType == 'MultiColorAntibody'}">
+														${components.tdsCloneName}</td>
+													<td data-sly-test="${pdpTabObject.productType == 'MultiColorAntibody'}">${components.isoType}
+													</td>
+													<td>${components.entrezGeneID}</td>
+												</tr>
+											</sly>
+											<sly data-sly-list.row="${pdpTabObject.rowMultifield}"
+												data-sly-test="${pdpTabObject.isAuthor}" data-sly-unwrap>
+												<tr>
+													<sly data-sly-list.rowColumn="${row.rowColumnMultifield}"
+														data-sly-test="${row.rowColumnMultifield}" data-sly-unwrap>
+														<td>${rowColumn.columnData}</td>
+
+													</sly>
+												</tr>
+											</sly>
+
+										</tbody>
+									</table>
+								</div>
+							</article>
+							<div data-sly-test="${pdpTabObject.tdsRevisionNo !=''}"
+								class="pdp-tabs__content__item-tds-revision-number bd-container">
+								${pdpTabObject.materialNumber} Rev. ${pdpTabObject.tdsRevisionNo}
+							</div>
+						</div>
+					</section>
+				  </sly>
+				</sly>  
+				
+				<sly data-sly-test="${pdpTemplateModel.templateId != 'Instruments'}">
+					<sly data-sly-test="${pdpTemplateModel.templateId != 'Other' || pdpTemplateModel.templateId != 'Kit'}">
+					<sly data-sly-test="${pdpTemplateModel.templateId == 'SFA' || pdpTemplateModel.templateId == 'SCM'}">
+						<section tabindex="0" role="tabpanel" id="antibody_details"
+							class="pdp-tabs__content d-flex flex-column" aria-labelledby="AntiBody Details" data-tab-name="antibody_details" data-tab-id="antibody_details" data-tab=1>
+							<div class="pdp-tabs__content__accordian d-flex pdp-tabs__content__accordian_antiBody_details"
+								data-accordian=1 data-tab-name="antibody_details" data-tab-id="antibody_details" data-tab=1>
+								<span
+									class="pdp-tabs__content__accordian_text ">${pdpTabObject.antibodyDetailsTabLabel}</span>
+								<div class=" pdp-tabs__content__accordian_icons ml-auto ">
+									<img class="pdp-tabs__content__accordian_icons_down-arrow "
+										src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/dropdown-arrow-down.svg "
+										alt="Down Arrow " />
+									<img class="pdp-tabs__content__accordian_icons_up-arrow "
+										src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/dropdown-arrow-up.svg "
+										alt="Up Arrow " />
+								</div>
+							</div>
+							<div class="pdp-tabs__content__item">
+								<article class="antibody-details app-js__antibody-details">
+									<div class="row antibody-details__main-container ml-0">
+										<div class="antibody-details__items col-12 col-sm-12 px-0">
+											<article class="antibody-details-list app-js__antibody-details-list">
+												<div class="antibody-details-list__container row  mx-0">
+													<div class="col-lg-9 antibody-details-list__content">
+														<div data-sly-test="${pdpTabObject.labelDescription}"
+															class="antibody-details-list__title">
+															${pdpTabObject.labelDescription}
+														</div>
+														<div data-sly-test="${pdpTabObject.tdsDescription}"
+															class="antibody-details-list__description bd-rte">
+															${pdpTabObject.tdsDescription @context='html'}
+														</div>
+														<div data-sly-test="${pdpTabObject.otherTdsDescription}"
+															class="antibody-details-list__description bd-rte">
+															${pdpTabObject.otherTdsDescription @context='html'}
+														</div>
+
+													</div>
+												</div>
+											</article>
+											<article class="phantom-bd-service-plan app-js_phantom-bd-service-plan">
+												<sly data-sly-test="${pdpTabObject.isPhantom && pdpTabObject.phantomProductsList}">
+													<h2 class="antibody-details-list__title">${pdpTabObject.phantomTitleText}</h2>
+													<div class="phantom-bd-service-plan_description bd-rte">${pdpTabObject.phantomSubTitleText @context='html'}</div>
+													<div class="phantom-bd-service-plan-table-container">
+														<div class="bdb-comparison-table styled-table bg-white">
+															<div class="styled-table-wrap">
+																<table class="styled-table-content">
+																	<thead class="omics-header">
+																	<tr>
+																		<th>${pdpTabObject.descriptionLabel}</th>
+																		<th>${pdpTabObject.sizeQuantityLabel @context='html'}</th>
+																		<th>${pdpTabObject.catNumberLabel}</th>
+																	</tr>
+																	</thead>
+																	<tbody>
+																	<sly data-sly-list.phantomProducts="${pdpTabObject.phantomProductsList}">
+																		<tr>
+																			<td>
+																				${phantomProducts.productTitle @context='html'}
+																			</td>
+																			<td class="text-center">
+																				${phantomProducts.sizeQuantity @context='html'}
+																			</td>
+																			<td class="text-center">
+																				<sly data-sly-test="${phantomProducts.productUrl}">
+																					<a href="${phantomProducts.productUrl}" target="_blank">${phantomProducts.materialNumber}</a>
+																				</sly>
+																			</td>
+																		</tr>
+																	</sly>
+																	</tbody>
+																</table>
+															</div>
+														</div>
+													</div>
+												</sly>
+											</article>
+											<bd-antibody-details-clone labels="antibodyAndFormatLabels"
+												config="formatDetailsConfig">
+											</bd-antibody-details-clone>
+
+										</div>
+									</div>
+								</article>
+								<div data-sly-test="${pdpTabObject.tdsRevisionNo !=''}"
+									class="pdp-tabs__content__item-tds-revision-number bd-container">
+									${pdpTabObject.materialNumber} Rev. ${pdpTabObject.tdsRevisionNo}
+								</div>
+							</div>
+						</section>
+						</sly>
+					 <sly data-sly-test="${pdpTemplateModel.templateId == 'SFA' || pdpTemplateModel.templateId == 'SCM'}">
+						<sly data-sly-test="${pdpTabObject.name || pdpTabObject.bdFormatdescription || pdpTabObject.formatname || pdpTabObject.excitationSource 
+								|| pdpTabObject.excitationmax || pdpTabObject.emmisionmax || pdpTabObject.formatDetailsImage}">
+						<section tabindex="0" role="tabpanel" id="format_details"
+							class="pdp-tabs__content d-flex flex-column" aria-labelledby="Format Details" data-tab-name="format_details" data-tab-id="format_details" data-tab=2>
+							<div class="pdp-tabs__content__accordian d-flex pdp-tabs__content__accordian_format_details"
+								data-accordian=2 data-tab-name="format_details" data-tab-id="format_details" data-tab=2>
+								<span
+									class="pdp-tabs__content__accordian_text ">${pdpTabObject.formatDetailsTabLabel}</span>
+								<div class=" pdp-tabs__content__accordian_icons ml-auto ">
+									<img class="pdp-tabs__content__accordian_icons_down-arrow "
+										src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/dropdown-arrow-down.svg "
+										alt="Down Arrow " />
+									<img class="pdp-tabs__content__accordian_icons_up-arrow "
+										src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/dropdown-arrow-up.svg "
+										alt="Up Arrow " />
+								</div>
+							</div>
+							<div class="pdp-tabs__content__item">
+								<article class="format-details app-js__format-details">
+									<div class="row format-details__main-container mx-0">
+										<div class="format-details__items col-12 col-sm-12 px-0">
+											<article class="format-details-list app-js__format-details-list">
+												<div class="format-details-list__container row mx-0">
+													<div class="col-lg-9 format-details-list__content">
+														<div class="format-details-list__title">
+															${pdpTabObject.formatname}
+														</div>
+														<div class="format-details-list__description">
+															${pdpTabObject.bdFormatdescription}
+														</div>
+													</div>
+													<sly data-sly-test="${pdpTabObject.formatDetailsImage}">
+														<div class="format-details-list__img col-lg-7 col-sm-12 px-0">
+															<picture>
+																<source media="(max-width: 900px)"
+																	srcset=${pdpTabObject.formatDetailsImage}
+																	onload="window.aos && window.aos.refresh()">
+																<img data-src=${pdpTabObject.formatDetailsImage} alt="altImg"
+																	onload="window.aos && window.aos.refresh()" class="lazy">
+															</picture>
+														</div>
+													</sly>
+													<div class="col-lg-5 col-sm-12 format-details-list__info ${pdpTabObject.formatDetailsImage?'':'px-0'}">
+														<div data-sly-test="${pdpTabObject.formatname}"
+															class="format-details-list__wrapper d-flex">
+															<label
+															   class="format-details-list__container-label ${pdpTabObject.formatDetailsImage?'col-lg-5':''} p-0 pr-3">${properties.formatLabel}:</label>
+															<span
+																class="format-details-list__container-description col-lg-7">${pdpTabObject.formatname}</span>
+														</div>
+														<div data-sly-test="${pdpTabObject.excitationSource}"
+															class="format-details-list__wrapper d-flex">
+															<label
+																class="format-details-list__container-label ${pdpTabObject.formatDetailsImage?'col-lg-5':''} p-0 pr-3">${properties.excitationSourceLabel}:</label>
+															<span
+																class="format-details-list__container-description col-lg-7">${pdpTabObject.excitationSource}</span>
+														</div>
+														<div data-sly-test="${pdpTabObject.excitationmax}"
+															class="format-details-list__wrapper d-flex">
+															<label
+																class="format-details-list__container-label ${pdpTabObject.formatDetailsImage?'col-lg-5':''} p-0 pr-3">${properties.excitationMaxLabel}:</label>
+															<span
+																class="format-details-list__container-description col-lg-7">${pdpTabObject.excitationmax}</span>
+														</div>
+														<div data-sly-test="${pdpTabObject.emmisionmax}"
+															class="format-details-list__wrapper d-flex">
+															<label
+																class="format-details-list__container-label ${pdpTabObject.formatDetailsImage?'col-lg-5':''} p-0 pr-3">${properties.emissionMaxLabel}:</label>
+															<span
+																class="format-details-list__container-description col-lg-7">${pdpTabObject.emmisionmax}</span>
+														</div>
+													</div>
+												</div>
+
+											</article>
+											<bd-format-details-clone labels="antibodyAndFormatLabels"
+												config="formatDetailsConfig">
+											</bd-format-details-clone>
+										</div>
+
+									</div>
+
+								</article>
+								<div data-sly-test="${pdpTabObject.tdsRevisionNo !=''}"
+									class="pdp-tabs__content__item-tds-revision-number bd-container">
+									${pdpTabObject.materialNumber} Rev.${pdpTabObject.tdsRevisionNo}
+								</div>
+							</div>
+						</section>                    
+						</sly>
+					 </sly>
+				  <sly data-sly-test="${pdpTemplateModel.templateId != 'Instruments'}">
+					<sly data-sly-test="${pdpTemplateModel.templateId == 'SFA'|| pdpTemplateModel.templateId == 'SCM'}">
+						<section tabindex="0" role="tabpanel" id="citations_references"
+							class="pdp-tabs__content d-flex flex-column" aria-labelledby="Citations &amp; References" data-tab-name="citations_references" data-tab-id="citations_references" data-tab=3>
+							<div class="pdp-tabs__content__accordian d-flex pdp-tabs__content__accordian_citations_references"
+								data-accordian=3 data-tab-name="citations_references" data-tab-id="citations_references" data-tab=3>
+								<span class="pdp-tabs__content__accordian_text ">${pdpTabObject.referencesTabLabel}</span>
+								<div class=" pdp-tabs__content__accordian_icons ml-auto ">
+									<img class="pdp-tabs__content__accordian_icons_down-arrow "
+										src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/dropdown-arrow-down.svg "
+										alt="Down Arrow " />
+									<img class="pdp-tabs__content__accordian_icons_up-arrow "
+										src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/dropdown-arrow-up.svg "
+										alt="Up Arrow " />
+								</div>
+							</div>
+							<div class="pdp-tabs__content__item">
+								<article class="citations-references app-js__citations-references ${pdpTabObject.referenceList.size > 0 ? 'has-dev-references' : 'no-dev-references'}">
+									<div class="citations-references__references_wrapper">
+
+										<sly data-sly-test="${pdpTabObject.showCiteabWidget == 'True'}">
+										<sly data-sly-test="${pdpTemplateModel.templateId == 'SFA'|| pdpTemplateModel.templateId == 'SCM'}">
+											<div data-sly-test="${pdpTabObject.referenceList.size > 0}">
+												<a id="view-additional-citations" class="d-none">View Development References</a>
+											</div>
+											<div data-citeab-citations-v2-widget data-api-key="${pdpTabObject.citeabApiKey}" data-company="${pdpTabObject.citeabCompanySlug}"
+												 data-product-id="${pdpTabObject.materialNumber}">
+												<a href='https://www.citeab.com/bd-biosciences/"${pdpTabObject.materialNumber}"'>
+													View product citations for antibody "${pdpTabObject.materialNumber}" on CiteAb
+												</a>
+											</div>
+											<script src="${pdpTabObject.citeabScriptUrl @ context='uri'}"></script>
+											<script>
+												document.addEventListener('citeab-widget', function (event) {
+													var eventDetails = JSON.parse(event.detail);
+													if (eventDetails.name === 'CitationsV2WidgetLoaded' && document.querySelector('.citations-references') && document.querySelector('.citations-references').classList.contains('has-dev-references')) {
+														document.querySelector('#view-additional-citations').classList.remove('d-none');
+													}
+												});
+												document.addEventListener('citeab-no-citations-found', function (e) {
+													if (document.querySelector('.citations-references') && document.querySelector('.citations-references').classList.contains('no-dev-references')) {
+														document.querySelector('.citations-references__no-citations').classList.remove('d-none');
+													}
+												});
+											</script>
+										</sly>
+										</sly>
+										<sly data-sly-test="${pdpTabObject.referenceList}">
+										<article
+											class="pdp-references app-js__pdp-references col-sm-12 col-lg-9 col-xl-9 p-0" id="additionalCitations">
+											<h3 data-sly-test="${properties.developmentReferencesLabel && pdpTabObject.referenceList}"
+												class="pdp-references__heading">${properties.developmentReferencesLabel}
+												(${pdpTabObject.referenceList.size})</h3>
+											<ol class="pdp-references__list ml-3">
+												<sly data-sly-list.references="${pdpTabObject.referenceList}">
+													<li
+														class="${referencesList.index >= pdpTabObject.noOfLinksToBeShown ? 'hide invisible-items' : ''}">
+														<div class="pdp-references__list__item">
+															<span
+																class="pdp-references__list__item_desc">${references.citationdata}</span>
+															<a data-sly-test="${references.pubMedIdValue}" class="cta-link pdp-references__list__item_cta"
+																href="${references.pubMedId}" target="_self">
+																${properties.viewReferenceLabel}
+															</a>
+														</div>
+													</li>
+												</sly>
+											</ol>
+											<sly
+												data-sly-test="${pdpTabObject.referenceList.size > pdpTabObject.noOfLinksToBeShown}">
+												<a class="cta-link pdp-references__view-all-cta d-flex justify-content-center"
+													href="/" target="new">
+													${properties.viewAllLabel} (${pdpTabObject.referenceList.size})
+												</a>
+												<a class="cta-link pdp-references__view-less-cta d-flex justify-content-center hide"
+													href="/" target="new">
+													${properties.viewLessLabel}
+												</a>
+											</sly>
+										</article>
+									</sly>
+										<div data-sly-test="${properties.developmentReferencesLabel && pdpTabObject.referenceList.size < 1}" class="citations-references__no-citations d-none">
+											<img src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/No-Citation-Icon.svg" alt="No Citations Found" />
+											<h2 class="mt-3">No Citations Are Available for this Product</h2>
+										</div>
+									</div>
+								</article>
+								<div data-sly-test="${pdpTabObject.tdsRevisionNo !=''}"
+									class="pdp-tabs__content__item-tds-revision-number bd-container">
+									${pdpTabObject.materialNumber} Rev. ${pdpTabObject.tdsRevisionNo}
+								</div>
+							</div>
+						</section>
+					</sly>
+					  <sly data-sly-test="${pdpTemplateModel.templateId != 'SFA' && pdpTemplateModel.templateId != 'SCM'}">
+					  <sly data-sly-test="${pdpTabObject.referenceList}">
+						  <section tabindex="0" role="tabpanel" id="citations_references"
+								   class="pdp-tabs__content d-flex flex-column" aria-labelledby="Citations &amp; References" data-tab-name="citations_references" data-tab-id="citations_references" data-tab=3>
+							  <div class="pdp-tabs__content__accordian d-flex pdp-tabs__content__accordian_citations_references"
+								   data-accordian=3 data-tab-name="citations_references" data-tab-id="citations_references" data-tab=3>
+								  <span class="pdp-tabs__content__accordian_text ">${pdpTabObject.referencesTabLabel}</span>
+								  <div class=" pdp-tabs__content__accordian_icons ml-auto ">
+									  <img class="pdp-tabs__content__accordian_icons_down-arrow "
+										   src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/dropdown-arrow-down.svg "
+										   alt="Down Arrow " />
+									  <img class="pdp-tabs__content__accordian_icons_up-arrow "
+										   src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/dropdown-arrow-up.svg "
+										   alt="Up Arrow " />
+								  </div>
+							  </div>
+							  <div class="pdp-tabs__content__item">
+								  <article class="citations-references app-js__citations-references ${pdpTabObject.referenceList.size > 0 ? 'has-dev-references' : 'no-dev-references'}">
+									  <div class="citations-references__references_wrapper">
+										  <article
+												  class="pdp-references app-js__pdp-references col-sm-12 col-lg-9 col-xl-9 p-0" id="additionalCitations">
+											  <h3 data-sly-test="${properties.developmentReferencesLabel && pdpTabObject.referenceList}"
+												  class="pdp-references__heading">${properties.developmentReferencesLabel}
+												  (${pdpTabObject.referenceList.size})</h3>
+											  <ol class="pdp-references__list ml-3">
+												  <sly data-sly-list.references="${pdpTabObject.referenceList}">
+													  <li
+															  class="${referencesList.index >= pdpTabObject.noOfLinksToBeShown ? 'hide invisible-items' : ''}">
+														  <div class="pdp-references__list__item">
+															<span
+																	class="pdp-references__list__item_desc">${references.citationdata}</span>
+															  <a data-sly-test="${references.pubMedIdValue}" class="cta-link pdp-references__list__item_cta"
+																 href="${references.pubMedId}" target="_self">
+																  ${properties.viewReferenceLabel}
+															  </a>
+														  </div>
+													  </li>
+												  </sly>
+											  </ol>
+											  <sly
+													  data-sly-test="${pdpTabObject.referenceList.size > pdpTabObject.noOfLinksToBeShown}">
+												  <a class="cta-link pdp-references__view-all-cta d-flex justify-content-center"
+													 href="/" target="new">
+													  ${properties.viewAllLabel} (${pdpTabObject.referenceList.size})
+												  </a>
+												  <a class="cta-link pdp-references__view-less-cta d-flex justify-content-center hide"
+													 href="/" target="new">
+													  ${properties.viewLessLabel}
+												  </a>
+											  </sly>
+										  </article>
+									  </div>
+								  </article>
+								  <div data-sly-test="${pdpTabObject.tdsRevisionNo !=''}"
+									   class="pdp-tabs__content__item-tds-revision-number bd-container">
+									  ${pdpTabObject.materialNumber} Rev. ${pdpTabObject.tdsRevisionNo}
+								  </div>
+							  </div>
+						  </section>
+					  </sly>
+					  </sly>
+				  </sly>
+				</sly>
+				</sly>
+			</div>
+		</sly>
+
+	</sly>
+	</sly>
+	</sly>
+	<sly data-sly-use.pdpTab="com.bdb.aem.core.models.PDPTabModel"
+	data-sly-use.searchResults="com.bdb.aem.core.models.SearchResultsModel">
+		<script>
+			if (typeof window.AEM_DATA === 'undefined') {
+				window.AEM_DATA = {};
+			}
+			if (typeof window.AEM_DATA.labels === 'undefined') {
+				window.AEM_DATA.labels = {};
+			}
+			if (typeof window.AEM_DATA.config === 'undefined') {
+				window.AEM_DATA.config = {};
+			}
+			window.AEM_DATA.labels.antibodyAndFormatLabels = ${ pdpTab.cloneLabelObject || '{}' @context='scriptComment' }
+			window.AEM_DATA.labels.recentlyViewed = ${ pdpTab.recentlyViewedJsonString || '{}' @context='scriptComment' }
+			if (typeof window.AEM_DATA.config.formatDetailsConfig === 'undefined') {
+				window.AEM_DATA.config.formatDetailsConfig = {};
+			}
+			window.AEM_DATA.config.formatDetailsConfig.antiBodyDetails = ${ pdpTab.cloneApiObject || '{}' @context='scriptComment' }
+			window.AEM_DATA.config.formatDetailsConfig.otherFormatDetails = ${ pdpTab.formatApiObject || '{}' @context='scriptComment' }
+		</script>
+	</sly>
+	<p data-sly-test="${inheritedPageProperties.enableTimer}">Pdp Tabs:${time.endTime}</p>

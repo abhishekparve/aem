@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0"
+          jcr:primaryType="nt:unstructured"
+          jcr:title="Disclaimer"
+          sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="granite/ui/components/coral/foundation/container">
+            <items jcr:primaryType="nt:unstructured">
+                <tabs
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/coral/foundation/tabs"
+                    maximized="{Boolean}false">
+                    <items jcr:primaryType="nt:unstructured">
+                    <disclaimerInPage
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Disclaimer"
+                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <column
+                                 jcr:primaryType="nt:unstructured"
+                                 sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                <primaryDisclaimerDescription
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="cq/gui/components/authoring/dialog/richtext"
+                                        fieldLabel="Page Level Global Disclaimer Description"
+                                        name="./primaryDisclaimerDescription"
+                                        required="{Boolean}false"
+                                        useFixedInlineToolbar="{Boolean}true">
+                                                <rtePlugins
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceSuperType="/apps/bdb-aem/components/authoring/dialog/richtext/rtePlugins"/>
+                                                <uiSettings
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceSuperType="/apps/bdb-aem/components/authoring/dialog/richtext/uiSettings"/>
+                                </primaryDisclaimerDescription>
+                                <primaryDisclaimerFontSize
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                        fieldDescription="Select the Disclaimer Font Size for the Disclaimer"
+                                        fieldLabel="Page Level Global Disclaimer Font Size"
+                                        name="./primaryDisclaimerFontSize">
+                                        <items jcr:primaryType="nt:unstructured">
+                                        <default
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Select a Font Size"
+                                                value=""/>
+                                        <normal
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Normal"
+                                                value="normal"/>
+                                        <small
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Small"
+                                                value="disclaimer-small"/>
+                                        <smaller
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Smaller"
+                                                value="disclaimer-smaller"/>
+                                        </items>
+                                </primaryDisclaimerFontSize>
+                                <disableGlobalDisclaimer
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                        fieldDescription="Check to Disable Global Disclaimer"
+                                        name="./disableGlobalDisclaimer"
+                                        text="Disable Global Disclaimer"
+                                        value="true"/>
+
+                                <secondaryDisclaimerDescription
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="cq/gui/components/authoring/dialog/richtext"
+                                        fieldLabel="Page Level Regional Disclaimer Description"
+                                        name="./secondaryDisclaimerDescription"
+                                        required="{Boolean}false"
+                                        useFixedInlineToolbar="{Boolean}true">
+                                               <rtePlugins
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceSuperType="/apps/bdb-aem/components/authoring/dialog/richtext/rtePlugins"/>
+                                                <uiSettings
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceSuperType="/apps/bdb-aem/components/authoring/dialog/richtext/uiSettings"/> 
+                                </secondaryDisclaimerDescription>
+                                <secondaryDisclaimerFontSize
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                        fieldDescription="Select the Disclaimer Font Size for the Disclaimer, when used as Disclaimer Content"
+                                        fieldLabel="Page Level Regional Disclaimer Font Size"
+                                        name="./secondaryDisclaimerFontSize">
+                                        <items jcr:primaryType="nt:unstructured">
+                                        <default
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Select a Font Size"
+                                                value=""/>
+                                        <normal
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Normal"
+                                                value="normal"/>
+                                        <small
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Small"
+                                                value="disclaimer-small"/>
+                                        <smaller
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Smaller"
+                                                value="disclaimer-smaller"/>
+                                        </items>
+                                </secondaryDisclaimerFontSize>
+                                <disableRegionalDisclaimer
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                        fieldDescription="Check to Disable Regional Disclaimer"
+                                        name="./disableRegionalDisclaimer"
+                                        text="Disable Regional Disclaimer"
+                                        value="true"/>
+
+
+                                <tertiaryDisclaimerDescription
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="cq/gui/components/authoring/dialog/richtext"
+                                        fieldLabel="Page Level Disclaimer"
+                                        name="./tertiaryDisclaimerDescription"
+                                        required="{Boolean}false"
+                                        useFixedInlineToolbar="{Boolean}true">
+                                                <rtePlugins
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceSuperType="/apps/bdb-aem/components/authoring/dialog/richtext/rtePlugins"/>
+                                                <uiSettings
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceSuperType="/apps/bdb-aem/components/authoring/dialog/richtext/uiSettings"/>
+                                </tertiaryDisclaimerDescription>
+                                <tertiaryDisclaimerFontSize
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                        fieldDescription="Select the Disclaimer Font Size for the Disclaimer, when used as Disclaimer Content"
+                                        fieldLabel="Disclaimer Font Size"
+                                        name="./tertiaryDisclaimerFontSize">
+                                        <items jcr:primaryType="nt:unstructured">
+                                        <normal
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Normal"
+                                                value=""/>
+                                        <small
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Small"
+                                                value="disclaimer-small"/>
+                                        <smaller
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Smaller"
+                                                value="disclaimer-smaller"/>
+                                        </items>
+                                </tertiaryDisclaimerFontSize>
+                                 <backgroundColor
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                    fieldLabel="Select Background Color"
+                                                    name="./backgroundColor">
+                                                    <items jcr:primaryType="nt:unstructured">
+                                                        <transparent
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="No Color"
+                                                            value=""/>
+                                                        <grey
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="Grey"
+                                                            value="grey-background"/>
+                                                    </items>
+                                                </backgroundColor>                               
+                                </items>
+                           </column>
+                        </items>
+                </disclaimerInPage>
+                </items>
+            </tabs>
+        </items>
+    </content>
+</jcr:root>

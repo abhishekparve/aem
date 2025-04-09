@@ -1,0 +1,1010 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="PDP Tab Component"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        granite:class="cmp-teaser__editor"
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/container">
+        <items jcr:primaryType="nt:unstructured">
+            <tabs
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/tabs"
+                maximized="{Boolean}true">
+                <items jcr:primaryType="nt:unstructured">
+                    <productDetails
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Product Details"
+                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <columns
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                                margin="{Boolean}true">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <column
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <productdetailstablabel
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Product Details Tab Label"
+                                                name="./productDetailsTabLabel"/>
+                                            <showmorelabel
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Show More Label"
+                                                name="./showmorelabel"/>
+                                            <showlesslabel
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Show Less Label"
+                                                name="./showlesslabel"/>
+                                            <inquire
+		                                        jcr:primaryType="nt:unstructured"
+		                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+		                                        fieldLabel="Inquire Label"
+		                                        name="./inquireLabel"/>     
+                                            <productdetailscontainer
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="Product Details"
+                                                sling:resourceType="granite/ui/components/coral/foundation/container"
+                                                margin="{Boolean}true">
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <heading
+                                                        granite:class="coral-Heading coral-Heading--4"
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/heading"
+                                                        level="{Long}4"
+                                                        text="Product Details"/>
+                                                    <columns
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                                                        margin="{Boolean}true">
+                                                        <items jcr:primaryType="nt:unstructured">
+                                                            <column
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                                                <items jcr:primaryType="nt:unstructured">
+                                                                    <products
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                                                        composite="{Boolean}true"
+                                                                        eaem-show-on-collapse="EAEM.showProductName"
+                                                                        fieldLabel="Products">
+                                                                        <field
+                                                                            jcr:primaryType="nt:unstructured"
+                                                                            sling:resourceType="granite/ui/components/coral/foundation/container"
+                                                                            name="./products">
+                                                                            <items jcr:primaryType="nt:unstructured">
+                                                                                <column
+                                                                                    jcr:primaryType="nt:unstructured"
+                                                                                    sling:resourceType="granite/ui/components/coral/foundation/container">
+                                                                                    <items jcr:primaryType="nt:unstructured">
+                                                                                        <productdetails
+                                                                                            jcr:primaryType="nt:unstructured"
+                                                                                            sling:resourceType="granite/ui/components/foundation/form/select"
+                                                                                            fieldLabel="Product Details"
+                                                                                            name="./productDetails">
+                                                                                           <datasource
+                                                                                                jcr:primaryType="nt:unstructured"
+                                                                                                sling:resourceType="acs-commons/components/utilities/genericlist/datasource"
+                                                                                                path="/etc/acs-commons/lists/bdb/pdp_product_details_attributes/product_attributes"/>
+                                                                                        </productdetails>
+                                                                                    </items>
+                                                                                </column>
+                                                                            </items>
+                                                                        </field>
+                                                                    </products>
+                                                                    <viewallformats
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                        fieldLabel="View All Formats Label"
+                                                                        name="./viewAllFormatsLabel"/>
+                                                                     <branddescription
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        sling:resourceType="cq/gui/components/authoring/dialog/richtext"
+                                                                        fieldLabel="OptiBuild brand description"
+                                                                        name="./brandDescription"
+                                                                        useFixedInlineToolbar="{Boolean}true">
+                                                                        <rtePlugins
+                                                                            jcr:primaryType="nt:unstructured"
+                                                                            sling:resourceSuperType="/apps/bdb-aem/components/authoring/dialog/richtext/rtePlugins"/>
+                                                                        <uiSettings
+                                                                            jcr:primaryType="nt:unstructured"
+                                                                            sling:resourceSuperType="/apps/bdb-aem/components/authoring/dialog/richtext/uiSettings"/>
+                                                                        <granite:data
+                                                                            jcr:primaryType="nt:unstructured"/>
+                                                                    </branddescription>    
+                                                                </items>
+                                                            </column>
+                                                        </items>
+                                                    </columns>
+                                                </items>
+                                            </productdetailscontainer>
+                                            <descriptioncontainer
+                                                    jcr:primaryType="nt:unstructured"
+                                                    jcr:title="Description"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/container"
+                                                    margin="{Boolean}true">
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <heading
+                                                            granite:class="coral-Heading coral-Heading--4"
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/heading"
+                                                            level="{Long}4"
+                                                            text="Description"/>
+                                                    <columns
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                                                            margin="{Boolean}true">
+                                                        <items jcr:primaryType="nt:unstructured">
+                                                            <column
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    sling:resourceType="granite/ui/components/coral/foundation/container">
+                                                                <items jcr:primaryType="nt:unstructured">
+                                                                    <productDescription
+                                                                            jcr:primaryType="nt:unstructured"
+                                                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                            fieldLabel="Description Title Text"
+                                                                            name="./productDescription"/>
+                                                                </items>
+                                                            </column>
+                                                        </items>
+                                                    </columns>
+                                                </items>
+                                            </descriptioncontainer>
+                                            <phantomproductscontainer
+                                                    jcr:primaryType="nt:unstructured"
+                                                    jcr:title="Phantom Products Label Details"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/container"
+                                                    margin="{Boolean}true">
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <heading
+                                                            granite:class="coral-Heading coral-Heading--4"
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/heading"
+                                                            level="{Long}4"
+                                                            text="Phantom Product Label Details"/>
+                                                    <columns
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                                                            margin="{Boolean}true">
+                                                        <items jcr:primaryType="nt:unstructured">
+                                                            <column
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    sling:resourceType="granite/ui/components/coral/foundation/container">
+                                                                <items jcr:primaryType="nt:unstructured">
+                                                                    <phantomTitleText
+                                                                            jcr:primaryType="nt:unstructured"
+                                                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                            fieldLabel="Products Included in the Kit Text"
+                                                                            name="./phantomTitleText"/>
+                                                                    <phantomSubTitleText
+                                                                            jcr:primaryType="nt:unstructured"
+                                                                            sling:resourceType="cq/gui/components/authoring/dialog/richtext"
+                                                                            fieldLabel="Phantom  Sub Title Text"
+                                                                            name="./phantomSubTitleText"
+                                                                            useFixedInlineToolbar="{Boolean}true">
+                                                                        <rtePlugins
+                                                                                jcr:primaryType="nt:unstructured"
+                                                                                sling:resourceSuperType="/apps/bdb-aem/components/authoring/dialog/richtext/rtePlugins"/>
+                                                                        <uiSettings
+                                                                                jcr:primaryType="nt:unstructured"
+                                                                                sling:resourceSuperType="/apps/bdb-aem/components/authoring/dialog/richtext/uiSettings"/>
+                                                                        <granite:data
+                                                                                jcr:primaryType="nt:unstructured"/>
+                                                                    </phantomSubTitleText>
+                                                                    <descriptionLabel
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                        fieldLabel="Description Label"
+                                                                        name="./descriptionLabel"/>
+                                                                    <sizeQuantityLabel
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                        fieldLabel="Quantity/Size Label"
+                                                                        name="./sizeQuantityLabel"/>
+                                                                    <catNumberLabel
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                        fieldLabel="Cat Number Label"
+                                                                        name="./catNumberLabel"/>
+                                                                </items>
+                                                            </column>
+                                                        </items>
+                                                    </columns>
+                                                </items>
+                                            </phantomproductscontainer>
+                                            <pascontainer
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="Preparation And Storage"
+                                                sling:resourceType="granite/ui/components/coral/foundation/container"
+                                                margin="{Boolean}true">
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <heading
+                                                        granite:class="coral-Heading coral-Heading--4"
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/heading"
+                                                        level="{Long}4"
+                                                        text="Preparation And Storage"/>
+                                                    <columns
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                                                        margin="{Boolean}true">
+                                                        <items jcr:primaryType="nt:unstructured">
+                                                            <column
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                                                <items jcr:primaryType="nt:unstructured">
+                                                                    <pastitletext
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                        fieldLabel="Preparation And Storage Title Text"
+                                                                        name="./pasTitleText"/>
+                                                                </items>
+                                                            </column>
+                                                        </items>
+                                                    </columns>
+                                                </items>
+                                            </pascontainer>
+                                            <rapcontainer
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="Recommended Assay Procedure"
+                                                sling:resourceType="granite/ui/components/coral/foundation/container"
+                                                margin="{Boolean}true">
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <heading
+                                                        granite:class="coral-Heading coral-Heading--4"
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/heading"
+                                                        level="{Long}4"
+                                                        text="Recommended Assay Procedure"/>
+                                                    <columns
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                                                        margin="{Boolean}true">
+                                                        <items jcr:primaryType="nt:unstructured">
+                                                            <column
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                                                <items jcr:primaryType="nt:unstructured">
+                                                                    <raptitletext
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                        fieldLabel="Recommended Assay Procedure Title Text"
+                                                                        name="./rapTitleText"/>
+                                                                    <rapshowmorelessmobile
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        sling:resourceType="granite/ui/components/coral/foundation/form/numberfield"
+                                                                        fieldLabel="Show More/Less Limit(Mobile)"
+                                                                        min="1"
+                                                                        name="./rapshowmorelessMobile"/>
+                                                                    <rapshowmorelessdesktop
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        sling:resourceType="granite/ui/components/coral/foundation/form/numberfield"
+                                                                        fieldLabel="Show More/Less Limit(Desktop)"
+                                                                        min="1"
+                                                                        name="./rapshowmorelessDesktop"/>
+                                                                </items>
+                                                            </column>
+                                                        </items>
+                                                    </columns>
+                                                </items>
+                                            </rapcontainer>
+                                            <pncontainer
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="Product Notices"
+                                                sling:resourceType="granite/ui/components/coral/foundation/container"
+                                                margin="{Boolean}true">
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <heading
+                                                        granite:class="coral-Heading coral-Heading--4"
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/heading"
+                                                        level="{Long}4"
+                                                        text="Product Notices"/>
+                                                    <columns
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                                                        margin="{Boolean}true">
+                                                        <items jcr:primaryType="nt:unstructured">
+                                                            <column
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                                                <items jcr:primaryType="nt:unstructured">
+                                                                    <pntitletext
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                        fieldLabel="Product Notices Title Text"
+                                                                        name="./pnTitleText"/>
+                                                                    <pnshowmorelessmobile
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        sling:resourceType="granite/ui/components/coral/foundation/form/numberfield"
+                                                                        fieldLabel="Show More/Less Limit(Mobile)"
+                                                                        min="1"
+                                                                        name="./pnShowMoreLessLimitMobile"/>
+                                                                    <pnshowmorelessdesktop
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        sling:resourceType="granite/ui/components/coral/foundation/form/numberfield"
+                                                                        fieldLabel="Show More/Less Limit(Desktop)"
+                                                                        min="1"
+                                                                        name="./pnShowMoreLessLimitDesktop"/>
+                                                                </items>
+                                                            </column>
+                                                        </items>
+                                                    </columns>
+                                                </items>
+                                            </pncontainer>
+                                        <instrumentCta
+                                            jcr:primaryType="nt:unstructured"
+                                            jcr:title="Product Notices"
+                                            sling:resourceType="granite/ui/components/coral/foundation/container"
+                                            margin="{Boolean}true">
+                                            <items jcr:primaryType="nt:unstructured">
+                                                <heading
+                                                    granite:class="coral-Heading coral-Heading--4"
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/heading"
+                                                    level="{Long}4"
+                                                    text="Instruments"/>
+                                                <columns
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                                                    margin="{Boolean}true">
+                                                    <items jcr:primaryType="nt:unstructured">
+                                                        <column
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/container">
+                                                            <items jcr:primaryType="nt:unstructured">
+                                                            <ctatext
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="CTA Label"
+                                                                fieldDescription="eg :Full Product Overview"
+                                                                name="./instrumentCtatext"/>
+                                                            <ctaLink
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                                fieldLabel="CTA URL"
+                                                                rootPath="/content/bdb"
+                                                                name="./instrumentCtaLink"/>
+                                                            </items>
+                                                        </column>
+                                                    </items>
+                                                </columns>
+                                            </items>
+                                        </instrumentCta>
+                                        </items>
+                                    </column>
+                                </items>
+                            </columns>
+                        </items>
+                    </productDetails>
+                    <instrumentDetails
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="Instrument Details"
+                            sling:resourceType="granite/ui/components/coral/foundation/container"
+                            margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <columns
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                                    margin="{Boolean}true">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <column
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/container">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <instrumentDetailsTabLabel
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Instrument Details Tab Label"
+                                                name="./instrumentDetailsTabLabel"/>
+                                            <purchasecontainer
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="Included with Your Purchase"
+                                                sling:resourceType="granite/ui/components/coral/foundation/container"
+                                                margin="{Boolean}true">
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <heading
+                                                        granite:class="coral-Heading coral-Heading--4"
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/heading"
+                                                        level="{Long}4"
+                                                        text="Included with Your Purchase"/>
+                                                    <columns
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                                                        margin="{Boolean}true">
+                                                        <items jcr:primaryType="nt:unstructured">
+                                                            <column
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    sling:resourceType="granite/ui/components/coral/foundation/container">
+                                                                <items jcr:primaryType="nt:unstructured">
+                                                                    <iypTitleText
+                                                                            jcr:primaryType="nt:unstructured"
+                                                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                            fieldLabel="Included with Your Purchase Title Text"
+                                                                            name="./iypTitleText"/>
+                                                                    <productNameLabel
+                                                                            jcr:primaryType="nt:unstructured"
+                                                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                            fieldLabel="Product Name Label"
+                                                                            name="./productNameLabel"/>
+                                                                    <catalogNumberLabel
+                                                                            jcr:primaryType="nt:unstructured"
+                                                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                            fieldLabel="Catalog Number Label"
+                                                                            name="./catalogNumberLabel"/>
+                                                                    <quantityLabel
+                                                                            jcr:primaryType="nt:unstructured"
+                                                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                            fieldLabel="Quantity Label"
+                                                                            name="./quantityLabel"/>
+                                                                    <instrumentRegulatoryStatusLabel
+                                                                            jcr:primaryType="nt:unstructured"
+                                                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                            fieldLabel="Regulatory Status Label"
+                                                                            name="./instrumentRegulatoryStatusLabel"/>
+                                                                </items>
+                                                            </column>
+                                                        </items>
+                                                    </columns>
+                                                </items>
+                                            </purchasecontainer>
+                                            <resourcesContainer
+                                                    jcr:primaryType="nt:unstructured"
+                                                    jcr:title="Resources"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/container"
+                                                    margin="{Boolean}true">
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <heading
+                                                            granite:class="coral-Heading coral-Heading--4"
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/heading"
+                                                            level="{Long}4"
+                                                            text="Resources"/>
+                                                    <columns
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                                                            margin="{Boolean}true">
+                                                        <items jcr:primaryType="nt:unstructured">
+                                                            <column
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    sling:resourceType="granite/ui/components/coral/foundation/container">
+                                                                <items jcr:primaryType="nt:unstructured">
+                                                                    <resTitleText
+                                                                            jcr:primaryType="nt:unstructured"
+                                                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                            fieldLabel="Resources Title Text"
+                                                                            name="./resTitleText"/>
+                                                                </items>
+                                                            </column>
+                                                        </items>
+                                                    </columns>
+                                                </items>
+                                            </resourcesContainer>
+                                            <companionProductsTab
+                                                    jcr:primaryType="nt:unstructured"
+                                                    jcr:title="Included with Your Purchase"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/container"
+                                                    margin="{Boolean}true">
+                                                <items jcr:primaryType="nt:unstructured">
+                                                <heading
+                                                        granite:class="coral-Heading coral-Heading--4"
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/heading"
+                                                        level="{Long}4"
+                                                        text="Companion Products Tab Details"/>
+                                                <columns
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                                                        margin="{Boolean}true">
+                                                    <items jcr:primaryType="nt:unstructured">
+                                                        <column
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                                            <items jcr:primaryType="nt:unstructured">
+                                                                <companionProductsLabel
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                        fieldLabel="Companion Products Label"
+                                                                        name="./companionProductsLabel"/>
+                                                            </items>
+                                                        </column>
+                                                    </items>
+                                                </columns>
+                                            </items>
+                                            </companionProductsTab>
+                                        </items>
+                                    </column>
+                                </items>
+                            </columns>
+                        </items>
+                    </instrumentDetails>
+                    <antibodyFormatDetails
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="AntiBody and Format Details"
+                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <columns
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                                margin="{Boolean}true">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <column
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <viewMore
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="View More Label"
+                                                fieldDescription="View More Label"
+                                                name="./viewMore"/>
+                                            <cancel
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Cancel Label"
+                                                fieldDescription="Cancel Label"
+                                                name="./cancel"/>
+                                            <apply
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Apply Label"
+                                                fieldDescription="Apply Label"
+                                                name="./apply"/>
+                                            <compareCurrentPdpLabel
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Compare Current PDP Label"
+                                                fieldDescription="Compare Current PDP Label"
+                                                name="./compareCurrentPdpLabel"/>
+                                        </items>
+                                    </column>
+                                </items>
+                            </columns>
+                        </items>
+                    </antibodyFormatDetails>
+                    <antibodydetails
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Antibody Details"
+                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <columns
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                                margin="{Boolean}true">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <column
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <antibodydetailstablabel
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Antibody Details Tab Label"
+                                                fieldDescription="Tab Title for AntiBody Details"
+                                                name="./antibodyDetailsTabLabel"/>
+                                            <brandLabel
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldLabel="Brand Label"
+                                                    fieldDescription="Label for Brand of Product eg: Brand"
+                                                    name="./brandLabel"/>
+                                            <cloneLabel
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldLabel="Clone Label"
+                                                    fieldDescription="Clone Id Label of Product eg: Clone"
+                                                    name="./cloneLabel"/>
+                                            <catalogNoLabel
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldLabel="Catalog Number Label"
+                                                    fieldDescription="Catalog No Label of Product eg: Catalog No:"
+                                                    name="./catalogNoLabel"/>
+                                            <regulatoryStatusLabel
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldLabel="Regulatory Status Label"
+                                                    fieldDescription="Regulatory Status Label of Product eg: Regulatory Status:"
+                                                    name="./regulatoryStatusLabel"/>
+                                            <otherClonesLabel
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldLabel="Other Clones Label"
+                                                    fieldDescription="Title for Other Clones Data"
+                                                    name="./otherCloneLabel"/>
+                                            <yourPriceLabel
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldLabel="Your Price Label"
+                                                    fieldDescription="Your Price Label of Product"
+                                                    name="./yourPriceLabel"/>
+                                            <listPriceLabel
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldLabel="List Price Label"
+                                                    fieldDescription="List Price Label of Product"
+                                                    name="./listPriceLabel"/>
+                                            <compareLabel
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldLabel="Compare Label"
+                                                    fieldDescription="Compare Button Label for Comparing Products"
+                                                    name="./compareLabel"/>
+                                            <currenyCode
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldLabel="Currency Code"
+                                                    fieldDescription="Currency Value of Price eg: $,€"
+                                                    name="./currencyCode"/>
+                                            <selectAllLabel
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldLabel="Select All Label"
+                                                    fieldDescription="Label to Select All from Filter"
+                                                    name="./selectAllLabel"/>
+                                            <filterResults
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldLabel="Results Filter Label"
+                                                    fieldDescription="eg: #Results - # will be replace by filter results"
+                                                    name="./filterResultsLabel"/>
+                                            <filterMobile
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldLabel="Results Filter Label - Mobile"
+                                                    fieldDescription="Filter Label for Mobile"
+                                                    name="./filterMobile"/>
+                                            <groupLabel
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldLabel="Group Label"
+                                                    fieldDescription="Group label of Clones and Formats"
+                                                    name="./groupLabel"/>
+                                            <signInLabel
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldLabel="Sign In Label"
+                                                    fieldDescription="Label for SignIn to show actual Price of Product"
+                                                    name="./signInLabel"/>
+                                            <addToCart
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldLabel="Add to Cart Text"
+                                                    fieldDescription="Add to cart Label of Product to Buy"
+                                                    name="./addToCartLabel"/>
+                                            <addToQuote
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldLabel="Add to Quote Text"
+                                                    fieldDescription="Add to quote Label of Product to get Quote"
+                                                    name="./addToQuoteLabel"/>
+                                            <addToCartAlt
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldLabel="Add to cart - Alt Text"
+                                                    fieldDescription="Alt Text for Add to Cart Icon"
+                                                    name="./addToCartAlt"/>
+                                            <addToQuoteAlt
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldLabel="Add to Quote - Alt Text"
+                                                    fieldDescription="Alt Text for Add to Quote Icon"
+                                                    name="./addToQuoteAlt"/>
+                                            <allClones
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldLabel="All Clones label"
+                                                    fieldDescription="All Clones label"
+                                                    name="./allClones"/>
+                                        </items>
+                                    </column>
+                                </items>
+                            </columns>
+                        </items>
+                    </antibodydetails>
+                    <formatdetails
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Format Details"
+                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <columns
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                                margin="{Boolean}true">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <column
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <formatdetailstablabel
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Format Details Tab Label"
+                                                name="./formatDetailsTabLabel"/>
+                                            <formatlabel
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Format Label"
+                                                name="./formatLabel"/>
+                                            <exicationsourcelabel
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Excitation Source Label"
+                                                name="./excitationSourceLabel"/>
+                                            <excitationmaxlabel
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Excitation Max Label"
+                                                name="./excitationMaxLabel"/>
+                                            <emissionmaxlabel
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Emission Max Label"
+                                                name="./emissionMaxLabel"/>
+                                            <otherFormatLabel
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Other Formats Label"
+                                                fieldDescription="Other Formats Section Title"
+                                                name="./otherFormatLabel"/>
+                                             <allFormats
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="All Formats Label"
+                                                fieldDescription="All Formats Label"
+                                                name="./allFormats"/>
+                                        </items>
+                                    </column>
+                                </items>
+                            </columns>
+                        </items>
+                    </formatdetails>
+                    <references
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="References"
+                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <columns
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                                margin="{Boolean}true">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <column
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <referenceslabel
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="References Tab Label"
+                                                name="./referencesTabLabel"/>
+                                            <developmentreferenceslabel
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Development References Label"
+                                                name="./developmentReferencesLabel"/>
+                                            <viewalllabel
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="View All Label"
+                                                name="./viewAllLabel"/>
+                                            <viewlesslabel
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="View Less Label"
+                                                name="./viewLessLabel"/>
+                                            <viewreferencelabel
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="View reference Label"
+                                                name="./viewReferenceLabel"/>
+                                            <nooflinkstobeshown
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/numberfield"
+                                                fieldLabel="Number of linked to be shown"
+                                                min="1"
+                                                name="./noOfLinksToBeShown"/>
+                                        </items>
+                                    </column>
+                                </items>
+                            </columns>
+                        </items>
+                    </references>
+                    <components
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="Components"
+                            sling:resourceType="granite/ui/components/coral/foundation/container"
+                            margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <columns
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                                    margin="{Boolean}true">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <column
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/container">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <componentsLabel
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Components Label"
+                                                name="./componentsLabel"/>
+                                            <componentDescriptionLabel
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Description Label"
+                                                name="./componentDescriptionLabel"/>
+                                            <componentSizeLabel
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Quantity/Size Label"
+                                                name="./componentSizeLabel"/>
+                                            <componentPartNumberLabel
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Part Number Label"
+                                                name="./componentPartNumberLabel"/>
+                                            <componentIsotypeLabel
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Isotype Label"
+                                                name="./componentIsotypeLabel"/>
+                                            <componentCloneLabel
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Clone Label"
+                                                name="./componentCloneLabel"/>
+                                            <componentEntrezGeneIdLabel
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="EntrezGeneId Label"
+                                                name="./componentEntrezGeneIdLabel"/>
+                                            <columns
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                                composite="{Boolean}true"
+                                                fieldLabel="Add Column Titles">
+                                                <field
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/container"
+                                                    name="./columnMultifield">
+                                                    <items jcr:primaryType="nt:unstructured">
+                                                        <column
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/container">
+                                                            <items jcr:primaryType="nt:unstructured">
+                                                                <column
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    jcr:title="Column Title"
+                                                                    sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                                                                    <items jcr:primaryType="nt:unstructured">
+                                                                        <column
+                                                                            jcr:primaryType="nt:unstructured"
+                                                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                            fieldDescription="Column Title"
+                                                                            fieldLabel="Column"
+                                                                            name="./columnData"/>
+                                                                    </items>
+                                                                </column>
+                                                            </items>
+                                                        </column>
+                                                    </items>
+                                                </field>
+                                                <granite:data
+                                                    jcr:primaryType="nt:unstructured"
+                                                    max-items="5"/>
+                                            </columns>
+                                            <rows
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                                composite="{Boolean}true"
+                                                fieldLabel="Add Row Data">
+                                                <field
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/container"
+                                                    name="./rowMultifield">
+                                                    <items jcr:primaryType="nt:unstructured">
+                                                        <column
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/container">
+                                                            <items jcr:primaryType="nt:unstructured">
+                                                                <rows
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    jcr:title="Add Row"
+                                                                    sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                                                                    <items jcr:primaryType="nt:unstructured">
+                                                                        <columns
+                                                                            jcr:primaryType="nt:unstructured"
+                                                                            sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                                                            composite="{Boolean}true"
+                                                                            fieldLabel="Row">
+                                                                            <field
+                                                                                jcr:primaryType="nt:unstructured"
+                                                                                sling:resourceType="granite/ui/components/coral/foundation/container"
+                                                                                name="./rowColumnMultifield">
+                                                                                <items jcr:primaryType="nt:unstructured">
+                                                                                    <column
+                                                                                        jcr:primaryType="nt:unstructured"
+                                                                                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                                                                                        <items jcr:primaryType="nt:unstructured">
+                                                                                            <columnValue
+                                                                                                jcr:primaryType="nt:unstructured"
+                                                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                                                fieldDescription="Column Data"
+                                                                                                fieldLabel="Column Data"
+                                                                                                name="./columnData"/>
+                                                                                        </items>
+                                                                                    </column>
+                                                                                </items>
+                                                                            </field>
+																			<granite:data
+																				jcr:primaryType="nt:unstructured"
+																				max-items="5"/>
+                                                                        </columns>
+                                                                    </items>
+                                                                </rows>
+                                                            </items>
+                                                        </column>
+                                                    </items>
+                                                </field>
+												<granite:data
+                                                    jcr:primaryType="nt:unstructured"
+                                                    max-items="15"/>
+                                            </rows>
+                                        </items>
+                                    </column>
+                                </items>
+                            </columns>
+                        </items>
+                    </components>
+                    <recentlyviewed
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Recently Viewed"
+                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <columns
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                                margin="{Boolean}true">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <column
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <recentlyviewedlabel
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Recently Viewed Label"
+                                                name="./recentlyViewedLabel"/>
+                                            <count
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/numberfield"
+                                                fieldLabel="Count"
+                                                max="15"
+                                                min="1"
+                                                name="./count"/>    
+                                        </items>
+                                    </column>
+                                </items>
+                            </columns>
+                        </items>
+                    </recentlyviewed>
+                </items>
+            </tabs>
+        </items>
+    </content>
+</jcr:root>

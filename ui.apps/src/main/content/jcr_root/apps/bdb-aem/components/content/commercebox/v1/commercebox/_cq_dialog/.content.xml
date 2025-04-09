@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Commerce Box"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        granite:class="cmp-button__editor"
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/container">
+        <items jcr:primaryType="nt:unstructured">
+            <tabs
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/tabs"
+                maximized="{Boolean}true">
+                <items jcr:primaryType="nt:unstructured">
+                    <commercebox
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Commerce Box"
+                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                        <layout
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                            margin="{Boolean}true"/>
+                        <items jcr:primaryType="nt:unstructured">
+                            <columns
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <catalognolabel
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldLabel="Catalog No Label"
+                                        name="./catalogNo"/>
+                                    <inquire
+		                               jcr:primaryType="nt:unstructured"
+		                               sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+		                               fieldLabel="Inquire Label"
+		                               name="./inquireLabel"/>    
+                                    <yourpricelabel
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldLabel="Your Price Label"
+                                        name="./yourPrice"/>
+                                    <signinlabel
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldLabel="Sign In Label"
+                                        name="./signIn"/>
+                                    <listpricelabel
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldLabel="List Price Label"
+                                        name="./listPrice"/>
+                                    <estdeliverylabel
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldLabel="Est Delivery Label"
+                                        name="./estDelivery"/>
+                                    <unitlabel
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldLabel="Unit Label"
+                                        name="./unit"/>
+                                    <sizelabel
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldLabel="Size Label"
+                                        name="./size"/>
+                                    <quantitylabel
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldLabel="Quantity Label"
+                                        name="./quantity"/>
+                                    <quantity
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/numberfield"
+                                        fieldLabel="Quantity Label"
+                                        min="{Long}1"
+                                        name="./quantityValue"/>
+                                    <addtocartlabel
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldLabel="Add To Cart Label"
+                                        name="./addToCart"/>
+									<atoCAltText
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldLabel="Add To Cart Alt Text Label"
+                                        name="./atoCAltText"/>
+                                    <addToQuote
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            fieldLabel="Add To Quote Label"
+                                            name="./addToQuote"/>
+                                    <atoQAltText
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            fieldLabel="Add To Quote Alt Text Label"
+                                            name="./atoQAltText"/>
+									<outOfStock
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldLabel="Out of Stock Label"
+                                        name="./outOfStock"/>
+                                    <inStock
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldLabel="In Stock Label"
+                                        name="./inStock"/>
+                                    <distributorDeliveryDate
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldLabel="Distributor Delivery Date Label"
+                                        name="./distributorDeliveryDate"/>
+                                    <savetoshoppinglistlabel
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldLabel="Save to shopping list label"
+                                        name="./saveToShoppingList"/>
+                                    <saveToQuoteList
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            fieldLabel="Save to Quote list label"
+                                            name="./saveToQuoteList"/>
+                                    <requestQuote
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            fieldLabel="Request Quote label"
+                                            name="./requestQuote"/>
+                                    <requestBulkReagentQuote
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldLabel="Request Bulk Reagent Quote Label"
+                                        name="./requestBulkReagentQuote"/>
+                                    <requestBulkReagentQuoteTarget
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            fieldLabel="Request Bulk Reagent Quote Target Label"
+                                            name="./requestBulkReagentQuoteTarget"/>
+                                    <incrementAltText
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldLabel="Increment Alt Text"
+                                        name="./incrementAltText"/>
+                                    <decrementAltText
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldLabel="Decrement Alt Text"
+                                        name="./decrementAlttext"/>
+                                    <upArrowAltText
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldLabel="Up Arrow Alt Text"
+                                        name="./upArrow"/>
+                                    <downArrowAltText
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldLabel="Down Arrow Alt Text"
+                                        name="./downArrow"/>
+									<upArrowAriaLabel
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldLabel="Up Arrow Aria Label"
+                                        name="./upArrowAriaLabel"/>
+                                    <downArrowAriaLabel
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldLabel="Down Arrow Aria Label"
+                                        name="./downArrowAriaLabel"/>
+                                    <plusLabel
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldLabel="Plus Label"
+                                        name="./plusAriaLabel"/>
+                                    <minusLabel
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldLabel="Minus Label"
+                                        name="./minusAriaLabel"/>
+									<color
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldLabel="Color Label"
+                                        name="./color"/>
+									<lasers
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldLabel="Lasers Label"
+                                        name="./lasers"/>
+                                    <configurations
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldLabel="configurations Label"
+                                        name="./configuration"/>    
+                                </items>
+                            </columns>
+                        </items>
+                    </commercebox>
+                    <promotions
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Promotions"
+                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                        <layout
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                            margin="{Boolean}true"/>
+                        <items jcr:primaryType="nt:unstructured">
+                            <columns
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <promotionAvailableLabel
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldLabel="Promotion Available Label"
+                                        name="./promotionAvailableLabel"/>
+                                    <moreInformationLabel
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldLabel="More Information Label"
+                                        name="./moreInformationLabel"/>
+                                    <promotionIconPath
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                        fieldLabel="Promotion Icon Path"
+                                        name="./promotionIconPath"
+                                        rootPath="/content/dam"/>
+                                    <promotionIconAlt
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldLabel="Promotion Icon Alt"
+                                        name="./promotionIconAlt"/>
+                                    <expiresLabel
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldLabel="Expires Label"
+                                        name="./expiresLabel"/>
+                                    <promoCodeLabel
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldLabel="Promo Code Label"
+                                        name="./promoCodeLabel"/>
+                                    <promoUrl
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                        fieldLabel="Promotion Url"
+                                        ootPath="/content/bdb"
+                                        name="./promoUrl"/>
+                                    <copyToClipboardLabel
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldLabel="Copy To Clipboard Label"
+                                        name="./copyToClipboardLabel"/>
+                                    <buttonTextLabel
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldLabel="Button Text Label"
+                                        name="./buttonTextLabel"/>
+									<navigationLink
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                        fieldLabel="Navigation Link Label"
+                                        name="./navigationLink"/>
+                                </items>
+                            </columns>
+                        </items>
+                    </promotions>
+                </items>
+            </tabs>
+        </items>
+    </content>
+</jcr:root>

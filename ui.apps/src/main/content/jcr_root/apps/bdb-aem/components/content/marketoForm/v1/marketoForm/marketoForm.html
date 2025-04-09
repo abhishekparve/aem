@@ -1,0 +1,112 @@
+<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html"
+    data-sly-call="${templates.placeholder @ isEmpty = true}"></sly>
+
+<div data-sly-use.form="com.bdb.aem.core.models.MarketoFormModel">
+<div class="${properties.backgroundColor}">
+	<div class="bdb-marketo-form bd-container">
+    	<div class="bdb-marketo-form__mkto-container ${properties.togglePaddingTop?'pt-2':''} ${properties.togglePaddingBottom?'pb-2':''}">
+	    <div data-sly-test="${form.sectionTitle}" class="bdb-marketo-form__sec">${form.sectionTitle}</div>
+	        <article class="bdb-marketo-form app-js__bdb-marketo-form bd-custom-scroll d-flex ${properties.sectionAlign}" id="${form.articleId}">
+	            <div class="col-sm-12 col-lg-8 bdb-marketo-form__container">           	
+	                <div class="card">
+	                    <div class="card-body">                   	
+	                        <p class="card-body__title-text">${form.title @context='html'}</p>
+	                        <hr>
+	                        <p class="card-body__description">${form.formBodyText @ context='html'}</p>
+	                        <p>*Required fields</p>
+	                        <script src="${form.rootURL}/js/forms2/js/forms2.min.js"></script>
+	                        <form id="mktoForm_${form.formID}"></form>
+	                    </div>
+	                </div>
+	            </div>
+	        </article>
+     	</div>
+        <script>
+            MktoForms2.loadForm('${form.rootURL @ context='attribute'}', '${form.munchkinID @ context='attribute'}', ${ form.formID @context='attribute'});
+            window.adobeDataLayer.push({
+                event: 'formView',
+                xdm: {
+                    form: {
+                        formName: document.querySelector(`.bdb-marketo-form #mktoForm_${form.formID @context = 'attribute'
+                }`).parentElement.querySelector('.card-body__title-text').innerText,
+                        marketoUserToken: ${ form.formID @context='attribute'
+                }
+                    }
+                }
+            });
+            MktoForms2.whenReady(function (mktoForm) {
+                if (marketoForms) {
+                    marketoForms.destyleMktoForm(mktoForm);
+                }
+                function handleFormStart() {
+                    window.adobeDataLayer.push({
+                        event: 'formStart',
+                        xdm: {
+                            form: {
+                                formName: document.querySelector(`.bdb-marketo-form #mktoForm_${form.formID @context = 'attribute'}`).parentElement.querySelector('.card-body__title-text').innerText,
+                                marketoUserToken: ${ form.formID @context='attribute'}
+                            }
+                        }
+                    });
+                    for(var i = 0; i < controls.length;i++){
+                        controls[i].removeEventListener('blur', handleFormStart);
+                	}
+                }
+                if(mktoForm.getId() == '${form.formID @ context='attribute'}'){
+					var controls = document.querySelectorAll(`#mktoForm_${form.formID @context = 'attribute'} input, #mktoForm_${form.formID @context = 'attribute'} select, #mktoForm_${form.formID @context = 'attribute'} textarea`);
+					for(var i = 0; i < controls.length;i++){
+						controls[i].addEventListener('blur', handleFormStart);
+					}
+                }
+                mktoForm.onSuccess(function (vals, tyURL) {
+                    window.adobeDataLayer.push({
+                        event: 'formSubmit',
+                        xdm: {
+                            form: {
+                                formName: document.querySelector(`.bdb-marketo-form #mktoForm_${form.formID @context = 'attribute'
+                }`).parentElement.querySelector('.card-body__title-text').innerText,
+                                marketoUserToken: ${ form.formID @context='attribute'
+                }
+                            }
+                        }
+                    });
+		    if (tyURL) {
+                        setTimeout(function() {
+                            window.location.href = tyURL
+                        }, 3000);
+                    }
+            	    return false;
+                });
+            mktoForm.onValidate(function (isValid) {
+                if (!isValid) {
+                    let errorList = [...document.getElementsByClassName("mktoInvalid")];
+                    let errorField = [];
+                    errorList.forEach(element => {
+                        if (element.getAttribute('name')) {
+                            errorField.push({ value: element.getAttribute('name') });
+                        } else {
+                            errorField.push({ value: 'Terms and Condition' });
+                        }
+                    });
+                    window.adobeDataLayer.push({
+                        event: 'formError',
+                        xdm: {
+                            form: {
+                                formName: document.querySelector(`.bdb-marketo-form #mktoForm_${form.formID @context = 'attribute'
+                }`).parentElement.querySelector('.card-body__title-text').innerText,
+                                formErrors: errorField,
+                                marketoUserToken: ${ form.formID @context='attribute'
+                }
+            }
+                        }
+                    });
+                }
+            });
+            if (marketoForms) {
+                marketoForms.customBdStyles('${form.formID @ context='attribute'}');
+            }
+            });
+        </script>
+    </div>
+</div>
+</div>

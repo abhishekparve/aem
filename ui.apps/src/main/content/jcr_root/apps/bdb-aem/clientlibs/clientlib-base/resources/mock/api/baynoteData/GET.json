@@ -1,0 +1,331 @@
+{
+    "responseId": 3658156639216695777,
+    "merchModel": "6ac55031ee3927a8aa439f69b9d93d1d920a08fed3efb454135b61921a3aadb4:1516209858550",
+    "type": "pageTemplate",
+    "id": "PT_RelatedRec",
+    "trackingData": "03eJyVk8tu2zAQRf+Fay34lEjvijaLAEVrxEE3hVHwMVKIypQgU3BcQ//eURSnCaqiyI68Mxxe3ENeiB/AZggfMtmwkjIquDaaqaogMZANMc4ww5RxwtCyrirpaqN5KYKoA5csGKqNKD3VnFJmGbXMGwgKy8oITR0pSIZjvk11RzZpbNuC9LaBZX95Wmc49C16WDSyvf9xB/M+3IEnU0FOMWDTUv1+uW5nc3WoPVgOUqC74ASn3tW1YNJSriXXnJU8eO4CQDCq9KUEBQLta8aVKhm5Dv9iD4Dz8EJIuT1/i3CCsB26MPqMTbZtuueWz/aYlzLqx7b74+sprnnkYNNPXFL0/qzyVVWsqnJVVW/UfUEezm6IYXeK2T/E1FzzDPHYW5Sewrs/97PlMQ3guybFX4vp65ldHjDl5nzlMnNC+SZZ12LnprbtEQriu5ThMW+7fkQqsUtL/zR7e8VCVcF77h2lVFuL5CtRl1YG46yUzhlPBRMgLPegpHVGWyYVr2hg2ips+ZvFyxt4A+AmNfhmDsgJSzv028ItvqD/0WCrNKpVGnqVBuPvDR5erH7tczz8O3/yCT/BcIgpIgFP3oPiQuDRt2OYf3AeohvxKAaARmNa0cnHZQQi20/TtJ9+A1HxSTw=",
+    "widgetResults": [
+        {
+            "id": "RecentlyViewedProduct",
+            "widgetId": "fdfcea2e43390db320cbff314a0284282162dc2bdeed956c64e5e38268125561",
+            "displayName": "Your Recently Viewed Items",
+            "placeholderName": "",
+            "algoName": "LastViewed",
+            "xpuDispatchMetadata": null,
+            "hybridSwitchingInfo": {
+                "dispatchedRecType": "unrecognized",
+                "switchingStrategy": null,
+                "testingEnabled": false,
+                "contextPopulation": null
+            },
+            "slotResults": [
+                {
+                    "slot": "1",
+                    "rank": 0,
+                    "affinity": "false",
+                    "url": null,
+                    "attrs": [],
+                    "explanation": [],
+                    "contextItem": [],
+                    "scanTime": 0,
+                    "xpucandidateMetadata": null
+                },
+                {
+                    "slot": "2",
+                    "rank": 0,
+                    "affinity": "false",
+                    "url": null,
+                    "attrs": [],
+                    "explanation": [],
+                    "contextItem": [],
+                    "scanTime": 0,
+                    "xpucandidateMetadata": null
+                },
+                {
+                    "slot": "3",
+                    "rank": 0,
+                    "affinity": "false",
+                    "url": null,
+                    "attrs": [],
+                    "explanation": [],
+                    "contextItem": [],
+                    "scanTime": 0,
+                    "xpucandidateMetadata": null
+                },
+                {
+                    "slot": "4",
+                    "rank": 0,
+                    "affinity": "false",
+                    "url": null,
+                    "attrs": [],
+                    "explanation": [],
+                    "contextItem": [],
+                    "scanTime": 0,
+                    "xpucandidateMetadata": null
+                },
+                {
+                    "slot": "5",
+                    "rank": 0,
+                    "affinity": "false",
+                    "url": null,
+                    "attrs": [],
+                    "explanation": [],
+                    "contextItem": [],
+                    "scanTime": 0,
+                    "xpucandidateMetadata": null
+                }
+            ]
+        },
+        {
+            "id": "RelatedRec",
+            "widgetId": "57dcc2cb0008aa80b73f6a4d9ba44bb9c0313e3a2ce54ab98a145270d18a5a44",
+            "displayName": "Customers Also Viewed",
+            "placeholderName": "",
+            "algoName": "EngagementRecSingleItem",
+            "xpuDispatchMetadata": null,
+            "hybridSwitchingInfo": {
+                "dispatchedRecType": "engagementOptimized",
+                "switchingStrategy": "Deterministic",
+                "testingEnabled": false,
+                "contextPopulation": {
+                    "excludedAttributes": [],
+                    "includedAttributes": ["ContextId"]
+                }
+            },
+            "slotResults": [
+                {
+                    "slot": "1",
+                    "rank": 1,
+                    "affinity": "true",
+                    "url": "http://www.bdbiosciences.com/eu/p/553084",
+                    "attrs": [
+                        {
+                            "name": "Price",
+                            "values": ["256.0 Euro"]
+                        },
+                        {
+                            "name": "ThumbUrl",
+                            "values": [
+                                "http://static.bdbiosciences.com/y/eu/negative-markers/mouse/hematopoietic-stem-cell-markers/553084_01_small.jpg"
+                            ]
+                        },
+                        {
+                            "name": "Title",
+                            "values": ["Purified Rat Anti-Mouse CD45R/B220"]
+                        },
+                        {
+                            "name": "ProductId",
+                            "values": ["553084"]
+                        },
+                        {
+                            "name": "url",
+                            "values": ["http://www.bdbiosciences.com/eu/p/553084"]
+                        }
+                    ],
+                    "explanation": [
+                        {
+                            "type": "OptionalFilter",
+                            "filter": null,
+                            "reason": null,
+                            "info": null
+                        }
+                    ],
+                    "contextItem": [
+                        {
+                            "type": "OptionalFilter",
+                            "filter": null,
+                            "reason": null,
+                            "info": null
+                        }
+                    ],
+                    "scanTime": 0,
+                    "xpucandidateMetadata": null
+                },
+                {
+                    "slot": "2",
+                    "rank": 7,
+                    "affinity": "false",
+                    "url": "http://www.bdbiosciences.com/eu/p/564219",
+                    "attrs": [
+                        {
+                            "name": "Price",
+                            "values": ["70.0 Euro"]
+                        },
+                        {
+                            "name": "ThumbUrl",
+                            "values": [
+                                "http://static.bdbiosciences.com/y/eu/cell-surface-antigens/anti-mouse-antibodies/immunology-reagents/FcBlock de_small.png"
+                            ]
+                        },
+                        {
+                            "name": "Title",
+                            "values": ["Human BD Fc Block&trade;"]
+                        },
+                        {
+                            "name": "ProductId",
+                            "values": ["564219"]
+                        },
+                        {
+                            "name": "url",
+                            "values": ["http://www.bdbiosciences.com/eu/p/564219"]
+                        }
+                    ],
+                    "explanation": [
+                        {
+                            "type": "OptionalFilter",
+                            "filter": null,
+                            "reason": null,
+                            "info": null
+                        }
+                    ],
+                    "contextItem": [
+                        {
+                            "type": "OptionalFilter",
+                            "filter": null,
+                            "reason": null,
+                            "info": null
+                        }
+                    ],
+                    "scanTime": 0,
+                    "xpucandidateMetadata": null
+                },
+                {
+                    "slot": "3",
+                    "rank": 8,
+                    "affinity": "false",
+                    "url": "http://www.bdbiosciences.com/eu/p/552843",
+                    "attrs": [
+                        {
+                            "name": "Price",
+                            "values": ["172.0 Euro"]
+                        },
+                        {
+                            "name": "ThumbUrl",
+                            "values": [
+                                "http://static.bdbiosciences.com/y/eu/set-up/other-reagents/blood-cell-disorders/552843_01_small.jpg"
+                            ]
+                        },
+                        {
+                            "name": "Title",
+                            "values": [
+                                "Anti-Mouse Ig, &kappa;/Negative Control Compensation Particles Set"
+                            ]
+                        },
+                        {
+                            "name": "ProductId",
+                            "values": ["552843"]
+                        },
+                        {
+                            "name": "url",
+                            "values": ["http://www.bdbiosciences.com/eu/p/552843"]
+                        }
+                    ],
+                    "explanation": [
+                        {
+                            "type": "OptionalFilter",
+                            "filter": null,
+                            "reason": null,
+                            "info": null
+                        }
+                    ],
+                    "contextItem": [
+                        {
+                            "type": "OptionalFilter",
+                            "filter": null,
+                            "reason": null,
+                            "info": null
+                        }
+                    ],
+                    "scanTime": 0,
+                    "xpucandidateMetadata": null
+                },
+                {
+                    "slot": "4",
+                    "rank": 12,
+                    "affinity": "false",
+                    "url": "http://www.bdbiosciences.com/eu/p/342003",
+                    "attrs": [
+                        {
+                            "name": "Price",
+                            "values": ["33.0 Euro"]
+                        },
+                        {
+                            "name": "ThumbUrl",
+                            "values": [
+                                "http://static.bdbiosciences.com/y/eu/bd-facscanto-ii-consumables/bd-facscanto-ii/cell-analyzers/342003_01_small.jpg"
+                            ]
+                        },
+                        {
+                            "name": "Title",
+                            "values": ["Sheath Fluid"]
+                        },
+                        {
+                            "name": "ProductId",
+                            "values": ["342003"]
+                        },
+                        {
+                            "name": "url",
+                            "values": ["http://www.bdbiosciences.com/eu/p/342003"]
+                        }
+                    ],
+                    "explanation": [
+                        {
+                            "type": "OptionalFilter",
+                            "filter": null,
+                            "reason": null,
+                            "info": null
+                        }
+                    ],
+                    "contextItem": [
+                        {
+                            "type": "OptionalFilter",
+                            "filter": null,
+                            "reason": null,
+                            "info": null
+                        }
+                    ],
+                    "scanTime": 0,
+                    "xpucandidateMetadata": null
+                }
+            ]
+        }
+    ],
+    "dataInfo": null,
+    "context": {
+        "entities": [
+            {
+                "entityType": "Document",
+                "id": {
+                    "name": "url",
+                    "value": "http://www.bdbiosciences.com/eu/p/347340"
+                },
+                "attrs": [
+                    {
+                        "name": "ThumbUrl",
+                        "values": [
+                            "http://static.bdbiosciences.com/y/eu/human/surface-markers/th-1-cells/347340_01_small.jpg"
+                        ]
+                    },
+                    {
+                        "name": "Price",
+                        "values": ["223.0 Euro"]
+                    },
+                    {
+                        "name": "Title",
+                        "values": ["Purified Mouse Anti-Human CD3"]
+                    },
+                    {
+                        "name": "ProductId",
+                        "values": ["347340"]
+                    },
+                    {
+                        "name": "url",
+                        "values": ["http://www.bdbiosciences.com/eu/p/347340"]
+                    }
+                ]
+            }
+        ]
+    },
+    "errorMessage": null,
+    "abtest": null
+}

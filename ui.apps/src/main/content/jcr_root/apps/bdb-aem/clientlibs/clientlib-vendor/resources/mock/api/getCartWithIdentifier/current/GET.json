@@ -1,0 +1,241 @@
+{
+    "type": "cartWsDTO",
+    "appliedOrderPromotions": [
+        {
+            "consumedEntries": [],
+            "description": "You qualify for 30% discount on cart",
+            "promotion": {
+                "code": "test_2811",
+                "couldFireMessages": [],
+                "description": "A percentage discount is applied to the cart for the specified customer group",
+                "endDate": "2020-08-27T11:54:00+0000",
+                "firedMessages": [],
+                "priority": 300,
+                "promotionType": "Rule Based Promotion"
+            }
+        }
+    ],
+    "appliedProductPromotions": [
+        {
+            "consumedEntries": [
+                {
+                    "adjustedUnitPrice": 90.0,
+                    "orderEntryNumber": 0,
+                    "quantity": 1
+                }
+            ],
+            "promotion": {
+                "code": "test2",
+                "couldFireMessages": [],
+                "description": "test",
+                "firedMessages": [],
+                "priority": 5,
+                "promotionType": "Rule Based Promotion"
+            }
+        }
+    ],
+    "appliedVouchers": [],
+    "calculated": true,
+    "code": "00022002",
+    "deliveryItemsQuantity": 1,
+    "deliveryOrderGroups": [
+        {
+            "entries": [
+                {
+                    "basePrice": {
+                        "currencyIso": "USD",
+                        "formattedValue": "$100.00",
+                        "priceType": "BUY",
+                        "value": 100.0
+                    },
+                    "cancellableQuantity": 0,
+                    "configurationInfos": [],
+                    "entryNumber": 0,
+                    "product": {
+                        "availableForPickup": false,
+                        "baseOptions": [
+                            {
+                                "selected": {
+                                    "code": "554655",
+                                    "priceData": {
+                                        "currencyIso": "USD",
+                                        "formattedValue": "$100.00",
+                                        "priceType": "BUY",
+                                        "value": 100.0
+                                    },
+                                    "stock": {
+                                        "isValueRounded": false,
+                                        "stockLevel": 0,
+                                        "stockLevelStatus": "inStock"
+                                    },
+                                    "url": "/c/Fixation-Buffer/p/554655",
+                                    "variantOptionQualifiers": []
+                                },
+                                "variantType": "GenericVariantProduct"
+                            }
+                        ],
+                        "baseProduct": "base_3",
+                        "batchManaged": false,
+                        "categories": [
+                            {
+                                "code": "dummyVariantValueCategory",
+                                "name": "Dummy Variant Value Category",
+                                "url": "/Dummy-Variant-Category/Dummy-Variant-Value-Category/c/dummyVariantValueCategory"
+                            }
+                        ],
+                        "code": "554655",
+                        "name": "Fixation Buffer",
+                        "purchasable": true,
+                        "stock": {
+                            "isValueRounded": false,
+                            "stockLevel": 0,
+                            "stockLevelStatus": "inStock"
+                        },
+                        "url": "/c/Fixation-Buffer/p/554655"
+                    },
+                    "quantity": 1,
+                    "requestSameLot": false,
+                    "returnableQuantity": 0,
+                    "statusSummaryList": [],
+                    "totalPrice": {
+                        "currencyIso": "USD",
+                        "formattedValue": "$90.00",
+                        "priceType": "BUY",
+                        "value": 90.0
+                    },
+                    "updateable": true
+                }
+            ],
+            "totalPriceWithTax": {
+                "currencyIso": "USD",
+                "formattedValue": "$90.00",
+                "priceType": "BUY",
+                "value": 90.0
+            }
+        }
+    ],
+    "entries": [
+        {
+            "basePrice": {
+                "currencyIso": "USD",
+                "formattedValue": "$100.00",
+                "priceType": "BUY",
+                "value": 100.0
+            },
+            "cancellableQuantity": 0,
+            "configurationInfos": [],
+            "entryNumber": 0,
+            "product": {
+                "availableForPickup": false,
+                "baseOptions": [
+                    {
+                        "selected": {
+                            "code": "554655",
+                            "priceData": {
+                                "currencyIso": "USD",
+                                "formattedValue": "$100.00",
+                                "priceType": "BUY",
+                                "value": 100.0
+                            },
+                            "stock": {
+                                "isValueRounded": false,
+                                "stockLevel": 0,
+                                "stockLevelStatus": "inStock"
+                            },
+                            "url": "/c/Fixation-Buffer/p/554655",
+                            "variantOptionQualifiers": []
+                        },
+                        "variantType": "GenericVariantProduct"
+                    }
+                ],
+                "baseProduct": "base_3",
+                "batchManaged": false,
+                "categories": [
+                    {
+                        "code": "dummyVariantValueCategory",
+                        "name": "Dummy Variant Value Category",
+                        "url": "/Dummy-Variant-Category/Dummy-Variant-Value-Category/c/dummyVariantValueCategory"
+                    }
+                ],
+                "code": "554655",
+                "name": "Fixation Buffer",
+                "purchasable": true,
+                "stock": {
+                    "isValueRounded": false,
+                    "stockLevel": 0,
+                    "stockLevelStatus": "inStock"
+                },
+                "url": "/c/Fixation-Buffer/p/554655"
+            },
+            "quantity": 1,
+            "requestSameLot": false,
+            "returnableQuantity": 0,
+            "statusSummaryList": [],
+            "totalPrice": {
+                "currencyIso": "USD",
+                "formattedValue": "$90.00",
+                "priceType": "BUY",
+                "value": 90.0
+            },
+            "updateable": true
+        }
+    ],
+    "guid": "22546cec-0779-4176-ae48-eec7f0deb87e",
+    "net": true,
+    "orderDiscounts": {
+        "currencyIso": "USD",
+        "formattedValue": "$30.00",
+        "priceType": "BUY",
+        "value": 30.0
+    },
+    "pickupItemsQuantity": 0,
+    "pickupOrderGroups": [],
+    "productDiscounts": {
+        "currencyIso": "USD",
+        "formattedValue": "$10.00",
+        "priceType": "BUY",
+        "value": 10.0
+    },
+    "site": "bdbUS",
+    "store": "US",
+    "subTotal": {
+        "currencyIso": "USD",
+        "formattedValue": "$60.00",
+        "priceType": "BUY",
+        "value": 60.0
+    },
+    "totalDiscounts": {
+        "currencyIso": "USD",
+        "formattedValue": "$40.00",
+        "priceType": "BUY",
+        "value": 40.0
+    },
+    "totalItems": 1,
+    "totalPrice": {
+        "currencyIso": "USD",
+        "formattedValue": "$60.00",
+        "priceType": "BUY",
+        "value": 60.0
+    },
+    "totalPriceWithTax": {
+        "currencyIso": "USD",
+        "formattedValue": "$60.00",
+        "priceType": "BUY",
+        "value": 60.0
+    },
+    "totalTax": {
+        "currencyIso": "USD",
+        "formattedValue": "$0.00",
+        "priceType": "BUY",
+        "value": 0.0
+    },
+    "isGrantApplicable": false,
+    "paymentType": {
+        "code": "CARD",
+        "displayName": "Card Payment"
+    },
+    "potentialOrderPromotions": [],
+    "potentialProductPromotions": [],
+    "savedForLater": false,
+    "totalUnitCount": 1
+}

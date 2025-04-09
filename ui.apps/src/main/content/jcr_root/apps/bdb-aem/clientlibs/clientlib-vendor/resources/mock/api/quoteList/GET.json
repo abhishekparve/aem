@@ -1,0 +1,340 @@
+{
+    "quotes": [
+        {
+            "billingAddress": {
+                "addressId": "051a6409-7eb6-4abf-9bc9-2112453a419f",
+                "billingAddress": false,
+                "companyName": "",
+                "country": {
+                    "isocode": "IN",
+                    "name": "India"
+                },
+                "defaultAddress": false,
+                "department": "Science",
+                "formattedAddress": "Pondicherry, HYD, 909090",
+                "pendingAddress": true,
+                "phone": "+919999999999",
+                "postalCode": "909090",
+                "region": {
+                    "countryIso": "IN",
+                    "isocode": "IN-PY",
+                    "isocodeShort": "PY",
+                    "name": "Pondicherry"
+                },
+                "shippingAddress": false,
+                "status": "PENDING_APPROVAL",
+                "town": "HYD",
+                "visibleInAddressBook": false
+            },
+            "code": "TestQuote-00000002",
+            "deliveryAddress": {
+                "addressId": "9f452eff-1f40-4d90-9f85-4ef6eb84a715",
+                "billingAddress": false,
+                "companyName": "",
+                "country": {
+                    "isocode": "IN",
+                    "name": "India"
+                },
+                "defaultAddress": false,
+                "department": "Science",
+                "formattedAddress": "Pondicherry, HYD, 909090",
+                "pendingAddress": true,
+                "phone": "+919999999999",
+                "postalCode": "909090",
+                "region": {
+                    "countryIso": "IN",
+                    "isocode": "IN-PY",
+                    "isocodeShort": "PY",
+                    "name": "Pondicherry"
+                },
+                "shippingAddress": false,
+                "status": "PENDING_APPROVAL",
+                "town": "HYD",
+                "visibleInAddressBook": false
+            },
+            "entries": [],
+            "requestDate": "Oct 20, 2020",
+            "state": "BUYER_SUBMITTED"
+        },
+        {
+            "billingAddress": {
+                "addressId": "051a6409-7eb6-4abf-9bc9-2112453a419f",
+                "billingAddress": false,
+                "companyName": "",
+                "country": {
+                    "isocode": "IN",
+                    "name": "India"
+                },
+                "defaultAddress": false,
+                "department": "Science",
+                "formattedAddress": "Pondicherry, HYD, 909090",
+                "pendingAddress": true,
+                "phone": "+919999999999",
+                "postalCode": "909090",
+                "region": {
+                    "countryIso": "IN",
+                    "isocode": "IN-PY",
+                    "isocodeShort": "PY",
+                    "name": "Pondicherry"
+                },
+                "shippingAddress": false,
+                "status": "PENDING_APPROVAL",
+                "town": "HYD",
+                "visibleInAddressBook": false
+            },
+            "code": "TestQuote-00000003",
+            "deliveryAddress": {
+                "addressId": "9f452eff-1f40-4d90-9f85-4ef6eb84a715",
+                "billingAddress": false,
+                "companyName": "",
+                "country": {
+                    "isocode": "IN",
+                    "name": "India"
+                },
+                "defaultAddress": false,
+                "department": "Science",
+                "formattedAddress": "Pondicherry, HYD, 909090",
+                "pendingAddress": true,
+                "phone": "+919999999999",
+                "postalCode": "909090",
+                "region": {
+                    "countryIso": "IN",
+                    "isocode": "IN-PY",
+                    "isocodeShort": "PY",
+                    "name": "Pondicherry"
+                },
+                "shippingAddress": false,
+                "status": "PENDING_APPROVAL",
+                "town": "HYD",
+                "visibleInAddressBook": false
+            },
+            "entries": [],
+            "requestDate": "Oct 20, 2020",
+            "state": "BUYER_APPROVED"
+        },
+        {
+            "billingAddress": {
+                "addressId": "051a6409-7eb6-4abf-9bc9-2112453a419f",
+                "billingAddress": false,
+                "companyName": "",
+                "country": {
+                    "isocode": "IN",
+                    "name": "India"
+                },
+                "defaultAddress": false,
+                "department": "Science",
+                "formattedAddress": "Pondicherry, HYD, 909090",
+                "pendingAddress": true,
+                "phone": "+919999999999",
+                "postalCode": "909090",
+                "region": {
+                    "countryIso": "IN",
+                    "isocode": "IN-PY",
+                    "isocodeShort": "PY",
+                    "name": "Pondicherry"
+                },
+                "shippingAddress": false,
+                "status": "PENDING_APPROVAL",
+                "town": "HYD",
+                "visibleInAddressBook": false
+            },
+            "code": "TestQuote-89000003",
+            "deliveryAddress": {
+                "addressId": "9f452eff-1f40-4d90-9f85-4ef6eb84a715",
+                "billingAddress": false,
+                "companyName": "",
+                "country": {
+                    "isocode": "IN",
+                    "name": "India"
+                },
+                "defaultAddress": false,
+                "department": "Science",
+                "formattedAddress": "Pondicherry, HYD, 909090",
+                "pendingAddress": true,
+                "phone": "+919999999999",
+                "postalCode": "909090",
+                "region": {
+                    "countryIso": "IN",
+                    "isocode": "IN-PY",
+                    "isocodeShort": "PY",
+                    "name": "Pondicherry"
+                },
+                "shippingAddress": false,
+                "status": "PENDING_APPROVAL",
+                "town": "HYD",
+                "visibleInAddressBook": false
+            },
+            "entries": [],
+            "requestDate": "Oct 20, 2020",
+            "state": "BUYER_APPROVED"
+        },
+        {
+            "billingAddress": {
+                "addressId": "051a6409-7eb6-4abf-9bc9-2112453a419f",
+                "billingAddress": false,
+                "companyName": "",
+                "country": {
+                    "isocode": "IN",
+                    "name": "India"
+                },
+                "defaultAddress": false,
+                "department": "Science",
+                "formattedAddress": "Pondicherry, HYD, 909090",
+                "pendingAddress": true,
+                "phone": "+919999999999",
+                "postalCode": "909090",
+                "region": {
+                    "countryIso": "IN",
+                    "isocode": "IN-PY",
+                    "isocodeShort": "PY",
+                    "name": "Pondicherry"
+                },
+                "shippingAddress": false,
+                "status": "PENDING_APPROVAL",
+                "town": "HYD",
+                "visibleInAddressBook": false
+            },
+            "code": "TestQuote-12000003",
+            "deliveryAddress": {
+                "addressId": "9f452eff-1f40-4d90-9f85-4ef6eb84a715",
+                "billingAddress": false,
+                "companyName": "",
+                "country": {
+                    "isocode": "IN",
+                    "name": "India"
+                },
+                "defaultAddress": false,
+                "department": "Science",
+                "formattedAddress": "Pondicherry, HYD, 909090",
+                "pendingAddress": true,
+                "phone": "+919999999999",
+                "postalCode": "909090",
+                "region": {
+                    "countryIso": "IN",
+                    "isocode": "IN-PY",
+                    "isocodeShort": "PY",
+                    "name": "Pondicherry"
+                },
+                "shippingAddress": false,
+                "status": "PENDING_APPROVAL",
+                "town": "HYD",
+                "visibleInAddressBook": false
+            },
+            "entries": [],
+            "requestDate": "Oct 20, 2020",
+            "state": "BUYER_APPROVED"
+        },
+        {
+            "billingAddress": {
+                "addressId": "051a6409-7eb6-4abf-9bc9-2112453a419f",
+                "billingAddress": false,
+                "companyName": "",
+                "country": {
+                    "isocode": "IN",
+                    "name": "India"
+                },
+                "defaultAddress": false,
+                "department": "Science",
+                "formattedAddress": "Pondicherry, HYD, 909090",
+                "pendingAddress": true,
+                "phone": "+919999999999",
+                "postalCode": "909090",
+                "region": {
+                    "countryIso": "IN",
+                    "isocode": "IN-PY",
+                    "isocodeShort": "PY",
+                    "name": "Pondicherry"
+                },
+                "shippingAddress": false,
+                "status": "PENDING_APPROVAL",
+                "town": "HYD",
+                "visibleInAddressBook": false
+            },
+            "code": "TestQuote-00089003",
+            "deliveryAddress": {
+                "addressId": "9f452eff-1f40-4d90-9f85-4ef6eb84a715",
+                "billingAddress": false,
+                "companyName": "",
+                "country": {
+                    "isocode": "IN",
+                    "name": "India"
+                },
+                "defaultAddress": false,
+                "department": "Science",
+                "formattedAddress": "Pondicherry, HYD, 909090",
+                "pendingAddress": true,
+                "phone": "+919999999999",
+                "postalCode": "909090",
+                "region": {
+                    "countryIso": "IN",
+                    "isocode": "IN-PY",
+                    "isocodeShort": "PY",
+                    "name": "Pondicherry"
+                },
+                "shippingAddress": false,
+                "status": "PENDING_APPROVAL",
+                "town": "HYD",
+                "visibleInAddressBook": false
+            },
+            "entries": [],
+            "requestDate": "Oct 20, 2020",
+            "state": "BUYER_APPROVED"
+        },
+        {
+            "billingAddress": {
+                "addressId": "051a6409-7eb6-4abf-9bc9-2112453a419f",
+                "billingAddress": false,
+                "companyName": "",
+                "country": {
+                    "isocode": "IN",
+                    "name": "India"
+                },
+                "defaultAddress": false,
+                "department": "Science",
+                "formattedAddress": "Pondicherry, HYD, 909090",
+                "pendingAddress": true,
+                "phone": "+919999999999",
+                "postalCode": "909090",
+                "region": {
+                    "countryIso": "IN",
+                    "isocode": "IN-PY",
+                    "isocodeShort": "PY",
+                    "name": "Pondicherry"
+                },
+                "shippingAddress": false,
+                "status": "PENDING_APPROVAL",
+                "town": "HYD",
+                "visibleInAddressBook": false
+            },
+            "code": "TestQuote-05089003",
+            "deliveryAddress": {
+                "addressId": "9f452eff-1f40-4d90-9f85-4ef6eb84a715",
+                "billingAddress": false,
+                "companyName": "",
+                "country": {
+                    "isocode": "IN",
+                    "name": "India"
+                },
+                "defaultAddress": false,
+                "department": "Science",
+                "formattedAddress": "Pondicherry, HYD, 909090",
+                "pendingAddress": true,
+                "phone": "+919999999999",
+                "postalCode": "909090",
+                "region": {
+                    "countryIso": "IN",
+                    "isocode": "IN-PY",
+                    "isocodeShort": "PY",
+                    "name": "Pondicherry"
+                },
+                "shippingAddress": false,
+                "status": "PENDING_APPROVAL",
+                "town": "HYD",
+                "visibleInAddressBook": false
+            },
+            "entries": [],
+            "requestDate": "Oct 20, 2020",
+            "state": "BUYER_APPROVED"
+        }
+    ]
+}

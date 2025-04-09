@@ -1,0 +1,19 @@
+<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html"
+     data-sly-call="${templates.placeholder @ isEmpty = true}"></sly>
+
+
+<div class="sitecontent ${properties.fullBleed ? '' : 'container'}">
+
+        <sly data-sly-test="${properties.text != null}">
+                <p class="sitecontent__section-heading">${properties.text}</p>
+        </sly>
+
+        <sly data-sly-test="${properties.descriptionTitle != null}">
+                <p class="sitecontent__title ${properties.titleVariation ? 'rewards-font' : ''}">${properties.descriptionTitle @context='html'}</p>
+        </sly>
+
+        <sly data-sly-test="${properties.description != null}">
+                <p class="sitecontent__sub-title">${properties.description @context='html'}</p>
+        </sly>
+</div>
+    

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="100px" height="192px" viewBox="0 0 100 192" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Sprite image</title>
+    <g id="Sprite-image" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect fill="#FFFFFF" x="0" y="0" width="100" height="192"></rect>
+        <g id="forms/CheckBox-Selected" transform="translate(16.000000, 62.000000)" stroke="#004593" stroke-width="2">
+            <g id="Checkbox">
+                <rect id="Rectangle" x="1" y="1" width="20" height="20" rx="4"></rect>
+                <polyline id="Path-2" stroke-linecap="round" stroke-linejoin="round" points="5.5 12.0200357 8.81883889 15 16.5 8"></polyline>
+            </g>
+        </g>
+        <g id="forms/CheckBox-Normal" transform="translate(16.000000, 16.000000)" fill="#FFFFFF" stroke="#C5C6C9">
+            <rect id="Rectangle" x="0.5" y="0.5" width="21" height="21" rx="4"></rect>
+        </g>
+        <g id="forms/CheckBox-Normal-Copy" transform="translate(16.000000, 108.000000)" fill="#FFFFFF" stroke="#C5C6C9">
+            <rect id="Rectangle" x="0.5" y="0.5" width="21" height="21" rx="4"></rect>
+        </g>
+        <g id="forms/CheckBox-Selected-disabled" transform="translate(16.000000, 154.000000)" stroke="#C5C6C9" stroke-width="2">
+            <rect id="Rectangle" x="1" y="1" width="20" height="20" rx="4"></rect>
+            <polyline id="Path-2" stroke-linecap="round" stroke-linejoin="round" points="5.5 12.0200357 8.81883889 15 16.5 8"></polyline>
+        </g>
+        <g id="forms/Radial-Selected" transform="translate(62.000000, 62.000000)">
+            <g id="Group">
+                <circle id="Oval" stroke="#004593" stroke-width="2" fill="#FFFFFF" cx="11" cy="11" r="10"></circle>
+                <circle id="Oval" fill="#004593" cx="11" cy="11" r="6"></circle>
+            </g>
+        </g>
+        <g id="forms/Radial-Selected-Copy" transform="translate(62.000000, 154.000000)">
+            <g id="Group">
+                <circle id="Oval" stroke="#C5C6C9" stroke-width="2" fill="#FFFFFF" cx="11" cy="11" r="10"></circle>
+                <circle id="Oval" fill="#C5C6C9" cx="11" cy="11" r="6"></circle>
+            </g>
+        </g>
+        <g id="forms/Radial-Normal" transform="translate(62.000000, 16.000000)" fill="#FFFFFF" stroke="#C5C6C9">
+            <circle id="Oval" cx="11" cy="11" r="10.5"></circle>
+        </g>
+        <g id="forms/Radial-Normal-Copy" transform="translate(62.000000, 108.000000)" fill="#FFFFFF" stroke="#C5C6C9">
+            <circle id="Oval" cx="11" cy="11" r="10.5"></circle>
+        </g>
+    </g>
+</svg>

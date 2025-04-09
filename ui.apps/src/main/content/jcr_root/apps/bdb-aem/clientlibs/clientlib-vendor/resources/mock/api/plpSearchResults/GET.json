@@ -1,0 +1,3599 @@
+{
+    "response": {
+        "totalResults": 406,
+        "start": 0,
+        "results": [
+            {
+                "uniqueIdentifier": "554055",
+                "id": "https://qa-gl.bdbiosciences.com/%7Blanguage-country%7D/products/reagents/immunoassay-reagents/elisa/biotin-mouse-anti-tnp.554055",
+                "docType_t": "product",
+                "docType_facet_s": "Products",
+                "labelDescription_t": "Biotin Mouse Anti-TNP",
+                "name_t": "Biotin Mouse Anti-TNP",
+                "name_s": "Biotin Mouse Anti-TNP",
+                "bdbiospellchecker_text_mv": ["Biotin Mouse Anti-TNP", "554055"],
+                "name_ci": "Biotin Mouse Anti-TNP",
+                "concatenatedQueryField_t": [
+                    "Biotin Mouse Anti-TNP",
+                    "BD Pharmingen™",
+                    "RUO",
+                    "Mouse BALB/c IgG2b, κ",
+                    "49.2",
+                    "TNP",
+                    "554055"
+                ],
+                "volPerTest_t": "",
+                "brand_t": "BD Pharmingen™",
+                "brand_ci": "BD Pharmingen™",
+                "alternativeName_t": "",
+                "alternativeName_s": "",
+                "alternativeName_ci": "",
+                "storageBuffer_t": "Aqueous buffered solution containing protein stabilizer and ≤0.09% sodium azide.",
+                "entrezGeneId_t": "",
+                "barcodeSequence_t": "",
+                "seqId_t": "",
+                "productType_t": "IsotypeControlLysate",
+                "regulatoryStatus_t": "RUO",
+                "immunogen_t": "TNP-Keyhole Limpet Hemocyanin ",
+                "isoType_t": "Mouse BALB/c IgG2b, κ",
+                "tdsCloneName_t": "49.2",
+                "tdsCloneName_s": "49.2",
+                "tdsCloneName_ci": "49.2",
+                "tdsCloneName_edge": "49.2",
+                "hostSpecies_t": "Mouse",
+                "applicationName_t": "ELISA",
+                "applicationName_facet_ss": ["ELISA"],
+                "dyeName_t": "Biotin",
+                "dyeName_s": "Biotin",
+                "dyeName_ci": "Biotin",
+                "dyeName_edge": "Biotin",
+                "laserWavelengthString_t": "",
+                "hpNodePath_t": "/content/commerce/products/bdb/products/reagents/immunoassay-reagents/elisa/554055_base/hp",
+                "variantHpNodePath_t": "/content/commerce/products/bdb/products/reagents/immunoassay-reagents/elisa/554055_base/554055/hp",
+                "damGlobalPath_t": "/content/dam/bdb/products/global/reagents/immunoassay-reagents/elisa/554055_base",
+                "docPartIDs_t": "",
+                "medias_t": "[]",
+                "laserColor_t": "",
+                "specificity_t": "TNP",
+                "specificity_s": "TNP",
+                "specificity_ci": "TNP",
+                "specificity_edge": "TNP",
+                "size_t": "0.5 mg",
+                "baseMaterialNumber_t": "340991_base",
+                "materialNumber_t": "340991",
+                "thumbnailImage_t": "/resources/images/plp-search.png",
+                "pdpTemplate_t": "SFA",
+                "isPrimaryVariant_t": "true",
+                "derivedProductStatus_t": "PURCHASEABLE",
+                "isAvailable_t": "true",
+                "validityStartDate_dt": "Oct 1, 2003, 12:00:00 AM",
+                "mpgCategory_txt": ["MPG_92", "MPG_92"],
+                "rrid_t": "AB_395223",
+                "applicationName_facet_s": "ELISA",
+                "dyeName_facet_s": "Biotin",
+                "tdsCloneName_facet_s": "49.2",
+                "isoType_facet_s": "Mouse BALB/c IgG2b, κ",
+                "hostSpecies_facet_s": "Mouse",
+                "regulatoryStatus_facet_s": "RUO",
+                "brand_facet_s": "BD Pharmingen™",
+                "rrid_facet_s": "AB_395223",
+                "size_facet_s": "0.5 mg",
+                "specificity_facet_s": "TNP",
+                "barcodeSequence_facet_s": "",
+                "category_facet_ss": ["ELISA", "Immunoassay Reagents", "Reagents"],
+                "category_t": "ELISA Immunoassay Reagents Reagents",
+                "category_s": "ELISA Immunoassay Reagents Reagents",
+                "category_ci": "ELISA Immunoassay Reagents Reagents",
+                "productType_display_value_facet_s": "Isotype Controls/Lysates",
+                "excitationSource_facet_s": "",
+                "speciesReactivity_facet_ss": [""],
+                "keywords_t": "TNP  Biotin ELISA, BD Pharmingen™",
+                "_version_": 1699558070817915000,
+                "isComparable": true,
+                "lawsAndRegulations_t": "test",
+                "regulatoryStatus_display_value_facet_s": "体外診断用医薬品"
+            },
+            {
+                "uniqueIdentifier": "554397",
+                "id": "https://qa-gl.bdbiosciences.com/%7Blanguage-country%7D/products/reagents/immunoassay-reagents/elisa/biotin-rat-anti-mouse-il-5.554397",
+                "docType_t": "product",
+                "docType_facet_s": "Products",
+                "labelDescription_t": "Biotin Rat Anti-Mouse IL-5",
+                "name_t": "Biotin Rat Anti-Mouse IL-5",
+                "name_s": "Biotin Rat Anti-Mouse IL-5",
+                "bdbiospellchecker_text_mv": ["Biotin Rat Anti-Mouse IL-5", "554397"],
+                "name_ci": "Biotin Rat Anti-Mouse IL-5",
+                "concatenatedQueryField_t": [
+                    "Biotin Rat Anti-Mouse IL-5",
+                    "BD Pharmingen™",
+                    "RUO",
+                    "Rat IgG2a",
+                    "TRFK4",
+                    "IL-5",
+                    "554397"
+                ],
+                "volPerTest_t": "",
+                "brand_t": "BD Pharmingen™",
+                "brand_ci": "BD Pharmingen™",
+                "alternativeName_t": "",
+                "alternativeName_s": "",
+                "alternativeName_ci": "",
+                "storageBuffer_t": "Aqueous buffered solution containing protein stabilizer and ≤0.09% sodium azide.",
+                "entrezGeneId_t": "",
+                "barcodeSequence_t": "",
+                "seqId_t": "",
+                "productType_t": "SingColorPureAntibody",
+                "regulatoryStatus_t": "RUO",
+                "immunogen_t": "Semi-purified T Cell Clone Supernatant ",
+                "isoType_t": "Rat IgG2a",
+                "tdsCloneName_t": "TRFK4",
+                "tdsCloneName_s": "TRFK4",
+                "tdsCloneName_ci": "TRFK4",
+                "tdsCloneName_edge": "TRFK4",
+                "hostSpecies_t": "Rat",
+                "species_t": "Ms",
+                "reactivityStatus_t": "QC",
+                "applicationName_t": "ELISA Det.",
+                "applicationName_facet_ss": ["ELISA Detection"],
+                "dyeName_t": "Biotin",
+                "dyeName_s": "Biotin",
+                "dyeName_ci": "Biotin",
+                "dyeName_edge": "Biotin",
+                "laserWavelengthString_t": "",
+                "hpNodePath_t": "/content/commerce/products/bdb/products/reagents/immunoassay-reagents/elisa/554397_base/hp",
+                "variantHpNodePath_t": "/content/commerce/products/bdb/products/reagents/immunoassay-reagents/elisa/554397_base/554397/hp",
+                "damGlobalPath_t": "/content/dam/bdb/products/global/reagents/immunoassay-reagents/elisa/554397_base",
+                "docPartIDs_t": "",
+                "medias_t": "[]",
+                "laserColor_t": "",
+                "specificity_t": "IL-5",
+                "specificity_s": "IL-5",
+                "specificity_ci": "IL-5",
+                "specificity_edge": "IL-5",
+                "size_t": "0.5 mg",
+                "baseMaterialNumber_t": "554397_base",
+                "materialNumber_t": "554397",
+                "thumbnailImage_t": "/resources/images/plp-search.png",
+                "pdpTemplate_t": "SFA",
+                "isPrimaryVariant_t": "true",
+                "derivedProductStatus_t": "PURCHASEABLE",
+                "isAvailable_t": "true",
+                "validityStartDate_dt": "Oct 1, 2003, 12:00:00 AM",
+                "mpgCategory_txt": ["MPG_92"],
+                "rrid_t": "AB_395365",
+                "species_facet_s": "Ms",
+                "applicationName_facet_s": "ELISA Det.",
+                "dyeName_facet_s": "Biotin",
+                "tdsCloneName_facet_s": "TRFK4",
+                "isoType_facet_s": "Rat IgG2a",
+                "hostSpecies_facet_s": "Rat",
+                "regulatoryStatus_facet_s": "RUO",
+                "brand_facet_s": "BD Pharmingen™",
+                "rrid_facet_s": "AB_395365",
+                "size_facet_s": "0.5 mg",
+                "specificity_facet_s": "IL-5",
+                "barcodeSequence_facet_s": "",
+                "category_facet_ss": ["ELISA", "Immunoassay Reagents", "Reagents"],
+                "category_t": "ELISA Immunoassay Reagents Reagents",
+                "category_s": "ELISA Immunoassay Reagents Reagents",
+                "category_ci": "ELISA Immunoassay Reagents Reagents",
+                "productType_display_value_facet_s": "Antibodies-Primary",
+                "excitationSource_facet_s": "",
+                "speciesReactivity_facet_ss": ["Mouse"],
+                "keywords_t": "IL-5  Biotin ELISA Detection, Mouse, BD Pharmingen™",
+                "_version_": 1699558070820012000,
+                "isComparable": true,
+                "lawsAndRegulations_t": ""
+            },
+            {
+                "uniqueIdentifier": "554483",
+                "id": "https://qa-gl.bdbiosciences.com/%7Blanguage-country%7D/products/reagents/immunoassay-reagents/elisa/biotin-rat-anti-human-il-4.554483",
+                "docType_t": "product",
+                "docType_facet_s": "Products",
+                "labelDescription_t": "Biotin Rat Anti-Human IL-4",
+                "name_t": "Biotin Rat Anti-Human IL-4",
+                "name_s": "Biotin Rat Anti-Human IL-4",
+                "bdbiospellchecker_text_mv": ["Biotin Rat Anti-Human IL-4", "554483"],
+                "name_ci": "Biotin Rat Anti-Human IL-4",
+                "concatenatedQueryField_t": [
+                    "Biotin Rat Anti-Human IL-4",
+                    "BD Pharmingen™",
+                    "RUO",
+                    "Rat IgG1",
+                    "MP4-25D2",
+                    "IL-4",
+                    "554483"
+                ],
+                "volPerTest_t": "",
+                "brand_t": "BD Pharmingen™",
+                "brand_ci": "BD Pharmingen™",
+                "alternativeName_t": "",
+                "alternativeName_s": "",
+                "alternativeName_ci": "",
+                "storageBuffer_t": "Aqueous buffered solution containing ≤0.09% sodium azide.",
+                "entrezGeneId_t": "",
+                "barcodeSequence_t": "",
+                "seqId_t": "",
+                "productType_t": "SingColorPureAntibody",
+                "regulatoryStatus_t": "RUO",
+                "immunogen_t": "Purified Recombinant Human IL-4 ",
+                "isoType_t": "Rat IgG1",
+                "tdsCloneName_t": "MP4-25D2",
+                "tdsCloneName_s": "MP4-25D2",
+                "tdsCloneName_ci": "MP4-25D2",
+                "tdsCloneName_edge": "MP4-25D2",
+                "hostSpecies_t": "Rat",
+                "species_t": "Hu",
+                "reactivityStatus_t": "QC",
+                "applicationName_t": "ELISA Det.",
+                "applicationName_facet_ss": ["ELISA Detection"],
+                "dyeName_t": "Biotin",
+                "dyeName_s": "Biotin",
+                "dyeName_ci": "Biotin",
+                "dyeName_edge": "Biotin",
+                "laserWavelengthString_t": "",
+                "hpNodePath_t": "/content/commerce/products/bdb/products/reagents/immunoassay-reagents/elisa/554483_base/hp",
+                "variantHpNodePath_t": "/content/commerce/products/bdb/products/reagents/immunoassay-reagents/elisa/554483_base/554483/hp",
+                "damGlobalPath_t": "/content/dam/bdb/products/global/reagents/immunoassay-reagents/elisa/554483_base",
+                "docPartIDs_t": "",
+                "medias_t": "[]",
+                "laserColor_t": "",
+                "specificity_t": "IL-4",
+                "specificity_s": "IL-4",
+                "specificity_ci": "IL-4",
+                "specificity_edge": "IL-4",
+                "size_t": "0.5 mg",
+                "baseMaterialNumber_t": "566599_base",
+                "materialNumber_t": "566599",
+                "thumbnailImage_t": "/content/dam/bdb/products/vialimages/packaging-images/black-vial-images/Biotin.jpg",
+                "pdpTemplate_t": "SFA",
+                "isPrimaryVariant_t": "true",
+                "derivedProductStatus_t": "PURCHASEABLE",
+                "isAvailable_t": "true",
+                "validityStartDate_dt": "Oct 1, 2003, 12:00:00 AM",
+                "mpgCategory_txt": ["MPG_92", "MPG_92"],
+                "rrid_t": "AB_395422",
+                "species_facet_s": "Hu",
+                "applicationName_facet_s": "ELISA Det.",
+                "dyeName_facet_s": "Biotin",
+                "tdsCloneName_facet_s": "MP4-25D2",
+                "isoType_facet_s": "Rat IgG1",
+                "hostSpecies_facet_s": "Rat",
+                "regulatoryStatus_facet_s": "RUO",
+                "brand_facet_s": "BD Pharmingen™",
+                "rrid_facet_s": "AB_395422",
+                "size_facet_s": "0.5 mg",
+                "specificity_facet_s": "IL-4",
+                "barcodeSequence_facet_s": "",
+                "category_facet_ss": ["ELISA", "Immunoassay Reagents", "Reagents"],
+                "category_t": "ELISA Immunoassay Reagents Reagents",
+                "category_s": "ELISA Immunoassay Reagents Reagents",
+                "category_ci": "ELISA Immunoassay Reagents Reagents",
+                "productType_display_value_facet_s": "Antibodies-Primary",
+                "excitationSource_facet_s": "",
+                "speciesReactivity_facet_ss": ["Human"],
+                "keywords_t": "IL-4  Biotin ELISA Detection, Human, BD Pharmingen™",
+                "_version_": 1699558070824206300,
+                "isComparable": true
+            },
+            {
+                "uniqueIdentifier": "554674",
+                "id": "https://qa-gl.bdbiosciences.com/%7Blanguage-country%7D/products/reagents/immunoassay-reagents/elisa/biotin-rat-anti-human-il-3.554674",
+                "docType_t": "product",
+                "docType_facet_s": "Products",
+                "labelDescription_t": "Biotin Rat Anti-Human IL-3",
+                "name_t": "Biotin Rat Anti-Human IL-3",
+                "name_s": "Biotin Rat Anti-Human IL-3",
+                "bdbiospellchecker_text_mv": ["Biotin Rat Anti-Human IL-3", "554674"],
+                "name_ci": "Biotin Rat Anti-Human IL-3",
+                "concatenatedQueryField_t": [
+                    "Biotin Rat Anti-Human IL-3",
+                    "BD Pharmingen™",
+                    "RUO",
+                    "Rat IgG1",
+                    "BVD3-1F9",
+                    "IL-3",
+                    "554674"
+                ],
+                "volPerTest_t": "",
+                "brand_t": "BD Pharmingen™",
+                "brand_ci": "BD Pharmingen™",
+                "alternativeName_t": "",
+                "alternativeName_s": "",
+                "alternativeName_ci": "",
+                "storageBuffer_t": "Aqueous buffered solution containing ≤0.09% sodium azide.",
+                "entrezGeneId_t": "",
+                "barcodeSequence_t": "",
+                "seqId_t": "",
+                "productType_t": "SingColorPureAntibody",
+                "regulatoryStatus_t": "RUO",
+                "immunogen_t": "Recombinant Human IL-3 ",
+                "isoType_t": "Rat IgG1",
+                "tdsCloneName_t": "BVD3-1F9",
+                "tdsCloneName_s": "BVD3-1F9",
+                "tdsCloneName_ci": "BVD3-1F9",
+                "tdsCloneName_edge": "BVD3-1F9",
+                "hostSpecies_t": "Rat",
+                "species_t": "Hu",
+                "reactivityStatus_t": "QC",
+                "applicationName_t": "ELISA Det.",
+                "applicationName_facet_ss": ["ELISA Detection"],
+                "dyeName_t": "Biotin",
+                "dyeName_s": "Biotin",
+                "dyeName_ci": "Biotin",
+                "dyeName_edge": "Biotin",
+                "laserWavelengthString_t": "",
+                "hpNodePath_t": "/content/commerce/products/bdb/products/reagents/immunoassay-reagents/elisa/554674_base/hp",
+                "variantHpNodePath_t": "/content/commerce/products/bdb/products/reagents/immunoassay-reagents/elisa/554674_base/554674/hp",
+                "damGlobalPath_t": "/content/dam/bdb/products/global/reagents/immunoassay-reagents/elisa/554674_base",
+                "docPartIDs_t": "",
+                "medias_t": "[]",
+                "laserColor_t": "",
+                "specificity_t": "IL-3",
+                "specificity_s": "IL-3",
+                "specificity_ci": "IL-3",
+                "specificity_edge": "IL-3",
+                "size_t": "0.5 mg",
+                "baseMaterialNumber_t": "554674_base",
+                "materialNumber_t": "554674",
+                "thumbnailImage_t": "/content/dam/bdb/products/vialimages/packaging-images/black-vial-images/Biotin.jpg",
+                "pdpTemplate_t": "SFA",
+                "isPrimaryVariant_t": "true",
+                "derivedProductStatus_t": "PURCHASEABLE",
+                "isAvailable_t": "true",
+                "validityStartDate_dt": "Oct 1, 2003, 12:00:00 AM",
+                "mpgCategory_txt": ["MPG_92"],
+                "rrid_t": "AB_395503",
+                "species_facet_s": "Hu",
+                "applicationName_facet_s": "ELISA Det.",
+                "dyeName_facet_s": "Biotin",
+                "tdsCloneName_facet_s": "BVD3-1F9",
+                "isoType_facet_s": "Rat IgG1",
+                "hostSpecies_facet_s": "Rat",
+                "regulatoryStatus_facet_s": "RUO",
+                "brand_facet_s": "BD Pharmingen™",
+                "rrid_facet_s": "AB_395503",
+                "size_facet_s": "0.5 mg",
+                "specificity_facet_s": "IL-3",
+                "barcodeSequence_facet_s": "",
+                "category_facet_ss": ["ELISA", "Immunoassay Reagents", "Reagents"],
+                "category_t": "ELISA Immunoassay Reagents Reagents",
+                "category_s": "ELISA Immunoassay Reagents Reagents",
+                "category_ci": "ELISA Immunoassay Reagents Reagents",
+                "productType_display_value_facet_s": "Antibodies-Primary",
+                "excitationSource_facet_s": "",
+                "speciesReactivity_facet_ss": ["Human"],
+                "keywords_t": "IL-3  Biotin ELISA Detection, Human, BD Pharmingen™",
+                "_version_": 1699558070828400600,
+                "isComparable": true
+            },
+            {
+                "uniqueIdentifier": "554713",
+                "id": "https://qa-gl.bdbiosciences.com/%7Blanguage-country%7D/products/reagents/immunoassay-reagents/elisa/biotin-mouse-anti-human-il-15.554713",
+                "docType_t": "product",
+                "docType_facet_s": "Products",
+                "labelDescription_t": "Biotin Mouse Anti-Human IL-15",
+                "name_t": "Biotin Mouse Anti-Human IL-15",
+                "name_s": "Biotin Mouse Anti-Human IL-15",
+                "bdbiospellchecker_text_mv": ["Biotin Mouse Anti-Human IL-15", "554713"],
+                "name_ci": "Biotin Mouse Anti-Human IL-15",
+                "concatenatedQueryField_t": [
+                    "Biotin Mouse Anti-Human IL-15",
+                    "BD Pharmingen™",
+                    "RUO",
+                    "Mouse IgG1",
+                    "G243-886",
+                    "IL-15",
+                    "554713"
+                ],
+                "volPerTest_t": "",
+                "brand_t": "BD Pharmingen™",
+                "brand_ci": "BD Pharmingen™",
+                "alternativeName_t": "",
+                "alternativeName_s": "",
+                "alternativeName_ci": "",
+                "storageBuffer_t": "Aqueous buffered solution containing ≤0.09% sodium azide.",
+                "entrezGeneId_t": "",
+                "barcodeSequence_t": "",
+                "seqId_t": "",
+                "productType_t": "SingColorPureAntibody",
+                "regulatoryStatus_t": "RUO",
+                "immunogen_t": "Recombinant Human IL-15 ",
+                "isoType_t": "Mouse IgG1",
+                "tdsCloneName_t": "G243-886",
+                "tdsCloneName_s": "G243-886",
+                "tdsCloneName_ci": "G243-886",
+                "tdsCloneName_edge": "G243-886",
+                "hostSpecies_t": "Mouse",
+                "species_t": "Hu",
+                "reactivityStatus_t": "QC",
+                "applicationName_t": "ELISA Det.",
+                "applicationName_facet_ss": ["ELISA Detection"],
+                "dyeName_t": "Biotin",
+                "dyeName_s": "Biotin",
+                "dyeName_ci": "Biotin",
+                "dyeName_edge": "Biotin",
+                "laserWavelengthString_t": "",
+                "hpNodePath_t": "/content/commerce/products/bdb/products/reagents/immunoassay-reagents/elisa/554713_base/hp",
+                "variantHpNodePath_t": "/content/commerce/products/bdb/products/reagents/immunoassay-reagents/elisa/554713_base/554713/hp",
+                "damGlobalPath_t": "/content/dam/bdb/products/global/reagents/immunoassay-reagents/elisa/554713_base",
+                "docPartIDs_t": "",
+                "medias_t": "[]",
+                "laserColor_t": "",
+                "specificity_t": "IL-15",
+                "specificity_s": "IL-15",
+                "specificity_ci": "IL-15",
+                "specificity_edge": "IL-15",
+                "size_t": "0.5 mg",
+                "baseMaterialNumber_t": "554713_base",
+                "materialNumber_t": "554713",
+                "thumbnailImage_t": "/content/dam/bdb/products/vialimages/packaging-images/black-vial-images/Biotin.jpg",
+                "pdpTemplate_t": "SFA",
+                "isPrimaryVariant_t": "true",
+                "derivedProductStatus_t": "PURCHASEABLE",
+                "isAvailable_t": "true",
+                "validityStartDate_dt": "Oct 1, 2003, 12:00:00 AM",
+                "mpgCategory_txt": ["MPG_92"],
+                "rrid_t": "AB_395525",
+                "species_facet_s": "Hu",
+                "applicationName_facet_s": "ELISA Det.",
+                "dyeName_facet_s": "Biotin",
+                "tdsCloneName_facet_s": "G243-886",
+                "isoType_facet_s": "Mouse IgG1",
+                "hostSpecies_facet_s": "Mouse",
+                "regulatoryStatus_facet_s": "RUO",
+                "brand_facet_s": "BD Pharmingen™",
+                "rrid_facet_s": "AB_395525",
+                "size_facet_s": "0.5 mg",
+                "specificity_facet_s": "IL-15",
+                "barcodeSequence_facet_s": "",
+                "category_facet_ss": ["ELISA", "Immunoassay Reagents", "Reagents"],
+                "category_t": "ELISA Immunoassay Reagents Reagents",
+                "category_s": "ELISA Immunoassay Reagents Reagents",
+                "category_ci": "ELISA Immunoassay Reagents Reagents",
+                "productType_display_value_facet_s": "Antibodies-Primary",
+                "excitationSource_facet_s": "",
+                "speciesReactivity_facet_ss": ["Human"],
+                "keywords_t": "IL-15  Biotin ELISA Detection, Human, BD Pharmingen™",
+                "_version_": 1699558070829449200,
+                "isComparable": true
+            },
+            {
+                "uniqueIdentifier": "555090",
+                "id": "https://qa-gl.bdbiosciences.com/%7Blanguage-country%7D/products/reagents/immunoassay-reagents/elisa/biotin-mouse-anti-rat-il-4.555090",
+                "docType_t": "product",
+                "docType_facet_s": "Products",
+                "labelDescription_t": "Biotin Mouse Anti-Rat IL-4",
+                "name_t": "Biotin Mouse Anti-Rat IL-4",
+                "name_s": "Biotin Mouse Anti-Rat IL-4",
+                "bdbiospellchecker_text_mv": ["Biotin Mouse Anti-Rat IL-4", "555090"],
+                "name_ci": "Biotin Mouse Anti-Rat IL-4",
+                "concatenatedQueryField_t": [
+                    "Biotin Mouse Anti-Rat IL-4",
+                    "BD Pharmingen™",
+                    "RUO",
+                    "Mouse IgG1, κ",
+                    "B11-3",
+                    "IL-4",
+                    "555090"
+                ],
+                "volPerTest_t": "",
+                "brand_t": "BD Pharmingen™",
+                "brand_ci": "BD Pharmingen™",
+                "alternativeName_t": "",
+                "alternativeName_s": "",
+                "alternativeName_ci": "",
+                "storageBuffer_t": "Aqueous buffered solution containing ≤0.09% sodium azide.",
+                "entrezGeneId_t": "",
+                "barcodeSequence_t": "",
+                "seqId_t": "",
+                "productType_t": "SingColorPureAntibody",
+                "regulatoryStatus_t": "RUO",
+                "immunogen_t": "Immunoaffinity-purified, recombinant rat IL-4 ",
+                "isoType_t": "Mouse IgG1, κ",
+                "tdsCloneName_t": "B11-3",
+                "tdsCloneName_s": "B11-3",
+                "tdsCloneName_ci": "B11-3",
+                "tdsCloneName_edge": "B11-3",
+                "hostSpecies_t": "Mouse",
+                "species_t": "Rat",
+                "reactivityStatus_t": "QC",
+                "applicationName_t": "ELISA Det.",
+                "applicationName_facet_ss": ["ELISA Detection"],
+                "dyeName_t": "Biotin",
+                "dyeName_s": "Biotin",
+                "dyeName_ci": "Biotin",
+                "dyeName_edge": "Biotin",
+                "laserWavelengthString_t": "",
+                "hpNodePath_t": "/content/commerce/products/bdb/products/reagents/immunoassay-reagents/elisa/555090_base/hp",
+                "variantHpNodePath_t": "/content/commerce/products/bdb/products/reagents/immunoassay-reagents/elisa/555090_base/555090/hp",
+                "damGlobalPath_t": "/content/dam/bdb/products/global/reagents/immunoassay-reagents/elisa/555090_base",
+                "docPartIDs_t": "",
+                "medias_t": "[{\"baseMaterialNumber\":\"555090_base\",\"imageName\":\"24122D_555090_image1\",\"caption\":\"Rat IL-4 ELISA Standard Curve.\",\"mime\":\"tif\",\"imageMetadata\":\"ImageTitle~NA Biotin Mouse Anti-Rat IL-4 | ImageKeywords~555090  ELISA Detection Routinely Tested | imageDescription~IL-4 Biotin | imageLang~EN | imageRegion~Global | imageAltText~Biotin Mouse Anti-Rat IL-4\",\"imageType\":\"PRIMARY\"}]",
+                "laserColor_t": "",
+                "specificity_t": "IL-4",
+                "specificity_s": "IL-4",
+                "specificity_ci": "IL-4",
+                "specificity_edge": "IL-4",
+                "size_t": "0.5 mg",
+                "baseMaterialNumber_t": "555090_base",
+                "materialNumber_t": "555090",
+                "thumbnailImage_t": "/content/dam/bdb/products/global/reagents/immunoassay-reagents/elisa/555090_base/24122D_555090_image1.png",
+                "pdpTemplate_t": "SFA",
+                "isPrimaryVariant_t": "true",
+                "derivedProductStatus_t": "PURCHASEABLE",
+                "isAvailable_t": "true",
+                "validityStartDate_dt": "Oct 1, 2003, 12:00:00 AM",
+                "mpgCategory_txt": ["MPG_92", "MPG_92"],
+                "rrid_t": "AB_395692",
+                "species_facet_s": "Rat",
+                "applicationName_facet_s": "ELISA Det.",
+                "dyeName_facet_s": "Biotin",
+                "tdsCloneName_facet_s": "B11-3",
+                "isoType_facet_s": "Mouse IgG1, κ",
+                "hostSpecies_facet_s": "Mouse",
+                "regulatoryStatus_facet_s": "RUO",
+                "brand_facet_s": "BD Pharmingen™",
+                "rrid_facet_s": "AB_395692",
+                "size_facet_s": "0.5 mg",
+                "specificity_facet_s": "IL-4",
+                "barcodeSequence_facet_s": "",
+                "category_facet_ss": ["ELISA", "Immunoassay Reagents", "Reagents"],
+                "category_t": "ELISA Immunoassay Reagents Reagents",
+                "category_s": "ELISA Immunoassay Reagents Reagents",
+                "category_ci": "ELISA Immunoassay Reagents Reagents",
+                "productType_display_value_facet_s": "Antibodies-Primary",
+                "excitationSource_facet_s": "",
+                "speciesReactivity_facet_ss": ["Rat"],
+                "medias_imageName_ss": ["24122D_555090_image1"],
+                "keywords_t": "IL-4  Biotin ELISA Detection, Rat, NA",
+                "_version_": 1699558070837837800,
+                "isComparable": true
+            },
+            {
+                "uniqueIdentifier": "555869",
+                "id": "https://qa-gl.bdbiosciences.com/%7Blanguage-country%7D/products/reagents/immunoassay-reagents/elisa/biotin-mouse-anti-human-igg1.555869",
+                "docType_t": "product",
+                "docType_facet_s": "Products",
+                "labelDescription_t": "Biotin Mouse Anti-Human IgG1",
+                "name_t": "Biotin Mouse Anti-Human IgG1",
+                "name_s": "Biotin Mouse Anti-Human IgG1",
+                "bdbiospellchecker_text_mv": ["Biotin Mouse Anti-Human IgG1", "555869"],
+                "name_ci": "Biotin Mouse Anti-Human IgG1",
+                "concatenatedQueryField_t": [
+                    "Biotin Mouse Anti-Human IgG1",
+                    "BD Pharmingen™",
+                    "RUO",
+                    "Mouse IgG2b, κ",
+                    "G17-1",
+                    "IgG1",
+                    "555869"
+                ],
+                "volPerTest_t": "",
+                "brand_t": "BD Pharmingen™",
+                "brand_ci": "BD Pharmingen™",
+                "alternativeName_t": "",
+                "alternativeName_s": "",
+                "alternativeName_ci": "",
+                "storageBuffer_t": "Aqueous buffered solution containing ≤0.09% sodium azide.",
+                "entrezGeneId_t": "",
+                "barcodeSequence_t": "",
+                "seqId_t": "",
+                "productType_t": "SingColorPureAntibody",
+                "regulatoryStatus_t": "RUO",
+                "immunogen_t": "",
+                "isoType_t": "Mouse IgG2b, κ",
+                "tdsCloneName_t": "G17-1",
+                "tdsCloneName_s": "G17-1",
+                "tdsCloneName_ci": "G17-1",
+                "tdsCloneName_edge": "G17-1",
+                "hostSpecies_t": "Mouse",
+                "species_t": "Hu",
+                "reactivityStatus_t": "QC",
+                "applicationName_t": "ELISA",
+                "applicationName_facet_ss": ["ELISA"],
+                "dyeName_t": "Biotin",
+                "dyeName_s": "Biotin",
+                "dyeName_ci": "Biotin",
+                "dyeName_edge": "Biotin",
+                "laserWavelengthString_t": "",
+                "hpNodePath_t": "/content/commerce/products/bdb/products/reagents/immunoassay-reagents/elisa/555869_base/hp",
+                "variantHpNodePath_t": "/content/commerce/products/bdb/products/reagents/immunoassay-reagents/elisa/555869_base/555869/hp",
+                "damGlobalPath_t": "/content/dam/bdb/products/global/reagents/immunoassay-reagents/elisa/555869_base",
+                "docPartIDs_t": "",
+                "medias_t": "[]",
+                "laserColor_t": "",
+                "specificity_t": "IgG1",
+                "specificity_s": "IgG1",
+                "specificity_ci": "IgG1",
+                "specificity_edge": "IgG1",
+                "size_t": "0.5 mg",
+                "baseMaterialNumber_t": "555869_base",
+                "materialNumber_t": "555869",
+                "thumbnailImage_t": "/content/dam/bdb/products/vialimages/packaging-images/black-vial-images/Biotin.jpg",
+                "pdpTemplate_t": "SFA",
+                "isPrimaryVariant_t": "true",
+                "derivedProductStatus_t": "PURCHASEABLE",
+                "isAvailable_t": "true",
+                "validityStartDate_dt": "Oct 1, 2003, 12:00:00 AM",
+                "mpgCategory_txt": ["MPG_92"],
+                "rrid_t": "AB_396187",
+                "species_facet_s": "Hu",
+                "applicationName_facet_s": "ELISA",
+                "dyeName_facet_s": "Biotin",
+                "tdsCloneName_facet_s": "G17-1",
+                "isoType_facet_s": "Mouse IgG2b, κ",
+                "hostSpecies_facet_s": "Mouse",
+                "regulatoryStatus_facet_s": "RUO",
+                "brand_facet_s": "BD Pharmingen™",
+                "rrid_facet_s": "AB_396187",
+                "size_facet_s": "0.5 mg",
+                "specificity_facet_s": "IgG1",
+                "barcodeSequence_facet_s": "",
+                "category_facet_ss": ["ELISA", "Immunoassay Reagents", "Reagents"],
+                "category_t": "ELISA Immunoassay Reagents Reagents",
+                "category_s": "ELISA Immunoassay Reagents Reagents",
+                "category_ci": "ELISA Immunoassay Reagents Reagents",
+                "productType_display_value_facet_s": "Antibodies-Primary",
+                "excitationSource_facet_s": "",
+                "speciesReactivity_facet_ss": ["Human"],
+                "keywords_t": "IgG1  Biotin ELISA, Human, BD Pharmingen™",
+                "_version_": 1699558070839935000,
+                "isComparable": true
+            },
+            {
+                "uniqueIdentifier": "555874",
+                "id": "https://qa-gl.bdbiosciences.com/%7Blanguage-country%7D/products/reagents/immunoassay-reagents/elisa/biotin-mouse-anti-human-igg2.555874",
+                "docType_t": "product",
+                "docType_facet_s": "Products",
+                "labelDescription_t": "Biotin Mouse Anti-Human IgG2",
+                "name_t": "Biotin Mouse Anti-Human IgG2",
+                "name_s": "Biotin Mouse Anti-Human IgG2",
+                "bdbiospellchecker_text_mv": ["Biotin Mouse Anti-Human IgG2", "555874"],
+                "name_ci": "Biotin Mouse Anti-Human IgG2",
+                "concatenatedQueryField_t": [
+                    "Biotin Mouse Anti-Human IgG2",
+                    "BD Pharmingen™",
+                    "RUO",
+                    "Mouse IgG1, κ",
+                    "G18-21",
+                    "IgG2",
+                    "555874"
+                ],
+                "volPerTest_t": "",
+                "brand_t": "BD Pharmingen™",
+                "brand_ci": "BD Pharmingen™",
+                "alternativeName_t": "",
+                "alternativeName_s": "",
+                "alternativeName_ci": "",
+                "storageBuffer_t": "Aqueous buffered solution containing ≤0.09% sodium azide.",
+                "entrezGeneId_t": "",
+                "barcodeSequence_t": "",
+                "seqId_t": "",
+                "productType_t": "SingColorPureAntibody",
+                "regulatoryStatus_t": "RUO",
+                "immunogen_t": "",
+                "isoType_t": "Mouse IgG1, κ",
+                "tdsCloneName_t": "G18-21",
+                "tdsCloneName_s": "G18-21",
+                "tdsCloneName_ci": "G18-21",
+                "tdsCloneName_edge": "G18-21",
+                "hostSpecies_t": "Mouse",
+                "species_t": "Hu",
+                "reactivityStatus_t": "QC",
+                "applicationName_t": "ELISA",
+                "applicationName_facet_ss": ["ELISA"],
+                "dyeName_t": "Biotin",
+                "dyeName_s": "Biotin",
+                "dyeName_ci": "Biotin",
+                "dyeName_edge": "Biotin",
+                "laserWavelengthString_t": "",
+                "hpNodePath_t": "/content/commerce/products/bdb/products/reagents/immunoassay-reagents/elisa/555874_base/hp",
+                "variantHpNodePath_t": "/content/commerce/products/bdb/products/reagents/immunoassay-reagents/elisa/555874_base/555874/hp",
+                "damGlobalPath_t": "/content/dam/bdb/products/global/reagents/immunoassay-reagents/elisa/555874_base",
+                "docPartIDs_t": "",
+                "medias_t": "[]",
+                "laserColor_t": "",
+                "specificity_t": "IgG2",
+                "specificity_s": "IgG2",
+                "specificity_ci": "IgG2",
+                "specificity_edge": "IgG2",
+                "size_t": "0.5 mg",
+                "baseMaterialNumber_t": "555874_base",
+                "materialNumber_t": "555874",
+                "thumbnailImage_t": "/content/dam/bdb/products/vialimages/packaging-images/black-vial-images/Biotin.jpg",
+                "pdpTemplate_t": "SFA",
+                "isPrimaryVariant_t": "true",
+                "derivedProductStatus_t": "PURCHASEABLE",
+                "isAvailable_t": "true",
+                "validityStartDate_dt": "Oct 1, 2003, 12:00:00 AM",
+                "mpgCategory_txt": ["MPG_92"],
+                "rrid_t": "AB_396190",
+                "species_facet_s": "Hu",
+                "applicationName_facet_s": "ELISA",
+                "dyeName_facet_s": "Biotin",
+                "tdsCloneName_facet_s": "G18-21",
+                "isoType_facet_s": "Mouse IgG1, κ",
+                "hostSpecies_facet_s": "Mouse",
+                "regulatoryStatus_facet_s": "RUO",
+                "brand_facet_s": "BD Pharmingen™",
+                "rrid_facet_s": "AB_396190",
+                "size_facet_s": "0.5 mg",
+                "specificity_facet_s": "IgG2",
+                "barcodeSequence_facet_s": "",
+                "category_facet_ss": ["ELISA", "Immunoassay Reagents", "Reagents"],
+                "category_t": "ELISA Immunoassay Reagents Reagents",
+                "category_s": "ELISA Immunoassay Reagents Reagents",
+                "category_ci": "ELISA Immunoassay Reagents Reagents",
+                "productType_display_value_facet_s": "Antibodies-Primary",
+                "excitationSource_facet_s": "",
+                "speciesReactivity_facet_ss": ["Human"],
+                "keywords_t": "IgG2  Biotin ELISA, Human, BD Pharmingen™",
+                "_version_": 1699558070840983600,
+                "isComparable": true
+            },
+            {
+                "uniqueIdentifier": "555879",
+                "id": "https://qa-gl.bdbiosciences.com/%7Blanguage-country%7D/products/reagents/immunoassay-reagents/elisa/biotin-mouse-anti-human-igg4.555879",
+                "docType_t": "product",
+                "docType_facet_s": "Products",
+                "labelDescription_t": "Biotin Mouse Anti-Human IgG4",
+                "name_t": "Biotin Mouse Anti-Human IgG4",
+                "name_s": "Biotin Mouse Anti-Human IgG4",
+                "bdbiospellchecker_text_mv": ["Biotin Mouse Anti-Human IgG4", "555879"],
+                "name_ci": "Biotin Mouse Anti-Human IgG4",
+                "concatenatedQueryField_t": [
+                    "Biotin Mouse Anti-Human IgG4",
+                    "BD Pharmingen™",
+                    "RUO",
+                    "Mouse IgG1, κ",
+                    "JDC-14",
+                    "IgG4",
+                    "555879"
+                ],
+                "volPerTest_t": "",
+                "brand_t": "BD Pharmingen™",
+                "brand_ci": "BD Pharmingen™",
+                "alternativeName_t": "",
+                "alternativeName_s": "",
+                "alternativeName_ci": "",
+                "storageBuffer_t": "Aqueous buffered solution containing ≤0.09% sodium azide.",
+                "entrezGeneId_t": "",
+                "barcodeSequence_t": "",
+                "seqId_t": "",
+                "productType_t": "SingColorPureAntibody",
+                "regulatoryStatus_t": "RUO",
+                "immunogen_t": "",
+                "isoType_t": "Mouse IgG1, κ",
+                "tdsCloneName_t": "JDC-14",
+                "tdsCloneName_s": "JDC-14",
+                "tdsCloneName_ci": "JDC-14",
+                "tdsCloneName_edge": "JDC-14",
+                "hostSpecies_t": "Mouse",
+                "species_t": "Hu",
+                "reactivityStatus_t": "QC",
+                "applicationName_t": "ELISA",
+                "applicationName_facet_ss": ["ELISA"],
+                "dyeName_t": "Biotin",
+                "dyeName_s": "Biotin",
+                "dyeName_ci": "Biotin",
+                "dyeName_edge": "Biotin",
+                "laserWavelengthString_t": "",
+                "hpNodePath_t": "/content/commerce/products/bdb/products/reagents/immunoassay-reagents/elisa/555879_base/hp",
+                "variantHpNodePath_t": "/content/commerce/products/bdb/products/reagents/immunoassay-reagents/elisa/555879_base/555879/hp",
+                "damGlobalPath_t": "/content/dam/bdb/products/global/reagents/immunoassay-reagents/elisa/555879_base",
+                "docPartIDs_t": "",
+                "medias_t": "[]",
+                "laserColor_t": "",
+                "specificity_t": "IgG4",
+                "specificity_s": "IgG4",
+                "specificity_ci": "IgG4",
+                "specificity_edge": "IgG4",
+                "size_t": "0.5 mg",
+                "baseMaterialNumber_t": "555879_base",
+                "materialNumber_t": "555879",
+                "thumbnailImage_t": "/content/dam/bdb/products/vialimages/packaging-images/black-vial-images/Biotin.jpg",
+                "pdpTemplate_t": "SFA",
+                "isPrimaryVariant_t": "true",
+                "derivedProductStatus_t": "PURCHASEABLE",
+                "isAvailable_t": "true",
+                "validityStartDate_dt": "Oct 1, 2003, 12:00:00 AM",
+                "mpgCategory_txt": ["MPG_92", "MPG_92"],
+                "rrid_t": "AB_396192",
+                "species_facet_s": "Hu",
+                "applicationName_facet_s": "ELISA",
+                "dyeName_facet_s": "Biotin",
+                "tdsCloneName_facet_s": "JDC-14",
+                "isoType_facet_s": "Mouse IgG1, κ",
+                "hostSpecies_facet_s": "Mouse",
+                "regulatoryStatus_facet_s": "RUO",
+                "brand_facet_s": "BD Pharmingen™",
+                "rrid_facet_s": "AB_396192",
+                "size_facet_s": "0.5 mg",
+                "specificity_facet_s": "IgG4",
+                "barcodeSequence_facet_s": "",
+                "category_facet_ss": ["ELISA", "Immunoassay Reagents", "Reagents"],
+                "category_t": "ELISA Immunoassay Reagents Reagents",
+                "category_s": "ELISA Immunoassay Reagents Reagents",
+                "category_ci": "ELISA Immunoassay Reagents Reagents",
+                "productType_display_value_facet_s": "Antibodies-Primary",
+                "excitationSource_facet_s": "",
+                "speciesReactivity_facet_ss": ["Human"],
+                "keywords_t": "IgG4  Biotin ELISA, Human, BD Pharmingen™",
+                "_version_": 1699558070840983600,
+                "isComparable": true
+            },
+            {
+                "uniqueIdentifier": "555884",
+                "id": "https://qa-gl.bdbiosciences.com/%7Blanguage-country%7D/products/reagents/immunoassay-reagents/elisa/biotin-mouse-anti-human-iga1-iga2.555884",
+                "docType_t": "product",
+                "docType_facet_s": "Products",
+                "labelDescription_t": "Biotin Mouse Anti-Human IgA1/IgA2 ",
+                "name_t": "Biotin Mouse Anti-Human IgA1/IgA2 ",
+                "name_s": "Biotin Mouse Anti-Human IgA1/IgA2 ",
+                "bdbiospellchecker_text_mv": ["Biotin Mouse Anti-Human IgA1/IgA2 ", "555884"],
+                "name_ci": "Biotin Mouse Anti-Human IgA1/IgA2 ",
+                "concatenatedQueryField_t": [
+                    "Biotin Mouse Anti-Human IgA1/IgA2 ",
+                    "BD Pharmingen™",
+                    "RUO",
+                    "Mouse IgG1, κ",
+                    "G20-359",
+                    "IgA1/IgA2",
+                    "555884"
+                ],
+                "volPerTest_t": "",
+                "brand_t": "BD Pharmingen™",
+                "brand_ci": "BD Pharmingen™",
+                "alternativeName_t": "",
+                "alternativeName_s": "",
+                "alternativeName_ci": "",
+                "storageBuffer_t": "Aqueous buffered solution containing ≤0.09% sodium azide.",
+                "entrezGeneId_t": "",
+                "barcodeSequence_t": "",
+                "seqId_t": "",
+                "productType_t": "SingColorPureAntibody",
+                "regulatoryStatus_t": "RUO",
+                "immunogen_t": "",
+                "isoType_t": "Mouse IgG1, κ",
+                "tdsCloneName_t": "G20-359",
+                "tdsCloneName_s": "G20-359",
+                "tdsCloneName_ci": "G20-359",
+                "tdsCloneName_edge": "G20-359",
+                "hostSpecies_t": "Mouse",
+                "species_t": "Hu",
+                "reactivityStatus_t": "QC",
+                "applicationName_t": "ELISA",
+                "applicationName_facet_ss": ["ELISA"],
+                "dyeName_t": "Biotin",
+                "dyeName_s": "Biotin",
+                "dyeName_ci": "Biotin",
+                "dyeName_edge": "Biotin",
+                "laserWavelengthString_t": "",
+                "hpNodePath_t": "/content/commerce/products/bdb/products/reagents/immunoassay-reagents/elisa/555884_base/hp",
+                "variantHpNodePath_t": "/content/commerce/products/bdb/products/reagents/immunoassay-reagents/elisa/555884_base/555884/hp",
+                "damGlobalPath_t": "/content/dam/bdb/products/global/reagents/immunoassay-reagents/elisa/555884_base",
+                "docPartIDs_t": "",
+                "medias_t": "[]",
+                "laserColor_t": "",
+                "specificity_t": "IgA1/IgA2",
+                "specificity_s": "IgA1/IgA2",
+                "specificity_ci": "IgA1/IgA2",
+                "specificity_edge": "IgA1/IgA2",
+                "size_t": "0.5 mg",
+                "baseMaterialNumber_t": "555884_base",
+                "materialNumber_t": "555884",
+                "thumbnailImage_t": "/content/dam/bdb/products/vialimages/packaging-images/black-vial-images/Biotin.jpg",
+                "pdpTemplate_t": "SFA",
+                "isPrimaryVariant_t": "true",
+                "derivedProductStatus_t": "PURCHASEABLE",
+                "isAvailable_t": "true",
+                "validityStartDate_dt": "Oct 1, 2003, 12:00:00 AM",
+                "mpgCategory_txt": ["MPG_92", "MPG_92"],
+                "rrid_t": "AB_396196",
+                "species_facet_s": "Hu",
+                "applicationName_facet_s": "ELISA",
+                "dyeName_facet_s": "Biotin",
+                "tdsCloneName_facet_s": "G20-359",
+                "isoType_facet_s": "Mouse IgG1, κ",
+                "hostSpecies_facet_s": "Mouse",
+                "regulatoryStatus_facet_s": "RUO",
+                "brand_facet_s": "BD Pharmingen™",
+                "rrid_facet_s": "AB_396196",
+                "size_facet_s": "0.5 mg",
+                "specificity_facet_s": "IgA1/IgA2",
+                "barcodeSequence_facet_s": "",
+                "category_facet_ss": ["ELISA", "Immunoassay Reagents", "Reagents"],
+                "category_t": "ELISA Immunoassay Reagents Reagents",
+                "category_s": "ELISA Immunoassay Reagents Reagents",
+                "category_ci": "ELISA Immunoassay Reagents Reagents",
+                "productType_display_value_facet_s": "Antibodies-Primary",
+                "excitationSource_facet_s": "",
+                "speciesReactivity_facet_ss": ["Human"],
+                "keywords_t": "IgA1/IgA2  Biotin ELISA, Human, BD Pharmingen™",
+                "_version_": 1699558110496030700,
+                "isComparable": true
+            },
+            {
+                "uniqueIdentifier": "558502",
+                "id": "https://qa-gl.bdbiosciences.com/%7Blanguage-country%7D/products/reagents/immunoassay-reagents/elisa/biotin-mouse-anti-human-il-21.558502",
+                "docType_t": "product",
+                "docType_facet_s": "Products",
+                "labelDescription_t": "Biotin Mouse anti-Human IL-21",
+                "name_t": "Biotin Mouse anti-Human IL-21",
+                "name_s": "Biotin Mouse anti-Human IL-21",
+                "bdbiospellchecker_text_mv": ["Biotin Mouse anti-Human IL-21", "558502"],
+                "name_ci": "Biotin Mouse anti-Human IL-21",
+                "concatenatedQueryField_t": [
+                    "Biotin Mouse anti-Human IL-21",
+                    "BD Pharmingen™",
+                    "RUO",
+                    "Mouse IgG1, κ",
+                    "I76-539",
+                    "IL-21",
+                    "558502"
+                ],
+                "volPerTest_t": "",
+                "brand_t": "BD Pharmingen™",
+                "brand_ci": "BD Pharmingen™",
+                "alternativeName_t": "",
+                "alternativeName_s": "",
+                "alternativeName_ci": "",
+                "storageBuffer_t": "Aqueous buffered solution containing ≤0.09% sodium azide.",
+                "entrezGeneId_t": "",
+                "barcodeSequence_t": "",
+                "seqId_t": "",
+                "productType_t": "SingColorPureAntibody",
+                "regulatoryStatus_t": "RUO",
+                "immunogen_t": "Human IL-21 ",
+                "isoType_t": "Mouse IgG1, κ",
+                "tdsCloneName_t": "I76-539",
+                "tdsCloneName_s": "I76-539",
+                "tdsCloneName_ci": "I76-539",
+                "tdsCloneName_edge": "I76-539",
+                "hostSpecies_t": "Mouse",
+                "applicationName_t": "ELISA",
+                "applicationName_facet_ss": ["ELISA"],
+                "dyeName_t": "Biotin",
+                "dyeName_s": "Biotin",
+                "dyeName_ci": "Biotin",
+                "dyeName_edge": "Biotin",
+                "laserWavelengthString_t": "",
+                "hpNodePath_t": "/content/commerce/products/bdb/products/reagents/immunoassay-reagents/elisa/558502_base/hp",
+                "variantHpNodePath_t": "/content/commerce/products/bdb/products/reagents/immunoassay-reagents/elisa/558502_base/558502/hp",
+                "damGlobalPath_t": "/content/dam/bdb/products/global/reagents/immunoassay-reagents/elisa/558502_base",
+                "docPartIDs_t": "",
+                "medias_t": "[{\"baseMaterialNumber\":\"558502_base\",\"imageName\":\"hIL-21_fig1\",\"caption\":\"Human IL-21 sandwich ELISA curve: The curve was generated by a sandwich ELISA using the purified J148-1134 as capture antibody(Cat. No. 558503), doubling dilutions of recombinant human IL-21 protein and biotin I76-539 as detection antibody. Streptavidin-HRP (Cat. No. 554066) plus TMB substrate (Cat. No. 555214)were used to develop the ELISA.\",\"mime\":\"tif\",\"imageMetadata\":\"ImageTitle~BD Pharmingen™ Biotin Mouse anti-Human IL-21 | ImageKeywords~558502  ELISA Routinely Tested | imageDescription~IL-21 Biotin | imageLang~EN | imageRegion~Global | imageAltText~Biotin Mouse anti-Human IL-21\",\"imageType\":\"PRIMARY\"}]",
+                "laserColor_t": "",
+                "specificity_t": "IL-21",
+                "specificity_s": "IL-21",
+                "specificity_ci": "IL-21",
+                "specificity_edge": "IL-21",
+                "size_t": "0.5 mg",
+                "baseMaterialNumber_t": "558502_base",
+                "materialNumber_t": "558502",
+                "thumbnailImage_t": "/content/dam/bdb/products/global/reagents/immunoassay-reagents/elisa/558502_base/hIL-21_fig1.png",
+                "pdpTemplate_t": "SFA",
+                "isPrimaryVariant_t": "true",
+                "derivedProductStatus_t": "PURCHASEABLE",
+                "isAvailable_t": "true",
+                "validityStartDate_dt": "Jul 14, 2006, 12:00:00 AM",
+                "mpgCategory_txt": ["MPG_92"],
+                "rrid_t": "AB_647172",
+                "applicationName_facet_s": "ELISA",
+                "dyeName_facet_s": "Biotin",
+                "tdsCloneName_facet_s": "I76-539",
+                "isoType_facet_s": "Mouse IgG1, κ",
+                "hostSpecies_facet_s": "Mouse",
+                "regulatoryStatus_facet_s": "RUO",
+                "brand_facet_s": "BD Pharmingen™",
+                "rrid_facet_s": "AB_647172",
+                "size_facet_s": "0.5 mg",
+                "specificity_facet_s": "IL-21",
+                "barcodeSequence_facet_s": "",
+                "category_facet_ss": ["ELISA", "Immunoassay Reagents", "Reagents"],
+                "category_t": "ELISA Immunoassay Reagents Reagents",
+                "category_s": "ELISA Immunoassay Reagents Reagents",
+                "category_ci": "ELISA Immunoassay Reagents Reagents",
+                "productType_display_value_facet_s": "Antibodies-Primary",
+                "excitationSource_facet_s": "",
+                "speciesReactivity_facet_ss": [""],
+                "medias_imageName_ss": ["hIL-21_fig1"],
+                "keywords_t": "IL-21  I76-539.65.96 Biotin ELISA, BD Pharmingen™",
+                "_version_": 1699558110505468000,
+                "isComparable": true
+            },
+            {
+                "uniqueIdentifier": "554407",
+                "id": "https://qa-gl.bdbiosciences.com/%7Blanguage-country%7D/products/reagents/immunoassay-reagents/elisa/biotin-rat-anti-mouse-gm-csf.554407",
+                "docType_t": "product",
+                "docType_facet_s": "Products",
+                "labelDescription_t": "Biotin Rat Anti-Mouse GM-CSF",
+                "name_t": "Biotin Rat Anti-Mouse GM-CSF",
+                "name_s": "Biotin Rat Anti-Mouse GM-CSF",
+                "bdbiospellchecker_text_mv": ["Biotin Rat Anti-Mouse GM-CSF", "554407"],
+                "name_ci": "Biotin Rat Anti-Mouse GM-CSF",
+                "concatenatedQueryField_t": [
+                    "Biotin Rat Anti-Mouse GM-CSF",
+                    "BD Pharmingen™",
+                    "RUO",
+                    "Rat IgG1",
+                    "MP1-31G6",
+                    "GM-CSF ",
+                    "554407"
+                ],
+                "volPerTest_t": "",
+                "brand_t": "BD Pharmingen™",
+                "brand_ci": "BD Pharmingen™",
+                "alternativeName_t": "",
+                "alternativeName_s": "",
+                "alternativeName_ci": "",
+                "storageBuffer_t": "Aqueous buffered solution containing ≤0.09% sodium azide.",
+                "entrezGeneId_t": "",
+                "barcodeSequence_t": "",
+                "seqId_t": "",
+                "productType_t": "SingColorPureAntibody",
+                "regulatoryStatus_t": "RUO",
+                "immunogen_t": "Recombinant mouse GM-CSF ",
+                "isoType_t": "Rat IgG1",
+                "tdsCloneName_t": "MP1-31G6",
+                "tdsCloneName_s": "MP1-31G6",
+                "tdsCloneName_ci": "MP1-31G6",
+                "tdsCloneName_edge": "MP1-31G6",
+                "hostSpecies_t": "Rat",
+                "species_t": "Ms",
+                "reactivityStatus_t": "QC",
+                "applicationName_t": "ELISA Det.",
+                "applicationName_facet_ss": ["ELISA Detection", "Immunoprecipitation"],
+                "dyeName_t": "Biotin",
+                "dyeName_s": "Biotin",
+                "dyeName_ci": "Biotin",
+                "dyeName_edge": "Biotin",
+                "laserWavelengthString_t": "",
+                "hpNodePath_t": "/content/commerce/products/bdb/products/reagents/immunoassay-reagents/elisa/554407_base/hp",
+                "variantHpNodePath_t": "/content/commerce/products/bdb/products/reagents/immunoassay-reagents/elisa/554407_base/554407/hp",
+                "damGlobalPath_t": "/content/dam/bdb/products/global/reagents/immunoassay-reagents/elisa/554407_base",
+                "docPartIDs_t": "",
+                "medias_t": "[]",
+                "laserColor_t": "",
+                "specificity_t": "GM-CSF ",
+                "specificity_s": "GM-CSF ",
+                "specificity_ci": "GM-CSF ",
+                "specificity_edge": "GM-CSF ",
+                "size_t": "0.5 mg",
+                "baseMaterialNumber_t": "554407_base",
+                "materialNumber_t": "554407",
+                "thumbnailImage_t": "/content/dam/bdb/products/vialimages/packaging-images/black-vial-images/Biotin.jpg",
+                "pdpTemplate_t": "SFA",
+                "isPrimaryVariant_t": "true",
+                "derivedProductStatus_t": "PURCHASEABLE",
+                "isAvailable_t": "true",
+                "validityStartDate_dt": "Oct 1, 2003, 12:00:00 AM",
+                "mpgCategory_txt": ["MPG_92"],
+                "rrid_t": "AB_2085522",
+                "species_facet_s": "Ms",
+                "applicationName_facet_s": "ELISA Det.",
+                "dyeName_facet_s": "Biotin",
+                "tdsCloneName_facet_s": "MP1-31G6",
+                "isoType_facet_s": "Rat IgG1",
+                "hostSpecies_facet_s": "Rat",
+                "regulatoryStatus_facet_s": "RUO",
+                "brand_facet_s": "BD Pharmingen™",
+                "rrid_facet_s": "AB_2085522",
+                "size_facet_s": "0.5 mg",
+                "specificity_facet_s": "GM-CSF ",
+                "barcodeSequence_facet_s": "",
+                "category_facet_ss": [
+                    "ELISA",
+                    "Immunoassay Reagents",
+                    "Reagents",
+                    "Western Blotting and Molecular Reagents"
+                ],
+                "category_t": "ELISA Immunoassay Reagents Reagents Western Blotting and Molecular Reagents",
+                "category_s": "ELISA Immunoassay Reagents Reagents Western Blotting and Molecular Reagents",
+                "category_ci": "ELISA Immunoassay Reagents Reagents Western Blotting and Molecular Reagents",
+                "productType_display_value_facet_s": "Antibodies-Primary",
+                "excitationSource_facet_s": "",
+                "speciesReactivity_facet_ss": ["Mouse"],
+                "keywords_t": "GM-CSF   Biotin ELISA Detection, Immunoprecipitation, Mouse, BD Pharmingen™",
+                "_version_": 1699558070821060600,
+                "isComparable": true
+            },
+            {
+                "uniqueIdentifier": "555074",
+                "id": "https://qa-gl.bdbiosciences.com/%7Blanguage-country%7D/products/reagents/immunoassay-reagents/elisa/biotin-mouse-anti-rat-mcp-1.555074",
+                "docType_t": "product",
+                "docType_facet_s": "Products",
+                "labelDescription_t": "Biotin Mouse Anti-Rat MCP-1",
+                "name_t": "Biotin Mouse Anti-Rat MCP-1",
+                "name_s": "Biotin Mouse Anti-Rat MCP-1",
+                "bdbiospellchecker_text_mv": ["Biotin Mouse Anti-Rat MCP-1", "555074"],
+                "name_ci": "Biotin Mouse Anti-Rat MCP-1",
+                "concatenatedQueryField_t": [
+                    "Biotin Mouse Anti-Rat MCP-1",
+                    "BD Pharmingen™",
+                    "RUO",
+                    "Mouse IgG1",
+                    "B4",
+                    "MCP-1",
+                    "555074"
+                ],
+                "volPerTest_t": "",
+                "brand_t": "BD Pharmingen™",
+                "brand_ci": "BD Pharmingen™",
+                "alternativeName_t": "",
+                "alternativeName_s": "",
+                "alternativeName_ci": "",
+                "storageBuffer_t": "Aqueous buffered solution containing ≤0.09% sodium azide.",
+                "entrezGeneId_t": "",
+                "barcodeSequence_t": "",
+                "seqId_t": "",
+                "productType_t": "SingColorPureAntibody",
+                "regulatoryStatus_t": "RUO",
+                "immunogen_t": "Recombinant Rat MCP-1 Protein  ",
+                "isoType_t": "Mouse IgG1",
+                "tdsCloneName_t": "B4",
+                "tdsCloneName_s": "B4",
+                "tdsCloneName_ci": "B4",
+                "tdsCloneName_edge": "B4",
+                "hostSpecies_t": "Mouse",
+                "species_t": "Rat",
+                "reactivityStatus_t": "QC",
+                "applicationName_t": "ELISA Det.",
+                "applicationName_facet_ss": ["ELISA Detection", "Immunoprecipitation"],
+                "dyeName_t": "Biotin",
+                "dyeName_s": "Biotin",
+                "dyeName_ci": "Biotin",
+                "dyeName_edge": "Biotin",
+                "laserWavelengthString_t": "",
+                "hpNodePath_t": "/content/commerce/products/bdb/products/reagents/immunoassay-reagents/elisa/555074_base/hp",
+                "variantHpNodePath_t": "/content/commerce/products/bdb/products/reagents/immunoassay-reagents/elisa/555074_base/555074/hp",
+                "damGlobalPath_t": "/content/dam/bdb/products/global/reagents/immunoassay-reagents/elisa/555074_base",
+                "docPartIDs_t": "",
+                "medias_t": "[{\"baseMaterialNumber\":\"555074_base\",\"imageName\":\"24022D_555074_image1\",\"caption\":\"Rat MCP-1 ELISA -Standard Curve\",\"mime\":\"tif\",\"imageMetadata\":\"ImageTitle~BD Pharmingen™ Biotin Mouse Anti-Rat MCP-1 | ImageKeywords~555074  ELISA Detection Routinely Tested | imageDescription~MCP-1 Biotin | imageLang~EN | imageRegion~Global | imageAltText~Biotin Mouse Anti-Rat MCP-1\",\"imageType\":\"PRIMARY\"}]",
+                "laserColor_t": "",
+                "specificity_t": "MCP-1",
+                "specificity_s": "MCP-1",
+                "specificity_ci": "MCP-1",
+                "specificity_edge": "MCP-1",
+                "size_t": "0.5 mg",
+                "baseMaterialNumber_t": "555074_base",
+                "materialNumber_t": "555074",
+                "thumbnailImage_t": "/content/dam/bdb/products/global/reagents/immunoassay-reagents/elisa/555074_base/24022D_555074_image1.png",
+                "pdpTemplate_t": "SFA",
+                "isPrimaryVariant_t": "true",
+                "derivedProductStatus_t": "PURCHASEABLE",
+                "isAvailable_t": "true",
+                "validityStartDate_dt": "Oct 1, 2003, 12:00:00 AM",
+                "mpgCategory_txt": ["MPG_92"],
+                "rrid_t": "AB_395685",
+                "species_facet_s": "Rat",
+                "applicationName_facet_s": "ELISA Det.",
+                "dyeName_facet_s": "Biotin",
+                "tdsCloneName_facet_s": "B4",
+                "isoType_facet_s": "Mouse IgG1",
+                "hostSpecies_facet_s": "Mouse",
+                "regulatoryStatus_facet_s": "RUO",
+                "brand_facet_s": "BD Pharmingen™",
+                "rrid_facet_s": "AB_395685",
+                "size_facet_s": "0.5 mg",
+                "specificity_facet_s": "MCP-1",
+                "barcodeSequence_facet_s": "",
+                "category_facet_ss": [
+                    "ELISA",
+                    "Immunoassay Reagents",
+                    "Reagents",
+                    "Western Blotting and Molecular Reagents"
+                ],
+                "category_t": "ELISA Immunoassay Reagents Reagents Western Blotting and Molecular Reagents",
+                "category_s": "ELISA Immunoassay Reagents Reagents Western Blotting and Molecular Reagents",
+                "category_ci": "ELISA Immunoassay Reagents Reagents Western Blotting and Molecular Reagents",
+                "productType_display_value_facet_s": "Antibodies-Primary",
+                "excitationSource_facet_s": "",
+                "speciesReactivity_facet_ss": ["Rat"],
+                "medias_imageName_ss": ["24022D_555074_image1"],
+                "keywords_t": "MCP-1  Biotin ELISA Detection, Immunoprecipitation, Rat, BD Pharmingen™",
+                "_version_": 1699558070836789200,
+                "isComparable": true
+            },
+            {
+                "uniqueIdentifier": "555034",
+                "id": "https://qa-gl.bdbiosciences.com/%7Blanguage-country%7D/products/reagents/immunoassay-reagents/elisa/biotin-mouse-anti-human-mcp-3.555034",
+                "docType_t": "product",
+                "docType_facet_s": "Products",
+                "labelDescription_t": "Biotin Mouse Anti-Human MCP-3",
+                "name_t": "Biotin Mouse Anti-Human MCP-3",
+                "name_s": "Biotin Mouse Anti-Human MCP-3",
+                "bdbiospellchecker_text_mv": ["Biotin Mouse Anti-Human MCP-3", "555034"],
+                "name_ci": "Biotin Mouse Anti-Human MCP-3",
+                "concatenatedQueryField_t": [
+                    "Biotin Mouse Anti-Human MCP-3",
+                    "BD Pharmingen™",
+                    "RUO",
+                    "Mouse IgG1, κ",
+                    "6H5",
+                    "MCP-3",
+                    "555034"
+                ],
+                "volPerTest_t": "",
+                "brand_t": "BD Pharmingen™",
+                "brand_ci": "BD Pharmingen™",
+                "alternativeName_t": "",
+                "alternativeName_s": "",
+                "alternativeName_ci": "",
+                "storageBuffer_t": "Aqueous buffered solution containing ≤0.09% sodium azide.",
+                "entrezGeneId_t": "",
+                "barcodeSequence_t": "",
+                "seqId_t": "",
+                "productType_t": "SingColorPureAntibody",
+                "regulatoryStatus_t": "RUO",
+                "immunogen_t": "Recombinant Human MCP-3 ",
+                "isoType_t": "Mouse IgG1, κ",
+                "tdsCloneName_t": "6H5",
+                "tdsCloneName_s": "6H5",
+                "tdsCloneName_ci": "6H5",
+                "tdsCloneName_edge": "6H5",
+                "hostSpecies_t": "Mouse",
+                "species_t": "Hu",
+                "reactivityStatus_t": "QC",
+                "applicationName_t": "ELISA Det.",
+                "applicationName_facet_ss": ["ELISA Detection"],
+                "dyeName_t": "Biotin",
+                "dyeName_s": "Biotin",
+                "dyeName_ci": "Biotin",
+                "dyeName_edge": "Biotin",
+                "laserWavelengthString_t": "",
+                "hpNodePath_t": "/content/commerce/products/bdb/products/reagents/immunoassay-reagents/elisa/555034_base/hp",
+                "variantHpNodePath_t": "/content/commerce/products/bdb/products/reagents/immunoassay-reagents/elisa/555034_base/555034/hp",
+                "damGlobalPath_t": "/content/dam/bdb/products/global/reagents/immunoassay-reagents/elisa/555034_base",
+                "docPartIDs_t": "",
+                "medias_t": "[{\"baseMaterialNumber\":\"555034_base\",\"imageName\":\"23032D_555034_image1\",\"caption\":\"Human MCP-3 Standard Curve\",\"mime\":\"tif\",\"imageMetadata\":\"ImageTitle~BD Pharmingen™ Biotin Mouse Anti-Human MCP-3 | ImageKeywords~555034  ELISA Detection Routinely Tested | imageDescription~MCP-3 Biotin | imageLang~EN | imageRegion~Global | imageAltText~Biotin Mouse Anti-Human MCP-3\",\"imageType\":\"PRIMARY\"}]",
+                "laserColor_t": "",
+                "specificity_t": "MCP-3",
+                "specificity_s": "MCP-3",
+                "specificity_ci": "MCP-3",
+                "specificity_edge": "MCP-3",
+                "size_t": "0.5 mg",
+                "baseMaterialNumber_t": "555034_base",
+                "materialNumber_t": "555034",
+                "thumbnailImage_t": "/content/dam/bdb/products/global/reagents/immunoassay-reagents/elisa/555034_base/23032D_555034_image1.png",
+                "pdpTemplate_t": "SFA",
+                "isPrimaryVariant_t": "true",
+                "derivedProductStatus_t": "PURCHASEABLE",
+                "isAvailable_t": "true",
+                "validityStartDate_dt": "Oct 1, 2003, 12:00:00 AM",
+                "mpgCategory_txt": ["MPG_92"],
+                "rrid_t": "AB_395660",
+                "species_facet_s": "Hu",
+                "applicationName_facet_s": "ELISA Det.",
+                "dyeName_facet_s": "Biotin",
+                "tdsCloneName_facet_s": "6H5",
+                "isoType_facet_s": "Mouse IgG1, κ",
+                "hostSpecies_facet_s": "Mouse",
+                "regulatoryStatus_facet_s": "RUO",
+                "brand_facet_s": "BD Pharmingen™",
+                "rrid_facet_s": "AB_395660",
+                "size_facet_s": "0.5 mg",
+                "specificity_facet_s": "MCP-3",
+                "barcodeSequence_facet_s": "",
+                "category_facet_ss": ["ELISA", "Immunoassay Reagents", "Reagents"],
+                "category_t": "ELISA Immunoassay Reagents Reagents",
+                "category_s": "ELISA Immunoassay Reagents Reagents",
+                "category_ci": "ELISA Immunoassay Reagents Reagents",
+                "productType_display_value_facet_s": "Antibodies-Primary",
+                "excitationSource_facet_s": "",
+                "speciesReactivity_facet_ss": ["Human"],
+                "medias_imageName_ss": ["23032D_555034_image1"],
+                "keywords_t": "MCP-3  Biotin ELISA Detection, Human, BD Pharmingen™",
+                "_version_": 1699558070831546400,
+                "isComparable": true
+            },
+            {
+                "uniqueIdentifier": "555037",
+                "id": "https://qa-gl.bdbiosciences.com/%7Blanguage-country%7D/products/reagents/immunoassay-reagents/elisa/biotin-mouse-anti-human-mig.555037",
+                "docType_t": "product",
+                "docType_facet_s": "Products",
+                "labelDescription_t": "Biotin Mouse Anti-Human MIG",
+                "name_t": "Biotin Mouse Anti-Human MIG",
+                "name_s": "Biotin Mouse Anti-Human MIG",
+                "bdbiospellchecker_text_mv": ["Biotin Mouse Anti-Human MIG", "555037"],
+                "name_ci": "Biotin Mouse Anti-Human MIG",
+                "concatenatedQueryField_t": [
+                    "Biotin Mouse Anti-Human MIG",
+                    "BD Pharmingen™",
+                    "RUO",
+                    "Mouse IgG1, κ",
+                    "B8-6",
+                    "MIG",
+                    "555037"
+                ],
+                "volPerTest_t": "",
+                "brand_t": "BD Pharmingen™",
+                "brand_ci": "BD Pharmingen™",
+                "alternativeName_t": "",
+                "alternativeName_s": "",
+                "alternativeName_ci": "",
+                "storageBuffer_t": "Aqueous buffered solution containing ≤0.09% sodium azide.",
+                "entrezGeneId_t": "",
+                "barcodeSequence_t": "",
+                "seqId_t": "",
+                "productType_t": "SingColorPureAntibody",
+                "regulatoryStatus_t": "RUO",
+                "immunogen_t": "Recombinant Human MIG Protein ",
+                "isoType_t": "Mouse IgG1, κ",
+                "tdsCloneName_t": "B8-6",
+                "tdsCloneName_s": "B8-6",
+                "tdsCloneName_ci": "B8-6",
+                "tdsCloneName_edge": "B8-6",
+                "hostSpecies_t": "Mouse",
+                "species_t": "Hu",
+                "reactivityStatus_t": "QC",
+                "applicationName_t": "ELISA Det.",
+                "applicationName_facet_ss": ["ELISA Detection"],
+                "dyeName_t": "Biotin",
+                "dyeName_s": "Biotin",
+                "dyeName_ci": "Biotin",
+                "dyeName_edge": "Biotin",
+                "laserWavelengthString_t": "",
+                "hpNodePath_t": "/content/commerce/products/bdb/products/reagents/immunoassay-reagents/elisa/555037_base/hp",
+                "variantHpNodePath_t": "/content/commerce/products/bdb/products/reagents/immunoassay-reagents/elisa/555037_base/555037/hp",
+                "damGlobalPath_t": "/content/dam/bdb/products/global/reagents/immunoassay-reagents/elisa/555037_base",
+                "docPartIDs_t": "",
+                "medias_t": "[]",
+                "laserColor_t": "",
+                "specificity_t": "MIG",
+                "specificity_s": "MIG",
+                "specificity_ci": "MIG",
+                "specificity_edge": "MIG",
+                "size_t": "0.5 mg",
+                "baseMaterialNumber_t": "555037_base",
+                "materialNumber_t": "555037",
+                "thumbnailImage_t": "/content/dam/bdb/products/vialimages/packaging-images/black-vial-images/Biotin.jpg",
+                "pdpTemplate_t": "SFA",
+                "isPrimaryVariant_t": "true",
+                "derivedProductStatus_t": "PURCHASEABLE",
+                "isAvailable_t": "true",
+                "validityStartDate_dt": "Oct 1, 2003, 12:00:00 AM",
+                "mpgCategory_txt": ["MPG_92", "MPG_92"],
+                "rrid_t": "AB_395663",
+                "species_facet_s": "Hu",
+                "applicationName_facet_s": "ELISA Det.",
+                "dyeName_facet_s": "Biotin",
+                "tdsCloneName_facet_s": "B8-6",
+                "isoType_facet_s": "Mouse IgG1, κ",
+                "hostSpecies_facet_s": "Mouse",
+                "regulatoryStatus_facet_s": "RUO",
+                "brand_facet_s": "BD Pharmingen™",
+                "rrid_facet_s": "AB_395663",
+                "size_facet_s": "0.5 mg",
+                "specificity_facet_s": "MIG",
+                "barcodeSequence_facet_s": "",
+                "category_facet_ss": ["ELISA", "Immunoassay Reagents", "Reagents"],
+                "category_t": "ELISA Immunoassay Reagents Reagents",
+                "category_s": "ELISA Immunoassay Reagents Reagents",
+                "category_ci": "ELISA Immunoassay Reagents Reagents",
+                "productType_display_value_facet_s": "Antibodies-Primary",
+                "excitationSource_facet_s": "",
+                "speciesReactivity_facet_ss": ["Human"],
+                "keywords_t": "MIG  Biotin ELISA Detection, Human, BD Pharmingen™",
+                "_version_": 1699558070831546400,
+                "isComparable": true
+            },
+            {
+                "uniqueIdentifier": "555084",
+                "id": "https://qa-gl.bdbiosciences.com/%7Blanguage-country%7D/products/reagents/immunoassay-reagents/elisa/biotin-mouse-anti-rat-il-10.555084",
+                "docType_t": "product",
+                "docType_facet_s": "Products",
+                "labelDescription_t": "Biotin Mouse Anti-Rat IL-10",
+                "name_t": "Biotin Mouse Anti-Rat IL-10",
+                "name_s": "Biotin Mouse Anti-Rat IL-10",
+                "bdbiospellchecker_text_mv": ["Biotin Mouse Anti-Rat IL-10", "555084"],
+                "name_ci": "Biotin Mouse Anti-Rat IL-10",
+                "concatenatedQueryField_t": [
+                    "Biotin Mouse Anti-Rat IL-10",
+                    "BD Pharmingen™",
+                    "RUO",
+                    "Mouse IgG1, κ",
+                    "A5-6",
+                    "IL-10",
+                    "555084"
+                ],
+                "volPerTest_t": "",
+                "brand_t": "BD Pharmingen™",
+                "brand_ci": "BD Pharmingen™",
+                "alternativeName_t": "",
+                "alternativeName_s": "",
+                "alternativeName_ci": "",
+                "storageBuffer_t": "Aqueous buffered solution containing ≤0.09% sodium azide.",
+                "entrezGeneId_t": "",
+                "barcodeSequence_t": "",
+                "seqId_t": "",
+                "productType_t": "SingColorPureAntibody",
+                "regulatoryStatus_t": "RUO",
+                "immunogen_t": "Recombinant Rat IL-10 ",
+                "isoType_t": "Mouse IgG1, κ",
+                "tdsCloneName_t": "A5-6",
+                "tdsCloneName_s": "A5-6",
+                "tdsCloneName_ci": "A5-6",
+                "tdsCloneName_edge": "A5-6",
+                "hostSpecies_t": "Mouse",
+                "species_t": "Rat",
+                "reactivityStatus_t": "QC",
+                "applicationName_t": "ELISA Det.",
+                "applicationName_facet_ss": ["ELISA Detection"],
+                "dyeName_t": "Biotin",
+                "dyeName_s": "Biotin",
+                "dyeName_ci": "Biotin",
+                "dyeName_edge": "Biotin",
+                "laserWavelengthString_t": "",
+                "hpNodePath_t": "/content/commerce/products/bdb/products/reagents/immunoassay-reagents/elisa/555084_base/hp",
+                "variantHpNodePath_t": "/content/commerce/products/bdb/products/reagents/immunoassay-reagents/elisa/555084_base/555084/hp",
+                "damGlobalPath_t": "/content/dam/bdb/products/global/reagents/immunoassay-reagents/elisa/555084_base",
+                "docPartIDs_t": "",
+                "medias_t": "[]",
+                "laserColor_t": "",
+                "specificity_t": "IL-10",
+                "specificity_s": "IL-10",
+                "specificity_ci": "IL-10",
+                "specificity_edge": "IL-10",
+                "size_t": "0.5 mg",
+                "baseMaterialNumber_t": "555084_base",
+                "materialNumber_t": "555084",
+                "thumbnailImage_t": "/content/dam/bdb/products/vialimages/packaging-images/black-vial-images/Biotin.jpg",
+                "pdpTemplate_t": "SFA",
+                "isPrimaryVariant_t": "true",
+                "derivedProductStatus_t": "PURCHASEABLE",
+                "isAvailable_t": "true",
+                "validityStartDate_dt": "Oct 1, 2003, 12:00:00 AM",
+                "mpgCategory_txt": ["MPG_92"],
+                "rrid_t": "AB_395690",
+                "species_facet_s": "Rat",
+                "applicationName_facet_s": "ELISA Det.",
+                "dyeName_facet_s": "Biotin",
+                "tdsCloneName_facet_s": "A5-6",
+                "isoType_facet_s": "Mouse IgG1, κ",
+                "hostSpecies_facet_s": "Mouse",
+                "regulatoryStatus_facet_s": "RUO",
+                "brand_facet_s": "BD Pharmingen™",
+                "rrid_facet_s": "AB_395690",
+                "size_facet_s": "0.5 mg",
+                "specificity_facet_s": "IL-10",
+                "barcodeSequence_facet_s": "",
+                "category_facet_ss": ["ELISA", "Immunoassay Reagents", "Reagents"],
+                "category_t": "ELISA Immunoassay Reagents Reagents",
+                "category_s": "ELISA Immunoassay Reagents Reagents",
+                "category_ci": "ELISA Immunoassay Reagents Reagents",
+                "productType_display_value_facet_s": "Antibodies-Primary",
+                "excitationSource_facet_s": "",
+                "speciesReactivity_facet_ss": ["Rat"],
+                "keywords_t": "IL-10  Biotin ELISA Detection, Rat, BD Pharmingen™",
+                "_version_": 1699558070837837800,
+                "isComparable": true
+            },
+            {
+                "uniqueIdentifier": "552555",
+                "id": "https://qa-gl.bdbiosciences.com/%7Blanguage-country%7D/products/reagents/immunoassay-reagents/elisa/biotin-mouse-anti-pig-igg.552555",
+                "docType_t": "product",
+                "docType_facet_s": "Products",
+                "labelDescription_t": "Biotin Mouse Anti-Pig IgG",
+                "name_t": "Biotin Mouse Anti-Pig IgG",
+                "name_s": "Biotin Mouse Anti-Pig IgG",
+                "bdbiospellchecker_text_mv": ["Biotin Mouse Anti-Pig IgG", "552555"],
+                "name_ci": "Biotin Mouse Anti-Pig IgG",
+                "concatenatedQueryField_t": [
+                    "Biotin Mouse Anti-Pig IgG",
+                    "BD Pharmingen™",
+                    "RUO",
+                    "Mouse BALB/c IgG1, κ",
+                    "F007-1241",
+                    "IgG",
+                    "552555"
+                ],
+                "volPerTest_t": "",
+                "brand_t": "BD Pharmingen™",
+                "brand_ci": "BD Pharmingen™",
+                "alternativeName_t": "",
+                "alternativeName_s": "",
+                "alternativeName_ci": "",
+                "storageBuffer_t": "Aqueous buffered solution containing ≤0.09% sodium azide.",
+                "entrezGeneId_t": "",
+                "barcodeSequence_t": "",
+                "seqId_t": "",
+                "productType_t": "SingColorPureAntibody",
+                "regulatoryStatus_t": "RUO",
+                "immunogen_t": "Purified pig IgG ",
+                "isoType_t": "Mouse BALB/c IgG1, κ",
+                "tdsCloneName_t": "F007-1241",
+                "tdsCloneName_s": "F007-1241",
+                "tdsCloneName_ci": "F007-1241",
+                "tdsCloneName_edge": "F007-1241",
+                "hostSpecies_t": "Mouse",
+                "species_t": "Pig",
+                "reactivityStatus_t": "QC",
+                "applicationName_t": "ELISA",
+                "applicationName_facet_ss": ["ELISA"],
+                "dyeName_t": "Biotin",
+                "dyeName_s": "Biotin",
+                "dyeName_ci": "Biotin",
+                "dyeName_edge": "Biotin",
+                "laserWavelengthString_t": "",
+                "hpNodePath_t": "/content/commerce/products/bdb/products/reagents/immunoassay-reagents/elisa/552555_base/hp",
+                "variantHpNodePath_t": "/content/commerce/products/bdb/products/reagents/immunoassay-reagents/elisa/552555_base/552555/hp",
+                "damGlobalPath_t": "/content/dam/bdb/products/global/reagents/immunoassay-reagents/elisa/552555_base",
+                "docPartIDs_t": "",
+                "medias_t": "[]",
+                "laserColor_t": "",
+                "specificity_t": "IgG",
+                "specificity_s": "IgG",
+                "specificity_ci": "IgG",
+                "specificity_edge": "IgG",
+                "size_t": "0.2 mg",
+                "baseMaterialNumber_t": "552555_base",
+                "materialNumber_t": "552555",
+                "thumbnailImage_t": "/content/dam/bdb/products/vialimages/packaging-images/black-vial-images/Biotin.jpg",
+                "pdpTemplate_t": "SFA",
+                "isPrimaryVariant_t": "true",
+                "derivedProductStatus_t": "PURCHASEABLE",
+                "isAvailable_t": "true",
+                "validityStartDate_dt": "Oct 1, 2003, 12:00:00 AM",
+                "mpgCategory_txt": ["MPG_92", "MPG_92"],
+                "rrid_t": "AB_394425",
+                "species_facet_s": "Pig",
+                "applicationName_facet_s": "ELISA",
+                "dyeName_facet_s": "Biotin",
+                "tdsCloneName_facet_s": "F007-1241",
+                "isoType_facet_s": "Mouse BALB/c IgG1, κ",
+                "hostSpecies_facet_s": "Mouse",
+                "regulatoryStatus_facet_s": "RUO",
+                "brand_facet_s": "BD Pharmingen™",
+                "rrid_facet_s": "AB_394425",
+                "size_facet_s": "0.2 mg",
+                "specificity_facet_s": "IgG",
+                "barcodeSequence_facet_s": "",
+                "category_facet_ss": ["ELISA", "Immunoassay Reagents", "Reagents"],
+                "category_t": "ELISA Immunoassay Reagents Reagents",
+                "category_s": "ELISA Immunoassay Reagents Reagents",
+                "category_ci": "ELISA Immunoassay Reagents Reagents",
+                "productType_display_value_facet_s": "Antibodies-Primary",
+                "excitationSource_facet_s": "",
+                "speciesReactivity_facet_ss": ["Pig"],
+                "keywords_t": "IgG  Biotin ELISA, Pig, BD Pharmingen™",
+                "_version_": 1699558070806380500,
+                "isComparable": true
+            },
+            {
+                "uniqueIdentifier": "550427",
+                "id": "https://qa-gl.bdbiosciences.com/%7Blanguage-country%7D/products/reagents/flow-cytometry-reagents/research-reagents/single-color-antibodies-ruo/biotin-mouse-anti-canine-cd34.550427",
+                "docType_t": "product",
+                "docType_facet_s": "Products",
+                "labelDescription_t": "Biotin Mouse Anti-Canine CD34",
+                "name_t": "Biotin Mouse Anti-Canine CD34",
+                "name_s": "Biotin Mouse Anti-Canine CD34",
+                "bdbiospellchecker_text_mv": ["Biotin Mouse Anti-Canine CD34", "550427"],
+                "name_ci": "Biotin Mouse Anti-Canine CD34",
+                "concatenatedQueryField_t": [
+                    "Biotin Mouse Anti-Canine CD34",
+                    "BD Pharmingen™",
+                    "RUO",
+                    "Mouse BALB/c IgG1, κ",
+                    "2E9",
+                    "CD34",
+                    "550427"
+                ],
+                "volPerTest_t": "",
+                "brand_t": "BD Pharmingen™",
+                "brand_ci": "BD Pharmingen™",
+                "alternativeName_t": "gp 105-120",
+                "alternativeName_s": "gp 105-120",
+                "alternativeName_ci": "gp 105-120",
+                "storageBuffer_t": "Aqueous buffered solution containing protein stabilizer and ≤0.09% sodium azide.",
+                "entrezGeneId_t": "",
+                "barcodeSequence_t": "",
+                "seqId_t": "",
+                "productType_t": "SingColorPureAntibody",
+                "regulatoryStatus_t": "RUO",
+                "immunogen_t": "CD34-mouse IgG2a fusion protein and canine myelomonocytic leukemia ML3 ",
+                "isoType_t": "Mouse BALB/c IgG1, κ",
+                "tdsCloneName_t": "2E9",
+                "tdsCloneName_s": "2E9",
+                "tdsCloneName_ci": "2E9",
+                "tdsCloneName_edge": "2E9",
+                "hostSpecies_t": "Mouse",
+                "applicationName_t": "FCM",
+                "applicationName_facet_ss": ["Flow cytometry"],
+                "dyeName_t": "Biotin",
+                "dyeName_s": "Biotin",
+                "dyeName_ci": "Biotin",
+                "dyeName_edge": "Biotin",
+                "laserWavelengthString_t": "",
+                "hpNodePath_t": "/content/commerce/products/bdb/products/reagents/flow-cytometry-reagents/research-reagents/single-color-antibodies-ruo/550427_base/hp",
+                "variantHpNodePath_t": "/content/commerce/products/bdb/products/reagents/flow-cytometry-reagents/research-reagents/single-color-antibodies-ruo/550427_base/550427/hp",
+                "damGlobalPath_t": "/content/dam/bdb/products/global/reagents/flow-cytometry-reagents/research-reagents/single-color-antibodies-ruo/550427_base",
+                "docPartIDs_t": "",
+                "medias_t": "[]",
+                "laserColor_t": "",
+                "specificity_t": "CD34",
+                "specificity_s": "CD34",
+                "specificity_ci": "CD34",
+                "specificity_edge": "CD34",
+                "size_t": "0.1 mg",
+                "baseMaterialNumber_t": "550427_base",
+                "materialNumber_t": "550427",
+                "thumbnailImage_t": "/content/dam/bdb/products/vialimages/packaging-images/black-vial-images/Biotin.jpg",
+                "pdpTemplate_t": "SFA",
+                "isPrimaryVariant_t": "true",
+                "derivedProductStatus_t": "PURCHASEABLE",
+                "isAvailable_t": "true",
+                "validityStartDate_dt": "Oct 1, 2003, 12:00:00 AM",
+                "mpgCategory_txt": ["MPG_92"],
+                "rrid_t": "AB_2074492",
+                "applicationName_facet_s": "FCM",
+                "dyeName_facet_s": "Biotin",
+                "tdsCloneName_facet_s": "2E9",
+                "isoType_facet_s": "Mouse BALB/c IgG1, κ",
+                "hostSpecies_facet_s": "Mouse",
+                "regulatoryStatus_facet_s": "RUO",
+                "brand_facet_s": "BD Pharmingen™",
+                "rrid_facet_s": "AB_2074492",
+                "size_facet_s": "0.1 mg",
+                "specificity_facet_s": "CD34",
+                "barcodeSequence_facet_s": "",
+                "category_facet_ss": [
+                    "Flow Cytometry Reagents",
+                    "Reagents",
+                    "Research Reagents",
+                    "Single Color Antibodies (RUO)"
+                ],
+                "category_t": "Flow Cytometry Reagents Reagents Research Reagents Single Color Antibodies (RUO)",
+                "category_s": "Flow Cytometry Reagents Reagents Research Reagents Single Color Antibodies (RUO)",
+                "category_ci": "Flow Cytometry Reagents Reagents Research Reagents Single Color Antibodies (RUO)",
+                "productType_display_value_facet_s": "Antibodies-Primary",
+                "excitationSource_facet_s": "",
+                "speciesReactivity_facet_ss": [""],
+                "keywords_t": "CD34  Biotin Flow cytometry, BD Pharmingen™",
+                "_version_": 1699558323359056000,
+                "isComparable": true
+            },
+            {
+                "uniqueIdentifier": "554384",
+                "id": "https://qa-gl.bdbiosciences.com/%7Blanguage-country%7D/products/reagents/immunoassay-reagents/elisa/biotin-rat-anti-mouse-il-3.554384",
+                "docType_t": "product",
+                "docType_facet_s": "Products",
+                "labelDescription_t": "Biotin Rat Anti-Mouse IL-3",
+                "name_t": "Biotin Rat Anti-Mouse IL-3",
+                "name_s": "Biotin Rat Anti-Mouse IL-3",
+                "bdbiospellchecker_text_mv": ["Biotin Rat Anti-Mouse IL-3", "554384"],
+                "name_ci": "Biotin Rat Anti-Mouse IL-3",
+                "concatenatedQueryField_t": [
+                    "Biotin Rat Anti-Mouse IL-3",
+                    "BD Pharmingen™",
+                    "RUO",
+                    "Rat IgG2a",
+                    "MP2-43D11",
+                    "IL-3",
+                    "554384"
+                ],
+                "volPerTest_t": "",
+                "brand_t": "BD Pharmingen™",
+                "brand_ci": "BD Pharmingen™",
+                "alternativeName_t": "",
+                "alternativeName_s": "",
+                "alternativeName_ci": "",
+                "storageBuffer_t": "Aqueous buffered solution containing ≤0.09% sodium azide.",
+                "entrezGeneId_t": "",
+                "barcodeSequence_t": "",
+                "seqId_t": "",
+                "productType_t": "SingColorPureAntibody",
+                "regulatoryStatus_t": "RUO",
+                "immunogen_t": "Recombinant mouse IL-3 ",
+                "isoType_t": "Rat IgG2a",
+                "tdsCloneName_t": "MP2-43D11",
+                "tdsCloneName_s": "MP2-43D11",
+                "tdsCloneName_ci": "MP2-43D11",
+                "tdsCloneName_edge": "MP2-43D11",
+                "hostSpecies_t": "Rat",
+                "species_t": "Ms",
+                "reactivityStatus_t": "QC",
+                "applicationName_t": "ELISA Det.",
+                "applicationName_facet_ss": ["ELISA Detection", "Western blot"],
+                "dyeName_t": "Biotin",
+                "dyeName_s": "Biotin",
+                "dyeName_ci": "Biotin",
+                "dyeName_edge": "Biotin",
+                "laserWavelengthString_t": "",
+                "hpNodePath_t": "/content/commerce/products/bdb/products/reagents/immunoassay-reagents/elisa/554384_base/hp",
+                "variantHpNodePath_t": "/content/commerce/products/bdb/products/reagents/immunoassay-reagents/elisa/554384_base/554384/hp",
+                "damGlobalPath_t": "/content/dam/bdb/products/global/reagents/immunoassay-reagents/elisa/554384_base",
+                "docPartIDs_t": "",
+                "medias_t": "[]",
+                "laserColor_t": "",
+                "specificity_t": "IL-3",
+                "specificity_s": "IL-3",
+                "specificity_ci": "IL-3",
+                "specificity_edge": "IL-3",
+                "size_t": "0.5 mg",
+                "baseMaterialNumber_t": "554384_base",
+                "materialNumber_t": "554384",
+                "thumbnailImage_t": "/content/dam/bdb/products/vialimages/packaging-images/black-vial-images/Biotin.jpg",
+                "pdpTemplate_t": "SFA",
+                "isPrimaryVariant_t": "true",
+                "derivedProductStatus_t": "PURCHASEABLE",
+                "isAvailable_t": "true",
+                "validityStartDate_dt": "Oct 1, 2003, 12:00:00 AM",
+                "mpgCategory_txt": ["MPG_92"],
+                "rrid_t": "AB_395359",
+                "species_facet_s": "Ms",
+                "applicationName_facet_s": "ELISA Det.",
+                "dyeName_facet_s": "Biotin",
+                "tdsCloneName_facet_s": "MP2-43D11",
+                "isoType_facet_s": "Rat IgG2a",
+                "hostSpecies_facet_s": "Rat",
+                "regulatoryStatus_facet_s": "RUO",
+                "brand_facet_s": "BD Pharmingen™",
+                "rrid_facet_s": "AB_395359",
+                "size_facet_s": "0.5 mg",
+                "specificity_facet_s": "IL-3",
+                "barcodeSequence_facet_s": "",
+                "category_facet_ss": [
+                    "ELISA",
+                    "Immunoassay Reagents",
+                    "Reagents",
+                    "Western Blot Reagents",
+                    "Western Blotting and Molecular Reagents"
+                ],
+                "category_t": "ELISA Immunoassay Reagents Reagents Western Blot Reagents Western Blotting and Molecular Reagents",
+                "category_s": "ELISA Immunoassay Reagents Reagents Western Blot Reagents Western Blotting and Molecular Reagents",
+                "category_ci": "ELISA Immunoassay Reagents Reagents Western Blot Reagents Western Blotting and Molecular Reagents",
+                "productType_display_value_facet_s": "Antibodies-Primary",
+                "excitationSource_facet_s": "",
+                "speciesReactivity_facet_ss": ["Mouse"],
+                "keywords_t": "IL-3  Biotin ELISA Detection, Western blot, Mouse, BD Pharmingen™",
+                "_version_": 1699558070820012000,
+                "isComparable": true
+            },
+            {
+                "uniqueIdentifier": "554670",
+                "id": "https://qa-gl.bdbiosciences.com/%7Blanguage-country%7D/products/reagents/immunoassay-reagents/elisa/biotin-rat-anti-human-g-csf.554670",
+                "docType_t": "product",
+                "docType_facet_s": "Products",
+                "labelDescription_t": "Biotin Rat Anti-Human G-CSF",
+                "name_t": "Biotin Rat Anti-Human G-CSF",
+                "name_s": "Biotin Rat Anti-Human G-CSF",
+                "bdbiospellchecker_text_mv": ["Biotin Rat Anti-Human G-CSF", "554670"],
+                "name_ci": "Biotin Rat Anti-Human G-CSF",
+                "concatenatedQueryField_t": [
+                    "Biotin Rat Anti-Human G-CSF",
+                    "BD Pharmingen™",
+                    "RUO",
+                    "Rat IgG2a",
+                    "BVD11-37G10",
+                    "G-CSF",
+                    "554670"
+                ],
+                "volPerTest_t": "",
+                "brand_t": "BD Pharmingen™",
+                "brand_ci": "BD Pharmingen™",
+                "alternativeName_t": "",
+                "alternativeName_s": "",
+                "alternativeName_ci": "",
+                "storageBuffer_t": "Aqueous buffered solution containing ≤0.09% sodium azide.",
+                "entrezGeneId_t": "",
+                "barcodeSequence_t": "",
+                "seqId_t": "",
+                "productType_t": "SingColorPureAntibody",
+                "regulatoryStatus_t": "RUO",
+                "immunogen_t": "Recombinant Human G-CSF ",
+                "isoType_t": "Rat IgG2a",
+                "tdsCloneName_t": "BVD11-37G10",
+                "tdsCloneName_s": "BVD11-37G10",
+                "tdsCloneName_ci": "BVD11-37G10",
+                "tdsCloneName_edge": "BVD11-37G10",
+                "hostSpecies_t": "Rat",
+                "species_t": "Hu",
+                "reactivityStatus_t": "QC",
+                "applicationName_t": "ELISA Det.",
+                "applicationName_facet_ss": ["ELISA Detection", "Western blot"],
+                "dyeName_t": "Biotin",
+                "dyeName_s": "Biotin",
+                "dyeName_ci": "Biotin",
+                "dyeName_edge": "Biotin",
+                "laserWavelengthString_t": "",
+                "hpNodePath_t": "/content/commerce/products/bdb/products/reagents/immunoassay-reagents/elisa/554670_base/hp",
+                "variantHpNodePath_t": "/content/commerce/products/bdb/products/reagents/immunoassay-reagents/elisa/554670_base/554670/hp",
+                "damGlobalPath_t": "/content/dam/bdb/products/global/reagents/immunoassay-reagents/elisa/554670_base",
+                "docPartIDs_t": "",
+                "medias_t": "[]",
+                "laserColor_t": "",
+                "specificity_t": "G-CSF",
+                "specificity_s": "G-CSF",
+                "specificity_ci": "G-CSF",
+                "specificity_edge": "G-CSF",
+                "size_t": "0.5 mg",
+                "baseMaterialNumber_t": "554670_base",
+                "materialNumber_t": "554670",
+                "thumbnailImage_t": "/content/dam/bdb/products/vialimages/packaging-images/black-vial-images/Biotin.jpg",
+                "pdpTemplate_t": "SFA",
+                "isPrimaryVariant_t": "true",
+                "derivedProductStatus_t": "PURCHASEABLE",
+                "isAvailable_t": "true",
+                "validityStartDate_dt": "Oct 1, 2003, 12:00:00 AM",
+                "mpgCategory_txt": ["MPG_92"],
+                "rrid_t": "AB_395500",
+                "species_facet_s": "Hu",
+                "applicationName_facet_s": "ELISA Det.",
+                "dyeName_facet_s": "Biotin",
+                "tdsCloneName_facet_s": "BVD11-37G10",
+                "isoType_facet_s": "Rat IgG2a",
+                "hostSpecies_facet_s": "Rat",
+                "regulatoryStatus_facet_s": "RUO",
+                "brand_facet_s": "BD Pharmingen™",
+                "rrid_facet_s": "AB_395500",
+                "size_facet_s": "0.5 mg",
+                "specificity_facet_s": "G-CSF",
+                "barcodeSequence_facet_s": "",
+                "category_facet_ss": [
+                    "ELISA",
+                    "Immunoassay Reagents",
+                    "Reagents",
+                    "Western Blot Reagents",
+                    "Western Blotting and Molecular Reagents"
+                ],
+                "category_t": "ELISA Immunoassay Reagents Reagents Western Blot Reagents Western Blotting and Molecular Reagents",
+                "category_s": "ELISA Immunoassay Reagents Reagents Western Blot Reagents Western Blotting and Molecular Reagents",
+                "category_ci": "ELISA Immunoassay Reagents Reagents Western Blot Reagents Western Blotting and Molecular Reagents",
+                "productType_display_value_facet_s": "Antibodies-Primary",
+                "excitationSource_facet_s": "",
+                "speciesReactivity_facet_ss": ["Human"],
+                "keywords_t": "G-CSF  Biotin ELISA Detection, Western blot, Human, BD Pharmingen™",
+                "_version_": 1699558070828400600,
+                "isComparable": true
+            },
+            {
+                "uniqueIdentifier": "553762",
+                "id": "https://qa-gl.bdbiosciences.com/%7Blanguage-country%7D/products/reagents/flow-cytometry-reagents/research-reagents/single-color-antibodies-ruo/biotin-rat-anti-mouse-cd38.553762",
+                "docType_t": "product",
+                "docType_facet_s": "Products",
+                "labelDescription_t": "Biotin Rat Anti-Mouse CD38",
+                "name_t": "Biotin Rat Anti-Mouse CD38",
+                "name_s": "Biotin Rat Anti-Mouse CD38",
+                "bdbiospellchecker_text_mv": ["Biotin Rat Anti-Mouse CD38", "553762"],
+                "name_ci": "Biotin Rat Anti-Mouse CD38",
+                "concatenatedQueryField_t": [
+                    "Biotin Rat Anti-Mouse CD38",
+                    "BD Pharmingen™",
+                    "RUO",
+                    "Rat IgG2a, κ",
+                    "90/CD38",
+                    "CD38",
+                    "553762"
+                ],
+                "volPerTest_t": "",
+                "brand_t": "BD Pharmingen™",
+                "brand_ci": "BD Pharmingen™",
+                "alternativeName_t": "ADP-ribosyl cyclase 1; Cyclic ADP-ribose hydrolase 1; I-19; NIM-R5",
+                "alternativeName_s": "ADP-ribosyl cyclase 1; Cyclic ADP-ribose hydrolase 1; I-19; NIM-R5",
+                "alternativeName_ci": "ADP-ribosyl cyclase 1; Cyclic ADP-ribose hydrolase 1; I-19; NIM-R5",
+                "storageBuffer_t": "Aqueous buffered solution containing ≤0.09% sodium azide.",
+                "entrezGeneId_t": "12494",
+                "barcodeSequence_t": "",
+                "seqId_t": "",
+                "productType_t": "SingColorPureAntibody",
+                "regulatoryStatus_t": "RUO",
+                "immunogen_t": "Mouse Bone Marrow Pre-B cells ",
+                "isoType_t": "Rat IgG2a, κ",
+                "tdsCloneName_t": "90/CD38",
+                "tdsCloneName_s": "90/CD38",
+                "tdsCloneName_ci": "90/CD38",
+                "tdsCloneName_edge": "90/CD38",
+                "hostSpecies_t": "Rat",
+                "species_t": "Ms",
+                "reactivityStatus_t": "QC",
+                "applicationName_t": "FCM",
+                "applicationName_facet_ss": ["Flow cytometry"],
+                "dyeName_t": "Biotin",
+                "dyeName_s": "Biotin",
+                "dyeName_ci": "Biotin",
+                "dyeName_edge": "Biotin",
+                "laserWavelengthString_t": "",
+                "hpNodePath_t": "/content/commerce/products/bdb/products/reagents/flow-cytometry-reagents/research-reagents/single-color-antibodies-ruo/553762_base/hp",
+                "variantHpNodePath_t": "/content/commerce/products/bdb/products/reagents/flow-cytometry-reagents/research-reagents/single-color-antibodies-ruo/553762_base/553762/hp",
+                "damGlobalPath_t": "/content/dam/bdb/products/global/reagents/flow-cytometry-reagents/research-reagents/single-color-antibodies-ruo/553762_base",
+                "docPartIDs_t": "",
+                "medias_t": "[{\"baseMaterialNumber\":\"553762_base\",\"imageName\":\"09592D_553762_image2\",\"caption\":\"Two color analysis of CD38 expression on mouse spleen cells. Single-cell suspensions of BALB/c splenocytes were simultaneously stained with PE Hamster Anti-Mouse CD3e (Cat. No. 553063) and Biotin Rat Anti-Mouse CD38 (Cat. No. 553762; right panel), followed by Avidin-FITC (Cat. No. 554057). Contour plots were derived from gated events with the side and forward light-scatter characteristics of viable splenocytes. Flow cytometry was performed on a BD FACScan™ flow cytometry system.\",\"mime\":\"tif\",\"imageMetadata\":\"ImageTitle~BD Pharmingen™ Biotin Rat Anti-Mouse CD38 | ImageKeywords~553762  Flow cytometry Routinely Tested | imageDescription~CD38 Biotin | imageLang~EN | imageRegion~Global | imageAltText~Biotin Rat Anti-Mouse CD38\",\"imageType\":\"THUMBNAIL,COMPARE\"},{\"baseMaterialNumber\":\"553762_base\",\"imageName\":\"553762Image1\",\"caption\":\"Two color analysis of CD38 expression on mouse spleen cells. Single-cell suspensions of BALB/c splenocytes were simultaneously stained with PE Hamster Anti-Mouse CD3e (Cat. No. 553063) and Biotin Rat Anti-Mouse CD38 (Cat. No. 553762; right panel), followed by Avidin-FITC (Cat. No. 554057). Contour plots were derived from gated events with the side and forward light-scatter characteristics of viable splenocytes. Flow cytometry was performed on a BD FACScan™ flow cytometry system.\",\"mime\":\"PDF\",\"imageMetadata\":\"ImageTitle~BD Pharmingen™ Biotin Rat Anti-Mouse CD38 | ImageKeywords~553762  Flow cytometry Routinely Tested | imageDescription~CD38 Biotin | imageLang~EN | imageRegion~Global | imageAltText~Biotin Rat Anti-Mouse CD38\",\"imageType\":\"PRIMARY\"}]",
+                "laserColor_t": "",
+                "specificity_t": "CD38",
+                "specificity_s": "CD38",
+                "specificity_ci": "CD38",
+                "specificity_edge": "CD38",
+                "size_t": "0.5 mg",
+                "baseMaterialNumber_t": "553762_base",
+                "materialNumber_t": "553762",
+                "thumbnailImage_t": "/content/dam/bdb/products/global/reagents/flow-cytometry-reagents/research-reagents/single-color-antibodies-ruo/553762_base/09592D_553762_image2.png",
+                "pdpTemplate_t": "SFA",
+                "isPrimaryVariant_t": "true",
+                "derivedProductStatus_t": "PURCHASEABLE",
+                "isAvailable_t": "true",
+                "validityStartDate_dt": "Oct 1, 2003, 12:00:00 AM",
+                "mpgCategory_txt": ["MPG_92"],
+                "rrid_t": "AB_395033",
+                "species_facet_s": "Ms",
+                "applicationName_facet_s": "FCM",
+                "dyeName_facet_s": "Biotin",
+                "tdsCloneName_facet_s": "90/CD38",
+                "isoType_facet_s": "Rat IgG2a, κ",
+                "hostSpecies_facet_s": "Rat",
+                "regulatoryStatus_facet_s": "RUO",
+                "brand_facet_s": "BD Pharmingen™",
+                "rrid_facet_s": "AB_395033",
+                "size_facet_s": "0.5 mg",
+                "specificity_facet_s": "CD38",
+                "barcodeSequence_facet_s": "",
+                "category_facet_ss": [
+                    "Flow Cytometry Reagents",
+                    "Reagents",
+                    "Research Reagents",
+                    "Single Color Antibodies (RUO)"
+                ],
+                "category_t": "Flow Cytometry Reagents Reagents Research Reagents Single Color Antibodies (RUO)",
+                "category_s": "Flow Cytometry Reagents Reagents Research Reagents Single Color Antibodies (RUO)",
+                "category_ci": "Flow Cytometry Reagents Reagents Research Reagents Single Color Antibodies (RUO)",
+                "productType_display_value_facet_s": "Antibodies-Primary",
+                "excitationSource_facet_s": "",
+                "speciesReactivity_facet_ss": ["Mouse"],
+                "medias_imageName_ss": ["09592D_553762_image2", "553762Image1"],
+                "keywords_t": "CD38  Ab90 Biotin Flow cytometry, Mouse, BD Pharmingen™",
+                "_version_": 1699558375209042000,
+                "isComparable": true
+            },
+            {
+                "uniqueIdentifier": "555692",
+                "id": "https://qa-gl.bdbiosciences.com/%7Blanguage-country%7D/products/reagents/flow-cytometry-reagents/research-reagents/single-color-antibodies-ruo/biotin-mouse-anti-human-cd55.555692",
+                "docType_t": "product",
+                "docType_facet_s": "Products",
+                "labelDescription_t": "Biotin Mouse Anti-Human CD55",
+                "name_t": "Biotin Mouse Anti-Human CD55",
+                "name_s": "Biotin Mouse Anti-Human CD55",
+                "bdbiospellchecker_text_mv": ["Biotin Mouse Anti-Human CD55", "555692"],
+                "name_ci": "Biotin Mouse Anti-Human CD55",
+                "concatenatedQueryField_t": [
+                    "Biotin Mouse Anti-Human CD55",
+                    "BD Pharmingen™",
+                    "RUO",
+                    "Mouse IgG2a, κ",
+                    "IA10",
+                    "CD55",
+                    "555692"
+                ],
+                "volPerTest_t": "20 µl",
+                "brand_t": "BD Pharmingen™",
+                "brand_ci": "BD Pharmingen™",
+                "alternativeName_t": "DAF; CR; CROM; TC; Complement decay-accelerating factor",
+                "alternativeName_s": "DAF; CR; CROM; TC; Complement decay-accelerating factor",
+                "alternativeName_ci": "DAF; CR; CROM; TC; Complement decay-accelerating factor",
+                "storageBuffer_t": "Aqueous buffered solution containing BSA and ≤0.09% sodium azide.",
+                "entrezGeneId_t": "1604",
+                "barcodeSequence_t": "",
+                "seqId_t": "",
+                "productType_t": "SingColorPureAntibody",
+                "regulatoryStatus_t": "RUO",
+                "immunogen_t": "Purified Human Decay Accelerating Factor ",
+                "isoType_t": "Mouse IgG2a, κ",
+                "tdsCloneName_t": "IA10",
+                "tdsCloneName_s": "IA10",
+                "tdsCloneName_ci": "IA10",
+                "tdsCloneName_edge": "IA10",
+                "hostSpecies_t": "Mouse",
+                "species_t": "Hu",
+                "reactivityStatus_t": "QC",
+                "applicationName_t": "FCM",
+                "applicationName_facet_ss": ["Flow cytometry"],
+                "dyeName_t": "Biotin",
+                "dyeName_s": "Biotin",
+                "dyeName_ci": "Biotin",
+                "dyeName_edge": "Biotin",
+                "laserWavelengthString_t": "",
+                "hpNodePath_t": "/content/commerce/products/bdb/products/reagents/flow-cytometry-reagents/research-reagents/single-color-antibodies-ruo/555692_base/hp",
+                "variantHpNodePath_t": "/content/commerce/products/bdb/products/reagents/flow-cytometry-reagents/research-reagents/single-color-antibodies-ruo/555692_base/555692/hp",
+                "damGlobalPath_t": "/content/dam/bdb/products/global/reagents/flow-cytometry-reagents/research-reagents/single-color-antibodies-ruo/555692_base",
+                "docPartIDs_t": "",
+                "medias_t": "[{\"baseMaterialNumber\":\"555692_base\",\"imageName\":\"33572X_555692_image1\",\"caption\":\"Profile of K562 cells expressing glycosylphosphatidylinositol (GPI) anchored protein analyzed on a FACScan (BDIS, San Jose, CA)\",\"mime\":\"tif\",\"imageMetadata\":\"ImageTitle~BD Pharmingen™ Biotin Mouse Anti-Human CD55 | ImageKeywords~555692  Flow cytometry Routinely Tested | imageDescription~CD55 Biotin | imageLang~EN | imageRegion~Global | imageAltText~Biotin Mouse Anti-Human CD55\",\"imageType\":\"PRIMARY\"},{\"baseMaterialNumber\":\"555692_base\",\"imageName\":\"33572X_555692_image2\",\"caption\":\"Profile of glycosylphosphatidylinositol (GPI) achor-defective mutant K562 cell line lymphocytes analyzed on a FACScan (BDIS, San Jose, CA)\",\"mime\":\"tif\",\"imageMetadata\":\"ImageTitle~BD Pharmingen™ Biotin Mouse Anti-Human CD55 | ImageKeywords~555692  Flow cytometry Routinely Tested | imageDescription~CD55 Biotin | imageLang~EN | imageRegion~Global | imageAltText~Biotin Mouse Anti-Human CD55\",\"imageType\":\"GALLERY\"}]",
+                "laserColor_t": "",
+                "specificity_t": "CD55",
+                "specificity_s": "CD55",
+                "specificity_ci": "CD55",
+                "specificity_edge": "CD55",
+                "size_t": "100 Tests",
+                "baseMaterialNumber_t": "555692_base",
+                "materialNumber_t": "555692",
+                "thumbnailImage_t": "/content/dam/bdb/products/global/reagents/flow-cytometry-reagents/research-reagents/single-color-antibodies-ruo/555692_base/33572X_555692_image1.png",
+                "pdpTemplate_t": "SFA",
+                "isPrimaryVariant_t": "true",
+                "derivedProductStatus_t": "PURCHASEABLE",
+                "isAvailable_t": "true",
+                "validityStartDate_dt": "Oct 1, 2003, 12:00:00 AM",
+                "mpgCategory_txt": ["MPG_92"],
+                "rrid_t": "AB_396043",
+                "species_facet_s": "Hu",
+                "applicationName_facet_s": "FCM",
+                "dyeName_facet_s": "Biotin",
+                "tdsCloneName_facet_s": "IA10",
+                "isoType_facet_s": "Mouse IgG2a, κ",
+                "hostSpecies_facet_s": "Mouse",
+                "regulatoryStatus_facet_s": "RUO",
+                "brand_facet_s": "BD Pharmingen™",
+                "rrid_facet_s": "AB_396043",
+                "size_facet_s": "100 Tests",
+                "specificity_facet_s": "CD55",
+                "barcodeSequence_facet_s": "",
+                "category_facet_ss": [
+                    "Flow Cytometry Reagents",
+                    "Reagents",
+                    "Research Reagents",
+                    "Single Color Antibodies (RUO)"
+                ],
+                "category_t": "Flow Cytometry Reagents Reagents Research Reagents Single Color Antibodies (RUO)",
+                "category_s": "Flow Cytometry Reagents Reagents Research Reagents Single Color Antibodies (RUO)",
+                "category_ci": "Flow Cytometry Reagents Reagents Research Reagents Single Color Antibodies (RUO)",
+                "productType_display_value_facet_s": "Antibodies-Primary",
+                "excitationSource_facet_s": "",
+                "speciesReactivity_facet_ss": ["Human"],
+                "medias_imageName_ss": ["33572X_555692_image1", "33572X_555692_image2"],
+                "keywords_t": "CD55 DAF Biotin Flow cytometry, Human, BD Pharmingen™",
+                "_version_": 1699558421895839700,
+                "isComparable": true
+            },
+            {
+                "uniqueIdentifier": "559941",
+                "id": "https://qa-gl.bdbiosciences.com/%7Blanguage-country%7D/products/reagents/flow-cytometry-reagents/research-reagents/flow-cytometry-controls-and-lysates/biotin-rat-igm-isotype-control.559941",
+                "docType_t": "product",
+                "docType_facet_s": "Products",
+                "labelDescription_t": "Biotin Rat IgM, κ Isotype Control",
+                "name_t": "Biotin Rat IgM, κ Isotype Control",
+                "name_s": "Biotin Rat IgM, κ Isotype Control",
+                "bdbiospellchecker_text_mv": ["Biotin Rat IgM, κ Isotype Control", "559941"],
+                "name_ci": "Biotin Rat IgM, κ Isotype Control",
+                "concatenatedQueryField_t": [
+                    "Biotin Rat IgM, κ Isotype Control",
+                    "BD Pharmingen™",
+                    "RUO",
+                    "Rat IgM, κ",
+                    "R4-22",
+                    "",
+                    "559941"
+                ],
+                "volPerTest_t": "20 µl",
+                "brand_t": "BD Pharmingen™",
+                "brand_ci": "BD Pharmingen™",
+                "alternativeName_t": "",
+                "alternativeName_s": "",
+                "alternativeName_ci": "",
+                "storageBuffer_t": "Aqueous buffered solution containing BSA and ≤0.09% sodium azide.",
+                "entrezGeneId_t": "",
+                "barcodeSequence_t": "",
+                "seqId_t": "",
+                "productType_t": "IsotypeControlLysate",
+                "regulatoryStatus_t": "RUO",
+                "immunogen_t": "Pooled Mouse Ig ",
+                "isoType_t": "Rat IgM, κ",
+                "tdsCloneName_t": "R4-22",
+                "tdsCloneName_s": "R4-22",
+                "tdsCloneName_ci": "R4-22",
+                "tdsCloneName_edge": "R4-22",
+                "hostSpecies_t": "Rat",
+                "applicationName_t": "FCM, ICtrl",
+                "applicationName_facet_ss": ["Flow cytometry", "Isotype control"],
+                "dyeName_t": "Biotin",
+                "dyeName_s": "Biotin",
+                "dyeName_ci": "Biotin",
+                "dyeName_edge": "Biotin",
+                "laserWavelengthString_t": "",
+                "hpNodePath_t": "/content/commerce/products/bdb/products/reagents/flow-cytometry-reagents/research-reagents/flow-cytometry-controls-and-lysates/559941_base/hp",
+                "variantHpNodePath_t": "/content/commerce/products/bdb/products/reagents/flow-cytometry-reagents/research-reagents/flow-cytometry-controls-and-lysates/559941_base/559941/hp",
+                "damGlobalPath_t": "/content/dam/bdb/products/global/reagents/flow-cytometry-reagents/research-reagents/flow-cytometry-controls-and-lysates/559941_base",
+                "docPartIDs_t": "",
+                "medias_t": "[{\"baseMaterialNumber\":\"559941_base\",\"imageName\":\"35932X_559941_image1\",\"caption\":\"Profile of peripheral blood lymphocytes analyzed by flow cytometry\",\"mime\":\"tif\",\"imageMetadata\":\"ImageTitle~BD Pharmingen™ Biotin Rat IgM, κ Isotype Control | ImageKeywords~559941  Flow cytometry,Isotype control Routinely Tested,Routinely Tested | imageDescription~ Biotin | imageLang~EN | imageRegion~Global | imageAltText~Biotin Rat IgM, κ Isotype Control\",\"imageType\":\"PRIMARY\"}]",
+                "laserColor_t": "",
+                "specificity_t": "",
+                "specificity_s": "",
+                "specificity_ci": "",
+                "specificity_edge": "",
+                "size_t": "100 Tests",
+                "baseMaterialNumber_t": "559941_base",
+                "materialNumber_t": "559941",
+                "thumbnailImage_t": "/content/dam/bdb/products/global/reagents/flow-cytometry-reagents/research-reagents/flow-cytometry-controls-and-lysates/559941_base/35932X_559941_image1.png",
+                "pdpTemplate_t": "SFA",
+                "isPrimaryVariant_t": "true",
+                "derivedProductStatus_t": "PURCHASEABLE",
+                "isAvailable_t": "true",
+                "validityStartDate_dt": "Oct 1, 2003, 12:00:00 AM",
+                "mpgCategory_txt": ["MPG_92"],
+                "rrid_t": "AB_397385",
+                "applicationName_facet_s": "FCM, ICtrl",
+                "dyeName_facet_s": "Biotin",
+                "tdsCloneName_facet_s": "R4-22",
+                "isoType_facet_s": "Rat IgM, κ",
+                "hostSpecies_facet_s": "Rat",
+                "regulatoryStatus_facet_s": "RUO",
+                "brand_facet_s": "BD Pharmingen™",
+                "rrid_facet_s": "AB_397385",
+                "size_facet_s": "100 Tests",
+                "specificity_facet_s": "",
+                "barcodeSequence_facet_s": "",
+                "category_facet_ss": [
+                    "Flow Cytometry Controls and Lysates",
+                    "Flow Cytometry Reagents",
+                    "Reagents",
+                    "Research Reagents",
+                    "Single Color Antibodies (RUO)"
+                ],
+                "category_t": "Flow Cytometry Controls and Lysates Flow Cytometry Reagents Reagents Research Reagents Single Color Antibodies (RUO)",
+                "category_s": "Flow Cytometry Controls and Lysates Flow Cytometry Reagents Reagents Research Reagents Single Color Antibodies (RUO)",
+                "category_ci": "Flow Cytometry Controls and Lysates Flow Cytometry Reagents Reagents Research Reagents Single Color Antibodies (RUO)",
+                "productType_display_value_facet_s": "Isotype Controls/Lysates",
+                "excitationSource_facet_s": "",
+                "speciesReactivity_facet_ss": [""],
+                "medias_imageName_ss": ["35932X_559941_image1"],
+                "keywords_t": "Biotin Flow cytometry, Isotype control, BD Pharmingen™",
+                "_version_": 1699558323104252000,
+                "isComparable": true
+            },
+            {
+                "uniqueIdentifier": "553239",
+                "id": "https://qa-gl.bdbiosciences.com/%7Blanguage-country%7D/products/reagents/flow-cytometry-reagents/research-reagents/single-color-antibodies-ruo/biotin-hamster-anti-mouse-cd3e.553239",
+                "docType_t": "product",
+                "docType_facet_s": "Products",
+                "labelDescription_t": "Biotin Hamster Anti-Mouse CD3e",
+                "name_t": "Biotin Hamster Anti-Mouse CD3e",
+                "name_s": "Biotin Hamster Anti-Mouse CD3e",
+                "bdbiospellchecker_text_mv": ["Biotin Hamster Anti-Mouse CD3e", "553239"],
+                "name_ci": "Biotin Hamster Anti-Mouse CD3e",
+                "concatenatedQueryField_t": [
+                    "Biotin Hamster Anti-Mouse CD3e",
+                    "BD Pharmingen™",
+                    "RUO",
+                    "Syrian Hamster IgG2, κ",
+                    "500A2",
+                    "CD3",
+                    "553239"
+                ],
+                "volPerTest_t": "",
+                "brand_t": "BD Pharmingen™",
+                "brand_ci": "BD Pharmingen™",
+                "alternativeName_t": "CD3; CD3 epsilon; Cd3e; CD3ε; T3e",
+                "alternativeName_s": "CD3; CD3 epsilon; Cd3e; CD3ε; T3e",
+                "alternativeName_ci": "CD3; CD3 epsilon; Cd3e; CD3ε; T3e",
+                "storageBuffer_t": "Aqueous buffered solution containing ≤0.09% sodium azide.",
+                "entrezGeneId_t": "12501",
+                "barcodeSequence_t": "",
+                "seqId_t": "",
+                "productType_t": "SingColorPureAntibody",
+                "regulatoryStatus_t": "RUO",
+                "immunogen_t": "Mouse T-cell receptor ",
+                "isoType_t": "Syrian Hamster IgG2, κ",
+                "tdsCloneName_t": "500A2",
+                "tdsCloneName_s": "500A2",
+                "tdsCloneName_ci": "500A2",
+                "tdsCloneName_edge": "500A2",
+                "hostSpecies_t": "Syrian Hamster",
+                "species_t": "Ms",
+                "reactivityStatus_t": "QC",
+                "applicationName_t": "FCM",
+                "applicationName_facet_ss": ["Flow cytometry"],
+                "dyeName_t": "Biotin",
+                "dyeName_s": "Biotin",
+                "dyeName_ci": "Biotin",
+                "dyeName_edge": "Biotin",
+                "laserWavelengthString_t": "",
+                "hpNodePath_t": "/content/commerce/products/bdb/products/reagents/flow-cytometry-reagents/research-reagents/single-color-antibodies-ruo/553239_base/hp",
+                "variantHpNodePath_t": "/content/commerce/products/bdb/products/reagents/flow-cytometry-reagents/research-reagents/single-color-antibodies-ruo/553239_base/553239/hp",
+                "damGlobalPath_t": "/content/dam/bdb/products/global/reagents/flow-cytometry-reagents/research-reagents/single-color-antibodies-ruo/553239_base",
+                "docPartIDs_t": "",
+                "medias_t": "[{\"baseMaterialNumber\":\"553239_base\",\"imageName\":\"553239Image1\",\"caption\":\"CD3e expression in spleen and thymus. BALB/c splenocytes were simultaneously stained with PE-conjugated anti-mouse CD4 mAb RM4-5 (Cat. No. 553048/553049, Panels A and C), PE-conjugated anti-mouse CD8a mAb 53-6.7 (Cat. No. 553032/553033, left panels), and biotinylated mAb 500A2 (bottom left panel), followed by Avidin-FITC (Cat. No. 554057, left panels). BALB/c thymocytes were stained with biotinylated 500A2 (bottom right panel) followed by Avidin-FITC (right panels). Flow cytometry was performed on a BD FACScan™ flow cytometry system.\",\"mime\":\"PDF\",\"imageMetadata\":\"ImageTitle~BD Pharmingen™ Biotin Hamster Anti-Mouse CD3e | ImageKeywords~553239  Flow cytometry Routinely Tested | imageDescription~CD3 Biotin | imageLang~EN | imageRegion~Global | imageAltText~Biotin Hamster Anti-Mouse CD3e\",\"imageType\":\"PRIMARY\"},{\"baseMaterialNumber\":\"553239_base\",\"imageName\":\"01512D_553239_image4\",\"caption\":\"\",\"mime\":\"tif\",\"imageMetadata\":\"ImageTitle~BD Pharmingen™ Biotin Hamster Anti-Mouse CD3e | ImageKeywords~553239  Flow cytometry Routinely Tested | imageDescription~CD3 Biotin | imageLang~EN | imageRegion~Global | imageAltText~Biotin Hamster Anti-Mouse CD3e\",\"imageType\":\"THUMBNAIL,COMPARE\"}]",
+                "laserColor_t": "",
+                "specificity_t": "CD3",
+                "specificity_s": "CD3",
+                "specificity_ci": "CD3",
+                "specificity_edge": "CD3",
+                "size_t": "0.5 mg",
+                "baseMaterialNumber_t": "553239_base",
+                "materialNumber_t": "553239",
+                "thumbnailImage_t": "/content/dam/bdb/products/global/reagents/flow-cytometry-reagents/research-reagents/single-color-antibodies-ruo/553239_base/01512D_553239_image4.png",
+                "pdpTemplate_t": "SFA",
+                "isPrimaryVariant_t": "true",
+                "derivedProductStatus_t": "PURCHASEABLE",
+                "isAvailable_t": "true",
+                "validityStartDate_dt": "Oct 1, 2003, 12:00:00 AM",
+                "mpgCategory_txt": ["MPG_92"],
+                "rrid_t": "AB_394728",
+                "species_facet_s": "Ms",
+                "applicationName_facet_s": "FCM",
+                "dyeName_facet_s": "Biotin",
+                "tdsCloneName_facet_s": "500A2",
+                "isoType_facet_s": "Syrian Hamster IgG2, κ",
+                "hostSpecies_facet_s": "Syrian Hamster",
+                "regulatoryStatus_facet_s": "RUO",
+                "brand_facet_s": "BD Pharmingen™",
+                "rrid_facet_s": "AB_394728",
+                "size_facet_s": "0.5 mg",
+                "specificity_facet_s": "CD3",
+                "barcodeSequence_facet_s": "",
+                "category_facet_ss": [
+                    "Flow Cytometry Reagents",
+                    "Reagents",
+                    "Research Reagents",
+                    "Single Color Antibodies (RUO)"
+                ],
+                "category_t": "Flow Cytometry Reagents Reagents Research Reagents Single Color Antibodies (RUO)",
+                "category_s": "Flow Cytometry Reagents Reagents Research Reagents Single Color Antibodies (RUO)",
+                "category_ci": "Flow Cytometry Reagents Reagents Research Reagents Single Color Antibodies (RUO)",
+                "productType_display_value_facet_s": "Antibodies-Primary",
+                "excitationSource_facet_s": "",
+                "speciesReactivity_facet_ss": ["Mouse"],
+                "medias_imageName_ss": ["553239Image1", "01512D_553239_image4"],
+                "keywords_t": "CD3  Biotin Flow cytometry, Mouse, BD Pharmingen™",
+                "_version_": 1699558375070630000,
+                "isComparable": true
+            },
+            {
+                "uniqueIdentifier": "553572",
+                "id": "https://qa-gl.bdbiosciences.com/%7Blanguage-country%7D/products/reagents/flow-cytometry-reagents/research-reagents/single-color-antibodies-ruo/biotin-mouse-anti-mouse-h-2d-b.553572",
+                "docType_t": "product",
+                "docType_facet_s": "Products",
+                "labelDescription_t": "Biotin Mouse Anti-Mouse H-2D[b]",
+                "name_t": "Biotin Mouse Anti-Mouse H-2D[b]",
+                "name_s": "Biotin Mouse Anti-Mouse H-2D[b]",
+                "bdbiospellchecker_text_mv": ["Biotin Mouse Anti-Mouse H-2D[b]", "553572"],
+                "name_ci": "Biotin Mouse Anti-Mouse H-2D[b]",
+                "concatenatedQueryField_t": [
+                    "Biotin Mouse Anti-Mouse H-2D[b]",
+                    "BD Pharmingen™",
+                    "RUO",
+                    "Mouse BALB/c IgG2b, κ",
+                    "KH95",
+                    "H-2Db",
+                    "553572"
+                ],
+                "volPerTest_t": "",
+                "brand_t": "BD Pharmingen™",
+                "brand_ci": "BD Pharmingen™",
+                "alternativeName_t": "Histocompatibility-2Db; H-2Db",
+                "alternativeName_s": "Histocompatibility-2Db; H-2Db",
+                "alternativeName_ci": "Histocompatibility-2Db; H-2Db",
+                "storageBuffer_t": "Aqueous buffered solution containing ≤0.09% sodium azide.",
+                "entrezGeneId_t": "",
+                "barcodeSequence_t": "",
+                "seqId_t": "",
+                "productType_t": "SingColorPureAntibody",
+                "regulatoryStatus_t": "RUO",
+                "immunogen_t": "C57BL/10 mouse skin graft and splenocytes ",
+                "isoType_t": "Mouse BALB/c IgG2b, κ",
+                "tdsCloneName_t": "KH95",
+                "tdsCloneName_s": "KH95",
+                "tdsCloneName_ci": "KH95",
+                "tdsCloneName_edge": "KH95",
+                "hostSpecies_t": "Mouse",
+                "species_t": "Ms",
+                "reactivityStatus_t": "QC",
+                "applicationName_t": "FCM",
+                "applicationName_facet_ss": ["Flow cytometry"],
+                "dyeName_t": "Biotin",
+                "dyeName_s": "Biotin",
+                "dyeName_ci": "Biotin",
+                "dyeName_edge": "Biotin",
+                "laserWavelengthString_t": "",
+                "hpNodePath_t": "/content/commerce/products/bdb/products/reagents/flow-cytometry-reagents/research-reagents/single-color-antibodies-ruo/553572_base/hp",
+                "variantHpNodePath_t": "/content/commerce/products/bdb/products/reagents/flow-cytometry-reagents/research-reagents/single-color-antibodies-ruo/553572_base/553572/hp",
+                "damGlobalPath_t": "/content/dam/bdb/products/global/reagents/flow-cytometry-reagents/research-reagents/single-color-antibodies-ruo/553572_base",
+                "docPartIDs_t": "",
+                "medias_t": "[]",
+                "laserColor_t": "",
+                "specificity_t": "H-2Db",
+                "specificity_s": "H-2Db",
+                "specificity_ci": "H-2Db",
+                "specificity_edge": "H-2Db",
+                "size_t": "0.5 mg",
+                "baseMaterialNumber_t": "553572_base",
+                "materialNumber_t": "553572",
+                "thumbnailImage_t": "/content/dam/bdb/products/vialimages/packaging-images/black-vial-images/Biotin.jpg",
+                "pdpTemplate_t": "SFA",
+                "isPrimaryVariant_t": "true",
+                "derivedProductStatus_t": "PURCHASEABLE",
+                "isAvailable_t": "true",
+                "validityStartDate_dt": "Oct 1, 2003, 12:00:00 AM",
+                "mpgCategory_txt": ["MPG_92"],
+                "rrid_t": "AB_394930",
+                "species_facet_s": "Ms",
+                "applicationName_facet_s": "FCM",
+                "dyeName_facet_s": "Biotin",
+                "tdsCloneName_facet_s": "KH95",
+                "isoType_facet_s": "Mouse BALB/c IgG2b, κ",
+                "hostSpecies_facet_s": "Mouse",
+                "regulatoryStatus_facet_s": "RUO",
+                "brand_facet_s": "BD Pharmingen™",
+                "rrid_facet_s": "AB_394930",
+                "size_facet_s": "0.5 mg",
+                "specificity_facet_s": "H-2Db",
+                "barcodeSequence_facet_s": "",
+                "category_facet_ss": [
+                    "Flow Cytometry Reagents",
+                    "Reagents",
+                    "Research Reagents",
+                    "Single Color Antibodies (RUO)"
+                ],
+                "category_t": "Flow Cytometry Reagents Reagents Research Reagents Single Color Antibodies (RUO)",
+                "category_s": "Flow Cytometry Reagents Reagents Research Reagents Single Color Antibodies (RUO)",
+                "category_ci": "Flow Cytometry Reagents Reagents Research Reagents Single Color Antibodies (RUO)",
+                "productType_display_value_facet_s": "Antibodies-Primary",
+                "excitationSource_facet_s": "",
+                "speciesReactivity_facet_ss": ["Mouse"],
+                "keywords_t": "H-2Db  Biotin Flow cytometry, Mouse, BD Pharmingen™",
+                "_version_": 1699558375159758800,
+                "isComparable": true
+            }
+        ],
+        "facets": {
+            "docType_facet_s": [
+                {
+                    "label": "Information",
+                    "count": 1
+                },
+                {
+                    "label": "Products",
+                    "count": 405
+                }
+            ],
+            "productType_display_value_facet_s": [
+                {
+                    "label": "Antibodies-Primary",
+                    "count": 375
+                },
+                {
+                    "label": "Isotype Controls/Lysates",
+                    "count": 29
+                },
+                {
+                    "label": "Kits/Sets/Pairs",
+                    "count": 1
+                }
+            ],
+            "category_facet_ss": [
+                {
+                    "label": "Cell Preparation & Separation Reagents",
+                    "count": 7
+                },
+                {
+                    "label": "ELISA",
+                    "count": 120
+                },
+                {
+                    "label": "Flow Cytometry Controls and Lysates",
+                    "count": 25
+                },
+                {
+                    "label": "Flow Cytometry Reagents",
+                    "count": 337
+                },
+                {
+                    "label": "Functional Cell-Based Reagents",
+                    "count": 1
+                },
+                {
+                    "label": "Immunoassay Reagents",
+                    "count": 123
+                },
+                {
+                    "label": "Immunocytochemistry Reagents",
+                    "count": 3
+                },
+                {
+                    "label": "Immunofluoroscence Reagents",
+                    "count": 13
+                },
+                {
+                    "label": "Immunohistochemistry Reagents",
+                    "count": 70
+                },
+                {
+                    "label": "Microscopy & Imaging Reagents",
+                    "count": 82
+                },
+                {
+                    "label": "Panels / Multicolor Cocktails (RUO)",
+                    "count": 3
+                },
+                {
+                    "label": "Reagents",
+                    "count": 405
+                },
+                {
+                    "label": "Research Reagents",
+                    "count": 337
+                },
+                {
+                    "label": "Single Color Antibodies",
+                    "count": 1
+                },
+                {
+                    "label": "Single Color Antibodies (RUO)",
+                    "count": 334
+                },
+                {
+                    "label": "Western Blot Reagents",
+                    "count": 19
+                },
+                {
+                    "label": "Western Blotting and Molecular Reagents",
+                    "count": 25
+                }
+            ],
+            "speciesReactivity_facet_ss": [
+                {
+                    "label": "",
+                    "count": 36
+                },
+                {
+                    "label": "Armenian Hamster",
+                    "count": 3
+                },
+                {
+                    "label": "Baboon",
+                    "count": 12
+                },
+                {
+                    "label": "Chicken",
+                    "count": 3
+                },
+                {
+                    "label": "Cynomolgus",
+                    "count": 13
+                },
+                {
+                    "label": "Dog",
+                    "count": 5
+                },
+                {
+                    "label": "Frog",
+                    "count": 2
+                },
+                {
+                    "label": "Guinea Pig",
+                    "count": 1
+                },
+                {
+                    "label": "Hamster",
+                    "count": 3
+                },
+                {
+                    "label": "Human",
+                    "count": 107
+                },
+                {
+                    "label": "Mouse",
+                    "count": 226
+                },
+                {
+                    "label": "Pig",
+                    "count": 6
+                },
+                {
+                    "label": "Rabbit",
+                    "count": 3
+                },
+                {
+                    "label": "Rat",
+                    "count": 49
+                },
+                {
+                    "label": "Rhesus",
+                    "count": 13
+                },
+                {
+                    "label": "Syrian Hamster",
+                    "count": 3
+                },
+                {
+                    "label": "Viral",
+                    "count": 2
+                }
+            ],
+            "applicationName_facet_ss": [
+                {
+                    "label": "(Co)-stimulation",
+                    "count": 1
+                },
+                {
+                    "label": "Bioimaging",
+                    "count": 1
+                },
+                {
+                    "label": "Blocking",
+                    "count": 1
+                },
+                {
+                    "label": "Cell separation",
+                    "count": 7
+                },
+                {
+                    "label": "ELISA",
+                    "count": 55
+                },
+                {
+                    "label": "ELISA Detection",
+                    "count": 65
+                },
+                {
+                    "label": "Electron microscopy",
+                    "count": 1
+                },
+                {
+                    "label": "Flow cytometry",
+                    "count": 333
+                },
+                {
+                    "label": "Fluorescence microscopy",
+                    "count": 2
+                },
+                {
+                    "label": "Functional assay",
+                    "count": 1
+                },
+                {
+                    "label": "Immunofluorescence",
+                    "count": 13
+                },
+                {
+                    "label": "Immunohistochemistry",
+                    "count": 8
+                },
+                {
+                    "label": "Immunohistochemistry-formalin (antigen retrieval required)",
+                    "count": 11
+                },
+                {
+                    "label": "Immunohistochemistry-frozen",
+                    "count": 60
+                },
+                {
+                    "label": "Immunohistochemistry-paraffin",
+                    "count": 2
+                },
+                {
+                    "label": "Immunohistochemistry-zinc-fixed",
+                    "count": 10
+                },
+                {
+                    "label": "Immunoprecipitation",
+                    "count": 10
+                },
+                {
+                    "label": "Immunoprecipitation/Western blot",
+                    "count": 1
+                },
+                {
+                    "label": "Intracellular staining (flow cytometry)",
+                    "count": 5
+                },
+                {
+                    "label": "Isotype control",
+                    "count": 25
+                },
+                {
+                    "label": "Neutralization",
+                    "count": 4
+                },
+                {
+                    "label": "Stimulation",
+                    "count": 1
+                },
+                {
+                    "label": "Western blot",
+                    "count": 18
+                }
+            ],
+            "dyeName_facet_s": [
+                {
+                    "label": "Biotin",
+                    "count": 401
+                },
+                {
+                    "label": "NA",
+                    "count": 1
+                }
+            ],
+            "tdsCloneName_facet_s": [
+                {
+                    "label": "Polyclonal",
+                    "count": 5
+                },
+                {
+                    "label": "7D4",
+                    "count": 3
+                },
+                {
+                    "label": "G155-178",
+                    "count": 3
+                },
+                {
+                    "label": "R4-22",
+                    "count": 3
+                },
+                {
+                    "label": "145-2C11",
+                    "count": 2
+                },
+                {
+                    "label": "16A",
+                    "count": 2
+                },
+                {
+                    "label": "27-35",
+                    "count": 2
+                },
+                {
+                    "label": "30-F11",
+                    "count": 2
+                },
+                {
+                    "label": "53-2.1",
+                    "count": 2
+                },
+                {
+                    "label": "53-6.7",
+                    "count": 2
+                },
+                {
+                    "label": "53-7.3",
+                    "count": 2
+                },
+                {
+                    "label": "A85-1",
+                    "count": 2
+                },
+                {
+                    "label": "AF6-120.1",
+                    "count": 2
+                },
+                {
+                    "label": "AF6-88.5",
+                    "count": 2
+                },
+                {
+                    "label": "AMS-32.1",
+                    "count": 2
+                },
+                {
+                    "label": "G15-337",
+                    "count": 2
+                },
+                {
+                    "label": "G155-228",
+                    "count": 2
+                },
+                {
+                    "label": "G28-5",
+                    "count": 2
+                },
+                {
+                    "label": "G53-238",
+                    "count": 2
+                },
+                {
+                    "label": "G94-56",
+                    "count": 2
+                },
+                {
+                    "label": "H129.19",
+                    "count": 2
+                },
+                {
+                    "label": "H57-597",
+                    "count": 2
+                },
+                {
+                    "label": "M1/70",
+                    "count": 2
+                },
+                {
+                    "label": "MABTNFR1-B1",
+                    "count": 2
+                },
+                {
+                    "label": "NOK-1",
+                    "count": 2
+                }
+            ],
+            "isoType_facet_s": [
+                {
+                    "label": "",
+                    "count": 6
+                },
+                {
+                    "label": "Armenian Hamster IgG, κ",
+                    "count": 1
+                },
+                {
+                    "label": "Armenian Hamster IgG1, κ",
+                    "count": 9
+                },
+                {
+                    "label": "Armenian Hamster IgG1, λ",
+                    "count": 1
+                },
+                {
+                    "label": "Armenian Hamster IgG1, λ1",
+                    "count": 1
+                },
+                {
+                    "label": "Armenian Hamster IgG1, λ2",
+                    "count": 1
+                },
+                {
+                    "label": "Armenian Hamster IgG1, λ3",
+                    "count": 2
+                },
+                {
+                    "label": "Armenian Hamster IgG2, κ",
+                    "count": 5
+                },
+                {
+                    "label": "Armenian Hamster IgG2, λ1",
+                    "count": 4
+                },
+                {
+                    "label": "Armenian Hamster IgG2, λ2",
+                    "count": 1
+                },
+                {
+                    "label": "Armenian Hamster IgG3, κ",
+                    "count": 2
+                },
+                {
+                    "label": "Armenian Hamster IgG3, λ1",
+                    "count": 1
+                },
+                {
+                    "label": "Armenian Hamster IgM, κ",
+                    "count": 1
+                },
+                {
+                    "label": "Goat Ig",
+                    "count": 1
+                },
+                {
+                    "label": "Goat IgRabbit IgGoat Ig",
+                    "count": 4
+                },
+                {
+                    "label": "Human Ig, κ",
+                    "count": 1
+                },
+                {
+                    "label": "Mouse 129, also known as 129/J or 129/SvJ IgG2a, κ",
+                    "count": 1
+                },
+                {
+                    "label": "Mouse 129, also known as 129/J or 129/SvJ IgG2b, κ",
+                    "count": 1
+                },
+                {
+                    "label": "Mouse A.SW IgG2a, κ",
+                    "count": 1
+                },
+                {
+                    "label": "Mouse A.TL IgG2a, κ",
+                    "count": 1
+                },
+                {
+                    "label": "Mouse B6-Tla(a), also known as B6-Tlaª or QA-1ª IgG1, κ",
+                    "count": 1
+                },
+                {
+                    "label": "Mouse BALB/c IgA, κ",
+                    "count": 2
+                },
+                {
+                    "label": "Mouse BALB/c IgG1",
+                    "count": 1
+                },
+                {
+                    "label": "Mouse BALB/c IgG1, κ",
+                    "count": 37
+                },
+                {
+                    "label": "Mouse BALB/c IgG2a, κ",
+                    "count": 19
+                },
+                {
+                    "label": "Mouse BALB/c IgG2b, κ",
+                    "count": 8
+                },
+                {
+                    "label": "Mouse BALB/c IgG3, κ",
+                    "count": 3
+                },
+                {
+                    "label": "Mouse BALB/c IgM, κ",
+                    "count": 3
+                },
+                {
+                    "label": "Mouse BALB/c x DBA/2, also known as CD2F1 or CDF1 IgG1, κ",
+                    "count": 1
+                },
+                {
+                    "label": "Mouse C.SW IgG2b, κ",
+                    "count": 2
+                },
+                {
+                    "label": "Mouse C3H x BALB/c IgG1, κ",
+                    "count": 1
+                },
+                {
+                    "label": "Mouse C3H x BALB/c IgG2a, κ",
+                    "count": 1
+                },
+                {
+                    "label": "Mouse C3H, also known as C3H/He, C3H/Bi IgG1, κ",
+                    "count": 2
+                },
+                {
+                    "label": "Mouse C3H, also known as C3H/He, C3H/Bi IgG2a, κ",
+                    "count": 4
+                },
+                {
+                    "label": "Mouse C3H, also known as C3H/He, C3H/Bi IgM, κ",
+                    "count": 1
+                },
+                {
+                    "label": "Mouse C3H.KBR IgG2a, κ",
+                    "count": 1
+                },
+                {
+                    "label": "Mouse C3H.SW IgG2a, κ",
+                    "count": 2
+                },
+                {
+                    "label": "Mouse C3H.SW IgG3, κ",
+                    "count": 1
+                },
+                {
+                    "label": "Mouse C57BL/6 IgG1, κ",
+                    "count": 3
+                },
+                {
+                    "label": "Mouse C57BL/6 IgG2b, κ",
+                    "count": 1
+                },
+                {
+                    "label": "Mouse C57L IgG2a, κ",
+                    "count": 2
+                },
+                {
+                    "label": "Mouse CWB IgG2a, κ",
+                    "count": 1
+                },
+                {
+                    "label": "Mouse DBA/1 IgG1, κ",
+                    "count": 1
+                },
+                {
+                    "label": "Mouse IgG1",
+                    "count": 7
+                },
+                {
+                    "label": "Mouse IgG1, κ",
+                    "count": 47
+                },
+                {
+                    "label": "Mouse IgG2a",
+                    "count": 3
+                },
+                {
+                    "label": "Mouse IgG2a, κ",
+                    "count": 10
+                },
+                {
+                    "label": "Mouse IgG2b",
+                    "count": 3
+                },
+                {
+                    "label": "Mouse IgG2b, κ",
+                    "count": 8
+                },
+                {
+                    "label": "Mouse IgM, κ",
+                    "count": 1
+                },
+                {
+                    "label": "Mouse RBF/ DnJ IgG1, κ",
+                    "count": 1
+                },
+                {
+                    "label": "Mouse SJL IgG2a, κ",
+                    "count": 6
+                },
+                {
+                    "label": "Mouse SJL IgG2b, κ",
+                    "count": 5
+                },
+                {
+                    "label": "Mouse SWR IgG1, κ",
+                    "count": 2
+                },
+                {
+                    "label": "Rabbit IgG",
+                    "count": 1
+                },
+                {
+                    "label": "Rat AO IgG1, κ",
+                    "count": 1
+                },
+                {
+                    "label": "Rat BN, also known as Brown Norway IgG2a, κ",
+                    "count": 1
+                },
+                {
+                    "label": "Rat DA x LOU IgG2a, κ",
+                    "count": 1
+                },
+                {
+                    "label": "Rat DA, also known as DA/HA IgG2a, κ",
+                    "count": 3
+                },
+                {
+                    "label": "Rat DA, also known as DA/HA IgG2b, κ",
+                    "count": 3
+                },
+                {
+                    "label": "Rat F344, also known as Fischer, CDF IgG2a, κ",
+                    "count": 3
+                },
+                {
+                    "label": "Rat F344, also known as Fischer, CDF IgG2b, κ",
+                    "count": 4
+                },
+                {
+                    "label": "Rat F344, also known as Fischer, CDF IgG2b, λ",
+                    "count": 1
+                },
+                {
+                    "label": "Rat F344, also known as Fischer, CDF IgM, κ",
+                    "count": 1
+                },
+                {
+                    "label": "Rat IgG1",
+                    "count": 4
+                },
+                {
+                    "label": "Rat IgG1, κ",
+                    "count": 7
+                },
+                {
+                    "label": "Rat IgG2a",
+                    "count": 9
+                },
+                {
+                    "label": "Rat IgG2a, κ",
+                    "count": 14
+                },
+                {
+                    "label": "Rat IgG2b",
+                    "count": 2
+                },
+                {
+                    "label": "Rat IgG2b, κ",
+                    "count": 11
+                },
+                {
+                    "label": "Rat IgG2b, λ",
+                    "count": 1
+                },
+                {
+                    "label": "Rat IgG2c, κ",
+                    "count": 1
+                },
+                {
+                    "label": "Rat IgM",
+                    "count": 1
+                },
+                {
+                    "label": "Rat IgM, κ",
+                    "count": 4
+                },
+                {
+                    "label": "Rat LEW, also known as Lewis IgG1, λ",
+                    "count": 1
+                },
+                {
+                    "label": "Rat LEW, also known as Lewis IgG2a",
+                    "count": 1
+                },
+                {
+                    "label": "Rat LEW, also known as Lewis IgG2a, κ",
+                    "count": 16
+                },
+                {
+                    "label": "Rat LEW, also known as Lewis IgG2b, κ",
+                    "count": 2
+                },
+                {
+                    "label": "Rat LEW, also known as Lewis IgM, κ",
+                    "count": 4
+                },
+                {
+                    "label": "Rat LOU, also known as Louvain, LOU/C, LOU/M IgG1, κ",
+                    "count": 10
+                },
+                {
+                    "label": "Rat LOU, also known as Louvain, LOU/C, LOU/M IgG1, λ",
+                    "count": 1
+                },
+                {
+                    "label": "Rat LOU, also known as Louvain, LOU/C, LOU/M IgG2a, κ",
+                    "count": 22
+                },
+                {
+                    "label": "Rat LOU, also known as Louvain, LOU/C, LOU/M IgG2a, λ",
+                    "count": 2
+                },
+                {
+                    "label": "Rat LOU, also known as Louvain, LOU/C, LOU/M IgG2b, κ",
+                    "count": 6
+                },
+                {
+                    "label": "Rat LOU, also known as Louvain, LOU/C, LOU/M IgG2c, κ",
+                    "count": 1
+                },
+                {
+                    "label": "Rat SD, also known as Sprague-Dawley (outbred) IgG1, κ",
+                    "count": 3
+                },
+                {
+                    "label": "Rat SD, also known as Sprague-Dawley (outbred) IgG2a, κ",
+                    "count": 3
+                },
+                {
+                    "label": "Rat SD, also known as Sprague-Dawley (outbred) IgG2b, κ",
+                    "count": 9
+                },
+                {
+                    "label": "Rat SD, also known as Sprague-Dawley (outbred) IgG2b, λ",
+                    "count": 1
+                },
+                {
+                    "label": "Rat WF, also known as Wistar Furth IgG1, κ",
+                    "count": 1
+                },
+                {
+                    "label": "Rat WF, also known as Wistar Furth IgG2a, κ",
+                    "count": 1
+                },
+                {
+                    "label": "Rat WF, also known as Wistar Furth IgG2a, λ",
+                    "count": 1
+                },
+                {
+                    "label": "Rat WI, also known as Wistar (outbred) IgG2a, κ",
+                    "count": 4
+                },
+                {
+                    "label": "Rat WI, also known as Wistar (outbred) IgG2b, κ",
+                    "count": 3
+                },
+                {
+                    "label": "Rat WI, also known as Wistar (outbred) IgM, κ",
+                    "count": 1
+                },
+                {
+                    "label": "Syrian Hamster IgG2, κ",
+                    "count": 2
+                },
+                {
+                    "label": "Syrian Hamster IgG2, λ1",
+                    "count": 1
+                }
+            ],
+            "hostSpecies_facet_s": [
+                {
+                    "label": "Armenian Hamster",
+                    "count": 29
+                },
+                {
+                    "label": "Goat",
+                    "count": 5
+                },
+                {
+                    "label": "Human",
+                    "count": 1
+                },
+                {
+                    "label": "Mouse",
+                    "count": 195
+                },
+                {
+                    "label": "Rabbit",
+                    "count": 1
+                },
+                {
+                    "label": "Rat",
+                    "count": 165
+                },
+                {
+                    "label": "Syrian Hamster",
+                    "count": 3
+                }
+            ],
+            "excitationSource_facet_s": [
+                {
+                    "label": "",
+                    "count": 402
+                }
+            ],
+            "regulatoryStatus_facet_s": [
+                {
+                    "label": "RUO",
+                    "count": 405
+                },
+                {
+                    "label": "IVD",
+                    "count": 405
+                }
+            ],
+            "brand_facet_s": [
+                {
+                    "label": "BD Pharmingen™",
+                    "count": 402
+                },
+                {
+                    "label": "BD Transduction Laboratories™",
+                    "count": 3
+                }
+            ],
+            "size_facet_s": [
+                {
+                    "label": "0.1 mg",
+                    "count": 79
+                },
+                {
+                    "label": "0.2 mg",
+                    "count": 3
+                },
+                {
+                    "label": "0.25 mg",
+                    "count": 34
+                },
+                {
+                    "label": "0.5 mg",
+                    "count": 218
+                },
+                {
+                    "label": "1 mL",
+                    "count": 14
+                },
+                {
+                    "label": "100 Tests",
+                    "count": 47
+                },
+                {
+                    "label": "1000 Tests",
+                    "count": 1
+                },
+                {
+                    "label": "150 µg",
+                    "count": 1
+                },
+                {
+                    "label": "200 Tests",
+                    "count": 1
+                },
+                {
+                    "label": "50 µg",
+                    "count": 7
+                }
+            ],
+            "specificity_facet_s": [
+                {
+                    "label": "",
+                    "count": 16
+                },
+                {
+                    "label": "BLTR-1",
+                    "count": 1
+                },
+                {
+                    "label": "Blys (BAFF)",
+                    "count": 1
+                },
+                {
+                    "label": "C3a",
+                    "count": 1
+                },
+                {
+                    "label": "C5a",
+                    "count": 1
+                },
+                {
+                    "label": "CD102 (ICAM-2)",
+                    "count": 1
+                },
+                {
+                    "label": "CD103 (Integrin αIEL)",
+                    "count": 1
+                },
+                {
+                    "label": "CD106 (VCAM-1)",
+                    "count": 1
+                },
+                {
+                    "label": "CD107a (LAMP-1)",
+                    "count": 1
+                },
+                {
+                    "label": "CD117 (c-Kit)",
+                    "count": 1
+                },
+                {
+                    "label": "CD119 (IFN-γ Receptor α)",
+                    "count": 2
+                },
+                {
+                    "label": "CD11a",
+                    "count": 2
+                },
+                {
+                    "label": "CD11b (Mac-1)",
+                    "count": 4
+                },
+                {
+                    "label": "CD11c",
+                    "count": 1
+                },
+                {
+                    "label": "CD120a (TNF Receptor, p55)",
+                    "count": 2
+                },
+                {
+                    "label": "CD120b (TNF Receptor, p75)",
+                    "count": 2
+                },
+                {
+                    "label": "CD122 (IL-2 Receptor β)",
+                    "count": 2
+                },
+                {
+                    "label": "CD123 (IL-3 Receptor α)",
+                    "count": 3
+                },
+                {
+                    "label": "CD124 (IL-4 Receptor)",
+                    "count": 3
+                },
+                {
+                    "label": "CD126 (IL-6 Receptor)",
+                    "count": 1
+                },
+                {
+                    "label": "CD127 (IL-7 Receptor α)",
+                    "count": 2
+                },
+                {
+                    "label": "CD131 (common β chain)",
+                    "count": 1
+                },
+                {
+                    "label": "CD132 (common γ chain)",
+                    "count": 2
+                },
+                {
+                    "label": "CD134 (OX40)",
+                    "count": 2
+                },
+                {
+                    "label": "CD137 (4-1BB)",
+                    "count": 2
+                },
+                {
+                    "label": "CD138 (Syndecan-1)",
+                    "count": 1
+                },
+                {
+                    "label": "CD14 (soluble)",
+                    "count": 1
+                },
+                {
+                    "label": "CD152 (CTLA-4)",
+                    "count": 1
+                },
+                {
+                    "label": "CD154 (CD40 Ligand)",
+                    "count": 2
+                },
+                {
+                    "label": "CD16 (FcγRIII)",
+                    "count": 2
+                },
+                {
+                    "label": "CD16/CD32",
+                    "count": 1
+                },
+                {
+                    "label": "CD161a (NKR-P1A)",
+                    "count": 1
+                },
+                {
+                    "label": "CD178 (Fas Ligand)",
+                    "count": 3
+                },
+                {
+                    "label": "CD178 (Fas Ligand,CD95 L)",
+                    "count": 1
+                },
+                {
+                    "label": "CD178.1 (Fas Ligand)",
+                    "count": 1
+                },
+                {
+                    "label": "CD179b",
+                    "count": 1
+                },
+                {
+                    "label": "CD18 (Integrin β2 chain)",
+                    "count": 1
+                },
+                {
+                    "label": "CD180",
+                    "count": 1
+                },
+                {
+                    "label": "CD184 (CXCR4)",
+                    "count": 2
+                },
+                {
+                    "label": "CD185 (CXCR5)",
+                    "count": 2
+                },
+                {
+                    "label": "CD19",
+                    "count": 2
+                },
+                {
+                    "label": "CD194 (CCR4)",
+                    "count": 1
+                },
+                {
+                    "label": "CD195 (CCR5)",
+                    "count": 1
+                },
+                {
+                    "label": "CD196 (CCR6)",
+                    "count": 1
+                },
+                {
+                    "label": "CD197 (CCR7)",
+                    "count": 1
+                },
+                {
+                    "label": "CD1d",
+                    "count": 1
+                },
+                {
+                    "label": "CD2",
+                    "count": 2
+                },
+                {
+                    "label": "CD209a",
+                    "count": 1
+                },
+                {
+                    "label": "CD21/CD35",
+                    "count": 1
+                },
+                {
+                    "label": "CD212 (IL-12 Receptor β1)",
+                    "count": 1
+                },
+                {
+                    "label": "CD22",
+                    "count": 1
+                },
+                {
+                    "label": "CD229.1",
+                    "count": 1
+                },
+                {
+                    "label": "CD23",
+                    "count": 2
+                },
+                {
+                    "label": "CD24 (Heat Stable Antigen)",
+                    "count": 1
+                },
+                {
+                    "label": "CD244.2 (2B4)",
+                    "count": 1
+                },
+                {
+                    "label": "CD25 (IL-2 Receptor α)",
+                    "count": 4
+                },
+                {
+                    "label": "CD252 (OX40 Ligand)",
+                    "count": 1
+                },
+                {
+                    "label": "CD253 (TRAIL)",
+                    "count": 1
+                },
+                {
+                    "label": "CD27",
+                    "count": 1
+                },
+                {
+                    "label": "CD271 (NGF Receptor)",
+                    "count": 1
+                },
+                {
+                    "label": "CD278 (ICOS)",
+                    "count": 1
+                },
+                {
+                    "label": "CD28",
+                    "count": 2
+                },
+                {
+                    "label": "CD284 (TLR4)",
+                    "count": 1
+                },
+                {
+                    "label": "CD29 (Integrin β1 chain)",
+                    "count": 1
+                },
+                {
+                    "label": "CD3",
+                    "count": 4
+                },
+                {
+                    "label": "CD30",
+                    "count": 2
+                },
+                {
+                    "label": "CD307c (FCRL3)",
+                    "count": 1
+                },
+                {
+                    "label": "CD31 (PECAM-1)",
+                    "count": 3
+                },
+                {
+                    "label": "CD34",
+                    "count": 2
+                },
+                {
+                    "label": "CD35",
+                    "count": 1
+                },
+                {
+                    "label": "CD38",
+                    "count": 1
+                },
+                {
+                    "label": "CD3e",
+                    "count": 2
+                },
+                {
+                    "label": "CD4",
+                    "count": 8
+                },
+                {
+                    "label": "CD40",
+                    "count": 1
+                },
+                {
+                    "label": "CD43",
+                    "count": 1
+                },
+                {
+                    "label": "CD44",
+                    "count": 2
+                },
+                {
+                    "label": "CD45",
+                    "count": 4
+                },
+                {
+                    "label": "CD45.1",
+                    "count": 1
+                },
+                {
+                    "label": "CD45.2",
+                    "count": 1
+                },
+                {
+                    "label": "CD45R (B220)",
+                    "count": 2
+                },
+                {
+                    "label": "CD45RA",
+                    "count": 2
+                },
+                {
+                    "label": "CD45RB",
+                    "count": 2
+                },
+                {
+                    "label": "CD49b (Integrin α2 chain)",
+                    "count": 1
+                },
+                {
+                    "label": "CD49d (Integrin α4 chain)",
+                    "count": 2
+                },
+                {
+                    "label": "CD49e (Integrin α5 chain)",
+                    "count": 2
+                },
+                {
+                    "label": "CD5",
+                    "count": 3
+                },
+                {
+                    "label": "CD51 (Integrin αV chain)",
+                    "count": 1
+                },
+                {
+                    "label": "CD54 (ICAM-1)",
+                    "count": 3
+                },
+                {
+                    "label": "CD55",
+                    "count": 1
+                },
+                {
+                    "label": "CD56 (NCAM-1)",
+                    "count": 1
+                },
+                {
+                    "label": "CD59",
+                    "count": 1
+                },
+                {
+                    "label": "CD61 (Integrin β3 chain)",
+                    "count": 1
+                },
+                {
+                    "label": "CD62E (E-Selectin)",
+                    "count": 2
+                },
+                {
+                    "label": "CD62L (L-Selectin)",
+                    "count": 2
+                },
+                {
+                    "label": "CD62P (P-Selectin)",
+                    "count": 1
+                },
+                {
+                    "label": "CD64",
+                    "count": 1
+                },
+                {
+                    "label": "CD69",
+                    "count": 1
+                },
+                {
+                    "label": "CD70",
+                    "count": 1
+                },
+                {
+                    "label": "CD71 (Transferrin Receptor)",
+                    "count": 2
+                },
+                {
+                    "label": "CD8",
+                    "count": 2
+                }
+            ],
+            "pdfxDocType_facet_s": []
+        },
+        "suggestion": []
+    }
+}

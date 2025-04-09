@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="nt:unstructured"
+        jcr:uuid="2b3fa650-9496-4ed9-9e58-80d73a14ed76"
+        sling:resourceType="wcm/core/components/policies/mappings">
+        <root
+            cq:policy="bdb-aem/components/common/container/policy_bdb"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/core/components/policies/mapping">
+
+			<bdb-aem jcr:primaryType="nt:unstructured">
+                <proxy jcr:primaryType="nt:unstructured">
+                    <components jcr:primaryType="nt:unstructured">
+                        <common jcr:primaryType="nt:unstructured">
+                            <carousel
+                                cq:policy="bdb-aem/proxy/components/common/carousel/policy_1735643130277"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="wcm/core/components/policies/mapping"/>
+                            <teaser
+                                cq:policy="bdb-aem/proxy/components/common/teaser/policy_1735643780989"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="wcm/core/components/policies/mapping"/>
+						</common>
+						<content jcr:primaryType="nt:unstructured">
+                            <rtetablecomponent
+                                cq:policy="bdb-aem/proxy/components/content/rtetablecomponent/policy_1742474210091"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="wcm/core/components/policies/mapping"/>
+                        </content>
+                    </components>
+                </proxy>
+            </bdb-aem>
+		</root>
+    </jcr:content>
+</jcr:root>

@@ -1,0 +1,769 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="List Component"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+        <items jcr:primaryType="nt:unstructured">
+            <column
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/container">
+                <items jcr:primaryType="nt:unstructured">
+                    <title
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldDescription="Title for the list"
+                        fieldLabel="Title"
+                        name="./title"/>
+                    <icon
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                        fieldDescription="Icon Path for the list"
+                        fieldLabel="Icon Path"
+                        name="./icon"
+                        rootPath="/content/dam"/>
+                    <hasWhiteBackground
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/switch"
+                        checked="{Boolean}false"
+                        fieldDescription="Enable to set White background color for the list"
+                        fieldLabel="Enable White Background Color"
+                        name="./hasWhiteBackground"/>
+                    <thoughtLeadershipVariation
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/switch"
+                        checked="{Boolean}false"
+                        fieldDescription="Enable to apply Thought Leadership Formatting to the list"
+                        fieldLabel="Enable Thought Leadership Variation"
+                        name="./thoughtLeadershipVariation"/>
+                    <viewAll
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="View All link"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/fieldset"
+                        fieldDescription="Optional"
+                        name="./viewAll">
+                        <items jcr:primaryType="nt:unstructured">
+                            <viewAllLabel
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldDescription="View All link Label"
+                                fieldLabel="Label"
+                                name="./viewAllLabel"/>
+                            <viewAllURL
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                fieldDescription="View All link URL"
+                                fieldLabel="URL"
+                                name="./viewAllURL"
+                                rootPath="/content/bdb"/>
+                            <isPlacedBelow
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                fieldDescription="Check to place the VIEW ALL link below the Row Items"
+                                name="./isPlacedBelow"
+                                text="Place link at bottom"
+                                value="true"/>
+                        </items>
+                    </viewAll>
+                    <listSelection
+                        granite:class="cq-dialog-dropdown-showhide"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                        fieldLabel="Select the type of List Component"
+                        name="./listSelection"
+                        required="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <default
+                                jcr:primaryType="nt:unstructured"
+                                text="Select List Type"
+                                value=""/>
+                            <resources
+                                jcr:primaryType="nt:unstructured"
+                                text="Resources"
+                                value="Resources"/>
+                            <events
+                                jcr:primaryType="nt:unstructured"
+                                text="Events"
+                                value="Events"/>
+                            <blogs
+                                jcr:primaryType="nt:unstructured"
+                                text="Blogs"
+                                value="Blogs"/>
+                            <popularTools
+                                jcr:primaryType="nt:unstructured"
+                                text="Popular Tools"
+                                value="Popular Tools"/>
+                            <support
+                                jcr:primaryType="nt:unstructured"
+                                text="Support"
+                                value="Support"/>
+                            <flowcytometry
+                                jcr:primaryType="nt:unstructured"
+                                text="Flowcytometry News"
+                                value="Flowcytometry"/>
+                        </items>
+                        <granite:data
+                            jcr:primaryType="nt:unstructured"
+                            cq-dialog-dropdown-showhide-target=".showhidetargets"/>
+                    </listSelection>
+                    <listResources
+                        granite:class="showhidetargets multifieldMinShowHide"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Resources List"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                        <items jcr:primaryType="nt:unstructured">
+                            <description
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="cq/gui/components/authoring/dialog/richtext"
+                                fieldDescription="Description Text"
+                                fieldLabel="Description"
+                                name="./resourcesDescription"
+                                useFixedInlineToolbar="{Boolean}true">
+                                <rtePlugins jcr:primaryType="nt:unstructured">
+                                    <format
+                                        jcr:primaryType="nt:unstructured"
+                                        features="*"/>
+                                    <justify
+                                        jcr:primaryType="nt:unstructured"
+                                        features="*"/>
+                                    <lists
+                                        jcr:primaryType="nt:unstructured"
+                                        features="*"/>
+                                    <paraformat
+                                        jcr:primaryType="nt:unstructured"
+                                        features="*"/>
+                                    <links
+                                        jcr:primaryType="nt:unstructured"
+                                        features="*"/>
+                                    <table
+                                        jcr:primaryType="nt:unstructured"
+                                        features="-">
+                                        <hiddenHeaderConfig
+                                            jcr:primaryType="nt:unstructured"
+                                            hiddenHeaderClassName="cq-wcm-foundation-aria-visuallyhidden"
+                                            hiddenHeaderEditingCSS="cq-RichText-hiddenHeader--editing"/>
+                                    </table>
+                                </rtePlugins>
+                                <uiSettings jcr:primaryType="nt:unstructured">
+                                    <cui jcr:primaryType="nt:unstructured">
+                                        <inline
+                                            jcr:primaryType="nt:unstructured"
+                                            toolbar="[format#bold,format#italic,format#underline,#justify,#lists,links#modifylink,links#unlink,#paraformat]">
+                                            <popovers jcr:primaryType="nt:unstructured">
+                                                <justify
+                                                    jcr:primaryType="nt:unstructured"
+                                                    items="[justify#justifyleft,justify#justifycenter,justify#justifyright,justify#justifyjustify]"
+                                                    ref="justify"/>
+                                                <lists
+                                                    jcr:primaryType="nt:unstructured"
+                                                    items="[lists#unordered,lists#ordered,lists#outdent,lists#indent]"
+                                                    ref="lists"/>
+                                                <paraformat
+                                                    jcr:primaryType="nt:unstructured"
+                                                    items="paraformat:getFormats:paraformat-pulldown"
+                                                    ref="paraformat"/>
+                                            </popovers>
+                                        </inline>
+                                        <dialogFullScreen
+                                            jcr:primaryType="nt:unstructured"
+                                            toolbar="[format#bold,format#italic,format#underline,justify#justifyleft,justify#justifycenter,justify#justifyright,justify#justifyjustify,lists#unordered,lists#ordered,lists#outdent,lists#indent,links#modifylink,links#unlink,table#createoredit,#paraformat,image#imageProps]">
+                                            <popovers jcr:primaryType="nt:unstructured">
+                                                <paraformat
+                                                    jcr:primaryType="nt:unstructured"
+                                                    items="paraformat:getFormats:paraformat-pulldown"
+                                                    ref="paraformat"/>
+                                            </popovers>
+                                        </dialogFullScreen>
+                                        <tableEditOptions
+                                            jcr:primaryType="nt:unstructured"
+                                            toolbar="[table#insertcolumn-before,table#insertcolumn-after,table#removecolumn,-,table#insertrow-before,table#insertrow-after,table#removerow,-,table#mergecells-right,table#mergecells-down,table#mergecells,table#splitcell-horizontal,table#splitcell-vertical,-,table#selectrow,table#selectcolumn,-,table#ensureparagraph,-,table#modifytableandcell,table#removetable,-,undo#undo,undo#redo,-,table#exitTableEditing,-]"/>
+                                    </cui>
+                                </uiSettings>
+                                <granite:data
+                                    jcr:primaryType="nt:unstructured"
+                                    char-limit="250"/>
+                            </description>
+                            <rows
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                composite="{Boolean}true"
+                                eaem-show-on-collapse="EAEM.showProductName"
+                                fieldLabel="List Rows">
+                                <field
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/container"
+                                    name="./resourcesRows">
+                                    <items jcr:primaryType="nt:unstructured">
+                                        <column
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/container">
+                                            <items jcr:primaryType="nt:unstructured">
+                                                <rowTitle
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldLabel="Row Title"
+                                                    name="./rowTitle"/>
+                                                <rowLink
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                    fieldLabel="Row Link"
+                                                    name="./rowLink"
+                                                    rootPath="/content/bdb"/>
+                                                <rowDescription
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="cq/gui/components/authoring/dialog/richtext"
+                                                    fieldLabel="Row Description"
+                                                    name="./rowDescription"
+                                                    useFixedInlineToolbar="{Boolean}true">
+                                                    <rtePlugins jcr:primaryType="nt:unstructured">
+                                                        <format
+                                                            jcr:primaryType="nt:unstructured"
+                                                            features="*"/>
+                                                        <justify
+                                                            jcr:primaryType="nt:unstructured"
+                                                            features="*"/>
+                                                        <lists
+                                                            jcr:primaryType="nt:unstructured"
+                                                            features="*"/>
+                                                        <paraformat
+                                                            jcr:primaryType="nt:unstructured"
+                                                            features="*"/>
+                                                        <links
+                                                            jcr:primaryType="nt:unstructured"
+                                                            features="*"/>
+                                                        <table
+                                                            jcr:primaryType="nt:unstructured"
+                                                            features="-">
+                                                            <hiddenHeaderConfig
+                                                                jcr:primaryType="nt:unstructured"
+                                                                hiddenHeaderClassName="cq-wcm-foundation-aria-visuallyhidden"
+                                                                hiddenHeaderEditingCSS="cq-RichText-hiddenHeader--editing"/>
+                                                        </table>
+                                                    </rtePlugins>
+                                                    <uiSettings jcr:primaryType="nt:unstructured">
+                                                        <cui jcr:primaryType="nt:unstructured">
+                                                            <inline
+                                                                jcr:primaryType="nt:unstructured"
+                                                                toolbar="[format#bold,format#italic,format#underline,#justify,#lists,links#modifylink,links#unlink,#paraformat]">
+                                                                <popovers jcr:primaryType="nt:unstructured">
+                                                                    <justify
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        items="[justify#justifyleft,justify#justifycenter,justify#justifyright,justify#justifyjustify]"
+                                                                        ref="justify"/>
+                                                                    <lists
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        items="[lists#unordered,lists#ordered,lists#outdent,lists#indent]"
+                                                                        ref="lists"/>
+                                                                    <paraformat
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        items="paraformat:getFormats:paraformat-pulldown"
+                                                                        ref="paraformat"/>
+                                                                </popovers>
+                                                            </inline>
+                                                            <dialogFullScreen
+                                                                jcr:primaryType="nt:unstructured"
+                                                                toolbar="[format#bold,format#italic,format#underline,justify#justifyleft,justify#justifycenter,justify#justifyright,justify#justifyjustify,lists#unordered,lists#ordered,lists#outdent,lists#indent,links#modifylink,links#unlink,table#createoredit,#paraformat,image#imageProps]">
+                                                                <popovers jcr:primaryType="nt:unstructured">
+                                                                    <paraformat
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        items="paraformat:getFormats:paraformat-pulldown"
+                                                                        ref="paraformat"/>
+                                                                </popovers>
+                                                            </dialogFullScreen>
+                                                            <tableEditOptions
+                                                                jcr:primaryType="nt:unstructured"
+                                                                toolbar="[table#insertcolumn-before,table#insertcolumn-after,table#removecolumn,-,table#insertrow-before,table#insertrow-after,table#removerow,-,table#mergecells-right,table#mergecells-down,table#mergecells,table#splitcell-horizontal,table#splitcell-vertical,-,table#selectrow,table#selectcolumn,-,table#ensureparagraph,-,table#modifytableandcell,table#removetable,-,undo#undo,undo#redo,-,table#exitTableEditing,-]"/>
+                                                        </cui>
+                                                    </uiSettings>
+                                                    <granite:data
+                                                        jcr:primaryType="nt:unstructured"
+                                                        char-limit="250"/>
+                                                </rowDescription>
+                                            </items>
+                                        </column>
+                                    </items>
+                                </field>
+                                <granite:data
+                                    jcr:primaryType="nt:unstructured"
+                                    max-items="5"
+                                    min-items="1"/>
+                            </rows>
+                        </items>
+                        <granite:data
+                            jcr:primaryType="nt:unstructured"
+                            showhidetargetvalue="Resources"/>
+                    </listResources>
+                    <listEvents
+                        granite:class="showhidetargets multifieldMinShowHide"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Events List"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                        <items jcr:primaryType="nt:unstructured">
+                            <sortEventsByOldestFirst
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/switch"
+                                checked="{Boolean}false"
+                                fieldDescription="Sort Events by Oldest First"
+                                fieldLabel="Sort Events by Oldest First"
+                                name="./sortEventsByOldestFirst"/>
+                            <number
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/numberfield"
+                                fieldDescription="Number of Events to be displayed. Min-1, Max-5"
+                                fieldLabel="Number of Events"
+                                max="{Long}5"
+                                min="{Long}1"
+                                name="./numberLimit"/>
+                            <eventParentPagePath
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                fieldDescription="Events Parent Page Path"
+                                fieldLabel="Events Parent Page Path"
+                                name="./eventParentPagePath"
+                                rootPath="/content/bdb"/>
+                            <viewEventDetailsLabel
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldDescription="Label for View Details link of each Event"
+                                fieldLabel="View Event Details Label"
+                                name="./viewEventDetailsLabel"/>
+                        </items>
+                        <granite:data
+                            jcr:primaryType="nt:unstructured"
+                            showhidetargetvalue="Events"/>
+                    </listEvents>
+                    <listPopularTools
+                        granite:class="showhidetargets multifieldMinShowHide"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Popular Tools List"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                        <items jcr:primaryType="nt:unstructured">
+                            <description
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="cq/gui/components/authoring/dialog/richtext"
+                                fieldDescription="Optional"
+                                fieldLabel="Description"
+                                name="./popularToolsDescription"
+                                useFixedInlineToolbar="{Boolean}true">
+                                <rtePlugins jcr:primaryType="nt:unstructured">
+                                    <format
+                                        jcr:primaryType="nt:unstructured"
+                                        features="*"/>
+                                    <justify
+                                        jcr:primaryType="nt:unstructured"
+                                        features="*"/>
+                                    <lists
+                                        jcr:primaryType="nt:unstructured"
+                                        features="*"/>
+                                    <paraformat
+                                        jcr:primaryType="nt:unstructured"
+                                        features="*"/>
+                                    <links
+                                        jcr:primaryType="nt:unstructured"
+                                        features="*"/>
+                                    <table
+                                        jcr:primaryType="nt:unstructured"
+                                        features="-">
+                                        <hiddenHeaderConfig
+                                            jcr:primaryType="nt:unstructured"
+                                            hiddenHeaderClassName="cq-wcm-foundation-aria-visuallyhidden"
+                                            hiddenHeaderEditingCSS="cq-RichText-hiddenHeader--editing"/>
+                                    </table>
+                                </rtePlugins>
+                                <uiSettings jcr:primaryType="nt:unstructured">
+                                    <cui jcr:primaryType="nt:unstructured">
+                                        <inline
+                                            jcr:primaryType="nt:unstructured"
+                                            toolbar="[format#bold,format#italic,format#underline,#justify,#lists,links#modifylink,links#unlink,#paraformat]">
+                                            <popovers jcr:primaryType="nt:unstructured">
+                                                <justify
+                                                    jcr:primaryType="nt:unstructured"
+                                                    items="[justify#justifyleft,justify#justifycenter,justify#justifyright,justify#justifyjustify]"
+                                                    ref="justify"/>
+                                                <lists
+                                                    jcr:primaryType="nt:unstructured"
+                                                    items="[lists#unordered,lists#ordered,lists#outdent,lists#indent]"
+                                                    ref="lists"/>
+                                                <paraformat
+                                                    jcr:primaryType="nt:unstructured"
+                                                    items="paraformat:getFormats:paraformat-pulldown"
+                                                    ref="paraformat"/>
+                                            </popovers>
+                                        </inline>
+                                        <dialogFullScreen
+                                            jcr:primaryType="nt:unstructured"
+                                            toolbar="[format#bold,format#italic,format#underline,justify#justifyleft,justify#justifycenter,justify#justifyright,justify#justifyjustify,lists#unordered,lists#ordered,lists#outdent,lists#indent,links#modifylink,links#unlink,table#createoredit,#paraformat,image#imageProps]">
+                                            <popovers jcr:primaryType="nt:unstructured">
+                                                <paraformat
+                                                    jcr:primaryType="nt:unstructured"
+                                                    items="paraformat:getFormats:paraformat-pulldown"
+                                                    ref="paraformat"/>
+                                            </popovers>
+                                        </dialogFullScreen>
+                                        <tableEditOptions
+                                            jcr:primaryType="nt:unstructured"
+                                            toolbar="[table#insertcolumn-before,table#insertcolumn-after,table#removecolumn,-,table#insertrow-before,table#insertrow-after,table#removerow,-,table#mergecells-right,table#mergecells-down,table#mergecells,table#splitcell-horizontal,table#splitcell-vertical,-,table#selectrow,table#selectcolumn,-,table#ensureparagraph,-,table#modifytableandcell,table#removetable,-,undo#undo,undo#redo,-,table#exitTableEditing,-]"/>
+                                    </cui>
+                                </uiSettings>
+                                <granite:data
+                                    jcr:primaryType="nt:unstructured"
+                                    char-limit="250"/>
+                            </description>
+                            <enableBorder
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                fieldDescription="Check to enable Grey Border for each Row Image"
+                                name="./enableBorder"
+                                text="Enable Image Border"
+                                value="true"/>
+                            <rows
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                composite="{Boolean}true"
+                                eaem-show-on-collapse="EAEM.showProductName"
+                                fieldLabel="List Rows">
+                                <field
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/container"
+                                    name="./popularToolsRows">
+                                    <items jcr:primaryType="nt:unstructured">
+                                        <column
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/container">
+                                            <items jcr:primaryType="nt:unstructured">
+                                                <rowImage
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                    fieldLabel="Row Image"
+                                                    name="./rowImage"
+                                                    rootPath="/content/dam"/>
+                                                <rowTitle
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldLabel="Row Title"
+                                                    name="./rowTitle"/>
+                                                <rowLink
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                    fieldLabel="Row Link"
+                                                    name="./rowLink"
+                                                    rootPath="/content/bdb"/>
+                                                <rowDescription
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="cq/gui/components/authoring/dialog/richtext"
+                                                    fieldLabel="Row Description"
+                                                    name="./rowDescription"
+                                                    useFixedInlineToolbar="{Boolean}true">
+                                                    <rtePlugins jcr:primaryType="nt:unstructured">
+                                                        <format
+                                                            jcr:primaryType="nt:unstructured"
+                                                            features="*"/>
+                                                        <justify
+                                                            jcr:primaryType="nt:unstructured"
+                                                            features="*"/>
+                                                        <lists
+                                                            jcr:primaryType="nt:unstructured"
+                                                            features="*"/>
+                                                        <paraformat
+                                                            jcr:primaryType="nt:unstructured"
+                                                            features="*"/>
+                                                        <links
+                                                            jcr:primaryType="nt:unstructured"
+                                                            features="*"/>
+                                                        <table
+                                                            jcr:primaryType="nt:unstructured"
+                                                            features="-">
+                                                            <hiddenHeaderConfig
+                                                                jcr:primaryType="nt:unstructured"
+                                                                hiddenHeaderClassName="cq-wcm-foundation-aria-visuallyhidden"
+                                                                hiddenHeaderEditingCSS="cq-RichText-hiddenHeader--editing"/>
+                                                        </table>
+                                                    </rtePlugins>
+                                                    <uiSettings jcr:primaryType="nt:unstructured">
+                                                        <cui jcr:primaryType="nt:unstructured">
+                                                            <inline
+                                                                jcr:primaryType="nt:unstructured"
+                                                                toolbar="[format#bold,format#italic,format#underline,#justify,#lists,links#modifylink,links#unlink,#paraformat]">
+                                                                <popovers jcr:primaryType="nt:unstructured">
+                                                                    <justify
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        items="[justify#justifyleft,justify#justifycenter,justify#justifyright,justify#justifyjustify]"
+                                                                        ref="justify"/>
+                                                                    <lists
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        items="[lists#unordered,lists#ordered,lists#outdent,lists#indent]"
+                                                                        ref="lists"/>
+                                                                    <paraformat
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        items="paraformat:getFormats:paraformat-pulldown"
+                                                                        ref="paraformat"/>
+                                                                </popovers>
+                                                            </inline>
+                                                            <dialogFullScreen
+                                                                jcr:primaryType="nt:unstructured"
+                                                                toolbar="[format#bold,format#italic,format#underline,justify#justifyleft,justify#justifycenter,justify#justifyright,justify#justifyjustify,lists#unordered,lists#ordered,lists#outdent,lists#indent,links#modifylink,links#unlink,table#createoredit,#paraformat,image#imageProps]">
+                                                                <popovers jcr:primaryType="nt:unstructured">
+                                                                    <paraformat
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        items="paraformat:getFormats:paraformat-pulldown"
+                                                                        ref="paraformat"/>
+                                                                </popovers>
+                                                            </dialogFullScreen>
+                                                            <tableEditOptions
+                                                                jcr:primaryType="nt:unstructured"
+                                                                toolbar="[table#insertcolumn-before,table#insertcolumn-after,table#removecolumn,-,table#insertrow-before,table#insertrow-after,table#removerow,-,table#mergecells-right,table#mergecells-down,table#mergecells,table#splitcell-horizontal,table#splitcell-vertical,-,table#selectrow,table#selectcolumn,-,table#ensureparagraph,-,table#modifytableandcell,table#removetable,-,undo#undo,undo#redo,-,table#exitTableEditing,-]"/>
+                                                        </cui>
+                                                    </uiSettings>
+                                                    <granite:data
+                                                        jcr:primaryType="nt:unstructured"
+                                                        char-limit="250"/>
+                                                </rowDescription>
+                                                <rowDownloadLabel
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldLabel="Download/View Label"
+                                                    name="./rowDownloadLabel"/>
+                                                <rowDownloadPath
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                    fieldLabel="Download/View Item Path"
+                                                    name="./rowDownloadPath"
+                                                    rootPath="/content"/>
+                                            </items>
+                                        </column>
+                                    </items>
+                                </field>
+                                <granite:data
+                                    jcr:primaryType="nt:unstructured"
+                                    max-items="5"
+                                    min-items="1"/>
+                            </rows>
+                        </items>
+                        <granite:data
+                            jcr:primaryType="nt:unstructured"
+                            showhidetargetvalue="Popular Tools"/>
+                    </listPopularTools>
+                    <listSupport
+                        granite:class="showhidetargets multifieldMinShowHide"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Support List"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                        <items jcr:primaryType="nt:unstructured">
+                            <rows
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                composite="{Boolean}true"
+                                eaem-show-on-collapse="EAEM.showProductName"
+                                fieldLabel="List Rows">
+                                <field
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/container"
+                                    name="./supportRows">
+                                    <items jcr:primaryType="nt:unstructured">
+                                        <column
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/container">
+                                            <items jcr:primaryType="nt:unstructured">
+                                                <rowTitle
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldLabel="Row Title"
+                                                    name="./rowTitle"/>
+                                                <rowLink
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                    fieldLabel="Row Link"
+                                                    name="./rowLink"
+                                                    rootPath="/content/bdb"/>
+                                                <rowDescription
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="cq/gui/components/authoring/dialog/richtext"
+                                                    fieldLabel="Row Description"
+                                                    name="./rowDescription"
+                                                    useFixedInlineToolbar="{Boolean}true">
+                                                    <rtePlugins jcr:primaryType="nt:unstructured">
+                                                        <format
+                                                            jcr:primaryType="nt:unstructured"
+                                                            features="*"/>
+                                                        <justify
+                                                            jcr:primaryType="nt:unstructured"
+                                                            features="*"/>
+                                                        <lists
+                                                            jcr:primaryType="nt:unstructured"
+                                                            features="*"/>
+                                                        <paraformat
+                                                            jcr:primaryType="nt:unstructured"
+                                                            features="*"/>
+                                                        <links
+                                                            jcr:primaryType="nt:unstructured"
+                                                            features="*"/>
+                                                        <table
+                                                            jcr:primaryType="nt:unstructured"
+                                                            features="-">
+                                                            <hiddenHeaderConfig
+                                                                jcr:primaryType="nt:unstructured"
+                                                                hiddenHeaderClassName="cq-wcm-foundation-aria-visuallyhidden"
+                                                                hiddenHeaderEditingCSS="cq-RichText-hiddenHeader--editing"/>
+                                                        </table>
+                                                    </rtePlugins>
+                                                    <uiSettings jcr:primaryType="nt:unstructured">
+                                                        <cui jcr:primaryType="nt:unstructured">
+                                                            <inline
+                                                                jcr:primaryType="nt:unstructured"
+                                                                toolbar="[format#bold,format#italic,format#underline,#justify,#lists,links#modifylink,links#unlink,#paraformat]">
+                                                                <popovers jcr:primaryType="nt:unstructured">
+                                                                    <justify
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        items="[justify#justifyleft,justify#justifycenter,justify#justifyright,justify#justifyjustify]"
+                                                                        ref="justify"/>
+                                                                    <lists
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        items="[lists#unordered,lists#ordered,lists#outdent,lists#indent]"
+                                                                        ref="lists"/>
+                                                                    <paraformat
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        items="paraformat:getFormats:paraformat-pulldown"
+                                                                        ref="paraformat"/>
+                                                                </popovers>
+                                                            </inline>
+                                                            <dialogFullScreen
+                                                                jcr:primaryType="nt:unstructured"
+                                                                toolbar="[format#bold,format#italic,format#underline,justify#justifyleft,justify#justifycenter,justify#justifyright,justify#justifyjustify,lists#unordered,lists#ordered,lists#outdent,lists#indent,links#modifylink,links#unlink,table#createoredit,#paraformat,image#imageProps]">
+                                                                <popovers jcr:primaryType="nt:unstructured">
+                                                                    <paraformat
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        items="paraformat:getFormats:paraformat-pulldown"
+                                                                        ref="paraformat"/>
+                                                                </popovers>
+                                                            </dialogFullScreen>
+                                                            <tableEditOptions
+                                                                jcr:primaryType="nt:unstructured"
+                                                                toolbar="[table#insertcolumn-before,table#insertcolumn-after,table#removecolumn,-,table#insertrow-before,table#insertrow-after,table#removerow,-,table#mergecells-right,table#mergecells-down,table#mergecells,table#splitcell-horizontal,table#splitcell-vertical,-,table#selectrow,table#selectcolumn,-,table#ensureparagraph,-,table#modifytableandcell,table#removetable,-,undo#undo,undo#redo,-,table#exitTableEditing,-]"/>
+                                                        </cui>
+                                                    </uiSettings>
+                                                    <granite:data
+                                                        jcr:primaryType="nt:unstructured"
+                                                        char-limit="250"/>
+                                                </rowDescription>
+                                            </items>
+                                        </column>
+                                    </items>
+                                </field>
+                                <granite:data
+                                    jcr:primaryType="nt:unstructured"
+                                    max-items="5"
+                                    min-items="1"/>
+                            </rows>
+                        </items>
+                        <granite:data
+                            jcr:primaryType="nt:unstructured"
+                            showhidetargetvalue="Support"/>
+                    </listSupport>
+                    <listFlowcytometry
+                        granite:class="showhidetargets multifieldMinShowHide"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Flowcytometry News List"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                        <items jcr:primaryType="nt:unstructured">
+                            <flowcytometryRows
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                composite="{Boolean}true"
+                                eaem-show-on-collapse="EAEM.showProductName"
+                                fieldLabel="List Rows">
+                                <field
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/container"
+                                    name="./flowcytometryRows">
+                                    <items jcr:primaryType="nt:unstructured">
+                                        <column
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/container">
+                                            <items jcr:primaryType="nt:unstructured">
+                                                <publicationDate
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldLabel="Date of News Publication"
+                                                    name="./publicationDate"/>
+                                                <newsTitle
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldLabel="News Title"
+                                                    name="./newsTitle"/>
+                                                <newsLink
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                    fieldLabel="News Link"
+                                                    name="./newsLink"
+                                                    rootPath="/content/bdb"/>
+                                                <readMoreLabel
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldLabel="Read More Label"
+                                                    name="./readMoreLabel"/>
+                                                <readMoreLink
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                    fieldLabel="Read More Link"
+                                                    name="./readMoreLink"
+                                                    rootPath="/content/bdb"/>
+                                            </items>
+                                        </column>
+                                    </items>
+                                </field>
+                                <granite:data
+                                    jcr:primaryType="nt:unstructured"
+                                    max-items="5"
+                                    min-items="1"/>
+                            </flowcytometryRows>
+                        </items>
+                        <granite:data
+                            jcr:primaryType="nt:unstructured"
+                            showhidetargetvalue="Flowcytometry"/>
+                    </listFlowcytometry>
+                    <listBlogs
+                        granite:class="showhidetargets multifieldMinShowHide"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Blogs List"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                        <items jcr:primaryType="nt:unstructured">
+                            <sortBlogsByOldestFirst
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/switch"
+                                checked="{Boolean}false"
+                                fieldDescription="Sort Blogs by Oldest First"
+                                fieldLabel="Sort Blogs by Oldest First"
+                                name="./sortBlogsByOldestFirst"/>
+                            <blogsnumberLimit
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/numberfield"
+                                fieldDescription="Number of Blogs to be displayed. Min-1, Max-5"
+                                fieldLabel="Number of Blogs"
+                                max="{Long}5"
+                                min="{Long}1"
+                                name="./blogsnumberLimit"/>
+                            <blogParentPagePath
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                fieldDescription="Blogs Parent Page Path"
+                                fieldLabel="Blogs Parent Page Path"
+                                name="./blogParentPagePath"
+                                rootPath="/content/bdb"/>
+                            <viewBlogDetailsLabel
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldDescription="Label for View Details link of each Blog"
+                                fieldLabel="View Blog Details Label"
+                                name="./viewBlogDetailsLabel"/>
+                        </items>
+                        <granite:data
+                            jcr:primaryType="nt:unstructured"
+                            showhidetargetvalue="Blogs"/>
+                    </listBlogs>
+                </items>
+            </column>
+        </items>
+    </content>
+</jcr:root>

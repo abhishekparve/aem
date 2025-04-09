@@ -1,0 +1,16 @@
+{
+        "uniqueIdentifier":"/content/bdb/na/us/en-us/resources/protocols/agarose-conjugates",
+        "id":"/content/bdb/na/us/en-us/resources/protocols/agarose-conjugates",
+        "docType":"web",
+        "jcr:title":"Agarose Conjugates",
+        "description":"desc",        
+        "navTitle":"nav",
+        "subtitle":"sub",
+        "pageTitle":"page",
+        "bdbContentKeywords":"",
+        "validityStartDate_dt":"1900-12-08T14:13:15Z",
+        "isAvailable":"true",
+        "country":"us",
+        "language":"en",
+		"tags":[]
+}

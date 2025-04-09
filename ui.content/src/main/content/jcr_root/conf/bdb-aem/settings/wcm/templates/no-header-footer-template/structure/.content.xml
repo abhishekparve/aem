@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:deviceGroups="[/etc/mobile/groups/responsive]"
+        cq:lastModified="{Date}2020-11-26T14:47:44.676+05:30"
+        cq:lastModifiedBy="admin"
+        cq:template="/conf/bdb-aem/settings/wcm/templates/no-header-footer-template"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:uuid="4bf5a475-db59-4e34-b8fe-6703c172e928"
+        sling:resourceType="bdb-aem/proxy/components/structure/no-header-footer">
+        <experiencefragment-header
+            jcr:lastModified="{Date}2020-11-26T14:47:44.663+05:30"
+            jcr:lastModifiedBy="admin"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="bdb-aem/components/common/experiencefragment"
+            fragmentVariationPath="/content/experience-fragments/bdb/us/en-us/site/global-header/no-navigation-variation"/>
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="bdb-aem/components/common/container"
+            editable="{Boolean}true"/>
+        <disclaimer
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="bdb-aem/proxy/components/content/disclaimer"
+            editable="{Boolean}true"/>
+        <experiencefragment-footer
+            jcr:lastModified="{Date}2020-10-22T18:17:02.205+05:30"
+            jcr:lastModifiedBy="admin"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="bdb-aem/components/common/experiencefragment"
+            fragmentVariationPath="/content/experience-fragments/bdb/us/en-us/site/global-footer/master"/>
+        <cq:responsive jcr:primaryType="nt:unstructured">
+            <breakpoints jcr:primaryType="nt:unstructured">
+                <phone
+                    jcr:primaryType="nt:unstructured"
+                    title="Smaller Screen"
+                    width="{Long}768"/>
+                <tablet
+                    jcr:primaryType="nt:unstructured"
+                    title="Tablet"
+                    width="{Long}1200"/>
+            </breakpoints>
+        </cq:responsive>
+    </jcr:content>
+</jcr:root>

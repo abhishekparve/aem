@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+	jcr:primaryType="sling:OsgiConfig"
+		tempDocumentPath="$[env:tempDocumentPath;default=/content/dam/bdb/temp-assets/documents/]"
+		excelNodeBasePath="$[env:excelNodeBasePath;default=/content/commerce/products/bdb/document/excel/]"
+		damAssetBasePath="$[env:damAssetBasePath;default=/content/dam/bdb/products/global/]"
+		clinicalImagePath = "$[env:clinicalImagePath;default=/content/dam/bdb/temp-assets/images/packaging-images/clinical-vial-images]"
+        imageBasePath = "$[env:imageBasePath;default=/content/dam/bdb/temp-assets/images]"
+        docBasePath = "$[env:docBasePath;default=/content/dam/bdb/temp-assets/documents]"
+		tempAssetBasePath = "$[env:tempAssetBasePath;default=/content/dam/bdb/temp-assets]"
+		processedAssetBasePath = "$[env:processedAssetBasePath;default=/content/dam/bdb/processed-assets]"
+		processedImageBasePath = "$[env:processedImageBasePath;default=/content/dam/bdb/processed-assets/images]"
+		processedClinicalImagePath = "$[env:processedClinicalImagePath;default=/content/dam/bdb/processed-assets/images/packaging-images/clinical-vial-images]"
+		processedDocBasePath = "$[env:processedDocBasePath;default=/content/dam/bdb/processed-assets/documents]"
+        batchSize = "$[env:batchSize;default=500]"
+		varCommerceBasePath = "$[env:varCommerceBasePath;default=/content/commerce/products/bdb/products/]"/>

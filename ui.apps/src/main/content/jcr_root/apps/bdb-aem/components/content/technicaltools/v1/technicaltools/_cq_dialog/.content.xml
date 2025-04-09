@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Technical Tools"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        granite:class="cmp-button__editor"
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/container">
+        <items jcr:primaryType="nt:unstructured">
+            <container
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Properties"
+                sling:resourceType="granite/ui/components/coral/foundation/container"
+                margin="{Boolean}true">
+                <items jcr:primaryType="nt:unstructured">
+                    <columns
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <column
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <icon1
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                        fieldLabel="Spectrum Viewer Icon"
+                                        name="./icon1"
+                                        rootPath="/content/dam/bdb"/>
+                                    <text1
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldLabel="Spectrum Viewer Text"
+                                        name="./text1"/>
+                                    <link1
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                        fieldLabel="Spectrum Viewer CTA Link"
+                                        name="./link1"
+                                        rootPath="/content/bdb"/>
+                                    <icon2
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                        fieldLabel="Protocol Library Icon"
+                                        name="./icon2"
+                                        rootPath="/content/dam/bdb"/>
+                                    <text2
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldLabel="Protocol Library Text"
+                                        name="./text2"/>
+                                    <link2
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                        fieldLabel="Protocol Library CTA link"
+                                        name="./link2"
+                                        rootPath="/content/bdb"/>
+                                    <icon3
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                        fieldLabel="Scientific Resources Icon"
+                                        name="./icon3"
+                                        rootPath="/content/dam/bdb"/>
+                                    <text3
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldLabel="Scientific Resources Text"
+                                        name="./text3"/>
+                                    <link3
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                        fieldLabel="Scientific Resources CTA Link"
+                                        name="./link3"
+                                        rootPath="/content/bdb"/>
+                                    <dyeNameExcelPath
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                        fieldLabel="Select Dye Name Excel Path"
+                                        name="./dyeNameExcelPath"
+                                        rootPath="/content/dam/bdb"/>
+                                </items>
+                            </column>
+                        </items>
+                    </columns>
+                </items>
+            </container>
+        </items>
+    </content>
+</jcr:root>

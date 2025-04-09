@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          jcr:primaryType="sling:OsgiConfig"
+          schedulerName="$[env:IWS_NAME;default=Failed Image Report Generation Scheduler]"
+          enabled="$[env:IWS_TOGGLE;default=true]"
+          failedImagesCronExpression="$[env:failedImagesCronExpression;default=0 0 12 1 1/1 ? *]"
+          failedRecordsInVar="$[env:failedRecordsInVar;default=/var/bdb/products/images/failed-records]"
+          failedReportDestinationPath="$[env:failedReportDestinationPath;default=/content/dam/bdb/temp-assets/products/images/failure-report/]"/>

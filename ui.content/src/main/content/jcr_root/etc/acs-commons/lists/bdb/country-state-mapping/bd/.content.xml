@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2020-02-10T17:04:20.219+05:30"
+        cq:lastModifiedBy="admin"
+        jcr:primaryType="nt:unstructured"
+        jcr:title="Bangladesh"
+        sling:resourceType="acs-commons/components/utilities/genericlist"
+        value="BD">
+        <image
+            jcr:primaryType="nt:unstructured"
+            fileReference="/apps/acs-commons/components/utilities/genericlist/generic-list.png"/>
+        <list jcr:primaryType="nt:unstructured">
+            <item0
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Barisal"
+                value="BD-A"/>
+            <item1
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Chittagong"
+                value="BD-B"/>
+            <item2
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Dhaka"
+                value="BD-C"/>
+            <item3
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Khulna"
+                value="BD-D"/>
+            <item4
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Mymensingh"
+                value="BD-H"/>
+            <item5
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Rajshahi"
+                value="BD-E"/>
+            <item6
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Sylhet"
+                value="BD-G"/>
+            <item7
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Rangpur"
+                value="BD-F"/>
+        </list>
+    </jcr:content>
+</jcr:root>

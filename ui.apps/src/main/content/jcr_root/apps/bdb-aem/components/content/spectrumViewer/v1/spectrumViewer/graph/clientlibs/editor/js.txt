@@ -1,0 +1,10 @@
+#base=js
+expand-graph-icon-id.js
+zoom-plus-icon-id.js
+zoom-plus-icon-gray-id.js
+zoom-minus-icon-id.js
+zoom-minus-icon-gray-id.js
+reset-icon-gray.js
+reset-icon.js
+menu-icon.js
+save-list-icon.js

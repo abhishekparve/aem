@@ -1,0 +1,12 @@
+#
+# This file contains the request headers, and can be customized.
+#
+# By default, it includes the default client headers.
+#
+
+$include "./default_clientheaders.any"
+"siteId"
+"siteid"
+"User-geolocation"
+"User-Geolocation"
+"site_locale"

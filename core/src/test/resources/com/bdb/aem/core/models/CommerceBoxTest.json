@@ -1,0 +1,19 @@
+{"commercebox": {
+	"jcr:primaryType": "nt:unstructured",
+	"jcr:createdBy": "admin",
+	"jcr:lastModifiedBy": "admin",
+	"jcr:created": "Fri Mar 27 2020 21:37:58 GMT+0530",
+	"jcr:lastModified": "Fri Mar 27 2020 21:38:35 GMT+0530",
+	"sling:resourceType": "/content/bdb/us/en-us/test",
+	"catalogNo": "Catalog No",
+	"yourPrice": "yourPrice",
+	"listPrice": "listPrice",
+	"estDelivery": "estDelivery",
+	"unit": "unit",
+	"size": "size",
+	"quantity": "quantity",
+	"addToCart": "addToCart",
+	"saveToShoppingList": "saveToShoppingList",
+	"requestBulkReagentQuoteUrl": "/content/bdb/us/en-us/test",
+	"signIn": "signIn"
+}}

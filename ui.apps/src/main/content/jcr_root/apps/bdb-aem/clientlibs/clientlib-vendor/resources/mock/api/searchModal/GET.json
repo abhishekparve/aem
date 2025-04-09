@@ -1,0 +1,33 @@
+{
+    "mySuggester": [
+        {
+            "term": "RPA-T8",
+            "weight": 0,
+            "payload": ""
+        },
+        {
+            "term": "RPA-T8",
+            "weight": 0,
+            "payload": "105 Challenger Rd. Ridgefield Park, NJ 07660-0511 2"
+        },
+        {
+            "term": "Samsung <b>Electronics</b> Co. Ltd.",
+            "weight": 0,
+            "payload": ""
+        },
+        {
+            "term": "Samsung Electronics Co. Ltd. 6",
+            "weight": 0,
+            "payload": "105 Challenger Rd. Ridgefield Park, NJ 07660-0511"
+        }
+    ],
+    "urlredirect": "/content/---.html",
+    "suggestion": [
+        {
+            "word": "rpa-t8"
+        },
+        {
+            "word": "blotting"
+        }
+    ]
+}

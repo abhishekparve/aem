@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2020-02-06T14:35:32.847+05:30"
+        cq:lastModifiedBy="admin"
+        jcr:primaryType="nt:unstructured"
+        jcr:title="India"
+        sling:resourceType="acs-commons/components/utilities/genericlist"
+        value="IN">
+        <image
+            jcr:primaryType="nt:unstructured"
+            fileReference="/apps/acs-commons/components/utilities/genericlist/generic-list.png"/>
+        <list jcr:primaryType="nt:unstructured">
+            <item0
+                jcr:primaryType="nt:unstructured"
+                jcr:title="India"
+                value="IN"/>
+            <item1
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Sri Lanka"
+                    value="LK"/>
+            <item2
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Bangladesh"
+                    value="BD"/>
+            <item3
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Nepal"
+                    value="NP"/>
+            <item4
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Bhutan"
+                    value="BT"/>
+        </list>
+    </jcr:content>
+</jcr:root>

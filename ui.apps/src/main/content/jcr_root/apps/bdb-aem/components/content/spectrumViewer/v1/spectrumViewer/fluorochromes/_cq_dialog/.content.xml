@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Fluorochromes Component"
+    sling:resourceType="cq/gui/components/authoring/dialog"
+    extraClientlibs="[sv.dropdown]">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/container">
+        <items jcr:primaryType="nt:unstructured">
+            <fluorochromes
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Fluorochromes"
+                sling:resourceType="granite/ui/components/coral/foundation/container">
+                <layout
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"/>
+                <items jcr:primaryType="nt:unstructured">
+                    <column
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <searchSectionFluorochromes
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Search"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <searchTypePlaceholder
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldDescription="Please provide Text For Search Type Placeholder"
+                                        fieldLabel="Search Type Placeholder"
+                                        name="./searchTypePlaceholder"
+                                        value="Select"/>
+                                    <searchInputPlaceholder
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldDescription="Please provide Text For Search Input Placeholder"
+                                        fieldLabel="Search Input Placeholder"
+                                        name="./searchInputPlaceholder"
+                                        value="Search fluorochrome"/>
+                                    <searchFluorIcon
+                                        granite:id="searchFluorIconId"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                        fieldLabel="Search Flourochrome Icon"
+                                        name="./searchFluorIcon"
+                                        value="/apps/bdb-aem/clientlibs/clientlib-base/resources/icons/resources/icons/search-gray.svg">
+                                        <datasource
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="/bin/svgData"
+                                            defaultSelectedValue="search-gray.svg"/>
+                                    </searchFluorIcon>
+                                    <searchFluorIconAlt
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldDescription="Please provide Alt text for Search Fluorochrome Icon"
+                                        fieldLabel="Search Fluorochrome Icon Alt text"
+                                        name="./searchFluorIconAlt"
+                                        value="Search Fluorochrome Icon"/>
+                                </items>
+                            </searchSectionFluorochromes>
+                            <panelSectionFluorochromes
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Panel"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <defaultFluorochromes
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                        fieldDescription="Please provide Text For Search Type Placeholder"
+                                        fieldLabel="Default Fluorochromes"
+                                        multiple="{Boolean}true"
+                                        name="./defaultFluorochromes">
+                                        <datasource
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="/bin/flurochromesJsonDataDropdown"/>
+                                    </defaultFluorochromes>
+                                    <deleteFluorIcon
+                                        granite:id="deleteFluorIconId"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                        fieldLabel="Delete Fluorochrome Icon"
+                                        name="./deleteFluorIcon">
+                                        <datasource
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="/bin/svgData"
+                                            defaultSelectedValue="remove.svg"/>
+                                    </deleteFluorIcon>
+                                    <deleteFluorIconAlt
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldDescription="Please provide Alt text for Delete/Remove Fluorochrome Icon"
+                                        fieldLabel="Delete/Remove Fluorochrome Icon Alt text"
+                                        name="./deleteFluorIconAlt"
+                                        value="Delete Fluorochrome Icon"/>
+                                    <infoFluorIcon
+                                        granite:id="infoFluorIconId"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                        fieldLabel="Info Fluor Icon"
+                                        name="./infoFluorIcon">
+                                        <datasource
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="/bin/svgData"
+                                            defaultSelectedValue="info-2.svg"/>
+                                    </infoFluorIcon>
+                                    <infoFluorIconAlt
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldDescription="Please provide Alt text for Info Fluorochrome Icon"
+                                        fieldLabel="Info Fluorochrome Icon Alt text"
+                                        name="./infoFluorIconAlt"
+                                        value="Info Fluorochrome Icon"/>
+                                </items>
+                            </panelSectionFluorochromes>
+                        </items>
+                    </column>
+                </items>
+            </fluorochromes>
+        </items>
+    </content>
+</jcr:root>

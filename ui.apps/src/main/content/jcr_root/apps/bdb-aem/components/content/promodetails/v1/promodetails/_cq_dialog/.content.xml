@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Promo Details Banner"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+        <items jcr:primaryType="nt:unstructured">
+            <column
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/container">
+                <items jcr:primaryType="nt:unstructured">                   
+                    <promoId
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldDescription="Enter the Promotion ID"
+                        fieldLabel="Promotion ID"
+                        name="./promoId"
+                        required="{Boolean}true"/>
+                    <imagePath
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                        fieldDescription="Promotion Image URL"
+                        fieldLabel="Promotion Image URL"
+                        name="./imagePath"
+                        required="{Boolean}true"
+                        rootPath="/content/dam"/>
+                    <altText
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldDescription="Alt Text for Image"
+                        fieldLabel="Alt Text"
+                        name="./altText"/>
+                    <imageLinkUrl
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                        fieldDescription="Promotion Image Link URL"
+                        fieldLabel="Promotion Image Link URL"
+                        name="./imageLinkUrl"
+                        rootPath="/content"/>
+                    <openNewImageLinkTab
+						jcr:primaryType="nt:unstructured"
+						sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+						fieldDescription="Check to open link in New Tab. By default, link opens in same tab."
+						name="./openNewImageLinkTab"
+						text="Open Link in New Tab"
+						uncheckedValue="{Boolean}false"
+						value="{Boolean}true"/>                        
+                    <title
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="cq/gui/components/authoring/dialog/richtext"
+                        fieldLabel="Promotion Title"
+                        name="./title"
+                        required="{Boolean}true"
+                        useFixedInlineToolbar="{Boolean}true">
+                        <rtePlugins
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceSuperType="/apps/bdb-aem/components/authoring/dialog/richtext/rtePlugins"/>
+                        <uiSettings
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceSuperType="/apps/bdb-aem/components/authoring/dialog/richtext/uiSettings"/>
+                        <granite:data
+                            jcr:primaryType="nt:unstructured"
+                            char-limit="250"/>
+                    </title>
+                    <shortDescription
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="/libs/granite/ui/components/coral/foundation/form/textarea"
+                        fieldLabel="Promotion Short Description"
+                        name="./shortDescription"
+                        required="{Boolean}true"/>
+                    <expirationLabel
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldDescription="Expiration Label"
+                        fieldLabel="Expiration Label"
+                        name="./expirationLabel"
+                        required="{Boolean}true"/>
+                    <expirationDate
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="/libs/granite/ui/components/coral/foundation/form/datepicker"
+                        displayedFormat="DD MMMM YYYY"
+                        fieldDescription="Promotion Expiration Date"
+                        fieldLabel="Expiration Date"
+                        name="./expirationDate"
+                        required="{Boolean}true"/>
+                    <promoCode
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldDescription="Promo Code Label"
+                        fieldLabel="Promo Code Label"
+                        name="./promoLabel"
+                        required="{Boolean}true"/>
+                    <promoCodeValue
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldDescription="Promo Code Value"
+                        fieldLabel="Promo Code Value"
+                        name="./promoCodeValue"/>
+                    <promoDescription
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="/libs/granite/ui/components/coral/foundation/form/textarea"
+                        fieldLabel="Promo Description"
+                        name="./promoDescription"/>
+                    <label
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldDescription="Button Label for View All Eligible Reagents"
+                        fieldLabel="View All Eligible Reagents Label"
+                        name="./labelCta"/>
+                    <urlcta
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                        fieldDescription="Button URL for View All Eligible Reagents"
+                        fieldLabel="View All Eligible Reagents URL"
+                        name="./urlCta"
+                        rootPath="/content"/>                       
+                    <longDescription
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="/libs/granite/ui/components/coral/foundation/form/textarea"
+                        fieldLabel="Promotion Long Description"
+                        name="./longDescription"/>
+                </items>
+            </column>
+        </items>
+    </content>
+</jcr:root>

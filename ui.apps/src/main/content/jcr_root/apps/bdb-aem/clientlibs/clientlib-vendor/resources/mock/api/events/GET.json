@@ -1,0 +1,292 @@
+{
+    "facetsConfig": [
+        {
+            "name": "Events",
+            "code": "events",
+            "codeTarget": "#events",
+            "children": [
+                {
+                    "name": "Webinar",
+                    "code": "webinar",
+                    "isSelected": false,
+                    "count": 0
+                },
+                {
+                    "name": "Tradeshow",
+                    "code": "tradeshow",
+                    "isSelected": false,
+                    "count": 0
+                },
+                {
+                    "name": "Conference",
+                    "code": "conference",
+                    "isSelected": false,
+                    "count": 0
+                }
+            ]
+        },
+        {
+            "name": "Topics",
+            "code": "topics",
+            "codeTarget": "#topics",
+            "children": [
+                {
+                    "name": "Diabetes Care",
+                    "code": "bioimaging",
+                    "isSelected": false,
+                    "count": 1
+                },
+                {
+                    "name": "Healthcare Worker Safety",
+                    "code": "healthcare_worker_safety",
+                    "isSelected": false,
+                    "count": 16
+                },
+                {
+                    "name": "Infection Prevention",
+                    "code": "infection_prevention",
+                    "isSelected": false,
+                    "count": 9
+                }
+            ]
+        },
+        {
+            "name": "Location",
+            "code": "locations",
+            "codeTarget": "#location",
+            "children": [
+                {
+                    "name": "Global",
+                    "code": "Global",
+                    "isSelected": false,
+                    "count": 2
+                },
+                {
+                    "name": "Local",
+                    "code": "Local",
+                    "isSelected": false,
+                    "count": 2
+                }
+            ]
+        },
+        {
+            "name": "Date",
+            "code": "dates",
+            "codeTarget": "#dates",
+            "children": [
+                {
+                    "name": "March 2020",
+                    "code": "march_2020",
+                    "isSelected": false,
+                    "count": 1
+                },
+                {
+                    "name": "February 2020",
+                    "code": "feb_2020",
+                    "isSelected": false,
+                    "count": 2
+                },
+                {
+                    "name": "Janurary 2019",
+                    "code": "jan_2019",
+                    "isSelected": false,
+                    "count": 1
+                },
+                {
+                    "name": "December 2019",
+                    "code": "dec_2019",
+                    "isSelected": false,
+                    "count": 1
+                },
+                {
+                    "name": "August 2019",
+                    "code": "aug_2019",
+                    "isSelected": false,
+                    "count": 4
+                },
+                {
+                    "name": "October 2019",
+                    "code": "oct_2019",
+                    "isSelected": false,
+                    "count": 4
+                }
+            ]
+        }
+    ],
+    "cardsData": [
+        {
+            "urlimage": "/resources/images/events-carousel.png",
+            "altText": "Image 1",
+            "heading": "3 topics",
+            "subHeading": "3 topics------subHeading",
+            "eventType": "webinar",
+            "dateType": "oct_2019",
+            "scheduledOn": "18 Oct 2020",
+            "topicType": "bioimaging",
+            "topicTypeTwo": "infection_prevention",
+            "topicTypeThree": "healthcare_worker_safety",
+            "scheduleType": "upcoming",
+            "labelcta": "View Details",
+            "urlcta": "/sample/url",
+            "locationType": "Global"
+        },
+        {
+            "urlimage": "/resources/images/events-carousel.png",
+            "altText": "Image 1",
+            "heading": "BD Medication Data Workshops - BD Pyxis™ Technologies (Pyxis day 3)",
+            "subHeading": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non congue purus, tincidunt mollis urna. Quisque maximus tincidunt massa sed rutrum.</p>",
+            "eventType": "tradeshow",
+            "dateType": "aug_2019",
+            "scheduledOn": "19 Oct 2020",
+            "topicType": "infection_prevention",
+            "scheduleType": "upcoming",
+            "labelcta": "View Details",
+            "urlcta": "/sample/url",
+            "locationType": "Global"
+        },
+        {
+            "urlimage": "/resources/images/events-carousel.png",
+            "altText": "Image 1",
+            "heading": "BD Medication Data Workshops - BD Pyxis™ Technologies (Pyxis day 3)",
+            "subHeading": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non congue purus, tincidunt mollis urna. Quisque maximus tincidunt massa sed rutrum.</p>",
+            "eventType": "webinar",
+            "dateType": "aug_2019",
+            "scheduledOn": "20 Oct 2020",
+            "topicType": "infection_prevention",
+            "scheduleType": "upcoming",
+            "labelcta": "View Details",
+            "urlcta": "/sample/url",
+            "locationType": "Global"
+        },
+        {
+            "urlimage": "/resources/images/events-carousel.png",
+            "altText": "Image 1",
+            "heading": "BD Medication Data Workshops - BD Pyxis™ Technologies (Pyxis day 3)",
+            "subHeading": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non congue purus, tincidunt mollis urna. Quisque maximus tincidunt massa sed rutrum.</p>",
+            "eventType": "tradeshow",
+            "dateType": "oct_2019",
+            "scheduledOn": "16 Oct 2020",
+            "topicType": "bioimaging",
+            "scheduleType": "upcoming",
+            "labelcta": "View Details",
+            "urlcta": "/sample/url",
+            "locationType": "Global"
+        },
+        {
+            "urlimage": "/resources/images/events-carousel.png",
+            "altText": "Image 1",
+            "heading": "BD Medication Data Workshops - BD Pyxis™ Technologies (Pyxis day 3)",
+            "subHeading": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non congue purus, tincidunt mollis urna. Quisque maximus tincidunt massa sed rutrum.</p>",
+            "eventType": "webinar",
+            "dateType": "oct_2019",
+            "scheduledOn": "21 Oct 2020",
+            "topicType": "infection_prevention",
+            "scheduleType": "upcoming",
+            "labelcta": "View Details",
+            "urlcta": "/sample/url",
+            "locationType": "Global"
+        },
+        {
+            "urlimage": "/resources/images/events-carousel.png",
+            "altText": "Image 1",
+            "heading": "BD Medication Data Workshops - BD Pyxis™ Technologies (Pyxis day 3)",
+            "subHeading": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non congue purus, tincidunt mollis urna. Quisque maximus tincidunt massa sed rutrum.</p>",
+            "eventType": "webinar",
+            "dateType": "aug_2019",
+            "scheduledOn": "22 Oct 2020",
+            "topicType": "infection_prevention",
+            "scheduleType": "upcoming",
+            "labelcta": "View Details",
+            "urlcta": "/sample/url",
+            "locationType": "Global"
+        },
+        {
+            "urlimage": "/resources/images/events-carousel.png",
+            "altText": "Image 1",
+            "heading": "BD Medication Data Workshops - BD Pyxis™ Technologies (Pyxis day 3)",
+            "subHeading": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non congue purus, tincidunt mollis urna. Quisque maximus tincidunt massa sed rutrum.</p>",
+            "eventType": "webinar",
+            "dateType": "oct_2019",
+            "scheduledOn": "17 Oct 2020",
+            "topicType": "bioimaging",
+            "scheduleType": "upcoming",
+            "labelcta": "View Details",
+            "urlcta": "/sample/url",
+            "locationType": "Global"
+        },
+        {
+            "urlimage": "/resources/images/events-carousel.png",
+            "altText": "Image 1",
+            "heading": "Upcoming",
+            "subHeading": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non congue purus, tincidunt mollis urna. Quisque maximus tincidunt massa sed rutrum.</p>",
+            "eventType": "webinar",
+            "dateType": "aug_2019",
+            "scheduledOn": "22 Oct 2020",
+            "scheduledTo": "24 Oct 2020",
+            "topicType": "infection_prevention",
+            "scheduleType": "upcoming",
+            "labelcta": "View Details",
+            "urlcta": "/sample/url",
+            "locationType": "Local"
+        },
+        {
+            "urlimage": "/resources/images/events-carousel.png",
+            "altText": "Image 1",
+            "heading": "Current",
+            "subHeading": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non congue purus, tincidunt mollis urna. Quisque maximus tincidunt massa sed rutrum.</p>",
+            "eventType": "webinar",
+            "dateType": "oct_2019",
+            "scheduledOn": "20 Oct 2020",
+            "scheduledTo": "24 Oct 2020",
+            "topicType": "infection_prevention",
+            "scheduleType": "upcoming",
+            "labelcta": "View Details",
+            "urlcta": "/sample/url",
+            "locationType": "Local"
+        },
+        {
+            "urlimage": "/resources/images/events-carousel.png",
+            "altText": "Image 1",
+            "heading": "Current",
+            "subHeading": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non congue purus, tincidunt mollis urna. Quisque maximus tincidunt massa sed rutrum.</p>",
+            "eventType": "webinar",
+            "dateType": "oct_2019",
+            "scheduledOn": "18 Oct 2020",
+            "scheduledTo": "20 Oct 2020",
+            "topicType": "bioimaging",
+            "scheduleType": "upcoming",
+            "labelcta": "View Details",
+            "urlcta": "/sample/url",
+            "locationType": "Local"
+        },
+        {
+            "urlimage": "/resources/images/events-carousel.png",
+            "altText": "Image 1",
+            "heading": "Past",
+            "subHeading": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non congue purus, tincidunt mollis urna. Quisque maximus tincidunt massa sed rutrum.</p>",
+            "eventType": "webinar",
+            "dateType": "oct_2019",
+            "scheduledOn": "18 Oct 2020",
+            "scheduledTo": "19 Oct 2020",
+            "topicType": "infection_prevention",
+            "scheduleType": "upcoming",
+            "labelcta": "View Details",
+            "urlcta": "/sample/url",
+            "locationType": "Local"
+        },
+        {
+            "urlimage": "/resources/images/events-carousel.png",
+            "altText": "Image 1",
+            "heading": "BD Medication Data Workshops - BD Pyxis™ Technologies (Pyxis day 3)",
+            "subHeading": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non congue purus, tincidunt mollis urna. Quisque maximus tincidunt massa sed rutrum.</p>",
+            "eventType": "webinar",
+            "dateType": "aug_2019",
+            "scheduledOn": "16 May 2020",
+            "topicType": "infection_prevention",
+            "scheduleType": "upcoming",
+            "labelcta": "View Details",
+            "urlcta": "/sample/url",
+            "locationType": "Local"
+        }
+    ]
+}

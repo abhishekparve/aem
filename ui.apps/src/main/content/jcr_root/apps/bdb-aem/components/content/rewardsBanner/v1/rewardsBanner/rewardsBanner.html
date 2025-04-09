@@ -1,0 +1,29 @@
+<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html"
+     data-sly-call="${templates.placeholder @ isEmpty = true}"></sly>
+
+
+<sly data-sly-use.rewardBannerModel="com.bdb.aem.core.models.RewardBannerModel">
+        <article class="rewards-banner app-js__rewards-banner position-relative ${properties.fullBleed ? '' : 'container'}">
+            <div class="rewards-banner__container">
+                <div class="rewards-banner__image w-100" role="img" aria-label="rewards banner">
+                    <div class="d-flex align-items-center justify-content-center position-relative">
+                        <picture>
+                            <source media="(max-width: 992px)" srcset="${rewardBannerModel.imagePathMobile}" data-srcset="${rewardBannerModel.imagePathMobile}" onload="window.aos && window.aos.refresh()">                            
+                               <img src="${rewardBannerModel.imagePath}" data-src="${rewardBannerModel.imagePath}" class="picture-image loaded lazy" alt="${rewardBannerModel.altText}" title="rewards banner" onload="window.aos && window.aos.refresh()" data-ll-status="loaded">
+                        </picture>
+                    </div>
+                </div>
+            </div>
+            <div class="rewards-banner__text container position-absolute d-flex justify-content-left mx-auto w-100" id="rewards-banner__text">
+                <div class="row mx-auto rewards-banner__content w-100">
+                    <h1 data-sly-test="${rewardBannerModel.rewardsTitle || rewardBannerModel.rewardPoints}" class="col-12 rewards-banner__content-heading text-left">
+                        ${rewardBannerModel.rewardsTitle @context='html'} 
+                        <span class="rewards-banner__content-heading_rewards-point">${rewardBannerModel.rewardPoints} </span>
+                    </h1>
+                    <p data-sly-test="${rewardBannerModel.rewardsSubTitle != null}" class="col-sm-12 col-lg-6 mb-4 mb-md-4 rewards-banner__content-desc text-left">${rewardBannerModel.rewardsSubTitle @context='html'}</p>
+                    <div class="break"></div>
+                    <a data-sly-test="${rewardBannerModel.signUpLabel != null}" href="${rewardBannerModel.link}" data-toggle="${properties.loadInModal?'modal':''}" data-target="${properties.loadInModal?'#bdb-request-quote-form-modal':''}" class="btn btn-primary-blue btn-md rewards-banner__content-btn">${rewardBannerModel.signUpLabel @context='html'}</a>
+                </div>
+            </div>
+        </article>
+</sly>

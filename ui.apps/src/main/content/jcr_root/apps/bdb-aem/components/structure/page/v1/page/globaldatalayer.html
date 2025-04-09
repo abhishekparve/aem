@@ -1,0 +1,132 @@
+<sly data-sly-use.dataLayer="com.bdb.aem.core.models.BDBDatalayerDataModel" />
+<sly data-sly-use.pdpSessionModel="com.bdb.aem.core.models.PDPSessionModel" />
+<sly data-sly-test.title="${dataLayer.title == 'pdp' ? pdpSessionModel.productName : dataLayer.title}" />
+
+<script type="text/javascript">
+	const validEmailRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+	let prev_page_cookie = document.cookie.match(RegExp('prevPage' + "=.[^;]*")) ? document.cookie.match(RegExp('prevPage' + "=.[^;]*"))[0].split('=')[1] : '';
+	let signed_in_user_cookie = document.cookie.match(RegExp('signed_in_user' + "=.[^;]*")) ? 'logged_in' : 'not_logged_in';
+	const punch_out_cookie = document.cookie.match(RegExp('punchOut' + "=.[^;]*")) ? 'punchOut' : 'web';
+	let searchResultPages_cookie = document.cookie.match(RegExp('searchResultPages'+ "=.[^;]*")) ? document.cookie.match(RegExp('searchResultPages' + "=.[^;]*"))[0].split('=')[1] : 0;
+	let user_details_uid_cookie;
+
+	let area_of_interest_cookie = document.cookie.match(RegExp('user_details_area_of_interest' + "=.[^;]*")) ? document.cookie.match(RegExp('user_details_area_of_interest' + "=.[^;]*"))[0].split('=')[1] : 'not_logged_in';
+	let user_company_cookie = document.cookie.match(RegExp('user_details_company' + "=.[^;]*")) ? document.cookie.match(RegExp('user_details_company' + "=.[^;]*"))[0].split('=')[1] : 'not_logged_in';
+	let user_country_cookie = document.cookie.match(RegExp('user_details_country' + "=.[^;]*")) ? document.cookie.match(RegExp('user_details_country' + "=.[^;]*"))[0].split('=')[1] : 'not_logged_in';
+	let user_industry_cookie = document.cookie.match(RegExp('user_details_userIndustry' + "=.[^;]*")) ? document.cookie.match(RegExp('user_details_userIndustry' + "=.[^;]*"))[0].split('=')[1] : 'not_logged_in';
+	let user_role_cookie = document.cookie.match(RegExp('user_details_userRole' + "=.[^;]*")) ? document.cookie.match(RegExp('user_details_userRole' + "=.[^;]*"))[0].split('=')[1] : 'not_logged_in';
+	let account_type_cookie = document.cookie.match(RegExp('user_details_accountType' + "=.[^;]*")) ? document.cookie.match(RegExp('user_details_accountType' + "=.[^;]*"))[0].split('=')[1] : 'not_logged_in';
+
+	if (document.cookie.match(RegExp('user_details_uid' + "=.[^;]*"))) {
+		if (document.cookie.match(RegExp('user_details_uid' + "=.[^;]*"))[0].split('=')[1].match(validEmailRegex)) {
+			user_details_uid_cookie = document.cookie.match(RegExp('user_details_uid' + "=.[^;]*"))[0].split('=')[1];
+			user_details_uid_cookie = user_details_uid_cookie.toLowerCase();
+			let encoded_uid, encrypted_user_details_uid_cookie = "";
+			for(let i = 0; i < user_details_uid_cookie.length; i++){
+			  if(user_details_uid_cookie.charAt(i).match(RegExp("[a-zA-Z]"))){
+				encoded_uid = String(user_details_uid_cookie.charCodeAt(i)-96);
+				if(i < user_details_uid_cookie.length - 1){
+					encoded_uid = encoded_uid.concat("","|");
+				}
+			  }
+			  else if(user_details_uid_cookie.charAt(i).match(RegExp("[0-9]"))){
+			  	encoded_uid = "_" + user_details_uid_cookie.charAt(i).concat("","|");
+			  }else{
+			  	encoded_uid = user_details_uid_cookie.charAt(i).concat("","|");
+			  }
+			  encrypted_user_details_uid_cookie = encrypted_user_details_uid_cookie.concat("",encoded_uid);
+			}
+			user_details_uid_cookie = encrypted_user_details_uid_cookie;
+			signed_in_user_cookie = 'logged_in';
+		} else {
+			user_details_uid_cookie = document.cookie.match(RegExp('user_details_uid' + "=.[^;]*"))[0].split('=')[1];
+			signed_in_user_cookie = 'logged_in';
+		}
+	} else {
+		user_details_uid_cookie = '';
+	}
+	let pageName = "${dataLayer.name @ context='scriptString'}";
+	let previousPage = "${dataLayer.previousPage @ context='scriptString'}";
+	// path modification for urlNoQueryString
+	let old_urlNoQueryString = "${dataLayer.path @ context='scriptString'}";
+    let new_urlNoQueryString = old_urlNoQueryString.replace(".html","");
+    // path modification for urlQueryString
+    let old_urlQueryString = "${dataLayer.pathQueryString @ context='scriptString'}";
+    let new_urlQueryString = old_urlQueryString.replace(".html","");
+	if(prev_page_cookie === pageName || previousPage) {
+		prev_page_cookie = 'bdb|accounts|account|login|';
+	}
+
+	window.adobeDataLayer = window.adobeDataLayer || [];
+	window.adobeDataLayer.push({
+		"event": "pageLoaded",
+		"xdm": {
+			"web": {
+				"webPageDetails": {
+					"pageName": "${dataLayer.name @ context='scriptString'}",
+					"pageType": "${dataLayer.contentPageType @ context='scriptString'}",
+					"domain": document.location.hostname,
+					"regionalSite": "${dataLayer.region @ context='scriptString'}",
+					"aaCodeVersion": "",
+					"platform": punch_out_cookie,
+					"timeStamp": "${dataLayer.timestamp @ context='scriptString'}",
+					"publishDate": "${dataLayer.replicationDate @ context='scriptString'}",
+					"originalPublishDate": "${dataLayer.originalPublishDate @ context='scriptString'}",
+					"pageViews": {
+						"value": 1
+					},
+					"kiboTrack": {
+						"value": 1
+					},
+					"searchResultPages": searchResultPages_cookie,
+					"clientIP": "${dataLayer.clientIpAddress @ context='scriptString'}"
+
+				},
+				"pageInfo": {
+					"siteSection": "${dataLayer.siteSection @ context='scriptString'}",
+					"previousPageName": prev_page_cookie,
+					"scrollDepth": "${dataLayer.scrollDepth @ context='scriptString'}",
+					"urlNoQueryString": new_urlNoQueryString,
+					"urlQueryString": new_urlQueryString,
+					"pageTitle": "${title @ context='scriptString'}",
+					"intCampaign": "${dataLayer.intCampaign @ context='scriptString'}"
+				},
+				"profileInfo": {
+					"loginStatus": signed_in_user_cookie,
+					"ccv2UserID": user_details_uid_cookie,
+					"accountType": account_type_cookie,
+                    "areaOfInterest": area_of_interest_cookie,
+                    "userCompany": user_company_cookie,
+                    "userCountry": user_country_cookie,
+                    "userIndustry": user_industry_cookie,
+                    "userRole": user_role_cookie
+				},
+				"marketing": {
+					"trackingCode": "${dataLayer.extCampaign @ context='scriptString'}"
+				},
+				"aem": {
+					"environment": "${dataLayer.runModes @ context='scriptString'}",
+					"authorVsPublish": "${dataLayer.checkAuthorVsPublish @ context='scriptString'}",
+					"version": "6.5.0",
+					"previewMode": "mode"
+				}
+			},
+		},
+	});
+</script>
+
+<sly data-sly-test="${dataLayer.isBlogPage}">
+	<script type="text/javascript">
+		window.adobeDataLayer.push({
+			"event": "blogTracking",
+			"xdm": {
+				"blog": {
+					"blogName": "${dataLayer.blogArticleTitle @ context='scriptString'}",
+					"blogTopicFilterUsed": "${dataLayer.blogTopicFilterUsed @ context='scriptString'}",
+					"blogDateFilterUsed": "${dataLayer.blogDateFilterUsed @ context='scriptString'}",
+					"blogArticlePublishDate": "${dataLayer.blogArticlePublishDate @ context='scriptString'}"
+				}
+			}
+		});
+	</script>
+</sly>

@@ -1,0 +1,302 @@
+<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html"
+    data-sly-call="${templates.placeholder @ isEmpty = true}"></sly>
+
+<sly data-sly-use.time="com.bdb.aem.core.models.TimerModel"></sly>
+<sly data-sly-use.heroModelObject="com.bdb.aem.core.models.ProductHeroModel" data-sly-use.pdpTemplateModel="com.bdb.aem.core.models.PDPTemplateModel" data-sly-use.pdpTabObject="com.bdb.aem.core.models.PDPTabModel" data-sly-test="${heroModelObject}">
+    <sly data-sly-use.ruoModelObject="com.bdb.aem.core.models.RuoModel" data-sly-test="${heroModelObject}">
+                    <article class="pdp-title-section app-js__pdp-title-section">
+                        <div class="pdp-title-section__heading_container">
+                            <h1 data-sly-test="${heroModelObject.productTitle}" class="pdp-title-section__heading">
+                                ${[heroModelObject.brand,heroModelObject.productTitle] @ join = ' '}</h1>
+                            <input class="pdp-title-section__clone-id" type="hidden" value=${heroModelObject.productClone}>
+							<input class="pdp-title-section__regulatory-status" type="hidden" value=${heroModelObject.regulatoryStatus}>    
+                            <h2 data-sly-test="${heroModelObject.productClone}"
+                                class="pdp-title-section__sub-heading d-inline">
+                                ${[heroModelObject.cloneLabel,heroModelObject.productClone] @ join = ' '}
+							<sly data-sly-test="${heroModelObject.regulatoryStatus}">
+                            <a href="#" class="pdp-title-section__sub-heading" data-toggle="modal"
+                                tabindex="0" data-target="#pdp-legend-modal">(${heroModelObject.regulatoryStatus})</a>
+                             </sly></h2>
+
+                        </div>
+                        <sly data-sly-test="${pdpTemplateModel.templateId == 'SFA' || pdpTemplateModel.templateId == 'SCM'}">
+                          <sly data-sly-test="${pdpTabObject.formatname || pdpTabObject.bdFormatdescription || pdpTabObject.formatname || pdpTabObject.excitationSource || pdpTabObject.excitationmax || pdpTabObject.emmisionmax || pdpTabObject.formatDetailsImage}">
+                            <sly data-sly-test="${heroModelObject.productClone != 'Polyclonal' && heroModelObject.productClone != 'Antibody-Oligo' &&  heroModelObject.brand != heroModelObject.abSeqBrand}" >                 
+	                        <div class="pdp-title-section__cta-placeholder">
+	                            <a class="cta-link pdp-title-section__view-all-format-cta dark-background" href="/" tabindex="0" target="new">
+	                                <span data-sly-test="${heroModelObject.formatsLabel}" class="cta-content">
+	                                    <span class="cta-text" tabindex="-1">
+	                                        ${heroModelObject.formatsLabel}
+	                                    </span>
+	                                    <span class="icon-arrow-right"></span>
+	                                </span>
+	                            </a>
+	                        </div>
+	                        </sly>
+	                      </sly> 
+                        </sly>
+                    </article>
+                    <div class="pdp_tools__mobile">
+                        <article class="pdp-tools app-js__pdp-tools">
+                            <div class="pdp-tools__container d-flex justify-content-center">
+								<sly data-sly-test="${heroModelObject.displaySpectrumViewerTool}">
+                                <a data-sly-test="${heroModelObject.link1 || heroModelObject.icon1 || heroModelObject.text1 }"
+                                    class="pdp-tools__container_link" href="${heroModelObject.link1}" target=_blank>
+                                    <div
+                                        class="pdp-tools__container_link_block d-flex flex-column justify-content-center text-center">
+                                        <img class="pdp-tools__container_link_block_img" src="${heroModelObject.icon1}"
+                                            alt=alt text />
+                                        <span
+                                            class="pdp-tools__container_link_block_text">${heroModelObject.text1}</span>
+                                    </div>
+                                </a>
+								</sly>
+                                <a data-sly-test="${heroModelObject.link2 || heroModelObject.icon2 || heroModelObject.text2}"
+                                    class="pdp-tools__container_link" href="${heroModelObject.link2}" target=_blank>
+                                    <div
+                                        class="pdp-tools__container_link_block d-flex flex-column justify-content-center text-center">
+                                        <img class="pdp-tools__container_link_block_img" src="${heroModelObject.icon2}"
+                                            alt=alt text />
+                                        <span
+                                            class="pdp-tools__container_link_block_text">${heroModelObject.text2}</span>
+                                    </div>
+                                </a>
+                                <a data-sly-test="${heroModelObject.link3 || heroModelObject.icon3 || heroModelObject.text3}"
+                                    class="pdp-tools__container_link" href="${heroModelObject.link3}" target=_blank>
+                                    <div
+                                        class="pdp-tools__container_link_block d-flex flex-column justify-content-center text-center">
+                                        <img class="pdp-tools__container_link_block_img" src="${heroModelObject.icon3}"
+                                            alt=alt text />
+                                        <span
+                                            class="pdp-tools__container_link_block_text">${heroModelObject.text3}</span>
+                                    </div>
+                                </a>
+                            </div>
+                        </article>
+                    </div>
+                    <article class="pdp-hero-component app-js__pdp-hero-component">
+                        <div class="pdp-hero-component__image pdp-hero-component__image row p-0 m-0 mb-4">
+                            <div class="pdp-hero-component__image__preview   col-lg-9-3 m-0">
+                                <sly data-sly-list.assets="${heroModelObject.beanList}"
+                                    data-sly-test="${heroModelObject.beanList}" data-sly-unwrap>
+                                    <div>
+                                        <sly data-sly-test="${assets.videoId == null}">
+                                        <div class="img-wrapper">
+											<picture>
+													<source media="(max-width: 900px)" srcset=${assets.image}
+															onload="window.aos && window.aos.refresh()">
+													<img data-sly-test="${assets.image}" data-src=${assets.image}
+														 alt=${assets.imgAtlText} onload="window.aos && window.aos.refresh()" class="lazy">
+											</picture>
+										</div>	
+										</sly>
+										<div data-sly-test="${assets.videoId}" class="preview-thumbnail img-wrapper" data-accountId="${assets.brightcoveAccountId}"	data-playerId="${assets.brightcovePlayerId}" data-videoId="${assets.videoId}">
+										</div>
+                                        <div class="pdp-hero-component__image__preview__description">
+                                            <div data-sly-test="${assets.desc}"
+                                                class="pdp-hero-component__description_content"  data-sly-attribute.class="pdp-hero-component__description_content show-more_${heroModelObject.linesCount}">
+                                                ${assets.desc @context='html'}
+                                            </div>
+                                            <a class="pdp-hero-component__description_show-more cta-link" href="/" tabindex="0"
+                                                target="new" style="display: none;">
+                                                <span class="cta-content">
+                                                    <span data-sly-test="${heroModelObject.showMoreCta}"
+                                                        class="cta-text" tabindex="-1">
+                                                        ${heroModelObject.showMoreCta}
+                                                    </span>
+                                                    <span class="arrow down"></span>
+                                                </span>
+                                            </a>
+                                            <a class="pdp-hero-component__description_show-less cta-link" href="/"
+                                                tabindex="0" target="new" style="display: none;">
+                                                <span class="cta-content">
+                                                    <span data-sly-test="${heroModelObject.showLessCta}"
+                                                        class="cta-text" tabindex="-1">
+                                                        ${heroModelObject.showLessCta}
+                                                    </span>
+                                                    <span class="arrow up"></span>
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </sly>
+                            </div>
+                            <div class="pdp-hero-component__image__carousel col-lg-2-7 m-0">
+                                <sly data-sly-list.assets="${heroModelObject.beanList}"
+                                    data-sly-test="${heroModelObject.beanList}" data-sly-unwrap>
+                                    <sly data-sly-test="${assets.videoId == null}">
+										<picture>
+											<img tabindex='0' data-sly-test="${assets.image}" data-src=${assets.image}
+												alt=${assets.imgAtlText} class="lazy"/>
+										</picture>
+									</sly>
+									<div data-sly-test="${assets.videoId}" class="carousel-thumbnail" data-accountId="${assets.brightcoveAccountId}" data-playerId="${assets.brightcovePlayerId}" data-videoId="${assets.videoId}">
+									</div>
+                                </sly>
+                            </div>
+                        </div>
+
+                        <div class="pdp-hero-component__description">
+                            <sly data-sly-list.assets="${heroModelObject.beanList}"
+                                data-sly-test="${heroModelObject.beanList}" data-sly-unwrap>
+                                <div>
+                                    <div data-sly-test="${assets.desc}"
+                                        class="pdp-hero-component__description_content show-more"
+                                        data-sly-attribute.class="pdp-hero-component__description_content show-more_${heroModelObject.linesCount}">
+                                        ${assets.desc @context='html'}</div>
+                                    <a data-sly-test="${assets.desc}" class="pdp-hero-component__description_show-more cta-link" href="/" tabindex="0"
+                                        target="new" style="display: none;">
+                                        <span class="cta-content">
+                                            <span data-sly-test="${heroModelObject.showMoreCta}" class="cta-text"
+                                                tabindex="-1">
+                                                ${heroModelObject.showMoreCta}
+                                            </span>
+                                            <span class="arrow down"></span>
+                                        </span>
+                                    </a>
+                                    <a class="pdp-hero-component__description_show-less cta-link" href="/" tabindex="0"
+                                        target="new" style="display: none;">
+                                        <span class="cta-content">
+                                            <span data-sly-test="${heroModelObject.showLessCta}" class="cta-text"
+                                                tabindex="-1">
+                                                ${heroModelObject.showLessCta}
+                                            </span>
+                                            <span class="arrow up"></span>
+                                        </span>
+                                    </a>
+                                </div>
+                                <sly>
+                        </div>
+                    </article>
+                    <article class="pdp-hero-modal app-js__pdp-hero-modal">
+                        <div class="modal fade" id="pdp-hero-modal__id" tabindex="-1" role="dialog"
+                            aria-labelledby="pdp-hero-modal__title" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header p-0">
+                                        <button type="button" class="close p-0" data-dismiss="modal" aria-label="Close"
+                                            data-role="none" role="button">
+                                            <img src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/Close-dark.svg"
+                                                alt="close" />
+                                        </button>
+                                    </div>
+                                    <div class="modal-body row col-12 p-0 m-0">
+                                        <div
+                                            class="container pdp-hero-modal__navigators d-flex flex-column justify-content-between position-absolute w-auto h-100 p-0">
+                                            <button class="pdp-hero-modal-prev" aria-label="Previous Slide"
+                                                role="button" data-role="none">
+                                                <img src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/images/arrow-background.png"
+                                                    class="pdp-hero-modal-prev-icon" alt="prev" />
+                                            </button>
+                                            <button class="pdp-hero-modal-next show" aria-label="Next Slide"
+                                                role="button" data-role="none">
+                                                <img src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/images/arrow-background.png"
+                                                    class="pdp-hero-modal-next-icon" alt="next" />
+                                            </button>
+                                        </div>
+                                        <div class="pdp-hero-modal__preview col-10 p-0 m-0">
+                                            <sly data-sly-list.assets="${heroModelObject.beanList}"
+                                                data-sly-test="${heroModelObject.beanList}" data-sly-unwrap>
+                                                <div class="d-flex flex-column">
+                                                    <div data-sly-test="${assets.videoId == null}" class="pdp-hero-modal__preview__image d-flex align-items-center justify-content-center">
+                                                        <picture>
+                                                            <source media="(max-width: 900px)"
+                                                                srcset=${assets.image}>
+                                                            <img data-src=${assets.image} alt=${assets.imgAtlText} class="lazy"/>
+                                                        </picture>
+                                                    </div>
+                                                    <sly data-sly-test="${assets.videoId}">
+                                                        <div class="d-flex flex-column">
+                                                            <div class="pdp-hero-modal__preview__image is-video" data-accountId="${assets.brightcoveAccountId}"
+                                                                 data-playerId="${assets.brightcovePlayerId}" data-videoId="${assets.videoId}">
+                                                            </div>
+                                                        </div>
+                                                    </sly>
+                                                    <div data-sly-test="${assets.desc}" class="pdp-hero-modal__preview__description mt-3">
+                                                        <p class="pdp-hero-modal__preview__description_content">
+                                                            ${assets.desc @context='html'}
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </sly>
+                                        </div>
+                                        <div class="pdp-hero-modal__carousel ">
+                                            <sly data-sly-list.assets="${heroModelObject.beanList}"
+                                                data-sly-test="${heroModelObject.beanList}" data-sly-unwrap>
+                                                <div>
+                                                    <sly data-sly-test="${assets.videoId == null}">	
+                                                        <picture>
+                                                            <img tabindex='0' data-src=${assets.image} alt=${assets.imgAtlText} class="lazy"/>
+                                                        </picture>
+													</sly>
+													<sly data-sly-test="${assets.videoId}">	
+                                                        <div class="is-thumbnail" data-accountId="${assets.brightcoveAccountId}" data-playerId="${assets.brightcovePlayerId}" data-videoId="${assets.videoId}">
+                                                        </div>
+													</sly>	
+                                                    <div class="pdp-hero-modal__carousel__description pt-1">
+                                                        <p class="pdp-hero-modal__carousel__description_content">
+                                                            ${assets.modelDescription}
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </sly>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="pdp-legend-modal app-js__pdp-legend-modal">
+                        <div class="modal px-0" id="pdp-legend-modal" tabindex="-1" role="dialog"
+                            aria-labelledby="pdp-legend-model" aria-hidden="true">
+                            <div class="modal-dialog pdp-legend-modal__modal-dimensions modal-dialog-centered"
+                                role="document">
+                                <div class="modal-content ">
+                                    <div class=" pdp-legend-modal__modal-close p-0">
+                                        <button type="button" class="close p-0" data-dismiss="modal" aria-label="Close"
+                                            data-role="none" role="button">
+                                            <img src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/Close-dark.svg"
+                                                alt="close" />
+                                        </button>
+                                    </div>
+                                    <div class="modal-header pdp-legend-modal__modal-header ">
+                                        <h5 data-sly-test="${ruoModelObject.ruoLegendtitle}"
+                                            class="pdp-legend-modal__modal-tittle ">
+                                            ${ruoModelObject.ruoLegendtitle}</h5>
+                                    </div>
+
+                                    <div class="container">
+                                        <div class=" row pdp-legend-modal__modal-body modal-body d-flex flex-column pr-0">
+                                            <sly data-sly-list.key="${ruoModelObject.ruoMap}"
+                                                data-sly-test="${ruoModelObject.ruoMap}" data-sly-unwrap>
+                                                <div class=" col-sm-12 pdp-legend-modal__ru-status d-flex row">
+                                                    <div
+                                                        class="col-sm-2 col-2 col-lg-3 pdp-legend-modal__ru-status-head px-0">
+                                                        ${key}
+                                                    </div>
+                                                    <div
+                                                        class="col-sm-10 col-lg-9  col-10 pdp-legend-modal__ru-status-desc px-0 ">
+                                                        ${ruoModelObject.ruoMap[key]}
+                                                    </div>
+
+                                                </div>
+                                            </sly>
+                                        </div>
+                                        <div class="pdp-legend-modal__show-disclaimer col-lg-12">
+                                            <p data-sly-test="${ruoModelObject.ruoDescription}"
+                                                class="pdp-legend-modal__desclaimer-text">
+                                                ${ruoModelObject.ruoDescription}
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                   </article>
+    </sly>
+</sly>
+<p data-sly-test="${inheritedPageProperties.enableTimer}">Pdp Hero:${time.endTime}</p>
+<script type="application/ld+json">
+ ${heroModelObject.productData || '{}' @context='scriptComment'}
+    </script>

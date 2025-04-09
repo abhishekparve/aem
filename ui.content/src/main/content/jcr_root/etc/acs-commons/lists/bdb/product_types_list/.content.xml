@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2020-11-10T20:47:39.015+05:30"
+        cq:lastModifiedBy="admin"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="nt:unstructured"
+        jcr:title="Product Types"
+        jcr:uuid="2f589239-48e3-4c22-a9af-3159bf84f541"
+        sling:resourceType="acs-commons/components/utilities/genericlist">
+        <image
+            jcr:primaryType="nt:unstructured"
+            fileReference="/apps/acs-commons/components/utilities/genericlist/generic-list.png"/>
+        <list jcr:primaryType="nt:unstructured">
+            <item0
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Software"
+				value="SoftwareProduct"/>
+			<item1
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Cytokines Media Additives"
+                value="CytoMediaProduct"/>
+            <item2
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Hydrolysates Peptones"
+                value="HydroPeptoProduct"/>
+            <item3
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Cell Culture Reagents"
+                value="CellCultureProduct"/>
+            <item4
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Instrument Systems"
+                value="InstrSystemProduct"/>
+            <item5
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Instrument Options"
+                value="InstrumentOptions"/>
+            <item6
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Instrument Upgrades"
+                value="InstrumentUpgrades"/>
+            <item7
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Instrument Consumables"
+                value="InstrCompoConsumable"/>
+            <item8
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Antibodies-Primary"
+                value="SingColorPureAntibody"/>
+            <item9
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Isotype Controls/Lysates"
+                value="IsotypeControlLysate"/>
+            <item10
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Antibodies-Multicolor"
+                value="MultiColorAntibody"/>
+            <item11
+                jcr:primaryType="nt:unstructured" 
+                jcr:title="Antibodies-Secondary"
+                value="SecondaryAntibody"/>
+            <item12
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Flow Cytometry Setup Beads"
+                value="FlowCytometryProduct"/>
+            <item13
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Vectors"
+                value="VectorBvProduct"/>
+            <item14
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Magnetic Cell Separation"
+                value="MagCellSepProduct"/>
+            <item15
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Buffers/Solutions"
+                value="BufferSolutionProduct"/>
+            <item16
+                jcr:primaryType="nt:unstructured" 
+                jcr:title="Dyes/Probes"
+                value="DyeProbeProduct"/>
+            <item17
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Kits/Sets/Pairs"
+                value="KitProduct"/>
+            <item18
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Peptides"
+                value="PeptideProduct"/>
+            <item19
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Proteins"
+                value="ProteinProduct"/>
+            <item20
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Antibody-Oligonucleotide Conjugates"
+                value="AntibodyOligonucleotideConjugates"/>
+            <item21
+                jcr:primaryType="nt:unstructured" 
+                jcr:title="Blood Collection Tube"
+                value="BloodCollectionTube"/>
+            <item22
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Safety Blood Collection Set"
+                value="SafetyBloodCollectionSet"/>
+            <item23
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Safety Blood Collection Needle"
+                value="SafetyBloodCollectionNeedle"/>
+            <item24
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Buffers/Solutions"
+                value="Buffers_Solutions"/>
+            <item25
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Promotional Kits"
+                value="PromotionalKits"/>
+		</list>
+       
+    </jcr:content>
+</jcr:root>

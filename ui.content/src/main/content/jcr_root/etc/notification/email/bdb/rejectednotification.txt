@@ -1,0 +1,14 @@
+emal from : noreply@bdbiosciences.com
+
+Sub: Content Rejected
+
+Hi BD Content Team,
+ 
+The page - ${payload} has been Rejected.
+ 
+Details of review process:
+Author : ${userid}
+Comments by author : ${feedback}
+ 
+-----------------------------------------------------------------
+Please do not reply to this mail as it is a system-generated email

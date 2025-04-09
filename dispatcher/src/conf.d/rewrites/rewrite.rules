@@ -1,0 +1,195 @@
+#
+# This file contains the rewrite rules, and can be customized.
+#
+# By default, it includes just the rewrite rules. You can
+# add rewrite rules to this file but you should still include
+# the default rewrite rules.
+
+# Include conf.d/rewrites/default_rewrite.rules
+# Commented out default_rewrite.rules and added the content below, with regex for IPV6
+
+# Prevent X-FORWARDED-FOR spoofing
+RewriteCond %{HTTP:X-Forwarded-For} !^$
+RewriteCond %{HTTP:X-Forwarded-For} !^\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}
+RewriteCond %{HTTP:X-Forwarded-For} !^(([0-9a-fA-F]{1,4}:){7,7}[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){1,7}:|([0-9a-fA-F]{1,4}:){1,6}:[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){1,5}(:[0-9a-fA-F]{1,4}){1,2}|([0-9a-fA-F]{1,4}:){1,4}(:[0-9a-fA-F]{1,4}){1,3}|([0-9a-fA-F]{1,4}:){1,3}(:[0-9a-fA-F]{1,4}){1,4}|([0-9a-fA-F]{1,4}:){1,2}(:[0-9a-fA-F]{1,4}){1,5}|[0-9a-fA-F]{1,4}:((:[0-9a-fA-F]{1,4}){1,6})|:((:[0-9a-fA-F]{1,4}){1,7}|:)|fe80:(:[0-9a-fA-F]{0,4}){0,4}%[0-9a-zA-Z]{1,}|::(ffff(:0{1,4}){0,1}:){0,1}((25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])\.){3,3}(25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])|([0-9a-fA-F]{1,4}:){1,4}:((25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])\.){3,3}(25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9]))
+RewriteRule .* - [F]
+
+# Uncomment to force HSTS protection
+# Header always set Strict-Transport-Security "max-age=63072000; includeSubdomains;"
+
+# Block wordpress DDOS Attempts
+RewriteRule ^.*xmlrpc.php - [F]
+RewriteCond %{HTTP_USER_AGENT} ^.*wordpress [NC]
+RewriteRule .* - [F]
+
+# Block wp-login
+RewriteRule ^.*wp-login - [F,NC,L]
+
+#Removing slash (if any) from the end internally
+RewriteRule ^(.+)/$ $1
+
+#sitemap and robots.txt
+RewriteRule ^/sitemap.xml$ /content/bdb/sitemap_index.xml [PT,L]
+RewriteRule ^/sitemap_index.xml$ /content/bdb/sitemap_index.xml [PT,L]
+RewriteRule ^/robots.txt$ /content/dam/bdb/robots.txt [PT,L]
+RewriteRule ^/country-selector$ /content/bdb/country-selector.html [PT,L]
+RewriteRule ^/favicon.png$ /content/dam/bdb/favicon.png [PT,L]
+
+# Search Page Redirection ( Shorten URL with Query Params)
+RewriteRule ^/content/bdb/(na|apac|latam|cn|eu)/([a-z]{2})/([a-z]{2}-[a-z]{2})/search-results(.*)$ /$3/search-results$4 [NE,R=301]
+
+#Redirect Rule for NA Region
+RewriteRule ^/?$ /en-us [R]
+RewriteRule ^/en-us/?$ /content/${CONTENT_FOLDER_NAME}/na/us/en-us/home-page.html [PT,L]
+RewriteRule ^/en-ca/?$ /content/${CONTENT_FOLDER_NAME}/na/ca/en-ca/home-page.html [PT,L]
+RewriteRule ^/fr-ca/?$ /content/${CONTENT_FOLDER_NAME}/na/ca/fr-ca/home-page.html [PT,L]
+
+#Redirect Rule for APAC Region
+RewriteRule ^/en-au/?$ /content/${CONTENT_FOLDER_NAME}/apac/au/en-au/home-page.html [PT,L]
+RewriteRule ^/en-nz/?$ /content/${CONTENT_FOLDER_NAME}/apac/nz/en-nz/home-page.html [PT,L]
+RewriteRule ^/en-tw/?$ /content/${CONTENT_FOLDER_NAME}/apac/tw/en-tw/home-page.html [PT,L]
+RewriteRule ^/en-kr/?$ /content/${CONTENT_FOLDER_NAME}/apac/kr/en-kr/home-page.html [PT,L]
+RewriteRule ^/ko-kr/?$ /content/${CONTENT_FOLDER_NAME}/apac/kr/ko-kr/home-page.html [PT,L]
+RewriteRule ^/en-in/?$ /content/${CONTENT_FOLDER_NAME}/apac/in/en-in/home-page.html [PT,L]
+RewriteRule ^/en-sg/?$ /content/${CONTENT_FOLDER_NAME}/apac/sg/en-sg/home-page.html [PT,L]
+RewriteRule ^/ja-jp/?$ /content/${CONTENT_FOLDER_NAME}/apac/jp/ja-jp/home-page.html [PT,L]
+RewriteRule ^/en-jp/?$ /content/${CONTENT_FOLDER_NAME}/apac/jp/en-jp/home-page.html [PT,L]
+RewriteRule ^/zh-cn/?$ /content/${CONTENT_FOLDER_NAME}/cn/cn/zh-cn/home-page.html [PT,L]
+
+#Redirect Rule for LATAM Region
+RewriteRule ^/en-br/?$ /content/${CONTENT_FOLDER_NAME}/latam/br/en-br/home-page.html [PT,L]
+
+#Redirect Rule for Europe Region
+RewriteRule ^/en-at/?$ /content/${CONTENT_FOLDER_NAME}/eu/at/en-at/home-page.html [PT,L]
+RewriteRule ^/en-be/?$ /content/${CONTENT_FOLDER_NAME}/eu/be/en-be/home-page.html [PT,L]
+RewriteRule ^/en-dk/?$ /content/${CONTENT_FOLDER_NAME}/eu/dk/en-dk/home-page.html [PT,L]
+RewriteRule ^/en-fi/?$ /content/${CONTENT_FOLDER_NAME}/eu/fi/en-fi/home-page.html [PT,L]
+RewriteRule ^/en-fr/?$ /content/${CONTENT_FOLDER_NAME}/eu/fr/en-fr/home-page.html [PT,L]
+RewriteRule ^/fr-fr/?$ /content/${CONTENT_FOLDER_NAME}/eu/fr/fr-fr/home-page.html [PT,L]
+RewriteRule ^/en-de/?$ /content/${CONTENT_FOLDER_NAME}/eu/de/en-de/home-page.html [PT,L]
+RewriteRule ^/en-ie/?$ /content/${CONTENT_FOLDER_NAME}/eu/ie/en-ie/home-page.html [PT,L]
+RewriteRule ^/en-it/?$ /content/${CONTENT_FOLDER_NAME}/eu/it/en-it/home-page.html [PT,L]
+RewriteRule ^/en-lu/?$ /content/${CONTENT_FOLDER_NAME}/eu/lu/en-lu/home-page.html [PT,L]
+RewriteRule ^/en-nl/?$ /content/${CONTENT_FOLDER_NAME}/eu/nl/en-nl/home-page.html [PT,L]
+RewriteRule ^/en-no/?$ /content/${CONTENT_FOLDER_NAME}/eu/no/en-no/home-page.html [PT,L]
+RewriteRule ^/en-pl/?$ /content/${CONTENT_FOLDER_NAME}/eu/pl/en-pl/home-page.html [PT,L]
+RewriteRule ^/en-pt/?$ /content/${CONTENT_FOLDER_NAME}/eu/pt/en-pt/home-page.html [PT,L]
+RewriteRule ^/en-es/?$ /content/${CONTENT_FOLDER_NAME}/eu/es/en-es/home-page.html [PT,L]
+RewriteRule ^/en-se/?$ /content/${CONTENT_FOLDER_NAME}/eu/se/en-se/home-page.html [PT,L]
+RewriteRule ^/en-ch/?$ /content/${CONTENT_FOLDER_NAME}/eu/ch/en-ch/home-page.html [PT,L]
+RewriteRule ^/en-gb/?$ /content/${CONTENT_FOLDER_NAME}/eu/gb/en-gb/home-page.html [PT,L]
+RewriteRule ^/en-il/?$ /content/${CONTENT_FOLDER_NAME}/eu/il/en-il/home-page.html [PT,L]
+RewriteRule ^/en-eu/?$ /content/${CONTENT_FOLDER_NAME}/eu/eu/en-eu/home-page.html [PT,L]
+
+# rewrite for NA pdp pages
+RewriteRule ^/en-us/products/(.+)/([^/.]+)([(.)])([^?]+) /content/bdb/na/us/en-us/products/$1/pdp.$2$3$4.html [PT,L]
+RewriteRule ^/en-ca/products/(.+)/([^/.]+)([(.)])([^?]+) /content/bdb/na/ca/en-ca/products/$1/pdp.$2$3$4.html [PT,L]
+RewriteRule ^/fr-ca/products/(.+)/([^/.]+)([(.)])([^?]+) /content/bdb/na/ca/fr-ca/products/$1/pdp.$2$3$4.html [PT,L]
+
+# rewrite for APAC pdp pages
+RewriteRule ^/en-au/products/(.+)/([^/.]+)([(.)])([^?]+) /content/bdb/apac/au/en-au/products/$1/pdp.$2$3$4.html [PT,L]
+RewriteRule ^/en-nz/products/(.+)/([^/.]+)([(.)])([^?]+) /content/bdb/apac/nz/en-nz/products/$1/pdp.$2$3$4.html [PT,L]
+RewriteRule ^/en-tw/products/(.+)/([^/.]+)([(.)])([^?]+) /content/bdb/apac/tw/en-tw/products/$1/pdp.$2$3$4.html [PT,L]
+RewriteRule ^/en-kr/products/(.+)/([^/.]+)([(.)])([^?]+) /content/bdb/apac/kr/en-kr/products/$1/pdp.$2$3$4.html [PT,L]
+RewriteRule ^/ko-kr/products/(.+)/([^/.]+)([(.)])([^?]+) /content/bdb/apac/kr/ko-kr/products/$1/pdp.$2$3$4.html [PT,L]
+RewriteRule ^/en-in/products/(.+)/([^/.]+)([(.)])([^?]+) /content/bdb/apac/in/en-in/products/$1/pdp.$2$3$4.html [PT,L]
+RewriteRule ^/en-sg/products/(.+)/([^/.]+)([(.)])([^?]+) /content/bdb/apac/sg/en-sg/products/$1/pdp.$2$3$4.html [PT,L]
+RewriteRule ^/ja-jp/products/(.+)/([^/.]+)([(.)])([^?]+) /content/bdb/apac/jp/ja-jp/products/$1/pdp.$2$3$4.html [PT,L]
+RewriteRule ^/en-jp/products/(.+)/([^/.]+)([(.)])([^?]+) /content/bdb/apac/jp/en-jp/products/$1/pdp.$2$3$4.html [PT,L]
+RewriteRule ^/zh-cn/products/(.+)/([^/.]+)([(.)])([^?]+) /content/bdb/cn/cn/zh-cn/products/$1/pdp.$2$3$4.html [PT,L]
+
+# rewrite for LATAM pdp pages
+RewriteRule ^/en-br/products/(.+)/([^/.]+)([(.)])([^?]+) /content/bdb/latam/br/en-br/products/$1/pdp.$2$3$4.html [PT,L]
+
+# rewrite for EUROPE pdp pages
+RewriteRule ^/en-at/products/(.+)/([^/.]+)([(.)])([^?]+) /content/bdb/eu/at/en-at/products/$1/pdp.$2$3$4.html [PT,L]
+RewriteRule ^/en-be/products/(.+)/([^/.]+)([(.)])([^?]+) /content/bdb/eu/be/en-be/products/$1/pdp.$2$3$4.html [PT,L]
+RewriteRule ^/en-dk/products/(.+)/([^/.]+)([(.)])([^?]+) /content/bdb/eu/dk/en-dk/products/$1/pdp.$2$3$4.html [PT,L]
+RewriteRule ^/en-fi/products/(.+)/([^/.]+)([(.)])([^?]+) /content/bdb/eu/fi/en-fi/products/$1/pdp.$2$3$4.html [PT,L]
+RewriteRule ^/en-fr/products/(.+)/([^/.]+)([(.)])([^?]+) /content/bdb/eu/fr/en-fr/products/$1/pdp.$2$3$4.html [PT,L]
+RewriteRule ^/fr-fr/products/(.+)/([^/.]+)([(.)])([^?]+) /content/bdb/eu/fr/fr-fr/products/$1/pdp.$2$3$4.html [PT,L]
+RewriteRule ^/en-de/products/(.+)/([^/.]+)([(.)])([^?]+) /content/bdb/eu/de/en-de/products/$1/pdp.$2$3$4.html [PT,L]
+RewriteRule ^/en-ie/products/(.+)/([^/.]+)([(.)])([^?]+) /content/bdb/eu/ie/en-ie/products/$1/pdp.$2$3$4.html [PT,L]
+RewriteRule ^/en-it/products/(.+)/([^/.]+)([(.)])([^?]+) /content/bdb/eu/it/en-it/products/$1/pdp.$2$3$4.html [PT,L]
+RewriteRule ^/en-lu/products/(.+)/([^/.]+)([(.)])([^?]+) /content/bdb/eu/lu/en-lu/products/$1/pdp.$2$3$4.html [PT,L]
+RewriteRule ^/en-nl/products/(.+)/([^/.]+)([(.)])([^?]+) /content/bdb/eu/nl/en-nl/products/$1/pdp.$2$3$4.html [PT,L]
+RewriteRule ^/en-no/products/(.+)/([^/.]+)([(.)])([^?]+) /content/bdb/eu/no/en-no/products/$1/pdp.$2$3$4.html [PT,L]
+RewriteRule ^/en-pl/products/(.+)/([^/.]+)([(.)])([^?]+) /content/bdb/eu/pl/en-pl/products/$1/pdp.$2$3$4.html [PT,L]
+RewriteRule ^/en-pt/products/(.+)/([^/.]+)([(.)])([^?]+) /content/bdb/eu/pt/en-pt/products/$1/pdp.$2$3$4.html [PT,L]
+RewriteRule ^/en-es/products/(.+)/([^/.]+)([(.)])([^?]+) /content/bdb/eu/es/en-es/products/$1/pdp.$2$3$4.html [PT,L]
+RewriteRule ^/en-se/products/(.+)/([^/.]+)([(.)])([^?]+) /content/bdb/eu/se/en-se/products/$1/pdp.$2$3$4.html [PT,L]
+RewriteRule ^/en-ch/products/(.+)/([^/.]+)([(.)])([^?]+) /content/bdb/eu/ch/en-ch/products/$1/pdp.$2$3$4.html [PT,L]
+RewriteRule ^/en-gb/products/(.+)/([^/.]+)([(.)])([^?]+) /content/bdb/eu/gb/en-gb/products/$1/pdp.$2$3$4.html [PT,L]
+RewriteRule ^/en-il/products/(.+)/([^/.]+)([(.)])([^?]+) /content/bdb/eu/il/en-il/products/$1/pdp.$2$3$4.html [PT,L]
+RewriteRule ^/en-eu/products/(.+)/([^/.]+)([(.)])([^?]+) /content/bdb/eu/eu/en-eu/products/$1/pdp.$2$3$4.html [PT,L]
+
+
+#Generic page rules
+#Redirect Rule for NA Region
+RewriteRule "^/en-us/(.*)" "/content/${CONTENT_FOLDER_NAME}/na/us/en-us/$1.html" [PT,L]
+RewriteRule "^/en-ca/(.*)" "/content/${CONTENT_FOLDER_NAME}/na/ca/en-ca/$1.html" [PT,L]
+RewriteRule "^/fr-ca/(.*)" "/content/${CONTENT_FOLDER_NAME}/na/ca/fr-ca/$1.html" [PT,L]
+
+#Redirect Rule for APAC Region
+RewriteRule "^/en-au/(.*)" "/content/${CONTENT_FOLDER_NAME}/apac/au/en-au/$1.html" [PT,L]
+RewriteRule "^/en-nz/(.*)" "/content/${CONTENT_FOLDER_NAME}/apac/nz/en-nz/$1.html" [PT,L]
+RewriteRule "^/en-tw/(.*)" "/content/${CONTENT_FOLDER_NAME}/apac/tw/en-tw/$1.html" [PT,L]
+RewriteRule "^/en-kr/(.*)" "/content/${CONTENT_FOLDER_NAME}/apac/kr/en-kr/$1.html" [PT,L]
+RewriteRule "^/ko-kr/(.*)" "/content/${CONTENT_FOLDER_NAME}/apac/kr/ko-kr/$1.html" [PT,L]
+RewriteRule "^/en-in/(.*)" "/content/${CONTENT_FOLDER_NAME}/apac/in/en-in/$1.html" [PT,L]
+RewriteRule "^/en-sg/(.*)" "/content/${CONTENT_FOLDER_NAME}/apac/sg/en-sg/$1.html" [PT,L]
+RewriteRule "^/ja-jp/(.*)" "/content/${CONTENT_FOLDER_NAME}/apac/jp/ja-jp/$1.html" [PT,L]
+RewriteRule "^/en-jp/(.*)" "/content/${CONTENT_FOLDER_NAME}/apac/jp/en-jp/$1.html" [PT,L]
+RewriteRule "^/zh-cn/(.*)" "/content/${CONTENT_FOLDER_NAME}/cn/cn/zh-cn/$1.html" [PT,L]
+
+#Redirect Rule for LATAM Region
+RewriteRule "^/en-br/(.*)" "/content/${CONTENT_FOLDER_NAME}/latam/br/en-br/$1.html" [PT,L]
+
+#Redirect Rule for Europe Region
+RewriteRule "^/en-at/(.*)" "/content/${CONTENT_FOLDER_NAME}/eu/at/en-at/$1.html" [PT,L]
+RewriteRule "^/en-be/(.*)" "/content/${CONTENT_FOLDER_NAME}/eu/be/en-be/$1.html" [PT,L]
+RewriteRule "^/en-dk/(.*)" "/content/${CONTENT_FOLDER_NAME}/eu/dk/en-dk/$1.html" [PT,L]
+RewriteRule "^/en-fi/(.*)" "/content/${CONTENT_FOLDER_NAME}/eu/fi/en-fi/$1.html" [PT,L]
+RewriteRule "^/en-fr/(.*)" "/content/${CONTENT_FOLDER_NAME}/eu/fr/en-fr/$1.html" [PT,L]
+RewriteRule "^/fr-fr/(.*)" "/content/${CONTENT_FOLDER_NAME}/eu/fr/fr-fr/$1.html" [PT,L]
+RewriteRule "^/en-de/(.*)" "/content/${CONTENT_FOLDER_NAME}/eu/de/en-de/$1.html" [PT,L]
+RewriteRule "^/en-ie/(.*)" "/content/${CONTENT_FOLDER_NAME}/eu/ie/en-ie/$1.html" [PT,L]
+RewriteRule "^/en-it/(.*)" "/content/${CONTENT_FOLDER_NAME}/eu/it/en-it/$1.html" [PT,L]
+RewriteRule "^/en-lu/(.*)" "/content/${CONTENT_FOLDER_NAME}/eu/lu/en-lu/$1.html" [PT,L]
+RewriteRule "^/en-nl/(.*)" "/content/${CONTENT_FOLDER_NAME}/eu/nl/en-nl/$1.html" [PT,L]
+RewriteRule "^/en-no/(.*)" "/content/${CONTENT_FOLDER_NAME}/eu/no/en-no/$1.html" [PT,L]
+RewriteRule "^/en-pl/(.*)" "/content/${CONTENT_FOLDER_NAME}/eu/pl/en-pl/$1.html" [PT,L]
+RewriteRule "^/en-pt/(.*)" "/content/${CONTENT_FOLDER_NAME}/eu/pt/en-pt/$1.html" [PT,L]
+RewriteRule "^/en-es/(.*)" "/content/${CONTENT_FOLDER_NAME}/eu/es/en-es/$1.html" [PT,L]
+RewriteRule "^/en-se/(.*)" "/content/${CONTENT_FOLDER_NAME}/eu/se/en-se/$1.html" [PT,L]
+RewriteRule "^/en-ch/(.*)" "/content/${CONTENT_FOLDER_NAME}/eu/ch/en-ch/$1.html" [PT,L]
+RewriteRule "^/en-gb/(.*)" "/content/${CONTENT_FOLDER_NAME}/eu/gb/en-gb/$1.html" [PT,L]
+RewriteRule "^/en-il/(.*)" "/content/${CONTENT_FOLDER_NAME}/eu/il/en-il/$1.html" [PT,L]
+RewriteRule "^/en-eu/(.*)" "/content/${CONTENT_FOLDER_NAME}/eu/eu/en-eu/$1.html" [PT,L]
+
+
+#Catch all for rest of the pages
+RewriteCond %{REQUEST_URI} !^/apps
+RewriteCond %{REQUEST_URI} !^/bin
+RewriteCond %{REQUEST_URI} !^/content
+RewriteCond %{REQUEST_URI} !^/etc
+RewriteCond %{REQUEST_URI} !^/home
+RewriteCond %{REQUEST_URI} !^/libs
+RewriteCond %{REQUEST_URI} !^/saml_login
+RewriteCond %{REQUEST_URI} !^/system
+RewriteCond %{REQUEST_URI} !^/tmp
+RewriteCond %{REQUEST_URI} !^/var
+RewriteCond %{REQUEST_URI} (.html|.jpe?g|.png|.svg)$
+RewriteCond %{REQUEST_URI} !^/p/(.+)
+RewriteCond %{REQUEST_URI} !^/c/(.+)
+RewriteRule ^/(.*)$ /content/${CONTENT_FOLDER_NAME}/$1 [PT,L]
+
+RewriteRule "/bin/services/punchout_service(.*)" "/content/bdb/paths/external/punch-out-authentication$1" [PT,L]
+RewriteRule "/bin/ssocustomerlogin(.*)" "/content/bdb/paths/sso-customer-login$1" [PT,L]
+RewriteRule "/bin/purchasingacctuploaddoc(.*)" "/content/bdb/paths/upload-purchase-account-document$1" [PT,L]
+RewriteRule "/bin/userregistrationapiservlet(.*)" "/content/bdb/paths/register-user$1" [PT,L]
+RewriteRule "/bin/eligibleproductapiservlet(.*)" "/content/bdb/paths/eligible-products-api$1" [PT,L]
+
+#Redirect Rule for bookmarked Asset's URLs post migration
+RewriteCond %{REQUEST_URI} ^/(?!.+xxx/.+xx).+$
+RewriteRule "^/content/dam/${CONTENT_FOLDER_NAME}/products/global/(.[^_]+)/([^_]+)(.)(.{2}+_base)/pdf/(.+)" "/content/dam/${CONTENT_FOLDER_NAME}/products/global/$1/$2xxx/$2$3xx/$2$3$4/pdf/$5" [R,L]

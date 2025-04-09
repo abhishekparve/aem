@@ -1,0 +1,71 @@
+<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html"
+    data-sly-call="${templates.placeholder @ isEmpty = true}"></sly>
+<sly data-sly-test="${!pageProperties.hideBreadcrumb}"
+     data-sly-use.breadcrumbModel="com.bdb.aem.core.models.BreadcrumbModel">
+        <div class="d-flex bdb-header__breadcrumbs-container col-12 px-0">
+         <div class="position-absolute bdb-header__breadcrumbs-container-border w-100 "></div>
+            <nav aria-label="Breadcrumb" class="bd-container w-100 container px-0 bdb-header__breadcrumbs-container-nav">
+                <sly data-sly-test="${breadcrumbModel.breadcrumbMap.size > 1}">
+
+                    <ul class="breadcrumb clear-initial-trail mb-0 d-none d-lg-flex"
+                        data-sly-list.breadcrumbItems="${breadcrumbModel.breadcrumbMap}">
+
+                        <sly data-sly-test="${breadcrumbItemsList.first && breadcrumbItemsList.first!=breadcrumbItemsList.last}">
+                            <li class="breadcrumb-item" data-breadcrumb-itemname="${breadcrumbItems.breadcrumbTitle}">
+                                <a  href="javascript:void(0);" aria-label="${breadcrumbItems.breadcrumbTitle}" class="text-white">
+                                    ${breadcrumbItems.breadcrumbTitle @context='html'}
+                                </a>
+                            </li>
+                        </sly>
+
+                        <li class="breadcrumb-item eclipse bdb-header__eclipse d-none">
+                            <img class="bi-three-dots cursor-pointer" alt="Eclipse menu"
+                                src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/dots-to-expand.svg"/>
+                        </li>
+                        <sly data-sly-test="${breadcrumbItemsList.middle}">
+                            <li class="breadcrumb-item bdb-header__breadcrumbs-menus" data-breadcrumb-menuname="${breadcrumbItems.breadcrumbTitle}">
+                                <a href="${breadcrumbItems.breadcrumbPath}" aria-label="${breadcrumbItems.breadcrumbTitle}" class="text-white">
+                                    ${breadcrumbItems.breadcrumbTitle @context='html'}
+                                </a>
+                            </li>
+                        </sly>
+
+                        <sly data-sly-test="${breadcrumbItemsList.last && breadcrumbItems.pageName != 'pdp'}">
+                                <li class="breadcrumb-item bdb-header__breadcrumbs-menus">
+                                    <span class="text-white">${breadcrumbItems.breadcrumbTitle @context='html'}</span>
+                        </sly>
+                        <sly data-sly-test="${breadcrumbItemsList.last && breadcrumbItems.pageName == 'pdp'}">
+							<sly data-sly-test="${breadcrumbModel.pdpProductName}">
+                            	<li class="breadcrumb-item bdb-header__breadcrumbs-menus">
+                                    <span class="text-white">${breadcrumbModel.pdpProductName @context='html'}</span>
+                            </sly>
+                            <sly data-sly-test="${!breadcrumbModel.pdpProductName}">
+                            	<li class="breadcrumb-item bdb-header__breadcrumbs-menus">
+                                    <span class="text-white">${breadcrumbItems.breadcrumbTitle @context='html'}</span>
+                                </li>
+                            </sly>
+                        </sly>
+
+                    </ul>
+
+
+					<ul class="breadcrumb clear-initial-trail mb-0 d-flex d-lg-none align-items-center ml-3 "
+					data-sly-list.breadcrumbMobileItems="${breadcrumbModel.breadcrumbMobileMap}">
+					<li class="breadcrumb-item bdb-header__back-arrow back-arrow pl-1">
+						<a href="">
+							<img class="mt-1" alt="Breadcrumbs Link"
+								src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/Arrow-left-white.svg"/>
+						</a>
+					</li>
+					<li class="bdb-header__breadcrumbs-menus pl-2" data-breadcrumb-menuname="${breadcrumbMobileItems.breadcrumbTitle}" >
+
+
+						<a href="${breadcrumbMobileItems.breadcrumbPath}" aria-label="${breadcrumbMobileItems.breadcrumbTitle}" class="text-white">
+							${breadcrumbMobileItems.breadcrumbTitle @context='html'}
+						</a>
+					</li>
+					</ul>
+                </sly>
+            </nav>
+        </div>
+    </sly>

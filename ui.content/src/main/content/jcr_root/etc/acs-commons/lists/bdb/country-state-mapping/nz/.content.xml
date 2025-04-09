@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2020-02-10T19:58:18.423+05:30"
+        cq:lastModifiedBy="admin"
+        jcr:primaryType="nt:unstructured"
+        jcr:title="New Zealand"
+        sling:resourceType="acs-commons/components/utilities/genericlist"
+        value="NZ">
+        <image
+            jcr:primaryType="nt:unstructured"
+            fileReference="/apps/acs-commons/components/utilities/genericlist/generic-list.png"/>
+        <list jcr:primaryType="nt:unstructured">
+        <item0
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Auckland"
+                value="NZ-AKL"/>
+        <item1
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Tasman"
+                value="NZ-TAS"/>
+        <item2
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Nelson"
+                value="NZ-NLS"/>
+        <item3
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Marlborough"
+                value="NZ-MRL"/>
+        <item4
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Gisborne"
+                value="NZ-GIS"/>
+        <item5
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Wellington"
+                value="NZ-WLG"/>
+        <item6
+                jcr:primaryType="nt:unstructured"
+                jcr:title="West Coast"
+                value="NZ-WEC"/>
+        <item7
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Waikato"
+                value="NZ-WAI"/>
+        <item8
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Taranaki"
+                value="NZ-TAR"/>
+        <item9
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Southland"
+                value="NZ-STL"/>
+        <item10
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Otago"
+                value="NZ-OTA"/>
+        <item11
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Northland"
+                value="NZ-NTL"/>
+        <item12
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Manawatu-Wanganui"
+                value="NZ-MAN"/>
+        <item13
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Hawke's Bay"
+                value="NZ-HAB"/>
+        <item14
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Canterbury"
+                value="NZ-CAN"/>
+        <item15
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Bay of Plenty"
+                value="NZ-BOP"/>
+        </list>
+    </jcr:content>
+</jcr:root>

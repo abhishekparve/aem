@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2020-02-06T14:35:01.856+05:30"
+        cq:lastModifiedBy="admin"
+        jcr:primaryType="nt:unstructured"
+        jcr:title="Canada"
+        sling:resourceType="acs-commons/components/utilities/genericlist"
+        value="CA">
+        <image
+            jcr:primaryType="nt:unstructured"
+            fileReference="/apps/acs-commons/components/utilities/genericlist/generic-list.png"/>
+        <list jcr:primaryType="nt:unstructured">
+            <item0
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Alberta"
+                value="CA-AB"/>
+            <item1
+                jcr:primaryType="nt:unstructured"
+                jcr:title="British Columbia"
+                value="CA-BC"/>
+            <item2
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Manitoba"
+                value="CA-MB"/>
+            <item3
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Newfoundland and Labrador"
+                value="CA-NL"/>
+            <item4
+                jcr:primaryType="nt:unstructured"
+                jcr:title="New Brunswick"
+                value="CA-NB"/>
+            <item5
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Northwest Territories"
+                value="CA-NT"/>
+            <item6
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Nova Scotia"
+                value="CA-NS"/>
+            <item7
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Nunavut"
+                value="CA-NU"/>
+            <item8
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Ontario"
+                value="CA-ON"/>
+            <item9
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Prince Edward Island"
+                value="CA-PE"/>
+            <item10
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Quebec"
+                value="CA-QC"/>
+            <item11
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Saskatchewan"
+                value="CA-SK"/>
+            <item12
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Yukon"
+                value="CA-YT"/>
+        </list>
+    </jcr:content>
+</jcr:root>

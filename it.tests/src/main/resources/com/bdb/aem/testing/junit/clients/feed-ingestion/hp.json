@@ -1,0 +1,184 @@
+{
+  "products": [
+    {
+      "productType": "SingColorPureAntibody",
+      "baseMaterialNumber": "000000_base",
+      "pdpTemplate": "SFA",
+      "superCategory": "Functional Test",
+      "keywords": "fucosyltransferase 4 FUT4 3-fucosyl-N-acetyllactosamine; Lewis X; 3-FAL; FUT4  alpha-(1,3)-fucosyltransferase 4;ELAM ligand fucosyltransferase; ELAM-1 ligand fucosyltransferase; Lewis X; alpha (1,3) fucosyltransferase, myeloid-specific; fucT-IV; fucosyltransferase IV; galactoside 3-L-fucosyltransferase; stage-specific embryonic antigen 1    Dot Blot, ELISA, Flow cytometry, Functional assay, Immunohistochemistry-formalin (antigen retrieval required), Reported, Reported, Reported, Reported, Routinely Tested, BD Pharmingen™",
+      "pageDescription": " <p>  The CD15 antibody, clone MMA, is derived from the hybridization of mouse P3-X63-Ag8. </p>",
+      "tdsDocumentType": "PUBLISHED_TDS",
+      "labelDescription": "Purified Mouse Anti-Human CD15",
+      "concentration": "1.0 mg/ml",
+      "storageBuffer": "Aqueous buffered solution containing ≤0.09% sodium azide.",
+      "tdsDescription": " <p>  The CD15 antibody, clone MMA, is derived from the hybridization of mouse P3-X63-Ag8.653   myeloma cells with spleen cells from BALB/c mice immunized with the U-937 histiocytic cell   line. </p> <p> </p> <p>  CD15 recognizes a human myelomonocytic antigen. The structure recognized by CD15   antibodies is lacto-N-fucopentose III. </p>",
+      "productNotices": "<ol><li>Since applications vary, each investigator should titrate the reagent to obtain optimal results.</li><li>Please refer to www.bdbiosciences.com/us/s/resources for technical protocols.</li><li>Caution: Sodium azide yields highly toxic hydrazoic acid under acidic conditions. Dilute azide compounds in running water before discarding to avoid accumulation of potentially explosive deposits in plumbing.</li></ol>",
+      "sizeQty": "0.2",
+      "sizeUOM": "mg",
+      "preparationStorage": "The monoclonal antibody was purified from tissue culture supernatant or ascites by affinity chromatography. Store undiluted at 4°C.",
+      "addPreparationStorage": "The monoclonal antibody was purified from tissue culture supernatant or ascites by affinity chromatography. Store undiluted at 4°C.",
+      "recomAssayProcedure": " <p>  <b>Functional Studies: </b>  Anti-Lewis[x] monoclonal antibody (clone MMA) has been used to determine Le[x] expression   on normal and neoplastic cells in studies of tumor metastasis, together with sialyl-Le[x]   (CD15s), E-selectin (CD62E) and Pselectin (CD62P) monoclonal antibodies.  </p> <p> </p> <p>  <b>Immunohistology: </b>  Anti-Lewis[x] monoclonal antibody (clone MMA) can be used in staining formalin-fixed   paraffin-embedded tissue sections of normal prostate, colon, stomach, brain and lymphoid   tissues, adenocarcinomas of lung and urinary bladder. The MMA monoclonal antibody also   stains neuraminidase-treated, formalin-fixed, paraffin-embedded sections of normal,   metaplastic and neoplastic cervical epithelium.  </p> <p> </p> <p>  <b>Immunoblotting: </b>  Anti-Lewis[x] monoclonal antibody (clone MMA) can be used to detect Le[x] in membranous   glycoprotein cell or tissue extracts by immunoblotting. </p> <p> </p> <p>  <b>Cell ELISA: </b>  Anti-Lewis[x] monoclonal antibody (clone MMA) can be used to detect Le[x] on HL-60   promyelocytic, HT-29 colon cancer or F9 teratocarcinoma cells.  </p>",
+      "brand": "BD Pharmingen™",
+      "productApprovalStatus": "approved",
+      "dataSource": "HP",
+      "tdsRevision": "9",
+      "isDriedReagent": "No",
+      "isSirigenDye": "No",
+      "rrid": "AB_397181",
+      "isVariantOnly": "",
+      "bdFormat": [
+        {
+          "dyeName": "Purified",
+          "formatStatement": "",
+          "emmisionmax": "",
+          "excitationmax": "",
+          "laserColor": "",
+          "laserWavelength": ""
+        }
+      ],
+      "productApplicationTest": [
+        {
+          "baseMaterialNumber": "000000_base",
+          "applicationName": "",
+          "applicationStatus": "RT",
+          "applicationDesc": "",
+          "applicationStatusDesc": "Routinely Tested"
+        },
+        {
+          "baseMaterialNumber": "000000_base",
+          "applicationName": "",
+          "applicationStatus": "RP",
+          "applicationDesc": "",
+          "applicationStatusDesc": "Reported"
+        }
+      ],
+      "medias": [
+        
+      ],
+      "variants": [
+        {
+          "baseMaterialNumber": "000000_base",
+          "materialNumber": "000000",
+          "tdsRevision": "9",
+          "sizeQty": "0.2",
+          "sizeUOM": "mg"
+        }
+      ],
+      "referenceDetails": [
+        {
+          "HPReferenceID": "HP25421_000000",
+          "citationdata": "Hanjan SN, Kearney JF, Cooper MD. A monoclonal antibody (MMA) that identifies a differentiation antigen on human myelomonocytic cells. Clin Immunol Immunopathol. 1982 May23(2):172-188. (Biology: Functional assay, Immunohistochemistry-formalin (antigen retrieval required), Dot Blot, ELISA, Flow cytometry).",
+          "pubMedId": "6179666"
+        },
+        {
+          "HPReferenceID": "HP25422_000000",
+          "citationdata": "Hsu SM, Huang LC, Hsu PL, et al. Biochemical and ultrastructural study of Leu M1 antigen in Reed-Sternberg cells: comparison with granulocytes and interdigitating reticulum cells. J Natl Cancer Inst. 1986 August77(2):363-370. (Biology: Functional assay, Immunohistochemistry-formalin (antigen retrieval required), Dot Blot, ELISA, Flow cytometry).",
+          "pubMedId": "3090338"
+        },
+        {
+          "HPReferenceID": "HP25423_000000",
+          "citationdata": "Narita T, Funahashi H, Satoh Y, Watanabe T, Sakamoto J, Takagi H. Association of expression of blood group-related carbohydrate antigens with prognosis in breast cancer. Cancer. 1993 May71(10):3044-3053. (Biology: Functional assay, Immunohistochemistry-formalin (antigen retrieval required), Dot Blot, ELISA, Flow cytometry).",
+          "pubMedId": "8490832"
+        },
+        {
+          "HPReferenceID": "HP25424_000000",
+          "citationdata": "Ma CK, Zarbo RJ, Frierson HF Jr, Lee MW. Comparative immunohistochemical study of primary and metastatic carcinomas of the liver. Am J Clin Pathol. 1993 May99(5):551-557. (Biology: Functional assay, Immunohistochemistry-formalin (antigen retrieval required), Dot Blot, ELISA, Flow cytometry).",
+          "pubMedId": "7684185"
+        },
+        {
+          "HPReferenceID": "HP25425_000000",
+          "citationdata": "O'Hara CJ, Corson JM, Pinkus GS, Stahel RA. ME1. A monoclonal antibody that distinguishes epithelial-type malignant mesothelioma from pulmonary adenocarcinoma and extrapulmonary malignancies. Am J Clin Pathol. 1990 Februaru136(2):421-428. (Biology: Functional assay, Immunohistochemistry-formalin (antigen retrieval required), Dot Blot, ELISA, Flow cytometry).",
+          "pubMedId": "2305835"
+        },
+        {
+          "HPReferenceID": "HP25426_000000",
+          "citationdata": "Grignon DJ, Ro JY, Ayala AG, Johnson DE, Ordóñez NG. Primary adenocarcinoma of the urinary bladder. A clinicopathologic analysis of 72 cases. Cancer. 1991 April67(8):2165-2172. (Biology: Functional assay, Immunohistochemistry-formalin (antigen retrieval required), Dot Blot, ELISA, Flow cytometry).",
+          "pubMedId": "1706216"
+        },
+        {
+          "HPReferenceID": "HP18505_000000",
+          "citationdata": "Groves RW, Allen MH, Ross EL, Ahsan G, Barker JN, MacDonald DM. Expression of selectin ligands by cutaneous squamous cell carcinoma. Am J Pathol. 1993143(4):1220-1225. (Biology: Functional assay, Immunohistochemistry-formalin (antigen retrieval required), Dot Blot, ELISA, Flow cytometry).",
+          "pubMedId": "7692735"
+        },
+        {
+          "HPReferenceID": "HP22864_000000",
+          "citationdata": "Zhou Q, Moore KL, Smith DF, Varki A, McEver RP, Cummings RD. The selectin GMP-140 binds to sialylated, fucosylated lactosaminoglycans on both myeloid and nonmyeloid cells. J Cell Biol. 1991115(2):557-564. (Biology: Functional assay, Immunohistochemistry-formalin (antigen retrieval required), Dot Blot, ELISA, Flow cytometry).",
+          "pubMedId": "1717488"
+        },
+        {
+          "HPReferenceID": "HP25427_000000",
+          "citationdata": "Bevilacqua MP, Nelson RM. Endothelial-leukocyte adhesion molecules in inflammation and metastasis. Thromb Haemost. 1993 July70(1):152-154. (Biology: Functional assay, Immunohistochemistry-formalin (antigen retrieval required), Dot Blot, ELISA, Flow cytometry).",
+          "pubMedId": "8236092"
+        },
+        {
+          "HPReferenceID": "HP25428_000000",
+          "citationdata": "McCormick BA, Zetter BR. Adhesive interactions in angiogenesis and metastasis. Pharmacol Ther. 199253(2):239-260. (Biology: Functional assay, Immunohistochemistry-formalin (antigen retrieval required), Dot Blot, ELISA, Flow cytometry).",
+          "pubMedId": "1641408"
+        },
+        {
+          "HPReferenceID": "HP25429_000000",
+          "citationdata": "Paties C, Taccagni GL, Papotti M, Valente G, Zangrandi A, Aloi F. Apocrine carcinoma of the skin. A clinicopathologic, immunocytochemical, and ultrastructural study. Cancer. 1993 January71(2):375-381. (Biology: Functional assay, Immunohistochemistry-formalin (antigen retrieval required), Dot Blot, ELISA, Flow cytometry).",
+          "pubMedId": "7678545"
+        },
+        {
+          "HPReferenceID": "HP25430_000000",
+          "citationdata": "García Prats MD, López Carreira M, Martínez-González MA, Ballestín C, Gil R, De Prada I. Granular cell basal cell carcinoma. Light microscopy, immunohistochemical and ultrastructural study. Virchows Arch A Pathol Anat Histopathol. 1993422(2):173-177. (Biology: Functional assay, Immunohistochemistry-formalin (antigen retrieval required), Dot Blot, ELISA, Flow cytometry).",
+          "pubMedId": "7682021"
+        },
+        {
+          "HPReferenceID": "HP25431_000000",
+          "citationdata": "Torii A, Nakayama A, Harada A, et al. Expression of the CD15 antigen in hepatocellular carcinoma. Cancer. 1993 June71(2):3864-3867. (Biology: Functional assay, Immunohistochemistry-formalin (antigen retrieval required), Dot Blot, ELISA, Flow cytometry).",
+          "pubMedId": "7685236"
+        }
+      ],
+      "speciesReactivity": [
+        {
+          "baseMaterialNumber": "000000_base",
+          "reactivityStatus": "",
+          "species": "Hu",
+          "reactivityStatusDesc": "",
+          "speciesDescription": "Human"
+        }
+      ],
+      "conjugate": [
+        {
+          "baseMaterialNumber": "000000_base",
+          "dyeName": "Purified",
+          "tdsCloneName": "MMA"
+        }
+      ],
+      "manufacturingComponent": [
+        
+      ],
+      "clone": [
+        {
+          "polyclonal": "FALSE",
+          "specificity": "CD15",
+          "hostStrain": "BALB/c",
+          "entrezGeneId": "2526",
+          "isoType": "IgM, κ",
+          "tdsCloneDisplayName": "MMA",
+          "workshopNumber": "",
+          "immunogen": "U-937 histiocytic cell line ",
+          "tdsCloneName": "MMA",
+          "hostSpecies": "Mouse",
+          "molecularWeight": ""
+        }
+      ],
+      "companionProduct": [
+        {
+          "baseMaterialNumber": "000000_base",
+          "companionMaterialNumber": "000000",
+          "companionOrdinal": "1",
+          "companionType": "Recommended"
+        },
+        {
+          "baseMaterialNumber": "000000_base",
+          "companionMaterialNumber": "000000",
+          "companionOrdinal": "2",
+          "companionType": "Recommended"
+        }
+      ]
+    }
+  ]
+}

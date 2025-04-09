@@ -1,0 +1,86 @@
+<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html" />
+<sly data-sly-call="${templates.placeholder @ isEmpty = !properties.type}"></sly>
+
+<sly data-sly-use.flowDiagramVerticalModel="com.bdb.aem.core.models.FlowDiagramVerticalModel"></sly>
+
+<div class="site-content-page">
+	<article class="app-js__vertical-tabs-component vertical-tabs-component__container ${properties.backgroundColor == 'gray-background' ? 'gray-background':'white-background'} ${properties.togglePaddingTop?'pt-2':''} ${properties.togglePaddingBottom?'pb-2':''}">
+		<div class="bd-container">
+			<div data-sly-test="${flowDiagramVerticalModel.componentTitle}" class="sitecontent">
+				<h2 class="sitecontent__title vertical-tabs-component__title">
+					<img data-sly-test="${flowDiagramVerticalModel.contentIcon}" src="${flowDiagramVerticalModel.contentIcon}" alt="title-icon" class="vertical-tabs-component__title-icon"/>
+					<span>${flowDiagramVerticalModel.componentTitle}</span>
+				</h2>
+				<h4 class="vertical-tabs-component__sub-title">${flowDiagramVerticalModel.subTitle}</h4>
+				<div class="tabs-component__tabs-data-container-rteText bd-rte mb-5">
+               		${flowDiagramVerticalModel.description @context='html'}
+               	</div>
+			</div>
+		
+	 		<div class="vertical-tabs-component-wrapper tab-section-remove ${properties.seeMore == 'yes' ? 'see-more-allowed':''}">
+	 			<section class="vertical-tabs-component">
+					  <div class="container">
+							 <nav class="vertical-tabs-component__menu-list">
+								<ul class="m-0 p-0" role="tablist" aria-label="site content tabs compoent">
+									<sly data-sly-list="${flowDiagramVerticalModel.tabSection}">
+										<li id="Tab ${itemList.count}" role="tab" data-tab=${itemList.index} data-tab-id="tab-${itemList.count}" data-tab-name="${item.tabUniqueName}"
+                                 				class="vertical-tabs-component__menu-list_item vertical-tabs-component__menu-list_item_tab-${itemList.count} ${itemList.index==0 ? 'active' : ''} text-center" aria-selected="true" aria-controls="tab-${itemList.count}">
+                                 					<span class="vertical-tabs-component__menu-list_item_text">${item.tabTitle @context='html'}</span>
+										</li>
+									</sly>
+								</ul>
+							</nav>
+					  </div>
+				</section>
+				<!--/* Render on Browser */-->
+				<div class="w-100">
+					<sly data-sly-list="${flowDiagramVerticalModel.tabSection}">
+						<sly data-sly-test="${!(wcmmode.edit || wcmmode.preview)}">
+						<section tabindex="0" role="tabpanel" class="vertical-tabs-component__tabs-data vertical-tabs-component__accordian_section ${item.tabBackgroundColor == 'gray-background' ? 'gray-background':'white-background'}" aria-labelledby="Tab ${itemList.count}">
+						
+							<!--/* Accordian Section - Responsive View */-->
+							<div class="vertical-tabs-component__accordian container d-flex justify-content-between d-lg-none p-3"
+							data-tab=${itemList.index} data-tab-id="tab-${itemList.count}" data-tab-name="${item.tabUniqueName}">
+							<span class="vertical-tabs-component__accordian_text">${item.tabTitle @context='html'}</span>
+								<div class="vertical-tabs-component__accordian_icons ml-auto">
+									<img src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/dropdown-arrow-down.svg"
+										alt="Down Arrow" class="vertical-tabs-component__accordian_icons_down-arrow">
+									<img src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/dropdown-arrow-up.svg"
+										alt="Up Arrow" class="vertical-tabs-component__accordian_icons_up-arrow">
+								</div>
+							</div>
+			
+							<div class="vertical-tabs-component__tabs-data-container vertical-tabs-component__accordian_container ${properties.seeMore == 'yes' ? 'limited-content':''}" id="tab-${itemList.count}">
+								<sly data-sly-test.parsysId="${item.tabUniqueName}">
+									<div data-sly-resource="${ @path=parsysId, resourceType='foundation/components/parsys'}" data-sly-unwrap> </div>
+								</sly>
+							<sly data-sly-test="${properties.seeMore == 'yes'}">
+								<div class="vertical-tabs-component__tabs-data-container__links-container">
+	                                <a class="see-more btn btn-secondary">See More</a>
+                                	<a class="see-less btn btn-secondary">See Less</a>
+	                            </div>
+							</sly>
+							</div>
+						</section>
+						</sly>
+					</sly>
+				</div>
+				<!--/* Render on Editor - Edit and Preview Mode */-->
+				<div class="row ml-1">
+					<sly data-sly-list="${flowDiagramVerticalModel.tabSection}">
+						<sly data-sly-test="${(wcmmode.edit || wcmmode.preview)}">
+							<div class="w-100">
+								<sly data-sly-test.parsysId="${item.tabUniqueName}">
+									<div data-sly-test="${wcmmode.edit}">
+										${item.tabLabel @context='html'} Tab - Content Authoring
+									</div>
+									<div data-sly-resource="${ @path=parsysId, resourceType='foundation/components/parsys'}" data-sly-unwrap> </div>
+								</sly>
+							</div>
+						</sly>
+					</sly>
+				</div>
+			</div>
+		</div>
+	</article>
+</div>

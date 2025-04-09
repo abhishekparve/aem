@@ -1,0 +1,461 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Applications and Solutions"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+        <items jcr:primaryType="nt:unstructured">
+            <column
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/container">
+                <items jcr:primaryType="nt:unstructured">
+                    <togglePaddingTop
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/switch"
+                        checked="{Boolean}false"
+                        fieldLabel="Reduce Top Padding"
+                        fieldDescription="Switch between Default Padding (Off) and Reduced Padding (On)"
+                        name="./togglePaddingTop"/>
+                    <togglePaddingBottom
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/switch"
+                        checked="{Boolean}false"
+                        fieldLabel="Reduce Bottom Padding"
+                        fieldDescription="Switch between Default Padding (Off) and Reduced Padding (On)"
+                        name="./togglePaddingBottom"/> 
+					<enableAnchorIdentifier
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+						fieldDescription="Anchor Identifier for Anchor Component"
+                        name="./enableAnchorIdentifier"
+                        text="Enable Anchor Identifier"
+                        uncheckedValue="{Boolean}false"
+                        value="{Boolean}true"/>
+					<anchorIdDescription
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="cq/gui/components/authoring/dialog/richtext"
+                        fieldDescription="AnchorIdDescription"
+                        fieldLabel="Anchor Id Description"
+                        name="./anchorIdDescription"
+                        useFixedInlineToolbar="{Boolean}true">
+                        <rtePlugins
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceSuperType="/apps/bdb-aem/components/authoring/dialog/richtext/rtePlugins"/>
+                        <uiSettings
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceSuperType="/apps/bdb-aem/components/authoring/dialog/richtext/uiSettings"/>
+                        <granite:data
+                            jcr:primaryType="nt:unstructured"
+                            char-limit="150"/>
+                    </anchorIdDescription>
+					<sectionTitle
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldDescription="Section Title must be authored if Anchor Identifier is Enabled."
+                        fieldLabel="Section Title"
+                        name="./sectionTitle"/>
+                    <title
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldDescription="Title must be authored if Anchor Identifier is Enabled."
+                        fieldLabel="Title"
+                        name="./title"/>
+                    <subTitle
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldDescription="Sub Title (Optional)"
+                        fieldLabel="Sub Title"
+                        name="./subTitle"/>
+                    <background
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                        fieldLabel="Component Background"
+                        name="./backgroundColor">
+                        <items jcr:primaryType="nt:unstructured">
+                            <whiteColor
+                                jcr:primaryType="nt:unstructured"
+                                text="White color"
+                                value="white-background"/>
+                            <greyColor
+                                jcr:primaryType="nt:unstructured"
+                                text="Grey color"
+                                value="gray-background"/>
+                        </items>
+                    </background>
+                    <contentBackground
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                            fieldLabel="Content Background"
+                            name="./contentBackgroundColor">
+                        <items jcr:primaryType="nt:unstructured">
+                            <whiteColor
+                                    jcr:primaryType="nt:unstructured"
+                                    text="White color"
+                                    value="white-background"/>
+                            <greyColor
+                                    jcr:primaryType="nt:unstructured"
+                                    text="Grey color"
+                                    value="gray-background"/>
+                        </items>
+                    </contentBackground>
+                    <magnifiyGlassColor
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                            fieldLabel="Magnifying Glass Color"
+                            name="./magnifiyGlassColor">
+                        <items jcr:primaryType="nt:unstructured">
+                            <def
+                                    jcr:primaryType="nt:unstructured"
+                                    text="Dark Blue"
+                                    value="dark-blue"/>
+                            <whiteColor
+                                    jcr:primaryType="nt:unstructured"
+                                    text="White"
+                                    value="white"/>
+                        </items>
+                    </magnifiyGlassColor>
+                    <slides
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                        composite="{Boolean}true"
+                        fieldLabel="Content Block">
+                        <granite:data
+                            jcr:primaryType="nt:unstructured"
+                            max-items="6"/>
+                        <field
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/container"
+                            name="./slides">
+                            <items jcr:primaryType="nt:unstructured">
+                                <column
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/container">
+                                    <items jcr:primaryType="nt:unstructured">
+                                        <contentTitle
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            fieldDescription="Content Title"
+                                            fieldLabel="Content Title"
+                                            name="./contentTitle"
+                                            required="{Boolean}true"/>
+                                        <contentDescription
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="cq/gui/components/authoring/dialog/richtext"
+                                            fieldDescription="Content Description"
+                                            fieldLabel="Content Description"
+                                            name="./contentDescription"
+                                            useFixedInlineToolbar="{Boolean}true">
+                                            <rtePlugins
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceSuperType="/apps/bdb-aem/components/authoring/dialog/richtext/rtePlugins"/>
+                                            <uiSettings
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceSuperType="/apps/bdb-aem/components/authoring/dialog/richtext/uiSettings"/>
+                                        </contentDescription>
+                                        <instructionText
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="cq/gui/components/authoring/dialog/richtext"
+                                            fieldLabel="Instructions Text"
+                                            fieldDescription="Instructions Text - displayed below the images"
+                                            name="./instructionText"
+                                            useFixedInlineToolbar="{Boolean}true">
+                                            <rtePlugins
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceSuperType="/apps/bdb-aem/components/authoring/dialog/richtext/rtePlugins"/>
+                                            <uiSettings
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceSuperType="/apps/bdb-aem/components/authoring/dialog/richtext/uiSettings"/>
+										</instructionText>
+                                        <fieldSetCTA
+                                            jcr:primaryType="nt:unstructured"
+                                            jcr:title="CTA Details"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                                            <items jcr:primaryType="nt:unstructured">
+                                                <ctaLabel
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldDescription="Label for CTA"
+                                                    fieldLabel="CTA Label"
+                                                    name="./ctaLabel"/>
+                                                <ctaUrl
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                                                    fieldDescription="URL for CTA / for downloadable asset."
+                                                    fieldLabel="CTA URL"
+                                                    name="./ctaUrl"
+                                                    rootPath="/content"/>
+                                            </items>
+                                        </fieldSetCTA>
+										<modalImgFlag
+												jcr:primaryType="nt:unstructured"
+												sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+												fieldDescription="Check to enable Modal Image functionalites."
+												name="./modalImgFlag"
+												text="Enable Modal Image"
+												uncheckedValue="false"
+												value="true"/>
+                                        <selection
+                                                granite:class="cq-dialog-dropdown-multifield-showhide"
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                fieldLabel="Type of Layout"
+                                                name="./selection"
+                                                required="{Boolean}true">
+                                            <items jcr:primaryType="nt:unstructured">
+                                                <default
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Select Image Type"
+                                                        value=""/>
+                                                <singleImage
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Single Image"
+                                                        value="singleImage"/>
+                                                <multipleImages
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Multiple Images"
+                                                        value="multipleImages"/>
+                                            </items>
+                                            <granite:data
+                                                    jcr:primaryType="nt:unstructured"
+                                                    cq-dialog-dropdown-multifield-showhide-target=".list-option-showhide-target"/>
+                                        </selection>
+                                        <singleImagePath
+                                            granite:class="list-option-showhide-target"
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                            fieldDescription="Single Image URL"
+                                            fieldLabel="Image URL"
+                                            name="./singleImagePath"
+                                            rootPath="/content/dam"
+                                            showhidetargetvalue="singleImage">
+                                            <granite:data
+                                                jcr:primaryType="nt:unstructured"
+                                                showhidetargetvalue="singleImage"/>
+                                        </singleImagePath>
+                                        <singleAltText
+                                            granite:class="list-option-showhide-target"
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            fieldDescription="Single Image Alt Text"
+                                            fieldLabel="Image Alt Text"
+                                            name="./singleAltText"
+                                            showhidetargetvalue="singleImage">
+                                            <granite:data
+                                                jcr:primaryType="nt:unstructured"
+                                                showhidetargetvalue="singleImage"/>
+                                        </singleAltText>
+                                        <singleImageCaption
+                                            granite:class="list-option-showhide-target"
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            fieldDescription="Single Image Caption for full width Image"
+                                            fieldLabel="Image Caption"
+                                            name="./imageCaption"
+                                            showhidetargetvalue="singleImage">
+                                            <granite:data
+                                                jcr:primaryType="nt:unstructured"
+                                                showhidetargetvalue="singleImage"/>
+                                        </singleImageCaption>
+                                        <singleBorderEnable
+                                            granite:class="list-option-showhide-target"
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/switch"
+                                            checked="{Boolean}false"
+                                            fieldDescription="Check to Enable Border for Single Image"
+                                            fieldLabel="Enable Border"
+                                            name="./singleBorderEnable"
+                                            showhidetargetvalue="singleImage">
+                                            <granite:data
+                                                jcr:primaryType="nt:unstructured"
+                                                showhidetargetvalue="singleImage"/>
+                                        </singleBorderEnable>
+                                        <singleImageEnlargeSize
+                                            granite:class="list-option-showhide-target"
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                            fieldLabel="Select Modal Image Size"
+                                            name="./singleImageEnlargeSize"
+                                            showhidetargetvalue="singleImage">
+                                            <items jcr:primaryType="nt:unstructured">
+                                                <large
+                                                    jcr:primaryType="nt:unstructured"
+                                                    text="Large"
+                                                    value="large"/>
+                                                <medium
+                                                    jcr:primaryType="nt:unstructured"
+                                                    text="Medium"
+                                                    value="medium"/>
+                                                <small
+                                                    jcr:primaryType="nt:unstructured"
+                                                    text="Small"
+                                                    value="small"/>
+                                            </items>
+                                            <granite:data
+                                                jcr:primaryType="nt:unstructured"
+                                                showhidetargetvalue="singleImage"/>
+                                        </singleImageEnlargeSize>
+                                        <singleEnlargedImagePath
+                                            granite:class="list-option-showhide-target"
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                            fieldDescription="Modal Image URL"
+                                            fieldLabel="Modal Image URL"
+                                            name="./singleEnlargedImagePath"
+                                            rootPath="/content/dam"
+                                            showhidetargetvalue="singleImage">
+                                            <granite:data
+                                                jcr:primaryType="nt:unstructured"
+                                                showhidetargetvalue="singleImage"/>
+                                        </singleEnlargedImagePath>
+                                        <singleImageTitle
+                                            granite:class="list-option-showhide-target"
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="cq/gui/components/authoring/dialog/richtext"
+                                            fieldDescription="Modal Image Title"
+                                            fieldLabel="Modal Image Title"
+                                            name="./singleImageTitle"
+                                            showhidetargetvalue="singleImage"
+											useFixedInlineToolbar="{Boolean}true">
+											<rtePlugins
+												jcr:primaryType="nt:unstructured"
+												sling:resourceSuperType="/apps/bdb-aem/components/authoring/dialog/richtext/rtePlugins"/>
+											<uiSettings
+												jcr:primaryType="nt:unstructured"
+												sling:resourceSuperType="/apps/bdb-aem/components/authoring/dialog/richtext/uiSettings"/>
+                                            <granite:data
+                                                jcr:primaryType="nt:unstructured"
+                                                showhidetargetvalue="singleImage"/>
+                                        </singleImageTitle>
+                                        <singleImageDescription
+                                            granite:class="list-option-showhide-target"
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="cq/gui/components/authoring/dialog/richtext"
+                                            fieldDescription="Modal Image Description"
+                                            fieldLabel="Modal Image Description"
+                                            name="./singleImageDescription"
+                                            showhidetargetvalue="singleImage"
+											useFixedInlineToolbar="{Boolean}true">
+											<rtePlugins
+												jcr:primaryType="nt:unstructured"
+												sling:resourceSuperType="/apps/bdb-aem/components/authoring/dialog/richtext/rtePlugins"/>
+											<uiSettings
+												jcr:primaryType="nt:unstructured"
+												sling:resourceSuperType="/apps/bdb-aem/components/authoring/dialog/richtext/uiSettings"/>
+                                            <granite:data
+                                                jcr:primaryType="nt:unstructured"
+                                                showhidetargetvalue="singleImage"/>
+                                        </singleImageDescription>
+                                        <images
+                                            granite:class="list-option-showhide-target"
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                            composite="{Boolean}true"
+                                            fieldLabel="Multiple Images"
+                                            showhidetargetvalue="multipleImages">
+                                            <granite:data
+                                                jcr:primaryType="nt:unstructured"
+                                                max-items="8"
+                                                showhidetargetvalue="multipleImages"/>
+                                                    <field
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                                                        name="./images">
+                                                        <items jcr:primaryType="nt:unstructured">
+                                                            <column
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    sling:resourceType="granite/ui/components/coral/foundation/container">
+                                                                <items jcr:primaryType="nt:unstructured">
+                                                                    <thumbImagePath
+                                                                            jcr:primaryType="nt:unstructured"
+                                                                            sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                                            fieldDescription="Thumbnail Image URL"
+                                                                            fieldLabel="Image URL"
+                                                                            name="./thumbImagePath"
+                                                                            rootPath="/content/dam"/>
+                                                                    <altText
+                                                                            jcr:primaryType="nt:unstructured"
+                                                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                            fieldDescription="Thumbnail Image Alt Text"
+                                                                            fieldLabel="Image Alt Text"
+                                                                            name="./altImage"/>
+                                                                    <borderEnableMultiple
+                                                                            jcr:primaryType="nt:unstructured"
+                                                                            sling:resourceType="granite/ui/components/coral/foundation/form/switch"
+                                                                            checked="{Boolean}false"
+                                                                            fieldDescription="Check to Enable Border for Image"
+                                                                            fieldLabel="Enable Border"
+                                                                            name="./borderEnableMultiple"
+                                                                            showhidetargetvalue="singleImage"/>
+                                                                    <enlargeSize
+                                                                            jcr:primaryType="nt:unstructured"
+                                                                            sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                                            fieldLabel="Select Modal Image Size"
+                                                                            name="./enlargeSize"
+                                                                            required="{Boolean}true">
+                                                                        <items jcr:primaryType="nt:unstructured">
+                                                                            <large
+                                                                                    jcr:primaryType="nt:unstructured"
+                                                                                    text="Large"
+                                                                                    value="large"/>
+                                                                            <medium
+                                                                                    jcr:primaryType="nt:unstructured"
+                                                                                    text="Medium"
+                                                                                    value="medium"/>
+                                                                            <small
+                                                                                    jcr:primaryType="nt:unstructured"
+                                                                                    text="Small"
+                                                                                    value="small"/>
+                                                                        </items>
+                                                                    </enlargeSize>
+                                                                    <enlargedImagePath
+                                                                            jcr:primaryType="nt:unstructured"
+                                                                            sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                                            fieldDescription="Modal Image URL"
+                                                                            fieldLabel="Modal Image URL"
+                                                                            name="./enlargedImagePath"
+                                                                            rootPath="/content/dam"/>
+                                                                    <imageTitle
+                                                                            jcr:primaryType="nt:unstructured"
+                                                                            sling:resourceType="cq/gui/components/authoring/dialog/richtext"
+                                                                            fieldDescription="Modal Image Title"
+                                                                            fieldLabel="Modal Image Title"
+                                                                            name="./imageTitle"
+																			useFixedInlineToolbar="{Boolean}true">
+																			<rtePlugins
+																				jcr:primaryType="nt:unstructured"
+																				sling:resourceSuperType="/apps/bdb-aem/components/authoring/dialog/richtext/rtePlugins"/>
+																			<uiSettings
+																				jcr:primaryType="nt:unstructured"
+																				sling:resourceSuperType="/apps/bdb-aem/components/authoring/dialog/richtext/uiSettings"/>
+																	</imageTitle>
+                                                                    <imageDescription
+                                                                            jcr:primaryType="nt:unstructured"
+                                                                            sling:resourceType="cq/gui/components/authoring/dialog/richtext"
+                                                                            fieldDescription="Modal Image Description"
+                                                                            fieldLabel="Modal Image Description"
+                                                                            name="./imageDescription"
+																			useFixedInlineToolbar="{Boolean}true">
+																			<rtePlugins
+																				jcr:primaryType="nt:unstructured"
+																				sling:resourceSuperType="/apps/bdb-aem/components/authoring/dialog/richtext/rtePlugins"/>
+																			<uiSettings
+																				jcr:primaryType="nt:unstructured"
+																				sling:resourceSuperType="/apps/bdb-aem/components/authoring/dialog/richtext/uiSettings"/>
+																	</imageDescription>
+                                                                </items>
+                                                            </column>
+                                                        </items>
+                                                    </field>
+                                        </images>
+                                    </items>
+                                </column>
+                            </items>
+                        </field>
+                    </slides>
+                </items>
+            </column>
+        </items>
+    </content>
+</jcr:root>

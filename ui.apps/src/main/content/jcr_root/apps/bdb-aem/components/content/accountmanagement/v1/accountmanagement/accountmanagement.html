@@ -1,0 +1,99 @@
+<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html"
+     data-sly-call="${templates.placeholder @ isEmpty = true}"></sly>
+
+<sly data-sly-use.accountSettingsModel="com.bdb.aem.core.models.AccountSettingsModel"
+     data-sly-use.accountManagementModel="com.bdb.aem.core.models.AccountManagementModel"
+     data-sly-use.accountCertificationsModel="com.bdb.aem.core.models.AccountManagementCertificationsModel"
+     data-sly-use.shoppingListsModel="com.bdb.aem.core.models.AccMgmtShoppingListModel"
+     data-sly-use.accountAddressesModel="com.bdb.aem.core.models.AccountManagementAddressesModel"
+     data-sly-use.accountGrantsModel="com.bdb.aem.core.models.AccountManagementGrantsModel"
+     data-sly-use.paymentsMethodsModel="com.bdb.aem.core.models.AccMgmtPaymentMethodsModel"
+     data-sly-use.accountOrdersApprovalModel="com.bdb.aem.core.models.AccountManagementOrdersApprovalModel"
+     data-sly-use.accMgmtDashboardModel="com.bdb.aem.core.models.AccMgmtDashboardModel"
+     data-sly-use.accountOrdersModel="com.bdb.aem.core.models.AccountManagementOrdersModel"
+     data-sly-use.accountCommunicationsSettingsModel="com.bdb.aem.core.models.AccountManagementCommunicationSettingsModel"
+     data-sly-use.accountQuotesModel="com.bdb.aem.core.models.AccountManagementQuotesModel"
+     data-sly-use.accountQuoteListsModel="com.bdb.aem.core.models.AccountManagementQuoteListsModel"
+     data-sly-use.accountQuoteHistoryModel="com.bdb.aem.core.models.AccMgmtQuotesHistoryModel">
+
+    <script>
+if (typeof window.AEM_DATA === 'undefined') {
+            window.AEM_DATA = {};
+        }
+        if (typeof window.AEM_DATA.labels === 'undefined') {
+            window.AEM_DATA.labels = {};
+        }
+        if (typeof window.AEM_DATA.labels.userAccountsLabels === 'undefined') {
+            window.AEM_DATA.labels.userAccountsLabels = {};
+        }
+        window.AEM_DATA.labels.userAccountsLabels.accountSettingLabels = ${accountSettingsModel.accountSettingLabels  || '{}' @context='scriptComment'};
+        window.AEM_DATA.labels.areaFocusLabels = ${accountSettingsModel.areaFocusLabels  || '{}' @context='scriptComment'};
+        window.AEM_DATA.labels.userAccountsLabels.dashboardPageNavigationLabels = ${accountManagementModel.dashboardPageNavigationLabels  || '{}' @context='scriptComment'};
+        window.AEM_DATA.labels.userAccountsLabels.certificationsLabels = ${accountCertificationsModel.certificationsLabels || '{}' @context='scriptComment'};
+        window.AEM_DATA.labels.userAccountsLabels.uploadCertificationLabels = ${accountCertificationsModel.uploadCertificationLabels || '{}' @context='scriptComment'};
+        window.AEM_DATA.labels.userAccountsLabels.uploadCertificationLabels.fileUploadLabels = ${accountCertificationsModel.fileUploadLabels || '{}' @context='scriptComment'};
+        window.AEM_DATA.labels.userAccountsLabels.shoppingListLabels = ${shoppingListsModel.shoppingListLabels || '{}' @context='scriptComment'};
+        window.AEM_DATA.labels.userAccountsLabels.communicationSettingsLabels = ${accountCommunicationsSettingsModel.communicationSettingsLabels || '{}' @context='scriptComment'}; 
+
+        if (typeof window.AEM_DATA.labels.userAccountsLabels.shoppingListLabels === 'undefined') {
+            window.AEM_DATA.labels.userAccountsLabels.shoppingListLabels = {};
+        }
+        if (typeof window.AEM_DATA.labels.userAccountsLabels.shoppingListLabels.createShoppingList === 'undefined') {
+            window.AEM_DATA.labels.userAccountsLabels.shoppingListLabels.createShoppingList = {};
+        }
+        if (typeof window.AEM_DATA.labels.userAccountsLabels.shoppingListLabels.createShoppingList.addItemsTabs === 'undefined') {
+            window.AEM_DATA.labels.userAccountsLabels.shoppingListLabels.createShoppingList.addItemsTabs = {};
+        }
+        if (typeof window.AEM_DATA.labels.userAccountsLabels.shoppingListLabels.createShoppingList.addItemsTabs.excelUploadLabels === 'undefined') {
+            window.AEM_DATA.labels.userAccountsLabels.shoppingListLabels.createShoppingList.addItemsTabs.excelUploadLabels = {};
+        }
+        window.AEM_DATA.labels.userAccountsLabels.shoppingListLabels.createShoppingList.addItemsTabs.excelUploadLabels.fileUploadLabels = ${shoppingListsModel.fileUploadLabels || '{}' @context='scriptComment'};
+        window.AEM_DATA.labels.userAccountsLabels.quotesLabels = ${accountQuotesModel.quotesLabels || '{}' @context='scriptComment'};
+        window.AEM_DATA.labels.userAccountsLabels.quoteListLabels = ${accountQuoteListsModel.quoteListLabels || '{}' @context='scriptComment'};
+        window.AEM_DATA.labels.userAccountsLabels.quoteHistoryLabels = ${accountQuoteHistoryModel.quoteHistoryLabels || '{}' @context='scriptComment'};
+
+        window.AEM_DATA.labels.userAccountsLabels.userAccAddrLabels = ${accountAddressesModel.userAccAddrLabels || '{}' @context='scriptComment'};
+        window.AEM_DATA.labels.userAccountsLabels.userGrantsLabels = ${accountGrantsModel.userGrantsLabels || '{}' @context='scriptComment'};
+		window.AEM_DATA.labels.userAccountsLabels.paymentsLabels = ${paymentsMethodsModel.paymentsMethodsLabels || '{}' @context='scriptComment'};
+        window.AEM_DATA.labels.userAccountsLabels.ordersApprovalListLabels = ${accountOrdersApprovalModel.ordersApprovalListLabels || '{}' @context='scriptComment'};
+        window.AEM_DATA.labels.userAccountsLabels.dashboardLabels = ${accMgmtDashboardModel.dashboardLabels || '{}' @context='scriptComment'};
+		window.AEM_DATA.labels.userAccountsLabels.dashboardLabels.accountSummary.loginInfoLabels = window.AEM_DATA.labels.userAccountsLabels.accountSettingLabels.loginInfoLabels;
+        window.AEM_DATA.labels.userAccountsLabels.dashboardLabels.accountSummary.accountPreferenceLabels = window.AEM_DATA.labels.userAccountsLabels.accountSettingLabels.accountPreferenceLabels;
+        window.AEM_DATA.labels.userAccountsLabels.userOrdersListLabels = ${accountOrdersModel.userOrdersListLabels || '{}' @context='scriptComment'};
+        window.AEM_DATA.labels.userAccountsLabels.userOrdersListLabels.orderHistoryDetails.products = window.AEM_DATA.labels.userAccountsLabels.ordersApprovalListLabels.orderHistoryDetails.products;
+        
+        window.AEM_DATA.labels.quoteDetailsLabels = ${accountQuoteListsModel.quoteDetailsLabels || '{}' @context='scriptComment'};
+
+        if (typeof window.AEM_DATA.config === 'undefined') {
+            window.AEM_DATA.config = {};
+        }
+        if (typeof window.AEM_DATA.config.userAccountsConfig === 'undefined') {
+            window.AEM_DATA.config.userAccountsConfig = {};
+        }
+        window.AEM_DATA.config.areaFocusConfig = ${accountSettingsModel.areaFocusConfig  || '{}' @context='scriptComment'};
+        window.AEM_DATA.config.userAccountsConfig.accountSettingConfig = ${accountSettingsModel.accountSettingConfig  || '{}' @context='scriptComment'};
+        window.AEM_DATA.config.userAccountsConfig.certificatesConfig = ${accountCertificationsModel.certificatesConfig || '{}' @context='scriptComment'};
+        window.AEM_DATA.config.userAccountsConfig.uploadCertificationConfig = ${accountCertificationsModel.uploadCertificationConfig || '{}' @context='scriptComment'};
+        window.AEM_DATA.config.userAccountsConfig.shoppingListConfig = ${shoppingListsModel.shoppingListConfig || '{}' @context='scriptComment'};
+        window.AEM_DATA.config.userAccountsConfig.userAccAddrConfig = ${accountAddressesModel.userAccAddrConfig || '{}' @context='scriptComment'};
+        window.AEM_DATA.config.userAccountsConfig.userGrantsConfig = ${accountGrantsModel.userGrantsConfig || '{}' @context='scriptComment'};
+		window.AEM_DATA.config.userAccountsConfig.paymentsConfig = ${paymentsMethodsModel.paymentsMethodsConfig || '{}' @context='scriptComment'};
+        window.AEM_DATA.config.userAccountsConfig.orderApprovalConfig = ${accountOrdersApprovalModel.orderApprovalConfig || '{}' @context='scriptComment'};
+        window.AEM_DATA.config.userAccountsConfig.dashboardConfig = ${accMgmtDashboardModel.dashboardConfig || '{}' @context='scriptComment'};
+        window.AEM_DATA.config.userAccountsConfig.userOrdersConfig = ${accountOrdersModel.userOrdersConfig || '{}' @context='scriptComment'};
+        window.AEM_DATA.config.purchaseAccountConfig = ${accMgmtDashboardModel.purchaseAccountConfig || '{}' @context='scriptComment'};
+        window.AEM_DATA.config.userAccountsConfig.communicationSettingsConfig = ${accountCommunicationsSettingsModel.communicationSettingsConfig || '{}' @context='scriptComment'};
+        window.AEM_DATA.config.userAccountsConfig.quotesConfig = ${accountQuotesModel.quotesConfig || '{}' @context='scriptComment'};
+        window.AEM_DATA.config.userAccountsConfig.quoteListConfig = ${accountQuoteListsModel.quoteListConfig || '{}' @context='scriptComment'};
+        window.AEM_DATA.config.userAccountsConfig.userQuoteHistoryConfig = ${accountQuoteHistoryModel.userQuoteHistoryConfig || '{}' @context='scriptComment'};
+        window.AEM_DATA.config.quoteConfirmationConfig = ${accountQuoteListsModel.quoteConfirmationConfig || '{}' @context='scriptComment'};
+        
+        window.AEM_DATA.config.userAccountsConfig.quoteListConfig.getShoppingListDetails = window.AEM_DATA.config.userAccountsConfig.shoppingListConfig.getShoppingListDetails;
+        window.AEM_DATA.config.userAccountsConfig.quoteListConfig.removeShoppingListEntries = window.AEM_DATA.config.userAccountsConfig.shoppingListConfig.removeShoppingListEntries;
+        window.AEM_DATA.config.userAccountsConfig.quoteListConfig.updateShoppingListEntries = window.AEM_DATA.config.userAccountsConfig.shoppingListConfig.updateShoppingListEntries;
+ window.AEM_DATA.labels.globalLabels.noResult = "${properties.noResult|| 'No Results' @context='scriptComment'}";
+</script>
+    <div class="user__accounts-container">
+        <bd-user-account labels="userAccountsLabels" config="userAccountsConfig"></bd-user-account>
+    </div>
+</sly>

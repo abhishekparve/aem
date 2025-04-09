@@ -1,0 +1,30 @@
+<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html"
+     data-sly-call="${templates.placeholder @ isEmpty = true}"></sly>
+<sly data-sly-use.time="com.bdb.aem.core.models.TimerModel"></sly>     
+<sly data-sly-use.templateId="com.bdb.aem.core.models.PDPTemplateModel"/>
+<sly data-sly-test="${templateId.templateId =='SFA'}">
+<div data-sly-unwrap="${!wcmmode.edit}">
+    <sly data-sly-resource="${templateId.sfa}" data-sly-unwrap></sly>
+</div>
+</sly>
+<sly data-sly-test="${templateId.templateId =='SCM'}">
+    <div data-sly-unwrap="${!wcmmode.edit}">
+        <sly data-sly-resource="${templateId.scm}" data-sly-unwrap></sly>
+    </div>
+</sly>
+<sly data-sly-test="${templateId.templateId =='Other'}">
+    <div data-sly-unwrap="${!wcmmode.edit}">
+        <sly data-sly-resource="${templateId.otherProducts}" data-sly-unwrap></sly>
+    </div>
+</sly>
+<sly data-sly-test="${templateId.templateId =='Kit'}">
+    <div data-sly-unwrap="${!wcmmode.edit}">
+        <sly data-sly-resource="${templateId.kitsAndSets}" data-sly-unwrap></sly>
+    </div>
+</sly>
+<sly data-sly-test="${templateId.templateId =='Instruments'}">
+    <div data-sly-unwrap="${!wcmmode.edit}">
+        <sly data-sly-resource="${templateId.instruments}" data-sly-unwrap></sly>
+    </div>
+</sly>
+<p data-sly-test="${inheritedPageProperties.enableTimer}">Pdp Lookup:${time.endTime}</p>

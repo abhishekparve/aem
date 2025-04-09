@@ -1,0 +1,18 @@
+<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html" />
+
+<sly data-sly-call="${templates.placeholder @ isEmpty = !properties.type, classAppend='cmp-searchResults'}"></sly>
+
+<sly data-sly-use.keywordModel="com.bdb.aem.core.models.BoostrulesModel">
+	<sly data-sly-test="${keywordModel.boostRules.listChildren}">
+	<sly data-sly-list.child="${keywordModel.boostRules.listChildren}">
+	<div>
+		<p> Attribute 			--	${child.facetAttributes} </p>
+		<p> Preference Order	--	${child.preferenceOrder} </p>
+	</div>
+	</sly>
+	</sly>
+
+</sly>
+
+
+

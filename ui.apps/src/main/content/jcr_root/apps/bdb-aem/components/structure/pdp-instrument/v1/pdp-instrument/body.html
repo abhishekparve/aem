@@ -1,0 +1,150 @@
+<!--/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  ~ Copyright 2016 Adobe
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/-->
+<!DOCTYPE HTML>
+
+    <div data-sly-unwrap="${!wcmmode.edit}">
+        <sly data-sly-resource="${'experiencefragment-header' @resourceType = 'bdb-aem/components/common/experiencefragment'}"
+             data-sly-unwrap></sly>
+    </div>
+	<sly data-sly-use.announcementModelObject="com.bdb.aem.core.models.ProductAnnouncementModel"
+        data-sly-test="${announcementModelObject}">
+
+        <sly data-sly-test="${announcementModelObject.productAnnouncement && announcementModelObject.paDescription}">
+            <div class="bd-container d-flex justify-content-start justify-content-lg-center">
+            <article class="product-announcement d-inline-flex  align-items-center bdb-alert app-js__alert">
+                <span class="bdb-alert__icon">
+                    <img class="d-none d-lg-block"
+                        src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/information.svg"
+                        alt="Alert icon">
+                </span>
+                <div class="bdb-alert__info bd-rte" data-sly-test="${announcementModelObject.paDescription}">
+                    ${announcementModelObject.paDescription @context='unsafe'}
+                     <sly data-sly-test="${announcementModelObject.faqList}">
+                        <a class="d-inline-flex align-items-center bdb-alert__info-link" data-toggle="modal"
+                            data-target="#faq-modal" href="${announcementModelObject.moreInfoLink}"
+                            data-sly-test="${announcementModelObject.paViewMoreCTA}">${announcementModelObject.paViewMoreCTA}
+                            <img src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/see-more-m.svg"
+                                alt="More Information"></a>
+                    </sly>
+                    <sly data-sly-test="${!announcementModelObject.faqList}">
+
+                        <a class="d-inline-flex align-items-center bdb-alert__info-link"
+                            target="${announcementModelObject.openNewTab == 'true' ? '_blank' : '_top'}" href="${announcementModelObject.moreInfoLink}"
+                            data-sly-test="${announcementModelObject.paViewMoreCTA}">${announcementModelObject.paViewMoreCTA}
+                            <img src=" /etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/see-more-m.svg" alt="#"></a>
+                    </sly>
+
+                </div>
+            </article>
+            </div>
+            <article class="faq-modal app-js__faq-modal bd-custom-scroll">
+			  <div class="modal" id="faq-modal" tabindex="-1" role="dialog" aria-labelledby="faq-modal" aria-hidden="true">
+			    <div class="modal-dialog modal-dialog-centered faq-modal__modal-dimensions modal-dialog-scrollable" role="document">
+			      <div class="modal-content faq-modal__modal-container">
+			        <div class="faq-modal__modal-close p-0">
+			          <button type="button" class="close p-0" data-dismiss="modal" aria-label="Close" data-role="none">
+			            <img src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/Close-dark.svg" alt="close" />
+			          </button>
+			        </div>
+			        <div class="modal-header p-0">
+			          <h5 class="modal-title faq-modal__modal-heading" id="faq-modal" data-sly-test="${announcementModelObject.paFAQTitle}">
+			            ${announcementModelObject.paFAQTitle}</h5>
+			        </div>
+			        <div class="modal-body p-0 faq-modal__modal-body">
+			          <sly data-sly-list.faqValues="${announcementModelObject.faqList}"
+			                                data-sly-test="${announcementModelObject.faqList}" data-sly-unwrap>
+			          <div class=" faq-modal__details-container">
+			            <div class="faq-modal__label" data-sly-test="${faqValues.question}">
+			              ${faqValues.question}
+			            </div>
+			            <div class="faq-modal__description" data-sly-test="${faqValues.question}">
+			              ${faqValues.answer}
+			            </div>
+			          </div>
+			          </sly>
+			          
+			        </div>
+			        <div class="faq-modal__view-more-cta">
+			          <a class="faq-modal__view-more" target="${announcementModelObject.openNewTab == 'true' ? '_blank' : '_top'}" href="${announcementModelObject.moreInfoLink}" data-sly-test="${announcementModelObject.viewMoreFaqLabel}">${announcementModelObject.viewMoreFaqLabel}</a>
+			        </div>
+			
+			        <button type="button" class="faq-modal__close-btn btn btn-lg btn-primary-blue py-3 px-0" data-dismiss="modal">
+			          Close
+			        </button>
+			      </div>
+			    </div>
+              </div>
+			</article>
+        </sly>
+    </sly>
+    <main role="main" id="main" tabindex="-1" class="main-content">
+        <div class="${inheritedPageProperties.enableAddToQuoteCheckBox ? 'wrapper pdp-page add-to-quote-pdp' : 'wrapper pdp-page'}">
+            <div class="pdp-page__top-section">
+                <div class="bd-container pdp-page__top-section_container">
+                    <article class="pdp-hero app-js__pdp-hero d-flex align-items-center">
+                        <div class="content-band--60x40 row col-xl-12 p-0 m-0">
+
+                            <div class="band-item col-12 col-sm-12 col-md-12 col-lg-6-3 col-xl-6-3 pl-lg-2 pl-xl-0">
+                                <div data-sly-unwrap="${!wcmmode.edit}">
+                                    <sly data-sly-resource="${'pdphero' @resourceType = 'bdb-aem/proxy/components/content/pdphero'}"
+                                        data-sly-unwrap></sly>
+                                </div>
+                            </div>
+                            <div class="band-item col-12 col-sm-12 col-md-12 col-lg-5-7 col-xl-5-7 pr-lg-2 pr-xl-0">
+	                          <div data-sly-unwrap="${!wcmmode.edit}">
+	                                  <div class="pdp_tools__desktop">
+	                                      <sly data-sly-resource="${'technicalTools' @resourceType = '/apps/bdb-aem/proxy/components/content/technicaltools'}">
+	                                      </sly>
+	                                  </div>
+	                              </div>
+                                <div data-sly-unwrap="${!wcmmode.edit}">
+                                    <sly data-sly-resource="${'commercebox' @resourceType = 'bdb-aem/proxy/components/content/commercebox'}"
+                                        data-sly-unwrap></sly>
+                                </div>
+                            </div>
+							<div class="band-item col-12 col-sm-12 col-md-12 col-lg-5-7 col-xl-5-7 pr-lg-2 pr-xl-0">
+                                <div data-sly-unwrap="${!wcmmode.edit}">
+                                    <sly data-sly-resource="${'savetoshoppinglist' @resourceType = 'bdb-aem/proxy/components/content/saveToShoppingList'}"
+                                		data-sly-unwrap></sly>
+								</div>
+							</div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+            <div class="pdp-page__bottom-section">
+                <div class="pdp-page__bottom-section_container">
+                    <article class="pdp-tabs app-js__pdp-tabs">
+                        <div data-sly-unwrap="${!wcmmode.edit}">
+                            <sly data-sly-resource="${'pdptabs' @resourceType = 'bdb-aem/proxy/components/content/pdptabs'}"
+                                 data-sly-unwrap></sly>
+                        </div>
+                    </article>
+				</div>
+			</div>
+			<div data-sly-unwrap="${!wcmmode.edit}">
+                <sly data-sly-resource="${'compareproductstoolbar' @resourceType = 'bdb-aem/proxy/components/content/compareProductsToolBar'}"
+                     data-sly-unwrap></sly>
+            </div>
+            <sly data-sly-use.templatedContainer="com.day.cq.wcm.foundation.TemplatedContainer"
+                data-sly-repeat.child="${templatedContainer.structureResources}"
+                data-sly-resource="${child.path @ resourceType=child.resourceType, decorationTagName='div'}"></sly>
+        </div>
+    </main>
+    <div data-sly-unwrap="${!wcmmode.edit}">
+        <sly data-sly-resource="${'experiencefragment-footer' @resourceType = 'bdb-aem/components/common/experiencefragment'}"
+             data-sly-unwrap></sly>
+    </div>

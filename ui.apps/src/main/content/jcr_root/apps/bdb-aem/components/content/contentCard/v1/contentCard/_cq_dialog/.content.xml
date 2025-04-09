@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Content Card Component"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+        <items jcr:primaryType="nt:unstructured">
+            <columns
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/container">
+                <items jcr:primaryType="nt:unstructured">
+               		 <togglePaddingTop
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/switch"
+                        checked="{Boolean}false"
+                        fieldLabel="Reduce Top Padding"
+                        fieldDescription="Switch between Default Padding (Off) and Reduced Padding (On)"
+                        name="./togglePaddingTop"/>
+                    <sectionTitleText
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldDescription="Section Title Text"
+                        fieldLabel="Section Title Text"
+                        name="./sectionTitleText"/>
+                    <sectionDescription
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldDescription="Section Description Text"
+                        fieldLabel="Section Description"
+                        name="./sectionDescription"/>
+                    <subtitleText
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldDescription="Subtitle Text"
+                        fieldLabel="Subtitle Text"
+                        name="./subtitleText"/>
+                    <fullBleed
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/foundation/form/checkbox"
+                            fieldDescription="Enable this check box if you want component to be full width"
+                            name="./fullBleed"
+                            text="Full Width"
+                            value="true"/>
+                    <cardsThreeInARow
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                        fieldDescription="On Checking 3 Cards in a Row will be displayed instead of 2"
+                        name="./cardsThreeInARow"
+                        text="3 In a Row"
+                        value="true"/>
+                    <contentCard
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                        composite="{Boolean}true"
+                        fieldLabel="Content Card">
+                        <granite:data
+                            jcr:primaryType="nt:unstructured"
+                            min-items="1"/>
+                        <field
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/container"
+                            name="./contentCard">
+                            <items jcr:primaryType="nt:unstructured">
+                                <column
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/container">
+                                    <items jcr:primaryType="nt:unstructured">
+                                        <contentCard
+                                            jcr:primaryType="nt:unstructured"
+                                            jcr:title="Content Card"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                                            <items jcr:primaryType="nt:unstructured">
+                                                <imagePath
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                    fieldDescription="Icon/image URL"
+                                                    fieldLabel="Icon/image URL"
+                                                    name="./iconImagePath"
+                                                    required="{Boolean}true"
+                                                    rootPath="/content/dam"/>
+                                                 <imageLinkUrl
+													jcr:primaryType="nt:unstructured"
+													sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+													fieldDescription="Image Link URL"
+													fieldLabel="icon/Image Link URL"
+													name="./imageLinkUrl"
+													rootPath="/content"/>
+												<openNewImageLinkTab
+													jcr:primaryType="nt:unstructured"
+													sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+													fieldDescription="Check to open link in New Tab. By default, link opens in same tab."
+													name="./openNewImageLinkTab"
+													text="Open Link in New Tab"
+													uncheckedValue="{Boolean}false"
+													value="{Boolean}true"/>
+                                                <title
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldDescription="Title"
+                                                    fieldLabel="Title"
+                                                    name="./title"/>
+                                                <titleLink
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                    fieldDescription="Title Link"
+                                                    fieldLabel="Title Link"
+                                                    name="./titleLink"
+                                                    rootPath="/content/bdb"/>
+                                                <altText
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldDescription="Alt Text for Image"
+                                                    fieldLabel="Alt Text"
+                                                    name="./altText"/>
+                                                <description
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
+                                                    fieldDescription="Description"
+                                                    fieldLabel="Description"
+                                                    name="./description"/>
+                                            </items>
+                                        </contentCard>
+                                    </items>
+                                </column>
+                            </items>
+                        </field>
+                    </contentCard>
+                </items>
+            </columns>
+        </items>
+    </content>
+</jcr:root>

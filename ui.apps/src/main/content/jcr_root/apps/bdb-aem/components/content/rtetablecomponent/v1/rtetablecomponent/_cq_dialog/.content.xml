@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0"
+          xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+          jcr:primaryType="nt:unstructured"
+          jcr:title="RTE Table Component"
+          sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+        <items jcr:primaryType="nt:unstructured">
+            <column
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/coral/foundation/container">
+                <items jcr:primaryType="nt:unstructured">
+                    <enableAnchorIdentifier
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                            fieldDescription="Anchor Identifier for RTE Component"
+                            name="./enableAnchorIdentifier"
+                            text="Enable Anchor Identifier"
+                            uncheckedValue="{Boolean}false"
+                            value="{Boolean}true"/>
+                    <anchorIdDescription
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="cq/gui/components/authoring/dialog/richtext"
+                            fieldDescription="AnchorIdDescription"
+                            fieldLabel="Anchor Id Description"
+                            name="./anchorIdDescription"
+                            useFixedInlineToolbar="{Boolean}true">
+                        <rtePlugins
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceSuperType="/apps/bdb-aem/components/authoring/dialog/richtext/rtePlugins"/>
+                        <uiSettings
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceSuperType="/apps/bdb-aem/components/authoring/dialog/richtext/uiSettings"/>
+                        <granite:data
+                                jcr:primaryType="nt:unstructured"
+                                char-limit="150"/>
+                    </anchorIdDescription>
+                    <togglePaddingTop
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/switch"
+                            checked="{Boolean}false"
+                            fieldLabel="Reduce Top Padding"
+                            fieldDescription="Switch between Default Padding (Off) and Reduced Padding (On)"
+                            name="./togglePaddingTop"/>
+                    <togglePaddingBottom
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/switch"
+                            checked="{Boolean}false"
+                            fieldLabel="Reduce Bottom Padding"
+                            fieldDescription="Switch between Default Padding (Off) and Reduced Padding (On)"
+                            name="./togglePaddingBottom"/>
+                    <sectionTitle
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                            required="{Boolean}false"
+                            fieldLabel="Section Title"
+                            fieldDescription="This is the section Title"
+                            name="./sectionTitle"/>
+                    <title
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                            required="{Boolean}false"
+                            fieldLabel="Title"
+                            fieldDescription="This is the Title"
+                            name="./title"/>
+                    <rteTable
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="cq/gui/components/authoring/dialog/richtext"
+                            emptyText="Enter the description"
+                            fieldDescription="This is the description"
+                            fieldLabel="RTE with Table"
+                            name="./rteTable"
+                            required="{Boolean}false"
+                            useFixedInlineToolbar="{Boolean}true">
+                        <rtePlugins
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceSuperType="/apps/bdb-aem/components/authoring/dialog/richtext/rtePlugins"/>
+                        <uiSettings
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceSuperType="/apps/bdb-aem/components/authoring/dialog/richtext/uiSettings"/>
+                    </rteTable>
+                    <bgColor
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/radiogroup"
+                            fieldLabel="Enable Grey Background Color"
+                            name="./bgColor"
+                            required="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <enable
+                                    jcr:primaryType="nt:unstructured"
+                                    text="Enable"
+                                    value="enable"/>
+                            <disable
+                                    jcr:primaryType="nt:unstructured"
+                                    text="Disable"
+                                    value="disable"/>
+                        </items>
+                    </bgColor>
+                    <isTableCaption
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                            fieldDescription="On Checking styling will be reflected as Table Caption"
+                            name="./isTableCaption"
+                            text="Is Table Caption"
+                            value="{Boolean}true"/>
+                </items>
+            </column>
+        </items>
+    </content>
+</jcr:root>

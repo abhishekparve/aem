@@ -1,0 +1,14 @@
+<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html"
+     data-sly-call="${templates.placeholder @ isEmpty = true}"></sly>
+
+<sly data-sly-use.navigationLinkModel="com.bdb.aem.core.models.NavigationLinkModel">
+     <article data-sly-test="${navigationLinkModel.navigationLinkList}" class="thought-leadership-breadcrumb container app-js__thought-leadership-breadcrumb">
+          <ul class="thought-leadership-breadcrumb__list" data-sly-list.item="${navigationLinkModel.navigationLinkList}">
+               <li class="thought-leadership-breadcrumb__list-item">
+                    <a tabindex="0" href="${item.path}">
+                         ${item.label @context='html'}
+                    </a>
+               </li>
+          </ul>
+     </article>
+</sly>

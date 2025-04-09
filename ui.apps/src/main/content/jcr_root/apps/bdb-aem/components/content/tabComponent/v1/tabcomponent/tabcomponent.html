@@ -1,0 +1,157 @@
+<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html" />
+<sly data-sly-call="${templates.placeholder @ isEmpty = !properties.type}"></sly>
+
+<sly data-sly-use.tabModel="com.bdb.aem.core.models.TabComponent"></sly>
+<div class="site-content-page">
+	<article class="app-js__tabs-component">
+		<div class="tabs-component-wrapper ${properties.pageVariarion?'tab-section-remove':''}">
+			<section
+				class="tabs-component ${tabModel.backgroundColor?'gray-background':''} ${properties.pageVariarion?'pt-0 tab-page':''}">
+				<div class="container">
+					<div class="row">
+						<div class="col-12">
+
+							<div class="sitecontent">
+								<p class="sitecontent__section-heading">${tabModel.sectionTitle}</p>
+								<p class="sitecontent__title">${tabModel.title @context='html'}</p>
+								<p class="sitecontent__sub-title">${tabModel.subTitle @context='html'}</p>
+							</div>
+							<div data-sly-test="${!properties.pageVariarion}"
+								class="tabs-component__dropdown d-block d-lg-none d-xl-none">
+								<sly data-sly-list.tab="${tabModel.tabSection}">
+									<div data-sly-test="${tabList.first}"
+										class="tabs-component__dropdown_header d-flex align-items-center justify-content-between pl-3 pr-3"
+										role="button" tabIndex="0" aria-haspopup="true">
+										<span class="tabs-component__dropdown_header-title">${tab.tabLabel
+											@context='html'}</span>
+										<div>
+											<img src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/dropdown-arrow-down.svg"
+												alt="down arrow" class="selectedDropdownImg d-block">
+											<img src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/dropdown-arrow-up.svg"
+												alt="up arrow" class="d-none">
+										</div>
+									</div>
+								</sly>
+								<ul class="tabs-component__dropdown_menu-list m-0 p-0 w-100" role="tablist"
+									aria-label="site content tabs compoent">
+									<sly data-sly-list="${tabModel.tabSection}">
+										<li id="Tab ${itemList.count}" role="tab" data-tab=${itemList.index}
+											data-tab-id="tab-${itemList.count}" data-tab-name="${item.uniqueUrlName}"
+											class="tabs-component__dropdown_menu-list_item tabs-component__menu-list_item_tab-${itemList.count}"
+											aria-selected="true" aria-controls="tab-${itemList.count}">
+											<span class="tabs-component__menu-list_item_text">${item.tabLabel
+												@context='html'}</span>
+										</li>
+									</sly>
+								</ul>
+							</div>
+
+							<nav class="tabs-component__menu-list">
+								<ul class="m-0 p-0" role="tablist" aria-label="site content tabs compoent">
+									<sly data-sly-list="${tabModel.tabSection}">
+										<li onclick="pushData(this)" id="Tab ${itemList.count}" role="tab"
+											data-tab=${itemList.index} data-tab-id="tab-${itemList.count}"
+											data-tab-name="${item.uniqueUrlName}"
+											class="tabs-component__menu-list_item tabs-component__menu-list_item_tab-${itemList.count} ${itemList.index==0 ? 'active' : ''} text-center"
+											aria-selected="true" aria-controls="tab-${itemList.count}">
+											<span class="tabs-component__menu-list_item_text">${item.tabLabel
+												@context='html'}</span>
+										</li>
+									</sly>
+								</ul>
+							</nav>
+						</div>
+					</div>
+				</div>
+			</section>
+			<sly data-sly-test="${!properties.pageVariarion}" data-sly-list="${tabModel.tabSection}">
+				<section tabindex="0" role="tabpanel" class="tabs-component__tabs-data"
+					aria-labelledby="tab ${itemList.count}">
+					<div id="tab-${itemList.count}" class="container tabs-component__tabs-data-container">
+						<div class="row ml-0 mr-0">
+							<div class="col-12 colums-wrapper pl-0 pr-0">
+								<div class="col-12 col-lg-7 pl-0 pr-0">
+									<p class="tabs-component__tabs-data-container-title">${item.tabTitle
+										@context='html'}</p>
+									<span
+										class="tabs-component__tabs-data-container-rteText bd-rte">${item.tabDescription
+										@context='html'}</span>
+								</div>
+								<div class="col-12 col-lg-5 tabs-component__tabs-data-container-img-section pl-0 pr-0">
+									<figure>
+										<img data-sly-test="${item.image}" class="" src=${item.image} alt="tab image" />
+										<figcaption>${item.imageTitle @context='html'}</figcaption>
+									</figure>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+			</sly>
+
+			<!--/* Render on Browser when Page Variation is selected */-->
+			<sly data-sly-test="${properties.pageVariarion}" data-sly-list="${tabModel.tabSection}">
+				<sly data-sly-test="${!(wcmmode.edit || wcmmode.preview)}">
+					<section tabindex="0" role="tabpanel"
+						class="tabs-component__tabs-data tabs-component__accordian_section"
+						aria-labelledby="Tab ${itemList.count}">
+
+						<!--/* Accordian Section - Responsive View */-->
+						<div class="tabs-component__accordian container d-flex justify-content-between d-lg-none p-3"
+							data-tab=${itemList.index} data-tab-id="tab-${itemList.count}"
+							data-tab-name="${item.uniqueUrlName}">
+							<span class="tabs-component__accordian_text">${item.tabLabel @context='html'}</span>
+							<div class="tabs-component__accordian_icons ml-auto">
+								<img src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/dropdown-arrow-down.svg"
+									alt="Down Arrow" class="tabs-component__accordian_icons_down-arrow">
+								<img src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/dropdown-arrow-up.svg"
+									alt="Up Arrow" class="tabs-component__accordian_icons_up-arrow">
+							</div>
+						</div>
+
+						<div class="tabs-component__tabs-data-container tabs-component__accordian_container border-0"
+							id="tab-${itemList.count}">
+
+							<sly data-sly-test.parsysId="${item.tabUniqueName}">
+								<div data-sly-resource="${ @path=parsysId, resourceType='foundation/components/parsys'}"> 
+								</div>
+							</sly>
+						</div>
+					</section>
+				</sly>
+			</sly>
+
+			<!--/* Render on Editor when Page Variation is selected - Edit and Preview Mode */-->
+			<sly data-sly-test="${properties.pageVariarion}" data-sly-list="${tabModel.tabSection}">
+				<sly data-sly-test="${(wcmmode.edit || wcmmode.preview)}">
+					<sly data-sly-test.parsysId="${item.tabUniqueName}">
+						<div data-sly-test="${wcmmode.edit}">
+							${item.tabLabel @context='html'} Tab - Content Authoring
+						</div>
+						<div data-sly-resource="${ @path=parsysId, resourceType='foundation/components/parsys'}"> 
+						</div>
+					</sly>
+				</sly>
+			</sly>
+		</div>
+	</article>
+</div>
+
+
+<script>
+	function pushData(item) {
+		const currentPageName = window.adobeDataLayer.getState('xdm.web.webPageDetails.pageName');
+		if (currentPageName.includes('panel')) {
+			const data = currentPageName + 'tabs|' + item.getAttribute('data-tab-name');
+			window.adobeDataLayer.push({
+				event: 'toolInteractions',
+				xdm: {
+					tool: {
+						toolInteractions: data,
+						toolUsage: 'Panel Design'
+					}
+				}
+			});
+		}
+	}
+</script>

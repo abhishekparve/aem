@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          jcr:primaryType="sling:OsgiConfig"
+          schedulerName="$[env:IWS_NAME;default=Image Workflow Scheduler]"
+          enabled="$[env:IWS_TOGGLE;default=true]"
+          cronExpression="$[env:IWS_CRON;default=0 0/30 * 1/1 * ? *]"
+          defaultRetryLimit="$[env:IWS_RETRY_LIMIT;default=24]"
+          srcAssetPathListInDAM="$[env:IWS_ASSET_PATH;default=/content/dam/bdb/temp-assets/images,/content/dam/bdb/temp-assets/images/packaging-images/clinical-vial-images]"/>

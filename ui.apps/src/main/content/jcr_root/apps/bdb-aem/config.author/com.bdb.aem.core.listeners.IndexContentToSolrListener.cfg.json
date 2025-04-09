@@ -1,0 +1,9 @@
+// Configuration created by Apache Sling JCR Installer
+{
+  "getScientificResourceFolder":"/content/dam/bdb/ScientificResources/images",
+  "baseAssetPath":[
+    "/content/dam/bdb/products",
+    "/content/dam/bdb/marketing-documents" 
+  ],
+  "basePagePath":"/content/bdb"
+}

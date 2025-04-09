@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="180px" height="180px" viewBox="0 0 180 180" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icon/circle/payment-method</title>
+    <g id="icon/circle/payment-method" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Payment-Method---empty-state">
+            <circle id="Oval" fill="#E7EBF1" cx="90" cy="90" r="90"></circle>
+            <g id="Group" transform="translate(41.000000, 51.000000)" stroke-width="2">
+                <rect id="Rectangle" stroke="#979797" fill="#EEEEEE" transform="translate(50.000000, 41.000000) rotate(7.000000) translate(-50.000000, -41.000000) " x="6" y="9" width="88" height="64" rx="6"></rect>
+                <rect id="Rectangle" stroke="#999A9C" fill="#FFFFFF" x="0" y="0" width="86" height="64" rx="6"></rect>
+                <rect id="Rectangle" stroke="#999A9C" fill="#EEEEEE" x="50" y="39" width="28" height="16" rx="2"></rect>
+                <line x1="6.5" y1="32.5" x2="21.5" y2="32.5" id="Line" stroke="#999A9C" stroke-linecap="round"></line>
+                <line x1="6.5" y1="38.5" x2="29.5" y2="38.5" id="Line" stroke="#999A9C" stroke-linecap="round"></line>
+                <line x1="27.5" y1="32.5" x2="42.5" y2="32.5" id="Line" stroke="#999A9C" stroke-linecap="round"></line>
+                <line x1="35.5" y1="38.5" x2="42.5" y2="38.5" id="Line" stroke="#999A9C" stroke-linecap="round"></line>
+                <rect id="Rectangle" stroke="#999A9C" fill="#EEEEEE" x="0" y="10" width="86" height="12"></rect>
+            </g>
+        </g>
+    </g>
+</svg>

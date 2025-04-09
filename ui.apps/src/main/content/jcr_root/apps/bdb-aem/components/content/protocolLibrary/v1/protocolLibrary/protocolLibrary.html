@@ -1,0 +1,132 @@
+<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html"
+  data-sly-call="${templates.placeholder @ isEmpty = true}"></sly>
+
+<sly data-sly-use.protocolMainModel="com.bdb.aem.core.models.ProtocolModel">
+  <article class="protocol-content app-js__protocol-content hide-mobile-padding"
+    data-protocol="${protocolMainModel.protocolObjectJson}" data-isEnabled="${protocolMainModel.isIncluded}">
+    <div class="container px-0">
+      <div class="row">
+        <div class="protocol-content__wrapper col-lg-12 col-sm-12">
+          <div class="protocol-content-container">
+            <div class="protocol-content-headinglink">
+              <h2 class="protocol-content-header w-100">
+                ${protocolMainModel.protocolTitle}
+              </h2>
+            </div>
+            <div data-sly-test="${protocolMainModel.description}"
+              class="d-lg-flex justify-content-center d-xs-block d-sm-block mb-4">
+              <p class="protocol-content-description w-100" id="">
+                ${protocolMainModel.description @context='html'}
+              </p>
+              <sly data-sly-test="${protocolMainModel.imageLinkUrl}">
+                <a href="${protocolMainModel.imageLinkUrl}"
+                  target="${properties.openNewImageLinkTab == 'true' ? '_blank' : '_self'}">
+                  <img data-sly-test="${!protocolMainModel.videoEnabled || !protocolMainModel.brightcoveVideoId}"
+                    class="protocol-content-description-img" src="${protocolMainModel.imagePath}"
+                    alt="${protocolMainModel.imageAltText}" />
+                </a>
+              </sly>
+              <sly data-sly-test="${!protocolMainModel.imageLinkUrl}">
+                <img data-sly-test="${!protocolMainModel.videoEnabled || !protocolMainModel.brightcoveVideoId}"
+                  class="protocol-content-description-img" src="${protocolMainModel.imagePath}"
+                  alt="${protocolMainModel.imageAltText}" />
+              </sly>
+              <div data-sly-test="${protocolMainModel.videoEnabled && protocolMainModel.brightcoveVideoId}"
+                class="protocol-content__vdo-container" data-toggle="modal"
+                data-target="#trainingVideo-${protocolMainModel.brightcoveVideoId}-${resource.path.hashCode}">
+                <img src="${protocolMainModel.imagePath}" alt="${protocolMainModel.imageAltText}">
+                <img src="/content/dam/bdb/icons/playButton-m.svg" class="protocol-content__vdo-container__play-btn"
+                  alt="playButton" />
+              </div>
+              <div data-sly-test="${protocolMainModel.videoEnabled && protocolMainModel.brightcoveVideoId}"
+                class="modal fade protocol-content__video-img-modal"
+                id="trainingVideo-${protocolMainModel.brightcoveVideoId}-${resource.path.hashCode}" tabindex="-1"
+                role="dialog" aria-labelledby="protocolVideoTitle" aria-hidden="true" data-backdrop="static">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close protocol-content__video-modal-close" data-dismiss="modal"
+                        aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body protocol-content__banner-img-modal-body is-video"
+                      data-accountId="1752604059001" data-playerId="B1xXFuBodW"
+                      data-videoId="${protocolMainModel.brightcoveVideoId}">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div data-sly-list.item="${protocolMainModel.protocolsList}" class="protocol-content-body w-100">
+              <div data-sly-test="${itemList.index <= 2}"
+                class="protocol-content-body-text d-flex w-100 justify-content-between ${itemList.index}">
+                <span data-sly-test="${item.useAsAsset}" class="protocol-content-body-text-label">
+                  ${item.label @context='html'}
+                </span>
+                <span data-sly-test="${!item.useAsAsset}" class="protocol-content-body-text-label">
+                  <a href="${item.path}">${item.label @context='html'}</a>
+                </span>
+                <span data-sly-test="${item.useAsAsset}" class="protocol-content-body-download">
+                  <a href="${item.path}">
+                    <img class="downloadImage" alt="Download Icon Alt Text"
+                      src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/Download.svg" />
+                  </a>
+                </span>
+              </div>
+
+              <div data-sly-test="${itemList.index > 2}"
+                class="protocol-content-body-text d-flex w-100 justify-content-between ${itemList.index} hide-desktop invisible-desktop-items hide-mobile invisible-mobile-items">
+                <span data-sly-test="${item.useAsAsset}" class="protocol-content-body-text-label">
+                  ${item.label @context='html'}
+                </span>
+                <span data-sly-test="${!item.useAsAsset}" class="protocol-content-body-text-label">
+                  <a href="${item.path}">${item.label @context='html'}</a>
+                </span>
+                <span data-sly-test="${item.useAsAsset}" class="protocol-content-body-download">
+                  <a href="${item.path}">
+                    <img class="downloadImage" alt="Download Icon Alt Text"
+                      src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/Download.svg" />
+                  </a>
+                </span>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <div class="protocol-content__cta w-100">
+          <a class="cta-link protocol-content__cta__show-more" href="#" tabindex="0">
+            <span class="cta-content">
+              <span data-sly-test="${protocolMainModel.protocolCount > 3}" onclick="toolInteraction(this)"
+                class="cta-text" tabindex="-1">
+                ${protocolMainModel.viewMoreLabel}</span>
+            </span>
+          </a>
+          <a class="cta-link protocol-content__cta__show-less hide" href="#" tabindex="0">
+            <span class="cta-content">
+              <span data-sly-test="${protocolMainModel.protocolCount > 3}" class="cta-text" tabindex="-1">
+                ${protocolMainModel.viewLessLabel}
+              </span>
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </article>
+</sly>
+<script>
+  function toolInteraction(item) {
+    const currentPageName = window.adobeDataLayer.getState('xdm.web.webPageDetails.pageName');
+    const data = currentPageName + 'links|' + item.innerText;
+    window.adobeDataLayer.push({
+      event: 'toolInteractions',
+      xdm: {
+        tool: {
+          toolInteractions: data,
+          toolUsage: 'Protocol Tool'
+        }
+      }
+    });
+  }
+</script>

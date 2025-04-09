@@ -1,0 +1,41 @@
+{
+    "products": [
+        {
+            "productID": "566599",
+            "productImgHref": "",
+            "productCatalogHref": "https://publish-p14102-e36686.adobeaemcloud.com/%7Bna%7D/%7Bus%7D/%7Ben-us%7D/products/reagents/flow-cytometry-reagents/research-reagents/single-color-antibodies/Biotin-Mouse-Anti-Human-CD1111.566599.html",
+            "productAnnouncement": "true",
+            "paDescription": "<p><b>Attention:</b> test product will be discontinued in November 2020. [342003] is the replacement for 566599 </p>\r\n",
+            "paFAQTitle": "FAQs",
+            "regionalDisclaimers": "",
+            "paViewMoreCTA": "More Information",
+            "openNewTab": "openNewTab",
+            "disclaimerStatus": "disclaimerStatus",
+            "moreInfoLink": "{en-us}/products/reagents/flow-cytometry-reagents/research-reagents/single-color-antibodies-(ruo)/BV750-Mouse-Anti-Human-CD31.747355.html",
+            "viewMoreFaqLabel": "View More FAQs",
+            "viewMoreFaqLink": "viewMoreFaqLink",
+            "smessageStatus": "true",
+            "neutralizationActivity": "",
+            "targetMW": "",
+            "assayRange": "",
+            "surchargeDisclaimer": {
+                "specialMessage": "Special Handling message goes here",
+                "altText": "Special Message alt text"
+            },
+            "replacedProductId": "342003",
+            "faqMap": [
+                {
+                    "question": "Is this product available in US?",
+                    "answer": "Yes, it is."
+                }
+            ]
+        },
+        {
+            "productID": "612705",
+            "surchargeDisclaimer": {
+                "specialMessage": "Special Handling message goes here",
+                "altText": "Special Message alt text"
+            }
+        }
+    ]
+}

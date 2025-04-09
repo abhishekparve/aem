@@ -1,0 +1,89 @@
+<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html" data-sly-call="${templates.placeholder @ isEmpty = true}"></sly>
+<sly data-sly-use.faclist="com.bdb.aem.core.models.FACSelectListModel">
+	<div class="container">
+		<div class="row">
+			<article class="facs-datatable app-js__facs-datatable" data-reports-url="${faclist.facDataEndpoint}" data-target-label="Target" data-clone-label="Clone" data-view-reports="${properties.viewReportsLabel}">
+				<h1 class="facs-datatable__title">${properties.title}</h1>
+				<div class="facs-datatable__navigation d-flex justify-content-start justify-content-lg-end">
+					<sly data-sly-test="${faclist.navigation}">
+						<sly data-sly-list.navs="${faclist.navigation}">
+							<div class="facs-datatable__navigation-link position-relative" role="listitem"> <span class="facs-datatable__navigation-link-label p-0 menu" tabindex="0" id="${navslist.index}">
+                        ${navs.label}
+                        <img src="${properties.downArrowIcon}" alt="downArrowIcon" />
+                        </span>
+								<div class="facs-datatable__navigation-link-sub-menu">
+									<div class="dropdown-data">
+										<sly data-sly-list.menu="${navs.subNavigation}">
+											<!--/* <sly data-sly-test="${navslist.index!=2}"> */-->
+											<div class="facs-datatable__navigation-link-sub-menu-content d-flex"> <img src="${menu.iconUrl}" alt="new tab" class="facs-datatable__navigation-link-sub-menu-content-icon pt-1"> <a href=" ${menu.path}" target="_blank" class="${menu.description?'facs-datatable__navigation-link-sub-menu-content-catNo':'facs-datatable__navigation-link-sub-menu-protocol-catNo'}">
+                                 ${menu.label}</a>
+												<sly data-sly-test="${menu.description}">
+													<p class="facs-datatable__navigation-link-sub-menu-content-desc">${menu.description}</p>
+												</sly>
+											</div>
+										</sly>
+									</div>
+								</div>
+							</div>
+						</sly>
+					</sly>
+				</div>
+				<div class="facs-datatable__top">
+					<div class="d-flex flex-column flex-lg-row justify-content-between">
+						<div class="facs-datatable__top_search">
+							<label for="tableSearchInput" class="mb-0">${properties.searchTitle}<span>${properties.searchsubtitle}</span></label>
+							<div class="form-group d-flex flex-column"> <img src="${properties.searchIcon}" alt="Search" class="facs-datatable__top_search-icon" />
+								<input type="search" name="serachInput" id="tableSearchInput" class="form-control facs-datatable__top_search-input" placeholder="${properties.searchPlaceholder}" aria-controls="facsDataTable" /> </div>
+						</div>
+						<div class="form-group">
+							<button type="button" class="btn btn-md btn-transparent-blue px-4 facs-datatable__top_search_reset-button">${properties.resetFilterLabel}</button>
+						</div>
+					</div>
+					<div class="facs-datatable__top-filters">
+						<p class="facs-datatable__top-filters_heading">${properties.fluorochromesFilterTitle} <span>${properties.fluorochromesfiltersubtitle}</span></p>
+						<div class="d-flex flex-column flex-lg-row facs-datatable__top-filters_group"></div>
+						<div class="d-flex justify-content-end mt-4 pt-3">
+							<button class="btn btn-link p-0 facs-datatable__top-filters_toggle-btn show-all" tabindex="0">${properties.moreFluorochromesLabel} <span>
+                     <img src="${properties.downArrowIcon}" alt="show more icon"/>
+                     </span> </button>
+							<button class="btn btn-link p-0 facs-datatable__top-filters_toggle-btn show-less" tabindex="0">${properties.lessFluorochromesLabel} <span>
+                     <img src="${properties.upArrowIcon}" alt="show less icon"/>
+                     </span> </button>
+						</div>
+					</div>
+				</div>
+				<div class="facs-datatable__table">
+					<div class="row mx-0 justify-content-start justify-content-lg-between mb-2">
+						<div class="facs-datatable__table_info"> <span class="info-message">
+                        <span class="showing-all">${properties.showingAllLabel}</span> <span class="showing-label">${properties.showingLabel}</span> <span class="filteredRecords"></span>&nbsp;${properties.reagentsLabel} </span> <span class="filteredInfo">${properties.filteredInfoLabel}&nbsp;<span class="totalRecords"></span>&nbsp;${properties.totalLabel}&nbsp;
+							<sly data-sly-test="${properties.reagentsLabel}">${properties.reagentsLabel})</sly>
+							</span> <span class="no-results">${properties.noResultsLabel}</span> </div>
+						<div class="facs-datatable__table_data d-flex ">
+							<div class="d-flex">
+								<sly data-sly-test="${properties.dataAndReagents}">
+									<div class="d-flex facs-datatable__table_data_item"> <span class="reagentsDataAvailable mr-2"></span> ${properties.dataAndReagents} </div>
+								</sly>
+								<sly data-sly-test="${properties.onlyReagents}">
+									<div class="d-flex facs-datatable__table_data_item"> <span class="onlyReagents mr-2"></span> ${properties.onlyReagents} </div>
+								</sly>
+								<sly data-sly-test="${properties.notSuggested}">
+									<div class="d-flex facs-datatable__table_data_item"> <span class="notSuggested mr-2"></span> ${properties.notSuggested} </div>
+								</sly>
+							</div>
+							<!--/* ADA Related Markup */-->
+							<!--/* {{#with tableNavIcons}} */-->
+							<div class="facs-datatable__table_data_nav">
+								<button type="button" class="btn-left-disabled  mr-4" disabled> <span class="sr-only">${properties.btnLeft}</span> </button>
+								<button type="button" class="btn-left mr-4"> <span class="sr-only">${properties.btnLeftDisabled}</span> </button>
+								<button type="button" class="btn-right"> <span class="sr-only">${properties.btnRight}</span> </button>
+								<button type="button" class="btn-right-disabled " disabled> <span class="sr-only">${properties.btnRightDisabled}</span> </button>
+							</div>
+							<!--/*{{/with}} */-->
+						</div>
+					</div>
+					<table id="facsDataTable" class="table table-bordered row-border nowrap facs-datatable__table_root" style="width: 100%;table-layout: fixed;word-break: break-all;"></table>
+				</div>
+			</article>
+		</div>
+	</div>
+</sly>

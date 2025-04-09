@@ -1,0 +1,23 @@
+<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html"
+     data-sly-call="${templates.placeholder @ isEmpty = true}"></sly>
+
+
+<sly data-sly-use.purchasingAccountModel="com.bdb.aem.core.models.PurchasingAccountModel">
+    <script>
+if (typeof window.AEM_DATA === 'undefined') {
+            window.AEM_DATA = {};
+        }
+        if (typeof window.AEM_DATA.labels === 'undefined') {
+            window.AEM_DATA.labels = {};
+        }
+        window.AEM_DATA.labels.purchaseAccountLabels = ${purchasingAccountModel.purchaseAccountLabels  || '{}' @context='scriptComment'};
+		
+        window.AEM_DATA.labels.purchaseAccountConfirmationLabels = ${purchasingAccountModel.purchaseAccountConfirmationLabels  || '{}' @context='scriptComment'};
+     
+        if (typeof window.AEM_DATA.config === 'undefined') {
+            window.AEM_DATA.config = {};
+        };
+        window.AEM_DATA.config.purchaseAccountConfig = ${purchasingAccountModel.purchaseAccountConfig  || '{}' @context='scriptComment'};
+		window.AEM_DATA.config.purchaseAccountConfirmationConfig = ${purchasingAccountModel.purchaseAccountConfirmationConfig  || '{}' @context='scriptComment'};
+    </script>
+</sly>

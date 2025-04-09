@@ -1,0 +1,20 @@
+<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html"
+     data-sly-call="${templates.placeholder @ isEmpty = true}"></sly>
+<sly data-sly-use.requiredProducts="com.bdb.aem.core.models.RequiredCompanionProductsModel"></sly>
+
+ <script>
+        if (typeof window.AEM_DATA.labels === 'undefined') {
+            window.AEM_DATA.labels = {};
+        }
+       		 window.AEM_DATA.labels.requiredCompanionProductsLabels = ${ requiredProducts.requiredCompanionProductsLabels  || '{}' @context='scriptComment' };
+	
+		 if (typeof window.AEM_DATA.config === 'undefined') {
+            window.AEM_DATA.config = {};
+        }
+
+		window.AEM_DATA.config.requiredCompanionProductsConfig = ${ requiredProducts.requiredCompanionProductsConfig || '{}' @context='scriptComment' };
+    </script>
+    <div class="wrapper">
+		<bd-companion-products-container labels="requiredCompanionProductsLabels"
+                config="requiredCompanionProductsConfig"></bd-companion-products-container>
+     </div>

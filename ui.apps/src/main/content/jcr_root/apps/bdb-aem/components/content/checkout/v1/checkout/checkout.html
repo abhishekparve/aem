@@ -1,0 +1,24 @@
+<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html" />
+
+<sly data-sly-call="${templates.placeholder @ isEmpty = !properties.type, classAppend='cmp-addtocart'}"></sly>
+    <sly data-sly-use.checkoutModel="com.bdb.aem.core.models.CheckoutModel" data-sly-use.globalConfigModel="com.bdb.aem.core.models.GlobalConfigModel"></sly>
+    <sly data-sly-use.amountSummaryModel="com.bdb.aem.core.models.AmountSummaryModel"></sly>
+    <script>
+        if (typeof window.AEM_DATA.labels === 'undefined') {
+            window.AEM_DATA.labels = {};
+        }
+        window.AEM_DATA.labels.checkoutLabels = ${ checkoutModel.checkoutLabels @context='scriptComment' };
+        window.AEM_DATA.labels.checkoutLabels.addressLabels=${checkoutModel.addAddressLabels || '{}' @ context='scriptComment'};
+        window.AEM_DATA.labels.checkoutLabels.shipToAddressLabels = ${ amountSummaryModel.shipTo @context='scriptComment' };
+        window.AEM_DATA.labels.cookieNames = ${ globalConfigModel.cookiesJson @context='scriptComment' };
+        if (typeof window.AEM_DATA.config === 'undefined') {
+        window.AEM_DATA.config = {};
+        }
+        if (typeof window.AEM_DATA.config.checkoutConfig === 'undefined') {
+        window.AEM_DATA.config.checkoutConfig = {};
+        }
+        window.AEM_DATA.config.checkoutConfig=${checkoutModel.checkoutConfig || '{}' @ context='scriptComment'}
+    </script>
+<div class="wrapper">
+    <bd-checkout labels="checkoutLabels" config="checkoutConfig"></bd-checkout>
+</div>

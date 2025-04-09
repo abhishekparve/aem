@@ -1,0 +1,1314 @@
+{
+    "cardsData": [
+        {
+            "resourceName": "All Resources",
+            "fileType": "pdf",
+            "resourceTitle": "",
+            "resourceDesc": "The guide contains a basic description of the BD Influx™ high-speed cell sorter and BD FACS™ Sortware sorter software, QC procedures, configuration, operating procedures, maintenance information, and troubleshooting.",
+            "downloadLink": "/content/dam/bdb/marketing-documents/BD-FACSCelesta-Filter-Guide.pdf"
+        },
+        {
+            "resourceType": "brochures",
+            "resourceName": "Brochures",
+            "fileType": "image",
+            "resourceImageAltText": "image-file",
+            "resourceTitle": "",
+            "resourceDesc": "This chart provide useful information about Mouse Leukocyte Alloantigens per mouse strains.",
+
+            "downloadLink": "12345"
+        },
+        {
+            "resourceType": "posters",
+            "resourceName": "Posters",
+            "fileType": "pdf",
+
+            "resourceTitle": "BD Influx™ Cell Sorter User’s Guide",
+            "resourceDesc": "The guide contains a basic description of the BD Influx™ high-speed cell sorter and BD FACS™ Sortware sorter software, QC procedures, configuration, operating procedures, maintenance information, and troubleshooting.",
+
+            "downloadLink": ""
+        },
+        {
+            "resourceType": "productInformationSheets",
+            "resourceName": "Product Information Sheets",
+            "fileType": "pdf",
+
+            "resourceTitle": "Mouse Leukocyte Alloantigens Chart",
+            "resourceDesc": "This chart provide useful information about Mouse Leukocyte Alloantigens per mouse strains.",
+
+            "downloadLink": ""
+        },
+        {
+            "resourceType": "Videos",
+            "resourceName": "Videos",
+            "fileType": "pdf",
+
+            "resourceTitle": "BD Influx™ Cell Sorter User’s Guide",
+            "resourceDesc": "The guide contains a basic description of the BD Influx™ high-speed cell sorter and BD FACS™ Sortware sorter software, QC procedures, configuration, operating procedures, maintenance information, and troubleshooting.",
+
+            "downloadLink": ""
+        },
+        {
+            "resourceType": "experimentalSheets",
+            "resourceName": "Experimental Sheets",
+            "fileType": "pdf",
+
+            "resourceTitle": "Mouse Leukocyte Alloantigens Chart",
+            "resourceDesc": "This chart provide useful information about Mouse Leukocyte Alloantigens per mouse strains.",
+
+            "downloadLink": ""
+        },
+        {
+            "resourceType": "experimentalSheets",
+            "resourceName": "Experimental Sheets",
+            "fileType": "video",
+
+            "resourceTitle": "Mouse Leukocyte Alloantigens Chart",
+            "resourceDesc": "This chart provide useful information about Mouse Leukocyte Alloantigens per mouse strains.",
+
+            "downloadLink": "4825279519001"
+        },
+        {
+            "resourceType": "video",
+            "resourceName": "video type object",
+            "fileType": "video",
+
+            "resourceTitle": "video type object",
+            "resourceDesc": "This chart provide useful information about Mouse Leukocyte Alloantigens per mouse strains.",
+
+            "downloadLink": "4825279519002"
+        },
+        {
+            "resourceType": "webinars",
+            "resourceName": "Webinars",
+            "fileType": "pdf",
+
+            "resourceTitle": "BD Influx™ Cell Sorter User’s Guide",
+            "resourceDesc": "The guide contains a basic description of the BD Influx™ high-speed cell sorter and BD FACS™ Sortware sorter software, QC procedures, configuration, operating procedures, maintenance information, and troubleshooting.",
+
+            "downloadLink": ""
+        },
+        {
+            "resourceType": "brochures",
+            "resourceName": "Brochures",
+            "fileType": "image",
+            "resourceImageAltText": "image-file",
+            "resourceTitle": "Mouse Leukocyte Alloantigens Chart",
+            "resourceDesc": "This chart provide useful information about Mouse Leukocyte Alloantigens per mouse strains.",
+
+            "downloadLink": ""
+        },
+        {
+            "resourceType": "applicationNotes",
+            "resourceName": "Application Notes",
+            "fileType": "pdf",
+
+            "resourceTitle": "BD Influx™ Cell Sorter User’s Guide",
+            "resourceDesc": "The guide contains a basic description of the BD Influx™ high-speed cell sorter and BD FACS™ Sortware sorter software, QC procedures, configuration, operating procedures, maintenance information, and troubleshooting.",
+
+            "downloadLink": ""
+        },
+        {
+            "resourceType": "brochures",
+            "resourceName": "Brochures",
+            "fileType": "pdf",
+
+            "resourceTitle": "Mouse Leukocyte Alloantigens Chart",
+            "resourceDesc": "This chart provide useful information about Mouse Leukocyte Alloantigens per mouse strains.",
+
+            "downloadLink": ""
+        },
+        {
+            "resourceType": "posters",
+            "resourceName": "Posters",
+            "fileType": "pdf",
+
+            "resourceTitle": "BD Influx™ Cell Sorter User’s Guide",
+            "resourceDesc": "The guide contains a basic description of the BD Influx™ high-speed cell sorter and BD FACS™ Sortware sorter software, QC procedures, configuration, operating procedures, maintenance information, and troubleshooting.",
+
+            "downloadLink": ""
+        },
+        {
+            "resourceType": "productInformationSheets",
+            "resourceName": "Product Information Sheets",
+            "fileType": "pdf",
+
+            "resourceTitle": "Mouse Leukocyte Alloantigens Chart",
+            "resourceDesc": "This chart provide useful information about Mouse Leukocyte Alloantigens per mouse strains.",
+
+            "downloadLink": ""
+        },
+        {
+            "resourceType": "Videos",
+            "resourceName": "Videos",
+            "fileType": "pdf",
+
+            "resourceTitle": "BD Influx™ Cell Sorter User’s Guide",
+            "resourceDesc": "The guide contains a basic description of the BD Influx™ high-speed cell sorter and BD FACS™ Sortware sorter software, QC procedures, configuration, operating procedures, maintenance information, and troubleshooting.",
+
+            "downloadLink": ""
+        },
+        {
+            "resourceType": "experimentalSheets",
+            "resourceName": "Experimental Sheets",
+            "fileType": "pdf",
+
+            "resourceTitle": "Mouse Leukocyte Alloantigens Chart",
+            "resourceDesc": "This chart provide useful information about Mouse Leukocyte Alloantigens per mouse strains.",
+
+            "downloadLink": ""
+        },
+        {
+            "resourceType": "webinars",
+            "resourceName": "Webinars",
+            "fileType": "pdf",
+
+            "resourceTitle": "BD Influx™ Cell Sorter User’s Guide",
+            "resourceDesc": "The guide contains a basic description of the BD Influx™ high-speed cell sorter and BD FACS™ Sortware sorter software, QC procedures, configuration, operating procedures, maintenance information, and troubleshooting.",
+
+            "downloadLink": ""
+        },
+        {
+            "resourceType": "brochures",
+            "resourceName": "Brochures",
+            "fileType": "pdf",
+
+            "resourceTitle": "Mouse Leukocyte Alloantigens Chart",
+            "resourceDesc": "This chart provide useful information about Mouse Leukocyte Alloantigens per mouse strains.",
+
+            "downloadLink": ""
+        },
+        {
+            "resourceType": "applicationNotes",
+            "resourceName": "Application Notes",
+            "fileType": "pdf",
+
+            "resourceTitle": "BD Influx™ Cell Sorter User’s Guide",
+            "resourceDesc": "The guide contains a basic description of the BD Influx™ high-speed cell sorter and BD FACS™ Sortware sorter software, QC procedures, configuration, operating procedures, maintenance information, and troubleshooting.",
+
+            "downloadLink": ""
+        },
+        {
+            "resourceType": "brochures",
+            "resourceName": "Brochures",
+            "fileType": "pdf",
+
+            "resourceTitle": "Mouse Leukocyte Alloantigens Chart",
+            "resourceDesc": "This chart provide useful information about Mouse Leukocyte Alloantigens per mouse strains.",
+
+            "downloadLink": ""
+        },
+        {
+            "resourceType": "posters",
+            "resourceName": "Posters",
+            "fileType": "pdf",
+
+            "resourceTitle": "BD Influx™ Cell Sorter User’s Guide",
+            "resourceDesc": "The guide contains a basic description of the BD Influx™ high-speed cell sorter and BD FACS™ Sortware sorter software, QC procedures, configuration, operating procedures, maintenance information, and troubleshooting.",
+
+            "downloadLink": ""
+        },
+        {
+            "resourceType": "productInformationSheets",
+            "resourceName": "Product Information Sheets",
+            "fileType": "pdf",
+
+            "resourceTitle": "Mouse Leukocyte Alloantigens Chart",
+            "resourceDesc": "This chart provide useful information about Mouse Leukocyte Alloantigens per mouse strains.",
+
+            "downloadLink": ""
+        },
+        {
+            "resourceType": "Videos",
+            "resourceName": "Videos",
+            "fileType": "pdf",
+
+            "resourceTitle": "BD Influx™ Cell Sorter User’s Guide",
+            "resourceDesc": "The guide contains a basic description of the BD Influx™ high-speed cell sorter and BD FACS™ Sortware sorter software, QC procedures, configuration, operating procedures, maintenance information, and troubleshooting.",
+
+            "downloadLink": ""
+        },
+        {
+            "resourceType": "experimentalSheets",
+            "resourceName": "Experimental Sheets",
+            "fileType": "pdf",
+
+            "resourceTitle": "Mouse Leukocyte Alloantigens Chart",
+            "resourceDesc": "This chart provide useful information about Mouse Leukocyte Alloantigens per mouse strains.",
+
+            "downloadLink": ""
+        },
+        {
+            "resourceType": "webinars",
+            "resourceName": "Webinars",
+            "fileType": "pdf",
+
+            "resourceTitle": "BD Influx™ Cell Sorter User’s Guide",
+            "resourceDesc": "The guide contains a basic description of the BD Influx™ high-speed cell sorter and BD FACS™ Sortware sorter software, QC procedures, configuration, operating procedures, maintenance information, and troubleshooting.",
+
+            "downloadLink": ""
+        },
+        {
+            "resourceType": "brochures",
+            "resourceName": "Brochures",
+            "fileType": "pdf",
+
+            "resourceTitle": "Mouse Leukocyte Alloantigens Chart",
+            "resourceDesc": "This chart provide useful information about Mouse Leukocyte Alloantigens per mouse strains.",
+
+            "downloadLink": ""
+        },
+        {
+            "resourceType": "applicationNotes",
+            "resourceName": "Application Notes",
+            "fileType": "pdf",
+
+            "resourceTitle": "BD Influx™ Cell Sorter User’s Guide",
+            "resourceDesc": "The guide contains a basic description of the BD Influx™ high-speed cell sorter and BD FACS™ Sortware sorter software, QC procedures, configuration, operating procedures, maintenance information, and troubleshooting.",
+
+            "downloadLink": ""
+        },
+        {
+            "resourceType": "brochures",
+            "resourceName": "Brochures",
+            "fileType": "pdf",
+
+            "resourceTitle": "Mouse Leukocyte Alloantigens Chart",
+            "resourceDesc": "This chart provide useful information about Mouse Leukocyte Alloantigens per mouse strains.",
+
+            "downloadLink": ""
+        },
+        {
+            "resourceType": "posters",
+            "resourceName": "Posters",
+            "fileType": "pdf",
+
+            "resourceTitle": "BD Influx™ Cell Sorter User’s Guide",
+            "resourceDesc": "The guide contains a basic description of the BD Influx™ high-speed cell sorter and BD FACS™ Sortware sorter software, QC procedures, configuration, operating procedures, maintenance information, and troubleshooting.",
+
+            "downloadLink": ""
+        },
+        {
+            "resourceType": "productInformationSheets",
+            "resourceName": "Product Information Sheets",
+            "fileType": "pdf",
+
+            "resourceTitle": "Mouse Leukocyte Alloantigens Chart",
+            "resourceDesc": "This chart provide useful information about Mouse Leukocyte Alloantigens per mouse strains.",
+
+            "downloadLink": ""
+        },
+        {
+            "resourceType": "Videos",
+            "resourceName": "Videos",
+            "fileType": "pdf",
+
+            "resourceTitle": "BD Influx™ Cell Sorter User’s Guide",
+            "resourceDesc": "The guide contains a basic description of the BD Influx™ high-speed cell sorter and BD FACS™ Sortware sorter software, QC procedures, configuration, operating procedures, maintenance information, and troubleshooting.",
+
+            "downloadLink": ""
+        },
+        {
+            "resourceType": "experimentalSheets",
+            "resourceName": "Experimental Sheets",
+            "fileType": "pdf",
+
+            "resourceTitle": "Mouse Leukocyte Alloantigens Chart",
+            "resourceDesc": "This chart provide useful information about Mouse Leukocyte Alloantigens per mouse strains.",
+
+            "downloadLink": ""
+        },
+        {
+            "resourceType": "webinars",
+            "resourceName": "Webinars",
+            "fileType": "pdf",
+
+            "resourceTitle": "BD Influx™ Cell Sorter User’s Guide",
+            "resourceDesc": "The guide contains a basic description of the BD Influx™ high-speed cell sorter and BD FACS™ Sortware sorter software, QC procedures, configuration, operating procedures, maintenance information, and troubleshooting.",
+
+            "downloadLink": ""
+        },
+        {
+            "resourceType": "brochures",
+            "resourceName": "Brochures",
+            "fileType": "pdf",
+
+            "resourceTitle": "Mouse Leukocyte Alloantigens Chart",
+            "resourceDesc": "This chart provide useful information about Mouse Leukocyte Alloantigens per mouse strains.",
+
+            "downloadLink": ""
+        },
+        {
+            "resourceType": "applicationNotes",
+            "resourceName": "Application Notes",
+            "fileType": "pdf",
+
+            "resourceTitle": "BD Influx™ Cell Sorter User’s Guide",
+            "resourceDesc": "The guide contains a basic description of the BD Influx™ high-speed cell sorter and BD FACS™ Sortware sorter software, QC procedures, configuration, operating procedures, maintenance information, and troubleshooting.",
+
+            "downloadLink": ""
+        },
+        {
+            "resourceType": "brochures",
+            "resourceName": "Brochures",
+            "fileType": "pdf",
+
+            "resourceTitle": "Mouse Leukocyte Alloantigens Chart",
+            "resourceDesc": "This chart provide useful information about Mouse Leukocyte Alloantigens per mouse strains.",
+
+            "downloadLink": ""
+        },
+        {
+            "resourceType": "posters",
+            "resourceName": "Posters",
+            "fileType": "pdf",
+
+            "resourceTitle": "BD Influx™ Cell Sorter User’s Guide",
+            "resourceDesc": "The guide contains a basic description of the BD Influx™ high-speed cell sorter and BD FACS™ Sortware sorter software, QC procedures, configuration, operating procedures, maintenance information, and troubleshooting.",
+
+            "downloadLink": ""
+        },
+        {
+            "resourceType": "productInformationSheets",
+            "resourceName": "Product Information Sheets",
+            "fileType": "pdf",
+
+            "resourceTitle": "Mouse Leukocyte Alloantigens Chart",
+            "resourceDesc": "This chart provide useful information about Mouse Leukocyte Alloantigens per mouse strains.",
+
+            "downloadLink": ""
+        },
+        {
+            "resourceType": "Videos",
+            "resourceName": "Videos",
+            "fileType": "pdf",
+
+            "resourceTitle": "BD Influx™ Cell Sorter User’s Guide",
+            "resourceDesc": "The guide contains a basic description of the BD Influx™ high-speed cell sorter and BD FACS™ Sortware sorter software, QC procedures, configuration, operating procedures, maintenance information, and troubleshooting.",
+
+            "downloadLink": ""
+        },
+        {
+            "resourceType": "experimentalSheets",
+            "resourceName": "Experimental Sheets",
+            "fileType": "pdf",
+
+            "resourceTitle": "Mouse Leukocyte Alloantigens Chart",
+            "resourceDesc": "This chart provide useful information about Mouse Leukocyte Alloantigens per mouse strains.",
+
+            "downloadLink": ""
+        },
+        {
+            "resourceType": "webinars",
+            "resourceName": "Webinars",
+            "fileType": "pdf",
+
+            "resourceTitle": "BD Influx™ Cell Sorter User’s Guide",
+            "resourceDesc": "The guide contains a basic description of the BD Influx™ high-speed cell sorter and BD FACS™ Sortware sorter software, QC procedures, configuration, operating procedures, maintenance information, and troubleshooting.",
+
+            "downloadLink": ""
+        },
+        {
+            "resourceType": "brochures",
+            "resourceName": "Brochures",
+            "fileType": "pdf",
+
+            "resourceTitle": "Mouse Leukocyte Alloantigens Chart",
+            "resourceDesc": "This chart provide useful information about Mouse Leukocyte Alloantigens per mouse strains.",
+
+            "downloadLink": ""
+        },
+        {
+            "resourceType": "applicationNotes",
+            "resourceName": "Application Notes",
+            "fileType": "pdf",
+
+            "resourceTitle": "BD Influx™ Cell Sorter User’s Guide",
+            "resourceDesc": "The guide contains a basic description of the BD Influx™ high-speed cell sorter and BD FACS™ Sortware sorter software, QC procedures, configuration, operating procedures, maintenance information, and troubleshooting.",
+
+            "downloadLink": ""
+        },
+        {
+            "resourceType": "brochures",
+            "resourceName": "Brochures",
+            "fileType": "pdf",
+
+            "resourceTitle": "Mouse Leukocyte Alloantigens Chart",
+            "resourceDesc": "This chart provide useful information about Mouse Leukocyte Alloantigens per mouse strains.",
+
+            "downloadLink": ""
+        },
+        {
+            "resourceType": "posters",
+            "resourceName": "Posters",
+            "fileType": "pdf",
+
+            "resourceTitle": "BD Influx™ Cell Sorter User’s Guide",
+            "resourceDesc": "The guide contains a basic description of the BD Influx™ high-speed cell sorter and BD FACS™ Sortware sorter software, QC procedures, configuration, operating procedures, maintenance information, and troubleshooting.",
+
+            "downloadLink": ""
+        },
+        {
+            "resourceType": "allResources",
+            "resourceName": "All Resources",
+            "fileType": "pdf",
+
+            "resourceTitle": "BD Influx™ Cell Sorter User’s Guide",
+            "resourceDesc": "The guide contains a basic description of the BD Influx™ high-speed cell sorter and BD FACS™ Sortware sorter software, QC procedures, configuration, operating procedures, maintenance information, and troubleshooting.",
+
+            "downloadLink": ""
+        },
+        {
+            "resourceType": "brochures",
+            "resourceName": "Brochures",
+            "fileType": "pdf",
+
+            "resourceTitle": "Mouse Leukocyte Alloantigens Chart",
+            "resourceDesc": "This chart provide useful information about Mouse Leukocyte Alloantigens per mouse strains.",
+
+            "downloadLink": ""
+        },
+        {
+            "resourceType": "posters",
+            "resourceName": "Posters",
+            "fileType": "pdf",
+
+            "resourceTitle": "BD Influx™ Cell Sorter User’s Guide",
+            "resourceDesc": "The guide contains a basic description of the BD Influx™ high-speed cell sorter and BD FACS™ Sortware sorter software, QC procedures, configuration, operating procedures, maintenance information, and troubleshooting.",
+
+            "downloadLink": ""
+        },
+        {
+            "resourceType": "productInformationSheets",
+            "resourceName": "Product Information Sheets",
+            "fileType": "pdf",
+
+            "resourceTitle": "Mouse Leukocyte Alloantigens Chart",
+            "resourceDesc": "This chart provide useful information about Mouse Leukocyte Alloantigens per mouse strains.",
+
+            "downloadLink": ""
+        },
+        {
+            "resourceType": "Videos",
+            "resourceName": "Videos",
+            "fileType": "pdf",
+
+            "resourceTitle": "BD Influx™ Cell Sorter User’s Guide",
+            "resourceDesc": "The guide contains a basic description of the BD Influx™ high-speed cell sorter and BD FACS™ Sortware sorter software, QC procedures, configuration, operating procedures, maintenance information, and troubleshooting.",
+
+            "downloadLink": ""
+        },
+        {
+            "resourceType": "experimentalSheets",
+            "resourceName": "Experimental Sheets",
+            "fileType": "pdf",
+
+            "resourceTitle": "Mouse Leukocyte Alloantigens Chart",
+            "resourceDesc": "This chart provide useful information about Mouse Leukocyte Alloantigens per mouse strains.",
+
+            "downloadLink": ""
+        },
+        {
+            "resourceType": "webinars",
+            "resourceName": "Webinars",
+            "fileType": "pdf",
+
+            "resourceTitle": "BD Influx™ Cell Sorter User’s Guide",
+            "resourceDesc": "The guide contains a basic description of the BD Influx™ high-speed cell sorter and BD FACS™ Sortware sorter software, QC procedures, configuration, operating procedures, maintenance information, and troubleshooting.",
+
+            "downloadLink": ""
+        },
+        {
+            "resourceType": "brochures",
+            "resourceName": "Brochures",
+            "fileType": "pdf",
+
+            "resourceTitle": "Mouse Leukocyte Alloantigens Chart",
+            "resourceDesc": "This chart provide useful information about Mouse Leukocyte Alloantigens per mouse strains.",
+
+            "downloadLink": ""
+        },
+        {
+            "resourceType": "applicationNotes",
+            "resourceName": "Application Notes",
+            "fileType": "pdf",
+
+            "resourceTitle": "BD Influx™ Cell Sorter User’s Guide",
+            "resourceDesc": "The guide contains a basic description of the BD Influx™ high-speed cell sorter and BD FACS™ Sortware sorter software, QC procedures, configuration, operating procedures, maintenance information, and troubleshooting.",
+
+            "downloadLink": ""
+        },
+        {
+            "resourceType": "brochures",
+            "resourceName": "Brochures",
+            "fileType": "pdf",
+
+            "resourceTitle": "Mouse Leukocyte Alloantigens Chart",
+            "resourceDesc": "This chart provide useful information about Mouse Leukocyte Alloantigens per mouse strains.",
+
+            "downloadLink": ""
+        },
+        {
+            "resourceType": "posters",
+            "resourceName": "Posters",
+            "fileType": "pdf",
+
+            "resourceTitle": "BD Influx™ Cell Sorter User’s Guide",
+            "resourceDesc": "The guide contains a basic description of the BD Influx™ high-speed cell sorter and BD FACS™ Sortware sorter software, QC procedures, configuration, operating procedures, maintenance information, and troubleshooting.",
+
+            "downloadLink": ""
+        },
+        {
+            "resourceType": "productInformationSheets",
+            "resourceName": "Product Information Sheets",
+            "fileType": "pdf",
+
+            "resourceTitle": "Mouse Leukocyte Alloantigens Chart",
+            "resourceDesc": "This chart provide useful information about Mouse Leukocyte Alloantigens per mouse strains.",
+
+            "downloadLink": ""
+        },
+        {
+            "resourceType": "Videos",
+            "resourceName": "Videos",
+            "fileType": "pdf",
+
+            "resourceTitle": "BD Influx™ Cell Sorter User’s Guide",
+            "resourceDesc": "The guide contains a basic description of the BD Influx™ high-speed cell sorter and BD FACS™ Sortware sorter software, QC procedures, configuration, operating procedures, maintenance information, and troubleshooting.",
+
+            "downloadLink": ""
+        },
+        {
+            "resourceType": "experimentalSheets",
+            "resourceName": "Experimental Sheets",
+            "fileType": "pdf",
+
+            "resourceTitle": "Mouse Leukocyte Alloantigens Chart",
+            "resourceDesc": "This chart provide useful information about Mouse Leukocyte Alloantigens per mouse strains.",
+
+            "downloadLink": ""
+        },
+        {
+            "resourceType": "webinars",
+            "resourceName": "Webinars",
+            "fileType": "pdf",
+
+            "resourceTitle": "BD Influx™ Cell Sorter User’s Guide",
+            "resourceDesc": "The guide contains a basic description of the BD Influx™ high-speed cell sorter and BD FACS™ Sortware sorter software, QC procedures, configuration, operating procedures, maintenance information, and troubleshooting.",
+
+            "downloadLink": ""
+        },
+        {
+            "resourceType": "brochures",
+            "resourceName": "Brochures",
+            "fileType": "pdf",
+
+            "resourceTitle": "Mouse Leukocyte Alloantigens Chart",
+            "resourceDesc": "This chart provide useful information about Mouse Leukocyte Alloantigens per mouse strains.",
+
+            "downloadLink": ""
+        },
+        {
+            "resourceType": "applicationNotes",
+            "resourceName": "Application Notes",
+            "fileType": "pdf",
+
+            "resourceTitle": "BD Influx™ Cell Sorter User’s Guide",
+            "resourceDesc": "The guide contains a basic description of the BD Influx™ high-speed cell sorter and BD FACS™ Sortware sorter software, QC procedures, configuration, operating procedures, maintenance information, and troubleshooting.",
+
+            "downloadLink": ""
+        },
+        {
+            "resourceType": "brochures",
+            "resourceName": "Brochures",
+            "fileType": "pdf",
+
+            "resourceTitle": "Mouse Leukocyte Alloantigens Chart",
+            "resourceDesc": "This chart provide useful information about Mouse Leukocyte Alloantigens per mouse strains.",
+
+            "downloadLink": ""
+        },
+        {
+            "resourceType": "posters",
+            "resourceName": "Posters",
+            "fileType": "pdf",
+
+            "resourceTitle": "BD Influx™ Cell Sorter User’s Guide",
+            "resourceDesc": "The guide contains a basic description of the BD Influx™ high-speed cell sorter and BD FACS™ Sortware sorter software, QC procedures, configuration, operating procedures, maintenance information, and troubleshooting.",
+
+            "downloadLink": ""
+        },
+        {
+            "resourceType": "productInformationSheets",
+            "resourceName": "Product Information Sheets",
+            "fileType": "pdf",
+
+            "resourceTitle": "Mouse Leukocyte Alloantigens Chart",
+            "resourceDesc": "This chart provide useful information about Mouse Leukocyte Alloantigens per mouse strains.",
+
+            "downloadLink": ""
+        },
+        {
+            "resourceType": "Videos",
+            "resourceName": "Videos",
+            "fileType": "pdf",
+
+            "resourceTitle": "BD Influx™ Cell Sorter User’s Guide",
+            "resourceDesc": "The guide contains a basic description of the BD Influx™ high-speed cell sorter and BD FACS™ Sortware sorter software, QC procedures, configuration, operating procedures, maintenance information, and troubleshooting.",
+
+            "downloadLink": ""
+        },
+        {
+            "resourceType": "experimentalSheets",
+            "resourceName": "Experimental Sheets",
+            "fileType": "pdf",
+
+            "resourceTitle": "Mouse Leukocyte Alloantigens Chart",
+            "resourceDesc": "This chart provide useful information about Mouse Leukocyte Alloantigens per mouse strains.",
+
+            "downloadLink": ""
+        },
+        {
+            "resourceType": "webinars",
+            "resourceName": "Webinars",
+            "fileType": "pdf",
+
+            "resourceTitle": "BD Influx™ Cell Sorter User’s Guide",
+            "resourceDesc": "The guide contains a basic description of the BD Influx™ high-speed cell sorter and BD FACS™ Sortware sorter software, QC procedures, configuration, operating procedures, maintenance information, and troubleshooting.",
+
+            "downloadLink": ""
+        },
+        {
+            "resourceType": "brochures",
+            "resourceName": "Brochures",
+            "fileType": "pdf",
+
+            "resourceTitle": "Mouse Leukocyte Alloantigens Chart",
+            "resourceDesc": "This chart provide useful information about Mouse Leukocyte Alloantigens per mouse strains.",
+
+            "downloadLink": ""
+        },
+        {
+            "resourceType": "applicationNotes",
+            "resourceName": "Application Notes",
+            "fileType": "pdf",
+
+            "resourceTitle": "BD Influx™ Cell Sorter User’s Guide",
+            "resourceDesc": "The guide contains a basic description of the BD Influx™ high-speed cell sorter and BD FACS™ Sortware sorter software, QC procedures, configuration, operating procedures, maintenance information, and troubleshooting.",
+
+            "downloadLink": ""
+        },
+        {
+            "resourceType": "brochures",
+            "resourceName": "Brochures",
+            "fileType": "pdf",
+
+            "resourceTitle": "Mouse Leukocyte Alloantigens Chart",
+            "resourceDesc": "This chart provide useful information about Mouse Leukocyte Alloantigens per mouse strains.",
+
+            "downloadLink": ""
+        },
+        {
+            "resourceType": "posters",
+            "resourceName": "Posters",
+            "fileType": "pdf",
+
+            "resourceTitle": "BD Influx™ Cell Sorter User’s Guide",
+            "resourceDesc": "The guide contains a basic description of the BD Influx™ high-speed cell sorter and BD FACS™ Sortware sorter software, QC procedures, configuration, operating procedures, maintenance information, and troubleshooting.",
+
+            "downloadLink": ""
+        },
+        {
+            "resourceType": "productInformationSheets",
+            "resourceName": "Product Information Sheets",
+            "fileType": "pdf",
+
+            "resourceTitle": "Mouse Leukocyte Alloantigens Chart",
+            "resourceDesc": "This chart provide useful information about Mouse Leukocyte Alloantigens per mouse strains.",
+
+            "downloadLink": ""
+        },
+        {
+            "resourceType": "Videos",
+            "resourceName": "Videos",
+            "fileType": "pdf",
+
+            "resourceTitle": "BD Influx™ Cell Sorter User’s Guide",
+            "resourceDesc": "The guide contains a basic description of the BD Influx™ high-speed cell sorter and BD FACS™ Sortware sorter software, QC procedures, configuration, operating procedures, maintenance information, and troubleshooting.",
+
+            "downloadLink": ""
+        },
+        {
+            "resourceType": "experimentalSheets",
+            "resourceName": "Experimental Sheets",
+            "fileType": "pdf",
+
+            "resourceTitle": "Mouse Leukocyte Alloantigens Chart",
+            "resourceDesc": "This chart provide useful information about Mouse Leukocyte Alloantigens per mouse strains.",
+
+            "downloadLink": ""
+        },
+        {
+            "resourceType": "webinars",
+            "resourceName": "Webinars",
+            "fileType": "pdf",
+
+            "resourceTitle": "BD Influx™ Cell Sorter User’s Guide",
+            "resourceDesc": "The guide contains a basic description of the BD Influx™ high-speed cell sorter and BD FACS™ Sortware sorter software, QC procedures, configuration, operating procedures, maintenance information, and troubleshooting.",
+
+            "downloadLink": ""
+        },
+        {
+            "resourceType": "brochures",
+            "resourceName": "Brochures",
+            "fileType": "pdf",
+
+            "resourceTitle": "Mouse Leukocyte Alloantigens Chart",
+            "resourceDesc": "This chart provide useful information about Mouse Leukocyte Alloantigens per mouse strains.",
+
+            "downloadLink": ""
+        },
+        {
+            "resourceType": "applicationNotes",
+            "resourceName": "Application Notes",
+            "fileType": "pdf",
+
+            "resourceTitle": "BD Influx™ Cell Sorter User’s Guide",
+            "resourceDesc": "The guide contains a basic description of the BD Influx™ high-speed cell sorter and BD FACS™ Sortware sorter software, QC procedures, configuration, operating procedures, maintenance information, and troubleshooting.",
+
+            "downloadLink": ""
+        },
+        {
+            "resourceType": "brochures",
+            "resourceName": "Brochures",
+            "fileType": "pdf",
+
+            "resourceTitle": "Mouse Leukocyte Alloantigens Chart",
+            "resourceDesc": "This chart provide useful information about Mouse Leukocyte Alloantigens per mouse strains.",
+
+            "downloadLink": ""
+        },
+        {
+            "resourceType": "posters",
+            "resourceName": "Posters",
+            "fileType": "pdf",
+
+            "resourceTitle": "BD Influx™ Cell Sorter User’s Guide",
+            "resourceDesc": "The guide contains a basic description of the BD Influx™ high-speed cell sorter and BD FACS™ Sortware sorter software, QC procedures, configuration, operating procedures, maintenance information, and troubleshooting.",
+
+            "downloadLink": ""
+        },
+        {
+            "resourceType": "productInformationSheets",
+            "resourceName": "Product Information Sheets",
+            "fileType": "pdf",
+
+            "resourceTitle": "Mouse Leukocyte Alloantigens Chart",
+            "resourceDesc": "This chart provide useful information about Mouse Leukocyte Alloantigens per mouse strains.",
+
+            "downloadLink": ""
+        },
+        {
+            "resourceType": "Videos",
+            "resourceName": "Videos",
+            "fileType": "pdf",
+
+            "resourceTitle": "BD Influx™ Cell Sorter User’s Guide",
+            "resourceDesc": "The guide contains a basic description of the BD Influx™ high-speed cell sorter and BD FACS™ Sortware sorter software, QC procedures, configuration, operating procedures, maintenance information, and troubleshooting.",
+
+            "downloadLink": ""
+        },
+        {
+            "resourceType": "experimentalSheets",
+            "resourceName": "Experimental Sheets",
+            "fileType": "pdf",
+
+            "resourceTitle": "Mouse Leukocyte Alloantigens Chart",
+            "resourceDesc": "This chart provide useful information about Mouse Leukocyte Alloantigens per mouse strains.",
+
+            "downloadLink": ""
+        },
+        {
+            "resourceType": "webinars",
+            "resourceName": "Webinars",
+            "fileType": "pdf",
+
+            "resourceTitle": "BD Influx™ Cell Sorter User’s Guide",
+            "resourceDesc": "The guide contains a basic description of the BD Influx™ high-speed cell sorter and BD FACS™ Sortware sorter software, QC procedures, configuration, operating procedures, maintenance information, and troubleshooting.",
+
+            "downloadLink": ""
+        },
+        {
+            "resourceType": "brochures",
+            "resourceName": "Brochures",
+            "fileType": "pdf",
+
+            "resourceTitle": "Mouse Leukocyte Alloantigens Chart",
+            "resourceDesc": "This chart provide useful information about Mouse Leukocyte Alloantigens per mouse strains.",
+
+            "downloadLink": ""
+        },
+        {
+            "resourceType": "applicationNotes",
+            "resourceName": "Application Notes",
+            "fileType": "pdf",
+
+            "resourceTitle": "BD Influx™ Cell Sorter User’s Guide",
+            "resourceDesc": "The guide contains a basic description of the BD Influx™ high-speed cell sorter and BD FACS™ Sortware sorter software, QC procedures, configuration, operating procedures, maintenance information, and troubleshooting.",
+
+            "downloadLink": ""
+        },
+        {
+            "resourceType": "brochures",
+            "resourceName": "Brochures",
+            "fileType": "pdf",
+
+            "resourceTitle": "Mouse Leukocyte Alloantigens Chart",
+            "resourceDesc": "This chart provide useful information about Mouse Leukocyte Alloantigens per mouse strains.",
+
+            "downloadLink": ""
+        },
+        {
+            "resourceType": "posters",
+            "resourceName": "Posters",
+            "fileType": "pdf",
+
+            "resourceTitle": "BD Influx™ Cell Sorter User’s Guide",
+            "resourceDesc": "The guide contains a basic description of the BD Influx™ high-speed cell sorter and BD FACS™ Sortware sorter software, QC procedures, configuration, operating procedures, maintenance information, and troubleshooting.",
+
+            "downloadLink": ""
+        },
+        {
+            "resourceType": "allResources",
+            "resourceName": "All Resources",
+            "fileType": "pdf",
+
+            "resourceTitle": "BD Influx™ Cell Sorter User’s Guide",
+            "resourceDesc": "The guide contains a basic description of the BD Influx™ high-speed cell sorter and BD FACS™ Sortware sorter software, QC procedures, configuration, operating procedures, maintenance information, and troubleshooting.",
+
+            "downloadLink": ""
+        },
+        {
+            "resourceType": "brochures",
+            "resourceName": "Brochures",
+            "fileType": "pdf",
+
+            "resourceTitle": "Mouse Leukocyte Alloantigens Chart",
+            "resourceDesc": "This chart provide useful information about Mouse Leukocyte Alloantigens per mouse strains.",
+
+            "downloadLink": ""
+        },
+        {
+            "resourceType": "posters",
+            "resourceName": "Posters",
+            "fileType": "pdf",
+
+            "resourceTitle": "BD Influx™ Cell Sorter User’s Guide",
+            "resourceDesc": "The guide contains a basic description of the BD Influx™ high-speed cell sorter and BD FACS™ Sortware sorter software, QC procedures, configuration, operating procedures, maintenance information, and troubleshooting.",
+
+            "downloadLink": ""
+        },
+        {
+            "resourceType": "productInformationSheets",
+            "resourceName": "Product Information Sheets",
+            "fileType": "pdf",
+
+            "resourceTitle": "Mouse Leukocyte Alloantigens Chart",
+            "resourceDesc": "This chart provide useful information about Mouse Leukocyte Alloantigens per mouse strains.",
+
+            "downloadLink": ""
+        },
+        {
+            "resourceType": "Videos",
+            "resourceName": "Videos",
+            "fileType": "pdf",
+
+            "resourceTitle": "BD Influx™ Cell Sorter User’s Guide",
+            "resourceDesc": "The guide contains a basic description of the BD Influx™ high-speed cell sorter and BD FACS™ Sortware sorter software, QC procedures, configuration, operating procedures, maintenance information, and troubleshooting.",
+
+            "downloadLink": ""
+        },
+        {
+            "resourceType": "experimentalSheets",
+            "resourceName": "Experimental Sheets",
+            "fileType": "pdf",
+
+            "resourceTitle": "Mouse Leukocyte Alloantigens Chart",
+            "resourceDesc": "This chart provide useful information about Mouse Leukocyte Alloantigens per mouse strains.",
+
+            "downloadLink": ""
+        },
+        {
+            "resourceType": "webinars",
+            "resourceName": "Webinars",
+            "fileType": "pdf",
+
+            "resourceTitle": "BD Influx™ Cell Sorter User’s Guide",
+            "resourceDesc": "The guide contains a basic description of the BD Influx™ high-speed cell sorter and BD FACS™ Sortware sorter software, QC procedures, configuration, operating procedures, maintenance information, and troubleshooting.",
+
+            "downloadLink": ""
+        },
+        {
+            "resourceType": "brochures",
+            "resourceName": "Brochures",
+            "fileType": "pdf",
+
+            "resourceTitle": "Mouse Leukocyte Alloantigens Chart",
+            "resourceDesc": "This chart provide useful information about Mouse Leukocyte Alloantigens per mouse strains.",
+
+            "downloadLink": ""
+        },
+        {
+            "resourceType": "applicationNotes",
+            "resourceName": "Application Notes",
+            "fileType": "pdf",
+
+            "resourceTitle": "BD Influx™ Cell Sorter User’s Guide",
+            "resourceDesc": "The guide contains a basic description of the BD Influx™ high-speed cell sorter and BD FACS™ Sortware sorter software, QC procedures, configuration, operating procedures, maintenance information, and troubleshooting.",
+
+            "downloadLink": ""
+        },
+        {
+            "resourceType": "brochures",
+            "resourceName": "Brochures",
+            "fileType": "pdf",
+
+            "resourceTitle": "Mouse Leukocyte Alloantigens Chart",
+            "resourceDesc": "This chart provide useful information about Mouse Leukocyte Alloantigens per mouse strains.",
+
+            "downloadLink": ""
+        },
+        {
+            "resourceType": "posters",
+            "resourceName": "Posters",
+            "fileType": "pdf",
+
+            "resourceTitle": "BD Influx™ Cell Sorter User’s Guide",
+            "resourceDesc": "The guide contains a basic description of the BD Influx™ high-speed cell sorter and BD FACS™ Sortware sorter software, QC procedures, configuration, operating procedures, maintenance information, and troubleshooting.",
+
+            "downloadLink": ""
+        },
+        {
+            "resourceType": "productInformationSheets",
+            "resourceName": "Product Information Sheets",
+            "fileType": "pdf",
+
+            "resourceTitle": "Mouse Leukocyte Alloantigens Chart",
+            "resourceDesc": "This chart provide useful information about Mouse Leukocyte Alloantigens per mouse strains.",
+
+            "downloadLink": ""
+        },
+        {
+            "resourceType": "Videos",
+            "resourceName": "Videos",
+            "fileType": "pdf",
+
+            "resourceTitle": "BD Influx™ Cell Sorter User’s Guide",
+            "resourceDesc": "The guide contains a basic description of the BD Influx™ high-speed cell sorter and BD FACS™ Sortware sorter software, QC procedures, configuration, operating procedures, maintenance information, and troubleshooting.",
+
+            "downloadLink": ""
+        },
+        {
+            "resourceType": "experimentalSheets",
+            "resourceName": "Experimental Sheets",
+            "fileType": "pdf",
+
+            "resourceTitle": "Mouse Leukocyte Alloantigens Chart",
+            "resourceDesc": "This chart provide useful information about Mouse Leukocyte Alloantigens per mouse strains.",
+
+            "downloadLink": ""
+        },
+        {
+            "resourceType": "webinars",
+            "resourceName": "Webinars",
+            "fileType": "pdf",
+
+            "resourceTitle": "BD Influx™ Cell Sorter User’s Guide",
+            "resourceDesc": "The guide contains a basic description of the BD Influx™ high-speed cell sorter and BD FACS™ Sortware sorter software, QC procedures, configuration, operating procedures, maintenance information, and troubleshooting.",
+
+            "downloadLink": ""
+        },
+        {
+            "resourceType": "brochures",
+            "resourceName": "Brochures",
+            "fileType": "pdf",
+
+            "resourceTitle": "Mouse Leukocyte Alloantigens Chart",
+            "resourceDesc": "This chart provide useful information about Mouse Leukocyte Alloantigens per mouse strains.",
+
+            "downloadLink": ""
+        },
+        {
+            "resourceType": "applicationNotes",
+            "resourceName": "Application Notes",
+            "fileType": "pdf",
+
+            "resourceTitle": "BD Influx™ Cell Sorter User’s Guide",
+            "resourceDesc": "The guide contains a basic description of the BD Influx™ high-speed cell sorter and BD FACS™ Sortware sorter software, QC procedures, configuration, operating procedures, maintenance information, and troubleshooting.",
+
+            "downloadLink": ""
+        },
+        {
+            "resourceType": "brochures",
+            "resourceName": "Brochures",
+            "fileType": "pdf",
+
+            "resourceTitle": "Mouse Leukocyte Alloantigens Chart",
+            "resourceDesc": "This chart provide useful information about Mouse Leukocyte Alloantigens per mouse strains.",
+
+            "downloadLink": ""
+        },
+        {
+            "resourceType": "posters",
+            "resourceName": "Posters",
+            "fileType": "pdf",
+
+            "resourceTitle": "BD Influx™ Cell Sorter User’s Guide",
+            "resourceDesc": "The guide contains a basic description of the BD Influx™ high-speed cell sorter and BD FACS™ Sortware sorter software, QC procedures, configuration, operating procedures, maintenance information, and troubleshooting.",
+
+            "downloadLink": ""
+        },
+        {
+            "resourceType": "productInformationSheets",
+            "resourceName": "Product Information Sheets",
+            "fileType": "pdf",
+
+            "resourceTitle": "Mouse Leukocyte Alloantigens Chart",
+            "resourceDesc": "This chart provide useful information about Mouse Leukocyte Alloantigens per mouse strains.",
+
+            "downloadLink": ""
+        },
+        {
+            "resourceType": "Videos",
+            "resourceName": "Videos",
+            "fileType": "pdf",
+
+            "resourceTitle": "BD Influx™ Cell Sorter User’s Guide",
+            "resourceDesc": "The guide contains a basic description of the BD Influx™ high-speed cell sorter and BD FACS™ Sortware sorter software, QC procedures, configuration, operating procedures, maintenance information, and troubleshooting.",
+
+            "downloadLink": ""
+        },
+        {
+            "resourceType": "experimentalSheets",
+            "resourceName": "Experimental Sheets",
+            "fileType": "pdf",
+
+            "resourceTitle": "Mouse Leukocyte Alloantigens Chart",
+            "resourceDesc": "This chart provide useful information about Mouse Leukocyte Alloantigens per mouse strains.",
+
+            "downloadLink": ""
+        },
+        {
+            "resourceType": "webinars",
+            "resourceName": "Webinars",
+            "fileType": "pdf",
+
+            "resourceTitle": "BD Influx™ Cell Sorter User’s Guide",
+            "resourceDesc": "The guide contains a basic description of the BD Influx™ high-speed cell sorter and BD FACS™ Sortware sorter software, QC procedures, configuration, operating procedures, maintenance information, and troubleshooting.",
+
+            "downloadLink": ""
+        },
+        {
+            "resourceType": "brochures",
+            "resourceName": "Brochures",
+            "fileType": "pdf",
+
+            "resourceTitle": "Mouse Leukocyte Alloantigens Chart",
+            "resourceDesc": "This chart provide useful information about Mouse Leukocyte Alloantigens per mouse strains.",
+
+            "downloadLink": ""
+        },
+        {
+            "resourceType": "applicationNotes",
+            "resourceName": "Application Notes",
+            "fileType": "pdf",
+
+            "resourceTitle": "BD Influx™ Cell Sorter User’s Guide",
+            "resourceDesc": "The guide contains a basic description of the BD Influx™ high-speed cell sorter and BD FACS™ Sortware sorter software, QC procedures, configuration, operating procedures, maintenance information, and troubleshooting.",
+
+            "downloadLink": ""
+        },
+        {
+            "resourceType": "brochures",
+            "resourceName": "Brochures",
+            "fileType": "pdf",
+
+            "resourceTitle": "Mouse Leukocyte Alloantigens Chart",
+            "resourceDesc": "This chart provide useful information about Mouse Leukocyte Alloantigens per mouse strains.",
+
+            "downloadLink": ""
+        },
+        {
+            "resourceType": "posters",
+            "resourceName": "Posters",
+            "fileType": "pdf",
+
+            "resourceTitle": "BD Influx™ Cell Sorter User’s Guide",
+            "resourceDesc": "The guide contains a basic description of the BD Influx™ high-speed cell sorter and BD FACS™ Sortware sorter software, QC procedures, configuration, operating procedures, maintenance information, and troubleshooting.",
+
+            "downloadLink": ""
+        },
+        {
+            "resourceType": "productInformationSheets",
+            "resourceName": "Product Information Sheets",
+            "fileType": "pdf",
+
+            "resourceTitle": "Mouse Leukocyte Alloantigens Chart",
+            "resourceDesc": "This chart provide useful information about Mouse Leukocyte Alloantigens per mouse strains.",
+
+            "downloadLink": ""
+        },
+        {
+            "resourceType": "Videos",
+            "resourceName": "Videos",
+            "fileType": "pdf",
+
+            "resourceTitle": "BD Influx™ Cell Sorter User’s Guide",
+            "resourceDesc": "The guide contains a basic description of the BD Influx™ high-speed cell sorter and BD FACS™ Sortware sorter software, QC procedures, configuration, operating procedures, maintenance information, and troubleshooting.",
+
+            "downloadLink": ""
+        },
+        {
+            "resourceType": "experimentalSheets",
+            "resourceName": "Experimental Sheets",
+            "fileType": "pdf",
+
+            "resourceTitle": "Mouse Leukocyte Alloantigens Chart",
+            "resourceDesc": "This chart provide useful information about Mouse Leukocyte Alloantigens per mouse strains.",
+
+            "downloadLink": ""
+        },
+        {
+            "resourceType": "webinars",
+            "resourceName": "Webinars",
+            "fileType": "pdf",
+
+            "resourceTitle": "BD Influx™ Cell Sorter User’s Guide",
+            "resourceDesc": "The guide contains a basic description of the BD Influx™ high-speed cell sorter and BD FACS™ Sortware sorter software, QC procedures, configuration, operating procedures, maintenance information, and troubleshooting.",
+
+            "downloadLink": ""
+        },
+        {
+            "resourceType": "brochures",
+            "resourceName": "Brochures",
+            "fileType": "pdf",
+
+            "resourceTitle": "Mouse Leukocyte Alloantigens Chart",
+            "resourceDesc": "This chart provide useful information about Mouse Leukocyte Alloantigens per mouse strains.",
+
+            "downloadLink": ""
+        },
+        {
+            "resourceType": "applicationNotes",
+            "resourceName": "Application Notes",
+            "fileType": "pdf",
+
+            "resourceTitle": "BD Influx™ Cell Sorter User’s Guide",
+            "resourceDesc": "The guide contains a basic description of the BD Influx™ high-speed cell sorter and BD FACS™ Sortware sorter software, QC procedures, configuration, operating procedures, maintenance information, and troubleshooting.",
+
+            "downloadLink": ""
+        },
+        {
+            "resourceType": "brochures",
+            "resourceName": "Brochures",
+            "fileType": "pdf",
+
+            "resourceTitle": "Mouse Leukocyte Alloantigens Chart",
+            "resourceDesc": "This chart provide useful information about Mouse Leukocyte Alloantigens per mouse strains.",
+
+            "downloadLink": ""
+        },
+        {
+            "resourceType": "posters",
+            "resourceName": "Posters",
+            "fileType": "pdf",
+
+            "resourceTitle": "BD Influx™ Cell Sorter User’s Guide",
+            "resourceDesc": "The guide contains a basic description of the BD Influx™ high-speed cell sorter and BD FACS™ Sortware sorter software, QC procedures, configuration, operating procedures, maintenance information, and troubleshooting.",
+
+            "downloadLink": ""
+        },
+        {
+            "resourceType": "productInformationSheets",
+            "resourceName": "Product Information Sheets",
+            "fileType": "pdf",
+
+            "resourceTitle": "Mouse Leukocyte Alloantigens Chart",
+            "resourceDesc": "This chart provide useful information about Mouse Leukocyte Alloantigens per mouse strains.",
+
+            "downloadLink": ""
+        },
+        {
+            "resourceType": "Videos",
+            "resourceName": "Videos",
+            "fileType": "pdf",
+
+            "resourceTitle": "BD Influx™ Cell Sorter User’s Guide",
+            "resourceDesc": "The guide contains a basic description of the BD Influx™ high-speed cell sorter and BD FACS™ Sortware sorter software, QC procedures, configuration, operating procedures, maintenance information, and troubleshooting.",
+
+            "downloadLink": ""
+        },
+        {
+            "resourceType": "experimentalSheets",
+            "resourceName": "Experimental Sheets",
+            "fileType": "pdf",
+
+            "resourceTitle": "Mouse Leukocyte Alloantigens Chart",
+            "resourceDesc": "This chart provide useful information about Mouse Leukocyte Alloantigens per mouse strains.",
+
+            "downloadLink": ""
+        },
+        {
+            "resourceType": "webinars",
+            "resourceName": "Webinars",
+            "fileType": "pdf",
+
+            "resourceTitle": "BD Influx™ Cell Sorter User’s Guide",
+            "resourceDesc": "The guide contains a basic description of the BD Influx™ high-speed cell sorter and BD FACS™ Sortware sorter software, QC procedures, configuration, operating procedures, maintenance information, and troubleshooting.",
+
+            "downloadLink": ""
+        },
+        {
+            "resourceType": "brochures",
+            "resourceName": "Brochures",
+            "fileType": "pdf",
+
+            "resourceTitle": "Mouse Leukocyte Alloantigens Chart",
+            "resourceDesc": "This chart provide useful information about Mouse Leukocyte Alloantigens per mouse strains.",
+
+            "downloadLink": ""
+        },
+        {
+            "resourceType": "applicationNotes",
+            "resourceName": "Application Notes",
+            "fileType": "pdf",
+
+            "resourceTitle": "BD Influx™ Cell Sorter User’s Guide",
+            "resourceDesc": "The guide contains a basic description of the BD Influx™ high-speed cell sorter and BD FACS™ Sortware sorter software, QC procedures, configuration, operating procedures, maintenance information, and troubleshooting.",
+
+            "downloadLink": ""
+        },
+        {
+            "resourceType": "brochures",
+            "resourceName": "Brochures",
+            "fileType": "pdf",
+
+            "resourceTitle": "Mouse Leukocyte Alloantigens Chart",
+            "resourceDesc": "This chart provide useful information about Mouse Leukocyte Alloantigens per mouse strains.",
+
+            "downloadLink": ""
+        },
+        {
+            "resourceType": "posters",
+            "resourceName": "Posters",
+            "fileType": "pdf",
+
+            "resourceTitle": "BD Influx™ Cell Sorter User’s Guide",
+            "resourceDesc": "The guide contains a basic description of the BD Influx™ high-speed cell sorter and BD FACS™ Sortware sorter software, QC procedures, configuration, operating procedures, maintenance information, and troubleshooting.",
+
+            "downloadLink": ""
+        }
+    ],
+    "brightCoveID": "1752604059001",
+    "brightCovePlayerId": "B1xXFuBodW",
+    "totalCount": 51
+}

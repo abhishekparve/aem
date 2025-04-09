@@ -1,0 +1,4 @@
+// Configuration created by Apache Sling JCR Installer
+{
+  "org.apache.felix.eventadmin.Timeout:Integer":15000
+}

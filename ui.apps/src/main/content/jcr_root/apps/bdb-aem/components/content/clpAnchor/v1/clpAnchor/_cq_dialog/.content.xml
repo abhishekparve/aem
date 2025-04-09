@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="CLP Anchor / Search"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+        <items jcr:primaryType="nt:unstructured">
+            <column
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/container">
+                <items jcr:primaryType="nt:unstructured">
+                    <togglePaddingTop
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/switch"
+                        checked="{Boolean}false"
+                        fieldLabel="Reduce Top Padding"
+                        fieldDescription="Switch between Default Padding (Off) and Reduced Padding (On)"
+                        name="./togglePaddingTop"/>
+                    <togglePaddingBottom
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/switch"
+                        checked="{Boolean}false"
+                        fieldLabel="Reduce Bottom Padding"
+                        fieldDescription="Switch between Default Padding (Off) and Reduced Padding (On)"
+                        name="./togglePaddingBottom"/>
+                    <pageTabVariarion
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                        fieldDescription="Check to use CLP Anchor inside a Tab Component"
+                        name="./pageTabVariarion"
+                        text="Page Container Variation"
+                        uncheckedValue="false"
+                        value="true"/>
+                    <dropdown
+                        granite:class="cq-dialog-dropdown-showhide"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                        fieldDescription="Select Anchor/ Search"
+                        fieldLabel="Select Anchor/ Search"
+                        name="./categorySelect">
+                        <items jcr:primaryType="nt:unstructured">
+                            <def
+                                jcr:primaryType="nt:unstructured"
+                                text="Select Anchor/ Search"
+                                value=""/>
+                            <anchor
+                                jcr:primaryType="nt:unstructured"
+                                text="Anchor"
+                                value="anchor"/>
+                            <search
+                                jcr:primaryType="nt:unstructured"
+                                text="Search"
+                                value="search"/>
+                        </items>
+                        <granite:data
+                            jcr:primaryType="nt:unstructured"
+                            cq-dialog-dropdown-showhide-target=".showhidetargets"/>
+                    </dropdown>
+                    <background
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                        fieldLabel="Background Color"
+                        name="./backgroundColor"
+                        required="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <def
+                                jcr:primaryType="nt:unstructured"
+                                text="Select Background Color"
+                                value=""/>
+                            <whiteColor
+                                jcr:primaryType="nt:unstructured"
+                                text="White color"
+                                value="white-bg"/>
+                            <greyColor
+                                jcr:primaryType="nt:unstructured"
+                                text="Grey color"
+                                value="grey-bg"/>
+                        </items>
+                    </background>
+                    <title
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldDescription="Title Description"
+                        fieldLabel="Title"
+                        name="./title"
+                        required="true"/>
+                    <fieldSetSearch
+                        granite:class="showhidetargets"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="CLP Search"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                        <items jcr:primaryType="nt:unstructured">
+                            <searchPlaceholder
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldDescription="Placeholder text for Category Name"
+                                fieldLabel="Placeholder text for Category Name"
+                                name="./searchPlaceholder"/>
+                        </items>
+                        <granite:data
+                            jcr:primaryType="nt:unstructured"
+                            showhidetargetvalue="search"/>
+                    </fieldSetSearch>
+                </items>
+            </column>
+        </items>
+    </content>
+</jcr:root>

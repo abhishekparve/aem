@@ -1,0 +1,19 @@
+<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html"
+     data-sly-call="${templates.placeholder @ isEmpty = true}"></sly>
+    <sly data-sly-use.saveToList="com.bdb.aem.core.models.SaveToShoppingListModel"></sly>
+    <script>
+        if (typeof window.AEM_DATA.labels === 'undefined') {
+            window.AEM_DATA.labels = {};
+        }
+        window.AEM_DATA.labels.saveToListLabels = ${ saveToList.saveToListLabels|| '{}' @context='scriptComment' };
+        if (typeof window.AEM_DATA.labels.saveToListLabels === 'undefined') {
+            window.AEM_DATA.labels.saveToListLabels = {};
+        }
+        window.AEM_DATA.labels.saveToListLabels.quoteListLabels=${ saveToList.quoteListLabels || '{}' @context='scriptComment' };
+        if (typeof window.AEM_DATA.config === 'undefined') {
+            window.AEM_DATA.config = {};
+        }
+        window.AEM_DATA.config.saveToListConfig = ${ saveToList.saveToListConfig || '{}' @context='scriptComment' };
+
+    </script>
+

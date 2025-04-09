@@ -1,0 +1,69 @@
+<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html"
+     data-sly-call="${templates.placeholder @ isEmpty = true}"></sly>
+
+<sly data-sly-use.downloadListModel="com.bdb.aem.core.models.DownloadListModel"></sly>
+<article class="download-list app-js__download-list px-0 ${properties.bgColor} ${properties.togglePaddingBottom=='false'?'':'mb-0'}" id="${downloadListModel.articleId}">
+    <div class="bd-container container">
+	    <div class="d-flex ${downloadListModel.sectionTitle ?'justify-content-between':'justify-content-end'}">
+	        <div data-sly-test="${downloadListModel.sectionTitle}" class="download-list__section-title ${properties.togglePaddingTop=='false'?'':'pt-0'} ${properties.togglePaddingBottom?'pb-2':''}">
+	        	${downloadListModel.sectionTitle}
+	        </div>
+	        <div data-sly-test="${downloadListModel.accordionList.size > 1}" class="download-list__action-container d-flex ${downloadListModel.sectionTitle ?'w-50':''} justify-content-end">
+				<span class="download-list__action-item-collapse" role="button" tabindex="0" id="expand-all-btn">Expand All</span>
+				<span class="download-list__action-item-expand" role="button" tabindex="0" id="collapse-all-btn">Collapse All</span>
+			</div>
+		</div>
+        <div class="${downloadListModel.image ? 'row  d-flex flex-column flex-column-reverse flex-lg-row flex-md-row' : 'row'}">
+            <div class="${downloadListModel.image ? 'accordion download-list__accordian-container col-lg-9 col-md-7  ' : 'accordion col-12 col-lg-12 '}"
+                 id="download-list-accordian">
+                <sly data-sly-test="${downloadListModel.accordionList}" data-sly-list.accordion="${downloadListModel.accordionList}" data-sly-unwrap>
+                    <ul class="download-list__items" id="list--${accordionList.index}">
+                        <li class="download-list__items-title collapsed" data-toggle="collapse" data-target="#download-list-content--${accordionList.index}-${resource.path.hashCode}" aria-expanded="false" aria-controls="list-content" tabindex="${accordionList.index}">
+                            ${accordion.title @context='html'}
+                            <img src="/../../../etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/collapse-down-arrow-blue.svg" class="download-list__items-arrow" alt="down-arrow">
+                        </li> 
+                        <div class="download-list__sub-items collapse show" aria-labelledby="list--${accordionList.index}" id="download-list-content--${accordionList.index}-${resource.path.hashCode}">
+                            <sly data-sly-list.document="${accordion.documents}"
+                                 data-sly-test="${accordion.documents}" data-sly-unwrap>
+                                <li class="download-list__sub-items-item">
+                                    <sly data-sly-test="${!document.downloadIcon}">
+	                                    <a href="${document.path}" target="_blank"> 
+	                                        <img class="download-list__downloadIcon" src="/../../../etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/Download.svg">
+	                                        <span class="download-list__sub-items-text">${document.fileName @context='html'}</span>
+	                                    </a>
+	                                </sly>   
+	                                <sly data-sly-test="${document.downloadIcon}">
+	                                    <a href="${document.path}" target="_blank" class="${document.downloadIcon ? 'pl-3' : ''}"> 
+	                                        <span class="download-list__sub-items-text">${document.fileName @context='html'}</span>
+	                                    </a>
+	                                </sly> 
+                                </li>
+                            </sly>
+                        </div>
+                    </ul>
+                </sly>
+            </div>
+            <sly data-sly-test="${downloadListModel.image}">
+                <div class="download-list__brochure col-12 col-lg-3 col-md-4 px-0 d-flex flex-column align-items-center">
+                    <div class="download-list__brochure-img">
+                        <div class="d-flex align-items-center justify-content-center position-relative">
+                            <picture>
+                                <source media="(max-width: 900px)"
+                                        srcset=${downloadListModel.imagePath}  onload="window.aos && window.aos.refresh()">
+                                <img  data-src=${downloadListModel.imagePath}
+                                      alt="${downloadListModel.imagePathAltText}" class="lazy" onload="window.aos && window.aos.refresh()"
+                                      onerror='this.onerror=null;this.src="/resources/images/product-default.png";'>
+                            </picture>
+                        </div>
+                    </div>
+                    <div class="download-list__brochure-link">
+                        <a href="${downloadListModel.downloadBrochureLink}" target="_blank"> 
+                            <img class="download-list__broucher-downloadIcon" src="/../../../etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/Download.svg" alt="${downloadListModel.imagePathAltText}">
+                            <span class="download-list__brochure-link-text">${downloadListModel.downloadBrochure @context='html'}</span>
+                        </a>
+                    </div>
+                </div>
+            </sly>
+        </div>
+    </div>
+</article>

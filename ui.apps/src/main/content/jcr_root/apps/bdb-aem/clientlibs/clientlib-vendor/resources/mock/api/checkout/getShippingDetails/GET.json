@@ -1,0 +1,50 @@
+{
+    "address": {
+        "active": false,
+        "addressId": "1001648546",
+        "billingAddress": false,
+        "country": {
+            "isocode": "US"
+        },
+        "defaultAddress": true,
+        "district": "ORANGE",
+        "formattedAddress": "9501 JERONIMO RD, California, IRVINE, 92618-2018",
+        "line1": "9501 JERONIMO RD",
+        "organizationName": "CHAPMAN UNIV",
+        "pendingAddress": false,
+        "phone": "714 997 6815",
+        "postalCode": "92618-2018",
+        "region": {
+            "isocode": "US-CA"
+        },
+        "shippingAddress": true,
+        "town": "IRVINE"
+    },
+    "attentionLine": {
+        "primaryAttentionLine": "Bala SP",
+        "secondaryAttentionLine": ""
+    },
+    "multipleShipTo": true,
+    "deliveryOptionAddons": [
+        {
+            "type": "INSIDE",
+            "selected": "true",
+            "price": {
+                "currencyIso": "USD",
+                "formattedValue": "$75.00",
+                "priceType": "BUY",
+                "value": "75"
+            }
+        },
+        {
+            "type": "OVERNIGHT",
+            "selected": "true",
+            "price": {
+                "currencyIso": "USD",
+                "formattedValue": "$75.00",
+                "priceType": "BUY",
+                "value": "75"
+            }
+        }
+    ]
+}

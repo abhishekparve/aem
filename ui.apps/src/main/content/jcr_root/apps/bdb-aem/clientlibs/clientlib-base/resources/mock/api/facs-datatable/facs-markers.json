@@ -1,0 +1,1684 @@
+{
+    "componentId": "1624953915768",
+    "dataList": [
+        {
+            "fluorochromes": [
+                {
+                    "bandName": "Violet 405 nm",
+                    "band": "violet",
+                    "items": [
+                        {
+                            "reagentsDataAvailable": true,
+                            "onlyReagentsAvailable": true,
+                            "notSuggestedAvailable": true,
+                            "label": "BD Horizon™ V450",
+                            "tableValue": "0.250"
+                        },
+                        {
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": false,
+                            "notSuggestedAvailable": false,
+                            "label": "Pacific Blue™",
+                            "tableValue": null
+                        },
+                        {
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": false,
+                            "notSuggestedAvailable": false,
+                            "label": "AmCyan",
+                            "tableValue": null
+                        },
+                        {
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": false,
+                            "notSuggestedAvailable": false,
+                            "label": "BD Horizon™ V500",
+                            "tableValue": null
+                        }
+                    ]
+                },
+                {
+                    "bandName": "Blue 488 nm",
+                    "band": "blue",
+                    "items": [
+                        {
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": false,
+                            "notSuggestedAvailable": false,
+                            "label": "Alexa Fluor® 488",
+                            "tableValue": null
+                        },
+                        {
+                            "reagentsDataAvailable": true,
+                            "onlyReagentsAvailable": true,
+                            "notSuggestedAvailable": true,
+                            "label": "FITC",
+                            "tableValue": "0.250"
+                        },
+                        {
+                            "reagentsDataAvailable": true,
+                            "onlyReagentsAvailable": true,
+                            "notSuggestedAvailable": true,
+                            "label": "PE",
+                            "tableValue": "1.000"
+                        },
+                        {
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": false,
+                            "label": "PE-Texas Red®",
+                            "tableValue": null
+                        },
+                        {
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": true,
+                            "label": "PE-Cy™5",
+                            "tableValue": null
+                        },
+                        {
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": false,
+                            "label": "PerCP",
+                            "tableValue": null
+                        },
+                        {
+                            "reagentsDataAvailable": true,
+                            "onlyReagentsAvailable": true,
+                            "label": "PerCP-Cy™5.5",
+                            "tableValue": "0.500"
+                        },
+                        {
+                            "reagentsDataAvailable": true,
+                            "onlyReagentsAvailable": true,
+                            "label": "PE-Cy™7",
+                            "tableValue": "0.250"
+                        }
+                    ]
+                },
+                {
+                    "bandName": " YG 561 nm",
+                    "band": "green",
+                    "items": [
+                        {
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": true,
+                            "label": "PE",
+                            "tableValue": null
+                        },
+                        {
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": true,
+                            "label": "PE-Cy™5",
+                            "tableValue": null
+                        },
+                        {
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": true,
+                            "label": "PE-Cy™7",
+                            "tableValue": null
+                        }
+                    ]
+                },
+                {
+                    "bandName": "Red 640 nm",
+                    "band": "red",
+                    "items": [
+                        {
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": false,
+                            "label": "APC",
+                            "tableValue": null
+                        },
+                        {
+                            "reagentsDataAvailable": true,
+                            "onlyReagentsAvailable": true,
+                            "label": "Alexa Fluor® 647",
+                            "tableValue": "0.250"
+                        },
+                        {
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": true,
+                            "label": "Alexa Fluor® 700",
+                            "tableValue": null
+                        },
+                        {
+                            "reagentsDataAvailable": true,
+                            "onlyReagentsAvailable": true,
+                            "label": "APC-Cy™7",
+                            "tableValue": "1.000"
+                        },
+                        {
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": false,
+                            "label": "APC-H7",
+                            "tableValue": null
+                        }
+                    ]
+                }
+            ],
+            "specificity": {
+                "clone": "17A2",
+                "target": "CD3"
+            }
+        },
+        {
+            "fluorochromes": [
+                {
+                    "bandName": "Violet 405 nm",
+                    "band": "violet",
+                    "items": [
+                        {
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": false,
+                            "label": "BD Horizon™ V450",
+                            "tableValue": null
+                        },
+                        {
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": false,
+                            "label": "Pacific Blue™",
+                            "tableValue": null
+                        },
+                        {
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": false,
+                            "label": "AmCyan",
+                            "tableValue": null
+                        },
+                        {
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": false,
+                            "label": "BD Horizon™ V500",
+                            "tableValue": null
+                        }
+                    ]
+                },
+                {
+                    "bandName": "Blue 488 nm",
+                    "band": "blue",
+                    "items": [
+                        {
+                            "reagentsDataAvailable": true,
+                            "onlyReagentsAvailable": true,
+                            "label": "Alexa Fluor® 488",
+                            "tableValue": "0.250"
+                        },
+                        {
+                            "reagentsDataAvailable": true,
+                            "onlyReagentsAvailable": true,
+                            "label": "FITC",
+                            "tableValue": "0.250"
+                        },
+                        {
+                            "reagentsDataAvailable": true,
+                            "onlyReagentsAvailable": true,
+                            "label": "PE",
+                            "tableValue": "0.250"
+                        },
+                        {
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": false,
+                            "label": "PE-Texas Red®",
+                            "tableValue": null
+                        },
+                        {
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": true,
+                            "label": "PE-Cy™5",
+                            "tableValue": null
+                        },
+                        {
+                            "reagentsDataAvailable": true,
+                            "onlyReagentsAvailable": true,
+                            "label": "PerCP",
+                            "tableValue": "0.250"
+                        },
+                        {
+                            "reagentsDataAvailable": true,
+                            "onlyReagentsAvailable": true,
+                            "label": "PerCP-Cy™5.5",
+                            "tableValue": "1.000"
+                        },
+                        {
+                            "reagentsDataAvailable": true,
+                            "onlyReagentsAvailable": true,
+                            "label": "PE-Cy™7",
+                            "tableValue": "0.250"
+                        }
+                    ]
+                },
+                {
+                    "bandName": " YG 561 nm",
+                    "band": "green",
+                    "items": [
+                        {
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": true,
+                            "label": "PE",
+                            "tableValue": null
+                        },
+                        {
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": true,
+                            "label": "PE-Cy™5",
+                            "tableValue": null
+                        },
+                        {
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": true,
+                            "label": "PE-Cy™7",
+                            "tableValue": null
+                        }
+                    ]
+                },
+                {
+                    "bandName": "Red 640 nm",
+                    "band": "red",
+                    "items": [
+                        {
+                            "reagentsDataAvailable": true,
+                            "onlyReagentsAvailable": true,
+                            "label": "APC",
+                            "tableValue": "1.000"
+                        },
+                        {
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": false,
+                            "label": "Alexa Fluor® 647",
+                            "tableValue": null
+                        },
+                        {
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": false,
+                            "label": "Alexa Fluor® 700",
+                            "tableValue": null
+                        },
+                        {
+                            "reagentsDataAvailable": true,
+                            "onlyReagentsAvailable": true,
+                            "label": "APC-Cy™7",
+                            "tableValue": "0.250"
+                        },
+                        {
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": false,
+                            "label": "APC-H7",
+                            "tableValue": null
+                        }
+                    ]
+                }
+            ],
+            "specificity": {
+                "clone": "145-2C11",
+                "target": "CD3e"
+            }
+        },
+        {
+            "fluorochromes": [
+                {
+                    "bandName": "Violet 405 nm",
+                    "band": "violet",
+                    "items": [
+                        {
+                            "reagentsDataAvailable": true,
+                            "onlyReagentsAvailable": true,
+                            "label": "BD Horizon™ V450",
+                            "tableValue": "0.500"
+                        },
+                        {
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": true,
+                            "label": "Pacific Blue™",
+                            "tableValue": null
+                        },
+                        {
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": false,
+                            "label": "AmCyan",
+                            "tableValue": null
+                        },
+                        {
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": true,
+                            "label": "BD Horizon™ V500",
+                            "tableValue": null
+                        }
+                    ]
+                },
+                {
+                    "bandName": "Blue 488 nm",
+                    "band": "blue",
+                    "items": [
+                        {
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": true,
+                            "label": "Alexa Fluor® 488",
+                            "tableValue": null
+                        },
+                        {
+                            "reagentsDataAvailable": true,
+                            "onlyReagentsAvailable": true,
+                            "label": "FITC",
+                            "tableValue": "0.060"
+                        },
+                        {
+                            "reagentsDataAvailable": true,
+                            "onlyReagentsAvailable": true,
+                            "label": "PE",
+                            "tableValue": "0.060"
+                        },
+                        {
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": false,
+                            "label": "PE-Texas Red®",
+                            "tableValue": null
+                        },
+                        {
+                            "reagentsDataAvailable": true,
+                            "onlyReagentsAvailable": true,
+                            "label": "PE-Cy™5",
+                            "tableValue": "0.060"
+                        },
+                        {
+                            "reagentsDataAvailable": true,
+                            "onlyReagentsAvailable": true,
+                            "label": "PerCP",
+                            "tableValue": "0.060"
+                        },
+                        {
+                            "reagentsDataAvailable": true,
+                            "onlyReagentsAvailable": true,
+                            "label": "PerCP-Cy™5.5",
+                            "tableValue": "0.060"
+                        },
+                        {
+                            "reagentsDataAvailable": true,
+                            "onlyReagentsAvailable": true,
+                            "label": "PE-Cy™7",
+                            "tableValue": "0.250"
+                        }
+                    ]
+                },
+                {
+                    "bandName": " YG 561 nm",
+                    "band": "green",
+                    "items": [
+                        {
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": true,
+                            "label": "PE",
+                            "tableValue": null
+                        },
+                        {
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": true,
+                            "label": "PE-Cy™5",
+                            "tableValue": null
+                        },
+                        {
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": true,
+                            "label": "PE-Cy™7",
+                            "tableValue": null
+                        }
+                    ]
+                },
+                {
+                    "bandName": "Red 640 nm",
+                    "band": "red",
+                    "items": [
+                        {
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": true,
+                            "label": "APC",
+                            "tableValue": null
+                        },
+                        {
+                            "reagentsDataAvailable": true,
+                            "onlyReagentsAvailable": true,
+                            "label": "Alexa Fluor® 647",
+                            "tableValue": "0.060"
+                        },
+                        {
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": true,
+                            "label": "Alexa Fluor® 700",
+                            "tableValue": null
+                        },
+                        {
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": false,
+                            "label": "APC-Cy™7",
+                            "tableValue": null
+                        },
+                        {
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": false,
+                            "label": "APC-H7",
+                            "tableValue": null
+                        }
+                    ]
+                }
+            ],
+            "specificity": {
+                "clone": "RM4-5",
+                "target": "CD4"
+            }
+        },
+        {
+            "fluorochromes": [
+                {
+                    "bandName": "Violet 405 nm",
+                    "band": "violet",
+                    "items": [
+                        {
+                            "reagentsDataAvailable": true,
+                            "onlyReagentsAvailable": true,
+                            "label": "BD Horizon™ V450",
+                            "tableValue": "0.500"
+                        },
+                        {
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": true,
+                            "label": "Pacific Blue™",
+                            "tableValue": null
+                        },
+                        {
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": false,
+                            "label": "AmCyan",
+                            "tableValue": null
+                        },
+                        {
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": true,
+                            "label": "BD Horizon™ V500",
+                            "tableValue": null
+                        }
+                    ]
+                },
+                {
+                    "bandName": "Blue 488 nm",
+                    "band": "blue",
+                    "items": [
+                        {
+                            "reagentsDataAvailable": true,
+                            "onlyReagentsAvailable": true,
+                            "label": "Alexa Fluor® 488",
+                            "tableValue": "0.060"
+                        },
+                        {
+                            "reagentsDataAvailable": true,
+                            "onlyReagentsAvailable": true,
+                            "label": "FITC",
+                            "tableValue": "0.060"
+                        },
+                        {
+                            "reagentsDataAvailable": true,
+                            "onlyReagentsAvailable": true,
+                            "label": "PE",
+                            "tableValue": "0.060"
+                        },
+                        {
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": false,
+                            "label": "PE-Texas Red®",
+                            "tableValue": null
+                        },
+                        {
+                            "reagentsDataAvailable": true,
+                            "onlyReagentsAvailable": true,
+                            "label": "PE-Cy™5",
+                            "tableValue": "0.060"
+                        },
+                        {
+                            "reagentsDataAvailable": true,
+                            "onlyReagentsAvailable": true,
+                            "label": "PerCP",
+                            "tableValue": "0.250"
+                        },
+                        {
+                            "reagentsDataAvailable": true,
+                            "onlyReagentsAvailable": true,
+                            "label": "PerCP-Cy™5.5",
+                            "tableValue": "1.000"
+                        },
+                        {
+                            "reagentsDataAvailable": true,
+                            "onlyReagentsAvailable": true,
+                            "label": "PE-Cy™7",
+                            "tableValue": "1.000"
+                        }
+                    ]
+                },
+                {
+                    "bandName": " YG 561 nm",
+                    "band": "green",
+                    "items": [
+                        {
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": true,
+                            "label": "PE",
+                            "tableValue": null
+                        },
+                        {
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": true,
+                            "label": "PE-Cy™5",
+                            "tableValue": null
+                        },
+                        {
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": true,
+                            "label": "PE-Cy™7",
+                            "tableValue": null
+                        }
+                    ]
+                },
+                {
+                    "bandName": "Red 640 nm",
+                    "band": "red",
+                    "items": [
+                        {
+                            "reagentsDataAvailable": true,
+                            "onlyReagentsAvailable": true,
+                            "label": "APC",
+                            "tableValue": "0.060"
+                        },
+                        {
+                            "reagentsDataAvailable": true,
+                            "onlyReagentsAvailable": true,
+                            "label": "Alexa Fluor® 647",
+                            "tableValue": "0.060"
+                        },
+                        {
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": true,
+                            "label": "Alexa Fluor® 700",
+                            "tableValue": null
+                        },
+                        {
+                            "reagentsDataAvailable": true,
+                            "onlyReagentsAvailable": true,
+                            "label": "APC-Cy™7",
+                            "tableValue": "0.060"
+                        },
+                        {
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": true,
+                            "label": "APC-H7",
+                            "tableValue": null
+                        }
+                    ]
+                }
+            ],
+            "specificity": {
+                "clone": "53-6.7",
+                "target": "CD8"
+            }
+        },
+        {
+            "fluorochromes": [
+                {
+                    "bandName": "Violet 405 nm",
+                    "band": "violet",
+                    "items": [
+                        {
+                            "reagentsDataAvailable": true,
+                            "onlyReagentsAvailable": true,
+                            "label": "BD Horizon™ V450",
+                            "tableValue": "0.500"
+                        },
+                        {
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": false,
+                            "label": "Pacific Blue™",
+                            "tableValue": null
+                        },
+                        {
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": false,
+                            "label": "AmCyan",
+                            "tableValue": null
+                        },
+                        {
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": true,
+                            "label": "BD Horizon™ V500",
+                            "tableValue": null
+                        }
+                    ]
+                },
+                {
+                    "bandName": "Blue 488 nm",
+                    "band": "blue",
+                    "items": [
+                        {
+                            "reagentsDataAvailable": true,
+                            "onlyReagentsAvailable": true,
+                            "label": "Alexa Fluor® 488",
+                            "tableValue": "0.060"
+                        },
+                        {
+                            "reagentsDataAvailable": true,
+                            "onlyReagentsAvailable": true,
+                            "label": "FITC",
+                            "tableValue": "0.060"
+                        },
+                        {
+                            "reagentsDataAvailable": true,
+                            "onlyReagentsAvailable": true,
+                            "label": "PE",
+                            "tableValue": "0.060"
+                        },
+                        {
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": false,
+                            "label": "PE-Texas Red®",
+                            "tableValue": null
+                        },
+                        {
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": false,
+                            "label": "PE-Cy™5",
+                            "tableValue": null
+                        },
+                        {
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": false,
+                            "label": "PerCP",
+                            "tableValue": null
+                        },
+                        {
+                            "reagentsDataAvailable": true,
+                            "onlyReagentsAvailable": true,
+                            "label": "PerCP-Cy™5.5",
+                            "tableValue": "1.000"
+                        },
+                        {
+                            "reagentsDataAvailable": true,
+                            "onlyReagentsAvailable": true,
+                            "label": "PE-Cy™7",
+                            "tableValue": "0.250"
+                        }
+                    ]
+                },
+                {
+                    "bandName": " YG 561 nm",
+                    "band": "green",
+                    "items": [
+                        {
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": true,
+                            "label": "PE",
+                            "tableValue": null
+                        },
+                        {
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": false,
+                            "label": "PE-Cy™5",
+                            "tableValue": null
+                        },
+                        {
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": true,
+                            "label": "PE-Cy™7",
+                            "tableValue": null
+                        }
+                    ]
+                },
+                {
+                    "bandName": "Red 640 nm",
+                    "band": "red",
+                    "items": [
+                        {
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": true,
+                            "label": "APC",
+                            "tableValue": null
+                        },
+                        {
+                            "reagentsDataAvailable": true,
+                            "onlyReagentsAvailable": true,
+                            "label": "Alexa Fluor® 647",
+                            "tableValue": "0.060"
+                        },
+                        {
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": true,
+                            "label": "Alexa Fluor® 700",
+                            "tableValue": null
+                        },
+                        {
+                            "reagentsDataAvailable": true,
+                            "onlyReagentsAvailable": true,
+                            "label": "APC-Cy™7",
+                            "tableValue": "0.250"
+                        },
+                        {
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": false,
+                            "label": "APC-H7",
+                            "tableValue": null
+                        }
+                    ]
+                }
+            ],
+            "specificity": {
+                "clone": "M1/70",
+                "target": "CD11b"
+            }
+        },
+        {
+            "fluorochromes": [
+                {
+                    "bandName": "Violet 405 nm",
+                    "band": "violet",
+                    "items": [
+                        {
+                            "reagentsDataAvailable": true,
+                            "onlyReagentsAvailable": true,
+                            "label": "BD Horizon™ V450",
+                            "tableValue": "0.250"
+                        },
+                        {
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": false,
+                            "label": "Pacific Blue™",
+                            "tableValue": null
+                        },
+                        {
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": false,
+                            "label": "AmCyan",
+                            "tableValue": null
+                        },
+                        {
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": false,
+                            "label": "BD Horizon™ V500",
+                            "tableValue": null
+                        }
+                    ]
+                },
+                {
+                    "bandName": "Blue 488 nm",
+                    "band": "blue",
+                    "items": [
+                        {
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": false,
+                            "label": "Alexa Fluor® 488",
+                            "tableValue": null
+                        },
+                        {
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": false,
+                            "label": "FITC",
+                            "tableValue": null
+                        },
+                        {
+                            "reagentsDataAvailable": true,
+                            "onlyReagentsAvailable": true,
+                            "label": "PE",
+                            "tableValue": "0.060"
+                        },
+                        {
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": false,
+                            "label": "PE-Texas Red®",
+                            "tableValue": null
+                        },
+                        {
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": false,
+                            "label": "PE-Cy™5",
+                            "tableValue": null
+                        },
+                        {
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": false,
+                            "label": "PerCP",
+                            "tableValue": null
+                        },
+                        {
+                            "reagentsDataAvailable": true,
+                            "onlyReagentsAvailable": true,
+                            "label": "PerCP-Cy™5.5",
+                            "tableValue": "1.000"
+                        },
+                        {
+                            "reagentsDataAvailable": true,
+                            "onlyReagentsAvailable": true,
+                            "label": "PE-Cy™7",
+                            "tableValue": "0.250"
+                        }
+                    ]
+                },
+                {
+                    "bandName": " YG 561 nm",
+                    "band": "green",
+                    "items": [
+                        {
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": true,
+                            "label": "PE",
+                            "tableValue": null
+                        },
+                        {
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": false,
+                            "label": "PE-Cy™5",
+                            "tableValue": null
+                        },
+                        {
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": true,
+                            "label": "PE-Cy™7",
+                            "tableValue": null
+                        }
+                    ]
+                },
+                {
+                    "bandName": "Red 640 nm",
+                    "band": "red",
+                    "items": [
+                        {
+                            "reagentsDataAvailable": true,
+                            "onlyReagentsAvailable": true,
+                            "label": "APC",
+                            "tableValue": "0.250"
+                        },
+                        {
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": false,
+                            "label": "Alexa Fluor® 647",
+                            "tableValue": null
+                        },
+                        {
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": false,
+                            "label": "Alexa Fluor® 700",
+                            "tableValue": null
+                        },
+                        {
+                            "reagentsDataAvailable": true,
+                            "onlyReagentsAvailable": true,
+                            "label": "APC-Cy™7",
+                            "tableValue": "1.000"
+                        },
+                        {
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": false,
+                            "label": "APC-H7",
+                            "tableValue": null
+                        }
+                    ]
+                }
+            ],
+            "specificity": {
+                "clone": "PC61",
+                "target": "CD25"
+            }
+        },
+        {
+            "fluorochromes": [
+                {
+                    "bandName": "Violet 405 nm",
+                    "band": "violet",
+                    "items": [
+                        {
+                            "reagentsDataAvailable": true,
+                            "onlyReagentsAvailable": true,
+                            "label": "BD Horizon™ V450",
+                            "tableValue": "0.250"
+                        },
+                        {
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": false,
+                            "label": "Pacific Blue™",
+                            "tableValue": null
+                        },
+                        {
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": false,
+                            "label": "AmCyan",
+                            "tableValue": null
+                        },
+                        {
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": true,
+                            "label": "BD Horizon™ V500",
+                            "tableValue": null
+                        }
+                    ]
+                },
+                {
+                    "bandName": "Blue 488 nm",
+                    "band": "blue",
+                    "items": [
+                        {
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": false,
+                            "label": "Alexa Fluor® 488",
+                            "tableValue": null
+                        },
+                        {
+                            "reagentsDataAvailable": true,
+                            "onlyReagentsAvailable": true,
+                            "label": "FITC",
+                            "tableValue": "0.060"
+                        },
+                        {
+                            "reagentsDataAvailable": true,
+                            "onlyReagentsAvailable": true,
+                            "label": "PE",
+                            "tableValue": "0.060"
+                        },
+                        {
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": false,
+                            "label": "PE-Texas Red®",
+                            "tableValue": null
+                        },
+                        {
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": true,
+                            "label": "PE-Cy™5",
+                            "tableValue": null
+                        },
+                        {
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": false,
+                            "label": "PerCP",
+                            "tableValue": null
+                        },
+                        {
+                            "reagentsDataAvailable": true,
+                            "onlyReagentsAvailable": true,
+                            "label": "PerCP-Cy™5.5",
+                            "tableValue": "0.250"
+                        },
+                        {
+                            "reagentsDataAvailable": true,
+                            "onlyReagentsAvailable": true,
+                            "label": "PE-Cy™7",
+                            "tableValue": "0.125"
+                        }
+                    ]
+                },
+                {
+                    "bandName": " YG 561 nm",
+                    "band": "green",
+                    "items": [
+                        {
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": true,
+                            "label": "PE",
+                            "tableValue": null
+                        },
+                        {
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": true,
+                            "label": "PE-Cy™5",
+                            "tableValue": null
+                        },
+                        {
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": true,
+                            "label": "PE-Cy™7",
+                            "tableValue": null
+                        }
+                    ]
+                },
+                {
+                    "bandName": "Red 640 nm",
+                    "band": "red",
+                    "items": [
+                        {
+                            "reagentsDataAvailable": true,
+                            "onlyReagentsAvailable": true,
+                            "label": "APC",
+                            "tableValue": "0.060"
+                        },
+                        {
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": false,
+                            "label": "Alexa Fluor® 647",
+                            "tableValue": null
+                        },
+                        {
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": true,
+                            "label": "Alexa Fluor® 700",
+                            "tableValue": null
+                        },
+                        {
+                            "reagentsDataAvailable": true,
+                            "onlyReagentsAvailable": true,
+                            "label": "APC-Cy™7",
+                            "tableValue": "0.250"
+                        },
+                        {
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": false,
+                            "label": "APC-H7",
+                            "tableValue": null
+                        }
+                    ]
+                }
+            ],
+            "specificity": {
+                "clone": "IM7",
+                "target": "CD44"
+            }
+        },
+        {
+            "fluorochromes": [
+                {
+                    "bandName": "Violet 405 nm",
+                    "band": "violet",
+                    "items": [
+                        {
+                            "reagentsDataAvailable": true,
+                            "onlyReagentsAvailable": true,
+                            "label": "BD Horizon™ V450",
+                            "tableValue": "0.500"
+                        },
+                        {
+                            "reagentsDataAvailable": true,
+                            "onlyReagentsAvailable": true,
+                            "label": "Pacific Blue™",
+                            "tableValue": "0.125"
+                        },
+                        {
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": false,
+                            "label": "AmCyan",
+                            "tableValue": null
+                        },
+                        {
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": true,
+                            "label": "BD Horizon™ V500",
+                            "tableValue": null
+                        }
+                    ]
+                },
+                {
+                    "bandName": "Blue 488 nm",
+                    "band": "blue",
+                    "items": [
+                        {
+                            "reagentsDataAvailable": true,
+                            "onlyReagentsAvailable": true,
+                            "label": "Alexa Fluor® 488",
+                            "tableValue": "0.060"
+                        },
+                        {
+                            "reagentsDataAvailable": true,
+                            "onlyReagentsAvailable": true,
+                            "label": "FITC",
+                            "tableValue": "0.060"
+                        },
+                        {
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": true,
+                            "label": "PE",
+                            "tableValue": null
+                        },
+                        {
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": true,
+                            "label": "PE-Texas Red®",
+                            "tableValue": null
+                        },
+                        {
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": true,
+                            "label": "PE-Cy™5",
+                            "tableValue": null
+                        },
+                        {
+                            "reagentsDataAvailable": true,
+                            "onlyReagentsAvailable": true,
+                            "label": "PerCP",
+                            "tableValue": "0.250"
+                        },
+                        {
+                            "reagentsDataAvailable": true,
+                            "onlyReagentsAvailable": true,
+                            "label": "PerCP-Cy™5.5",
+                            "tableValue": "0.060"
+                        },
+                        {
+                            "reagentsDataAvailable": true,
+                            "onlyReagentsAvailable": true,
+                            "label": "PE-Cy™7",
+                            "tableValue": "0.250"
+                        }
+                    ]
+                },
+                {
+                    "bandName": " YG 561 nm",
+                    "band": "green",
+                    "items": [
+                        {
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": true,
+                            "label": "PE",
+                            "tableValue": null
+                        },
+                        {
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": true,
+                            "label": "PE-Cy™5",
+                            "tableValue": null
+                        },
+                        {
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": true,
+                            "label": "PE-Cy™7",
+                            "tableValue": null
+                        }
+                    ]
+                },
+                {
+                    "bandName": "Red 640 nm",
+                    "band": "red",
+                    "items": [
+                        {
+                            "reagentsDataAvailable": true,
+                            "onlyReagentsAvailable": true,
+                            "label": "APC",
+                            "tableValue": "0.060"
+                        },
+                        {
+                            "reagentsDataAvailable": true,
+                            "onlyReagentsAvailable": true,
+                            "label": "Alexa Fluor® 647",
+                            "tableValue": null
+                        },
+                        {
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": true,
+                            "label": "Alexa Fluor® 700",
+                            "tableValue": "0.060"
+                        },
+                        {
+                            "reagentsDataAvailable": true,
+                            "onlyReagentsAvailable": true,
+                            "label": "APC-Cy™7",
+                            "tableValue": "0.250"
+                        },
+                        {
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": false,
+                            "label": "APC-H7",
+                            "tableValue": null
+                        }
+                    ]
+                }
+            ],
+            "specificity": {
+                "clone": "RA3-6B2",
+                "target": "CD45R/B220"
+            }
+        },
+        {
+            "fluorochromes": [
+                {
+                    "bandName": "Violet 405 nm",
+                    "band": "violet",
+                    "items": [
+                        {
+                            "reagentsDataAvailable": true,
+                            "onlyReagentsAvailable": true,
+                            "label": "BD Horizon™ V450",
+                            "tableValue": "0.250"
+                        },
+                        {
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": false,
+                            "label": "Pacific Blue™",
+                            "tableValue": null
+                        },
+                        {
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": false,
+                            "label": "AmCyan",
+                            "tableValue": null
+                        },
+                        {
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": false,
+                            "label": "BD Horizon™ V500",
+                            "tableValue": null
+                        }
+                    ]
+                },
+                {
+                    "bandName": "Blue 488 nm",
+                    "band": "blue",
+                    "items": [
+                        {
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": false,
+                            "label": "Alexa Fluor® 488",
+                            "tableValue": null
+                        },
+                        {
+                            "reagentsDataAvailable": true,
+                            "onlyReagentsAvailable": true,
+                            "label": "FITC",
+                            "tableValue": "0.060"
+                        },
+                        {
+                            "reagentsDataAvailable": true,
+                            "onlyReagentsAvailable": true,
+                            "label": "PE",
+                            "tableValue": "0.250"
+                        },
+                        {
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": false,
+                            "label": "PE-Texas Red®",
+                            "tableValue": null
+                        },
+                        {
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": false,
+                            "label": "PE-Cy™5",
+                            "tableValue": null
+                        },
+                        {
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": false,
+                            "label": "PerCP",
+                            "tableValue": null
+                        },
+                        {
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": true,
+                            "label": "PerCP-Cy™5.5",
+                            "tableValue": null
+                        },
+                        {
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": true,
+                            "label": "PE-Cy™7",
+                            "tableValue": null
+                        }
+                    ]
+                },
+                {
+                    "bandName": " YG 561 nm",
+                    "band": "green",
+                    "items": [
+                        {
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": true,
+                            "label": "PE",
+                            "tableValue": null
+                        },
+                        {
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": false,
+                            "label": "PE-Cy™5",
+                            "tableValue": null
+                        },
+                        {
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": true,
+                            "label": "PE-Cy™7",
+                            "tableValue": null
+                        }
+                    ]
+                },
+                {
+                    "bandName": "Red 640 nm",
+                    "band": "red",
+                    "items": [
+                        {
+                            "reagentsDataAvailable": true,
+                            "onlyReagentsAvailable": true,
+                            "label": "APC",
+                            "tableValue": "0.060"
+                        },
+                        {
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": false,
+                            "label": "Alexa Fluor® 647",
+                            "tableValue": null
+                        },
+                        {
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": true,
+                            "label": "Alexa Fluor® 700",
+                            "tableValue": null
+                        },
+                        {
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": true,
+                            "label": "APC-Cy™7",
+                            "tableValue": null
+                        },
+                        {
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": false,
+                            "label": "APC-H7",
+                            "tableValue": null
+                        }
+                    ]
+                }
+            ],
+            "specificity": {
+                "clone": "MEL-14",
+                "target": "CD62L"
+            }
+        },
+        {
+            "fluorochromes": [
+                {
+                    "bandName": "Violet 405 nm",
+                    "band": "violet",
+                    "items": [
+                        {
+                            "reagentsDataAvailable": true,
+                            "onlyReagentsAvailable": true,
+                            "label": "BD Horizon™ V450",
+                            "tableValue": "0.250"
+                        },
+                        {
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": false,
+                            "label": "Pacific Blue™",
+                            "tableValue": null
+                        },
+                        {
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": false,
+                            "label": "AmCyan",
+                            "tableValue": null
+                        },
+                        {
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": false,
+                            "label": "BD Horizon™ V500",
+                            "tableValue": null
+                        }
+                    ]
+                },
+                {
+                    "bandName": "Blue 488 nm",
+                    "band": "blue",
+                    "items": [
+                        {
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": false,
+                            "label": "Alexa Fluor® 488",
+                            "tableValue": null
+                        },
+                        {
+                            "reagentsDataAvailable": true,
+                            "onlyReagentsAvailable": true,
+                            "label": "FITC",
+                            "tableValue": "0.060"
+                        },
+                        {
+                            "reagentsDataAvailable": true,
+                            "onlyReagentsAvailable": true,
+                            "label": "PE",
+                            "tableValue": "0.060"
+                        },
+                        {
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": false,
+                            "label": "PE-Texas Red®",
+                            "tableValue": null
+                        },
+                        {
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": false,
+                            "label": "PE-Cy™5",
+                            "tableValue": null
+                        },
+                        {
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": false,
+                            "label": "PerCP",
+                            "tableValue": null
+                        },
+                        {
+                            "reagentsDataAvailable": true,
+                            "onlyReagentsAvailable": true,
+                            "label": "PerCP-Cy™5.5",
+                            "tableValue": "0.250"
+                        },
+                        {
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": true,
+                            "label": "PE-Cy™7",
+                            "tableValue": null
+                        }
+                    ]
+                },
+                {
+                    "bandName": " YG 561 nm",
+                    "band": "green",
+                    "items": [
+                        {
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": true,
+                            "label": "PE",
+                            "tableValue": null
+                        },
+                        {
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": false,
+                            "label": "PE-Cy™5",
+                            "tableValue": null
+                        },
+                        {
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": true,
+                            "label": "PE-Cy™7",
+                            "tableValue": null
+                        }
+                    ]
+                },
+                {
+                    "bandName": "Red 640 nm",
+                    "band": "red",
+                    "items": [
+                        {
+                            "reagentsDataAvailable": true,
+                            "onlyReagentsAvailable": true,
+                            "label": "APC",
+                            "tableValue": "0.060"
+                        },
+                        {
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": false,
+                            "label": "Alexa Fluor® 647",
+                            "tableValue": null
+                        },
+                        {
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": false,
+                            "label": "Alexa Fluor® 700",
+                            "tableValue": null
+                        },
+                        {
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": false,
+                            "label": "APC-Cy™7",
+                            "tableValue": null
+                        },
+                        {
+                            "reagentsDataAvailable": true,
+                            "onlyReagentsAvailable": true,
+                            "label": "APC-H7",
+                            "tableValue": "0.250"
+                        }
+                    ]
+                }
+            ],
+            "specificity": {
+                "clone": "2B8",
+                "target": "CD117/c-kit"
+            }
+        },
+        {
+            "fluorochromes": [
+                {
+                    "bandName": "Violet 405 nm",
+                    "band": "violet",
+                    "items": [
+                        {
+                            "reagentsDataAvailable": true,
+                            "onlyReagentsAvailable": true,
+                            "label": "BD Horizon™ V450",
+                            "tableValue": "0.500"
+                        },
+                        {
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": false,
+                            "label": "Pacific Blue™",
+                            "tableValue": null
+                        },
+                        {
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": false,
+                            "label": "AmCyan",
+                            "tableValue": null
+                        },
+                        {
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": false,
+                            "label": "BD Horizon™ V500",
+                            "tableValue": null
+                        }
+                    ]
+                },
+                {
+                    "bandName": "Blue 488 nm",
+                    "band": "blue",
+                    "items": [
+                        {
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": false,
+                            "label": "Alexa Fluor® 488",
+                            "tableValue": null
+                        },
+                        {
+                            "reagentsDataAvailable": true,
+                            "onlyReagentsAvailable": true,
+                            "label": "FITC",
+                            "tableValue": "0.060"
+                        },
+                        {
+                            "reagentsDataAvailable": true,
+                            "onlyReagentsAvailable": true,
+                            "label": "PE",
+                            "tableValue": "0.015"
+                        },
+                        {
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": false,
+                            "label": "PE-Texas Red®",
+                            "tableValue": null
+                        },
+                        {
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": false,
+                            "label": "PE-Cy™5",
+                            "tableValue": null
+                        },
+                        {
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": false,
+                            "label": "PerCP",
+                            "tableValue": null
+                        },
+                        {
+                            "reagentsDataAvailable": true,
+                            "onlyReagentsAvailable": true,
+                            "label": "PerCP-Cy™5.5",
+                            "tableValue": "0.060"
+                        },
+                        {
+                            "reagentsDataAvailable": true,
+                            "onlyReagentsAvailable": true,
+                            "label": "PE-Cy™7",
+                            "tableValue": "0.015"
+                        }
+                    ]
+                },
+                {
+                    "bandName": " YG 561 nm",
+                    "band": "green",
+                    "items": [
+                        {
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": true,
+                            "label": "PE",
+                            "tableValue": null
+                        },
+                        {
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": false,
+                            "label": "PE-Cy™5",
+                            "tableValue": null
+                        },
+                        {
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": true,
+                            "label": "PE-Cy™7",
+                            "tableValue": null
+                        }
+                    ]
+                },
+                {
+                    "bandName": "Red 640 nm",
+                    "band": "red",
+                    "items": [
+                        {
+                            "reagentsDataAvailable": true,
+                            "onlyReagentsAvailable": true,
+                            "label": "APC",
+                            "tableValue": "0.060"
+                        },
+                        {
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": false,
+                            "label": "Alexa Fluor® 647",
+                            "tableValue": null
+                        },
+                        {
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": true,
+                            "label": "Alexa Fluor® 700",
+                            "tableValue": null
+                        },
+                        {
+                            "reagentsDataAvailable": true,
+                            "onlyReagentsAvailable": true,
+                            "label": "APC-Cy™7",
+                            "tableValue": "0.060"
+                        },
+                        {
+                            "reagentsDataAvailable": false,
+                            "onlyReagentsAvailable": false,
+                            "label": "APC-H7",
+                            "tableValue": null
+                        }
+                    ]
+                }
+            ],
+            "specificity": {
+                "clone": "RB6-8C5",
+                "target": "Ly-6G and Ly-6C (Gr-1)"
+            }
+        }
+    ]
+}

@@ -1,0 +1,141 @@
+<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html"
+     data-sly-call="${templates.placeholder @ isEmpty = true}"></sly>
+<sly data-sly-use.downloadModel="com.bdb.aem.core.models.DownloadModel">
+
+<article class="download-component app-js__download-component ${downloadModel.backgroundColor}">
+    <div class="container download-component__container ${downloadModel.sectionAlign} ${!downloadModel.image ? 'no-image':''} ${properties.togglePaddingTop?'pt-2':''} ${properties.togglePaddingBottom?'pb-2':''}">
+		<sly data-sly-test="${downloadModel.image}">
+			<div class="download-component__image-container">
+				<div class="position-relative">
+					<picture>
+	                    <source media="(max-width: 900px)" srcset="${downloadModel.image}" onload="window.aos && window.aos.refresh()">
+	                    <img src="${downloadModel.image}" data-src="${downloadModel.image}" alt="${downloadModel.altImage}" title="${downloadModel.altImage}" onload="window.aos && window.aos.refresh()" class="loaded lazy ${downloadModel.enableImageBorder ? 'has-border' : ''}" data-ll-status="loaded" />
+	                </picture>
+	                <sly data-sly-test="${downloadModel.modalImageFlag}">
+	                	<div class="download-component__image-container-overlay">
+                        	<a data-toggle="modal" data-target=".download-component__large-img">
+                        		<sly data-sly-test="${downloadModel.magnifyingGlassColor == 'dark-blue'}">
+                        			<picture>
+										<source media="(max-width: 900px)" srcset=/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/search-icon-M.svg
+												onload="window.aos && window.aos.refresh()">
+										<img src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/Search-icon-new.svg" alt="magnifying glass"
+											onload="window.aos && window.aos.refresh()"
+											onerror='this.onerror=null;this.src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/images/product-default.png";' />
+									</picture>
+                        		</sly>
+                        		<sly data-sly-test="${downloadModel.magnifyingGlassColor == 'white'}">
+									<picture>
+										<source media="(max-width: 900px)" srcset=/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/icon_zoom_white.svg
+												onload="window.aos && window.aos.refresh()">
+										<img src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/icon_zoom_white.svg" alt="magnifying glass"
+											onload="window.aos && window.aos.refresh()"
+											onerror='this.onerror=null;this.src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/images/product-default.png";' />
+									</picture>
+								</sly>
+                        	</a>
+                        </div>
+                        <div class="modal fade download-component__large-img" tabindex="-1" role="dialog" aria-labelledby="Large Image Modal" aria-hidden="true">
+	                        <div class="modal-dialog modal-dialog-centered ${downloadModel.modalImageSize}">
+	                            <div class="modal-content">
+	                                <div class="modal-header">
+	                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	                                        <img src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/Close-dark.svg" alt="magnifying glass" />
+	                                    </button>
+	                                </div>
+	                                <div class="modal-body">
+	                                	<div class="image-container">
+	                                		<picture>
+							                    <source media="(max-width: 900px)" srcset="${downloadModel.modalImage}" onload="window.aos && window.aos.refresh()">
+							                    <img src="${downloadModel.modalImage}" data-src="${downloadModel.modalImage}" alt="${downloadModel.modalImageAltText}" title="${downloadModel.modalImageAltText}" onload="window.aos && window.aos.refresh()" class="loaded lazy" data-ll-status="loaded" />
+							                </picture>
+	                                	</div>
+	                                	<div class="text-container">
+	                                        <div data-sly-test="${downloadModel.modalImageTitle}" class="text-container_title">
+	                                            ${downloadModel.modalImageTitle}
+	                                        </div>
+                                        	<div data-sly-test="${downloadModel.modalImageDesc}" class="text-container_description bd-rte">
+                                            	${downloadModel.modalImageDesc @context='html'}
+                                        	</div>
+                                    	</div>
+	                                </div>
+	                            </div>
+	                        </div>
+	                    </div>
+	                </sly>
+	            </div>
+				<div data-sly-test="${downloadModel.imageCaption}" class="image-caption bd-rte">${downloadModel.imageCaption @context='html'}</div>
+			</div>
+		</sly>
+        <div class="download-component__content-container">
+	        <p data-sly-test="${downloadModel.sectionTitle}" class="download-component__section-heading">${downloadModel.sectionTitle}</p>
+			<h2 data-sly-test="${downloadModel.title}" class="download-component__title">${downloadModel.title}</h2>
+			<div data-sly-test="${downloadModel.subTitle}" class="download-component__subtitle">${downloadModel.subTitle}</div>
+			<div data-sly-test="${downloadModel.description}" class="bd-rte">${downloadModel.description @context='html'}</div>
+			<div class="download-component__actions-container">
+				<sly data-sly-test="${downloadModel.ctaType == 'ctaButton'}">
+					<sly data-sly-test="${downloadModel.softwareVersions.size > 1}">
+                        <div class="btn-group">
+							<button type="button" class="btn btn-lg download-component__cta ${downloadModel.ctaButtonColor} drop-btn round-border" data-content="${downloadModel.signInToolTipText}" data-signInRequired="${downloadModel.isSignInRequired ? 'required' : 'notrequired'}">${downloadModel.ctaButtonText}</button>
+							<button type="button" class="btn btn-lg download-component__cta-split ${downloadModel.ctaButtonColor} dropdown-toggle dropdown-toggle-split d-none" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+                            <div class="dropdown-menu dropdown-menu-right dropdown-menu-wide bd-custom-scroll">
+                                <sly data-sly-test="${downloadModel.softwareVersions}" data-sly-list.softwareVersion="${downloadModel.softwareVersions}">
+                                    <a data-sly-test="${softwareVersion.versionName}" class="dropdown-item download-component__cta-option">${softwareVersion.versionName}</a>
+                                </sly>
+                            </div>
+                        </div>
+                    </sly>
+                    <sly data-sly-test="${downloadModel.softwareVersions.size == 1}">
+                        <button type="button" class="btn btn-lg download-component__cta ${downloadModel.ctaButtonColor}" data-content="${downloadModel.signInToolTipText}"  data-signInRequired="${downloadModel.isSignInRequired ? 'required' : 'notrequired'}">${downloadModel.ctaButtonText}</button>
+					</sly>
+					<sly data-sly-test="${downloadModel.systemRequirementsLinkText && downloadModel.systemRequirementsLink}">
+						<a class="cta-link ml-3" href="${downloadModel.systemRequirementsLink}" target="_blank">
+                            ${downloadModel.systemRequirementsLinkText}
+                        </a>
+					</sly>
+				</sly>
+				<sly data-sly-test="${downloadModel.ctaType == 'clpLink'}">
+                    <sly data-sly-test="${downloadModel.softwareVersions.size > 0}">
+                        <sly data-sly-test="${downloadModel.systemRequirementsLinkText && downloadModel.systemRequirementsLink}">
+                        	<div class="mb-3">
+								<a class="cta-link" href="${downloadModel.systemRequirementsLink}" target="_blank">
+		                            ${downloadModel.systemRequirementsLinkText}
+		                        </a>
+	                        </div>
+						</sly>
+                        <div class="row">
+                            <sly data-sly-test="${downloadModel.softwareVersions}" data-sly-list.softwareVersion="${downloadModel.softwareVersions}">
+                                <div class="col-6">
+	                                <a type="button" class="cta-link download-component__clp" data-content="${downloadModel.signInToolTipText}" data-signInRequired="${downloadModel.isSignInRequired ? 'required' : 'notrequired'}">
+	                                    ${softwareVersion.versionName}<span class="arrow right"></span>
+	                                </a>
+                                </div>
+                            </sly>
+                        </div>
+					</sly>
+                </sly>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="software-os-selection-modal" tabindex="-1" role="dialog" aria-labelledby="software-os-selection-modal-label" aria-modal="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 data-sly-test="${downloadModel.softwareModalTitle}" class="modal-title">${downloadModel.softwareModalTitle}</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <img src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/Close-dark.svg" alt="magnifying glass" />
+                    </button>
+                </div>
+                <div class="modal-body"></div>
+                <div class="modal-footer">
+                    <a data-sly-test="${downloadModel.copyPageLinkText}" role="button" class="cta-link download-component__copy-link-btn" tabindex="0">${downloadModel.copyPageLinkText}</a>
+                    <button data-sly-test="${downloadModel.beginDownloadButtonText}" type="button" class="btn btn-md btn-primary-blue" id="software-download-btn">${downloadModel.beginDownloadButtonText}</button>
+                </div>
+            </div>
+        </div>
+    </div>
+	<input type="hidden" class="download-component__versionsAndOsDetails" name="versionsAndOsDetails" value="${downloadModel.versionsAndOsDetails}" />
+    <div class="alert alert-success download-component__alert" role="alert">
+        <img src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/checkmark.svg" /> 
+        <span>${downloadModel.copyPageLinkSuccessMessage}</span>
+    </div>
+</article>

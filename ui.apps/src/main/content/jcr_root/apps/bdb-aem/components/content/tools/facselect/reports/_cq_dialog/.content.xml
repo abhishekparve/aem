@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Reports"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        granite:class="cmp-button__editor"
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/container">
+        <items jcr:primaryType="nt:unstructured">
+            <tabs
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/tabs"
+                maximized="{Boolean}true">
+                <items jcr:primaryType="nt:unstructured">
+                    <basic
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Basic"
+                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                        <layout
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                            margin="{Boolean}true"/>
+                        <items jcr:primaryType="nt:unstructured">
+                            <columns
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                 <togglePaddingTop
+                                       jcr:primaryType="nt:unstructured"
+                                       sling:resourceType="granite/ui/components/coral/foundation/form/switch"
+                                       checked="{Boolean}false"
+                                       fieldLabel="Reduce Top Padding"
+                                       fieldDescription="Switch between Default Padding (Off) and Reduced Padding (On)"
+                                       name="./togglePaddingTop"/> 
+                                    <target
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldLabel="Target"
+                                        name="./target"/>
+                                    <clone
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldLabel="Clone"
+                                        name="./clone"/>
+                                    <isotype
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldLabel="Isotype"
+                                        name="./isotype"/>
+                                    <cytometer
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldLabel="Cytometer"
+                                        name="./cytometer"/>
+                                    <reactivespecies
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldLabel="Reactive Species"
+                                        name="./reactiveSpecies"/>
+                                    <hostspecies
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldLabel="Host Species"
+                                        name="./hostSpecies"/>
+                                    <source
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldLabel="Experiment Cell Source"
+                                        name="./source"/>
+                                    <soucedisplayname
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldDescription="This is used in the listing page"
+                                        fieldLabel="Experiment Cell Source ( Shortened)"
+                                        name="./displaySource"/>
+                                    <protocol
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldLabel="Protocol"
+                                        name="./protocol"/>
+                                    <species
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                        composite="{Boolean}true"
+                                        fieldLabel="Species">
+                                        <field
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/container"
+                                            name="./selectedSpecies">
+                                            <items jcr:primaryType="nt:unstructured">
+                                                <label
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                    fieldLabel="Species Label"
+                                                    name="./speciesLabel">
+                                                    <items jcr:primaryType="nt:unstructured">
+                                                        <select
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="Select Species"/>
+                                                        <option1
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="Mouse"
+                                                            value="Mouse"/>
+                                                        <option2
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="Human"
+                                                            value="Human"/>
+                                                        <option3
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="Surface"
+                                                            value="Surface"/>
+                                                        <option4
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="Intracellular"
+                                                            value="Intracellular"/>
+                                                    </items>
+                                                </label>
+                                            </items>
+                                        </field>
+                                    </species>
+                                    <fluorochromes
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                        composite="{Boolean}true"
+                                        fieldLabel="Fluorochromes">
+                                        <field
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/container"
+                                            name="./selectedFluorochromes">
+                                            <items jcr:primaryType="nt:unstructured">
+                                                <name
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="/libs/cq/gui/components/coral/common/form/tagfield"
+                                                    fieldLabel="Select a fluorochrome"
+                                                    name="./fname"/>
+                                                <data
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                    fieldLabel="Data"
+                                                    name="./data">
+                                                    <items jcr:primaryType="nt:unstructured">
+                                                        <option1
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="True"
+                                                            value="true"/>
+                                                        <option2
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="False"
+                                                            value="false"/>
+                                                    </items>
+                                                </data>
+                                                <reagent
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                    fieldLabel="Reagent"
+                                                    name="./reagent">
+                                                    <items jcr:primaryType="nt:unstructured">
+                                                        <option1
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="True"
+                                                            value="true"/>
+                                                        <option2
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="False"
+                                                            value="false"/>
+                                                    </items>
+                                                </reagent>
+                                                <notSuggested
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                    fieldLabel="Not Suggested"
+                                                    name="./notSuggested">
+                                                    <items jcr:primaryType="nt:unstructured">
+                                                        <option1
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="True"
+                                                            value="true"/>
+                                                        <option2
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="False"
+                                                            value="false"/>
+                                                    </items>
+                                                </notSuggested>
+                                                <tableValue
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldLabel="Tabular/Decimal Value"
+                                                    name="./tableValue"/>
+                                            </items>
+                                        </field>
+                                    </fluorochromes>
+                                    <entrezlinks
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                        composite="{Boolean}true"
+                                        fieldLabel="Entrez Links">
+                                        <field
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/container"
+                                            name="./entrezLinks">
+                                            <items jcr:primaryType="nt:unstructured">
+                                                <valueText
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldLabel="Value Text"
+                                                    name="./valueText"/>
+                                                <valueHref
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                    fieldLabel="Value Href"
+                                                    name="./valueHref"/>
+                                            </items>
+                                        </field>
+                                    </entrezlinks>
+                                </items>
+                            </columns>
+                        </items>
+                    </basic>
+                    <searchandnavigation
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Search and Navigation"
+                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                        <layout
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                            margin="{Boolean}true"/>
+                        <items jcr:primaryType="nt:unstructured">
+                            <columns
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <searchtitle
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldLabel="Search Title"
+                                        name="./searchTitle"/>
+                                    <searchplaceholder
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldLabel="Search Placeholder"
+                                        name="./searchPlaceholder"/>
+                                    <navigation
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                        composite="{Boolean}true"
+                                        fieldLabel="Navigation">
+                                        <field
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/container"
+                                            name="./navigation">
+                                            <items jcr:primaryType="nt:unstructured">
+                                                <label
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldLabel="Navigation Label"
+                                                    name="./label"/>
+                                                <path
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                    fieldLabel="URL"
+                                                    name="./path"/>
+                                                <target
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                    fieldLabel="Target"
+                                                    name="./target">
+                                                    <items jcr:primaryType="nt:unstructured">
+                                                        <option2
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="Open in same tab"
+                                                            value=""/>
+                                                        <option1
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="Open in new tab"
+                                                            value="_blank"/>
+                                                    </items>
+                                                </target>
+                                            </items>
+                                        </field>
+                                    </navigation>
+                                </items>
+                            </columns>
+                        </items>
+                    </searchandnavigation>
+                </items>
+            </tabs>
+        </items>
+    </content>
+</jcr:root>

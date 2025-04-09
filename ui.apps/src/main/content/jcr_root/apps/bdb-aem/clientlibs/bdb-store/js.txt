@@ -1,0 +1,2 @@
+# no scripts defined yet
+#bdbStoreCheck.js

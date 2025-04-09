@@ -1,0 +1,21 @@
+<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html"
+     data-sly-call="${templates.placeholder @ isEmpty = true}"></sly>
+<sly data-sly-use.compareProducts="com.bdb.aem.core.models.CompareProductsModel" data-sly-use.commerceModel="com.bdb.aem.core.models.CommerceBoxModel"></sly>
+    <script>
+        if (typeof window.AEM_DATA.labels === 'undefined') {
+            window.AEM_DATA.labels = {};
+        }
+        window.AEM_DATA.labels.productComparisionLabels = ${ compareProducts.productComparisonLabels @context='scriptComment' };
+        if (typeof window.AEM_DATA.config === 'undefined') {
+        	window.AEM_DATA.config = {};
+        }
+        window.AEM_DATA.config.productComparisionConfig = ${compareProducts.productComparisonConfig @ context='scriptComment'};
+        window.AEM_DATA.config.addToCartConfig = ${ commerceModel.addToCartConfigJson || '{}' @context='scriptComment' };
+        window.AEM_DATA.labels.globalLabels.noResult = "${properties.noResult|| 'No Results' @context='scriptComment'}";
+    </script>
+<main role="main" id="main" tabindex="-1" class="main-content"> 
+	<div class="wrapper"> 
+		<bd-product-comparision labels="productComparisionLabels" config="productComparisionConfig"> </bd-product-comparision> 
+	</div> 
+</main>
+

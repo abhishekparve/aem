@@ -1,0 +1,27 @@
+{
+    "productsdata": [
+        {
+            "producturl": "https://www.example.com/shop/mens-ultra-fastpack-ii-mid-gore-tex-cdl8",
+            "rank": "5",
+            "alternateprice": "",
+            "name": "MEN’s ULTRA FASTPACK II MID GORE-TEX;",
+            "price": "155.00",
+            "outofstock": false,
+            "pid": "CDL8",
+            "securethumbnailimage": "https://images.example.com/is/image/example/CDL8GQWhero?370x370",
+            "cartable": true,
+            "thumbnailimage": "https://images.example.com/is/image/example/CDL8GQWhero?371x371"
+        },
+        {
+            "producturl": "https://www.example.com/shop/mens-hedgehog-fastpack-mid-gore-tex-cxu5",
+            "rank": "8",
+            "alternateprice": "",
+            "name": "MEN’S HEDGEHOG FASTPACK MID GORE-TEX;",
+            "price": "130.00",
+            "outofstock": false,
+            "pid": "CXU5",
+            "securethumbnailimage": "https://images.example.com/is/image/example/CXU5DZAhero?370x370",
+            "cartable": true
+        }
+    ]
+}

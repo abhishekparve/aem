@@ -1,0 +1,372 @@
+<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html"
+    data-sly-call="${templates.placeholder @ isEmpty = true}"></sly>
+<sly data-sly-use.categoryInfoModel="com.bdb.aem.core.models.CategoryInfoModel">
+    <sly data-sly-test.isImageVideo="${properties.brightcoveVideoId || categoryInfoModel.imagePath}"> </sly>
+
+    <article
+            class="text-with-image app-js__text-with-image ${isImageVideo ? properties.sectionAlign : ''} ${properties.backgroundColor} bd’s-history-leadership ${properties.brightcoveVideoId?'video-section':''}"
+                    id="${categoryInfoModel.articleId}">
+            <div class="text-with-image ${properties.backgroundImg ? 'with-bg-image':''}">
+                <div data-sly-test=${categoryInfoModel.backgroundImg} class="text-with-image__bg-image d-flex data-sly-unwrap">
+                            <div>
+                                <picture>
+                                    <source media="(max-width: 900px)"
+                                        srcset="${categoryInfoModel.mobileBackgroundImg ? categoryInfoModel.mobileBackgroundImg : categoryInfoModel.backgroundImg}"
+                                        data-srcset=${categoryInfoModel.backgroundImg} onload="window.aos && window.aos.refresh()">
+                                    <img src=${categoryInfoModel.backgroundImg} data-src=${categoryInfoModel.backgroundImg}
+                                        alt="${properties.backgroundAltText}" title="${properties.backgroundAltText}"
+                                        onload="window.aos && window.aos.refresh()" class="loaded w-100 lazy" data-ll-status="loaded">
+                                </picture>
+
+                            </div>
+                        </div>
+                        <div
+                            class="container text-with-image__container ${properties.togglePaddingTop?'pt-2':''} ${properties.togglePaddingBottom?'pb-2':''}">
+                            <div class="row text-with-image__section align-items-center">
+                                <div class="text-with-image__details ${isImageVideo ? 'col-lg-6' : 'col-12'}">
+                                    <div data-sly-test="${categoryInfoModel.sectionTitle}"
+                                        class="category-info__sec ${properties.txtColor == 'white' ? 'white-text' : ''}">${categoryInfoModel.sectionTitle}</div>
+                                    <h2 data-sly-test="${categoryInfoModel.title}"
+                                        class="category-info__title ${properties.txtColor == 'white' ? 'white-text' : ''}">${categoryInfoModel.title
+                                        @context='html'}</h2>
+                                    <div data-sly-test="${categoryInfoModel.subTitle}"
+                                        class="category-info__subtitle ${properties.txtColor == 'white' ? 'white-text' : ''}">${categoryInfoModel.subTitle
+                                        @context='html'}</div>
+                                    <div class="category-info__desc bd-rte ${properties.txtColor == 'white' ? 'white-text' : ''}">${categoryInfoModel.description
+                                        @context='html'}</div>
+                                    <div data-sly-test="${categoryInfoModel.links}" class="category-info__additional-links d-flex">
+                                        <sly data-sly-list.item="${categoryInfoModel.links}">
+                                            <sly data-sly-test="${item.eventName}">
+                                                <a data-sly-test="${item.linkLabel}" href="${item.linkUrl}"
+                                                    onclick="dataLayer.push({'event': '${item.eventName  @context='html'}'})"
+                                                    target="${item.openNewTab == 'true' ? '_blank' : '_self'}">
+                                                    <span>${item.linkLabel @context='html'}</span><span class="icon-arrow-right"></span>
+                                                </a>
+                                            </sly>
+                                            <sly data-sly-test="${!item.eventName}">
+                                                <a data-sly-test="${item.linkLabel}" href="${item.linkUrl}"
+                                                    target="${item.openNewTab == 'true' ? '_blank' : '_self'}">
+                                                    <span>${item.linkLabel @context='html'}</span><span class="icon-arrow-right"></span>
+                                                </a>
+                                            </sly>
+                                        </sly>
+                                    </div>
+                                    <a data-sly-test="${categoryInfoModel.labelCta}" href="${categoryInfoModel.urlCta}"
+                                        target="${properties.openNewTabCta == 'true' ? '_blank' : '_self'}"
+                                        data-toggle="${properties.loadInModalCta?'modal':''}"
+                                        data-target="${properties.loadInModalCta?'#bdb-request-quote-form-modal':''}"
+                                        class="btn ${properties.bluePrimaryCta ? 'btn-primary-blue' : 'btn-secondary'} btn-lg category-info__cta">
+                                        ${categoryInfoModel.labelCta @context='html'}
+                                    </a>
+                                    <a data-sly-test="${categoryInfoModel.labelCtaAdd}" href="${categoryInfoModel.urlCtaAdd}"
+                                        target="${properties.openNewTabCtaAdd == 'true' ? '_blank' : '_self'}"
+                                        class="btn ${properties.secondaryCtaWhiteBorder?'btn-transparent-white':'btn-transparent-blue'} ${categoryInfoModel.labelCta ? '' : 'ml-0'} btn-lg category-info__cta-additional">${categoryInfoModel.labelCtaAdd
+                                        @context='html'}</a>
+                                </div>
+
+                                <div data-sly-test="${isImageVideo}" class="col-lg-1 text-with-image__spacer">&nbsp;</div>
+
+                                <div class="col-lg-5">
+                                    <sly data-sly-test="${isImageVideo}">
+                                        <sly
+                                            data-sly-test="${categoryInfoModel.modalImgFlag =='true' && categoryInfoModel.imagePathModal}">
+                                            <div class="text-with-image__media  bd-rte ${properties.brightcoveVideoId ? 'text-center':''}"
+                                                data-toggle="modal" data-target="#dynamicModal-${resource.parent.name}-${resource.name}"
+                                                data-title="${categoryInfoModel.imageModalTitleText}"
+                                                data-desc="${categoryInfoModel.imageDescText}"
+                                                data-src="${categoryInfoModel.imagePathModal}"
+                                                data-alt="${categoryInfoModel.imageAltModalText}"
+                                                data-size="${categoryInfoModel.imageEnlargeSize}">
+                                        </sly>
+
+                                        <sly
+                                            data-sly-test="${categoryInfoModel.modalImgFlag =='false' || !categoryInfoModel.imagePathModal}">
+                                            <div
+                                                class="text-with-image__media ${properties.brightcoveVideoId ? 'text-center':''} ${!properties.brightcoveVideoId && !categoryInfoModel.imageLinkUrl ? 'normal-cursor':''}">
+                                        </sly>
+                                    </sly>
+
+
+                                    <sly
+                                        data-sly-test="${categoryInfoModel.modalImgFlag =='false' || !categoryInfoModel.imagePathModal}">
+                                        <div class="text-with-image__media__video " data-toggle="modal"
+                                            data-target="#text-with-img-${categoryInfoModel.articleId || resource.path.hashCode}">
+                                    </sly>
+
+                                    <div class="position-relative">
+                                        <div class="d-flex align-items-center justify-content-center position-relative">
+                                            <picture>
+                                                <source data-sly-test="${categoryInfoModel.imagePathMobile}" media="(max-width: 900px)"
+                                                    srcset="${categoryInfoModel.imagePathMobile}"
+                                                    onload="window.aos && window.aos.refresh()">
+                                                <sly data-sly-test="${categoryInfoModel.imageLinkUrl}">
+                                                    <a href="${categoryInfoModel.imageLinkUrl}"
+                                                        target="${properties.openNewImageLinkTab == 'true' ? '_blank' : '_self'}">
+                                                        <img data-sly-test="${categoryInfoModel.imagePath}"
+                                                            class="${properties.borderEnable == 'false' ? '' : 'text-with-image__media__border'} ${properties.backgroundColorImage} lazy"
+                                                            data-src="${categoryInfoModel.imagePath}" alt="${categoryInfoModel.altText}"
+                                                            title="${categoryInfoModel.altText}"
+                                                            onload="window.aos && window.aos.refresh()"
+                                                            onerror='this.onerror=null;this.src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/images/product-default.png";'>
+                                                    </a>
+                                                </sly>
+                                                <sly data-sly-test="${!categoryInfoModel.imageLinkUrl}">
+                                                    <img data-sly-test="${categoryInfoModel.imagePath}"
+                                                        class="${properties.borderEnable == 'false' ? '' : 'text-with-image__media__border'} ${properties.backgroundColorImage} lazy"
+                                                        data-src="${categoryInfoModel.imagePath}" alt="${categoryInfoModel.altText}"
+                                                        title="${categoryInfoModel.altText}" onload="window.aos && window.aos.refresh()"
+                                                        onerror='this.onerror=null;this.src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/images/product-default.png";'>
+                                                </sly>
+                                            </picture>
+                                            <div
+                                                class="instrument-performance-picture-tile-overlay ${categoryInfoModel.modalImgFlag =='true' && categoryInfoModel.imagePathModal? 'show': 'hide'}">
+                                                <div class="instrument-performance-picture-tile-icon">
+                                                    <div class="d-flex align-items-center justify-content-center position-relative ">
+
+                                                        <sly data-sly-test="${categoryInfoModel.magnifiyGlassColor == 'dark-blue'}">
+                                                            <picture>
+                                                                <source media="(max-width: 900px)"
+                                                                    srcset=/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/search-icon-M.svg
+                                                                    onload="window.aos && window.aos.refresh()">
+                                                                <img src=/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/Search-icon-new.svg
+                                                                    alt="performance1" onload="window.aos && window.aos.refresh()"
+                                                                    onerror='this.onerror=null;this.src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/images/product-default.png";'>
+                                                            </picture>
+                                                        </sly>
+
+                                                        <sly data-sly-test="${categoryInfoModel.magnifiyGlassColor == 'white'}">
+                                                            <picture>
+                                                                <source media="(max-width: 900px)"
+                                                                    srcset=/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/icon_zoom_white.svg
+                                                                    onload="window.aos && window.aos.refresh()">
+                                                                <img src=/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/icon_zoom_white.svg
+                                                                    alt="performance1" onload="window.aos && window.aos.refresh()"
+                                                                    onerror='this.onerror=null;this.src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/images/product-default.png";'>
+                                                            </picture>
+                                                        </sly>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <sly data-sly-test="${properties.brightcoveVideoId}">
+                                                <img class="position-absolute text-with-image__play-btn"
+                                                    src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/playButton.svg"
+                                                    data-toggle="modal">
+                                            </sly>
+                                        </div>
+                                    </div>
+                                    <sly data-sly-test="${properties.brightcoveVideoId}">
+                                        <div class="modal fade text-with-image__media__video-modal brightcove-modal"
+                                            id="text-with-img-${categoryInfoModel.articleId || resource.path.hashCode}" tabindex="-1"
+                                            role="dialog" aria-labelledby="textWithImgVideoTitle" aria-hidden="true"
+                                            data-backdrop="static">
+                                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <button type="button" class="close text-with-image__media__video-modal-close"
+                                                            data-dismiss="modal" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body text-with-image__media__video-modal-body is-video"
+                                                        data-accountId="${categoryInfoModel.brightcoveAccountId}"
+                                                        data-playerId="${categoryInfoModel.brightcovePlayerId}"
+                                                        data-videoId="${properties.brightcoveVideoId}">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </sly>
+
+                                    <sly
+                                        data-sly-test="${categoryInfoModel.modalImgFlag =='false' || !categoryInfoModel.imagePathModal}">
+                                </div>
+                </sly>
+
+                <div data-sly-test="${properties.imageCaption && categoryInfoModel.imagePath}" class="image-caption bd-rte ${properties.txtColor == 'white' ? 'white-text' : ''}">
+                    ${properties.imageCaption @context='html'}
+                </div>
+                </div>
+                <sly data-sly-test="${isImageVideo}">
+                    </div>
+                </sly>
+                </div>
+            </div>
+            <sly data-sly-test="${categoryInfoModel.modalImgFlag =='true' && categoryInfoModel.imagePathModal}">
+                <article class="dynamic-modal app-js__dynamic-modal">
+                    <div class="modal" id="dynamicModal-${resource.parent.name}-${resource.name}" tabindex="-1" role="dialog"
+                        aria-labelledby="dynamicModal-${resource.parent.name}-${resource.name}" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <img src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/modalClose.svg"
+                                            alt="close" />
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="dynamic-modal__image-container">
+                                        <img src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/blankimage.png"
+                                            alt="">
+                                    </div>
+                                    <div class="dynamic-modal__text-container">
+                                        <div class="dynamic-modal__text-container_title bd-rte">
+                                        </div>
+                                        <div class="dynamic-modal__text-container_description bd-rte">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </sly>
+                    
+    </article>
+</sly>
+<sly data-sly-test.modalCTAPrimary="${properties.loadInModalCta == 'yes'}">
+</sly>
+
+<sly data-sly-test="${modalCTAPrimary}">
+    <article class="bdb-FACSLyric-request-form app-js__bdb-FACSLyric-request-form bd-custom-scroll">
+        <div class="modal" id="bdb-request-quote-form-modal" tabindex="-1" role="dialog"
+            aria-labelledby="bdb-request-quote-form-modal" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered bdb-request-form-modal__modal-dimensions" role="document">
+                <div class="modal-content bdb-request-form-modal__modal-container">
+                    <div class="bdb-request-form-modal__modal-close p-0">
+                        <button type="button" class="close p-0" data-dismiss="modal" aria-label="Close"
+                            data-role="none">
+                            <img src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/Close-dark.svg"
+                                alt="close" />
+                        </button>
+                    </div>
+                    <div class="modal-header p-0">
+                        <sly data-sly-test="${modalCTAPrimary}">
+                            <h5 class="modal-title bdb-request-form-modal__modal-heading">${categoryInfoModel.formTitle}
+                            </h5>
+                        </sly>
+                        <sly data-sly-test="${modalCTASecondary}">
+                            <h5 class="modal-title bdb-request-form-modal__modal-heading">
+                                ${categoryInfoModel.formTitleSec}</h5>
+                        </sly>
+                    </div>
+                    <div class="modal-body p-0 bdb-request-form-modal__modal-body">
+                        <sly data-sly-test="${modalCTAPrimary}">
+                            <p class="text">${categoryInfoModel.formBodyText @ context='html'}</p>
+                            <script src="${categoryInfoModel.rootURL}/js/forms2/js/forms2.min.js"></script>
+                            <form id="mktoForm_${categoryInfoModel.formID}"></form>
+                        </sly>
+                        <div id="marketoFormRequestQuote_alert" class="alert__message mt-3 hide" role="alert">
+                            <div class="alert__message-iconSuccess">
+                                <img class="icon "
+                                    src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/checkmark.svg"
+                                    alt="alert  icon">
+                            </div>
+                            <div class="alert__message-info">Successfully submitted.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+    <sly data-sly-test="${modalCTAPrimary}">
+        <script>
+            MktoForms2.loadForm('${categoryInfoModel.rootURL @ context='attribute'}', '${categoryInfoModel.munchkinID @ context='attribute'}', ${ categoryInfoModel.formID @context = 'attribute'});
+            window.adobeDataLayer.push({
+                event: 'formView',
+                xdm: {
+                    form: {
+                        formName: document.getElementById(`mktoForm_${categoryInfoModel.formID @context = 'attribute'
+                }`).parentElement.parentElement.querySelector('h5').innerText,
+                        marketoUserToken: ${categoryInfoModel.formID @context = 'attribute'
+                }
+                    }
+                }
+            });
+            MktoForms2.whenReady(function (mktoForm) {
+                if (marketoForms) {
+                    marketoForms.destyleMktoForm(mktoForm);
+                }
+                function handleFormStart() {
+                    window.adobeDataLayer.push({
+                        event: 'formStart',
+                        xdm: {
+                            form: {
+                                formName: document.getElementById(`mktoForm_${categoryInfoModel.formID @context = 'attribute'
+                        }`).parentElement.parentElement.querySelector('h5').innerText,
+                                marketoUserToken: ${categoryInfoModel.formID @context = 'attribute'
+                        }
+                            }
+                        }
+                    });
+                    for(var i = 0; i < controls.length; i++){
+                        controls[i].removeEventListener('blur', handleFormStart);
+                	}
+                }
+                if(mktoForm.getId() == '${categoryInfoModel.formID @ context='attribute'}'){
+                	var controls = document.querySelectorAll(`#mktoForm_${categoryInfoModel.formID @context = 'attribute'} input, #mktoForm_${categoryInfoModel.formID @context = 'attribute'} select, #mktoForm_${categoryInfoModel.formID @context = 'attribute'} textarea`);
+                    for(var i = 0; i < controls.length; i++){
+						controls[i].addEventListener('blur', handleFormStart);
+					}
+                }
+                const submitText = document.querySelector('#mktoForm_${categoryInfoModel.formID @ context='attribute'} .mktoButton').innerText;
+                mktoForm.onSuccess(function (vals, tyURL) {
+                    window.adobeDataLayer.push({
+                        event: 'formSubmit',
+                        xdm: {
+                            form: {
+                                formName: document.getElementById(`mktoForm_${categoryInfoModel.formID @context = 'attribute'
+                }`).parentElement.parentElement.querySelector('h5').innerText,
+                                marketoUserToken: ${categoryInfoModel.formID @context = 'attribute'
+                }
+                            }
+                        }
+                    });
+            window.dataLayer.push({ event: 'request_quote' });
+            document.querySelector('#marketoFormRequestQuote_alert').classList.remove('hide');
+            setTimeout(function () {
+                document.querySelector('#bdb-request-quote-form-modal .modal-content .close').click();
+                const formElement = mktoForm.getFormElem()[0];
+
+                formElement.reset();
+
+                document.querySelector('#mktoForm_${categoryInfoModel.formID @ context='attribute'} .mktoButton').removeAttribute('disabled');
+                document.querySelector('#mktoForm_${categoryInfoModel.formID @ context='attribute'} .mktoButton').innerText = submitText ? submitText : 'Submit';
+
+                document.querySelector('#marketoFormRequestQuote_alert').classList.add('hide');
+            }, 5000);
+            return false;
+                });
+            mktoForm.onValidate(function (isValid) {
+                if (!isValid) {
+                    let errorList = [...document.getElementsByClassName("mktoInvalid")];
+                    let errorField = [];
+                    errorList.forEach(element => {
+                        if (element.getAttribute('name')) {
+                            errorField.push({ value: element.getAttribute('name') });
+                        } else {
+                            errorField.push({ value: 'Terms and Condition' });
+                        }
+                    });
+                    window.adobeDataLayer.push({
+                        event: 'formError',
+                        xdm: {
+                            form: {
+                                formName: document.getElementById(`mktoForm_${categoryInfoModel.formID @context = 'attribute'
+                }`).parentElement.parentElement.querySelector('h5').innerText,
+                                formErrors: errorField,
+                                marketoUserToken: ${categoryInfoModel.formID @context = 'attribute'
+                }
+            }
+                        }
+                    });
+                }
+            });
+            if (marketoForms) {
+                marketoForms.customBdStyles('${categoryInfoModel.formID @ context='attribute'}');
+            }
+            });
+        </script>
+    </sly>
+</sly>

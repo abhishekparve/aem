@@ -1,0 +1,4 @@
+{
+  "org.apache.sling.commons.log.names": ["com.bdb.aem.core"],
+  "org.apache.sling.commons.log.level": "$[env:LOG_LEVEL;default=ERROR]"
+}

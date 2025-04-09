@@ -1,0 +1,790 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Spectrum Viewer Component"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/container">
+        <items jcr:primaryType="nt:unstructured">
+            <tabs
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/tabs">
+                <items jcr:primaryType="nt:unstructured">
+                    <general
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="General"
+                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                        <layout
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"/>
+                        <items jcr:primaryType="nt:unstructured">
+                            <column
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <svSystemConfigPath
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                        fieldDescription="Please select Parent folder from DAM to get the system Cytometer and Flurochrome data"
+                                        fieldLabel="Parent folder/Path to fetch System data"
+                                        name="./svSystemConfigPath"
+                                        filter="folder"
+                                        rootPath="/content/dam/bdb/sv/sys"
+                                        required="{Boolean}true"
+                                        value="/content/dam/bdb/sv/sys"/>
+                                    <searchPathUrl
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                                        fieldDescription="Search Path Page/URL to display search result (Leave it blank, to pick the default search-result page)"
+                                        fieldLabel="Search result page path/URL"
+                                        name="./searchPathUrl"
+                                        rootPath="/content/bdb"/>
+                                    <sortDropdown
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                        fieldDescription="Choose sorting order for fluorochromes to display in the dropdown"
+                                        fieldLabel="Sorting Order for fluorochromes"
+                                        name="./sortingOrder">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <option1
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Alphabetical and BD"
+                                                value="alphabetical-BD"/>
+                                            <option2
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Alphabetical"
+                                                value="alphabetical"/>
+                                        </items>
+                                    </sortDropdown>
+                                    <headerSectionSV
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Header"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <title
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldDescription="Please provide Title for Spectrum Viewer Tool"
+                                                fieldLabel="Title"
+                                                name="./title"
+                                                value="BD® Spectrum Viewer"/>
+                                            <description
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="cq/gui/components/authoring/dialog/richtext"
+                                                fieldDescription="Please provide Description for SV (Optional)"
+                                                fieldLabel="Description"
+                                                name="./description"
+                                                useFixedInlineToolbar="{Boolean}true">
+                                                <uiSettings jcr:primaryType="nt:unstructured">
+                                                    <cui jcr:primaryType="nt:unstructured">
+                                                        <inline
+                                                                jcr:primaryType="nt:unstructured"
+                                                                toolbar="[format#bold,format#italic,format#underline,subsuperscript#subscript,subsuperscript#superscript,#justify,#lists,links#modifylink,links#unlink,links#anchor,#paraformat]">
+                                                            <popovers jcr:primaryType="nt:unstructured">
+                                                                <justify
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        items="[justify#justifyleft,justify#justifycenter,justify#justifyright]"
+                                                                        ref="justify"/>
+                                                                <lists
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        items="[lists#unordered,lists#ordered,lists#outdent,lists#indent]"
+                                                                        ref="lists"/>
+                                                                <paraformat
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        items="paraformat:getFormats:paraformat-pulldown"
+                                                                        ref="paraformat"/>
+                                                            </popovers>
+                                                        </inline>
+                                                        <dialogFullScreen
+                                                                jcr:primaryType="nt:unstructured"
+                                                                toolbar="[format#bold,format#italic,format#underline,subsuperscript#subscript,subsuperscript#superscript,justify#justifyleft,justify#justifycenter,justify#justifyright,lists#unordered,lists#ordered,lists#outdent,lists#indent,links#modifylink,links#unlink,table#createoredit,#paraformat,edit#cut,edit#copy,edit#paste-default,edit#paste-plaintext,edit#paste-wordhtml,findreplace#find,findreplace#replace,spellcheck#checktext,misctools#specialchars,misctools#sourceedit,image#imageProps]">
+                                                            <popovers jcr:primaryType="nt:unstructured">
+                                                                <paraformat
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        items="paraformat:getFormats:paraformat-pulldown"
+                                                                        ref="paraformat"/>
+                                                            </popovers>
+                                                        </dialogFullScreen>
+                                                        <tableEditOptions
+                                                                jcr:primaryType="nt:unstructured"
+                                                                toolbar="[table#insertcolumn-before,table#insertcolumn-after,table#removecolumn,-,table#insertrow-before,table#insertrow-after,table#removerow,-,table#mergecells-right,table#mergecells-down,table#mergecells,table#splitcell-horizontal,table#splitcell-vertical,-,table#selectrow,table#selectcolumn,-,table#ensureparagraph,-,table#modifytableandcell,table#removetable,-,undo#undo,undo#redo,-,table#exitTableEditing,-]"/>
+                                                    </cui>
+                                                </uiSettings>
+                                                <rtePlugins jcr:primaryType="nt:unstructured">
+                                                    <links jcr:primaryType="nt:unstructured">
+                                                        <linkDialogConfig
+                                                                jcr:primaryType="nt:unstructured"
+                                                                height="{Long}316">
+                                                            <linkAttributes jcr:primaryType="cq:WidgetCollection"/>
+                                                        </linkDialogConfig>
+                                                    </links>
+                                                    <edit
+                                                            jcr:primaryType="nt:unstructured"
+                                                            features="*"/>
+                                                    <findreplace
+                                                            jcr:primaryType="nt:unstructured"
+                                                            features="*"/>
+                                                    <format
+                                                            jcr:primaryType="nt:unstructured"
+                                                            features="*"/>
+                                                    <image
+                                                            jcr:primaryType="nt:unstructured"
+                                                            features="*"/>
+                                                    <keys
+                                                            jcr:primaryType="nt:unstructured"
+                                                            tabSize="4"/>
+                                                    <justify
+                                                            jcr:primaryType="nt:unstructured"
+                                                            features="*"/>
+                                                    <lists
+                                                            jcr:primaryType="nt:unstructured"
+                                                            features="*"/>
+                                                    <misctools
+                                                            jcr:primaryType="nt:unstructured"
+                                                            features="*">
+                                                        <specialCharsConfig jcr:primaryType="nt:unstructured">
+                                                            <chars jcr:primaryType="nt:unstructured">
+                                                                <copyright
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        entity="&amp;#169;"/>
+                                                                <trademark
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        entity="&amp;#8482;"/>
+                                                                <registered
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        entity="&amp;#174;"/>
+                                                                <emDash
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        entity="&amp;#8212;"/>
+                                                                <pound
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        entity="&amp;#163;"/>
+                                                            </chars>
+                                                        </specialCharsConfig>
+                                                    </misctools>
+                                                    <paraformat
+                                                            jcr:primaryType="nt:unstructured"
+                                                            features="*">
+                                                        <formats jcr:primaryType="cq:WidgetCollection">
+                                                            <h1
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    description="Heading 1"
+                                                                    tag="h1"/>
+                                                            <h2
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    description="Heading 2"
+                                                                    tag="h2"/>
+                                                            <h3
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    description="Heading 3"
+                                                                    tag="h3"/>
+                                                            <h4
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    description="Heading 4"
+                                                                    tag="h4"/>
+                                                            <h5
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    description="Heading 5"
+                                                                    tag="h5"/>
+                                                            <h6
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    description="Heading 6"
+                                                                    tag="h6"/>
+                                                            <p
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    description="Paragraph"
+                                                                    tag="p"/>
+                                                        </formats>
+                                                    </paraformat>
+                                                    <spellcheck
+                                                            jcr:primaryType="nt:unstructured"
+                                                            features="*"/>
+                                                    <subsuperscript
+                                                            jcr:primaryType="nt:unstructured"
+                                                            features="*"/>
+                                                    <table
+                                                            jcr:primaryType="nt:unstructured"
+                                                            features="*"/>
+                                                    <undo
+                                                            jcr:primaryType="nt:unstructured"
+                                                            features="*"/>
+                                                </rtePlugins>
+                                            </description>
+                                            <expandWorkspaceLabel
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldDescription="Please provide Label for Expand-workspace"
+                                                fieldLabel="Expand Workspace Label"
+                                                name="./expandWorkspaceLabel"
+                                                value="Expand Workspace"/>
+                                            <expandWorkspaceIcon
+                                                granite:id="expandWorkspaceIconList"
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                fieldLabel="Expand Workspace Icon"
+                                                name="./expandWorkspaceIcon">
+                                                <datasource
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="/bin/svgData"
+                                                    defaultSelectedValue="full-screen.svg"/>
+                                            </expandWorkspaceIcon>
+                                            <expandWorkspaceIconAlt
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldDescription="Please provide Alt text for Export Workspace Icon"
+                                                fieldLabel="Expand Workspace Icon Alt text"
+                                                name="./expandWorkspaceIconAlt"
+                                                value="Expand Workspace Icon"/>
+                                            <collapseWorkspaceLabel
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldDescription="Please provide Label for Collapse-workspace"
+                                                fieldLabel="Collapse Workspace Label"
+                                                name="./collapseWorkspaceLabel"
+                                                value="Collapse Workspace"/>
+                                            <collapseWorkspaceIcon
+                                                granite:id="collapseWorkspaceIconList"
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                fieldLabel="Collapse Workspace Icon"
+                                                name="./collapseWorkspaceIcon">
+                                                <datasource
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="/bin/svgData"
+                                                    defaultSelectedValue="collapse-icon.svg"/>
+                                            </collapseWorkspaceIcon>
+                                            <collapseWorkspaceIconAlt
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldDescription="Please provide Alt text for Export Workspace Icon"
+                                                fieldLabel="Collapse Workspace Icon Alt text"
+                                                name="./collapseWorkspaceIconAlt"
+                                                value="Collapse Workspace Icon"/>
+                                            <exportIcon
+                                                granite:id="exportIconList"
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                fieldLabel="Export Icon"
+                                                name="./exportIcon">
+                                                <datasource
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="/bin/svgData"
+                                                    defaultSelectedValue="download-active.svg"/>
+                                            </exportIcon>
+                                            <exportIconAlt
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldDescription="Please provide Alt text for Export Icon"
+                                                fieldLabel="Export Icon Alt text"
+                                                name="./exportIconAlt"
+                                                value="Export Icon"/>
+                                            <exportIconGray
+                                                granite:id="exportIconGrayList"
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                fieldDescription="Please provide Export Icon Grayed/disabled Icon"
+                                                fieldLabel="Export Icon (Disabled/Gray)"
+                                                name="./exportIconGray">
+                                                <datasource
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="/bin/svgData"
+                                                    defaultSelectedValue="download-grey.svg"/>
+                                            </exportIconGray>
+                                            <exportIconGrayAlt
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldDescription="Please provide Alt text for Export Icon"
+                                                fieldLabel="Export Icon (Disabled version) Alt text"
+                                                name="./exportIconGrayAlt"
+                                                value="Export Icon(Disabled version)"/>
+                                            <faqIcon
+                                                granite:id="faqIconList"
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                fieldLabel="FAQ Icon"
+                                                name="./faqIcon">
+                                                <datasource
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="/bin/svgData"
+                                                    defaultSelectedValue="user-guide.svg"/>
+                                            </faqIcon>
+                                            <faqIconAlt
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldDescription="Please provide Alt text for FAQ Icon"
+                                                fieldLabel="FAQ Icon Alt text"
+                                                name="./faqIconAlt"
+                                                value="FAQ Icon"/>
+                                        </items>
+                                    </headerSectionSV>
+                                    <multiUsed
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="General (Used at multiple Places)"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <downIcon
+                                                granite:id="downIconList"
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                fieldDescription="Please choose Down Arrow Icon for all Select(dropdowns) "
+                                                fieldLabel="Down Arrow Icon for Select(dropdown)"
+                                                name="./downIcon">
+                                                <datasource
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="/bin/svgData"
+                                                    defaultSelectedValue="down.svg"/>
+                                            </downIcon>
+                                            <downIconAlt
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldDescription="Please provide Alt text for Down Icon"
+                                                fieldLabel="Down Icon Alt text"
+                                                name="./downIconAlt"
+                                                value="Down"/>
+                                            <errorIcon
+                                                granite:id="errorIconId"
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                fieldDescription="Please select error icon"
+                                                fieldLabel="Error Icon"
+                                                name="./errorIcon">
+                                                <datasource
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="/bin/svgData"
+                                                    defaultSelectedValue="error-alert.svg"/>
+                                            </errorIcon>
+                                            <errorIconAlt
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                cq-msm-lockable="./errorIconAlt"
+                                                fieldDescription="Provide error icon alt text"
+                                                fieldLabel="Error Icon Alt"
+                                                name="./errorIconAlt"
+                                                value="Error Icon"/>
+                                            <outOfRange
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                cq-msm-lockable="./outOfRange"
+                                                fieldDescription="Please provide message for Out Of Range"
+                                                fieldLabel="Out of Range Message"
+                                                name="./outOfRange"
+                                                value="Out Of Range"/>
+                                            <saveWarningToast
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                cq-msm-lockable="./saveWarningToast"
+                                                fieldDescription="please provide message for save warning to display in toast"
+                                                fieldLabel="Save Warning Toast Message"
+                                                name="./saveWarningToast"
+                                                value="To save configuration, please resolve the errors highlighted below in red"/>
+                                        </items>
+                                    </multiUsed>
+                                </items>
+                            </column>
+                        </items>
+                    </general>
+                    <popup
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="Popup"
+                            sling:resourceType="granite/ui/components/coral/foundation/container">
+                        <layout
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"/>
+                        <items jcr:primaryType="nt:unstructured">
+                            <column
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <loginSection
+                                            jcr:primaryType="nt:unstructured"
+                                            jcr:title="Login"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <loginModalHeading
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldDescription="Please provide Heading for Login Popup"
+                                                    fieldLabel="Heading for Login Popup"
+                                                    name="./loginModalHeading"
+                                                    value="Sign In / Register"/>
+                                            <loginPopupBodyMessage
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    cq-msm-lockable="./loginPopupBodyMessage"
+                                                    fieldDescription="Please provide message to display in login popup"
+                                                    fieldLabel="(Sub heading) Message for login popup "
+                                                    name="./loginPopupBodyMessage"
+                                                    value="Sign in if you are an existing user or register to save a data"/>
+                                            <loginCta
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldDescription="Please provide label for Login CTA"
+                                                    fieldLabel="Login CTA label"
+                                                    name="./loginCta"
+                                                    value="Sign In"/>
+                                        </items>
+                                    </loginSection>
+                                    <importSection
+                                            jcr:primaryType="nt:unstructured"
+                                            jcr:title="Import And Export"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <importFluoroCombination
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldDescription="Please provide title for importing Flurochrome Combination"
+                                                    fieldLabel="Importing Flurochrome Label"
+                                                    name="./importFluoroCombination"
+                                                    value="Import Fluorochrome Combination"/>
+                                             <importInstrumentConfiguration
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldDescription="Please provide title for importing Instrument Configurations"
+                                                    fieldLabel="Importing Instrument Label"
+                                                    name="./importInstrumentConfiguration"
+                                                    value="Import Instrument Configuration"/>
+                                            <importFlurochromeAlert
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    cq-msm-lockable="./importFlurochromeAlert"
+                                                    fieldDescription="Please provide alert/warning message for importing Flurochrome"
+                                                    fieldLabel="Message before importing Flurochrome"
+                                                    name="./importFlurochromeAlert"
+                                                    value="Importing replaces all fluorochromes currently in the display list with those in the import file"/>
+                                            <importCytometerAlert
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    cq-msm-lockable="./importCytometerAlert"
+                                                    fieldDescription="Please provide alert/warning message for importing Cytometers"
+                                                    fieldLabel="Message before importing Instrument Configuration"
+                                                    name="./importCytometerAlert"
+                                                    value="Importing replaces all instrument configuration information currently displayed with those in the import file"/>
+                                            <importWrongFormatFluoroAlert
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    cq-msm-lockable="./importWrongFormatFluoroAlert"
+                                                    fieldDescription="Please provide alert message to display when choosing wrong file type for Fluorochrome"
+                                                    fieldLabel="Alert Message for wrong Fluorochrome file type"
+                                                    name="./importWrongFormatFluoroAlert"
+                                                    value="Please import correct file"/>
+                                            <importWrongFormatCytoAlert
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    cq-msm-lockable="./importWrongFormatCytoAlert"
+                                                    fieldDescription="Please provide alert message to display when choosing wrong file type"
+                                                    fieldLabel="Alert Message for wrong Instrument file type"
+                                                    name="./importWrongFormatCytoAlert"
+                                                    value="Please import correct file"/>
+                                            <loadFluroChromeAlert
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    cq-msm-lockable="./loadFluroChromeAlert"
+                                                    fieldDescription="Please provide alert message to display while loading Flurochrome"
+                                                    fieldLabel="Message to display for Loading of Fluorochrome"
+                                                    name="./loadFluroChromeAlert"
+                                                    value="Loading a saved fluorochrome combination will replace any fluorochromes currently in the display list. If you wish to continue, select Okay, if not, select Cancel"/>
+                                            <loadCytometerAlert
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    cq-msm-lockable="./loadCytometerAlert"
+                                                    fieldDescription="Please provide alert message to display while loading Instruments Configurations"
+                                                    fieldLabel="Message to display for Loading of Cytometers"
+                                                    name="./loadCytometerAlert"
+                                                    value="Loading a saved instrument configuration will replace any configuration details already present. If you wish to continue, select Okay, if not, select Cancel"/>
+                                        </items>
+                                    </importSection>
+                                    <savePanelSection
+                                            jcr:primaryType="nt:unstructured"
+                                            jcr:title="Save Panel"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <popupTitle
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    cq-msm-lockable="./popupTitle"
+                                                    fieldDescription="Please provide Title"
+                                                    fieldLabel="Title"
+                                                    name="./popupTitle"
+                                                    value="Save Fluorochromes"/>
+                                            <popupMessageText
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
+                                                    cq-msm-lockable="./popupMessageText"
+                                                    fieldDescription="Please provide Message to display in pop up"
+                                                    fieldLabel="Message"
+                                                    name="./popupMessageText"
+                                                    value="A fluorochrome combination already exists with this name. If you wish to continue and replace the existing set, click OK. If you wish to save it with another name, click cancel and revise the name."/>
+                                            <popupCancelButton
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    cq-msm-lockable="./popupCancelButton"
+                                                    fieldDescription="Please provide label of Cancel Button"
+                                                    fieldLabel="Cancel Button Label"
+                                                    name="./popupCancelButton"
+                                                    value="Cancel"/>
+                                            <popupOkButton
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    cq-msm-lockable="./popupOkButton"
+                                                    fieldDescription="Please provide label of Ok Button"
+                                                    fieldLabel="Ok Button Label"
+                                                    name="./popupOkButton"
+                                                    value="Save"/>
+                                            <popupProceedButton
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    cq-msm-lockable="./popupProceedButton"
+                                                    fieldDescription="Please provide label of Proceed Button"
+                                                    fieldLabel="Proceed Button Label"
+                                                    name="./popupProceedButton"
+                                                    value="Proceed"/>
+                                            <fluorochromeSetNamePlaceholder
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    cq-msm-lockable="./fluorochromeSetNamePlaceholder"
+                                                    fieldDescription="Please provide label for Fluorochrome Set Name Placeholder"
+                                                    fieldLabel="Fluorochrome Set Name Placeholder Label"
+                                                    name="./fluorochromeSetNamePlaceholder"
+                                                    value="Fluorochrome Combination Name"/>
+                                            <briefDescriptionOptional
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
+                                                    cq-msm-lockable="./briefDescriptionOptional"
+                                                    fieldDescription="Brief Description (optional)"
+                                                    fieldLabel="Brief Description (optional)"
+                                                    name="./briefDescriptionOptional"
+                                                    value="Brief Description (optional)"/>
+                                            <alert
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    cq-msm-lockable="./alert"
+                                                    fieldDescription="Please provide Alert message"
+                                                    fieldLabel="Alert message"
+                                                    name="./alert"
+                                                    value="Alert!"/>
+                                            <saveSuccessFlu
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    cq-msm-lockable="./saveSuccessFlu"
+                                                    fieldDescription="Please Provide Save Message for Fluorochrome"
+                                                    fieldLabel="Save Message for Fluorochrome"
+                                                    name="./saveSuccessFlu"
+                                                    value="Your fluorochrome combination was saved successfully"/>
+                                            <overwrite
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    cq-msm-lockable="./overwrite"
+                                                    fieldDescription="Please provide Overwrite Text"
+                                                    fieldLabel="Overwrite text"
+                                                    name="./overwrite"
+                                                    value="Overwrite"/>
+                                            <confirmation
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    cq-msm-lockable="./confirmation"
+                                                    fieldDescription="Please provide Confirmation Text"
+                                                    fieldLabel="Confirmation text"
+                                                    name="./confirmation"
+                                                    value="Confirmation"/>
+                                            <confirmationMessage
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    cq-msm-lockable="./confirmationMessage"
+                                                    fieldDescription="Please provide Confirmation Message"
+                                                    fieldLabel="Confirmation Message before delting"
+                                                    name="./confirmationMessage"
+                                                    value="Are you sure you want to delete this item?"/>
+                                            <warningMessage
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    cq-msm-lockable="./warningMessage"
+                                                    fieldDescription="Please provide Warning Message for deletion"
+                                                    fieldLabel="Warning Message"
+                                                    name="./warningMessage"
+                                                    value="This item will be deleted immediately. You can`t undo the action."/>
+                                            <delete
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    cq-msm-lockable="./delete"
+                                                    fieldDescription="Please provide label for Delete"
+                                                    fieldLabel="Delete text"
+                                                    name="./delete"
+                                                    value="Delete"/>
+                                            <dontShowMessage
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    cq-msm-lockable="./dontShowMessage"
+                                                    fieldDescription="Don`t show this message again Label"
+                                                    fieldLabel="Don`t show this message again Text"
+                                                    name="./dontShowMessage"
+                                                    value="Don`t show this message again"/>
+                                        </items>
+                                    </savePanelSection>
+                                    <saveConfigurationSection
+                                            jcr:primaryType="nt:unstructured"
+                                            jcr:title="Save Configuration"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <popupCytometerTitle
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    cq-msm-lockable="./popupCytometerTitle"
+                                                    fieldDescription="Please provide Title for Custom Configuration popup"
+                                                    fieldLabel="Title for Configuration popup"
+                                                    name="./popupCytometerTitle"
+                                                    value="Save Custom Configuration"/>
+                                            <popupCytometerNamePlaceholder
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    cq-msm-lockable="./popupCytometerNamePlaceholder"
+                                                    fieldDescription="Please provide Custom Cytometer Name Placeholder"
+                                                    fieldLabel="Custom Cytometer Name Placeholder"
+                                                    name="./popupCytometerNamePlaceholder"
+                                                    value="Custom Cytometer Name"/>
+                                            <popupConfigurationNamePlaceholder
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    cq-msm-lockable="./popupConfigurationNamePlaceholder"
+                                                    fieldDescription="Please provide Configuration Name Placeholder"
+                                                    fieldLabel="Configuration Name Placeholder"
+                                                    name="./popupConfigurationNamePlaceholder"
+                                                    value="Configuration Description"/>
+                                            <popupValidationMessage
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    cq-msm-lockable="./popupValidationMessage"
+                                                    fieldDescription="Please provide Validation Message"
+                                                    fieldLabel="Validation Message"
+                                                    name="./popupValidationMessage"
+                                                    value="This is a required Field"/>
+                                            <saveSuccessIns
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    cq-msm-lockable="./saveSuccessIns"
+                                                    fieldDescription="Please Provide Save Message for Instrument Configuration"
+                                                    fieldLabel="Save Message for Instrument Configuration"
+                                                    name="./saveSuccessIns"
+                                                    value="Your instrument configuration was saved successfully"/>
+                                            <failedMessage
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    cq-msm-lockable="./failedMessage"
+                                                    fieldDescription="Please provide failed message on failure of saving"
+                                                    fieldLabel="Failed Message"
+                                                    name="./failedMessage"
+                                                    value="Failed to save entered data"/>
+                                            <popupCytoAlertMessage
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
+                                                    cq-msm-lockable="./popupCytoAlertMessage"
+                                                    fieldDescription="Please Provide Cytometer Alert Message"
+                                                    fieldLabel="Cytometer Overwrite Alert Message"
+                                                    name="./popupCytoAlertMessage"
+                                                    value="A saved cytometer configuration already exists with this combination of Cytometer and Configuration names. If you wish to continue and replace the existing cytometer configuration, click Overwrite. If you wish to save it with another name, click cancel and revise the name."/>
+                                        </items>
+                                    </saveConfigurationSection>
+                                </items>
+                            </column>
+                        </items>
+                    </popup>
+                    <matrix
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Matrix"
+                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                        <layout
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"/>
+                        <items jcr:primaryType="nt:unstructured">
+                            <column
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <matrixSV
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Matrix"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <popupTitleMatrix
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                cq-msm-lockable="./popupTitleMatrix"
+                                                fieldDescription="Please provide Popup Title for the Matrix"
+                                                fieldLabel="Title of Similarity-Complexity Matrix"
+                                                name="./popupTitleMatrix"
+                                                value="Similarity &amp; Complexity Scores"/>
+                                            <similarityScores
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    cq-msm-lockable="./similarityScores"
+                                                    fieldDescription="Please provide Label for Similarity Scores"
+                                                    fieldLabel="Similarity Scores Label"
+                                                    name="./similarityScores"
+                                                    value="Similarity Scores"/>
+                                            <complexityScore
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                cq-msm-lockable="./complexityScore"
+                                                fieldDescription="Please provide label for Complexity Score"
+                                                fieldLabel="Complexity Score label"
+                                                name="./complexityScore"
+                                                value="Complexity Score"/>
+                                            <complexityScoreNotAvailable
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                cq-msm-lockable="./complexityScoreNotAvailable"
+                                                fieldDescription="Complexity Score Not Available label"
+                                                fieldLabel="Complexity Score Not Available label"
+                                                name="./complexityScoreNotAvailable"
+                                                value="Complexity score cannot be calculated due to unavailable spectral signature data for some fluorochromes. See fluorochromes tab for details."/>
+                                            <popupMessageSubtitle
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                cq-msm-lockable="./popupMessageSubtitle"
+                                                fieldDescription="Please provide Popup Message Subtitle"
+                                                fieldLabel="Popup Message Subtitle"
+                                                name="./popupMessageSubtitle"
+                                                value="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce in quam nisl. Nulla faucibus mattis sapien"/>
+                                            <popupMessageContent
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
+                                                cq-msm-lockable="./exportImgbutton"
+                                                fieldDescription="Please provide Popup Message Content"
+                                                fieldLabel="Popup Message Content"
+                                                name="./popupMessageContent"
+                                                value="Similarity scores indicate how similar two dyes are to each other (based on cosine similarity). Lower numbers indicate that dyes are very different from each other and can likely be used with minimal risk of spillover spreading, while higher numbers indicate higher spectral overlap and increased potential for spillover spreading. Although technically possible, the use of combination with very high similarity should be limited to the design of very large panels and/or when reagent availability is a restriction. The calculated values are dependent on the cytometer configuration and settings used.  Complexity score is a single numerical score assigned to a panel based on the specific set of dyes and the cytometer configuration. It is a qualitative measurement that provides information about the overall similarity of dyes used within a panel. The lower the number, the lower the overall spread will be and vice-versa. The smallest number is 1 and grows based on the numbers of dyes in your panel and how similar the dyes are to one another. Panels containing more colors will inherently have a higher score than panels containing fewer."/>
+                                            <exportImgbutton
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                cq-msm-lockable="./exportImgbutton"
+                                                fieldDescription="Please provide lablel for Export Image Button"
+                                                fieldLabel="Export Image Button Label"
+                                                name="./exportImgbutton"
+                                                value="Export Image"/>
+                                            <similarityAndcomplexity
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                cq-msm-lockable="./similarityAndcomplexity"
+                                                fieldDescription="Similarity &amp; Complexity"
+                                                fieldLabel="Similarity &amp; Complexity"
+                                                name="./similarityAndcomplexity"
+                                                value="Similarity &amp; Complexity"/>
+                                            <exportCSV
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                cq-msm-lockable="./exportCSV"
+                                                fieldDescription="Provide Export CSV Label"
+                                                fieldLabel="Export CSV label"
+                                                name="./exportCSV"
+                                                value="Export CSV"/>
+                                        </items>
+                                    </matrixSV>
+                                </items>
+                            </column>
+                        </items>
+                    </matrix>
+                </items>
+            </tabs>
+        </items>
+    </content>
+</jcr:root>

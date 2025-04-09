@@ -1,0 +1,79 @@
+<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html" data-sly-call="${templates.placeholder @ isEmpty = true}"></sly>
+<sly data-sly-use.reports="com.bdb.aem.core.models.FACReportsModel">
+	<article class="view-report container ${properties.togglePaddingTop?'pt-2':''}">
+		<sly data-sly-test="${properties.target && properties.target != '' && properties.clone && properties.clone != ''}">
+			<h1 class="view-report__heading">${properties.target} (${properties.clone})</h1>
+		</sly>
+		<sly data-sly-test="${properties.target && properties.clone == ''}">
+			<h1 class="view-report__heading">${properties.target}</h1>
+		</sly>
+		<div class="view-report__section ">
+			<label class="view-report__section-label">${properties.searchTitle}</label>
+			<div class="d-lg-flex view-report__section-search">
+				<article class="bdb-contacts-dropdown app-js__bdb-contacts-dropdown">
+					<input type="hidden" id="jobTitleMrktoFld" value="">
+					<div class="dropdown">
+						<div class="dropdown-toggle d-flex justify-content-between align-items-center contactus-dropdown" type="button" id="jobTitleMrktoFld-dummy" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" tabindex="0">
+							<div class="dropdown-header-container d-flex">
+								<div class="dropdown-header-label js__dropdown-header-label">${properties.searchPlaceholder}</div>
+							</div>
+						</div>
+						<div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="">
+							<sly data-sly-test="${reports.conjugates}">
+								<sly data-sly-list.conjugates="${reports.conjugates}"> <a href="#${conjugates.conjugateId}" class="dropdown-item js__dropdown-item" tabindex="0" data-code="${conjugates.conjugateName}" data-inputid="jobTitleMrktoFld">${conjugates.conjugateName}</a> </sly>
+							</sly>
+						</div>
+					</div>
+				</article>
+				<sly data-sly-test="${reports.navigation}">
+					<div class="d-lg-flex pl-4 view-report__section-links">
+						<sly data-sly-list.item="${reports.navigation}"> <a class="section-link" href="${item.path}" target="${item.target}" aria-label="${item.label}">${item.label}</a> </sly>
+					</div>
+				</sly>
+			</div>
+		</div>
+		<div class="info-block">
+			<p class="info-block__title">About ${properties.target}</p>
+			<div class="d-lg-flex">
+				<sly data-sly-test="${properties.isotype}">
+					<div class="block-item">
+						<p class="block-item__type">ISOTYPE</p>
+						<p class="block-item__value">${properties.isotype}</p>
+					</div>
+				</sly>
+				<sly data-sly-test="${properties.cytometer}">
+					<div class="block-item">
+						<p class="block-item__type">CYTOMETER USED</p>
+						<p class="block-item__value">${properties.cytometer}</p>
+					</div>
+				</sly>
+				<sly data-sly-test="${properties.source}">
+					<div class="block-item">
+						<p class="block-item__type">EXPERIMENT CELL SOURCE</p>
+						<p class="block-item__value">${properties.source}</p>
+					</div>
+				</sly>
+				<sly data-sly-test="${properties.reactiveSpecies}">
+					<div class="block-item">
+						<p class="block-item__type">REACTIVE SPECIES</p>
+						<p class="block-item__value">${properties.reactiveSpecies}</p>
+					</div>
+				</sly>
+				<sly data-sly-test="${properties.hostSpecies}">
+					<div class="block-item">
+						<p class="block-item__type">HOST SPECIES</p>
+						<p class="block-item__value">${properties.hostSpecies}</p>
+					</div>
+				</sly>
+				<sly data-sly-test="${reports.entrezLinks}">
+					<div class="block-item">
+						<p class="block-item__type">NCBI ENTREZ INFO </p>
+						<sly data-sly-list.entrez="${reports.entrezLinks}">
+							<a class="block-item__link" href="${entrez.valueHref}" target="_blank" aria-label="NCBI entrez info"><img class="block-item__img" src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/launch-icon.svg" alt="Link Icon" />${entrez.valueText}</a>
+						</sly>
+					</div>
+				</sly>
+			</div>
+		</div>
+	</article>
+</sly>

@@ -1,0 +1,15 @@
+<sly
+        data-sly-use.templates="core/wcm/components/commons/v1/templates.html"
+        data-sly-call="${templates.placeholder @ isEmpty = true}"></sly>
+<sly data-sly-use.tableObject="com.bdb.aem.core.models.ComparisonTableModel"/>
+<bd-comparison-table labels="comparisonTable${tableObject.compUniqueName @ context='scriptComment'}"></bd-comparison-table>
+<script>
+    if (typeof window.AEM_DATA === 'undefined') {
+            window.AEM_DATA = {};
+    }
+    if (typeof window.AEM_DATA.labels === 'undefined') {
+        window.AEM_DATA.labels = {};
+    }
+
+    window.AEM_DATA.labels.comparisonTable${tableObject.compUniqueName @ context='scriptComment'}=${tableObject.tabValue|| '{}' @context='scriptComment' };
+</script>

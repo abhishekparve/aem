@@ -1,0 +1,49 @@
+<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html"/>
+<sly data-sly-use.time="com.bdb.aem.core.models.TimerModel"></sly>
+<sly data-sly-call="${templates.placeholder @ isEmpty = !properties.type, classAppend='cmp-companionProducts'}"></sly>
+
+<sly data-sly-use.productsObject="com.bdb.aem.core.models.CompanionProductsModel" data-sly-test="${productsObject}"/>
+<div data-sly-test="${productsObject.companionBeanList}" class="pdp-companion__container">
+    <div data-sly-test="${productsObject.productsLabel}" class="pdp-companion__container_title">
+        <h2>${productsObject.productsLabel}</h2>
+    </div>
+    <div class="pdp-companion__container_tiles">
+        <sly data-sly-list.products="${productsObject.companionBeanList}"
+             data-sly-test="${productsObject.companionBeanList}" data-sly-unwrap>
+            <sly data-sly-test="${productsList.index <=5}"> 
+            <div class="pdp-companion__container_tiles_tile d-flex justify-content-between">
+                <div class="pdp-companion__container_tiles_tile_desc d-flex flex-column">
+                    <a data-sly-test="${products.productTitle}"
+                       class="pdp-companion__container_tiles_tile_desc_link" href="${products.ctaLink}" target="_self">
+                            <span class="pdp-companion__container_tiles_tile_desc_link_text">${products.productTitle @context='html'}</span>
+                    </a>
+                    <div class="pdp-companion__container_tiles_tile_desc_subtitle">
+                        <span data-sly-test="${products.size}" class="pdp-companion__container_tiles_tile_desc_subtitle_size">
+                            <span class="pdp-companion__container_tiles_tile_desc_subtitle_size_label">${productsObject.sizeLabel}</span>
+                            <span>${products.size}</span>
+                        </span>
+                        <span data-sly-test="${products.catNo}" class="pdp-companion__container_tiles_tile_desc_subtitle_catno">
+                            <span class="pdp-companion__container_tiles_tile_desc_subtitle_catno_label">${productsObject.catNoLabel}</span>
+                            <span>${products.catNo}</span>
+                        </span>
+                    </div>
+                </div>
+                <div data-sly-test="${products.image}" class="pdp-companion__container_tiles_tile_imgcontainer">
+                    <img class="pdp-companion__container_tiles_tile_imgcontainer_img" src="${products.image}"
+                         alt=${products.imgAtlText}/>
+                </div>
+            </div>
+        	</sly> 
+        </sly>
+
+        <sly data-sly-test="${productsObject.numberOfProducts}" data-sly-unwrap>
+            <div data-sly-test="${productsObject.numberOfProducts >= 6}" class="pdp-companion__container_details">
+                <a class="pdp-companion__container_details_link" href="${productsObject.viewMoreCTALink}" target="_self">
+                    <span class="pdp-companion__container_details_link_text">${productsObject.viewDetailsLabel}</span>
+                    <span class="arrow right"></span>
+                </a>
+            </div>
+        </sly>
+    </div>
+</div>
+<p data-sly-test="${inheritedPageProperties.enableTimer}">Companion Products:${time.endTime}</p>

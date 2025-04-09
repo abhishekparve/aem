@@ -1,0 +1,36 @@
+{
+    "creditCardPaymentInfo": {
+        "accountHolderName": "Bret Lee",
+        "cardNumber": "4111111111111111",
+        "cardType": {
+            "code": "visa"
+        },
+        "creationDate": "Tue Oct 13 09:03:36 GMT 2020",
+        "defaultPayment": true,
+        "expiryMonth": "01",
+        "expiryYear": "2021",
+        "id": "8797731455018",
+        "nickName": "Jan Expiry Card",
+        "prepayCustomer": false,
+        "saved": true,
+        "rePoNumber": "589384029"
+    },
+    "multipleSavedCards": true,
+    "paymentModes": [
+        {
+            "isDefault": false,
+            "paymentType": {
+                "code": "CARD",
+                "displayName": "Card Payment"
+            },
+            "selectedPaymentMode": true
+        },
+        {
+            "isDefault": true,
+            "paymentType": {
+                "code": "ACCOUNT",
+                "displayName": "Account Payment"
+            }
+        }
+    ]
+}

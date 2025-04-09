@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="18px" height="25px" viewBox="0 0 18 25" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icon/download Grey</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round">
+        <g id="Laser-and-peak-emission-max" transform="translate(-1097.000000, -257.000000)" stroke="#BDBDBD" stroke-width="1.7">
+            <g id="Export-Icon" transform="translate(1098.296296, 258.555556)">
+                <line x1="7.58518519" y1="2.21118273" x2="7.58518519" y2="11.5741457" id="d"></line>
+                <path d="M11.9703704,6.95192347 L14.9333333,6.95192347 C15.1703704,6.95192347 15.2888889,7.1889605 15.1703704,7.30747902 L15.0518519,21.2926642 C15.0518519,21.8852568 14.6962963,22.3593309 14.1037037,22.3593309 L0.948148148,22.3593309 C0.474074074,22.3593309 0,21.8852568 0,21.2926642 L0,7.42599754 C0,7.1889605 0.118518519,7.07044199 0.237037037,7.07044199 L3.31851852,7.07044199" id="Path" stroke-linejoin="round"></path>
+                <g id="e" transform="translate(4.385185, 0.000000)" stroke-linejoin="round">
+                    <g id="g" transform="translate(0.000000, -0.000000)">
+                        <path d="M6.51851852,3.04081236 L6.51851852,3.04081236 L3.55555556,0.196367911 C3.31851852,-0.040669126 3.08148148,-0.040669126 2.84444444,0.0778493925 L2.84444444,0.0778493925 L0,3.04081236" id="h"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

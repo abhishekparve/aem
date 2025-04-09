@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+          jcr:primaryType="nt:unstructured"
+          jcr:title="Marketo Form"
+          sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+        <items jcr:primaryType="nt:unstructured">
+            <column
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/coral/foundation/container">
+                <items jcr:primaryType="nt:unstructured">
+                	<enableAnchorIdentifier
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+						fieldDescription="Anchor Identifier for Anchor Component"
+                        name="./enableAnchorIdentifier"
+                        text="Enable Anchor Identifier"
+                        uncheckedValue="{Boolean}false"
+                        value="{Boolean}true"/>
+                    <togglePaddingTop
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/switch"
+                        checked="{Boolean}false"
+                        fieldLabel="Reduce Top Padding"
+                        fieldDescription="Switch between Default Padding (Off) and Reduced Padding (On)"
+                        name="./togglePaddingTop"/>
+                    <togglePaddingBottom
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/switch"
+                        checked="{Boolean}false"
+                        fieldLabel="Reduce Bottom Padding"
+                        fieldDescription="Switch between Default Padding (Off) and Reduced Padding (On)"
+                        name="./togglePaddingBottom"/>
+                    <sectionTitle
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldDescription="Section Title (Optional)"
+                        fieldLabel="Section Title"
+                        name="./sectionTitle"/>
+                    <background
+						jcr:primaryType="nt:unstructured"
+						sling:resourceType="granite/ui/components/coral/foundation/form/select"
+						fieldDescription="This enables the form to sit on a grey or white background while the form itself will always remain white."
+						fieldLabel="Background Color"
+						name="./backgroundColor"
+						required="{Boolean}true">
+						<items jcr:primaryType="nt:unstructured">
+							<whiteColor
+								jcr:primaryType="nt:unstructured"
+								text="White color"
+								value="white-bg"/>
+							<greyColor
+								jcr:primaryType="nt:unstructured"
+								text="Grey color"
+								value="gray-background-container"/>
+						</items>
+					</background>
+					<align
+						jcr:primaryType="nt:unstructured"
+						sling:resourceType="granite/ui/components/coral/foundation/form/select"
+						fieldLabel="Component Section Alignment"
+						name="./sectionAlign"
+						required="{Boolean}true">
+						<items jcr:primaryType="nt:unstructured">
+							<left
+								jcr:primaryType="nt:unstructured"
+								text="Left aligned"
+								value="justify-content-start"/>
+							<right
+								jcr:primaryType="nt:unstructured"
+								text="Right aligned"
+								value="justify-content-end"/>
+							<center
+								jcr:primaryType="nt:unstructured"
+								text="Center aligned"
+								value="justify-content-center"/>
+						</items>
+					</align>
+                    <rootURL
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                            fieldLabel="Root URL"
+                            fieldDescription="Enter the Root URL."
+                            required="{Boolean}true"
+                            name="./rootURL"/>
+                    <munchkinID
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                            fieldLabel="MunchkinID"
+                            fieldDescription="Enter the Munchkin ID."
+                            required="{Boolean}true"
+                            name="./munchkinID"/>
+                    <formID
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                            fieldLabel="FormID"
+                            fieldDescription="Enter the Form ID."
+                            required="{Boolean}true"
+                            name="./formID"/>
+                    <titleText
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                            fieldLabel="Title"
+                            fieldDescription="Enter the Form title."
+                            name="./title"/>
+                    <bodyText
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="cq/gui/components/authoring/dialog/richtext"
+                            fieldLabel="Body Text"
+                            fieldDescription="Enter the Form Body Description."
+                            name="./formBodyText"
+                            useFixedInlineToolbar="{Boolean}true">
+                        <rtePlugins
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceSuperType="/apps/bdb-aem/components/authoring/dialog/richtext/rtePlugins"/>
+                        <uiSettings
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceSuperType="/apps/bdb-aem/components/authoring/dialog/richtext/uiSettings"/>
+                    </bodyText>
+                </items>
+            </column>
+        </items>
+    </content>
+</jcr:root>

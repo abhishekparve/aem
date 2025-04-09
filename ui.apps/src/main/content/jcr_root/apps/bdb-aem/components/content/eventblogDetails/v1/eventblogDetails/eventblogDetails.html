@@ -1,0 +1,572 @@
+<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html"
+    data-sly-call="${templates.placeholder @ isEmpty = true}">
+</sly>
+<sly data-sly-use.eventDetailsModel="com.bdb.aem.core.models.EventDetailsModel"></sly>
+<sly data-sly-use.blogDetailsModel="com.bdb.aem.core.models.BlogDetailsModel"></sly>
+<sly data-sly-use.socialModel="com.bdb.aem.core.models.EventDetailsSocialModel"></sly>
+
+<div data-sly-test="${properties.selection=='event'}" class="events-and-blog">
+
+    <div><!-- Event details banner -->
+        <article class="event-details-banner app-js__event-details-banner position-relative">
+            <div class="events-list-banner__container">
+                <div class="events-list-banner__image w-100" role="img" aria-label="${properties.bannerImageAlt}">
+                    <img class="events-list-banner__events-image d-block ${properties.backgroundPositionStyle}"
+                        src="${eventDetailsModel.bannerImage}" aria-describedby="events-list-banner__text-id"
+                        alt="${properties.bannerImageAlt}" />
+                    <div data-sly-test="${eventDetailsModel.darkMode== 'true'}"
+                        class="events-list-banner__image-gradient"></div>
+                </div>
+
+                <div class="events-list-banner__text position-absolute container d-flex flex-column pl-lg-0 ${properties.bannerAlign}-align"
+                    id="events-list-banner__text-id">
+                    <h1 class="events-list-banner__content-heading ${properties.bannerAlign}-align p-0">
+                        <a href="${eventDetailsModel.bannerURL}"
+                            class="events-list-banner__content-heading social-title ${properties.bannerAlign}-align p-0 ${properties.fontColorVariation == '#424242' ? 'text-dark' : 'text-white'}">
+                            ${properties.bannerTitle @context='html'}
+                        </a>
+                    </h1>
+
+                    <div class="d-flex position-relative ribbon-btn-content">
+                        <span
+                            class="events-list-banner__content-btn angle ${properties.eventType}">${properties.eventType}</span>
+                    </div>
+                    <p
+                        class="events-list-banner__content-desc ${properties.bannerAlign}-align events-list-banner__content-desc ${properties.fontColorVariation == '#424242' ? 'text-dark' : 'text-white'}">
+                        ${eventDetailsModel.eventTimeLabel} ${eventDetailsModel.bannerDate}
+                    </p>
+                </div>
+            </div>
+        </article>
+    </div>
+
+    <!-- Event details banner -->
+
+    <div class="container p-0 event-details-content printableEventContent">
+        <div class="row justify-content-md-between container d-flex flex-column-reverse flex-lg-row p-0 m-0">
+
+            <!-- Main content - left side -->
+            <div class="col-sm-12 col-lg-7 p-0 event-details-content__content-wrapper">
+                <sly data-sly-list.item="${eventDetailsModel.multifieldSection}">
+                    <div>
+                        <article class="event-details-content app-js__event-details-content event-details-content-">
+                            <div class="event-details-content__content-container">
+                                <h3 class="event-details-content__heading ml-0">${item.title @context='html'}</h3>
+                                <div class="bd-rte">
+                                    <p>${item.description @context='html'}</p>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </sly>
+                <sly data-sly-list.item="${eventDetailsModel.multifieldSpeakerSection}">
+                    <div>
+                        <article
+                            class="event-details-content app-js__event-details-content event-details-content-image-text">
+                            <div class="event-details-content__content-container">
+                                <div class="row">
+                                    <div class="col-12 p-lg-0">
+                                        <h3 class="event-details-content__heading">${item.speakerTitle @context='html'}
+                                        </h3>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div data-sly-test="${item.speakerImage}"
+                                        class="col-lg-3 col-12 event-details-content__image-container">
+                                        <img data-sly-test="${item.speakerImage}" src="${item.speakerImage}"
+                                            class="event-details-content__items-img" alt="${item.speakerImageAlt}">
+                                    </div>
+                                    <div data-sly-test="${item.speakerName}"
+                                        class="col-lg-9 col-12 event-details-content__image-container_rightText bd-rte">
+                                        <div class="event-details-content__textContainer">
+                                            <h5 data-sly-test="${item.speakerName}"
+                                                class="event-details-content__image-container_imageName">
+                                                ${item.speakerName}
+                                            </h5>
+                                            <p data-sly-test="${item.speakerImageTitle}"
+                                                class="event-details-content__image-container_imageTitle">
+                                                ${item.speakerImageTitle @context='html'}
+                                            </p>
+                                            <p data-sly-test="${item.speakerImageDescription}"
+                                                class="event-details-content__image-container_imageDesc">
+                                                ${item.speakerImageDescription @context='html'}
+                                            </p>
+                                        </div>
+                                        <div data-sly-test="${item.speakerDescription}">
+                                            ${item.speakerDescription @context='html'}
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </sly>
+
+                <sly data-sly-test="${eventDetailsModel.eventVideoId}">
+                    <article class="event-details-content app-js__event-details-content event-details-content">
+                        <div class="brightcove-video__container">
+
+                        	<div class="brightcove-video-player__container-video ${eventDetailsModel.eventBorder?'has-border':''}">
+	                            <div class="video-js" data-accountId="${eventDetailsModel.brightcoveAccountId}"
+	                                data-playerId="${eventDetailsModel.brightcovePlayerId}"
+	                                data-videoId="${eventDetailsModel.eventVideoId}">
+	                            </div>
+	                        </div>
+	                            <div data-sly-test="${properties.eventVideoCaption}" class="bd-rte">
+	                                <p class="event-details-content__brightcove-video__container_videoCaption">
+	                                    ${properties.eventVideoCaption @context='html'}</p>
+	                            </div>
+	                            <div data-sly-test="${properties.eventVideoTitle}">
+	                                <h5 class="event-details-content__brightcove-video__container_videoTitle">
+	                                    ${properties.eventVideoTitle @context='html'}</h5>
+	                            </div>
+	                            <div data-sly-test="${properties.eventVideoDesc}" class="bd-rte">
+	                                <p class="event-details-content__brightcove-video__container_videoDesc">
+	                                    ${properties.eventVideoDesc @context='html'}</p>
+	                            </div>
+                        </div>
+                    </article>
+                </sly>
+
+                <a data-sly-test="${eventDetailsModel.eventLabelCta}" href="${eventDetailsModel.eventUrlCta}"
+                   type="button" target="${properties.eventOpenNewTabCta == 'true' ? '_blank' : '_self'}"
+                   class="btn ${properties.eventBluePrimaryCta ? 'btn-primary-blue btn-fe-text' : 'btn-secondary'} event-details-content_brightcove-video__container__video-cta-link">${eventDetailsModel.eventLabelCta
+                    @context='html'}</a>
+                <a data-sly-test="${eventDetailsModel.eventLabelCtaAdd}"
+                   href="${eventDetailsModel.eventUrlCtaAdd}" type="button"
+                   target="${properties.eventOpenNewTabCtaAdd == 'true' ? '_blank' : '_self'}"
+                   class="btn btn-transparent-blue btn-sec-text ${eventDetailsModel.eventLabelCta ? '' : 'ml-0'} event-details-content_brightcove-video__container__video-cta-link">${eventDetailsModel.eventLabelCtaAdd
+                    @context='html'}</a>
+
+                <sly data-sly-test="${properties.allowSocial == 'yes'}">
+                    <article class="social-media-links app-js__social-media-links">
+                        <div class="social-media-links__container">
+                            <p data-sly-test="${properties.socialLabel}" class="social-media-links__share">
+                                ${properties.socialLabel @context='html'}</p>
+	                            <sly data-sly-test="${socialModel.linkedIn == 'yes'}">
+	                            <a id="${socialModel.socialIdLinkedIn}" class="social-media-links__link">
+	                                <img class="social-media-links__link-img" src="${socialModel.socialIconLinkedIn}"
+	                                    alt="${socialModel.socialAltLinkedIn}" />
+	                            </a>
+		                        </sly>
+		                        <sly data-sly-test="${socialModel.facebook == 'yes'}">
+		                            <a id="${socialModel.socialIdFacebook}" class="social-media-links__link">
+		                                <img class="social-media-links__link-img" src="${socialModel.socialIconFacebook}" alt="${socialModel.socialAltFacebook}" />
+		                            </a>
+		                        </sly>
+		                        <sly data-sly-test="${socialModel.twitter == 'yes'}">
+		                            <a id="${socialModel.socialIdTwitter}" class="social-media-links__link">
+		                                <img class="social-media-links__link-img" src="${socialModel.socialIconTwitter}" alt="${socialModel.socialAltTwitter}" />
+		                            </a>
+		                        </sly>
+		                        <sly data-sly-test="${socialModel.email == 'yes'}">
+		                            <a id="${socialModel.socialIdEmail}" class="social-media-links__link">
+		                                <img class="social-media-links__link-img" src="${socialModel.socialIconEmail}" alt="${socialModel.socialAltEmail}" />
+		                            </a>
+		                        </sly>
+		                        <sly data-sly-test="${socialModel.print == 'yes'}">
+		                            <a id="${socialModel.socialIdPrint}" class="social-media-links__link">
+		                                <img class="social-media-links__link-img" src="${socialModel.socialIconPrint}" alt="${socialModel.socialAltPrint}" />
+		                            </a>
+		                        </sly>
+		                        <sly data-sly-test="${socialModel.shareLink == 'yes'}">
+		                            <a id="${socialModel.socialIdShareLink}" class="social-media-links__link">
+		                                <img class="social-media-links__link-img" src="${socialModel.socialIconShareLink}" alt="${socialModel.socialAltShareLink}" />
+		                            </a>
+		                        </sly>
+                            <div class="alert alert-success d-none" role="alert">
+                                Link copied!
+                            </div>
+                        </div>
+                    </article>
+                </sly>
+                <sly data-sly-test="${properties.enableRegistration}">
+                    <a class="d-lg-none" href="${eventDetailsModel.ctaUrl}"
+                        data-toggle="${properties.loadInModal?'modal':''}"
+                        data-target="${properties.loadInModal?'#bdb-request-quote-form-modal':''}">
+                        <button
+                            class="btn btn-primary-blue w-100 d-block event-details-content__content-wrapper-btn">${properties.ctaLabel
+                            @context='html'}
+                        </button>
+                    </a>
+                </sly>
+            </div><!-- Main content - left side -->
+
+            <!-- Main content - right side -->
+            <sly data-sly-test="${properties.enableRegistration}">
+                <div class="col-sm-12 col-lg-5 p-0 events-card__card-wrapper">
+                    <div>
+                        <article class="events-card app-js__events-card">
+                            <div class="card">
+                                <div class="events-card__card-body card-body">
+                                    <h3 data-sly-test="${properties.bannerTitle}"
+                                        class="events-card__divHeading d-none d-lg-block">
+                                        ${properties.bannerTitle @context='html'}
+                                    </h3>
+
+                                    <sly data-sly-list.item="${eventDetailsModel.eventDateAndTimeLabel}">
+                                        <div data-sly-test="${item.multifieldEventStartDate||item.eventStartTime||item.eventEndTime}"
+                                            class="events-card__div">
+                                            <img data-sly-test="${eventDetailsModel.dateIcon}"
+                                                class="events-card__div-img"
+                                                onerror="this.onerror=null;this.style.display='none'"
+                                                src="${eventDetailsModel.dateIcon}" alt="">
+                                            <p class="events-card__div-text">${item.multifieldEventDate} |
+                                                ${item.eventStartTime} - ${item.eventEndTime}</p>
+                                        </div>
+                                    </sly>
+
+                                    <div data-sly-test="${properties.eventLocation}" class="events-card__div">
+                                        <img data-sly-test="${eventDetailsModel.locationIcon}"
+                                            class="events-card__div-img"
+                                            onerror="this.onerror=null;this.style.display='none'"
+                                            src="${eventDetailsModel.locationIcon}" alt="">
+                                        <p class="events-card__div-text">${properties.eventLocation}</p>
+                                    </div>
+
+                                    <a data-sly-test="${properties.ctaLabel}" type="button"
+                                        href="${eventDetailsModel.ctaUrl}" class="d-none d-lg-block"
+                                        data-toggle="${properties.loadInModal?'modal':''}"
+                                        data-target="${properties.loadInModal?'#bdb-request-quote-form-modal':''}">
+                                        <button class="btn btn-primary-blue w-100 d-none d-lg-block">
+                                            ${properties.ctaLabel @context='html'}
+                                        </button>
+                                    </a>
+
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </sly>
+            <!-- Main content - right side -->
+        </div>
+    </div>
+</div>
+
+<div data-sly-test="${properties.selection=='blog'}" class="blog-details-page">
+    <div class="position-absolute w-100">
+        <article class="blog-details-banner app-js__blog-details-banner">
+            <div class="blog-details-banner__container w-100" role="img" aria-label="antibodies-banner-div">
+                <img class="blog-details-banner__image d-block w-100" src="${blogDetailsModel.bannerImageBlog}"
+                    aria-label="${properties.bannerImageAltBlog}" alt="${properties.bannerImageAltBlog}" />
+                <div data-sly-test="${blogDetailsModel.darkModeBlog== 'true'}"
+                    class="events-list-banner__image-gradient"></div>
+            </div>
+        </article>
+    </div>
+    <div class="position-relative blog-details-page-content ${properties.togglePaddingTop?'pt-2':''}">
+        <article class="blog-details-content app-js__blog-details-content">
+            <div class="blog-details-content__container container bd-rte">
+                <h1 class="blog-details-content__header">${properties.bannerTitleBlog @context='html'}
+                </h1>
+                <p data-sly-test="${properties.bannerSubTitle}" class="blog-details-content__sub-header">
+                    ${properties.bannerSubTitle @context='html'}</p>
+                <p data-sly-test="${blogDetailsModel.blogDate}" class="blog-details-content__date">
+                    ${blogDetailsModel.blogDate}</p>
+                <div data-sly-test="${properties.bannerByline}" class="blog-details-content__author bd-rte">
+                    ${properties.bannerByline @context='html'}</div>
+                <sly data-sly-list.item="${blogDetailsModel.multifieldSpeakerSectionBlog}">
+                    <div>
+                        <article
+                            class="blog-details-content app-js__blog-details-content blog-details-content-image-text">
+                            <div class="blog-details-content__content-container">
+                                <div class="row">
+                                    <div data-sly-test="${item.speakerImageBlog}"
+                                        class="col-lg-2 col-10 blog-details-content__image-container">
+                                        <img data-sly-test="${item.speakerImageBlog}" src="${item.speakerImageBlog}"
+                                            class="blog-details-content__items-img" alt="${item.speakerImageAltBlog}">
+                                    </div>
+                                    <div data-sly-test="${item.speakerNameBlog}"
+                                        class="col-lg-8 col-10 blog-details-content__image-container_rightText bd-rte">
+                                        <div class="blog-details-content__textContainer">
+                                            <h5 data-sly-test="${item.speakerNameBlog}"
+                                                class="blog-details-content__image-container_intervieweeName">
+                                                ${item.speakerNameBlog}
+                                            </h5>
+                                            <div data-sly-test="${item.speakerImageTitleBlog}"
+                                                class="blog-details-content__image-container_speakerTitle">
+                                                ${item.speakerImageTitleBlog @context='html'}
+                                            </div>
+                                            <div data-sly-test="${item.speakerImageDescriptionBlog}"
+                                                class="blog-details-content__image-container_speakerDesc">
+                                                ${item.speakerImageDescriptionBlog @context='html'}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </sly>
+                <div data-sly-test="${properties.bannerDescription}" class="blog-details-content__content-body bd-rte">
+                    ${properties.bannerDescription @context='html'}
+                </div>
+
+                <sly data-sly-test="${blogDetailsModel.blogVideoId}">
+                    <div class="brightcove-video__container">
+
+                    	<div class="brightcove-video-player__container-video ${blogDetailsModel.blogBorder?'has-border':''}">
+	                        <div class="video-js" data-accountId="${blogDetailsModel.brightcoveAccountId}"
+	                            data-playerId="${blogDetailsModel.brightcovePlayerId}"
+	                            data-videoId="${blogDetailsModel.blogVideoId}">
+	                        </div>
+	                    </div>
+	                        <div data-sly-test="${properties.blogVideoCaption}" class="bd-rte">
+	                            <p class="blog-details-content__brightcove-video__container_videoCaption">
+	                                ${properties.blogVideoCaption @context='html'}</p>
+	                        </div>
+	                        <div data-sly-test="${properties.blogVideoTitle}">
+	                            <h5 class="blog-details-content__brightcove-video__container_videoTitle">
+	                                ${properties.blogVideoTitle @context='html'}</h5>
+	                        </div>
+	                        <div data-sly-test="${properties.blogVideoDesc}" class="bd-rte">
+	                            <p class="blog-details-content__brightcove-video__container_videoDesc">
+	                                ${properties.blogVideoDesc @context='html'}</p>
+	                        </div>
+                    </div>
+                </sly>
+
+                <a data-sly-test="${blogDetailsModel.blogLabelCta}" href="${blogDetailsModel.blogUrlCta}"
+                   type="button" target="${properties.blogOpenNewTabCta == 'true' ? '_blank' : '_self'}"
+                   class="btn ${properties.blogBluePrimaryCta ? 'btn-primary-blue btn-fe-text' : 'btn-secondary'} blog-details-content_brightcove-video__container__video-cta-link">${blogDetailsModel.blogLabelCta
+                    @context='html'}</a>
+                <a data-sly-test="${blogDetailsModel.blogLabelCtaAdd}" href="${blogDetailsModel.blogUrlCtaAdd}"
+                   type="button" target="${properties.blogOpenNewTabCtaAdd == 'true' ? '_blank' : '_self'}"
+                   class="btn btn-transparent-blue btn-sec-text ${blogDetailsModel.blogLabelCta ? '' : 'ml-0'} blog-details-content_brightcove-video__container__video-cta-link">${blogDetailsModel.blogLabelCtaAdd
+                    @context='html'}</a>
+
+                <sly data-sly-test="${properties.allowSocial == 'yes'}">
+                    <article class="social-media-links app-js__social-media-links">
+                        <div class="social-media-links__container">
+                            <p data-sly-test="${properties.socialLabel}" class="social-media-links__share">
+                                ${properties.socialLabel @context='html'}</p>
+                            <sly data-sly-test="${socialModel.linkedIn == 'yes'}">
+                            <a id="${socialModel.socialIdLinkedIn}" class="social-media-links__link">
+                                <img class="social-media-links__link-img" src="${socialModel.socialIconLinkedIn}"
+                                    alt="${socialModel.socialAltLinkedIn}" />
+                            </a>
+	                        </sly>
+	                        <sly data-sly-test="${socialModel.facebook == 'yes'}">
+	                            <a id="${socialModel.socialIdFacebook}" class="social-media-links__link">
+	                                <img class="social-media-links__link-img" src="${socialModel.socialIconFacebook}" alt="${socialModel.socialAltFacebook}" />
+	                            </a>
+	                        </sly>
+	                        <sly data-sly-test="${socialModel.twitter == 'yes'}">
+	                            <a id="${socialModel.socialIdTwitter}" class="social-media-links__link">
+	                                <img class="social-media-links__link-img" src="${socialModel.socialIconTwitter}" alt="${socialModel.socialAltTwitter}" />
+	                            </a>
+	                        </sly>
+	                        <sly data-sly-test="${socialModel.email == 'yes'}">
+	                            <a id="${socialModel.socialIdEmail}" class="social-media-links__link">
+	                                <img class="social-media-links__link-img" src="${socialModel.socialIconEmail}" alt="${socialModel.socialAltEmail}" />
+	                            </a>
+	                        </sly>
+	                        <sly data-sly-test="${socialModel.print == 'yes'}">
+	                            <a id="${socialModel.socialIdPrint}" class="social-media-links__link">
+	                                <img class="social-media-links__link-img" src="${socialModel.socialIconPrint}" alt="${socialModel.socialAltPrint}" />
+	                            </a>
+	                        </sly>
+	                        <sly data-sly-test="${socialModel.shareLink == 'yes'}">
+	                            <a id="${socialModel.socialIdShareLink}" class="social-media-links__link">
+	                                <img class="social-media-links__link-img" src="${socialModel.socialIconShareLink}" alt="${socialModel.socialAltShareLink}" />
+	                            </a>
+	                        </sly>
+                            <div class="alert alert-success d-none" role="alert">
+                                Link copied!
+                            </div>
+                        </div>
+                    </article>
+                </sly>
+            </div>
+        </article>
+    </div>
+</div>
+
+<sly data-sly-test.modalCTAPrimary="${properties.loadInModal == 'yes'}">
+</sly>
+
+<sly data-sly-test="${modalCTAPrimary}">
+    <article class="bdb-FACSLyric-request-form app-js__bdb-FACSLyric-request-form bd-custom-scroll">
+        <div class="modal" id="bdb-request-quote-form-modal" tabindex="-1" role="dialog"
+            aria-labelledby="bdb-request-quote-form-modal" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered bdb-request-form-modal__modal-dimensions" role="document">
+                <div class="modal-content bdb-request-form-modal__modal-container">
+                    <div class="bdb-request-form-modal__modal-close p-0">
+                        <button type="button" class="close p-0" data-dismiss="modal" aria-label="Close"
+                            data-role="none">
+                            <img src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/Close-dark.svg"
+                                alt="close" />
+                        </button>
+                    </div>
+                    <div class="modal-header p-0">
+                        <sly data-sly-test="${modalCTAPrimary}">
+                            <h5 class="modal-title bdb-request-form-modal__modal-heading">${eventDetailsModel.formTitle}
+                            </h5>
+                        </sly>
+                        <sly data-sly-test="${modalCTASecondary}">
+                            <h5 class="modal-title bdb-request-form-modal__modal-heading">
+                                ${eventDetailsModel.formTitleSec}</h5>
+                        </sly>
+                    </div>
+                    <div class="modal-body p-0 bdb-request-form-modal__modal-body">
+                        <sly data-sly-test="${modalCTAPrimary}">
+                            <p class="text">${eventDetailsModel.formBodyText @ context='html'}</p>
+                            <script src="${eventDetailsModel.rootURL}/js/forms2/js/forms2.min.js"></script>
+                            <form id="mktoForm_${eventDetailsModel.formID}"></form>
+                        </sly>
+                        <div id="marketoFormRequestQuote_alert" class="alert__message mt-3 hide" role="alert">
+                            <div class="alert__message-iconSuccess">
+                                <img class="icon "
+                                    src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/checkmark.svg"
+                                    alt="alert  icon">
+                            </div>
+                            <div class="alert__message-info">Successfully submitted.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+    <sly data-sly-test="${modalCTAPrimary}">
+        <script>
+            MktoForms2.loadForm('${eventDetailsModel.rootURL @ context='attribute'}', '${eventDetailsModel.munchkinID @ context='attribute'}', ${ eventDetailsModel.formID @context = 'attribute'});
+            window.adobeDataLayer.push({
+                event: 'formView',
+                xdm: {
+                    form: {
+                        formName: document.getElementById(`mktoForm_${eventDetailsModel.formID @context = 'attribute'
+                }`).parentElement.parentElement.querySelector('h5').innerText,
+                        marketoUserToken: ${eventDetailsModel.formID @context = 'attribute'
+                }
+                    }
+                }
+            });
+            MktoForms2.whenReady(function (mktoForm) {
+                if (marketoForms) {
+                    marketoForms.destyleMktoForm(mktoForm);
+                }
+                function handleFormStart() {
+                    window.adobeDataLayer.push({
+                        event: 'formStart',
+                        xdm: {
+                            form: {
+                                formName: document.getElementById(`mktoForm_${eventDetailsModel.formID @context = 'attribute'
+                        }`).parentElement.parentElement.querySelector('h5').innerText,
+                                marketoUserToken: ${eventDetailsModel.formID @context = 'attribute'
+                        }
+                            }
+                        }
+                    });
+                    for(var i = 0; i < controls.length;i++){
+                        controls[i].removeEventListener('blur', handleFormStart);
+                	}
+                }
+                if(mktoForm.getId() == '${eventDetailsModel.formID @ context='attribute'}'){
+                	var controls = document.querySelectorAll(`#mktoForm_${eventDetailsModel.formID @context = 'attribute'} input, #mktoForm_${eventDetailsModel.formID @context = 'attribute'} select, #mktoForm_${eventDetailsModel.formID @context = 'attribute'} textarea`);
+                    for(var i = 0; i < controls.length; i++){
+						controls[i].addEventListener('blur', handleFormStart);
+					}
+                }
+                const submitText = document.querySelector('#mktoForm_${eventDetailsModel.formID @ context='attribute'} .mktoButton').innerText;
+                mktoForm.onSuccess(function (vals, tyURL) {
+                    window.adobeDataLayer.push({
+                        event: 'formSubmit',
+                        xdm: {
+                            form: {
+                                formName: document.getElementById(`mktoForm_${eventDetailsModel.formID @context = 'attribute'
+                }`).parentElement.parentElement.querySelector('h5').innerText,
+                                marketoUserToken: ${eventDetailsModel.formID @context = 'attribute'
+                }
+                            }
+                        }
+                    });
+            window.dataLayer.push({ event: 'request_quote' });
+            document.querySelector('#marketoFormRequestQuote_alert').classList.remove('hide');
+            setTimeout(function () {
+                document.querySelector('#bdb-request-quote-form-modal .modal-content .close').click();
+                const formElement = mktoForm.getFormElem()[0];
+
+                formElement.reset();
+
+                document.querySelector('#mktoForm_${eventDetailsModel.formID @ context='attribute'} .mktoButton').removeAttribute('disabled');
+                document.querySelector('#mktoForm_${eventDetailsModel.formID @ context='attribute'} .mktoButton').innerText = submitText ? submitText : 'Submit';
+
+                document.querySelector('#marketoFormRequestQuote_alert').classList.add('hide');
+            }, 5000);
+            return false;
+                });
+            mktoForm.onValidate(function (isValid) {
+                if (!isValid) {
+                    let errorList = [...document.getElementsByClassName("mktoInvalid")];
+                    let errorField = [];
+                    errorList.forEach(element => {
+                        if (element.getAttribute('name')) {
+                            errorField.push({ value: element.getAttribute('name') });
+                        } else {
+                            errorField.push({ value: 'Terms and Condition' });
+                        }
+                    });
+                    window.adobeDataLayer.push({
+                        event: 'formError',
+                        xdm: {
+                            form: {
+                                formName: document.getElementById(`mktoForm_${eventDetailsModel.formID @context = 'attribute'
+                }`).parentElement.parentElement.querySelector('h5').innerText,
+                                formErrors: errorField,
+                                marketoUserToken: ${eventDetailsModel.formID @context = 'attribute'
+                }
+            }
+                        }
+                    });
+                }
+            });
+            if (marketoForms) {
+                marketoForms.customBdStyles('${eventDetailsModel.formID @ context='attribute'}');
+            }
+            });
+        </script>
+    </sly>
+</sly>
+<sly data-sly-test="${properties.selection=='event'}">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Event",
+      "name": "${properties.bannerTitle || '{}' @context='scriptComment'}",
+      "startDate": "${eventDetailsModel.eventStartDate || '{}' @context='scriptComment'}",
+      "location": [
+      {
+        "@type": "VirtualLocation",
+        "url": "${eventDetailsModel.ctaUrl || '{}' @context='scriptComment'}"
+      }]
+    }
+    </script>
+</sly>
+<sly data-sly-test="${properties.selection=='blog'}">
+    <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "${properties.bannerTitleBlog || '{}' @context='scriptComment'}",
+  "image": "${blogDetailsModel.bannerImageBlog || '{}' @context='scriptComment'}",  
+  "author": {
+    "@type": "Organization",
+    "name": "bdbioscience"
+  },  
+  "publisher": {
+    "@type": "Organization",
+    "name": "bdbioscience",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.bd.com/assets/images/logos/bd-logo-white.png"
+    }
+  },
+  "datePublished": "${blogDetailsModel.blogDate || '{}' @context='scriptComment'}",
+  "name": "${properties.bannerTitleBlog || '{}' @context='scriptComment'}",
+  "inLanguage": "${inheritedPageProperties.language || 'EN' @context='scriptComment'}",
+  "about": "${properties.bannerSubTitle || '{}' @context='scriptComment'}"
+}
+</script>
+</sly>

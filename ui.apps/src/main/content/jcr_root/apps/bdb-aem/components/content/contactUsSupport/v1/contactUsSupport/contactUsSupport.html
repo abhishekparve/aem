@@ -1,0 +1,41 @@
+<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html"
+        data-sly-call="${templates.placeholder @ isEmpty = true}"></sly>
+<sly data-sly-use.contactUs="com.bdb.aem.core.models.ContactUsSupportModel">
+	<div class="container">
+		<div class="technical-contact-us app-js__technical-contact-us ${properties.togglePaddingTop?'pt-2':''}">
+			<div class="technical-contact-us__heading">${contactUs.secTitle}</div>
+			<div class="technical-contact-us__subTitle">${contactUs.subTitle @context='html'}</div>
+			<p class="technical-contact-us__subText">${contactUs.secDesc @context='html'}</p>
+			
+			<sly data-sly-test=${contactUs.supportFields}>
+				<div class="row justify-content-between">
+					<sly data-sly-list.categories = ${contactUs.supportFields}>
+						<div class="col-sm-12">
+							<div class="technical-contact-us__item-title">${categories.categoryTitle @context='html'}</div>
+							<sly data-sly-test=${categories.fields}>
+								<div class="row">
+									<sly data-sly-list.fields = ${categories.fields}>
+										<div class="technical-contact-us__item-cont col-sm-12 col-md-3">
+											<p class="technical-contact-us__item-subtitle">${fields.titleText @context='html'}</p>
+											<p data-sly-test=${fields.subText} class="technical-contact-us__item-text">${fields.subText @context='html'}</p>
+											<div data-sly-test=${fields.address} class="technical-contact-us__item-address bd-rte">
+												${fields.address @context='html'}
+											</div>
+											
+											<div data-sly-test=${fields.description} class="bd-rte">
+												${fields.description @context='html'}
+											</div>
+											
+											<a data-sly-test=${fields.emailLabel} class="technical-contact-us__item-cont__emailLink" tabindex="0" href="${fields.emailUrl}">${fields.emailLabel @context='html'}</a>
+											<a data-sly-test=${fields.courseLabel} class="technical-contact-us__item-link" tabindex="0" href="${fields.courseUrl}">${fields.courseLabel @context='html'}</a>
+										</div>
+									</sly>
+								</div>
+							</sly>
+						</div>
+					</sly>
+				</div>
+			</sly>
+		</div>
+	</div>
+</sly>

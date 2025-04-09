@@ -1,0 +1,9 @@
+<sly data-sly-template.author="${@ teaser}">
+    <div data-sly-use.bdbTeaser="com.bdb.aem.core.models.BDBTeaserModel">
+		<div class="mt-4">
+			<div data-sly-test="${bdbTeaser.pname}" class = "testimonial-name" >${bdbTeaser.pname}</div>
+			<div data-sly-test="${bdbTeaser.department}" class = "testimonial-designation">${bdbTeaser.department}</div>
+			<div data-sly-test="${bdbTeaser.university}" class = "testimonial-institution">${bdbTeaser.university}</div>
+		</div>
+	</div>
+</sly>

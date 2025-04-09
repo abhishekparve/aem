@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Address Card"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+        <items jcr:primaryType="nt:unstructured">
+            <columns
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/container">
+                <items jcr:primaryType="nt:unstructured">
+                    <togglePaddingTop
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/switch"
+                        checked="{Boolean}false"
+                        fieldLabel="Reduce Top Padding"
+                        fieldDescription="Switch between Default Padding (Off) and Reduced Padding (On)"
+                        name="./togglePaddingTop"/>
+                    <togglePaddingBottom
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/switch"
+                        checked="{Boolean}false"
+                        fieldLabel="Reduce Bottom Padding"
+                        fieldDescription="Switch between Default Padding (Off) and Reduced Padding (On)"
+                        name="./togglePaddingBottom"/>                    
+                    <noPaddingOnTop
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                        fieldDescription="Check to display the component without top padding and aligned to top margin"
+                        name="./noPaddingOnTop"
+                        text="No Top Padding"
+                        value="true"/>
+                    <background
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                        fieldLabel="Select Background Color"
+                        name="./bgColor">
+                        <items jcr:primaryType="nt:unstructured">
+                            <white
+                                jcr:primaryType="nt:unstructured"
+                                text="White"
+                                value="bg-white"/>
+                            <grey
+                                jcr:primaryType="nt:unstructured"
+                                text="Grey"
+                                value="bg-grey"/>
+                        </items>
+                    </background>
+                    <sections
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                        composite="{Boolean}true"
+                        fieldLabel="Section">
+                        <field
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/container"
+                            name="./sections">
+                            <items jcr:primaryType="nt:unstructured">
+                                <column
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/container">
+                                    <items jcr:primaryType="nt:unstructured">
+                                        <sectionTitle
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            fieldLabel="Section Title"
+                                            name="./sectionTitle"/>
+                                        <subSections
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                            composite="{Boolean}true"
+                                            fieldLabel="Sub Section">
+                                            <field
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/container"
+                                                name="./subSections">
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <column
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                                                        <items jcr:primaryType="nt:unstructured">
+                                                            <sectionSubtitle
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="Section Subtitle"
+                                                                name="./sectionSubTitle"/>
+                                                            <sectionDescription
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="cq/gui/components/authoring/dialog/richtext"
+                                                                fieldLabel="Section Description"
+                                                                name="./description"
+                                                                useFixedInlineToolbar="{Boolean}true">
+                                                                <rtePlugins
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    sling:resourceSuperType="/apps/bdb-aem/components/authoring/dialog/richtext/rtePlugins"/>
+                                                                <uiSettings
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    sling:resourceSuperType="/apps/bdb-aem/components/authoring/dialog/richtext/uiSettings"/>
+                                                                <granite:data
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    char-limit="250"/>
+                                                            </sectionDescription>
+                                                            <fieldSetLink
+                                                                jcr:primaryType="nt:unstructured"
+                                                                jcr:title="Icon and Link"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                                                                <items jcr:primaryType="nt:unstructured">
+                                                                    <iconPath
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                                        fieldLabel="Select Icon"
+                                                                        name="./iconPath"
+                                                                        rootPath="/content/dam"/>
+                                                                    <iconAltText
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                        fieldLabel="Icon Alt Text"
+                                                                        name="./iconAltText"/>
+                                                                    <linkTitle
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                        fieldLabel="Link Title"
+                                                                        name="./linkTitle"/>
+                                                                    <linkUrl
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                                        fieldLabel="Link URL"
+                                                                        name="./linkUrl"
+                                                                        rootPath="/content/bdb"/>
+                                                                    <eventName
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                        fieldLabel="Event Name"
+                                                                        name="./eventName"/>
+                                                                </items>
+                                                            </fieldSetLink>
+                                                        </items>
+                                                    </column>
+                                                </items>
+                                            </field>
+                                        </subSections>
+                                    </items>
+                                </column>
+                            </items>
+                        </field>
+                    </sections>
+                </items>
+            </columns>
+        </items>
+    </content>
+</jcr:root>

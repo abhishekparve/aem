@@ -1,0 +1,43 @@
+<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html" data-sly-call="${templates.placeholder @ isEmpty = true}"></sly>
+
+
+<sly data-sly-use.disclaimerModel="com.bdb.aem.core.models.DisclaimersModel">
+	<sly data-sly-test="${!disclaimerModel.isDisabled && disclaimerModel.pdpPage == 'true'}">
+		
+			<div class="disclamerSection ${properties.backgroundColor}">
+				<div class="disclaimer-content app-js__disclaimer-content bd-container container">
+					<!--/* Handling Global Disclaimer */-->
+					<sly data-sly-test="${!properties.disableGlobalDisclaimer}">
+						<!--/* Handling Global Disclaimer - If PDP Global Disclaimer Exists */-->
+						<div data-sly-test="${disclaimerModel.pdpGlobalDisclaimerDescription}" class="${disclaimerModel.pdpGlobalDisclaimerFontSize}">${disclaimerModel.pdpGlobalDisclaimerDescription @context='html'}</div>
+						
+						<!--/* Handling Global Disclaimer - If PDP Global Disclaimer Does Not Exists and Global Disclaimer Exists */-->
+						<div data-sly-test="${!disclaimerModel.pdpGlobalDisclaimerDescription && disclaimerModel.globalDisclaimerDescription}" class="${disclaimerModel.globalDisclaimerFontSize}">${disclaimerModel.globalDisclaimerDescription @context='html'}</div>
+					</sly>
+					
+					<!--/* Handling Regional Disclaimer */-->
+					<sly data-sly-test="${!properties.disableRegionalDisclaimer}">
+						<!--/* Handling Regional Disclaimer - If PDP Regional Disclaimer Exists */-->
+						<div data-sly-test="${disclaimerModel.pdpRegionalDisclaimerDescription}" class="${disclaimerModel.pdpRegionalDisclaimerFontSize}">${disclaimerModel.pdpRegionalDisclaimerDescription @context='html'}</div>
+						
+						<!--/* Handling Regional Disclaimer - If PDP Regional Disclaimer Does Not Exists and Regional Disclaimer Exists */-->
+						<div data-sly-test="${!disclaimerModel.pdpRegionalDisclaimerDescription && disclaimerModel.regionalDisclaimerDescription}" class="${disclaimerModel.regionalDisclaimerFontSize}">${disclaimerModel.regionalDisclaimerDescription @context='html'}</div>
+					</sly>
+					
+					<!--/* Handling Tertiary Disclaimer */-->
+					<div data-sly-test="${disclaimerModel.tertiaryDisclaimerDescription}" class="${disclaimerModel.tertiaryDisclaimerFontSize}">${disclaimerModel.tertiaryDisclaimerDescription @context='html'}</div>
+				</div>
+			</div>
+		
+	</sly>
+   
+   <sly data-sly-test="${disclaimerModel.pdpPage == 'false'}">
+      <div data-sly-test="${(disclaimerModel.globalDisclaimerDescription || disclaimerModel.regionalDisclaimerDescription || disclaimerModel.tertiaryDisclaimerDescription) && !disclaimerModel.isDisabled}" class="disclamerSection ${properties.backgroundColor}">
+         <div class="disclaimer-content app-js__disclaimer-content bd-container container">
+            <div data-sly-test="${disclaimerModel.globalDisclaimerDescription && !properties.disableGlobalDisclaimer}" class="${disclaimerModel.globalDisclaimerFontSize}">${disclaimerModel.globalDisclaimerDescription @context='html'}</div>
+            <div data-sly-test="${disclaimerModel.regionalDisclaimerDescription && !properties.disableRegionalDisclaimer}" class="${disclaimerModel.regionalDisclaimerFontSize}">${disclaimerModel.regionalDisclaimerDescription @context='html'}</div>
+            <div data-sly-test="${disclaimerModel.tertiaryDisclaimerDescription}" class="${disclaimerModel.tertiaryDisclaimerFontSize}">${disclaimerModel.tertiaryDisclaimerDescription @context='html'}</div>
+         </div>
+      </div>
+   </sly>
+</sly>

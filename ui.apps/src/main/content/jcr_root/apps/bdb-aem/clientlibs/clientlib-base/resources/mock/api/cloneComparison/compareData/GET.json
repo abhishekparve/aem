@@ -1,0 +1,32 @@
+{
+    "hits": [
+        {
+            "doctype": "clone",
+            "isotype": "Mouse IgG2b",
+            "image": "/content/dam/bdb/products/global/reagents/microscopy-imaging-reagents/immunofluorescence-reagents/612523_base/B28220_612523_IMAGE2.png",
+            "reactivity": "Human",
+            "application": "Western Blot",
+            "_version_": 1704733476138254340,
+            "specificity": "53BP1",
+            "cloneName": "19/53BP1",
+            "id": "clone_19/53BP1_Human",
+            "uniqueIdentifier": "clone_19/53BP1_Human",
+            "otherFormats": ["FITC", "APC", "PE-Cy5", "FITC", "APC", "PE-Cy5"]
+        },
+        {
+            "doctype": "clone",
+            "isotype": "Mouse IgG2b",
+            "image": "/content/dam/bdb/products/global/reagents/microscopy-imaging-reagents/immunofluorescence-reagents/612523_base/B28220_612523_IMAGE2.png",
+            "reactivity": "Human",
+            "application": "Western Blot",
+            "_version_": 1704733476138254340,
+            "specificity": "53BP1",
+            "cloneName": "19/53BP1",
+            "id": "clone_19/53BP1_Human",
+            "uniqueIdentifier": "clone_19/53BP2_Human",
+            "otherFormats": ["FITC", "APC", "PE-Cy5"]
+        }
+    ],
+    "count": 2,
+    "totalCount": 2
+}

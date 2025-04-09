@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="FAC Select Report Articles"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        granite:class="cmp-button__editor"
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/container">
+        <items jcr:primaryType="nt:unstructured">
+            <tabs
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/tabs"
+                maximized="{Boolean}true">
+                <items jcr:primaryType="nt:unstructured">
+                    <antigen
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Antigens"
+                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                        <layout
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                            margin="{Boolean}true"/>
+                        <items jcr:primaryType="nt:unstructured">
+                            <columns
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items jcr:primaryType="nt:unstructured"> 
+                                    <title
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldLabel="Title"
+                                        name="./antigens/title"/>
+                                    <description
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
+                                        fieldLabel="Description"
+                                        name="./antigens/description"/>
+                                    <imagepath
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                        fieldLabel="Image Path"
+                                        name="./antigens/imagePath"/>
+                                    <imagealttext
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldLabel="Image Alternative Text"
+                                        name="./antigens/imageAltText"/>
+                                    <imageLinkUrl
+					                    jcr:primaryType="nt:unstructured"
+					                    sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+					                    fieldDescription="Image Link URL"
+			                            fieldLabel="Image Link URL"
+				                        name="./antigens/imageLinkUrl"
+				                        rootPath="/content"/>
+				                    <openNewImageLinkTab
+										jcr:primaryType="nt:unstructured"
+										sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+										fieldDescription="Check to open link in New Tab. By default, link opens in same tab."
+										name="./antigens/openNewImageLinkTab"
+										text="Open Link in New Tab"
+										uncheckedValue="{Boolean}false"
+										value="{Boolean}true"/>                                        
+                                    <plusiconpath
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                        fieldLabel="Plus icon path"
+                                        name="./antigens/plusIconPath"/>
+                                    <minusiconpath
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                        fieldLabel="Minus icon path"
+                                        name="./antigens/imagePath"/>
+                                    <plusiconalt
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldLabel="Plus Icon Alternative Text"
+                                        name="./antigens/plusIconAlt"/>
+                                    <minusiconalt
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldLabel="Minus Icon Alternative Text"
+                                        name="./antigens/minusIconAlt"/>
+                                    <targetmolecules
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                        composite="{Boolean}true"
+                                        fieldLabel="Target Molecules">
+                                        <field
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/container"
+                                            name="./antigens/targetMolecules">
+                                            <items jcr:primaryType="nt:unstructured">
+                                                <dropdown
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                    fieldLabel="Options"
+                                                    name="./targetMoleculeOption">
+                                                    <items jcr:primaryType="nt:unstructured">
+                                                        <option1
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="Human"
+                                                            value="Human"/>
+                                                        <option2
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="Mouse"
+                                                            value="Mouse"/>
+                                                    </items>
+                                                </dropdown>
+                                            </items>
+                                        </field>
+                                    </targetmolecules>
+                                    <sortitems
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                        composite="{Boolean}true"
+                                        fieldLabel="Sort List">
+                                        <field
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/container"
+                                            name="./antigens/sortItems">
+                                            <items jcr:primaryType="nt:unstructured">
+                                                <dropdown
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                    fieldLabel="Options"
+                                                    name="./value">
+                                                    <items jcr:primaryType="nt:unstructured">
+                                                        <option1
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="Ascending"
+                                                            value="asc"/>
+                                                        <option2
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="Descending"
+                                                            value="desc"/>
+                                                    </items>
+                                                </dropdown>
+                                                <displaytext
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldLabel="Display Text"
+                                                    name="./text"/>
+                                            </items>
+                                        </field>
+                                    </sortitems>
+                                    <noresultstitle
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldLabel="No Results Title"
+                                        name="./antigens/noResultsTitle"/>
+                                    <noresultsicon
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldLabel="No Results Icon"
+                                        name="./antigens/noResultsIcon"/>
+                                    <noresulltsiconalt
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldLabel="No Results Icon Alternative Text"
+                                        name="./antigens/noResultsIconAlt"/>
+                                    <searchpageurl
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                        fieldLabel="Search Page URL"
+                                        name="./antigens/searchPageUrl"/>
+                                    <linktocatalogtext
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldLabel="Link to catalog text"
+                                        name="./antigens/linkToCatalogText"/>
+                                    <labels
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Labels"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <selecttargetmoleculelabel
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Target Molecule Label"
+                                                name="./antigens/targetMoleculeLabel"/>
+                                            <choosereactivitylabel
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Choose Reactivity Label"
+                                                name="./antigens/chooseReactivityLabel"/>
+                                            <sortbylabel
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Sort By Label"
+                                                name="./antigens/sortByLabel"/>
+                                            <filterkeywordslabel
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Filter Keywords Label"
+                                                name="./antigens/filterKeywordsLabel"/>
+                                            <filterkeywordsmessagelabel
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Filter Keywords Message Label"
+                                                name="./antigens/filterKeywordsMessageLabel"/>
+                                            <searchplaceholderlabel
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Search Placeholder Label"
+                                                name="./antigens/searchPlaceholderLabel"/>
+                                            <antigennamelabel
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Antigen Name Label"
+                                                name="./antigens/antigenNameLabel"/>
+                                            <genenamelabel
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Gene Name Label"
+                                                name="./antigens/geneNameLabel"/>
+                                            <distributionlabel
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Distribution Label"
+                                                name="./antigens/distributionLabel"/>
+                                            <formatslabel
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Formats Label"
+                                                name="./antigens/formatsLabel"/>
+                                            <viewcloneslabel
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="View Clones Label"
+                                                name="./antigens/viewClonesLabel"/>
+                                            <aliaslabel
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Alias Label"
+                                                name="./antigens/aliasLabel"/>
+                                            <availableformatslabel
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Available Formats Label"
+                                                name="./antigens/availableFormatsLabel"/>
+                                            <descriptionlabel
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Description Label"
+                                                name="./antigens/descriptionLabel"/>
+                                            <mwlabel
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="mW Label"
+                                                name="./antigens/mwLabel"/>
+                                            <functionlabel
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Function Label"
+                                                name="./antigens/functionLabel"/>
+                                            <linkcataloglabel
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Link Catalog Label"
+                                                name="./antigens/linkCatalogLabel"/>
+                                            <featurepanellabel
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Feature Panel Label"
+                                                name="./antigens/featurePanelLabel"/>
+                                            <publicationlabel
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Publication Label"
+                                                name="./antigens/publicationLabel"/>
+											<entrezgeneIdLabel
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Entrezgene ID Label"
+                                                name="./antigens/entrezgeneIdLabel"/>
+                                            <loadmorectalabel
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Load More CTA Label"
+                                                name="./antigens/loadMoreCtaLabel"/>
+                                        </items>
+                                    </labels>
+                                </items>
+                            </columns>
+                        </items>
+                    </antigen>
+                    <clones
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Clones"
+                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                        <layout
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                            margin="{Boolean}true"/>
+                        <items jcr:primaryType="nt:unstructured">
+                            <columns
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <title
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldLabel="Title"
+                                        name="./clones/title"/>
+									<backToSelectionIcon
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                        fieldLabel="Back to Selection Icon"
+                                        name="./clones/backToSelectionIcon"/>
+									<backToSelectionIconAlt
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldLabel="Back to Selection Icon - Alt Text"
+                                        name="./clones/backToSelectionIconAlt"/>
+                                    <labels
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Labels"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <targetlabel
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Target Label"
+                                                name="./clones/targetLabel"/>
+                                            <moleculelabel
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Molecule Label"
+                                                name="./clones/moleculeLabel"/>
+                                            <noofcloneslabel
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="No of Clones Label"
+                                                name="./clones/noOfClonesLabel"/>
+                                            <clonenamelabel
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Clone Name Label"
+                                                name="./clones/cloneNameLabel"/>
+                                            <aliaseslabel
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Aliases Label"
+                                                name="./clones/aliasesLabel"/>
+                                            <reactivitylabel
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Reactivity Label"
+                                                name="./clones/reactivityLabel"/>
+											<formatLabel
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Format Label"
+                                                name="./clones/formatLabel"/>
+                                            <applicationlabel
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Applications Label"
+                                                name="./clones/applicationsLabel"/>
+                                            <fixationlabel
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Fixation Label"
+                                                name="./clones/fixationLabel"/>
+                                            <isotypelabel
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Isotype Label"
+                                                name="./clones/isotypeLabel"/>
+                                            <regulatorystatuslabel
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Regulatory Status Label"
+                                                name="./clones/regulatoryStatusLabel"/>
+                                            <hldalabel
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="HLDA Workshop Label"
+                                                name="./clones/hldaLabel"/>
+                                            <referenceslabel
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="References Label"
+                                                name="./clones/referencesLabel"/>
+                                            <availableformatslabel
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Available Formats Label"
+                                                name="./clones/availableFormatsLabel"/>
+                                            <viewproductslabel
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="View Products Label"
+                                                name="./clones/viewProductsLabel"/>
+                                            <editlabel
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Edit Label"
+                                                name="./clones/editLabel"/>
+                                        </items>
+                                    </labels>
+                                </items>
+                            </columns>
+                        </items>
+                    </clones>
+                </items>
+            </tabs>
+        </items>
+    </content>
+</jcr:root>

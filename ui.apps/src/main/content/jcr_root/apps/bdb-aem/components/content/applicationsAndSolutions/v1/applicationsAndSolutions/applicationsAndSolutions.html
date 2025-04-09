@@ -1,0 +1,188 @@
+<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html"
+     data-sly-call="${templates.placeholder @ isEmpty = true}"></sly>
+<sly data-sly-use.appsAndSolModel="com.bdb.aem.core.models.ApplicationsAndSolutionsModel"></sly>
+<article class="applications-and-solutions app-js__applications-and-solutions ${appsAndSolModel.backgroundColor}" id="${appsAndSolModel.articleId}">
+        <div class="bd-container container">
+            <div class="applications-and-solutions__wrapper ${properties.togglePaddingTop?'pt-2':''} ${properties.togglePaddingBottom?'pb-2':''}">
+                <div class="d-flex flex-column">
+                    <div class="applications-and-solutions__text d-flex flex-column flex-lg-row justify-content-start justify-content-lg-between">
+                        <div class="sitecontent w-100">
+                        <div class="d-flex justify-content-between">
+                            <p data-sly-test="${appsAndSolModel.sectionTitle}" class="sitecontent__section-heading">${appsAndSolModel.sectionTitle}</p>
+                             <div class="applications-and-solutions__arrows d-flex align-items-center align-self-start align-self-lg-end pt-4 pt-lg-0">
+	                            <button class="applications-and-solutions__arrow-left disable" aria-label="button"></button>
+	                            <button class="applications-and-solutions__arrow-left-grey " aria-label="button"></button>
+	                            <span class="applications-and-solutions__number"></span>
+	                            <button class="applications-and-solutions__arrow-right-grey disable" aria-label="button"></button>
+	                            <button class="applications-and-solutions__arrow-right enable" aria-label="button"></button>
+                        	</div>
+                        </div>
+							<h3 data-sly-test="${appsAndSolModel.title}" class="sitecontent__title">${appsAndSolModel.title @context='html'}</h3>
+							<p data-sly-test="${appsAndSolModel.subTitle}" class="sitecontent__sub-title">${appsAndSolModel.subTitle @context='html'}</p>
+						</div>
+                    </div>
+                </div>
+                <div class="applications-and-solutions__carousel bd-carousel ${appsAndSolModel.contentBackgroundColor}">
+					
+					<sly data-sly-list.slide="${appsAndSolModel.slides}">
+						<div class="applications-and-solutions__carousel-container ">
+							<div class="applications-and-solutions__carousel-container-head">
+								<div data-sly-test="${slide.contentTitle}" class="applications-and-solutions__carousel-container-head_title">
+									${slide.contentTitle @context='html'}
+								</div>
+								<span data-sly-test="${slide.contentDescription}" class="applications-and-solutions__carousel-container-head_rteText bd-rte">
+									${slide.contentDescription @context='html'}
+								</span>
+							</div>
+
+
+							<sly data-sly-test.selection="${slide.selection == 'singleImage'}">
+								<div class="d-flex row applications-and-solutions__image-container justify-content-center mw-100 mx-auto">
+									
+									<sly data-sly-test="${slide.modalImgFlag =='true' && slide.singleEnlargedImagePath && slide.singleImagePath}">
+										<div class="applications-and-solutions__image-container_images col-12 col-lg-12 px-0 single-image app-and-sol-img-container bd-rte" data-title="${slide.singleImageTitle}" data-desc="${slide.singleImageDescription}" data-src="${slide.singleEnlargedImagePath}" data-alt="${slide.singleAltText}" data-size="${slide.singleImageEnlargeSize}" data-toggle="modal" data-target="#dynamicModal-${resource.parent.name}-${resource.name}">
+											<div class="d-flex align-items-center justify-content-center position-relative ${slide.singleBorderEnable == 'false' ? '' : 'applications-and-solutions__image-container_images-border'}">
+												<picture>
+													<source media="(max-width: 900px)" srcset="${slide.singleImagePath}"
+															onload="window.aos && window.aos.refresh()">
+													<img class="mx-auto" src="${slide.singleImagePath}" alt="${slide.singleAltText}"
+														onload="window.aos && window.aos.refresh()"
+														onerror='this.onerror=null;this.src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/images/product-default.png";'>
+												</picture>
+											</div>
+											<!-- Trigger the modal and overlay -->
+											<div class="applications-and-solutions__image-container_overlay">
+												<div class=" applications-and-solutions__image-container_icon">
+													<div class="d-flex align-items-center justify-content-center position-relative ">
+														
+														<sly data-sly-test="${appsAndSolModel.magnifiyGlassColor == 'dark-blue'}">
+														<picture>
+															<source media="(max-width: 900px)" srcset=/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/search-icon-M.svg
+																	onload="window.aos && window.aos.refresh()">
+															<img src=/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/Search-icon-new.svg alt="${slide.singleAltText}"
+																onload="window.aos && window.aos.refresh()"
+																onerror='this.onerror=null;this.src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/images/product-default.png";'>
+														</picture>
+														</sly>
+														
+														<sly data-sly-test="${appsAndSolModel.magnifiyGlassColor == 'white'}">
+														<picture>
+															<source media="(max-width: 900px)" srcset=/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/icon_zoom_white.svg
+																	onload="window.aos && window.aos.refresh()">
+															<img src=/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/icon_zoom_white.svg alt="${slide.singleAltText}"
+																onload="window.aos && window.aos.refresh()"
+																onerror='this.onerror=null;this.src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/images/product-default.png";'>
+														</picture>
+														</sly>
+														
+													</div>
+												</div>
+											</div>
+										</div>
+									</sly>
+
+									<sly data-sly-test="${(slide.modalImgFlag =='false' || !slide.singleEnlargedImagePath) && slide.singleImagePath}">
+										<div class="applications-and-solutions__image-container_images col-12 col-lg-12 px-0 single-image bd-rte" data-title="${slide.singleImageTitle}" data-desc="${slide.singleImageDescription}" data-src="${slide.singleEnlargedImagePath}" data-alt="${slide.singleAltText}" data-size="${slide.singleImageEnlargeSize}">
+											<div class="d-flex align-items-center justify-content-center position-relative ${slide.singleBorderEnable == 'false' ? '' : 'applications-and-solutions__image-container_images-border'}">
+												<picture>
+													<source media="(max-width: 900px)" srcset="${slide.singleImagePath}"
+															onload="window.aos && window.aos.refresh()">
+													<img class="mx-auto" src="${slide.singleImagePath}" alt="${slide.singleAltText}"
+														 onload="window.aos && window.aos.refresh()"
+														 onerror='this.onerror=null;this.src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/images/product-default.png";'>
+												</picture>
+											</div>
+											<!-- No modal and No overlay -->
+										</div>
+									</sly>
+									
+									<div data-sly-test="${slide.imageCaption}" class="applications-and-solutions__image-container_images_caption">
+										${slide.imageCaption @context='html'}
+									</div>
+								</div>
+							</sly>
+
+
+							<sly data-sly-test.selection="${slide.selection == 'multipleImages'}">
+								<div class="d-flex row applications-and-solutions__image-container">
+									
+									<sly data-sly-list.images="${slide.images}">
+										<div class="applications-and-solutions__image-wrapper d-flex flex-column justify-content-center align-items-center">
+											
+											<sly data-sly-test="${slide.modalImgFlag =='true' && images.enlargedImagePath && images.thumbImagePath}">
+												<div class="applications-and-solutions__image-container_images col-6 col-lg-3 px-0 sec mx-0 app-and-sol-img-container bd-rte" data-title="${images.imageTitle}" data-desc="${images.imageDescription}" data-src="${images.enlargedImagePath}" data-toggle="modal" data-alt="${images.altImage}" data-size="${images.enlargeSize}" data-target="#dynamicModal-${resource.parent.name}-${resource.name}">
+													<div class="d-flex align-items-center justify-content-center position-relative  ${images.borderEnableMultiple == 'false' ? '' : 'applications-and-solutions__image-container_images-border'}">
+														<picture>
+															<source media="(max-width: 900px)" srcset=${images.thumbImagePath}  onload="window.aos && window.aos.refresh()">
+															<img  src=${images.thumbImagePath}
+																alt="${images.altImage}" onload="window.aos && window.aos.refresh()"
+																onerror='this.onerror=null;this.src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/images/product-default.png";'>
+														</picture>
+													</div>
+													<!-- Trigger the modal and overlay -->
+													<div class="applications-and-solutions__image-container_overlay">
+														<div class="applications-and-solutions__image-container_icon">
+															<img class="" src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/Search-icon.svg" alt="" />
+														</div>
+													</div>
+												</div>
+											</sly>
+											
+											<sly data-sly-test="${(slide.modalImgFlag =='false' || !images.enlargedImagePath) && images.thumbImagePath}">
+												<div class="applications-and-solutions__image-container_images col-6 col-lg-3 px-0 sec mx-0 bd-rte" data-title="${images.imageTitle}" data-desc="${images.imageDescription}" data-src="${images.enlargedImagePath}" data-alt="${images.altImage}" data-size="${images.enlargeSize}">
+													<div class="d-flex align-items-center justify-content-center position-relative  ${images.borderEnableMultiple == 'false' ? '' : 'applications-and-solutions__image-container_images-border'}">
+														<picture>
+															<source media="(max-width: 900px)" srcset=${images.thumbImagePath}  onload="window.aos && window.aos.refresh()">
+															<img  src=${images.thumbImagePath}
+																alt="${images.altImage}" onload="window.aos && window.aos.refresh()"
+																onerror='this.onerror=null;this.src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/images/product-default.png";'>
+														</picture>
+													</div>
+													<!-- No modal and No overlay -->
+												</div>
+											</sly>
+										</div>
+									</sly>
+								</div>
+							</sly>
+
+
+							<div data-sly-test="${slide.instructionText || slide.ctaLabel}" class="applications-and-solutions__instructions-container">
+								<div data-sly-test="${slide.instructionText}" class="applications-and-solutions__instructions-container_instructions bd-rte">
+									${slide.instructionText @context='html'}
+								</div>
+								<div data-sly-test="${slide.ctaLabel}" class="applications-and-solutions__instructions-container_cta">
+									<a href="${slide.ctaUrl}" target="">${slide.ctaLabel @context='html'}</a>
+								</div>
+							</div>
+						</div>
+					</sly>
+
+				</div>
+                <article class="dynamic-modal app-js__dynamic-modal">
+                    <div class="modal" id="dynamicModal-${resource.parent.name}-${resource.name}" tabindex="-1" role="dialog" aria-labelledby="dynamicModal-${resource.parent.name}-${resource.name}" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <img src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/modalClose.svg" alt="close" />
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="dynamic-modal__image-container">
+                                        <img src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/blankimage.png" title="" alt="">
+                                    </div>
+                                    <div class="dynamic-modal__text-container">
+                                        <div class="dynamic-modal__text-container_title bd-rte">
+                                        </div>
+                                        <div class="dynamic-modal__text-container_description bd-rte">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+			</div>
+        </div>
+</article>

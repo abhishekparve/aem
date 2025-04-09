@@ -1,0 +1,86 @@
+<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html"
+     data-sly-call="${templates.placeholder @ isEmpty = true}"></sly>
+<sly data-sly-use.time="com.bdb.aem.core.models.TimerModel"></sly>
+<sly data-sly-use.testimonial="com.bdb.aem.core.models.PdpTestimonialLookUpModel"/>
+<div data-sly-test="${testimonial.imagePath}">
+    <article class="testimonial">
+        <h2 class="testimonial_heading">${testimonial.testimonial}</h2>
+        <div class="container d-none d-sm-flex justify-content-between testimonial__navigators">
+            <div class="testimonial__navigators-prev ml-3">
+                <img src="/resources/icons/slide-prev.svg" class="bdb-testimonial-prev" alt="prev"
+                     tabindex="0">
+            </div>
+            <div class="testimonial__navigators-next mr-3">
+                <img src="/resources/icons/slide-next.svg" class="bdb-testimonial-next" alt="next"
+                     tabindex="0">
+            </div>
+        </div>
+        <div class="app-js__testimonial container px-0">
+            <div class="testimonial__banner" data-color="${testimonial.fontColor}" data-font-weight="${testimonial.fontStyle}" data-font-style="${testimonial.fontStyle}"
+                 data-background-color="${testimonial.bgColor}">
+                <div class="testimonial__banner-text-wrapper row">
+                    <div class="testimonial__banner-text px-0 d-sm-none col-sm-7">
+                        <div class="col-12 testimonial__banner-text-desc bd-rte ">
+                            ${testimonial.description @context='html'}
+                        </div>
+                    </div>
+                    <div class="testimonial__banner-img offset-sm-1 col-5 col-sm-3"
+                         data-target="#bannerVideo-0">
+                        <picture class=" ${testimonial.videoEnabled? 'custom-picture':''} ">
+                            <source media="(max-width: 900px)" srcset="${testimonial.imagePath}"
+                                    onload="window.aos && window.aos.refresh()">
+                            <img src="${testimonial.imagePath}" alt="${testimonial.imageAlt}"
+                                 onload="window.aos && window.aos.refresh()"
+                                 onerror='this.onerror=null;this.src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/images/product-default.png";'>
+                            <sly data-sly-test="${testimonial.videoEnabled}" >
+                                <img class="play-button" src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/playButton.svg" data-toggle="modal">
+                            </sly>
+                        </picture>
+                        <div class="modal fade testimonial__banner-img-modal" id="bannerVideo-0" tabindex="-1"
+                             role="dialog" aria-labelledby="bannerVideoTitle" aria-hidden="true"
+                             data-backdrop="static">
+                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close testimonial__banner-modal-close"
+                                                data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body testimonial__banner-img-modal-body is-video"
+                                         data-accountId="1752604059001" data-playerId="B1xXFuBodW"
+                                         data-videoId="${testimonial.brightcoveVideoId}">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial__banner-text col-7 px-0 col-sm-9">
+                        <div class="col-12 d-none d-sm-flex flex-column testimonial__banner-text-desc bd-rte">
+                            ${testimonial.description @context='html'}
+                        </div>
+                        <div class="col-12 testimonial__banner-text-info">
+                            <div class="testimonial__banner-text-name">${testimonial.name}</div>
+                            <div class="testimonial__banner-text-designation">${testimonial.department}</div>
+                            <div class="testimonial__banner-text-inst">${testimonial.university}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div
+                class="container d-flex justify-content-between align-items-center testimonial__navigators-mobile">
+            <div class="testimonial__navigators-mobile-prev ml-3 d-sm-none">
+                <img src="/resources/images/prev-arrow-m.png" class="bdb-testimonial-prev" alt="prev"
+                     tabindex="0">
+            </div>
+            <div class="testimonial-slick-m-dots mx-2">
+            </div>
+            <div class="testimonial__navigators-mobile-next mr-3 d-sm-none">
+                <img src="/resources/images/next-arrow-m.png" class="bdb-testimonial-next" alt="next"
+                     tabindex="0">
+            </div>
+        </div>
+    </article>
+</div>
+<p data-sly-test="${inheritedPageProperties.enableTimer}"> PDPTestimonial:${time.endTime}</p>

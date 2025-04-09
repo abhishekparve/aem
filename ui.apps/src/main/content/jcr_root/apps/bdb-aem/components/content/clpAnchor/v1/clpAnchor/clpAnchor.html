@@ -1,0 +1,36 @@
+<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html"
+     data-sly-call="${templates.placeholder @ isEmpty = true}"></sly>
+<sly data-sly-use.clpAnchorModel="com.bdb.aem.core.models.AnchorModel"></sly>
+
+<div class="clp-page__search-anchor ${properties.backgroundColor} ${properties.togglePaddingTop?'pt-2':''} ${properties.togglePaddingBottom?'pb-2':''}">
+    <div data-sly-test="${clpAnchorModel.categorySelect=='anchor'}" class="clp-anchor app-js__clp-anchor container">
+        <div class="dropdown clp-anchor__dropdown bd-custom-scroll">
+            <div class="clp-anchor__cta" id="clpAnchorComponent" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-bs-display="static" data-flip="false">
+                ${clpAnchorModel.title @context='html'}
+            </div>
+            <div class="dropdown-menu" aria-labelledby="clpAnchorComponent">
+                <sly data-sly-list.anchorList="${clpAnchorModel.anchorList}">
+                    <sly data-sly-test = "${anchorList['sectionTitle']}">
+                        <a class="dropdown-item" id="clpAnchorComponentItem" data-items="${anchorList['sectionTitle'] @context='html'} ${anchorList['anchorIdDescription'] @context='html'}" href="#${anchorList['anchorResourceLink']}" data-index=${keyList.index}>
+                            <b>${anchorList['sectionTitle'] @context='html'}</b>${anchorList['anchorIdDescription'] @context='html'}
+                        </a>
+                    </sly>
+                </sly>
+            </div>
+        </div>
+    </div>
+    <div data-sly-test="${clpAnchorModel.categorySelect=='search'}"  class="clp-search app-js__clp-search container">
+        <form class="row" action="${clpAnchorModel.searchPagePath}" method="GET">
+            <div class="form-field col-lg-6">
+                <div class="clp-search__btn-container d-flex">
+                    <img src="/../../../etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/search-gray.svg" alt="Search"
+                        class="search-icon" />
+                </div>
+                <input aria-label="Search for Flow Cytometry Reagents" id="clpSearchInput" name="clpSearchInput" class="form-control" type="text" autocomplete="off" placeholder="Search for Flow Cytometry Reagents" value="">
+                <div class="clp-search__close-btn d-flex">
+                    <img src="/../../../etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/Close-dark.svg" alt="close" class="close-icon" />
+               </div>
+            </div>
+        </form>
+    </div>
+</div>

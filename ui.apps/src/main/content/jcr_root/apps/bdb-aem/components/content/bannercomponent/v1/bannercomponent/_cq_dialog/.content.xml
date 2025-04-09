@@ -1,0 +1,500 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Banner Component"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+        <items jcr:primaryType="nt:unstructured">
+            <column
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/container">
+                <items jcr:primaryType="nt:unstructured">
+                	<togglePaddingTop
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/switch"
+                        checked="{Boolean}false"
+                        fieldLabel="Reduce Top Padding"
+                        fieldDescription="Switch between Default Padding (Off) and Reduced Padding (On)"
+                        name="./togglePaddingTop"/>
+                    <selection
+                    	granite:class="cq-dialog-dropdown-showhide"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                        fieldLabel="Select the variation of banner needed"
+                        name="./selection"
+                        required="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <generic
+                                jcr:primaryType="nt:unstructured"
+                                text="Generic Variation"
+                                value="generic"/>
+                            <clp
+                                jcr:primaryType="nt:unstructured"
+                                text="CLP Variation"
+                                value="clp"/>
+                            <promolist
+                                jcr:primaryType="nt:unstructured"
+                                text="Promo List Variation"
+                                value="promolist"/>
+                        </items>
+                        <granite:data
+                            jcr:primaryType="nt:unstructured"
+                            cq-dialog-dropdown-showhide-target=".showhidetargets"/>
+                    </selection>
+                    <fontSize
+                    	jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                        fieldLabel="Select banner title font size"
+                        name="./fontSize">
+                        <items jcr:primaryType="nt:unstructured">
+                            <h0
+                                jcr:primaryType="nt:unstructured"
+                                text="H0"
+                                value="h0"/>
+                            <h1
+                                jcr:primaryType="nt:unstructured"
+                                text="H1"
+                                value="h1"/>
+                        </items>
+                    </fontSize>
+                    <genericTitle
+                    	jcr:primaryType="nt:unstructured"
+                    	granite:class="showhidetargets"
+                    	sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                    	<items jcr:primaryType="nt:unstructured">
+							<title
+		                        jcr:primaryType="nt:unstructured"
+		                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+		                        fieldDescription="Title for Generic Variation(Optional)"
+		                        fieldLabel="Generic Title"
+		                        maxlength = "150"
+		                        name="./bannerTitleGen"/>
+	                        <heading
+					            jcr:primaryType="nt:unstructured"
+					            sling:resourceType="granite/ui/components/coral/foundation/text"
+					            text="Character count for generic title is 150"/>
+						</items>
+						<granite:data
+	                            jcr:primaryType="nt:unstructured"
+	                            showhidetargetvalue="generic"/>
+                    </genericTitle>
+                    <clpTitle
+                    	jcr:primaryType="nt:unstructured"
+                    	granite:class="showhidetargets"
+                    	sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                    	<items jcr:primaryType="nt:unstructured">
+							<title
+		                        jcr:primaryType="nt:unstructured"
+		                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+		                        fieldDescription="Title for CLP Variation(Optional)"
+		                        fieldLabel="CLP Title"
+		                        maxlength = "140"
+		                        name="./bannerTitleClp"/>
+	                        <heading
+					            jcr:primaryType="nt:unstructured"
+					            sling:resourceType="granite/ui/components/coral/foundation/text"
+					            text="Character count for clp title is 140"/>
+						</items>
+						<granite:data
+	                            jcr:primaryType="nt:unstructured"
+	                            showhidetargetvalue="clp"/>
+                    </clpTitle>
+                    <promolistTitle
+                    	jcr:primaryType="nt:unstructured"
+                    	granite:class="showhidetargets"
+                    	sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                    	<items jcr:primaryType="nt:unstructured">
+							<title
+		                        jcr:primaryType="nt:unstructured"
+		                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+		                        fieldDescription="Title for PromoList Variation(Optional)"
+		                        fieldLabel="Promo Title"
+		                        maxlength = "40"
+		                        name="./bannerTitlePromo"/>
+	                        <heading
+					            jcr:primaryType="nt:unstructured"
+					            sling:resourceType="granite/ui/components/coral/foundation/text"
+					            text="Character count for promolist title is 40"/>
+						</items>
+						<granite:data
+	                            jcr:primaryType="nt:unstructured"
+	                            showhidetargetvalue="promolist"/>
+                    </promolistTitle>
+                    <description
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="cq/gui/components/authoring/dialog/richtext"
+						fieldDescription="Description (Optional)"
+                        fieldLabel="Description"
+                        name="./description"
+                        useFixedInlineToolbar="{Boolean}true">
+                        <rtePlugins
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceSuperType="/apps/bdb-aem/components/authoring/dialog/richtext/rtePlugins"/>
+                        <uiSettings
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceSuperType="/apps/bdb-aem/components/authoring/dialog/richtext/uiSettings"/>
+                        <granite:data
+                            jcr:primaryType="nt:unstructured"
+                            char-limit="295"/>
+                    </description>
+                    <info
+			            jcr:primaryType="nt:unstructured"
+			            sling:resourceType="granite/ui/components/coral/foundation/text"
+			            text="*Character count for promolist description is 55"/>
+			        <blankfield
+			            jcr:primaryType="nt:unstructured"
+			            sling:resourceType="granite/ui/components/coral/foundation/heading"/>
+					<align
+						jcr:primaryType="nt:unstructured"
+						sling:resourceType="granite/ui/components/coral/foundation/form/select"
+						fieldLabel="Text and CTA Alignment"
+						name="./ctaAlign"
+						required="{Boolean}true">
+						<items jcr:primaryType="nt:unstructured">
+							<def
+								jcr:primaryType="nt:unstructured"
+								text="Select Alignment"
+								value=""/>
+							<left
+								jcr:primaryType="nt:unstructured"
+								text="Left aligned"
+								value="left"/>
+							<right
+								jcr:primaryType="nt:unstructured"
+								text="Right aligned"
+								value="right"/>
+							<center
+								jcr:primaryType="nt:unstructured"
+								text="Center aligned"
+								value="center"/>
+						</items>
+					</align>
+                    <fieldSetImage
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Background Image Details"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                        <items jcr:primaryType="nt:unstructured">
+                            <imagePath
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                fieldDescription="Image URL"
+                                fieldLabel="Image URL"
+                                name="./imagePath"
+                                required="{Boolean}true"
+                                rootPath="/content/dam"/>
+                            <imagePathMobile
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                fieldDescription="Mobile Image URL"
+                                fieldLabel="Mobile Image URL"
+                                name="./imagePathMobile"
+                                required="{Boolean}true"
+                                rootPath="/content/dam"/>
+                            <altText
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldDescription="Alt Text"
+                                fieldLabel="Alt Text"
+                                name="./altImage"/>
+                        </items>
+                    </fieldSetImage>
+                    <backgroundPositionStyle
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                        fieldLabel="Background Image Position"
+                        fieldDescription="For Responsive Views of the Image, select from the 3 options"
+                        name="./backgroundPositionStyle"
+                        required="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                        <default
+                            jcr:primaryType="nt:unstructured"
+                            text="Default"
+                            value="object-position-default"/>
+                        <left
+                            jcr:primaryType="nt:unstructured"
+                            text="Left"
+                            value="object-position-left"/>
+                        <right
+                            jcr:primaryType="nt:unstructured"
+                            text="Right"
+                            value="object-position-right"/>
+                        </items>
+                    </backgroundPositionStyle>
+                    <fieldSetStyling
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Styling Details"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                        <items jcr:primaryType="nt:unstructured">
+                            <background
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/switch"
+								checked="{Boolean}false"
+                                fieldLabel="Enable Dark Mode"
+                                name="./darkMode"/>
+                            <fontColor
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                fieldLabel="Banner Font Color variation"
+                                name="./fontColorVariation">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <white
+                                        jcr:primaryType="nt:unstructured"
+                                        text="White"
+                                        value="#fff"/>
+                                    <black
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Black"
+                                        value="#424242"/>
+                                </items>
+                            </fontColor>
+                            <fieldSetCTA
+		                        jcr:primaryType="nt:unstructured"
+		                        jcr:title="Primary CTA Details"
+		                        sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+		                        <items jcr:primaryType="nt:unstructured">
+		                            <label
+		                                jcr:primaryType="nt:unstructured"
+		                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+		                                fieldDescription="Label for CTA"
+		                                fieldLabel="Button Label"
+		                                name="./labelcta"/>
+		                            <ctaUrl
+		                                jcr:primaryType="nt:unstructured"
+		                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+		                                fieldDescription="URL for CTA"
+		                                fieldLabel="Button URL"
+		                                name="./ctaUrl"
+		                                rootPath="/content"/>
+		                            <ctaVariation
+		                                jcr:primaryType="nt:unstructured"
+		                                sling:resourceType="granite/ui/components/coral/foundation/form/select"
+		                                fieldLabel="Select CTA variation"
+		                                name="./ctaVariation">
+		                                <items jcr:primaryType="nt:unstructured">
+		                                    <white
+		                                        jcr:primaryType="nt:unstructured"
+		                                        text="White text on blue"
+		                                        value="\{&quot;ctaTxtColor&quot;:&quot;#fff&quot;, &quot;ctaBgColor&quot;:&quot;#004593&quot;}"/>
+		                                    <blue
+		                                        jcr:primaryType="nt:unstructured"
+		                                        text="Blue text on white "
+		                                        value="\{&quot;ctaTxtColor&quot;:&quot;#004593&quot;, &quot;ctaBgColor&quot;:&quot;#fff&quot;}"/>
+		                                </items>
+		                            </ctaVariation>
+		                           <loadInModalPrimary
+		                                granite:class="cq-dialog-checkbox-showhide"
+										jcr:primaryType="nt:unstructured"
+										sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+										name="./loadInModalPrimary"
+										text="Load Request Quote Form In Modal For Primary CTA"
+										fieldDescription="If this is selected Register Now will open in Modal"
+										uncheckedValue="{Boolean}false" 
+										value="yes">
+										<granite:data 
+											jcr:primaryType="nt:unstructured"
+											cq-dialog-checkbox-showhide-target=".togglefieldPrimary" />
+									</loadInModalPrimary>
+		                          	 <primaryFormFields
+		                                    granite:class="togglefieldPrimary"
+		                                    jcr:primaryType="nt:unstructured"
+		                                    jcr:title="Marketo Form Details Primary"
+		                                    sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+		                                <items jcr:primaryType="nt:unstructured">
+		                                    <rootURL
+		                                            jcr:primaryType="nt:unstructured"
+		                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+		                                            fieldLabel="Root URL"
+		                                            fieldDescription="Enter the Root URL."
+		                                            name="./rootURL"/>
+		                                    <munchkinID
+		                                            jcr:primaryType="nt:unstructured"
+		                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+		                                            fieldLabel="MunchkinID"
+		                                            fieldDescription="Enter the Munchkin ID."
+		                                            name="./munchkinID"/>
+		                                    <formID
+		                                            jcr:primaryType="nt:unstructured"
+		                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+		                                            fieldLabel="FormID"
+		                                            fieldDescription="Enter the Form ID."
+		                                            name="./formID"/>
+		                                    <titleText
+		                                            jcr:primaryType="nt:unstructured"
+		                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+		                                            fieldLabel="Title"
+		                                            fieldDescription="Enter the Form title."
+		                                            name="./formTitle"/>
+		                                    <bodyText
+		                                            jcr:primaryType="nt:unstructured"
+		                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+		                                            fieldLabel="Body Text"
+		                                            fieldDescription="Enter the Form Body Description."
+		                                            name="./formBodyText"/>
+		                                </items>
+		                            </primaryFormFields>
+		                        </items>
+		                    </fieldSetCTA>
+                        </items>
+                    </fieldSetStyling>
+					<fieldSetCTA
+							granite:class="showhidetargets"
+	                        jcr:primaryType="nt:unstructured"
+	                        jcr:title="Secondary CTA Details"
+	                        sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+	                        <items jcr:primaryType="nt:unstructured">
+		                        <buttonLabel
+		                                jcr:primaryType="nt:unstructured"
+		                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+		                                fieldDescription="If button label is specified button will appear on component"
+		                                fieldLabel="Button Label"
+		                                name="./buttonLabel"/>
+		                        <buttonURL
+		                                jcr:primaryType="nt:unstructured"
+		                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+		                                fieldDescription="If asset is selected it will get download or if it is a page it will redirect (Internal / External link)"
+		                                fieldLabel="Button URL"
+		                                name="./buttonURL"
+		                                rootPath="/content"/>
+                                <getColor
+	                                    jcr:primaryType="nt:unstructured"
+	                                    sling:resourceType="granite/ui/components/coral/foundation/form/select"
+	                                    fieldLabel="Select Secondary CTA variation"
+	                                    name="./getColor"
+	                                    required="{Boolean}true">
+	                                <items jcr:primaryType="nt:unstructured">
+	                                    <blue
+	                                            jcr:primaryType="nt:unstructured"
+	                                            text="White text on Blue"
+	                                            value="blue"/>
+	                                    <white
+	                                            jcr:primaryType="nt:unstructured"
+	                                            text="Blue text on White"
+	                                            value="white"/>
+	                                </items>
+	                            </getColor>
+		                        <loadInModalSecondary
+		                                granite:class="cq-dialog-checkbox-showhide"
+		                                jcr:primaryType="nt:unstructured"
+		                                sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+		                                name="./loadInModalSecondary"
+		                                text="Load Request Quote Form In Modal For Secondary CTA"
+		                                fieldDescription="If this is selected Request to Quote will open in Modal"
+		                                uncheckedValue="{Boolean}false"
+		                                value="yes">
+		                            <granite:data
+		                                    jcr:primaryType="nt:unstructured"
+		                                    cq-dialog-checkbox-showhide-target=".togglefieldSecondary"/>
+		                        </loadInModalSecondary>
+	                            <secondaryFormFields
+	                                    granite:class="togglefieldSecondary"
+	                                    jcr:primaryType="nt:unstructured"
+	                                    jcr:title="Marketo Form Details Secondary"
+	                                    sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+	                                <items jcr:primaryType="nt:unstructured">
+	                                    <rootURLSec
+	                                            jcr:primaryType="nt:unstructured"
+	                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+	                                            fieldLabel="Root URL"
+	                                            fieldDescription="Enter the Root URL."
+	                                            name="./rootURLSec"/>
+	                                    <munchkinIDSec
+	                                            jcr:primaryType="nt:unstructured"
+	                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+	                                            fieldLabel="MunchkinID"
+	                                            fieldDescription="Enter the Munchkin ID."
+	                                            name="./munchkinIDSec"/>
+	                                    <formIDSec
+	                                            jcr:primaryType="nt:unstructured"
+	                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+	                                            fieldLabel="FormID"
+	                                            fieldDescription="Enter the Form ID."
+	                                            name="./formIDSec"/>
+	                                    <titleTextSec
+	                                            jcr:primaryType="nt:unstructured"
+	                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+	                                            fieldLabel="Title"
+	                                            fieldDescription="Enter the Form title."
+	                                            name="./formTitleSec"/>
+	                                    <bodyTextSec
+	                                            jcr:primaryType="nt:unstructured"
+	                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+	                                            fieldLabel="Body Text"
+	                                            fieldDescription="Enter the Form Body Description."
+	                                            name="./formBodyTextSec"/>
+	                                </items>
+	                            </secondaryFormFields> 
+			                    <isHyperLink
+		                            jcr:primaryType="nt:unstructured"
+		                            sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+		                            name="./isHyperLink"
+		                            text="Make secondary button hyperlink"
+		                            value="yes"/>
+	                            <hyperlinkColor
+		                            jcr:primaryType="nt:unstructured"
+		                            sling:resourceType="granite/ui/components/coral/foundation/form/select"
+		                            fieldLabel="Select Hyperlink color variation"
+		                            name="./hyperlinkColor"
+		                            required="{Boolean}true">
+		                         <items jcr:primaryType="nt:unstructured">
+		                            <blue
+	                                    jcr:primaryType="nt:unstructured"
+	                                    text="Blue"
+	                                    value="blue"/>
+		                            <white
+	                                    jcr:primaryType="nt:unstructured"
+	                                    text="White"
+	                                    value="white"/>
+		                        </items>
+		                      </hyperlinkColor>
+                            </items>
+                            <granite:data
+	                            jcr:primaryType="nt:unstructured"
+	                            showhidetargetvalue="generic,clp"/>
+                    </fieldSetCTA>
+                    <enableVideo
+                        granite:class="cq-dialog-checkbox-showhide"
+						jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                        fieldDescription="Enable video (Optional). Author the associated video fields if enabled."
+                        name="./videoEnabled"
+                        text="Enable Video"
+						uncheckedValue="{Boolean}false"
+                        value="yes">
+						<granite:data
+                            jcr:primaryType="nt:unstructured"
+                            cq-dialog-checkbox-showhide-target=".togglefield"/>
+                    </enableVideo> 
+                    <fieldSetVideo
+                        granite:class="togglefield"
+						jcr:primaryType="nt:unstructured"
+                        jcr:title="Associated Video Fields"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                        <items jcr:primaryType="nt:unstructured">
+                            <videoId
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldDescription="Brightcove Video ID"
+                                fieldLabel="Brightcove Video ID"
+                                name="./brightcoveVideoId"/>
+                            <playVideoButtonLabel
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldDescription="Play Video Button Label"
+                                fieldLabel="Play Video Button Label"
+                                name="./playVideoLabel"/>
+                            <vidthumbnail
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                fieldDescription="Play Video Icon"
+                                fieldLabel="Play Video Icon"
+                                name="./thumbnail"
+                                rootPath="/content/dam"/>
+                       	</items>
+                    </fieldSetVideo>
+                </items>
+            </column>
+        </items>
+    </content>
+</jcr:root>

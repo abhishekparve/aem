@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          jcr:primaryType="sling:OsgiConfig"
+          spectrumViewerEncryptionKey="$[env:svEncryptionKey;default=tkEmkgY8eaGDrlcnatRXbA==]"
+          spectrumViewerIconsPath="$[env:svIconPickerAssetPath;default=/apps/bdb-aem/clientlibs/clientlib-base/resources/icons]"
+          cytometerConfigFile="$[env:cytometerConfigFile;default=cytometer.json]"
+          fluorochromeConfigFile="$[env:fluorochromeConfigFile;default=fluorochrome.json]"
+          systemCytometerEndpoint="$[env:systemCytometerEndpoint;default=/occ/v2/bdbUS/sv/system/cytometers]"
+          systemFluorochromeEndpoint="$[env:systemFluorochromeEndpoint;default=/occ/v2/bdbUS/sv/system/fluorochromes]"
+          systemSsmdataEndpoint="$[env:systemSsmdataEndpoint;default=/occ/v2/bdbUS/sv/system/ssm]"
+          svLaserList="\[{id:'Deep UV',label:'Deep UV',min:280,max:329,defaultValue:305},{id:'UV',label:'UV',min:330,max:369,defaultValue:355},{id:'Near UV',label:'Near UV',min:370,max:389,defaultValue:375},{id:'Violet',label:'Violet',min:390,max:419,defaultValue:405},{id:'Blue-Violet',label:'Blue-Violet',min:420,max:459,defaultValue:445},{id:'Blue',label:'Blue',min:460,max:499,defaultValue:488},{id:'Green',label:'Green',min:500,max:554,defaultValue:532},{id:'Yellow-Green',label:'Yellow-Green',min:555,max:579,defaultValue:561},{id:'Orange',label:'Orange',min:580,max:609,defaultValue:610},{id:'Red',label:'Red',min:610,max:719,defaultValue:637},{id:'Near IR',label:'Near IR',min:720,max:799,defaultValue:785},{id:'Custom',label:'Custom',min:'280',max:'799',defaultValue:''}]"
+          spectrumViewerLaserList="\[{id:'UV',label:'UV',min:330,max:369,defaultValue:355},{id:'Violet',label:'Violet',min:390,max:419,defaultValue:405},{id:'Blue',label:'Blue',min:460,max:499,defaultValue:488},{id:'Green',label:'Green',min:500,max:554,defaultValue:532},{id:'Yellow',label:'Yellow-Green',min:555,max:579,defaultValue:561},{id:'Red',label:'Red',min:610,max:719,defaultValue:637},{id: 'Custom',label:'Custom',min:'280',max:'799',defaultValue:''}]"
+          svLaserListForSorting="\[{id: 'Deep UV',label: 'Deep UV',min: 280,max: 329,defaultValue: 305},{id: 'UV',label: 'UV',min: 330,max: 379,defaultValue: 355},{id: 'Violet',label: 'Violet',min: 380,max: 446,defaultValue: 405},{id: 'Blue',label: 'Blue',min: 447,max: 524,defaultValue: 488},{id: 'Yellow-Green',label: 'Yellow-Green',min: 525,max: 598,defaultValue: 561},{id: 'Red',label: 'Red',min: 599,max: 719,defaultValue: 637},{id: 'Near IR',label: 'Near IR',min: 720,max: 799,defaultValue: 785}]"
+          fluoroAltColorCode="\['A6CEE4','1F79B4','B3DF8B','33A12C','FB9A99','E4201C','FEC06F','FF7F00','CBB2D6','6A3D9A','FFEE3C','B25928','1FF9FF','1A9F77','D95F01','7570B3','E82A8A','66A71E','E7AB01','A6761C','4B6A53','B249D6','7EDD45','5C47B8','D0D351','FF69B4','69C96C','CD3E50','83D6AF','DA6130','5E79B2','C29545','532A5A','5F7B34','C498CF','773A26','D4C5A8','C27E7F']"
+          svFluorochromesSortOrder="$[env:svFluorochromesSortOrder;default=svFluorochromesSortOrder.json]"/>

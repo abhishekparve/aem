@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+        />
+        <title>Sign In/Register | BD Biosciences - US</title>
+        <link rel="shortcut icon" href="./assets/images/favicon.png" />
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="https://sso.bdbiosciences.com/prebuilt/css/screen.css"
+        />
+        <script
+            type="text/javascript"
+            src="https://sso.bdbiosciences.com/prebuilt/js/jquery.js"
+        ></script>
+        <script
+            type="text/javascript"
+            src="https://sso.bdbiosciences.com/prebuilt/js/jquery-ui.js"
+        ></script>
+        <script
+            type="text/javascript"
+            src="https://sso.bdbiosciences.com/prebuilt/js/height.js"
+        ></script>
+        <script
+            type="text/javascript"
+            src="https://sso.bdbiosciences.com/prebuilt/js/popup.js"
+        ></script>
+        <script
+            type="text/javascript"
+            src="https://sso.bdbiosciences.com/prebuilt/js/scrollbar.js"
+        ></script>
+        <script
+            type="text/javascript"
+            src="https://sso.bdbiosciences.com/prebuilt/js/scrolltabs.js"
+        ></script>
+        <script
+            type="text/javascript"
+            src="https://sso.bdbiosciences.com/prebuilt/js/scrolltables.js"
+        ></script>
+        <script
+            type="text/javascript"
+            src="https://sso.bdbiosciences.com/prebuilt/js/select.js"
+        ></script>
+        <script
+            type="text/javascript"
+            src="https://sso.bdbiosciences.com/prebuilt/js/slider.js"
+        ></script>
+        <script
+            type="text/javascript"
+            src="https://sso.bdbiosciences.com/prebuilt/js/scripts.js"
+        ></script>
+        <script
+            type="text/javascript"
+            src="https://sso.bdbiosciences.com/prebuilt/js/igx-dev.js"
+        ></script>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        />
+        <link rel="stylesheet" href="./fonts.css" />
+        <link rel="stylesheet" href="./signin.css" />
+        <link rel="stylesheet" href="./forgotpwd.css" />
+    </head>
+
+    <body>
+        <div id="page" class="signIn">
+            <header class="transparent">
+                <div class="container">
+                    <a class="logo" href="/"
+                        ><img src="./assets/images/bd-griffin.png" alt="BD Griffin"
+                    /></a>
+                    <a class="logo" href="https://sso.bdbiosciences.com">
+                        <img src="./assets/images/bd-griffin-white.png" alt="BD Griffin"
+                    /></a>
+                    <div class="links"></div>
+                </div>
+            </header>
+
+            <main class="off-white">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="forgotpwdBlock">
+                                <p class="forgotpwdHeading">Forgot Password</p>
+                                <p class="forgotpwdText">
+                                    Enter the email address associated with your account, and we'll
+                                    email you a link to reset your password.
+                                </p>
+                                <form
+                                    id="reset_password_form"
+                                    name="reset_password_form"
+                                    action="https://www.bdbiosciences.com/us/login/pw/request"
+                                    method="POST"
+                                >
+                                    <div class="form-group">
+                                        <input
+                                            id="reset_password_email"
+                                            name="reset_password_email"
+                                            placeholder="Email Addresss"
+                                            type="email"
+                                            onkeyup="enableResetPwdBtn(this)"
+                                            onfocus="moveLabelToTop(this)"
+                                            onfocusout="moveLabelToDown(this)"
+                                        />
+                                        <label for="reset_password_email" class="formLabel"
+                                            >Email Address</label
+                                        >
+                                        <label id="validateemailllabel"
+                                            >Please enter a registered Email ID</label
+                                        >
+                                    </div>
+
+                                    <button
+                                        class="large resetPwdBtn"
+                                        type="submit"
+                                        id="reset_password_button"
+                                        name="reset_password_button"
+                                        disabled
+                                    >
+                                        Reset Password
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+
+            <section class="sub footerLinks">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 footerLinksBlock">
+                            <div class="">
+                                <input
+                                    type="radio"
+                                    id="products"
+                                    name="example_accordion"
+                                    class="accordion__input"
+                                />
+                                <label for="products" class="accordion__label">Products</label>
+                                <img
+                                    src="./assets/icons/Arrow-down.svg"
+                                    class="arrow"
+                                    alt="arrow-down"
+                                />
+                                <div class="accordion__content">
+                                    <ul>
+                                        <li><a href="#">Instruments</a></li>
+                                        <li><a href="#">Reagents</a></li>
+                                        <li><a href="#">Software & Informatics</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="">
+                                <input
+                                    type="radio"
+                                    id="discover"
+                                    name="example_accordion"
+                                    class="accordion__input"
+                                />
+                                <label for="discover" class="accordion__label"
+                                    >Discover and Learn</label
+                                ><img
+                                    src="./assets/icons/Arrow-down.svg"
+                                    class="arrow"
+                                    alt="arrow-down"
+                                />
+                                <div class="accordion__content">
+                                    <ul>
+                                        <li><a href="#">Clinical Areas</a></li>
+                                        <li><a href="#">Research Areas</a></li>
+                                        <li><a href="#">Applications / Techniques</a></li>
+                                        <li><a href="#">Thought Leadership</a></li>
+                                        <li><a href="#">Training</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="">
+                                <input
+                                    type="radio"
+                                    id="resources"
+                                    name="example_accordion"
+                                    class="accordion__input"
+                                />
+                                <label for="resources" class="accordion__label"
+                                    >Resources & Tools</label
+                                ><img
+                                    src="./assets/icons/Arrow-down.svg"
+                                    class="arrow"
+                                    alt="arrow-down"
+                                />
+                                <div class="accordion__content">
+                                    <ul>
+                                        <li><a href="#">Research Cloud</a></li>
+                                        <li><a href="#">Spectrum Viewer</a></li>
+                                        <li><a href="#">Guided Panel Solution</a></li>
+                                        <li><a href="#">Bead Lot Files</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="">
+                                <input
+                                    type="radio"
+                                    id="support"
+                                    name="example_accordion"
+                                    class="accordion__input"
+                                />
+                                <label for="support" class="accordion__label">Support</label
+                                ><img
+                                    src="./assets/icons/Arrow-down.svg"
+                                    class="arrow"
+                                    alt="arrow-down"
+                                />
+                                <div class="accordion__content">
+                                    <ul>
+                                        <li><a href="#">Contact Us</a></li>
+                                        <li><a href="#">Website Feedback</a></li>
+                                        <li><a href="#">Promotions</a></li>
+                                        <li><a href="#">Technical Support</a></li>
+                                        <li><a href="#">Shipping & Returns</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="">
+                                <input
+                                    type="radio"
+                                    id="biosciences"
+                                    name="example_accordion"
+                                    class="accordion__input"
+                                />
+                                <label for="biosciences" class="accordion__label"
+                                    >BD Biosciences</label
+                                ><img
+                                    src="./assets/icons/Arrow-down.svg"
+                                    class="arrow"
+                                    alt="arrow-down"
+                                />
+                                <div class="accordion__content">
+                                    <ul>
+                                        <li><a href="#">About Us</a></li>
+                                        <li><a href="#">Quality Control</a></li>
+                                        <li><a href="#">Events</a></li>
+                                        <li><a href="#">Careers</a></li>
+                                        <li><a href="#">BD Worldwide</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <footer>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="col-lg-4 col-md-4 col-sm-5 col-xs-12 socialIconsBlock">
+                                <a class="logo" href="/">
+                                    <img
+                                        src="./assets/images/bd-logo-white-footer.png"
+                                        alt="BD-logo"
+                                    />
+                                </a>
+
+                                <div class="social">
+                                    <a
+                                        href="https://www.facebook.com/BectonDickinsonandCo?ref=bookmarks"
+                                        ><i class="fa fa-facebook" aria-hidden="true"></i
+                                    ></a>
+                                    <a href="https://twitter.com/BDandCo"
+                                        ><i class="fa fa-twitter" aria-hidden="true"></i
+                                    ></a>
+                                    <a
+                                        href="https://www.linkedin.com/company/bd1?trk=biz-companies-cym"
+                                        ><i class="fa fa-linkedin" aria-hidden="true"></i
+                                    ></a>
+                                    <a
+                                        href="https://www.youtube.com/channel/UCPGmutY43EjP_3ijOugNGnA"
+                                        ><i class="fa fa-youtube" aria-hidden="true"></i
+                                    ></a>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-8 col-md-8 col-sm-7 col-xs-12 copyRightBlock">
+                                <div class="links">
+                                    <a href="/en-us/privacy-policy" title="Privacy Policy">
+                                        Privacy Policy </a
+                                    ><span class="pipe">|</span>
+                                    <a href="/en-us/terms-of-use" title="Terms of Use">
+                                        Terms of Use </a
+                                    ><span class="pipe">|</span>
+                                    <a id="ot-sdk-btn" class="ot-sdk-show-settings">
+                                        Cookie Settings</a
+                                    >
+                                </div>
+                                <p class="copyRightText">
+                                    &copy; 2020 BD. All rights reserved. Unless otherwise noted, BD,
+                                    the BD Logo and all other trademarks are property of Becton,
+                                    Dickinson and Company.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+
+            <a id="top" href="#"><i class="fa fa-angle-double-up" aria-hidden="true"></i></a>
+        </div>
+
+        <script>
+            $(function () {
+                var cRedir = $('#country-redirect');
+                if (cRedir != null && cRedir.length > 0) {
+                    $('#redirLink').click();
+                    $('#proceed').on('click', function () {
+                        $('#ProceedForm').submit();
+                    });
+                    $('#cancel').on('click', function () {
+                        window.location.href = '/us/account/logoff';
+                    });
+                }
+            });
+
+            function enableResetPwdBtn(element) {
+                let email = document.querySelector('#reset_password_email');
+                let resetpwdBtn = document.querySelector('.resetPwdBtn');
+                let formLabel = document.querySelector('#' + element.id).nextElementSibling;
+                let errMsg = formLabel.nextElementSibling;
+                let regex = /^([a-zA-Z0-9\.-]+)@([a-zA-Z0-9]+)\.([a-z]{2,8})(.[a-z]{2,8})?$/;
+                let isEnabled = false;
+
+                if (regex.test(email.value)) {
+                    element.removeAttribute('class');
+                    formLabel.classList.remove('invalidFormLabel');
+                    errMsg.classList.remove('errMsgText');
+                    resetpwdBtn.disabled = isEnabled;
+                    resetpwdBtn.classList.add('enableresetPwdBtn');
+                } else {
+                    formLabel.classList.add('invalidFormLabel');
+                    element.setAttribute('class', 'invalidInputField');
+                    errMsg.classList.add('errMsgText');
+                    resetpwdBtn.disabled = !isEnabled;
+                    resetpwdBtn.classList.remove('enableresetPwdBtn');
+                }
+            }
+
+            function moveLabelToTop(element) {
+                document
+                    .querySelector('#' + element.id + ' ~ .formLabel')
+                    .classList.add('moveLabelToTop');
+            }
+
+            function moveLabelToDown(element) {
+                let label = document.querySelector('#' + element.id + ' ~ .formLabel');
+                if (element.value.length > 0) label.classList.add('moveLabelToTop');
+                else label.classList.remove('moveLabelToTop');
+            }
+        </script>
+        <script src="/d3e102b0f5123172c24210c54b2ebef7f99e44415117f563482180642a4ceee4/ns.js"></script>
+    </body>
+</html>

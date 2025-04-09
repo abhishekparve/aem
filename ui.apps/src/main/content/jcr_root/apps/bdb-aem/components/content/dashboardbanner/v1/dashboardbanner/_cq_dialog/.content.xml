@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+          xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          xmlns:granite="http://www.adobe.com/jcr/granite/1.0"
+          xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+          jcr:primaryType="nt:unstructured"
+          jcr:title="Account Management Dashboard Banner"
+          sling:resourceType="cq/gui/components/authoring/dialog">
+<content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/container">
+    <items jcr:primaryType="nt:unstructured">
+        <tabs
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/tabs"
+                maximized="{Boolean}false">
+            <items jcr:primaryType="nt:unstructured">
+                <dashboardBanner
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Banner Label"
+                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                        margin="{Boolean}true">
+                    <items jcr:primaryType="nt:unstructured">
+                        <columns
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                                margin="{Boolean}true">
+                            <items jcr:primaryType="nt:unstructured">
+                                <column
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                                    <items jcr:primaryType="nt:unstructured">
+                                        <bannerImage
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                                                fieldLabel="Banner Image"
+                                                name="./bannerImage"
+                                                rootPath="/content/dam/bdb"
+                                                required="true"/>
+                                        <bannerImageAltText
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Banner Image Alt Text"
+                                                name="./bannerImageAltText"
+                                                required="true"/>
+                                        <bannerTitle
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="cq/gui/components/authoring/dialog/richtext"
+                                                fieldLabel="Banner Title"
+                                                maxlength="15"
+                                                name="./bannerTitle"
+                                                required="true"
+                                                useFixedInlineToolbar="{Boolean}true">
+                                                <rtePlugins
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceSuperType="/apps/bdb-aem/components/authoring/dialog/richtext/rtePlugins"/>
+                                                <uiSettings
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceSuperType="/apps/bdb-aem/components/authoring/dialog/richtext/uiSettings"/>
+				                                <granite:data
+                                                jcr:primaryType="nt:unstructured"
+                                                char-limit="75"/>
+                                        </bannerTitle>
+                                        <bannerText
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="cq/gui/components/authoring/dialog/richtext"
+                                                fieldLabel="Banner Text"
+                                                name="./bannerText"
+                                                required="true"
+                                                useFixedInlineToolbar="{Boolean}true">
+                                                <rtePlugins
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceSuperType="/apps/bdb-aem/components/authoring/dialog/richtext/rtePlugins"/>
+                                                <uiSettings
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceSuperType="/apps/bdb-aem/components/authoring/dialog/richtext/uiSettings"/>
+                                        		<granite:data
+                                                jcr:primaryType="nt:unstructured"
+                                                char-limit="115"/>
+                                        </bannerText>
+                                        <bannerCtaLabel
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Banner CTA Label"
+                                                maxlength="15"
+                                                name="./bannerCtaLabel"
+                                                required="true"/>
+                                        <bannerCtaLink
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                                                fieldLabel="Banner Cta Link"
+                                                name="./bannerCtaLink"
+                                                rootPath="/content/bdb"
+                                                required="true"/>
+                                    </items>
+                                </column>
+                            </items>
+                        </columns>
+                    </items>
+                </dashboardBanner>
+            </items>
+        </tabs>
+    </items>
+</content>
+</jcr:root>

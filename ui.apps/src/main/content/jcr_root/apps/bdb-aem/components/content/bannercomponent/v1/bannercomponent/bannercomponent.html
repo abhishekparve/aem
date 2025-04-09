@@ -1,0 +1,412 @@
+<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html"
+     data-sly-call="${templates.placeholder @ isEmpty = true}"></sly>
+<sly data-sly-use.homepageBannerModel="com.bdb.aem.core.models.HomepageBannerModel"></sly>
+<sly data-sly-test="${homepageBannerModel.imagePath}">
+
+
+	<div data-sly-test="${properties.selection=='generic'}">
+        <div class="app-js__bd-banner bd-banner ${homepageBannerModel.fontColorVariation == '#424242' ? 'text-black' : 'text-white'}">
+            <div class="bd-banner__image d-flex">
+                <picture>
+                    <source media="(max-width: 900px)" srcset="${homepageBannerModel.imagePathMobile}" onload="window.aos && window.aos.refresh()">
+                    <img data-src="${homepageBannerModel.imagePath}" class="bd-banner__img picture-image ${properties.backgroundPositionStyle}"
+						alt="${properties.altImage}" title="${properties.altImage}" onload="window.aos && window.aos.refresh()">
+                </picture>
+                <div class="bd-banner__bg-gradient ${homepageBannerModel.darkMode == false ? 'light-theme' : ''}"></div>
+            </div>
+            <div class="container bd-banner__container d-flex invisible ${properties.togglePaddingTop?'pt-2':''}">
+                <div class="text-${properties.ctaAlign}">
+                    <div class="bd-banner__section d-flex">
+                        <h1 data-sly-test="${properties.bannerTitleGen}" class="bd-banner__title text-wrap text-break ${homepageBannerModel.fontColorVariation == '#000' ? 'black-text' : 'white-text'} ${properties.fontSize == 'h1' ? 'h1' : 'h0'}">${properties.bannerTitleGen @context='html'}</h1>
+                        <h1 data-sly-test="${!properties.bannerTitleGen}" class="bd-banner__title text-wrap text-break ${homepageBannerModel.fontColorVariation == '#000' ? 'black-text' : 'white-text'} ${properties.fontSize == 'h1' ? 'h1' : 'h0'}">${properties.bannertitle @context='html'}</h1>
+                        <div data-sly-test="${properties.description}" class="bd-banner__desc bd-rte ${homepageBannerModel.fontColorVariation == '#000'? 'black-text' : 'white-text'}">${properties.description @context='html'}</div>
+
+                        <div class="bd-banner__cta">
+              				<a data-sly-test="${properties.labelcta}" href="${homepageBannerModel.ctaUrl}"
+              				   data-toggle="${properties.loadInModalPrimary?'modal':''}" 
+              				   data-target="${properties.loadInModalPrimary?'#bdb-request-quote-form-modal':''}">
+								<button class="btn btn-md mx-auto" data-color="${homepageBannerModel.ctaTxtColor}" data-background-color="${homepageBannerModel.ctaBgColor}">
+									${properties.labelcta @context='html'}
+								</button>
+							</a>
+							<button data-sly-test="${homepageBannerModel.videoEnabled}" type="button" data-toggle="modal" data-target="#bannerVideoModal" class="btn ${properties.getColor == 'white' ? 'btn-primary-white-clp' : 'btn-primary-blue-clp'} btn-md ml-sm-3 d-inline-flex align-items-center bd-banner__btn-play-video">
+								<img src="${homepageBannerModel.thumbnail}" class="bd-banner__icon-img mr-2" role="presentation"/>
+								${homepageBannerModel.playVideoLabel @context='html'}
+							</button>
+							<a data-sly-test="${!homepageBannerModel.videoEnabled && properties.buttonLabel}" href="${homepageBannerModel.buttonURL}" data-toggle="${properties.loadInModalSecondary?'modal':''}"  data-target="${properties.loadInModalSecondary?'#bdb-request-quote-form-modal':''}" data-sly-attribute.target="${homepageBannerModel.isFileDownload ? '_blank':''}" data-sly-attribute.download="${homepageBannerModel.isFileDownload ? 'buttonLabel':''}"
+							   class="${properties.isHyperLink == 'yes' && properties.hyperlinkColor == 'white' ? 'btn btn-link-white promo-cta-white' : '' } ${properties.hyperlinkColor == 'blue' && properties.isHyperLink == 'yes' ? 'btn btn-link-blue generic-cta-blue' : '' } ${properties.getColor == 'blue' && properties.isHyperLink != 'yes' ? 'ml-sm-3 btn btn-primary-blue-clp btn-md' : '' } ${properties.getColor == 'white' && properties.isHyperLink != 'yes'  ? 'ml-sm-3 btn btn-primary-white-clp btn-md' : '' }">${properties.buttonLabel}</a>
+            			</div>
+
+						<div data-sly-test="${homepageBannerModel.videoEnabled}" class="modal fade bd-banner__media__video-modal" id="bannerVideoModal" tabindex="-1" role="dialog" aria-labelledby="bannerVideoModalTitle" aria-hidden="true" data-backdrop="static">
+							<div class="modal-dialog modal-dialog-centered custom-bdb-modal" role="document"> 
+								<div class="modal-content">
+									<div class="modal-header">
+										<button type="button" class="close bd-banner__media__video-modal-close" data-dismiss="modal"
+											aria-label="Close">
+											<span aria-hidden="true">&times;</span>
+										</button>
+									</div>
+									<div class="modal-body bd-banner__media__video-modal-body is-video" data-accountId="${homepageBannerModel.brightcoveAccountId}"
+										data-playerId="${homepageBannerModel.brightcovePlayerId}" data-videoId="${homepageBannerModel.brightcoveVideoId}">
+									</div>
+								</div>
+							</div>
+						</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+	</div>
+
+
+	<div data-sly-test="${properties.selection=='clp'}">
+        <div class="app-js__bd-banner bd-banner clp-version ${homepageBannerModel.fontColorVariation == '#424242' ? 'text-black' : 'text-white'}">
+            <div class="bd-banner__image d-flex">
+                <picture>
+                    <source media="(max-width: 900px)" srcset="${homepageBannerModel.imagePathMobile}" onload="window.aos && window.aos.refresh()">
+                    <img data-src="${homepageBannerModel.imagePath}" class="bd-banner__img picture-image ${properties.backgroundPositionStyle}"
+						alt="${properties.altImage}" title="${properties.altImage}" onload="window.aos && window.aos.refresh()">
+                </picture>
+                <div class="bd-banner__bg-gradient ${homepageBannerModel.darkMode == false ? 'light-theme' : ''}"></div>
+            </div>
+            <div class="container bd-banner__container d-flex invisible ${properties.togglePaddingTop?'pt-2':''}">
+                <div class="text-${properties.ctaAlign}">
+                    <div class="bd-banner__section d-flex">
+                        <h1 data-sly-test="${properties.bannerTitleClp}" class="bd-banner__title text-wrap text-break ${properties.fontSize == 'h1' ? 'h1' : 'h0'}">${properties.bannerTitleClp @context='html'}</h1>
+                        <h1 data-sly-test="${!properties.bannerTitleClp}" class="bd-banner__title text-wrap text-break ${properties.fontSize == 'h1' ? 'h1' : 'h0'}">${properties.bannertitle @context='html'}</h1>
+                        <div data-sly-test="${properties.description}" class="bd-banner__desc bd-rte">${properties.description @context='html'}</div>
+                        <div class="bd-banner__cta">
+							<a data-sly-test="${properties.labelcta}" href="${homepageBannerModel.ctaUrl}"
+							   data-toggle="${properties.loadInModalPrimary?'modal':''}"  
+							   data-target="${properties.loadInModalPrimary?'#bdb-request-quote-form-modal':''}">
+								<button class="btn btn-primary-white btn-md mx-auto" data-color="${homepageBannerModel.ctaTxtColor}" data-background-color="${homepageBannerModel.ctaBgColor}">
+									${properties.labelcta @context='html'}
+								</button>
+							</a>
+							<button data-sly-test="${homepageBannerModel.videoEnabled}" type="button" data-toggle="modal" data-target="#bannerVideoModal" class="btn ${properties.getColor == 'white' ? 'btn-primary-white-clp' : 'btn-primary-blue-clp'} btn-md ml-sm-3 d-inline-flex align-items-center bd-banner__btn-play-video">
+								<img src="${homepageBannerModel.thumbnail}" class="bd-banner__icon-img mr-2" role="presentation"/>
+								${homepageBannerModel.playVideoLabel @context='html'}
+							</button>
+							<a data-sly-test="${!homepageBannerModel.videoEnabled && properties.buttonLabel}" href="${homepageBannerModel.buttonURL}" data-toggle="${properties.loadInModalSecondary?'modal':''}"  data-target="${properties.loadInModalSecondary?'#bdb-request-quote-form-modal':''}" data-sly-attribute.target="${homepageBannerModel.isFileDownload ? '_blank':''}" data-sly-attribute.download="${homepageBannerModel.isFileDownload ? 'buttonLabel':''}"
+							   class="${properties.isHyperLink == 'yes' && properties.hyperlinkColor == 'white' ? 'btn btn-link-white promo-cta-white' : '' } ${properties.hyperlinkColor == 'blue' && properties.isHyperLink == 'yes' ? 'btn btn-link-blue clp-cta-blue' : '' } ${properties.getColor == 'blue' && properties.isHyperLink != 'yes' ? 'ml-sm-3 btn btn-primary-blue-clp btn-md' : '' } ${properties.getColor == 'white' && properties.isHyperLink != 'yes'  ? 'ml-sm-3 btn btn-primary-white-clp btn-md' : '' }">${properties.buttonLabel}</a>
+
+						</div>
+						<div data-sly-test="${homepageBannerModel.videoEnabled}" class="modal fade bd-banner__media__video-modal" id="bannerVideoModal" tabindex="-1" role="dialog" aria-labelledby="bannerVideoModalTitle" aria-hidden="true" data-backdrop="static">
+							<div class="modal-dialog modal-dialog-centered" role="document">
+								<div class="modal-content">
+									<div class="modal-header">
+										<button type="button" class="close bd-banner__media__video-modal-close" data-dismiss="modal"
+											aria-label="Close">
+											<span aria-hidden="true">&times;</span>
+										</button>
+									</div>
+									<div class="modal-body bd-banner__media__video-modal-body is-video" data-accountId="${homepageBannerModel.brightcoveAccountId}"
+										data-playerId="${homepageBannerModel.brightcovePlayerId}" data-videoId="${homepageBannerModel.brightcoveVideoId}">
+									</div>
+								</div>
+							</div>
+						</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+	</div>
+	
+	<div data-sly-test="${properties.selection=='promolist'}">
+		<article class="promo-list-banner app-js__promo-list-banner position-relative ${homepageBannerModel.fontColorVariation == '#424242' ? 'text-black' : 'text-white'} ${properties.brightcoveVideoId?'video-section':''}">
+			<div class="promo-list-banner__container">
+				<div class="promo-list-banner__image w-100" role="img" aria-label="Introduction to Flow Cytometry">
+					<img data-sly-test="${homepageBannerModel.imagePath}" class="promo-list-banner__promotions-image ${properties.backgroundPositionStyle}"
+					 src="${homepageBannerModel.imagePath}" aria-describedby="promo-list-banner__text" alt="${properties.altImage}" title="${properties.altImage}"/>
+					<div class="promo-list-banner__image-gradient ${homepageBannerModel.darkMode == false ? 'light-theme' : ''}"></div>
+				</div>
+			</div>
+			<div class="promo-list-banner__text container position-absolute mx-auto w-100" id="promo-list-banner__text">
+				<div class="d-flex flex-column mx-auto promo-list-banner__content w-100 ${properties.ctaAlign}-align">
+					<h1 data-sly-test="${properties.bannerTitlePromo}" class="col-12 promo-list-banner__content-heading px-0 ${properties.fontSize == 'h1' ? 'h1' : 'h0'}">${properties.bannerTitlePromo @context='html'}</h1>
+					<h1 data-sly-test="${!properties.bannerTitlePromo}" class="col-12 promo-list-banner__content-heading px-0 ${properties.fontSize == 'h1' ? 'h1' : 'h0'}">${properties.bannertitle @context='html'}</h1>
+					<div data-sly-test="${properties.description}" class="col-12 promo-list-banner__content-desc bd-rte px-0">${properties.description @context='html'}</div>
+						<div class="bd-banner__cta">
+							<a data-sly-test="${!homepageBannerModel.videoEnabled && properties.labelcta}" href="${homepageBannerModel.ctaUrl}"
+								data-toggle="${properties.loadInModalPrimary?'modal':''}"  
+							    data-target="${properties.loadInModalPrimary?'#bdb-request-quote-form-modal':''}">
+								<button class="btn ${homepageBannerModel.ctaTxtColor == '#fff' ? 'btn-primary-blue' : 'btn-primary-white'} btn-md mr-sm-4 mx-auto" data-color="${homepageBannerModel.ctaTxtColor}" data-background-color="${homepageBannerModel.ctaBgColor}">
+									${properties.labelcta @context='html'}
+								</button>
+							</a>
+							<button data-sly-test="${homepageBannerModel.videoEnabled}" type="button" data-toggle="modal" data-target="#bannerVideoModal" class="btn ${homepageBannerModel.ctaTxtColor == '#fff' ? 'btn-primary-blue' : 'btn-primary-white'} btn-md mr-2 d-inline-flex align-items-center promo-list-banner__btn-play-video">
+								<img src="${homepageBannerModel.thumbnail}" class="promo-list-banner__img mr-2 promo-list-banner__play-btn" role="presentation"/>
+								${homepageBannerModel.playVideoLabel @context='html'}
+							</button>
+						</div>
+						<div data-sly-test="${homepageBannerModel.videoEnabled}" class="modal fade promo-list-banner__media__video-modal brightcove-modal" id="bannerVideoModal" tabindex="-1" role="dialog" aria-labelledby="bannerVideoModalTitle" aria-hidden="true" data-backdrop="static">
+							<div class="modal-dialog modal-dialog-centered" role="document">
+								<div class="modal-content">
+									<div class="modal-header">
+										<button type="button" class="close promo-list-banner__media__video-modal-close" data-dismiss="modal"
+											aria-label="Close">
+											<span aria-hidden="true">&times;</span>
+										</button>
+									</div>
+									<div class="modal-body promo-list-banner__media__video-modal-body is-video" data-accountId="${homepageBannerModel.brightcoveAccountId}"
+										data-playerId="${homepageBannerModel.brightcovePlayerId}" data-videoId="${homepageBannerModel.brightcoveVideoId}">
+									</div>
+								</div>
+							</div>
+						</div>
+				</div>
+			</div>
+		</article>
+	</div>
+</sly>
+
+<sly
+    data-sly-test.modalCTAPrimary="${properties.loadInModalPrimary == 'yes' && properties.loadInModalSecondary == 'false'}">
+</sly>
+<sly
+    data-sly-test.modalCTASecondary="${properties.loadInModalPrimary == 'false' && properties.loadInModalSecondary == 'yes'}">
+</sly>
+<sly data-sly-test="${modalCTAPrimary || modalCTASecondary}">
+    <article class="bdb-FACSLyric-request-form app-js__bdb-FACSLyric-request-form bd-custom-scroll">
+        <div class="modal" id="bdb-request-quote-form-modal" tabindex="-1" role="dialog"
+            aria-labelledby="bdb-request-quote-form-modal" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered bdb-request-form-modal__modal-dimensions" role="document">
+                <div class="modal-content bdb-request-form-modal__modal-container">
+                    <div class="bdb-request-form-modal__modal-close p-0">
+                        <button type="button" class="close p-0" data-dismiss="modal" aria-label="Close"
+                            data-role="none">
+                            <img src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/Close-dark.svg"
+                                alt="close" />
+                        </button>
+                    </div>
+                    <div class="modal-header p-0">
+                        <sly data-sly-test="${modalCTAPrimary}">
+                            <h5 class="modal-title bdb-request-form-modal__modal-heading">${homepageBannerModel.formTitle}</h5>
+                        </sly>
+                        <sly data-sly-test="${modalCTASecondary}">
+                            <h5 class="modal-title bdb-request-form-modal__modal-heading">${homepageBannerModel.formTitleSec}</h5>
+                        </sly>
+                    </div>
+                    <div class="modal-body p-0 bdb-request-form-modal__modal-body">
+                        <sly data-sly-test="${modalCTAPrimary}">
+                            <p class="text">${homepageBannerModel.formBodyText @ context='html'}</p>
+                            <script src="${homepageBannerModel.rootURL}/js/forms2/js/forms2.min.js"></script>
+                            <form id="mktoForm_${homepageBannerModel.formID}"></form>
+                        </sly>
+                        <sly data-sly-test="${modalCTASecondary}">
+                            <p class="text">${homepageBannerModel.formBodyTextSec @ context='html'}</p>
+                            <script src="${homepageBannerModel.rootURLSec}/js/forms2/js/forms2.min.js"></script>
+                            <form id="mktoForm_${homepageBannerModel.formIDSec}"></form>
+                        </sly>
+                        <div id="marketoFormRequestQuote_alert" class="alert__message mt-3 hide" role="alert">
+                            <div class="alert__message-iconSuccess">
+                                <img class="icon "
+                                    src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/checkmark.svg"
+                                    alt="alert  icon">
+                            </div>
+                            <div class="alert__message-info">Successfully submitted.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+    <sly data-sly-test="${modalCTAPrimary}">
+        <script>
+            MktoForms2.loadForm('${homepageBannerModel.rootURL @ context='attribute'}', '${homepageBannerModel.munchkinID @ context='attribute'}', ${ homepageBannerModel.formID @context = 'attribute'});
+            window.adobeDataLayer.push({
+                event: 'formView',
+                xdm: {
+                    form: {
+                        formName: document.getElementById(`mktoForm_${homepageBannerModel.formID @context = 'attribute'
+                }`).parentElement.parentElement.querySelector('h5').innerText,
+                        marketoUserToken: ${homepageBannerModel.formID @context = 'attribute'
+                }
+                    }
+                }
+            });
+            MktoForms2.whenReady(function (mktoForm) {
+                if (marketoForms) {
+                    marketoForms.destyleMktoForm(mktoForm);
+                }
+                function handleFormStart() {
+                    window.adobeDataLayer.push({
+						event: 'formStart',
+						xdm: {
+							form: {
+								formName: document.getElementById(`mktoForm_${homepageBannerModel.formID @context = 'attribute'
+						}`).parentElement.parentElement.querySelector('h5').innerText,
+								marketoUserToken: ${homepageBannerModel.formID @context = 'attribute'
+						}
+							}
+						}
+					});
+                    for(var i = 0; i < controls.length;i++){
+                        controls[i].removeEventListener('blur', handleFormStart);
+                	}
+                }
+                if(mktoForm.getId() == '${homepageBannerModel.formID @ context='attribute'}'){
+                	var controls = document.querySelectorAll(`#mktoForm_${homepageBannerModel.formID @context = 'attribute'} input, #mktoForm_${homepageBannerModel.formID @context = 'attribute'} select, #mktoForm_${homepageBannerModel.formID @context = 'attribute'} textarea`);
+					for(var i = 0; i < controls.length; i++){
+						controls[i].addEventListener('blur', handleFormStart);
+					}
+                }
+                const submitText = document.querySelector('#mktoForm_${homepageBannerModel.formID @ context='attribute'} .mktoButton').innerText;
+                mktoForm.onSuccess(function (vals, tyURL) {
+                    window.adobeDataLayer.push({
+                        event: 'formSubmit',
+                        xdm: {
+                            form: {
+                                formName: document.getElementById(`mktoForm_${homepageBannerModel.formID @context = 'attribute'
+                }`).parentElement.parentElement.querySelector('h5').innerText,
+                                marketoUserToken: ${homepageBannerModel.formID @context = 'attribute'
+                }
+                            }
+                        }
+                    });
+            window.dataLayer.push({ event: 'request_quote' });
+            document.querySelector('#marketoFormRequestQuote_alert').classList.remove('hide');
+            setTimeout(function () {
+                document.querySelector('#bdb-request-quote-form-modal .modal-content .close').click();
+                const formElement = mktoForm.getFormElem()[0];
+
+                formElement.reset();
+
+                document.querySelector('#mktoForm_${homepageBannerModel.formID @ context='attribute'} .mktoButton').removeAttribute('disabled');
+                document.querySelector('#mktoForm_${homepageBannerModel.formID @ context='attribute'} .mktoButton').innerText = submitText ? submitText : 'Submit';
+
+                document.querySelector('#marketoFormRequestQuote_alert').classList.add('hide');
+            }, 5000);
+            return false;
+                });
+            mktoForm.onValidate(function (isValid) {
+                if (!isValid) {
+                    let errorList = [...document.getElementsByClassName("mktoInvalid")];
+                    let errorField = [];
+                    errorList.forEach(element => {
+                        if (element.getAttribute('name')) {
+                            errorField.push({ value: element.getAttribute('name') });
+                        } else {
+                            errorField.push({ value: 'Terms and Condition' });
+                        }
+                    });
+                    window.adobeDataLayer.push({
+                        event: 'formError',
+                        xdm: {
+                            form: {
+                                formName: document.getElementById(`mktoForm_${homepageBannerModel.formID @context = 'attribute'
+                }`).parentElement.parentElement.querySelector('h5').innerText,
+                                formErrors: errorField,
+                                marketoUserToken: ${homepageBannerModel.formID @context = 'attribute'
+                }
+            }
+                        }
+                    });
+                }
+            });
+            if (marketoForms) {
+                marketoForms.customBdStyles('${homepageBannerModel.formID @ context='attribute'}');
+            }
+            });
+        </script>
+    </sly>
+    <sly data-sly-test="${modalCTASecondary}">
+        <script>
+            MktoForms2.loadForm('${homepageBannerModel.rootURLSec @ context='attribute'}', '${homepageBannerModel.munchkinIDSec @ context='attribute'}', ${ homepageBannerModel.formIDSec @context = 'attribute'});
+            window.adobeDataLayer.push({
+                event: 'formView',
+                xdm: {
+                    form: {
+                        formName: document.getElementById(`mktoForm_${homepageBannerModel.formIDSec @context = 'attribute'
+                }`).parentElement.parentElement.querySelector('h5').innerText,
+                        marketoUserToken: ${homepageBannerModel.formIDSec @context = 'attribute'
+                }
+                    }
+                }
+            });
+            MktoForms2.whenReady(function (mktoForm) {
+                if (marketoForms) {
+                    marketoForms.destyleMktoForm(mktoForm);
+                }
+                function handleFormStart() {
+                    window.adobeDataLayer.push({
+						event: 'formStart',
+						xdm: {
+							form: {
+								formName: document.getElementById(`mktoForm_${homepageBannerModel.formID @context = 'attribute'
+						}`).parentElement.parentElement.querySelector('h5').innerText,
+								marketoUserToken: ${homepageBannerModel.formID @context = 'attribute'
+						}
+							}
+						}
+					});
+                    for(var i = 0; i < controls.length;i++){
+                        controls[i].removeEventListener('blur', handleFormStart);
+                	}
+                }
+                if(mktoForm.getId() == '${homepageBannerModel.formID @ context='attribute'}'){
+                	var controls = document.querySelectorAll(`#mktoForm_${homepageBannerModel.formID @context = 'attribute'} input, #mktoForm_${homepageBannerModel.formID @context = 'attribute'} select, #mktoForm_${homepageBannerModel.formID @context = 'attribute'} textarea`);
+					for(var i = 0; i < controls.length; i++){
+						controls[i].addEventListener('blur', handleFormStart);
+					}
+                }
+                const submitText = document.querySelector('#mktoForm_${homepageBannerModel.formIDSec @ context='attribute'} .mktoButton').innerText;
+                mktoForm.onSuccess(function (vals, tyURL) {
+                    window.adobeDataLayer.push({
+                        event: 'formSubmit',
+                        xdm: {
+                            form: {
+                                formName: document.getElementById(`mktoForm_${homepageBannerModel.formIDSec @context = 'attribute'
+                }`).parentElement.parentElement.querySelector('h5').innerText,
+                                marketoUserToken: ${homepageBannerModel.formIDSec @context = 'attribute'
+                }
+                            }
+                        }
+                    });
+            window.dataLayer.push({ event: 'request_quote' });
+            document.querySelector('#marketoFormRequestQuote_alert').classList.remove('hide');
+            setTimeout(function () {
+                document.querySelector('#bdb-request-quote-form-modal .modal-content .close').click();
+                const formElement = mktoForm.getFormElem()[0];
+
+                formElement.reset();
+
+                document.querySelector('#mktoForm_${homepageBannerModel.formIDSec @ context='attribute'} .mktoButton').removeAttribute('disabled');
+                document.querySelector('#mktoForm_${homepageBannerModel.formIDSec @ context='attribute'} .mktoButton').innerText = submitText ? submitText : 'Submit';
+
+                document.querySelector('#marketoFormRequestQuote_alert').classList.add('hide');
+            }, 5000);
+            return false;
+                });
+            mktoForm.onValidate(function (isValid) {
+                if (!isValid) {
+                    let errorList = [...document.getElementsByClassName("mktoInvalid")];
+                    let errorField = [];
+                    errorList.forEach(element => {
+                        if (element.getAttribute('name')) {
+                            errorField.push({ value: element.getAttribute('name') });
+                        } else {
+                            errorField.push({ value: 'Terms and Condition' });
+                        }
+                    });
+                    window.adobeDataLayer.push({
+                        event: 'formError',
+                        xdm: {
+                            form: {
+                                formName: document.getElementById(`mktoForm_${homepageBannerModel.formIDSec @context = 'attribute'
+                }`).parentElement.parentElement.querySelector('h5').innerText,
+                                formErrors: errorField,
+                                marketoUserToken: ${homepageBannerModel.formIDSec @context = 'attribute'
+                }
+            }
+                        }
+                    });
+                }
+            });
+            if (marketoForms) {
+                marketoForms.customBdStyles('${homepageBannerModel.formIDSec @ context='attribute'}');
+            }
+            });
+        </script>
+    </sly>
+</sly>

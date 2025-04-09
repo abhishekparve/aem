@@ -1,0 +1,48 @@
+<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html"
+     data-sly-call="${templates.placeholder @ isEmpty = true}"></sly>
+<sly data-sly-use.promoGridModel="com.bdb.aem.core.models.PromoGridModel"></sly>
+
+<article class="promo-list-card app-js__promo-list-card ${properties.togglePaddingTop?'mt-0':''}">
+    <div class="container">
+        <div class="row justify-content-left">
+            
+            <sly data-sly-list.item="${promoGridModel.cells}">
+                <div class="col-sm-12 col-md-6 col-lg-4 promo-list-card__layout">
+                    <div class="card col-12 h-100 promo-list-card__layout-container ${properties.togglePaddingTop?'mt-0':''}">
+                        <sly data-sly-test="${item.borderEnable}">
+                            <div class="grey-border-corners w-100">
+                            	<sly data-sly-test="${item.promoGridImageLinkUrl}">
+                                	<a href="${item.promoGridImageLinkUrl}" target="${item.openNewImageLinkTab == 'true' ? '_blank' : '_self'}">
+                                  		<img class="promo-list-card__layout-image" data-src="${item.promoGridImage}" alt="${item.promoGridAltText}" width="320" height="240">
+                                	</a>
+                                </sly>
+                                <sly data-sly-test="${!item.promoGridImageLinkUrl}">
+                                  	<img class="promo-list-card__layout-image" data-src="${item.promoGridImage}" alt="${item.promoGridAltText}" width="320" height="240">
+                                </sly>
+                            </div>
+                        </sly>
+                        <sly data-sly-test="${!item.borderEnable}">
+                        	<sly data-sly-test="${item.promoGridImageLinkUrl}">
+                                <a href="${item.promoGridImageLinkUrl}" target="${item.openNewImageLinkTab == 'true' ? '_blank' : '_self'}">
+                                  <img class="promo-list-card__layout-image" data-src="${item.promoGridImage}" alt="${item.promoGridAltText}" width="320" height="240">
+                                </a>
+                            </sly>
+                            <sly data-sly-test="${!item.promoGridImageLinkUrl}">
+                                  <img class="promo-list-card__layout-image" data-src="${item.promoGridImage}" alt="${item.promoGridAltText}" width="320" height="240">
+                            </sly>
+                        </sly>
+                        <div class="card-body promo-list-card__body px-0">
+                            <h5 data-sly-test="${item.promoGridTitle}" class="card-title promo-list-card__body-title bd-rte">${item.promoGridTitle @context='html'}</h5>
+                            <p data-sly-test="${item.promoGridDescription}" class="card-text  promo-list-card__body-text">${item.promoGridDescription @context='html'}</p>
+                            <p data-sly-test="${item.promoGridExpirationLabel||item.promoGridExpirationDate}" class="card-text promo-list-card__layout-text-expiry position-absolute">
+                                <strong class="font-weight-bold">${item.promoGridExpirationLabel}</strong> ${item.promoGridExpirationDate}
+                            </p>
+                            <a data-sly-test="${item.promoGridCtaUrl||item.promoGridCtaLabel}" href="${item.promoGridCtaUrl}" target="${item.openNewTab == 'true' ? '_blank' : '_self'}" class="btn btn-primary-blue position-absolute py-3 promo-list-card__layout-button">${item.promoGridCtaLabel @context='html'}</a>
+                        </div>
+                    </div>
+                </div>
+            </sly>
+
+        </div>
+    </div>
+</article>

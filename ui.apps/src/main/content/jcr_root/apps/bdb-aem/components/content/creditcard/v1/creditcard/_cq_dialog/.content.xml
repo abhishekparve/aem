@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Credit Card"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        granite:class="cmp-button__editor"
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/container">
+        <items jcr:primaryType="nt:unstructured">
+            <container
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Properties"
+                sling:resourceType="granite/ui/components/coral/foundation/container"
+                margin="{Boolean}true">
+                <items jcr:primaryType="nt:unstructured">
+                    <columns
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <column
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <title
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldDescription="Add Credit Card Label"
+                                        fieldLabel="Add Credit Card"
+                                        name="./title"/>
+									<acceptInfo
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldDescription="Accept Info Label"
+                                        fieldLabel="Accept Info"
+                                        name="./acceptInfo"/>
+									<creditCardNumber
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldDescription="Credit Card Number Label"
+                                        fieldLabel="Credit Card Number"
+                                        name="./creditCardNumber"/>
+									<nameOnCard
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldDescription="Name On Card Label"
+                                        fieldLabel="Name On Card"
+                                        name="./nameOnCard"/>
+									<expiryDate
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldDescription="Expiry Date Label"
+                                        fieldLabel="Expiry Date"
+                                        name="./expiryDate"/>
+									<cvv
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldDescription="CVV Label"
+                                        fieldLabel="CVV"
+                                        name="./cvv"/>
+									<nickName
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldDescription="Nick Name Label"
+                                        fieldLabel="Nick Name"
+                                        name="./nickName"/>
+									<setDefault
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldDescription="Set As Default Label"
+                                        fieldLabel="Set As Default"
+                                        name="./setDefault"/>
+									<cancelCTA
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldDescription="Cancel Label"
+                                        fieldLabel="Cancel"
+                                        name="./cancelCTA"/>
+									<confirmCTA
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldDescription="Confirm Label"
+                                        fieldLabel="Confirm"
+                                        name="./confirmCTA"/>
+									<ccNumberError
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldDescription="Please enter a {number} digit card number"
+                                        fieldLabel="CC Number Error"
+                                        name="./ccNumberError"/>
+									<mandatoryErrorLabel
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldDescription="Mandatory Error Label"
+                                        fieldLabel="Mandatory Error"
+                                        name="./mandatoryErrorLabel"/>
+									<cardDetails
+                                               jcr:primaryType="nt:unstructured"
+                                               sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                               composite="{Boolean}true"
+                                               fieldLabel="Card Details">
+                                           <granite:data
+                                                   jcr:primaryType="nt:unstructured"
+                                                   max-items="3"/>
+                                           <field
+                                                   jcr:primaryType="nt:unstructured"
+                                                   sling:resourceType="granite/ui/components/coral/foundation/container"
+                                                   name="./cardDetails">
+                                               <items jcr:primaryType="nt:unstructured">
+                                                    <column
+                                                           jcr:primaryType="nt:unstructured"
+                                                           sling:resourceType="granite/ui/components/coral/foundation/container">
+                                                       <items jcr:primaryType="nt:unstructured">
+                                                                 <id
+                                                                         jcr:primaryType="nt:unstructured"
+                                                                         sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                         fieldDescription="Card Id"
+                                                                         fieldLabel="Card Id"
+                                                                         name="./id"/>
+																 <icon
+                                                                         jcr:primaryType="nt:unstructured"
+                                                                         sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                                         fieldDescription="Card Icon"
+                                                                         fieldLabel="Card Icon"
+                                                                         name="./icon"
+                                                                         rootPath="/content/dam/bdb"/>
+                                                                 <iconAltText
+                                                                         jcr:primaryType="nt:unstructured"
+                                                                         sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                         fieldDescription="Card Icon Alt text"
+                                                                         fieldLabel="Card Icon Alt text"
+                                                                         name="./iconAltText"/>
+																 <length
+                                                                         jcr:primaryType="nt:unstructured"
+                                                                         sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                         fieldDescription="Card length"
+                                                                         fieldLabel="Card length"
+                                                                         name="./length"/>
+                                                     </items>
+                                                 </column>
+                                             </items>
+                                         </field>
+                                     </cardDetails>
+                                </items>
+                            </column>
+                        </items>
+                    </columns>
+                </items>
+            </container>
+        </items>
+    </content>
+</jcr:root>

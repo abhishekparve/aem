@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          jcr:primaryType="sling:OsgiConfig"
+          ccuapitype="$[env:ccuapitype;default=V3]"
+          akamaiType="$[env:akamaiType;default=arl]"
+          akamaiDomain="$[env:akamaiDomain;default=production]"
+          akamaiAction="$[env:akamaiAction;default=invalidate]"
+          clientToken="$[env:clientToken;default=akab-pbmam57ann6aev2a-ygp3xcngshrm6w47]"
+          accessToken="$[env:accessToken;default=akab-ycorzwdmvak55qzj-zu2uu2jtcornosfp]"
+          clientSecret="$[env:clientSecret;default=k0hQFVxJlSka0C2IT06ANLFLMewUW3KYfVsDLKwy5vE=]"
+          hostHeader="$[env:hostHeader;default=akab-mgfmr35o6pmcrjca-hzlswuryissjauwo.luna.akamaiapis.net]"
+          openAuthServiceURL="$[env:openAuthServiceURL;default=https://akab-mgfmr35o6pmcrjca-hzlswuryissjauwo.luna.akamaiapis.net]"
+          socketTimeout="$[env:socketTimeout;default=5000]"
+          connectionTimeout="$[env:connectionTimeout;default=5000]"
+          enableDispatcherInvalidation="$[env:enableDispatcherInvalidation;default=]"/>

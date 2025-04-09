@@ -1,0 +1,24 @@
+<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html" />
+<sly data-sly-call="${templates.placeholder @ isEmpty = !properties.type, classAppend='cmp-myCartPrint'}"></sly>
+
+
+    <sly data-sly-use.myCartPrintModel="com.bdb.aem.core.models.MyCartPrintModel" data-sly-use.amountSummaryModel="com.bdb.aem.core.models.AmountSummaryModel"></sly>
+    <script>
+        if (typeof window.AEM_DATA.labels === 'undefined') {
+            window.AEM_DATA.labels = {};
+        }
+        window.AEM_DATA.labels.myCartPrintPageLabels = ${ myCartPrintModel.myCartPrintPageLabels @context='scriptComment' };
+		window.AEM_DATA.labels.myCartAmountSummaryLabels = ${ amountSummaryModel.amountSummary @context='scriptComment' };
+		window.AEM_DATA.labels.myCartPrintHeaderLabels = ${ myCartPrintModel.iconsList @context='scriptComment' };
+
+        if (typeof window.AEM_DATA.config === 'undefined') {
+            window.AEM_DATA.config = {};
+        }
+        window.AEM_DATA.config.myCartPrintPageConfig = ${ myCartPrintModel.myCartPrintPageConfig @context='scriptComment' };
+
+    </script>
+<div class="wrapper">
+    <bd-my-cart labels="myCartPrintPageLabels" config="myCartPrintPageConfig"></bd-my-cart>
+</div>
+
+

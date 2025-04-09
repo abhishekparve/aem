@@ -1,0 +1,93 @@
+<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html"
+     data-sly-call="${templates.placeholder @ isEmpty = true}"></sly>
+<sly data-sly-use.heroCarouselModel="com.bdb.aem.core.models.HeroCarouselModel"></sly>
+<div class="bdb-hero-carousel ${properties.isBleed=='yes'? 'isImageBleed':''}" id="main">
+    <div class="container d-none d-sm-flex justify-content-between bdb-hero-carousel__navigators">
+        <div class="prev ml-3">
+            <img src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/images/left-arrow-white.svg"
+                 class="bdb-slide-prev" alt="prev" tabindex="0">
+        </div>
+        <div class="next mr-3">
+            <img src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/images/right-arrow-white.svg"
+                 class="bdb-slide-next" alt="next" tabindex="0">
+        </div>
+    </div>
+    <div class="app-js__hero-carousel container-fluid px-0">
+        <sly data-sly-list.item="${heroCarouselModel.slides}">
+            <div class="bdb-hero-carousel__banner">
+                <div class="bdb-hero-carousel__banner-img is-video" data-accountId="${item.brightcoveAccountId}" data-playerId="${item.brightcovePlayerId}" data-videoId="${item.carouselBrightcoveVideoId}">
+                    <picture>
+                        <source media="(max-width: 900px)" srcset="${item.mobileImagePath}"
+                                onload="window.aos && window.aos.refresh()">
+                       <img data-src="${item.imagePath}" alt="${item.altImage}" fetchpriority="high"
+                             onload="window.aos && window.aos.refresh()" class="${itemList.index == 0 ? '' : 'lazy'}" width="1500" height="750">
+                    </picture>
+                    <div class="bdb-hero-carousel__gradient ${item.darkMode==false? 'light-theme':''}"></div>
+                </div>
+                
+                <div class="bdb-hero-carousel__banner-text-wrapper">
+                    <div class="container bdb-hero-carousel__banner-text">
+                        <div class="row mx-auto flex-column bdb-hero-carousel__banner-content align-items-${item.ctaAlign}">
+                            <h1 class="col-12 col-sm-12 col-md-9 col-lg-6 col-xl-6 bdb-hero-carousel__banner-text-heading mb-3 ${item.fontColorVariation == '#000'? 'black-text':'white-text'}">
+                                ${item.heroTitle @context='html'}
+                            </h1>
+                            <div class="bd-rte col-12 col-sm-12 col-md-9 col-lg-6 col-xl-6 mb-4 mb-md-5 bdb-hero-carousel__banner-text-desc ${item.fontColorVariation == '#000'? 'black-text':'white-text'}">
+                                ${item.description @context='html'}
+                            </div>
+                            <p class="col-12 col-sm-12 col-md-10 col-lg-10 col-xl-10 bdb-hero-carousel__banner-text-cta-container">
+
+                                <sly data-sly-test="${item.carouselVideoEnabled}">
+                                    <button type="button" class="d-none d-lg-inline-flex btn btn-lg px-5 mr-sm-4 w-auto mb-3 mb-sm-0 align-items-center bdb-hero-carousel__btn-play-video ${item.ctaTxtColor=='#023970'? 'text-primary-blue':'text-white'} ${item.ctaBgColor=='#023970'? 'bg-primary-blue':'bg-white'}">
+                                        <img src="${item.thumbnail}" class="mr-2" role="presentation"/>
+                                        ${item.carouselPlayVideoLabel @context='html'}
+                                    </button>
+                                    <button type="button" data-toggle="modal" data-target="#heroCarouselVideo-${itemList.index}" class="d-inline-flex d-lg-none btn btn-lg px-5 mr-sm-4 w-auto mb-3 mb-sm-0  align-items-center bdb-hero-carousel__btn-play-video ${item.ctaTxtColor=='#023970'? 'text-primary-blue':'text-white'} ${item.ctaBgColor=='#023970'? 'bg-primary-blue':'bg-white'}">
+                                        <img src="${item.thumbnail}" class="mr-2" role="presentation"/>
+                                        ${item.carouselPlayVideoLabel @context='html'}
+                                    </button>
+                                </sly>
+
+                                <a data-sly-test="${item.labelCta}" href="${item.urlCta}" class="btn w-auto btn-lg py-3 px-5 mr-4 ${item.ctaTxtColor=='#023970'? 'text-primary-blue':'text-white'} ${item.ctaBgColor=='#023970'? 'bg-primary-blue':'bg-white'}">
+                                    ${item.labelCta @context='html'}
+                                </a>
+                                <a data-sly-test="${item.labelExtra}" href="${item.urlExtra}" class="btn w-auto btn-lg py-3 px-5 ${item.ctaTxtColor=='#023970'? 'text-white':'text-primary-blue'} bg-transparent">
+                                    ${item.labelExtra @context='html'}
+                                </a>
+                            </p>
+
+                            <div class="modal fade bdb-hero-carousel__banner-img-modal d-lg-none" id="heroCarouselVideo-${itemList.index}"    tabindex="-1" role="dialog" aria-labell="Hero Carousel Video Modal" aria-hidden="true" data-backdrop="static">
+                                <div class="modal-dialog modal-dialog-centered" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close bdb-hero-carousel__banner-modal-close" data-dismiss="modal"
+                                                    aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body bdb-hero-carousel__banner-img-modal-body is-video" data-accountId="${item.brightcoveAccountId}"
+                                             data-playerId="${item.brightcovePlayerId}" data-videoId="${item.carouselBrightcoveVideoId}">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </sly>
+    </div>
+    <div class="container d-flex justify-content-between align-items-center bdb-hero-carousel__navigators-mobile">
+        <div class="bdb-hero-carousel__navigators-mobile-prev ml-3 d-sm-none">
+            <img src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/images/prev-arrow-m.png"
+                 class="bdb-slide-prev" alt="prev" tabindex="0">
+        </div>
+        <div class="slick-m-dots mx-2">
+        </div>
+        <div class="bdb-hero-carousel__navigators-mobile-next mr-3 d-sm-none">
+            <img src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/images/next-arrow-m.png"
+                 class="bdb-slide-next" alt="next" tabindex="0">
+        </div>
+    </div>
+</div>

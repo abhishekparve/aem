@@ -1,0 +1,1186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Event Blog Details Page"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+        <items jcr:primaryType="nt:unstructured">
+            <columns
+                granite:class="eventBlogDetailsComponent"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/container">
+                <items jcr:primaryType="nt:unstructured">
+                    <addToHomePage
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/switch"
+                        checked="{Boolean}false"
+                        fieldDescription="Switch between add this Event to Home Page or not (Off) "
+                        fieldLabel="Add to Home Page"
+                        name="./addToHomePage"/>
+                    <togglePaddingTop
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/switch"
+                        checked="{Boolean}false"
+                        fieldDescription="Switch between Default Padding (Off) and Reduced Padding (On)"
+                        fieldLabel="Reduce Top Padding"
+                        name="./togglePaddingTop"/>
+                    <selection
+                        granite:class="cq-dialog-dropdown-showhide"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                        fieldDescription="This field is to select the type of component needed, Events or a Blog"
+                        fieldLabel="Select the type of component to be added"
+                        name="./selection"
+                        required="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <default
+                                jcr:primaryType="nt:unstructured"
+                                text="Select Type of Component"
+                                value=""/>
+                            <event
+                                jcr:primaryType="nt:unstructured"
+                                text="Event Details"
+                                value="event"/>
+                            <blog
+                                jcr:primaryType="nt:unstructured"
+                                text="Blog Details"
+                                value="blog"/>
+                        </items>
+                        <granite:data
+                            jcr:primaryType="nt:unstructured"
+                            cq-dialog-dropdown-showhide-target=".showhidetargets"/>
+                    </selection>
+                    <bannerContainer
+                        granite:class="showhidetargets"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Banner Section"
+                        sling:resourceType="granite/ui/components/foundation/container">
+                        <layout
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/foundation/layouts/collapsible"/>
+                        <items jcr:primaryType="nt:unstructured">
+                            <bannerTitle
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldDescription="Banner Title"
+                                fieldLabel="Title"
+                                name="./bannerTitle"/>
+                            <bannerImage
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                fieldDescription="Banner Image"
+                                fieldLabel="Image"
+                                name="./bannerImage"
+                                rootPath="/content/dam"/>
+                            <bannerThumbnailImage
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                fieldDescription="Banner Thumbnail Image for Landing Page"
+                                fieldLabel="Thumbnail Image"
+                                name="./bannerThumbnailImage"
+                                rootPath="/content/dam"/>
+                            <bannerImageAlt
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldDescription="Banner Image Alt Text"
+                                fieldLabel="Image Alt Text"
+                                name="./bannerImageAlt"/>
+                            <bannerURL
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                fieldDescription="Banner Hyperlink"
+                                fieldLabel="Hyperlink"
+                                name="./bannerURL"/>
+                            <bannerAlign
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                fieldDescription="Banner Title Alignment"
+                                fieldLabel="Title Alignment"
+                                name="./bannerAlign">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <def
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Select Alignment"
+                                        value=""/>
+                                    <left
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Title Left"
+                                        value="left"/>
+                                    <right
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Title Right"
+                                        value="right"/>
+                                </items>
+                            </bannerAlign>
+                            <fontColor
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                fieldDescription="Banner Title and Date Font color variation"
+                                fieldLabel="Font Color"
+                                name="./fontColorVariation">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <white
+                                        jcr:primaryType="nt:unstructured"
+                                        text="White"
+                                        value="#fff"/>
+                                    <black
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Black"
+                                        value="#424242"/>
+                                </items>
+                            </fontColor>
+                            <backgroundPositionStyle
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                fieldDescription="For Responsive Views of the Image, select from the 3 options"
+                                fieldLabel="Background Image Position"
+                                name="./backgroundPositionStyle"
+                                required="{Boolean}true">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <left
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Left"
+                                        value="object-position-left"/>
+                                    <right
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Right"
+                                        value="object-position-right"/>
+                                </items>
+                            </backgroundPositionStyle>
+                            <eventType
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/select"
+                                fieldLabel="Event Type"
+                                name="./eventType">
+                                <datasource
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="acs-commons/components/utilities/genericlist/datasource"
+                                    path="/etc/acs-commons/lists/bdb/event_types"/>
+                            </eventType>
+                            <eventTopic
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/select"
+                                fieldLabel="Event Topic"
+                                name="./eventTopic">
+                                <datasource
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="acs-commons/components/utilities/genericlist/datasource"
+                                    path="/etc/acs-commons/lists/bdb/event_topics"/>
+                            </eventTopic>
+                        </items>
+                        <granite:data
+                            jcr:primaryType="nt:unstructured"
+                            showhidetargetvalue="event"/>
+                    </bannerContainer>
+                    <multifieldContainer
+                        granite:class="showhidetargets"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Multifield Text Section"
+                        sling:resourceType="granite/ui/components/foundation/container">
+                        <layout
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/foundation/layouts/collapsible"/>
+                        <items jcr:primaryType="nt:unstructured">
+                            <multifieldSection
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                composite="{Boolean}true"
+                                fieldLabel="Add Titles and Descriptions">
+                                <granite:data
+                                    jcr:primaryType="nt:unstructured"
+                                    max-items="3"/>
+                                <field
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/container"
+                                    name="./multifieldSection">
+                                    <items jcr:primaryType="nt:unstructured">
+                                        <column
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/container">
+                                            <items jcr:primaryType="nt:unstructured">
+                                                <title
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldDescription="Multifield Title"
+                                                    fieldLabel="Title"
+                                                    name="./title"/>
+                                                <description
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="cq/gui/components/authoring/dialog/richtext"
+                                                    fieldDescription="Multifield Description"
+                                                    fieldLabel="Description"
+                                                    name="./description"
+                                                    useFixedInlineToolbar="{Boolean}true">
+                                                    <rtePlugins
+							                            jcr:primaryType="nt:unstructured"
+							                            sling:resourceSuperType="/apps/bdb-aem/components/authoring/dialog/richtext/rtePlugins"/>
+							                        <uiSettings
+							                            jcr:primaryType="nt:unstructured"
+							                            sling:resourceSuperType="/apps/bdb-aem/components/authoring/dialog/richtext/uiSettings"/>
+                                                </description>
+                                            </items>
+                                        </column>
+                                    </items>
+                                </field>
+                            </multifieldSection>
+                        </items>
+                        <granite:data
+                            jcr:primaryType="nt:unstructured"
+                            showhidetargetvalue="event"/>
+                    </multifieldContainer>
+                    <multifieldSpeakerContainer
+                        granite:class="showhidetargets"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Multifield speaker Section"
+                        sling:resourceType="granite/ui/components/foundation/container">
+                        <layout
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/foundation/layouts/collapsible"/>
+                        <items jcr:primaryType="nt:unstructured">
+                            <multifieldSpeakerSection
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                composite="{Boolean}true"
+                                fieldLabel="Add Multiple Speaker Details">
+                                <granite:data
+                                    jcr:primaryType="nt:unstructured"
+                                    max-items="5"/>
+                                <field
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/container"
+                                    name="./multifieldSpeakerSection">
+                                    <items jcr:primaryType="nt:unstructured">
+                                        <column
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/container">
+                                            <items jcr:primaryType="nt:unstructured">
+                                                <speakerTitle
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldDescription="Speaker Title"
+                                                    fieldLabel="Title"
+                                                    name="./speakerTitle"/>
+                                                <speakerDescription
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="cq/gui/components/authoring/dialog/richtext"
+                                                    data-char-limit="500"
+                                                    fieldDescription="Speaker Description"
+                                                    fieldLabel="Description"
+                                                    name="./speakerDescription"
+                                                    useFixedInlineToolbar="{Boolean}true">
+                                                    <rtePlugins
+							                            jcr:primaryType="nt:unstructured"
+							                            sling:resourceSuperType="/apps/bdb-aem/components/authoring/dialog/richtext/rtePlugins"/>
+							                        <uiSettings
+							                            jcr:primaryType="nt:unstructured"
+							                            sling:resourceSuperType="/apps/bdb-aem/components/authoring/dialog/richtext/uiSettings"/>
+                                                </speakerDescription>
+                                                <speakerImage
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                    fieldDescription="Speaker Image"
+                                                    fieldLabel="Image"
+                                                    name="./speakerImage"
+                                                    rootPath="/content/dam"/>
+                                                <speakerImageAlt
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldDescription="Speaker Image Alt"
+                                                    fieldLabel="Image Alt Text"
+                                                    name="./speakerImageAlt"/>
+                                                <speakerName
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldDescription="Speaker Image Name"
+                                                    fieldLabel="Image Name"
+                                                    name="./speakerName"/>
+                                                <speakerImageTitle
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldDescription="Speaker Image Title"
+                                                    fieldLabel="Image Title"
+                                                    name="./speakerImageTitle"/>
+                                                <speakerImageDescription
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldDescription="Speaker Image Description"
+                                                    fieldLabel="Image Description"
+                                                    name="./speakerImageDescription"/>
+                                            </items>
+                                        </column>
+                                    </items>
+                                </field>
+                            </multifieldSpeakerSection>
+                        </items>
+                        <granite:data
+                            jcr:primaryType="nt:unstructured"
+                            showhidetargetvalue="event"/>
+                    </multifieldSpeakerContainer>
+                    <registrationContainer
+                        granite:class="showhidetargets"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Registration Section"
+                        sling:resourceType="granite/ui/components/foundation/container">
+                        <layout
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/foundation/layouts/collapsible"/>
+                        <items jcr:primaryType="nt:unstructured">
+                            <enableRegistration
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                fieldDescription="Check to enable Registration Section"
+                                name="./enableRegistration"
+                                text="Enable Registration Section"
+                                uncheckedValue="{Boolean}false"
+                                value="{Boolean}true"/>
+                            <eventDateAndTimeLabel
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                composite="{Boolean}true"
+                                fieldLabel="Add Event Start Date and Event End Date">
+                                <granite:data
+                                    jcr:primaryType="nt:unstructured"
+                                    max-items="5"/>
+                                <field
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/container"
+                                    name="./eventDateAndTimeLabel">
+                                    <items jcr:primaryType="nt:unstructured">
+                                        <column
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/container">
+                                            <items jcr:primaryType="nt:unstructured">
+                                                <make-multifieldEventStartDate-string
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/hidden"
+                                                    name="./multifieldEventStartDate@TypeHint"
+                                                    value="String"/>
+                                                <multifieldEventStartDate
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="/libs/granite/ui/components/coral/foundation/form/datepicker"
+                                                    fieldLabel="Event Start Date and Time"
+                                                    name="./multifieldEventStartDate"
+                                                    type="datetime"
+                                                    displayedFormat="MMMM DD, YYYY hh:mm a"
+                                                    valueFormat="YYYY-MM-DD[T]HH:mm:ss.SSSZ"/>
+                                                <make-multifieldEndStartDate-string
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/hidden"
+                                                    name="./multifieldEventEndDate@TypeHint"
+                                                    value="String"/>
+                                                <multifieldEventEndDate
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="/libs/granite/ui/components/coral/foundation/form/datepicker"
+                                                    displayedFormat="MMMM DD, YYYY hh:mm a"
+                                                    fieldLabel="Event End Date and Time"
+                                                    name="./multifieldEventEndDate"
+                                                    type="datetime"
+                                                    valueFormat="YYYY-MM-DD[T]HH:mm:ss.SSSZ"/>
+                                            </items>
+                                        </column>
+                                    </items>
+                                </field>
+                            </eventDateAndTimeLabel>
+                            <dateIcon
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                fieldDescription="Event Date Icon"
+                                fieldLabel="Date Icon"
+                                name="./dateIcon"
+                                rootPath="/content/dam"/>
+                            <timeIcon
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                fieldDescription="Event Time Icon"
+                                fieldLabel="Time Icon"
+                                name="./timeIcon"
+                                rootPath="/content/dam"/>
+                            <eventLocation
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/select"
+                                fieldLabel="Event Location"
+                                name="./eventLocation">
+                                <datasource
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="acs-commons/components/utilities/genericlist/datasource"
+                                    path="/etc/acs-commons/lists/bdb/event_locations"/>
+                            </eventLocation>
+                            <locationIcon
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                fieldDescription="Event Location Icon"
+                                fieldLabel="Location Icon"
+                                name="./locationIcon"
+                                rootPath="/content/dam"/>
+                            <ctaLabel
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldDescription="Register Button Label"
+                                fieldLabel="Button Label"
+                                name="./ctaLabel"/>
+                            <ctaUrl
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                fieldDescription="Register Button URL"
+                                fieldLabel="Button URL"
+                                name="./ctaUrl"
+                                rootPath="/content"/>
+                       		<loadInModal
+                                granite:class="cq-dialog-checkbox-showhide"
+								jcr:primaryType="nt:unstructured"
+								sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+								name="./loadInModal"
+								text="Load Form In Modal For Register Now"
+								fieldDescription="If this is selected Register Now will open in Modal"
+								uncheckedValue="{Boolean}false" 
+								value="yes">
+								<granite:data 
+									jcr:primaryType="nt:unstructured"
+									cq-dialog-checkbox-showhide-target=".togglefieldPrimary" />
+							</loadInModal>
+                            <primaryFormFields
+                                granite:class="togglefieldPrimary"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Marketo Form Details Primary"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                            <items jcr:primaryType="nt:unstructured">
+                                <rootURL
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldLabel="Root URL"
+                                        fieldDescription="Enter the Root URL."
+                                        name="./rootURL"/>
+                                <munchkinID
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldLabel="MunchkinID"
+                                        fieldDescription="Enter the Munchkin ID."
+                                        name="./munchkinID"/>
+                                <formID
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldLabel="FormID"
+                                        fieldDescription="Enter the Form ID."
+                                        name="./formID"/>
+                                <titleText
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldLabel="Title"
+                                        fieldDescription="Enter the Form title."
+                                        name="./formTitle"/>
+                                <bodyText
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldLabel="Body Text"
+                                        fieldDescription="Enter the Form Body Description."
+                                        name="./formBodyText"/>
+                            </items>
+                        </primaryFormFields>
+                        </items>
+                        <granite:data
+                            jcr:primaryType="nt:unstructured"
+                            showhidetargetvalue="event"/>
+                    </registrationContainer>
+                    <bannerSection
+                        granite:class="showhidetargets"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Banner Section"
+                        sling:resourceType="granite/ui/components/foundation/container">
+                        <layout
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/foundation/layouts/collapsible"/>
+                        <items jcr:primaryType="nt:unstructured">
+                            <bannerImage
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                fieldDescription="Banner Image"
+                                fieldLabel="Image"
+                                name="./bannerImageBlog"
+                                rootPath="/content/dam"/>
+                            <bannerThumbnailImage
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                fieldDescription="Banner Thumbnail Image for Landing Page"
+                                fieldLabel="Thumbnail Image"
+                                name="./bannerThumbnailImageBlog"
+                                rootPath="/content/dam"/>
+                            <bannerImageAlt
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldDescription="Banner Image Alt Text"
+                                fieldLabel="Image Alt Text"
+                                name="./bannerImageAltBlog"/>
+                        </items>
+                        <granite:data
+                            jcr:primaryType="nt:unstructured"
+                            showhidetargetvalue="blog"/>
+                    </bannerSection>
+                    <blogSection
+                        granite:class="showhidetargets"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Blog Section"
+                        sling:resourceType="granite/ui/components/foundation/container">
+                        <layout
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/foundation/layouts/collapsible"/>
+                        <items jcr:primaryType="nt:unstructured">
+                            <bannerTitle
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldDescription="Banner Title"
+                                fieldLabel="Title"
+                                name="./bannerTitleBlog"/>
+                            <bannerSubTitle
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="/libs/granite/ui/components/coral/foundation/form/textarea"
+                                fieldDescription="Banner Sub Title"
+                                fieldLabel="Sub Title"
+                                name="./bannerSubTitle"/>
+                            <make-blogDate-string
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/hidden"
+                                name="./blogDate@TypeHint"
+                                value="String"/>
+                            <blogDate
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="/libs/granite/ui/components/coral/foundation/form/datepicker"
+                                displayedFormat="MMMM DD, YYYY"
+                                fieldLabel="Blog Date"
+                                name="./blogDate"
+                                valueFormat="YYYY-MM-DD[T]HH:mm:ss.SSSZ"/>
+                            <bannerByLine
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="cq/gui/components/authoring/dialog/richtext"
+                                fieldDescription="Banner Byline"
+                                fieldLabel="Byline"
+                                name="./bannerByline"
+                                useFixedInlineToolbar="{Boolean}true">
+                                <rtePlugins
+		                            jcr:primaryType="nt:unstructured"
+		                            sling:resourceSuperType="/apps/bdb-aem/components/authoring/dialog/richtext/rtePlugins"/>
+		                        <uiSettings
+		                            jcr:primaryType="nt:unstructured"
+		                            sling:resourceSuperType="/apps/bdb-aem/components/authoring/dialog/richtext/uiSettings"/>
+                       		</bannerByLine>
+                            <multifieldSpeakerContainerBlog
+		                        granite:class="showhidetargets"
+		                        jcr:primaryType="nt:unstructured"
+		                        jcr:title="Multifield speaker Section"
+		                        sling:resourceType="granite/ui/components/foundation/container">
+		                        <layout
+		                            jcr:primaryType="nt:unstructured"
+		                            sling:resourceType="granite/ui/components/foundation/layouts/collapsible"/>
+		                        <items jcr:primaryType="nt:unstructured">
+		                            <multifieldSpeakerSection
+		                                jcr:primaryType="nt:unstructured"
+		                                sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+		                                composite="{Boolean}true"
+		                                fieldLabel="Add Multiple Speaker Details">
+		                                <granite:data
+		                                    jcr:primaryType="nt:unstructured"
+		                                    max-items="5"/>
+		                                <field
+		                                    jcr:primaryType="nt:unstructured"
+		                                    sling:resourceType="granite/ui/components/coral/foundation/container"
+		                                    name="./multifieldSpeakerSectionBlog">
+		                                    <items jcr:primaryType="nt:unstructured">
+		                                        <column
+		                                            jcr:primaryType="nt:unstructured"
+		                                            sling:resourceType="granite/ui/components/coral/foundation/container">
+		                                            <items jcr:primaryType="nt:unstructured">
+		                                                <speakerImage
+		                                                    jcr:primaryType="nt:unstructured"
+		                                                    sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+		                                                    fieldDescription="Speaker Image"
+		                                                    fieldLabel="Interviewee Image"
+		                                                    name="./speakerImageBlog"
+		                                                    rootPath="/content/dam"/>
+		                                                <speakerImageAlt
+		                                                    jcr:primaryType="nt:unstructured"
+		                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+		                                                    fieldDescription="Speaker Image Alt"
+		                                                    fieldLabel="Interviewee Image Alt Text"
+		                                                    name="./speakerImageAltBlog"/>
+		                                                <speakerName
+		                                                    jcr:primaryType="nt:unstructured"
+		                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+		                                                    fieldDescription="Speaker Image Name"
+		                                                    fieldLabel="Interviewee Name"
+		                                                    name="./speakerNameBlog"/>
+		                                                <speakerImageTitle
+		                                                    jcr:primaryType="nt:unstructured"
+		                                                    sling:resourceType="cq/gui/components/authoring/dialog/richtext"
+		                                                    data-char-limit="500"
+		                                                    fieldDescription="Speaker Image Title"
+		                                                    fieldLabel="Interviewee Title"
+		                                                    name="./speakerImageTitleBlog"
+		                                                    useFixedInlineToolbar="{Boolean}true">
+		                                                    <rtePlugins
+									                            jcr:primaryType="nt:unstructured"
+									                            sling:resourceSuperType="/apps/bdb-aem/components/authoring/dialog/richtext/rtePlugins"/>
+									                        <uiSettings
+									                            jcr:primaryType="nt:unstructured"
+									                            sling:resourceSuperType="/apps/bdb-aem/components/authoring/dialog/richtext/uiSettings"/>
+		                                                </speakerImageTitle>
+		                                                <speakerImageDescription
+		                                                    jcr:primaryType="nt:unstructured"
+		                                                    sling:resourceType="cq/gui/components/authoring/dialog/richtext"
+		                                                    data-char-limit="500"
+		                                                    fieldDescription="Speaker Image Description"
+		                                                    fieldLabel="Interviewee Description"
+		                                                    name="./speakerImageDescriptionBlog"
+		                                                    useFixedInlineToolbar="{Boolean}true">
+		                                                    <rtePlugins
+									                            jcr:primaryType="nt:unstructured"
+									                            sling:resourceSuperType="/apps/bdb-aem/components/authoring/dialog/richtext/rtePlugins"/>
+									                        <uiSettings
+									                            jcr:primaryType="nt:unstructured"
+									                            sling:resourceSuperType="/apps/bdb-aem/components/authoring/dialog/richtext/uiSettings"/>
+		                                                </speakerImageDescription>
+		                                            </items>
+		                                        </column>
+		                                    </items>
+		                                </field>
+                           </multifieldSpeakerSection>
+                        </items>
+                        <granite:data
+                            jcr:primaryType="nt:unstructured"
+                            showhidetargetvalue="blog"/>
+                    </multifieldSpeakerContainerBlog>
+                           
+                            <bannerDescription
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="cq/gui/components/authoring/dialog/richtext"
+                                fieldDescription="Banner Description"
+                                fieldLabel="Description"
+                                name="./bannerDescription"
+                                useFixedInlineToolbar="{Boolean}true">
+                                <rtePlugins
+		                            jcr:primaryType="nt:unstructured"
+		                            sling:resourceSuperType="/apps/bdb-aem/components/authoring/dialog/richtext/rtePlugins"/>
+		                        <uiSettings
+		                            jcr:primaryType="nt:unstructured"
+		                            sling:resourceSuperType="/apps/bdb-aem/components/authoring/dialog/richtext/uiSettings"/>
+                            </bannerDescription>
+                            <blogTopic1
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldDescription="No special characters (except Space) allowed."
+                                fieldLabel="Keywords for Blog- 1"
+                                name="./blogTopic1"/>
+                            <blogTopic2
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldDescription="No special characters (except Space) allowed."
+                                fieldLabel="Keywords for Blog- 2"
+                                name="./blogTopic2"/>
+                            <blogTopic3
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldDescription="No special characters (except Space) allowed."
+                                fieldLabel="Keywords for Blog- 3"
+                                name="./blogTopic3"/>
+                        </items>
+                        <granite:data
+                            jcr:primaryType="nt:unstructured"
+                            showhidetargetvalue="blog"/>
+                    </blogSection>
+                    <socialField
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Social Section"
+                        sling:resourceType="granite/ui/components/foundation/container">
+                        <layout
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/foundation/layouts/collapsible"/>
+                        <items jcr:primaryType="nt:unstructured">
+                            <allowSocial
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                name="./allowSocial"
+                                text="Show / Hide Social"
+                                uncheckedValue="{Boolean}false" 
+                                checked= "{Boolean}true"
+                                value="yes"/>
+                            <socialLabel
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldDescription="Social Label"
+                                fieldLabel="Label"
+                                name="./socialLabel"/>
+                        	<linkedIn 
+								granite:class="cq-dialog-checkbox-showhide" 
+								jcr:primaryType="nt:unstructured"
+								sling:resourceType="granite/ui/components/coral/foundation/form/checkbox" 
+							    name="./linkedIn" 
+								text="LinkedIn"
+								fieldDescription="If this is selected linkedin icon will appear" 
+								uncheckedValue="{Boolean}false" 
+								checked= "{Boolean}true"
+								value="yes">
+								<granite:data 
+									jcr:primaryType="nt:unstructured" 
+									cq-dialog-checkbox-showhide-target=".showLinkedIn" />
+							</linkedIn>
+							<showLinkedIn 
+						    	granite:class="showLinkedIn" 
+						        jcr:primaryType="nt:unstructured" 
+						        jcr:title="LinkedIn"
+						        sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+						        <items jcr:primaryType="nt:unstructured">
+						                <socialIconLinkedIn jcr:primaryType="nt:unstructured"
+						                        sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+						                        fieldDescription="Social Icon" fieldLabel="Icon" name="./socialIconLinkedIn" rootPath="/content/dam"
+						                        value="/content/dam/bdb/general/new-icons/Linkedin.svg"/>
+						                <socialAltLinkedIn jcr:primaryType="nt:unstructured"
+						                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+						                        fieldDescription="Social Icon Alt Text" fieldLabel="Icon Alt Text" name="./socialAltLinkedIn"
+						                        value="LinkedIn"/>
+						                <socialIdLinkedIn jcr:primaryType="nt:unstructured"
+						                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+						                        fieldDescription="Social Id"
+						                        fieldLabel="Social Id" name="./socialIdLinkedIn" 
+						                        value="linkedin"/>
+						        </items>
+							</showLinkedIn>
+                        	<facebook 
+								granite:class="cq-dialog-checkbox-showhide" 
+								jcr:primaryType="nt:unstructured"
+								sling:resourceType="granite/ui/components/coral/foundation/form/checkbox" name="./facebook" text="Facebook"
+								fieldDescription="If this is selected facebook icon will appear"
+								uncheckedValue="{Boolean}false" 
+								checked= "{Boolean}true"
+								value="yes">
+								<granite:data jcr:primaryType="nt:unstructured" 
+								cq-dialog-checkbox-showhide-target=".showFacebook" />
+							</facebook>
+							<showFacebook 
+								granite:class="showFacebook" 
+								jcr:primaryType="nt:unstructured" jcr:title="Facebook"
+								sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+								<items jcr:primaryType="nt:unstructured">
+									<socialIconFacebook jcr:primaryType="nt:unstructured"
+										sling:resourceType="granite/ui/components/coral/foundation/form/pathfield" 
+										fieldDescription="Social Icon"
+										fieldLabel="Icon" name="./socialIconFacebook" rootPath="/content/dam"
+										value="/content/dam/bdb/general/new-icons/faceook1.svg" />
+									<socialAltFacebook jcr:primaryType="nt:unstructured"
+										sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+										fieldDescription="Social Icon Alt Text" fieldLabel="Icon Alt Text" 
+										name="./socialAltFacebook"
+										value="Facebook" />
+									<socialIdFacebook jcr:primaryType="nt:unstructured"
+										sling:resourceType="granite/ui/components/coral/foundation/form/textfield" 
+										fieldDescription="Social Id"
+										fieldLabel="Social Id"
+										name="./socialIdFacebook" 
+										value="facebook" />
+								</items>
+							</showFacebook>
+							<twitter 
+								granite:class="cq-dialog-checkbox-showhide" 
+								jcr:primaryType="nt:unstructured"
+								sling:resourceType="granite/ui/components/coral/foundation/form/checkbox" name="./twitter" text="Twitter"
+								fieldDescription="If this is selected twitter icon will appear" 
+								uncheckedValue="{Boolean}false" 
+								checked= "{Boolean}true"
+								value="yes">
+								<granite:data jcr:primaryType="nt:unstructured" cq-dialog-checkbox-showhide-target=".showTwitter" />
+							</twitter>
+							<showTwitter granite:class="showTwitter" jcr:primaryType="nt:unstructured" jcr:title="Twitter"
+								sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+								<items jcr:primaryType="nt:unstructured">
+									<socialIconTwitter jcr:primaryType="nt:unstructured"
+										sling:resourceType="granite/ui/components/coral/foundation/form/pathfield" 
+										fieldDescription="Social Icon"
+										fieldLabel="Icon" name="./socialIconTwitter" rootPath="/content/dam"
+										value="/content/dam/bdb/general/new-icons/twitter.svg" />
+									<socialAltTwitter jcr:primaryType="nt:unstructured"
+										sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+										fieldDescription="Social Icon Alt Text" fieldLabel="Icon Alt Text" name="./socialAltTwitter"
+										value="Twitter" />
+									<socialIdTwitter jcr:primaryType="nt:unstructured"
+										sling:resourceType="granite/ui/components/coral/foundation/form/textfield" 
+										fieldDescription="Social Id"
+										fieldLabel="Social Id"
+										name="./socialIdTwitter" 
+										value="twitter" />
+								</items>
+							</showTwitter>
+							<email granite:class="cq-dialog-checkbox-showhide" jcr:primaryType="nt:unstructured"
+								sling:resourceType="granite/ui/components/coral/foundation/form/checkbox" name="./email" text="Email"
+								fieldDescription="If this is selected Email icon will appear" 
+								uncheckedValue="{Boolean}false" 
+								checked= "{Boolean}true"
+								value="yes">
+								<granite:data jcr:primaryType="nt:unstructured" cq-dialog-checkbox-showhide-target=".showEmail" />
+							</email>
+							<showEmail granite:class="showEmail" jcr:primaryType="nt:unstructured" jcr:title="Email"
+								sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+								<items jcr:primaryType="nt:unstructured">
+									<socialIconEmail jcr:primaryType="nt:unstructured"
+										sling:resourceType="granite/ui/components/coral/foundation/form/pathfield" fieldDescription="Social Icon"
+										fieldLabel="Icon" name="./socialIconEmail" rootPath="/content/dam"
+										value="/content/dam/bdb/general/new-icons/Email-Icon.svg" />
+									<socialAltEmail jcr:primaryType="nt:unstructured"
+										sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+										fieldDescription="Social Icon Alt Text" fieldLabel="Icon Alt Text" name="./socialAltEmail" value="Email" />
+									<socialIdEmail jcr:primaryType="nt:unstructured"
+										sling:resourceType="granite/ui/components/coral/foundation/form/textfield" 
+										fieldDescription="Social Id"
+										fieldLabel="Social Id"
+										name="./socialIdEmail" 
+										value="email" />
+								</items>
+							</showEmail>
+							<print granite:class="cq-dialog-checkbox-showhide" jcr:primaryType="nt:unstructured"
+								sling:resourceType="granite/ui/components/coral/foundation/form/checkbox" name="./print" text="Print"
+								fieldDescription="If this is selected Print icon will appear" 
+								uncheckedValue="{Boolean}false" 
+								checked= "{Boolean}true"
+								value="yes">
+								<granite:data jcr:primaryType="nt:unstructured" cq-dialog-checkbox-showhide-target=".showPrint" />
+							</print>
+							<showPrint granite:class="showPrint" jcr:primaryType="nt:unstructured" jcr:title="Print"
+								sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+								<items jcr:primaryType="nt:unstructured">
+									<socialIconPrint jcr:primaryType="nt:unstructured"
+										sling:resourceType="granite/ui/components/coral/foundation/form/pathfield" fieldDescription="Social Icon"
+										fieldLabel="Icon" name="./socialIconPrint" rootPath="/content/dam"
+										value="/content/dam/bdb/general/new-icons/Print-Icon.svg" />
+									<socialAltPrint jcr:primaryType="nt:unstructured"
+										sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+										fieldDescription="Social Icon Alt Text" fieldLabel="Icon Alt Text" name="./socialAltPrint" value="Print" />
+									<socialIdPrint jcr:primaryType="nt:unstructured"
+										sling:resourceType="granite/ui/components/coral/foundation/form/textfield" 
+										fieldDescription="Social Id"
+										fieldLabel="Social Id"
+										name="./socialIdPrint" 
+										value="print" />
+								</items>
+							</showPrint>
+							<shareLink granite:class="cq-dialog-checkbox-showhide" jcr:primaryType="nt:unstructured"
+								sling:resourceType="granite/ui/components/coral/foundation/form/checkbox" name="./shareLink" text="Share Link"
+								fieldDescription="If this is selected Share Link icon will appear" 
+								uncheckedValue="{Boolean}false" 
+								checked= "{Boolean}true" 
+								value="yes">
+								<granite:data jcr:primaryType="nt:unstructured" cq-dialog-checkbox-showhide-target=".showShareLink" />
+							</shareLink>
+							<showShareLink granite:class="showShareLink" jcr:primaryType="nt:unstructured" jcr:title="Share Link"
+								sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+								<items jcr:primaryType="nt:unstructured">
+									<socialIconShareLink jcr:primaryType="nt:unstructured"
+										sling:resourceType="granite/ui/components/coral/foundation/form/pathfield" fieldDescription="Social Icon"
+										fieldLabel="Icon" name="./socialIconShareLink" rootPath="/content/dam"
+										value="/content/dam/bdb/general/new-icons/Copy-Link-Icon.svg" />
+									<socialAltShareLink jcr:primaryType="nt:unstructured"
+										sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+										fieldDescription="Social Icon Alt Text" fieldLabel="Icon Alt Text" name="./socialAltShareLink"
+										value="Share Link" />
+									<socialIdShareLink jcr:primaryType="nt:unstructured"
+										sling:resourceType="granite/ui/components/coral/foundation/form/textfield" 
+										fieldDescription="Social Id"
+										fieldLabel="Social Id"
+										name="./socialIdShareLink" 
+										value="copyLink" />
+								</items>
+							</showShareLink>
+                        </items>
+                    </socialField>
+                    <eventBrightcoveIDField
+                        granite:class="showhidetargets"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Brightcove Video"
+                        sling:resourceType="granite/ui/components/foundation/container">
+                        <layout
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/foundation/layouts/collapsible"/>
+                        <items jcr:primaryType="nt:unstructured">
+                            <fieldSetVideo
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Associated Video"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <eventBorder
+				                        jcr:primaryType="nt:unstructured"
+				                        sling:resourceType="granite/ui/components/coral/foundation/form/switch"
+				                        checked="{Boolean}false"
+				                        fieldDescription="Switch between Default Border (Off) and Border (On)"
+				                        fieldLabel="Add Video Border for Event"
+				                        name="./eventBorder"/>
+                                    <eventVideoId
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldDescription="Event Brightcove Video Id"
+                                        fieldLabel="Brightcove Video Id"
+                                        name="./eventVideoId"/>
+                                    <eventVideoCaption
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="cq/gui/components/authoring/dialog/richtext"
+                                        fieldDescription="Video Caption"
+                                        fieldLabel="Video Caption"
+                                        name="./eventVideoCaption"
+                                        useFixedInlineToolbar="{Boolean}true">
+                                        <rtePlugins
+				                            jcr:primaryType="nt:unstructured"
+				                            sling:resourceSuperType="/apps/bdb-aem/components/authoring/dialog/richtext/rtePlugins"/>
+				                        <uiSettings
+				                            jcr:primaryType="nt:unstructured"
+				                            sling:resourceSuperType="/apps/bdb-aem/components/authoring/dialog/richtext/uiSettings"/>
+                                    </eventVideoCaption>
+                                    <eventVideoTitle
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldDescription="Sub Title"
+                                        fieldLabel="Sub Title"
+                                        name="./eventVideoTitle"/>
+                                    <eventVideoDesc
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="cq/gui/components/authoring/dialog/richtext"
+                                        fieldDescription="Video Description"
+                                        fieldLabel="Video Description"
+                                        name="./eventVideoDesc"
+                                        useFixedInlineToolbar="{Boolean}true">
+                                        <rtePlugins
+				                            jcr:primaryType="nt:unstructured"
+				                            sling:resourceSuperType="/apps/bdb-aem/components/authoring/dialog/richtext/rtePlugins"/>
+				                        <uiSettings
+				                            jcr:primaryType="nt:unstructured"
+				                            sling:resourceSuperType="/apps/bdb-aem/components/authoring/dialog/richtext/uiSettings"/>
+                                    </eventVideoDesc>
+                                </items>
+                            </fieldSetVideo>
+                        </items>
+                        <granite:data
+                            jcr:primaryType="nt:unstructured"
+                            showhidetargetvalue="event"/>
+                    </eventBrightcoveIDField>
+                    <blogBrightcoveIDField
+                        granite:class="showhidetargets"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Brightcove Video"
+                        sling:resourceType="granite/ui/components/foundation/container">
+                        <layout
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/foundation/layouts/collapsible"/>
+                        <items jcr:primaryType="nt:unstructured">
+                            <fieldSetVideo
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Associated Video"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <blogBorder
+				                        jcr:primaryType="nt:unstructured"
+				                        sling:resourceType="granite/ui/components/coral/foundation/form/switch"
+				                        checked="{Boolean}false"
+				                        fieldDescription="Switch between Default Border (Off) and Border (On)"
+				                        fieldLabel="Add Video Border for Blogs"
+				                        name="./blogBorder"/>
+                                    <blogVideoId
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldDescription="Brightcove Video Id"
+                                        fieldLabel="Brightcove Video Id"
+                                        name="./blogVideoId"/>
+                                    <blogVideoCaption
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="cq/gui/components/authoring/dialog/richtext"
+                                        fieldDescription="Video Caption"
+                                        fieldLabel="Video Caption"
+                                        name="./blogVideoCaption"
+                                        useFixedInlineToolbar="{Boolean}true">
+                                        <rtePlugins
+				                            jcr:primaryType="nt:unstructured"
+				                            sling:resourceSuperType="/apps/bdb-aem/components/authoring/dialog/richtext/rtePlugins"/>
+				                        <uiSettings
+				                            jcr:primaryType="nt:unstructured"
+				                            sling:resourceSuperType="/apps/bdb-aem/components/authoring/dialog/richtext/uiSettings"/>
+                                    </blogVideoCaption>
+                                    <blogVideoTitle
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldDescription="Sub Title"
+                                        fieldLabel="Sub Title"
+                                        name="./blogVideoTitle"/>
+                                    <blogVideoDesc
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="cq/gui/components/authoring/dialog/richtext"
+                                        fieldDescription="Video Description"
+                                        fieldLabel="Video Description"
+                                        name="./blogVideoDesc"
+                                        useFixedInlineToolbar="{Boolean}true">
+                                        <rtePlugins
+				                            jcr:primaryType="nt:unstructured"
+				                            sling:resourceSuperType="/apps/bdb-aem/components/authoring/dialog/richtext/rtePlugins"/>
+				                        <uiSettings
+				                            jcr:primaryType="nt:unstructured"
+				                            sling:resourceSuperType="/apps/bdb-aem/components/authoring/dialog/richtext/uiSettings"/>
+                                    </blogVideoDesc>
+                                </items>
+                            </fieldSetVideo>
+                        </items>
+                        <granite:data
+                            jcr:primaryType="nt:unstructured"
+                            showhidetargetvalue="blog"/>
+                    </blogBrightcoveIDField>
+                    <eventCTASection
+                            granite:class="showhidetargets"
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="CTA Section"
+                            sling:resourceType="granite/ui/components/foundation/container">
+                        <layout
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/layouts/collapsible"/>
+                        <items jcr:primaryType="nt:unstructured">
+                            <eventFieldSetCTA
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="CTA Details"
+                                    sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <bluePrimaryCta
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                            fieldDescription="Check enables Blue background of CTA. (Default-White background)"
+                                            name="./eventBluePrimaryCta"
+                                            text="Blue Background of CTA"
+                                            value="true"/>
+                                    <label
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            fieldDescription="Label for CTA"
+                                            fieldLabel="Label"
+                                            name="./eventLabelCta"/>
+                                    <ctaUrl
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                                            fieldDescription="CTA URL"
+                                            fieldLabel="URL"
+                                            name="./eventUrlCta"
+                                            rootPath="/content"/>
+                                    <openNewTabCta
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                            fieldDescription="Check to open link in New Tab. By default, link opens in same tab."
+                                            name="./eventOpenNewTabCta"
+                                            text="Open Link in New Tab"
+                                            uncheckedValue="{Boolean}false"
+                                            value="{Boolean}true"/>
+                                </items>
+                            </eventFieldSetCTA>
+                            <eventFieldSetCTAOptional
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="Additional CTA Details"
+                                    sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <label
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            fieldDescription="Label for CTA"
+                                            fieldLabel="Label"
+                                            name="./eventLabelCtaAdd"/>
+                                    <ctaUrl
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                                            fieldDescription="CTA URL"
+                                            fieldLabel="URL"
+                                            name="./eventUrlCtaAdd"
+                                            rootPath="/content"/>
+                                    <openNewTabCtaAdd
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                            fieldDescription="Check to open link in New Tab. By default, link opens in same tab."
+                                            name="./eventOpenNewTabCtaAdd"
+                                            text="Open Link in New Tab"
+                                            uncheckedValue="{Boolean}false"
+                                            value="{Boolean}true"/>
+                                </items>
+                            </eventFieldSetCTAOptional>
+                        </items>
+                        <granite:data
+                                jcr:primaryType="nt:unstructured"
+                                showhidetargetvalue="event"/>
+                    </eventCTASection>
+                    <blogCTASection
+                            granite:class="showhidetargets"
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="CTA Section"
+                            sling:resourceType="granite/ui/components/foundation/container">
+                        <layout
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/layouts/collapsible"/>
+                        <items jcr:primaryType="nt:unstructured">
+                            <blogFieldSetCTA
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="CTA Details"
+                                    sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <bluePrimaryCta
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                            fieldDescription="Check enables Blue background of CTA. (Default-White background)"
+                                            name="./blogBluePrimaryCta"
+                                            text="Blue Background of CTA"
+                                            value="true"/>
+                                    <label
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            fieldDescription="Label for CTA"
+                                            fieldLabel="Label"
+                                            name="./blogLabelCta"/>
+                                    <ctaUrl
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                                            fieldDescription="CTA URL"
+                                            fieldLabel="URL"
+                                            name="./blogUrlCta"
+                                            rootPath="/content"/>
+                                    <openNewTabCta
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                            fieldDescription="Check to open link in New Tab. By default, link opens in same tab."
+                                            name="./blogOpenNewTabCta"
+                                            text="Open Link in New Tab"
+                                            uncheckedValue="{Boolean}false"
+                                            value="{Boolean}true"/>
+                                </items>
+                            </blogFieldSetCTA>
+                            <blogFieldSetCTAOptional
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="Additional CTA Details"
+                                    sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <label
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            fieldDescription="Label for CTA"
+                                            fieldLabel="Label"
+                                            name="./blogLabelCtaAdd"/>
+                                    <ctaUrl
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                                            fieldDescription="CTA URL"
+                                            fieldLabel="URL"
+                                            name="./blogUrlCtaAdd"
+                                            rootPath="/content"/>
+                                    <openNewTabCtaAdd
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                            fieldDescription="Check to open link in New Tab. By default, link opens in same tab."
+                                            name="./blogOpenNewTabCtaAdd"
+                                            text="Open Link in New Tab"
+                                            uncheckedValue="{Boolean}false"
+                                            value="{Boolean}true"/>
+                                </items>
+                            </blogFieldSetCTAOptional>
+                        </items>
+                        <granite:data
+                                jcr:primaryType="nt:unstructured"
+                                showhidetargetvalue="blog"/>
+                    </blogCTASection>
+                </items>
+            </columns>
+        </items>
+    </content>
+</jcr:root>

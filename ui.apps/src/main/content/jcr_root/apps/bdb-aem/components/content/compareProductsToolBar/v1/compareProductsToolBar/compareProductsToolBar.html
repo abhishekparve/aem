@@ -1,0 +1,18 @@
+<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html"
+     data-sly-call="${templates.placeholder @ isEmpty = true}"></sly>
+<sly data-sly-use.compareProductsToolBar="com.bdb.aem.core.models.CompareProductsToolBarModel"></sly>
+    <script>
+        if (typeof window.AEM_DATA.labels === 'undefined') {
+            window.AEM_DATA.labels = {};
+        }
+        window.AEM_DATA.labels.compareToolBarLabels = ${ compareProductsToolBar.compareToolBarLabels @context='scriptComment' };
+        if (typeof window.AEM_DATA.config === 'undefined') {
+        	window.AEM_DATA.config = {};
+        }
+        window.AEM_DATA.config.compareToolBarConfig = ${compareProductsToolBar.compareToolBarConfig @ context='scriptComment'}
+    </script>
+<div tabindex="-1"> 
+    <div class="wrapper"> 
+        <bd-compare-bar labels="compareToolBarLabels" config="compareToolBarConfig"> </bd-compare-bar> 
+    </div> 
+</div>

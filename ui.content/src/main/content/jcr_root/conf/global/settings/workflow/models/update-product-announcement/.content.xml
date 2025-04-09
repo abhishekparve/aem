@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:designPath="/libs/settings/wcm/designs/default"
+        cq:lastModified="{Date}2022-04-20T13:23:43.692+05:30"
+        cq:lastModifiedBy="admin"
+        cq:template="/libs/cq/workflow/templates/model"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Update Product Announcement"
+        sling:resourceType="cq/workflow/components/pages/model"
+        lastSynced="{Date}2022-04-20T13:23:46.873+05:30">
+        <flow
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="foundation/components/parsys">
+            <process
+                jcr:created="{Date}2022-04-20T13:22:31.192+05:30"
+                jcr:createdBy="admin"
+                jcr:description="Updates product announcement in bulk"
+                jcr:lastModified="{Date}2022-04-20T13:23:43.683+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Update Product Announcement"
+                sling:resourceType="cq/workflow/components/model/process">
+                <metaData
+                    jcr:primaryType="nt:unstructured"
+                    PROCESS="com.bdb.aem.core.workflows.UpdateProductAnnouncementWorkflow"
+                    PROCESS_AUTO_ADVANCE="true"/>
+            </process>
+        </flow>
+    </jcr:content>
+</jcr:root>

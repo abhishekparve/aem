@@ -1,0 +1,55 @@
+{
+    "type": "cartWsDTO",
+    "code": "00069025",
+    "entries": [
+        {
+            "cancellableQuantity": 0,
+            "configurationInfos": [],
+            "contractPrice": {
+                "currencyIso": "USD",
+                "formattedValue": "$240.00",
+                "priceType": "BUY",
+                "value": 240
+            },
+            "entryNumber": 0,
+            "isContractualPrice": false,
+            "listPrice": {
+                "currencyIso": "USD",
+                "formattedValue": "$250.00",
+                "priceType": "BUY",
+                "value": 250
+            },
+            "product": {
+                "availableForPickup": false,
+                "baseOptions": [],
+                "batchManaged": false,
+                "categories": [
+                    {
+                        "code": "dummyVariantValueCategory"
+                    }
+                ],
+                "code": "553063",
+                "name": "PE Hamster Anti-Mouse CD3e",
+                "purchasable": true,
+                "stock": {
+                    "isValueRounded": false,
+                    "stockLevel": 0,
+                    "stockLevelStatus": "inStock"
+                },
+                "url": "/c/PE-Hamster-Anti-Mouse-CD3e/p/553063"
+            },
+            "quantity": 1,
+            "requestSameLot": false,
+            "returnableQuantity": 0,
+            "statusSummaryList": [],
+            "totalPrice": {
+                "currencyIso": "USD",
+                "value": 240
+            }
+        }
+    ],
+    "guid": "f0bcd5d6-9c68-461f-9bf7-6e68c60d1817",
+    "totalItems": 1,
+    "savedForLater": false,
+    "totalUnitCount": 1
+}

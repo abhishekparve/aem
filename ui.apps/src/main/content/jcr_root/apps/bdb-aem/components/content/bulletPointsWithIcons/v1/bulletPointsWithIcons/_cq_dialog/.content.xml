@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0"
+          jcr:primaryType="nt:unstructured"
+          jcr:title="Bullet Points with Icons"
+          sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="granite/ui/components/coral/foundation/container">
+        <items jcr:primaryType="nt:unstructured">
+            <tabs
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/tabs"
+                maximized="{Boolean}false">
+                <items jcr:primaryType="nt:unstructured">
+                    <bulletIcons
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Bullet Points with Icons"
+                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <column
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">                               
+                                   <togglePaddingTop
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/switch"
+                                        checked="{Boolean}false"
+                                        fieldLabel="Reduce Top Padding"
+                                        fieldDescription="Switch between Default Padding (Off) and Reduced Padding (On)"
+                                        name="./togglePaddingTop"/>
+                                   <togglePaddingBottom
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/switch"
+                                        checked="{Boolean}false"
+                                        fieldLabel="Reduce Bottom Padding"
+                                        fieldDescription="Switch between Default Padding (Off) and Reduced Padding (On)"
+                                        name="./togglePaddingBottom"/>
+                                    <sectionTitle
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldLabel="Section Title"
+                                        fieldDescription="Section Title (Optional)"
+                                        name="./sectionTitle"/>
+                                    <title
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldLabel="Title"
+                                        fieldDescription="Title (Optional)"
+                                        name="./title"/>
+                                    <subTitle
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
+                                        fieldLabel="Sub-Title"
+                                        fieldDescription="Sub-Title (Optional)"
+                                        name="./subTitle"/>
+                                    <listSelection
+                                        granite:class="cq-dialog-dropdown-showhide"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                        fieldLabel="List Type - Icons or Numbered"
+                                        name="./listSelection"
+                                        required="{Boolean}true">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <default
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Select the List Type"
+                                                value=""/>
+                                            <iconic
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Icons"
+                                                value="Iconic"/>
+                                            <numbered
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Numbered"
+                                                value="Numbered"/>
+                                        </items>
+                                        <granite:data
+                                            jcr:primaryType="nt:unstructured"
+                                            cq-dialog-dropdown-showhide-target=".showhidetargets"/>
+                                    </listSelection>
+                                    <bulletPointIconFieldSet
+                                        granite:class="showhidetargets"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Bullet Points with Icons"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <bulletMultifield
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                                composite="{Boolean}true"
+                                                fieldDescription="Bullet Description and Icon"
+                                                fieldLabel="Author the Description and Icon for each Bullet Point">
+                                                <field
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/container"
+                                                    name="./bulletMultifield">
+                                                    <items jcr:primaryType="nt:unstructured">
+                                                    <path
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                                                        rootPath="/content/dam/bdb"
+                                                        fieldLabel="Icon"
+                                                        fieldDescription="Author the Icon"
+                                                        required="{Boolean}true"
+                                                        name="./path"/>
+                                                    <altText
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                        fieldLabel="Alt Text"
+                                                        fieldDescription="Author the Alt Text"
+                                                        name="./altText"/>
+                                                    <label
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
+                                                        fieldLabel="Description"
+                                                        fieldDescription="Author the Description"
+                                                        required="{Boolean}true"
+                                                        name="./label"/>
+                                                    </items>
+                                                </field>
+                                            </bulletMultifield>
+                                        </items>
+                                        <granite:data
+                                            jcr:primaryType="nt:unstructured"
+                                            showhidetargetvalue="Iconic"/>
+                                    </bulletPointIconFieldSet>
+                                    <bulletPointFieldSet
+                                        granite:class="showhidetargets"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Bullet Points"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <descriptionMultifield
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                                composite="{Boolean}true"
+                                                fieldDescription="Bullet Description"
+                                                fieldLabel="Author the Description for each Bullet Point">
+                                                <field
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/container"
+                                                    name="./descriptionMultifield">
+                                                    <items jcr:primaryType="nt:unstructured">
+                                                    <descriptionText
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
+                                                        fieldLabel="Description"
+                                                        fieldDescription="Author the Description"
+                                                        required="{Boolean}true"
+                                                        name="./descriptionText"/>
+                                                    </items>
+                                                </field>
+                                            </descriptionMultifield>
+                                        </items>
+                                        <granite:data
+                                            jcr:primaryType="nt:unstructured"
+                                            showhidetargetvalue="Numbered"/>
+                                    </bulletPointFieldSet>
+                                    <backgroundColor
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                        fieldLabel="Select Background Color"
+                                        name="./backgroundColor">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <grey
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Grey"
+                                                value="grey"/>
+                                            <white
+                                                jcr:primaryType="nt:unstructured"
+                                                text="White"
+                                                value="white"/>
+                                        </items>
+                                    </backgroundColor>
+                                </items>
+                            </column>
+                        </items>
+                    </bulletIcons>
+                </items>
+            </tabs>
+        </items>
+    </content>
+</jcr:root>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2020-10-14T22:08:16.977+05:30"
+        cq:lastModifiedBy="admin"
+        jcr:primaryType="nt:unstructured"
+        jcr:title="Event Topics"
+        sling:resourceType="acs-commons/components/utilities/genericlist">
+        <image
+            jcr:primaryType="nt:unstructured"
+            fileReference="/apps/acs-commons/components/utilities/genericlist/generic-list.png"/>
+        <list jcr:primaryType="nt:unstructured">
+            <item0
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Select Event Topic"/>
+            <item1
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Cancer Research/Oncology"
+                value="cancer-research-oncology"/>
+            <item2
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Flow Cytometry"
+                value="flow-cytometry"/>
+            <item3
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Immune Monitoring"
+                value="immune-monitoring"/>
+            <item4
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Immunology, Inflammation &amp; Autoimmunity"
+                value="immunology-inflammation-autoimmunity"/>
+            <item5
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Immuno Oncology"
+                value="immuno-oncology"/>
+            <item6
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Infectious Diseases"
+                value="infectious-diseases"/>
+            <item7
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Leukemia &amp; Lymphoma"
+                value="leukemia-lymphoma"/>
+            <item8
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Panel Design"
+                value="panel-design"/>
+            <item9
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Single-cell Multiomics"
+                value="single-cell-multiomics"/>
+            <item10
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Stem Cell Biology"
+                value="stem-cell-biology"/>
+        </list>
+    </jcr:content>
+</jcr:root>

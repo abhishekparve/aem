@@ -1,0 +1,49 @@
+{
+    "address": {
+        "active": false,
+        "addressId": "1001648546",
+        "billingAddress": false,
+        "country": {
+            "isocode": "US"
+        },
+        "defaultAddress": true,
+        "district": "ORANGE",
+        "formattedAddress": "Chapel Hill, North Carolina 27514,US",
+        "line1": "120 Mason Farm Rd, RM 2100",
+        "organizationName": "CHAPMAN UNIV",
+        "pendingAddress": false,
+        "phone": "714 997 6815",
+        "postalCode": "92618-2018",
+        "region": {
+            "isocode": "US-CA"
+        },
+        "shippingAddress": true,
+        "town": "IRVINE",
+        "billTo": "string",
+        "billToNumber": "123456789",
+        "billToName": "Acme Clinical Labs",
+        "building": "",
+        "cellphone": "string",
+        "companyName": "CHAPMAN UNIV",
+        "department": "",
+        "email": "string",
+        "favouriteAddress": true,
+        "firstName": "string",
+        "floor": "",
+        "id": "string",
+        "lastName": "string",
+        "nickName": "string",
+        "room": "",
+        "selectedAddress": true,
+        "shipTo": "123456789",
+        "shipToName": "Acme Clinical Labs",
+        "status": "string",
+        "title": "string",
+        "titleCode": "string",
+        "visibleInAddressBook": true
+    },
+    "attentionLine": {
+        "primaryAttentionLine": "Kyran Williamson",
+        "secondaryAttentionLine": "string"
+    }
+}

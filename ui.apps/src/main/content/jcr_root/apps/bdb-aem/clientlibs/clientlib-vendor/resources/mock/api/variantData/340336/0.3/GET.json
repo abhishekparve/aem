@@ -1,0 +1,24 @@
+{
+    "catalogNumber": "440334",
+    "contractualPrice": {
+        "currencyIso": "USD",
+        "value": "226.43",
+        "formattedValue": "$657.43"
+    },
+    "listPrice": {
+        "currencyIso": "USD",
+        "value": "987.26",
+        "formattedValue": "$786.26"
+    },
+    "estimatedDeliveryDate": "June 24, 2020",
+    "unit": {
+        "name": "Each",
+        "code": "EA",
+        "unitType": "each",
+        "value": 3
+    },
+    "derivedProductStatus": "PURCHASEABLE",
+    "anonymousUser": "false",
+    "purchasable": false,
+    "inventoryStatus": 1
+}

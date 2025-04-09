@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:designPath="/libs/settings/wcm/designs/default"
+        cq:lastModified="{Date}2020-10-14T18:11:52.660+05:30"
+        cq:lastModifiedBy="admin"
+        cq:template="/libs/cq/workflow/templates/model"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Process Product Document Workflow Future State"
+        sling:resourceType="cq/workflow/components/pages/model"
+        lastSynced="{Date}2020-10-14T18:11:54.829+05:30">
+        <flow
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="foundation/components/parsys">
+            <process
+                jcr:created="{Date}2020-10-14T16:59:02.432+05:30"
+                jcr:createdBy="admin"
+                jcr:description="Workflow to Process Product Documents and move the assets to a specified location"
+                jcr:lastModified="{Date}2020-10-14T18:08:27.681+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Process Product Documents Future State"
+                sling:resourceType="cq/workflow/components/model/process">
+                <metaData
+                    jcr:primaryType="nt:unstructured"
+                    PROCESS="com.bdb.aem.core.services.workflows.ProcessProductDocumentFutureState"
+                    PROCESS_AUTO_ADVANCE="true"/>
+            </process>
+        </flow>
+    </jcr:content>
+</jcr:root>

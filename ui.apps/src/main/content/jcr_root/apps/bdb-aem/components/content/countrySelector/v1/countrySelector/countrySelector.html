@@ -1,0 +1,44 @@
+<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html"
+     data-sly-call="${templates.placeholder @ isEmpty = true}"></sly>
+<sly data-sly-use.countrySelectorModel="com.bdb.aem.core.models.GlobalHeaderCountrySelectorModel"></sly>
+<sly data-sly-use.navigationModel="com.bdb.aem.core.models.GlobalHeaderNavigationModel"></sly>
+
+<div class="container">
+    <article class="change-country app-js__change-country">
+        <h1 class="col-12 change-country__heading text-left change-country__normal-device p-0">
+            ${properties.title}
+        </h1>
+
+        <div class="row change-country__normal-device">
+			<sly data-sly-list.item="${countrySelectorModel.regionmultifield}">
+				<ul class=" change-country__setwidth change-country__link-container-items  flex-column col-lg-2 col-md-2"
+					id="list-head--${itemList.index}" tabindex="0">
+					<li class=" change-country__link-header" id="list-head-itm--0" tabindex="0">${item.region}
+					</li>
+					<sly data-sly-list.region="${item.countrymultifield}">
+						<li class="change-country__link-sub-item" tabindex="0" data-locale="${region.locale}">
+							<a href="${region.urlCountry}" class="change-country__link-sub-items ${region.country==navigationModel.currentCL ? 'selected' : ''}" tabindex="-1">
+								${region.country}
+							</a>
+						</li>
+					</sly>
+				</ul>
+			</sly>
+        </div>
+
+		<div class="row justify-content-center change-country__smaller-device">
+            <sly data-sly-list.item="${countrySelectorModel.regionmultifield}">
+				<ul class="change-country__link-container-items flex-column col-sm-1 col-md-1" tabindex="0"
+					id="list-head-sm--${itemList.index}">
+					<li class="change-country__link-header" tabindex="0">${item.region}
+					</li>
+					<sly data-sly-list.region="${item.countrymultifield}">
+						<li class="change-country__link-sub-item" tabindex="0" data-locale="${region.locale}">
+							<a href="${region.urlCountry}" class="change-country__link-sub-items ${region.country==navigationModel.currentCL ? 'selected' : ''}" tabindex="-1">${region.country}</a>
+						</li>
+					</sly>
+				</ul>
+			</sly>
+        </div>
+    </article>
+</div>

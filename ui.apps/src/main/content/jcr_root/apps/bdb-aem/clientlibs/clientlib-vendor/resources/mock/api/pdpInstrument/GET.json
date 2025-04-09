@@ -1,0 +1,98 @@
+[
+    {
+        "id": "305180",
+        "image": "/resources/images/cloned-image-1.png",
+        "productUrl": "",
+        "name": "PerCP Rat Anti-Mouse CD3e",
+        "cloneId": "145-2C11",
+        "size": "100 Tests",
+        "purchasable": "true",
+        "regulatoryStatus": "RUO",
+        "type": "Starter Kits",
+        "listPrice": {
+            "currencyIso": "USD",
+            "formattedValue": "$50.00",
+            "priceType": "BUY",
+            "value": 50
+        }
+    },
+    {
+        "id": "309604",
+        "image": "/resources/images/cloned-image-2.png",
+        "productUrl": "",
+        "name": "PerCP Mouse Anti-Mouse CD3e",
+        "cloneId": "123-8A56",
+        "size": "100 Tests",
+        "purchasable": "true",
+        "regulatoryStatus": "RUO",
+        "type": "Trainings",
+        "listPrice": {
+            "currencyIso": "USD",
+            "formattedValue": "$1500.00",
+            "priceType": "BUY",
+            "value": 1000
+        }
+    },
+    {
+        "id": "309604",
+        "image": "/resources/images/cloned-image-2.png",
+        "productUrl": "",
+        "name": "PerCP Mouse Anti-Mouse CD3e",
+        "cloneId": "123-9A56",
+        "size": "100 Tests",
+        "purchasable": "true",
+        "regulatoryStatus": "RUO",
+        "type": "Service Contracts",
+        "listPrice": {
+            "currencyIso": "USD",
+            "formattedValue": "$1500",
+            "priceType": "BUY",
+            "value": 1000
+        }
+    },
+    {
+        "id": "305180",
+        "image": "/resources/images/cloned-image-1.png",
+        "productUrl": "",
+        "name": "PerCP Rat Anti-Mouse CD3e",
+        "cloneId": "145-2C11",
+        "size": "100 Tests",
+        "purchasable": "true",
+        "regulatoryStatus": "RUO",
+        "type": "Starter Kits",
+        "listPrice": {
+            "currencyIso": "USD",
+            "formattedValue": "$50.00",
+            "priceType": "BUY",
+            "value": 50
+        }
+    },
+    {
+        "id": "309604",
+        "image": "/resources/images/cloned-image-2.png",
+        "productUrl": "",
+        "name": "PerCP Mouse Anti-Mouse CD3e",
+        "purchasable": "true",
+        "type": "Trainings",
+        "listPrice": {
+            "currencyIso": "USD",
+            "formattedValue": "$1500.00",
+            "priceType": "BUY",
+            "value": 1000
+        }
+    },
+    {
+        "id": "309604",
+        "image": "/resources/images/cloned-image-2.png",
+        "productUrl": "",
+        "name": "PerCP Mouse Anti-Mouse CD3e",
+        "purchasable": "true",
+        "type": "Service Contracts",
+        "listPrice": {
+            "currencyIso": "USD",
+            "formattedValue": "$1500",
+            "priceType": "BUY",
+            "value": 1000
+        }
+    }
+]

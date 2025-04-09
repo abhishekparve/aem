@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="60px" height="54px" viewBox="0 0 60 54" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>BC810129-F8E4-4F56-A269-E7ED584EEFBF</title>
+    <g id="PDP---Single-Format-Antibody---D" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="PDP-SFA-antibody" transform="translate(-917.000000, -268.000000)" stroke="#00B8B0">
+            <g id="PDP/header-content" transform="translate(0.000000, 256.000000)">
+                <g id="PDP/tools" transform="translate(893.000000, 13.000000)">
+                    <g id="PDP/Tool">
+                        <g id="PDP/tools/icon-spectrum" transform="translate(25.000000, 0.000000)">
+                            <g id="Group-18">
+                                <path d="M7,45.0556641 C14.5,45.0556641 14.5,8.05566406 22,8.05566406 C29.5,8.05566406 29.5,45.0556641 37,45.0556641" id="Path-9" stroke-width="2" stroke-linecap="round"></path>
+                                <rect id="Rectangle" stroke-width="2" x="0" y="0" width="58" height="52" rx="2"></rect>
+                                <path d="M23,45.0556641 C29.75,45.0556641 29.75,29.0556641 36.5,29.0556641 C43.25,29.0556641 43.25,45.0556641 50,45.0556641" id="Path-9-Copy" stroke-width="2" stroke-linecap="round"></path>
+                                <g id="Group" transform="translate(7.000000, 50.000000)" stroke-linecap="round" stroke-width="1.5">
+                                    <line x1="0.5" y1="0" x2="0.5" y2="2" id="Line"></line>
+                                    <line x1="9.5" y1="0" x2="9.5" y2="2" id="Line-Copy"></line>
+                                    <line x1="17.5" y1="0" x2="17.5" y2="2" id="Line-Copy-2"></line>
+                                    <line x1="26.5" y1="0" x2="26.5" y2="2" id="Line-Copy-3"></line>
+                                    <line x1="34.5" y1="0" x2="34.5" y2="2" id="Line-Copy-4"></line>
+                                    <line x1="43.5" y1="0" x2="43.5" y2="2" id="Line-Copy-5"></line>
+                                </g>
+                                <g id="Group-2" transform="translate(0.000000, 6.000000)" stroke-linecap="round" stroke-width="1.5">
+                                    <line x1="0" y1="39.5" x2="2" y2="39.5" id="Line-11"></line>
+                                    <line x1="0" y1="31.5" x2="2" y2="31.5" id="Line-11-Copy"></line>
+                                    <line x1="0" y1="23.5" x2="2" y2="23.5" id="Line-11-Copy-2"></line>
+                                    <line x1="0" y1="16.5" x2="2" y2="16.5" id="Line-11-Copy-3"></line>
+                                    <line x1="0" y1="8.5" x2="2" y2="8.5" id="Line-11-Copy-4"></line>
+                                    <line x1="0" y1="0.5" x2="2" y2="0.5" id="Line-11-Copy-5"></line>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

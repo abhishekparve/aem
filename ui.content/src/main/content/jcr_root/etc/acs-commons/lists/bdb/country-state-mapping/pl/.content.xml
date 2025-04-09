@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2020-02-10T20:05:12.808+05:30"
+        cq:lastModifiedBy="admin"
+        jcr:primaryType="nt:unstructured"
+        jcr:title="Poland"
+        sling:resourceType="acs-commons/components/utilities/genericlist"
+        value="PL">
+        <image
+            jcr:primaryType="nt:unstructured"
+            fileReference="/apps/acs-commons/components/utilities/genericlist/generic-list.png"/>
+        <list jcr:primaryType="nt:unstructured">
+            <item0
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Lower Silesia"
+                    value="PL-02"/>
+            <item1
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="West Pomerania"
+                    value="PL-32"/>
+            <item2
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Greater Poland"
+                    value="PL-30"/>
+            <item3
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Warmia-Masuria"
+                    value="PL-28"/>
+            <item4
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Holy Cross"
+                    value="PL-26"/>
+            <item5
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Silesia"
+                    value="PL-24"/>
+            <item6
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Pomerania"
+                    value="PL-22"/>
+            <item7
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Podlaskie"
+                    value="PL-20"/>
+            <item8
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Subcarpathia"
+                    value="PL-18"/>
+            <item9
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Opole (Upper Silesia)"
+                    value="PL-16"/>
+            <item10
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Mazovia"
+                    value="PL-14"/>
+            <item11
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Lesser Poland"
+                    value="PL-12"/>
+            <item12
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Lubusz"
+                    value="PL-08"/>
+            <item13
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Lublin"
+                    value="PL-06"/>
+            <item14
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Kuyavia-Pomerania"
+                    value="PL-04"/>
+            <item15
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title=""
+                    value="PL-10"/>
+        </list>
+    </jcr:content>
+</jcr:root>

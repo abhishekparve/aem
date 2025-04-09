@@ -1,0 +1,29 @@
+<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html"
+   data-sly-call="${templates.placeholder @ isEmpty = true}"></sly>
+
+<sly data-sly-use.faq="com.bdb.aem.core.models.FaqModel"></sly>
+
+<div class="faq-details container p-0 ${properties.removeTagsContainer ? 'disable-tags' : ''}">
+<bd-faq-details labels="faqDetailsLabels" config="faqDetailsConfig"></bd-faq-details>
+</div>
+
+<script>
+   if (typeof window.AEM_DATA === 'undefined') {
+      window.AEM_DATA = {};
+   }
+   if (typeof window.AEM_DATA.labels === 'undefined') {
+      window.AEM_DATA.labels = {};
+   }
+   if (typeof window.AEM_DATA.labels.faqDetailsLabels === 'undefined') {
+      window.AEM_DATA.labels.faqDetailsLabels = {};
+   }
+   window.AEM_DATA.labels.faqDetailsLabels = ${ faq.jsonData || '{}' @context='scriptComment' };
+
+</script>
+<script type="application/ld+json">
+ {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": ${ faq.faqSchemaData || '{}' @context='scriptComment' }
+ }  
+    </script>

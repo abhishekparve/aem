@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:mixinTypes="[]"
+    jcr:primaryType="sling:OrderedFolder"
+    jcr:title="country-state-mapping">
+    <jp/>
+    <se/>
+    <gb/>
+    <dk/>
+    <fi/>
+    <lk/>
+    <bd/>
+    <bt/>
+    <np/>
+    <us/>
+    <au/>
+    <br/>
+    <ca/>
+    <cn/>
+    <dnk/>
+    <fin/>
+    <gbr/>
+    <in/>
+    <kr/>
+    <nz/>
+    <no/>
+    <pl/>
+    <sg/>
+    <swe/>
+</jcr:root>

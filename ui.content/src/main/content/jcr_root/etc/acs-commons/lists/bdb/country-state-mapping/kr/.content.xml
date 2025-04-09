@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2020-02-10T19:16:20.411+05:30"
+        cq:lastModifiedBy="admin"
+        jcr:mixinTypes="[]"
+        jcr:primaryType="nt:unstructured"
+        jcr:title="Korea"
+        sling:resourceType="acs-commons/components/utilities/genericlist"
+        value="KR">
+        <image
+            jcr:primaryType="nt:unstructured"
+            fileReference="/apps/acs-commons/components/utilities/genericlist/generic-list.png"/>
+        <list jcr:primaryType="nt:unstructured">
+            <item0
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Seoul"
+                value="KR-11"/>
+            <item1
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Sejong&#x9;Korea"
+                value="KR-50"/>
+            <item2
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Ulsan"
+                value="KR-31"/>
+            <item3
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Jeonnam"
+                value="KR-46"/>
+            <item4
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Jeonnam"
+                value="KR-46"/>
+        </list>
+    </jcr:content>
+</jcr:root>

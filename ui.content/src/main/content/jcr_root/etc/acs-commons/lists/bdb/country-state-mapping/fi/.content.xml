@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2020-02-10T18:46:17.041+05:30"
+        cq:lastModifiedBy="admin"
+        jcr:primaryType="nt:unstructured"
+        jcr:title="Finland"
+        sling:resourceType="acs-commons/components/utilities/genericlist"
+        value="FI">
+        <image
+            jcr:primaryType="nt:unstructured"
+            fileReference="/apps/acs-commons/components/utilities/genericlist/generic-list.png"/>
+        <list jcr:primaryType="nt:unstructured">
+            <item0
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Espoo"
+                    value="FI-ES"/>
+            <item1
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Imatra"
+                    value="FI-IM"/>
+            <item2
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Hanko"
+                    value="FI-HA"/>
+        </list>
+    </jcr:content>
+</jcr:root>

@@ -1,0 +1,56 @@
+<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html"
+     data-sly-call="${templates.placeholder @ isEmpty = true}"></sly>
+
+<div data-sly-use.form="com.bdb.aem.core.models.MarketoFormModel">
+    <div class="bdb-optin-marketo bd-container">
+        <div class="bdb-optin-marketo-form app-js__bdb-optin-marketo-form">
+            <div class="bdb-optin-marketo-form__container">
+                <div class="optin-card">
+                    <div class="optin-card-body">
+                        <p class="optin-card-body__title-text">${form.formTitle}</p>
+						<p class="info-text">* Required Field</p>
+						<script src="${form.rootURL}/js/forms2/js/forms2.min.js"></script>
+                        <form id="mktoForm_${form.formID}"></form>
+                    </div>
+                </div>
+            </div>
+        </div>
+		<div class="modal fade" id="bdb-opt-in-newsletter-modal" tabindex="-1" role="dialog" aria-labelledby="bdb-opt-in-newsletter-modal-label" aria-modal="true">
+	        <div class="modal-dialog" role="document">
+	            <div class="modal-content">
+	                <div class="modal-header">${properties.modalTitle}</div>
+	                <div class="modal-body">
+	                    ${properties.modalDescription @context='html'}
+	                </div>
+	                <div class="modal-footer text-right">
+	                    <button type="button" class="btn btn-md btn-primary-blue" id="bdb-opt-in-newsletter-continue">${properties.modalButtonText}</button>
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+	    <script>
+	        MktoForms2.loadForm('${form.rootURL @ context="attribute"}', '${form.munchkinID @ context="attribute"}', '${form.formID @ context="attribute"}', function(mktoForm) {
+            if (window.marketoForms) {
+                window.marketoForms.destyleMktoForm(mktoForm);
+            }
+            var formElement = mktoForm.getFormElem()[0];
+            var submitText = formElement.querySelector('.mktoButton').innerText;
+            mktoForm.onSuccess(function (vals, tyURL) {
+                $("#bdb-opt-in-newsletter-modal").addClass("show");
+                setTimeout(function () {
+                    formElement.reset();
+                    formElement.querySelector('.mktoButton').removeAttribute('disabled');
+                    formElement.querySelector('.mktoButton').innerText = submitText ? submitText : 'Submit';
+                }, 1000);
+                return false;
+            });
+            if (window.marketoForms) {
+                window.marketoForms.customBdStyles('12397');
+            }
+            $('#bdb-opt-in-newsletter-continue').on('click', function() {
+                $("#bdb-opt-in-newsletter-modal").removeClass("show");
+            });
+        });
+	    </script>
+    </div>
+</div>

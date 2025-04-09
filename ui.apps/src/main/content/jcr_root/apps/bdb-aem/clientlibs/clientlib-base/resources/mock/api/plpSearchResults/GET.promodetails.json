@@ -1,0 +1,350 @@
+{
+    "response": {
+        "totalResults": 126,
+        "suggestion": [
+            {
+                "word": "mouse",
+                "freq": 4
+            },
+            {
+                "word": "mounse",
+                "freq": 1
+            }
+        ],
+        "start": 0,
+        "results": [
+            {
+                "id": "/content/dam/bdb/temp-assets/documents/566906.pdf",
+                "url_t": "/content/dam/bdb/temp-assets/documents/566906.pdf",
+                "name_t": "566906.pdf",
+                "assetType_t": "Adobe PDF",
+                "body_t": " Technical Data Sheet \nPurified NA/LE Rat Anti-Mouse \nProduct Information 566906 \nMaterial Number: PD-1; Pdc1; \nAlternate Name: 0.5 mg \nSize: 1.0 mg/ml \nConcentration: Clone: Mouse PD-1 \nImmunogen: Rat (SD) \nIsotype: QC Testing: \nReactivity: Aqueous \nStorage Buffer: \nDescription RMP1-14.rMAb is a recombinant monoclonal antibody that specifically \n(PD-1). CD279 (PD-1) is a ~55-kDa type I transmembrane glycoprotein that is \nto the CD28/CTLA-4 family of immunoreceptors within the Ig superfamily. \nIgV-like domain, a transmembrane sequence, and an intracellular region with \nan immunoreceptor tyrosine-based switch motif (ITSM) that are associated \nvariably expressed on some thymocyte subsets and developing B lymphocytes \nactivated myeloid cells, B cells, and T cells including exhausted T cells found \nco-inhibitory receptor plays roles in mediating immunological tolerance and \nimmune responses against microbial infections and cancer. CD273 (also known \nmembers of the B7 family within the Ig superfamily. These molecules serve as \nlymphoid and nonlymphoid cells types including antigen-presenting cells and \nbinding of these natural ligands as well as recombinant mouse PD-L1-Ig and \ninhibition of the interaction between PD-1 and its ligands can serve as an \nagainst tumor cells.\n\nBD Pharmingen™ \nCD279 (PD-1) \nPdcd1; mPD-1 \nRMP1-14.rMAb (also known as RMP1-14) ",
+                "_version_": 1677580153117474816
+            },
+            {
+                "id": "/products/reagents/flow-cytometry-reagents/research-reagents/single-color-antibodies/purified-mouse-anti-adaptin.504111",
+                "title": ["tete"],
+                "name_t": "tete",
+                "description": ["Description"],
+                "navTitle_t": "Navigation Title",
+                "subtitle_t": "subtitle",
+                "pageTitle_t": "Page Title",
+                "country_t": "ca",
+                "language_t": "en",
+                "tags_txt": ["Products", "Reagents"],
+                "_version_": 1676902081835827200,
+                "listPrice": 30
+            },
+            {
+                "id": "/products/reagents/flow-cytometry-reagents/research-reagents/single-color-antibodies/purified-mouse-anti-adaptin.504112",
+                "title": ["tete"],
+                "name_t": "tete",
+                "description": ["Description"],
+                "navTitle_t": "Navigation Title",
+                "subtitle_t": "subtitle",
+                "pageTitle_t": "Page Title",
+                "country_t": "ca",
+                "language_t": "en",
+                "tags_txt": ["Products", "Reagents"],
+                "_version_": 1676902081835827200
+            },
+            {
+                "id": "/products/reagents/flow-cytometry-reagents/research-reagents/single-color-antibodies/purified-mouse-anti-adaptin.504113",
+                "title": ["tete"],
+                "name_t": "tete",
+                "description": ["Description"],
+                "navTitle_t": "Navigation Title",
+                "subtitle_t": "subtitle",
+                "pageTitle_t": "Page Title",
+                "country_t": "ca",
+                "language_t": "en",
+                "tags_txt": ["Products", "Reagents"],
+                "_version_": 1676902081835827200
+            },
+            {
+                "id": "/products/reagents/flow-cytometry-reagents/research-reagents/single-color-antibodies/purified-mouse-anti-adaptin.504114",
+                "labelDescription_t": "Purified Mouse Anti-Adaptin Î²",
+                "name_t": "Purified Mouse Anti-Adaptin Î²",
+                "brand_t": "BD Transduction Laboratoriesâ„¢",
+                "alternativeName_t": "CD3;CD3 epsilon; Cd3e; CD3e;T3e",
+                "storageBuffer_t": "Aqueous buffered solution containing BSA, glycerol, and â‰¤0.09% sodium azide.",
+                "volPerTest_t": "123",
+                "entrezGeneId_t": "163",
+                "barcodeSequence_t": "123",
+                "seqId_t": "123",
+                "productType_t": "SingColorPureAntibody",
+                "regulatoryStatus_t": "RUO",
+                "immunogen_t": "H-2Kb specific cytotoxic T lymphocyte clone BM10-37",
+                "isoType_t": "Armenian Hamster IgG1, Îº",
+                "tdsCloneName_t": "145-2C11",
+                "hostSpecies_t": "hostSpecies",
+                "species_t": "QC Testing",
+                "reactivityStatus_t": "Mouse",
+                "applicationName_t": "Flow cytometry",
+                "dyeName_t": "PerCP",
+                "laserWavelength_is": [459],
+                "specificity_t": "spec1|spec2|spec3",
+                "size_t": "0.1mg",
+                "baseMaterialNumber_t": "684488_base",
+                "materialNumber_t": "305180",
+                "thumbnailImage_t": "/resources/images/plp-search.png",
+                "_version_": 1677223829662859264
+            },
+            {
+                "id": "/products/reagents/flow-cytometry-reagents/research-reagents/single-color-antibodies/purified-mouse-anti-adaptin.504117",
+                "labelDescription_t": "Purified Mouse Anti-Adaptin Î²",
+                "name_t": "Purified Mouse Anti-Adaptin Î²",
+                "brand_t": "BD Transduction Laboratoriesâ„¢",
+                "alternativeName_t": "CD3;CD3 epsilon; Cd3e; CD3e;T3e",
+                "storageBuffer_t": "Aqueous buffered solution containing BSA, glycerol, and â‰¤0.09% sodium azide.",
+                "volPerTest_t": "123",
+                "entrezGeneId_t": "163",
+                "barcodeSequence_t": "123",
+                "seqId_t": "123",
+                "productType_t": "SingColorPureAntibody",
+                "regulatoryStatus_t": "RUO",
+                "immunogen_t": "H-2Kb specific cytotoxic T lymphocyte clone BM10-37",
+                "isoType_t": "Armenian Hamster IgG1, Îº",
+                "tdsCloneName_t": "145-2C11",
+                "hostSpecies_t": "hostSpecies",
+                "species_t": "QC Testing",
+                "reactivityStatus_t": "Mouse",
+                "applicationName_t": "Flow cytometry",
+                "dyeName_t": "PerCP",
+                "laserWavelength_is": [459],
+                "specificity_t": "spec1|spec2|spec3",
+                "size_t": "0.1mg",
+                "baseMaterialNumber_t": "684488_base",
+                "materialNumber_t": "309604",
+                "thumbnailImage_t": "/resources/images/plp-search.png",
+                "_version_": 1677223829662859264,
+                "listPrice": "$500.00",
+                "contractPrice": "$500.00"
+            }
+        ],
+        "facets": {
+            "productType": [
+                {
+                    "label": "2kb",
+                    "count": 2
+                },
+                {
+                    "label": "37",
+                    "count": 2
+                },
+                {
+                    "label": "bm10",
+                    "count": 2
+                },
+                {
+                    "label": "clone",
+                    "count": 2
+                },
+                {
+                    "label": "cytotoxic",
+                    "count": 2
+                },
+                {
+                    "label": "h",
+                    "count": 2
+                },
+                {
+                    "label": "lymphocyte",
+                    "count": 2
+                },
+                {
+                    "label": "specific",
+                    "count": 2
+                },
+                {
+                    "label": "t",
+                    "count": 2
+                }
+            ],
+            "application": [
+                {
+                    "label": "0.09",
+                    "count": 2
+                },
+                {
+                    "label": "and",
+                    "count": 2
+                },
+                {
+                    "label": "aqueous",
+                    "count": 2
+                },
+                {
+                    "label": "azide",
+                    "count": 2
+                },
+                {
+                    "label": "bsa",
+                    "count": 2
+                },
+                {
+                    "label": "buffered",
+                    "count": 2
+                },
+                {
+                    "label": "containing",
+                    "count": 2
+                },
+                {
+                    "label": "glycerol",
+                    "count": 2
+                },
+                {
+                    "label": "sodium",
+                    "count": 2
+                },
+                {
+                    "label": "solution",
+                    "count": 2
+                },
+                {
+                    "label": "â",
+                    "count": 2
+                }
+            ],
+            "size": [
+                {
+                    "label": "0.09",
+                    "count": 2
+                },
+                {
+                    "label": "and",
+                    "count": 2
+                },
+                {
+                    "label": "aqueous",
+                    "count": 2
+                },
+                {
+                    "label": "azide",
+                    "count": 2
+                },
+                {
+                    "label": "bsa",
+                    "count": 2
+                },
+                {
+                    "label": "buffered",
+                    "count": 2
+                },
+                {
+                    "label": "containing",
+                    "count": 2
+                },
+                {
+                    "label": "glycerol",
+                    "count": 2
+                },
+                {
+                    "label": "sodium",
+                    "count": 2
+                },
+                {
+                    "label": "solution",
+                    "count": 2
+                },
+                {
+                    "label": "â",
+                    "count": 2
+                }
+            ],
+            "regulatoryStatus": [
+                {
+                    "label": "0.09",
+                    "count": 2
+                },
+                {
+                    "label": "and",
+                    "count": 2
+                },
+                {
+                    "label": "aqueous",
+                    "count": 2
+                },
+                {
+                    "label": "azide",
+                    "count": 2
+                },
+                {
+                    "label": "bsa",
+                    "count": 2
+                },
+                {
+                    "label": "buffered",
+                    "count": 2
+                },
+                {
+                    "label": "containing",
+                    "count": 2
+                },
+                {
+                    "label": "glycerol",
+                    "count": 2
+                },
+                {
+                    "label": "sodium",
+                    "count": 2
+                },
+                {
+                    "label": "solution",
+                    "count": 2
+                },
+                {
+                    "label": "â",
+                    "count": 2
+                }
+            ],
+            "brand": [
+                {
+                    "label": "0.09",
+                    "count": 2
+                },
+                {
+                    "label": "and",
+                    "count": 2
+                },
+                {
+                    "label": "aqueous",
+                    "count": 2
+                },
+                {
+                    "label": "azide",
+                    "count": 2
+                },
+                {
+                    "label": "bsa",
+                    "count": 2
+                },
+                {
+                    "label": "buffered",
+                    "count": 2
+                },
+                {
+                    "label": "containing",
+                    "count": 2
+                },
+                {
+                    "label": "glycerol",
+                    "count": 2
+                },
+                {
+                    "label": "sodium",
+                    "count": 2
+                },
+                {
+                    "label": "solution",
+                    "count": 2
+                },
+                {
+                    "label": "â",
+                    "count": 2
+                }
+            ]
+        }
+    }
+}

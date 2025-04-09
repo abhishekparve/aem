@@ -1,0 +1,8 @@
+{
+  "viewProductsPlaceholder": "$[env:ccViewProductsPlaceholder;default=?searchKey=*&specificity_facet_s::%22{specificity}%22=%22{specificity}%22&speciesReactivity_facet_ss::%22{reactivity}%22=%22{reactivity}%22&tdsCloneName_facet_s::%22{cloneName}%22=%22{cloneName}%22]",
+  "apiEndpoint": "$[env:ccApiEndpoint;default=/content/bdb/paths/api/v1/search]",
+  "linkToCatalogPlaceholder": "$[env:ccLinkToCatalogPlaceholder;default=?searchKey=*&specificity_facet_s::%22{specificity}%22=%22{specificity}%22&speciesReactivity_facet_ss::%22{reactivity}%22=%22{reactivity}%22]",
+  "dyeNamePlaceholder": "$[env:ccDyeNamePlaceholder;default=?searchKey=*&dyeName_facet_s::%22{dyeName}%22=%22{dyeName}%22&speciesReactivity_facet_ss::%22{reactivity}%22=%22{reactivity}%22&specificity_facet_s::%22{specificity}%22=%22{specificity}%22]",
+  "dyeNamePlaceholderForClone": "$[env:ccDyeNamePlaceholderForClone;default=?searchKey=*&dyeName_facet_s::%22{dyeName}%22=%22{dyeName}%22&speciesReactivity_facet_ss::%22{reactivity}%22=%22{reactivity}%22&specificity_facet_s::%22{specificity}%22=%22{specificity}%22]&tdsCloneName_facet_s::%22{cloneName}%22=%22{cloneName}%22",
+  "colorMap": "$[env:ccColorMap;default=Blue:Blue,Red:Red,Yellow-Green:YG,Ultraviolet:UV,Antibody-Oligo:Ab-Oligo,Violet:Violet,others:Others]"
+}

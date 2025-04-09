@@ -1,0 +1,33 @@
+{
+    "products": [
+        {
+            "productID": "566599",
+            "productAnnouncement": "true",
+            "paDescription": "This product will be discontinued from July [612887]",
+            "productCatalogHref": "/content/bdb/{region}/{country}/{language-country}/products/reagents/flow-cytometry-reagents/research-reagents/single-color-antibodies-ruo/pdp.bv421-rat-anti-mouse-cd169.566604",
+            "paFAQTitle": "Product Notice - FAQs",
+            "regionalDisclaimers": "This is specific to US",
+            "paViewMoreCTA": "More Information",
+            "openNewTab": "true",
+            "disclaimerStatus": "true",
+            "moreInfoLink": "https://www.google.com",
+            "viewMoreFaqLabel": "View More FAQ's",
+            "viewMoreFaqLink": "viewMoreFaqLink",
+            "smessageStatus": "true",
+            "neutralizationActivity": "Netutal 25",
+            "targetMW": "T1234",
+            "assayRange": "5-6",
+            "surchargeDisclaimer": {
+                "specialMessage": "Special handling goes here",
+                "altText": "Special Message alt text"
+            },
+            "replacedProductId": "612887",
+            "faqMap": [
+                {
+                    "question": "What is the difference between [612887] and 309604?",
+                    "answer": "Lorem ipsum"
+                }
+            ]
+        }
+    ]
+}

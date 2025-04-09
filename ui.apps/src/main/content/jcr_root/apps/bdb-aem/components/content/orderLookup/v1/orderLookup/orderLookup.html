@@ -1,0 +1,26 @@
+<sly
+	data-sly-use.templates="core/wcm/components/commons/v1/templates.html"
+	data-sly-call="${templates.placeholder @ isEmpty = true}"></sly>
+
+<sly
+	data-sly-use.orderLookupModel="com.bdb.aem.core.models.OrderLookupModel"></sly>
+<script>
+        if (typeof window.AEM_DATA === 'undefined') {
+        window.AEM_DATA = {};
+        }
+        if (typeof window.AEM_DATA.labels === 'undefined') {
+        window.AEM_DATA.labels = {};
+        }
+        window.AEM_DATA.labels.orderLookUpLabels = ${orderLookupModel.orderLookupLabels  || '{}' @context='scriptComment'};
+
+        if (typeof window.AEM_DATA.config === 'undefined') {
+        window.AEM_DATA.config = {};
+        }
+
+        window.AEM_DATA.config.orderLookUpConfig = ${orderLookupModel.orderLookupConfig  || '{}' @context='scriptComment'};
+
+</script>
+
+<div class="container order-lookup-container">
+	<bd-order-lookup labels="orderLookUpLabels" config="orderLookUpConfig"></bd-order-lookup>
+</div>

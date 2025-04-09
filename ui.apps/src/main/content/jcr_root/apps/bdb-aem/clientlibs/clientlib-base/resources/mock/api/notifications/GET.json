@@ -1,0 +1,24 @@
+{
+    "notificationOptin": [
+        {
+            "emailNotification": false,
+            "notificationType": "ABANDONED_CART"
+        },
+        {
+            "emailNotification": true,
+            "notificationType": "WEBINAR"
+        },
+        {
+            "emailNotification": false,
+            "notificationType": "NEWS_LETTER"
+        },
+        {
+            "emailNotification": true,
+            "notificationType": "BLOG"
+        },
+        {
+            "emailNotification": false,
+            "notificationType": "TUTORIAL"
+        }
+    ]
+}

@@ -1,0 +1,7 @@
+{
+  "accountAlias": "$[env:brightCove_accountAlias;default=BDB]",
+  "accountId": "$[secret:brightCove_accountId;default=81909694001]",
+  "clientId": "$[secret:brightCove_clientId;default=74db1f99-e4d0-4bcd-abe1-94ce8c2b094f]",
+  "clientSecret": "$[secret:brightCove_clientSecret;default=iK8pmmW3GMwEL1uLi2ghQ1P5YngrXaAwOTZvIL-Y2xwRQZDjR1J0-9SRMnYZnpuWDGTJF_xqDsSuyRGV5agKdg]",
+  "allowedGroups": "$[env:brightCove_allowedGroups;default=administrators]"
+}

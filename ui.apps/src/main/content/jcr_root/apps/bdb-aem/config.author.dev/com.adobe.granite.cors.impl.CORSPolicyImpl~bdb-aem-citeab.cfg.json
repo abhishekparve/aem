@@ -1,0 +1,20 @@
+{
+  "supportedmethods":[
+    "GET"
+  ],
+  "alloworigin":[
+     "https://widget.citeab.com"
+  ],
+  "allowedpaths":[
+    "/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/fonts/[^/]+/.*.woff"
+  ],
+  "supportedheaders":[
+    "Origin",
+    "Accept",
+    "X-Requested-With",
+    "Content-Type",
+    "Access-Control-Request-Method",
+    "Access-Control-Request-Headers",
+    "Access-Control-Allow-Origin"
+  ]
+}

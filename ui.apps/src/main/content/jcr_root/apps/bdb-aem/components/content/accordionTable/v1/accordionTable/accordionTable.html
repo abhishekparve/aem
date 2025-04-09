@@ -1,0 +1,49 @@
+<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html"
+    data-sly-call="${templates.placeholder @ isEmpty = true}"></sly>
+<sly data-sly-use.accordionTableModel="com.bdb.aem.core.models.AccordionTableModel">
+    <article class="accordion-list  accordion-table  app-js__accordion-table ${accordionTableModel.backgroundColor =='grey'?'gray-background-container':'white-background-container'} ${properties.togglePaddingTop?'pt-2':''} ${properties.togglePaddingBottom?'pb-2':''}"> 
+    <div class="container">
+        <div data-sly-test="${accordionTableModel.sectionTitle}" class="text-with-download__section-title">
+            ${accordionTableModel.sectionTitle}</div>
+        <div data-sly-test="${accordionTableModel.title}" class="text-with-download__title">${accordionTableModel.title @context='html'}
+        </div>
+
+        <div data-sly-test="${accordionTableModel.subTitle}" class="text-with-download__description bdb-rte">
+            ${accordionTableModel.subTitle @context='html'}
+        </div>
+        <div class="justify-content-center accordion" id="accordion-table">
+            <ul class="accordion-list__items col-12" tabindex="0" id="accordion-table-list-head-sm--${accordionList.index}">
+
+                <sly data-sly-test=${accordionTableModel.accordionList}  data-sly-list.accordion="${accordionTableModel.accordionList}">
+                    <li class="accordion-list__items-container">
+                        <div class="accordion-list__items-header collapsed" data-toggle="collapse" 
+                            data-target="#accordion-table-content--${accordionList.index}-${resource.path.hashCode}" aria-expanded="false"
+                            aria-controls="list-content" tabindex="0">
+                            <span class="accordion-list__items-header-text">
+                            	${accordion.sectionHeading @context='html'}
+                            </span>
+                            <button data-sly-test="${accordionTableModel.viewTableLabel}"
+                                class="btn btn-link accordion-list__items-btn collapse">${accordionTableModel.viewTableLabel}</button>
+                            <button data-sly-test="${accordionTableModel.hideTableLabel}"
+                                class="btn btn-link accordion-list__items-btn expand">${accordionTableModel.hideTableLabel}</button>
+                        </div>
+                        <div class="accordion-list__content collapse show px-2"
+                            aria-labelledby="accordion-table-head-sm--${accordionList.index}" data-parent="#accordion-table"
+                            id="accordion-table-content--${accordionList.index}-${resource.path.hashCode}">
+                            <sly data-sly-test=${accordion.sectionDescription} >
+                                <div class="accordion-list__content bd-rte">
+                                    ${accordion.sectionDescription @context='html'}     
+                                </div>
+                            </sly>
+                            <sly data-sly-unwrap="${!wcmmode.edit}">
+                                <sly data-sly-resource="${accordionList.index @resourceType = '/apps/bdb-aem/proxy/components/content/rtetablecomponent'}"
+                                    data-sly-unwrap></sly>
+                            </sly>
+                        </div>
+                    </li>
+                </sly>
+            </ul>     
+        </div>
+    </div>
+    </article>
+</sly>

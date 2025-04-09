@@ -1,0 +1,613 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Comparison Table"
+    sling:resourceType="cq/gui/components/authoring/dialog"
+    extraClientlibs="[core.wcm.components.list.v2.editor]"
+    helpPath="https://www.adobe.com/go/aem_cmp_list_v2">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/container">
+        <items jcr:primaryType="nt:unstructured">
+         <togglePaddingTop
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/switch"
+                        checked="{Boolean}false"
+                        fieldLabel="Reduce Top Padding"
+                        fieldDescription="Switch between Default Padding (Off) and Reduced Padding (On)"
+                        name="./togglePaddingTop"/>
+                    <togglePaddingBottom
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/switch"
+                        checked="{Boolean}false"
+                        fieldLabel="Reduce Bottom Padding"
+                        fieldDescription="Switch between Default Padding (Off) and Reduced Padding (On)"
+                        name="./togglePaddingBottom"/>
+            <tabs
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/tabs">
+                <items jcr:primaryType="nt:unstructured">
+                    <section1
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Tab 1"
+                        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+                        <items jcr:primaryType="nt:unstructured">
+                            <content
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <componentTitle
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldLabel="Component Title"
+                                        name="./componentTitle"/>
+                                    <greyBackground
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                        fieldDescription="Check to enable Grey background color"
+                                        name="./greyBackground"
+                                        text="Grey Background"
+                                        uncheckedValue="{Boolean}false"
+                                        value="{Boolean}true"/>
+                                    <description
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="cq/gui/components/authoring/dialog/richtext"
+                                        fieldDescription="Description (Optional)"
+                                        fieldLabel="Description"
+                                        name="./description"
+                                        required="{Boolean}false"
+                                        useFixedInlineToolbar="{Boolean}true">
+                                        <rtePlugins
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceSuperType="/apps/bdb-aem/components/authoring/dialog/richtext/rtePlugins"/>
+                                        <uiSettings
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceSuperType="/apps/bdb-aem/components/authoring/dialog/richtext/uiSettings"/>
+                                        <htmlRules jcr:primaryType="nt:unstructured">
+                                            <links
+                                                jcr:primaryType="nt:unstructured"
+                                                ensureInternalLinkExt="{Boolean}false"/>
+                                        </htmlRules>
+                                    </description>
+                                    <hideFirstColumn
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                        fieldDescription="Hide First Column"
+                                        name="./hideFirstColumnTab1"
+                                        text="Hide First Column"
+                                        value="true"/>
+                                    <loadInModal
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                        fieldDescription="Check to open Request To Quote in modal"
+                                        name="./loadInModalTab1"
+                                        text="Load Request Quote Form In Modal"
+                                        value="true"/>
+                                    <tabTitle
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldDescription="Main Tab Title"
+                                        fieldLabel="Tab Title"
+                                        name="./tabTitle"/>
+                                    <imageDetails
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                        composite="{Boolean}true"
+                                        eaem-show-on-collapse ="EAEM.showTitleText"
+                                        fieldDescription="Add Image Details.(To split cells, author imageDetails twice with same Title and ImageUrl, rest different data)."
+                                        fieldLabel="Image Details"
+                                        required="{Boolean}true">
+                                        <granite:data
+                                            jcr:primaryType="nt:unstructured"
+                                            max-items="11"
+                                            min-items="1"/>
+                                        <field
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/container"
+                                            name="./imageDetails">
+                                            <items jcr:primaryType="nt:unstructured">
+                                            	<titleText
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldDescription="For section Id redirection, title needs to be same as Category info Title"
+                                                    fieldLabel="Title - Text"
+                                                    name="./titleText"/>
+                                                <imageUrl
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                                                    fieldDescription="Image Url for Column"
+                                                    fieldLabel="Image Url"
+                                                    name="./imageUrl"
+                                                    rootPath="/content/dam"/>
+                                                <imageLinkUrl
+								                    jcr:primaryType="nt:unstructured"
+								                    sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+							                        fieldDescription="Image Link URL"
+								                    fieldLabel="Image Link URL"
+								                    name="./imageLinkUrl"
+								                    rootPath="/content"/>
+						                        <openNewImageLinkTab
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                                    fieldDescription="Check to open link in New Tab. By default, link opens in same tab."
+                                                    name="./openNewImageLinkTab"
+                                                    text="Open Link in New Tab"
+                                                    uncheckedValue="{Boolean}false"
+                                                    value="{Boolean}true"/>
+                                                <redirectLink
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                                                    fieldDescription="If URL is authored, it will take precedence over section Id redirection."
+                                                    fieldLabel="Title - Redirect URL"
+                                                    name="./redirectLink"
+                                                    rootPath="/content/bdb"/>
+                                                <subText
+			                                        jcr:primaryType="nt:unstructured"
+			                                        sling:resourceType="cq/gui/components/authoring/dialog/richtext"
+			                                        fieldDescription="Author Sub Text title only if cells needs split"
+			                                        fieldLabel="Sub-Text"
+			                                        name="./subText"
+			                                        required="{Boolean}false"
+			                                        useFixedInlineToolbar="{Boolean}true">
+			                                        <rtePlugins
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceSuperType="/apps/bdb-aem/components/authoring/dialog/richtext/rtePlugins"/>
+                                                    <uiSettings
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceSuperType="/apps/bdb-aem/components/authoring/dialog/richtext/uiSettings"/>
+			                                        <htmlRules jcr:primaryType="nt:unstructured">
+			                                            <links
+			                                                jcr:primaryType="nt:unstructured"
+			                                                ensureInternalLinkExt="{Boolean}false"/>
+			                                        </htmlRules>
+			                                    </subText>
+                                                <ctaText2
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldLabel="Button CTA label"
+                                                    name="./ctaText2"/>
+                                                <ctaLink2
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                                                    fieldLabel="Button CTA URL"
+                                                    name="./ctaLink2"
+                                                    rootPath="/content/bdb"/>
+                                                <ctaText
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldLabel="Link CTA label"
+                                                    name="./ctaText"/>
+                                                <ctaLink
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                                                    fieldLabel="Link CTA URL"
+                                                    name="./ctaLink"
+                                                    rootPath="/content/bdb"/>
+                                                <rowDetails
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                                    composite="{Boolean}true"
+                                                    fieldDescription="Author only Text if text needed, only Image if icon needed. Leave both empty if cell needs to be empty."
+                                                    fieldLabel="Row Data (Author left cell Value uniformly across columns to maintain table intact)">
+                                                    <field
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                                                        name="./rowDetails">
+                                                        <items jcr:primaryType="nt:unstructured">
+                                                            <text
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldDescription="Text content inside cell"
+                                                                fieldLabel="Text"
+                                                                name="./text"/>
+                                                            <textLeftAlignment
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                                                fieldDescription="Check to enable Text left alignment"
+                                                                name="./textLeftAlignment"
+                                                                text="Text Left Alignment"
+                                                                uncheckedValue="{Boolean}false"
+                                                                value="{Boolean}true"/>
+                                                            <image
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                                                                fieldDescription="Image/Icon inside cell"
+                                                                fieldLabel="Image Path"
+                                                                name="./image"
+                                                                rootPath="/content/dam"/>
+                                                           <imagePathUrl
+								                                jcr:primaryType="nt:unstructured"
+								                                sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+							                                    fieldDescription="Image Path URL"
+								                                fieldLabel="Image Path URL"
+								                                name="./imagePathUrl"
+								                                rootPath="/content"/>
+						                                   <openNewImagePathTab
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                                                fieldDescription="Check to open link in New Tab. By default, link opens in same tab."
+                                                                name="./openNewImagePathTab"
+                                                                text="Open Link in New Tab"
+                                                                uncheckedValue="{Boolean}false"
+                                                                value="{Boolean}true"/>
+                                                            <dropdownValue
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldDescription="Left Row Text Details"
+                                                                fieldLabel="Left cell Value"
+                                                                name="./dropdownValue"/>
+                                                            <ctaLink
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                                                                fieldLabel="Text-Cta-Link"
+                                                                name="./textCtaLink"
+                                                                rootPath="/content/bdb"/>
+                                                        </items>
+                                                    </field>
+                                                </rowDetails>
+                                            </items>
+                                        </field>
+                                    </imageDetails>
+                                </items>
+                            </content>
+                        </items>
+                    </section1>
+                    <section2
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Tab 2"
+                        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+                        <items jcr:primaryType="nt:unstructured">
+                            <content
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <tabTitle
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldDescription="Main Tab Title"
+                                        fieldLabel="Tab Title"
+                                        name="./tabTitle2"/>
+                                    <hideFirstColumn
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                        fieldDescription="Hide First Column"
+                                        name="./hideFirstColumnTab2"
+                                        text="Hide First Column"
+                                        value="true"/>
+                                    <loadInModal
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                        fieldDescription="Check to open Request To Quote in modal"
+                                        name="./loadInModalTab2"
+                                        text="Load Request Quote Form In Modal"
+                                        value="true"/>
+                                    <imageDetails
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                        composite="{Boolean}true"
+                                        fieldDescription="Add Image Details.(To split cells, author imageDetails twice with same title and ImageUrl, rest different data)."
+                                        fieldLabel="Image Details">
+                                        <granite:data
+                                            jcr:primaryType="nt:unstructured"
+                                            max-items="11"
+                                            min-items="0"/>
+                                        <field
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/container"
+                                            name="./imageDetails2">
+                                            <items jcr:primaryType="nt:unstructured">
+                                            	<titleText
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldDescription="For section Id redirection, title needs to be same as Category info Title"
+                                                    fieldLabel="Title - Text"
+                                                    name="./titleText"/>
+                                                <imageUrl
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                                                    fieldDescription="Image Url for Column"
+                                                    fieldLabel="Image Url"
+                                                    name="./imageUrl"
+                                                    rootPath="/content/dam"/>
+                                                <imageLinkUrl
+								                    jcr:primaryType="nt:unstructured"
+								                    sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+							                        fieldDescription="Image Link URL"
+								                    fieldLabel="Image Link URL"
+								                    name="./imageLinkUrl"
+								                    rootPath="/content"/>
+						                        <openNewImageLinkTab
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                                    fieldDescription="Check to open link in New Tab. By default, link opens in same tab."
+                                                    name="./openNewImageLinkTab"
+                                                    text="Open Link in New Tab"
+                                                    uncheckedValue="{Boolean}false"
+                                                    value="{Boolean}true"/>
+                                                <redirectLink
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                                                    fieldDescription="If URL is authored, it will take precedence over section Id redirection."
+                                                    fieldLabel="Title - Redirect URL"
+                                                    name="./redirectLink"
+                                                    rootPath="/content/bdb"/>
+                                                <subText
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldDescription="Author Sub Text title only if cells needs split"
+                                                    fieldLabel="Sub-Text"
+                                                    name="./subText"/>
+                                                <ctaText2
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldLabel="Button CTA label"
+                                                    name="./ctaText2"/>
+                                                <ctaLink2
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                                                    fieldLabel="Button CTA URL"
+                                                    name="./ctaLink2"
+                                                    rootPath="/content/bdb"/>
+                                                <ctaText
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldDescription="Link CTA label"
+                                                    fieldLabel="Link CTA label"
+                                                    name="./ctaText"/>
+                                                <ctaLink
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                                                    fieldLabel="Link CTA URL"
+                                                    name="./ctaLink"
+                                                    rootPath="/content/bdb"/>
+                                                <rowDetails
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                                    composite="{Boolean}true"
+                                                    fieldDescription="Author only Text if text needed, only Image if icon needed. Leave both empty if cell needs to be empty."
+                                                    fieldLabel="Row Data (Author left cell Value uniformly across columns to maintain table intact)">
+                                                    <field
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                                                        name="./rowDetails2">
+                                                        <items jcr:primaryType="nt:unstructured">
+                                                            <text
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldDescription="Text content inside cell"
+                                                                fieldLabel="Text"
+                                                                name="./text"/>
+                                                            <textLeftAlignment
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                                                fieldDescription="Check to enable Text left alignment"
+                                                                name="./textLeftAlignment"
+                                                                text="Text Left Alignment"
+                                                                uncheckedValue="{Boolean}false"
+                                                                value="{Boolean}true"/>
+                                                            <image
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                                                                fieldDescription="Image/Icon inside cell"
+                                                                fieldLabel="Image Path"
+                                                                name="./image"
+                                                                rootPath="/content/dam"/>
+                                                           <imagePathUrl
+								                                jcr:primaryType="nt:unstructured"
+								                                sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+							                                    fieldDescription="Image Path URL"
+								                                fieldLabel="Image Path URL"
+								                                name="./imagePathUrl"
+								                                rootPath="/content"/>
+						                                   <openNewImagePathTab
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                                                fieldDescription="Check to open link in New Tab. By default, link opens in same tab."
+                                                                name="./openNewImagePathTab"
+                                                                text="Open Link in New Tab"
+                                                                uncheckedValue="{Boolean}false"
+                                                                value="{Boolean}true"/>
+                                                            <dropdownValue
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldDescription="Left Row Text Details"
+                                                                fieldLabel="Left cell Value"
+                                                                name="./dropdownValue"/>
+                                                            <ctaLink
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                                                                fieldLabel="Text-Cta-Link"
+                                                                name="./textCtaLink"
+                                                                rootPath="/content/bdb"/>
+                                                        </items>
+                                                    </field>
+                                                </rowDetails>
+                                            </items>
+                                        </field>
+                                    </imageDetails>
+                                </items>
+                            </content>
+                        </items>
+                    </section2>
+                    <section3
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Tab 3"
+                        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+                        <items jcr:primaryType="nt:unstructured">
+                            <content
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <tabTitle
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldDescription="Main Tab Title"
+                                        fieldLabel="Tab Title"
+                                        name="./tabTitle3"/>
+                                    <hideFirstColumn
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                        fieldDescription="Hide First Column"
+                                        name="./hideFirstColumnTab3"
+                                        text="Hide First Column"
+                                        value="true"/>
+                                    <loadInModal
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                        fieldDescription="Check to open Request To Quote in modal"
+                                        name="./loadInModalTab3"
+                                        text="Load Request Quote Form In Modal"
+                                        value="true"/>
+                                    <imageDetails
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                        composite="{Boolean}true"
+                                        fieldDescription="Add Image Details.(To split cells, author imageDetails twice with same title and ImageUrl, rest different data)."
+                                        fieldLabel="Image Details">
+                                        <granite:data
+                                            jcr:primaryType="nt:unstructured"
+                                            max-items="11"
+                                            min-items="0"/>
+                                        <field
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/container"
+                                            name="./imageDetails3">
+                                            <items jcr:primaryType="nt:unstructured">
+                                            	<titleText
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldDescription="For section Id redirection, title needs to be same as Category info Title"
+                                                    fieldLabel="Title - Text"
+                                                    name="./titleText"/>
+                                                <imageUrl
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                                                    fieldDescription="Image Url for Column"
+                                                    fieldLabel="Image Url"
+                                                    name="./imageUrl"
+                                                    rootPath="/content/dam"/>
+                                                <imageLinkUrl
+								                    jcr:primaryType="nt:unstructured"
+								                    sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+							                        fieldDescription="Image Link URL"
+								                    fieldLabel="Image Link URL"
+								                    name="./imageLinkUrl"
+								                    rootPath="/content"/>
+						                        <openNewImageLinkTab
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                                    fieldDescription="Check to open link in New Tab. By default, link opens in same tab."
+                                                    name="./openNewImageLinkTab"
+                                                    text="Open Link in New Tab"
+                                                    uncheckedValue="{Boolean}false"
+                                                    value="{Boolean}true"/>
+                                                <redirectLink
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                                                    fieldDescription="If URL is authored, it will take precedence over section Id redirection."
+                                                    fieldLabel="Title - Redirect URL"
+                                                    name="./redirectLink"
+                                                    rootPath="/content/bdb"/>
+                                                <subText
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldDescription="Author Sub Text title only if cells needs split"
+                                                    fieldLabel="Sub-Text"
+                                                    name="./subText"/>
+                                                <ctaText2
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldLabel="Button CTA label"
+                                                    name="./ctaText2"/>
+                                                <ctaLink2
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                                                    fieldLabel="Button CTA URL"
+                                                    name="./ctaLink2"
+                                                    rootPath="/content/bdb"/>
+                                                <ctaText
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldDescription="Link CTA label"
+                                                    fieldLabel="Link CTA label"
+                                                    name="./ctaText"/>
+                                                <ctaLink
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                                                    fieldLabel="Link CTA URL"
+                                                    name="./ctaLink"
+                                                    rootPath="/content/bdb"/>
+                                                <rowDetails
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                                    composite="{Boolean}true"
+                                                    fieldDescription="Author only Text if text needed, only Image if icon needed. Leave both empty if cell needs to be empty."
+                                                    fieldLabel="Row Data (Author left cell Value uniformly across columns to maintain table intact)">
+                                                    <field
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                                                        name="./rowDetails3">
+                                                        <items jcr:primaryType="nt:unstructured">
+                                                            <text
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldDescription="Text content inside cell"
+                                                                fieldLabel="Text"
+                                                                name="./text"/>
+                                                            <textLeftAlignment
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                                                fieldDescription="Check to enable Text left alignment"
+                                                                name="./textLeftAlignment"
+                                                                text="Text Left Alignment"
+                                                                uncheckedValue="{Boolean}false"
+                                                                value="{Boolean}true"/>
+                                                            <image
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                                                                fieldDescription="Image/Icon inside cell"
+                                                                fieldLabel="Image Path"
+                                                                name="./image"
+                                                                rootPath="/content/dam"/>
+                                                           <imagePathUrl
+								                                jcr:primaryType="nt:unstructured"
+								                                sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+							                                    fieldDescription="Image Path URL"
+								                                fieldLabel="Image Path URL"
+								                                name="./imagePathUrl"
+								                                rootPath="/content"/>
+						                                   <openNewImagePathTab
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                                                fieldDescription="Check to open link in New Tab. By default, link opens in same tab."
+                                                                name="./openNewImagePathTab"
+                                                                text="Open Link in New Tab"
+                                                                uncheckedValue="{Boolean}false"
+                                                                value="{Boolean}true"/>
+                                                            <dropdownValue
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldDescription="Left Row Text Details"
+                                                                fieldLabel="Left cell Value"
+                                                                name="./dropdownValue"/>
+                                                            <ctaLink
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                                                                fieldLabel="Text-Cta-Link"
+                                                                name="./textCtaLink"
+                                                                rootPath="/content/bdb"/>
+                                                        </items>
+                                                    </field>
+                                                </rowDetails>
+                                            </items>
+                                        </field>
+                                    </imageDetails>
+                                </items>
+                            </content>
+                        </items>
+                    </section3>
+                </items>
+            </tabs>
+        </items>
+    </content>
+</jcr:root>

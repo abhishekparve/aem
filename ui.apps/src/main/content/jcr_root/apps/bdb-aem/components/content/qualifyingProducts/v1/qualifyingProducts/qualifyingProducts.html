@@ -1,0 +1,24 @@
+<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html"
+     data-sly-call="${templates.placeholder @ isEmpty = true}"></sly>
+
+<sly data-sly-use.commerceModel="com.bdb.aem.core.models.CommerceBoxModel"></sly>
+<sly data-sly-use.qualProdModel="com.bdb.aem.core.models.QualifyingProductsModel"></sly>
+
+   <script>
+        if (typeof window.AEM_DATA.labels === 'undefined') {
+            window.AEM_DATA.labels = {};
+        }
+        window.AEM_DATA.labels.promoDetailsLabels = ${ qualProdModel.qualProdLabelsJson @context='scriptComment' };
+
+        if (typeof window.AEM_DATA.config === 'undefined') {
+            window.AEM_DATA.config = {};
+        }
+		window.AEM_DATA.config.addToCartConfig = ${ commerceModel.addToCartConfigJson @context='scriptComment' };
+		window.AEM_DATA.config.promoDetailsConfig = ${ qualProdModel.qualProdConfigJson @context='scriptComment' };
+   </script>
+
+<div class="container">
+    <div class="row">
+        <bd-qualify-products labels="promoDetailsLabels" config="promoDetailsConfig"></bd-qualify-products>
+    </div>
+</div>

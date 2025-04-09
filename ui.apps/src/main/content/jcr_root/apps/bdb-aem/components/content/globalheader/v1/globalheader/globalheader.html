@@ -1,0 +1,815 @@
+<!-- This is new comment -->
+<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html"
+   data-sly-call="${templates.placeholder @ isEmpty = true}"></sly>
+<sly data-sly-use.time="com.bdb.aem.core.models.TimerModel"></sly>
+<sly data-sly-use.globalHeaderNavigationModel="com.bdb.aem.core.models.GlobalHeaderNavigationModel"></sly>
+<sly data-sly-use.globalHeaderModel="com.bdb.aem.core.models.GlobalHeaderModel"></sly>
+<sly data-sly-use.breadcrumbModel="com.bdb.aem.core.models.BreadcrumbModel"></sly>
+<sly data-sly-use.compliancealertmodel="com.bdb.aem.core.models.ComplianceAlertModel"></sly>
+<sly data-sly-use.headerFetch="com.bdb.aem.core.models.HeaderCartFetchModel"></sly>
+<sly data-sly-use.searchBox="com.bdb.aem.core.models.SearchBoxModel"></sly>
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+<script>
+   if (typeof window.AEM_DATA === 'undefined') {
+     window.AEM_DATA = {};
+   }
+   if (typeof window.AEM_DATA.labels === 'undefined') {
+     window.AEM_DATA.labels = {};
+   }
+   if (typeof window.AEM_DATA.labels.globalLabels === 'undefined') {
+       window.AEM_DATA.labels.globalLabels = {};
+   }
+   if (typeof window.AEM_DATA.config === 'undefined') {
+     window.AEM_DATA.config = {};
+   }
+   window.AEM_DATA.config.miniCartConfig = ${ headerFetch.cartConfig || '{}' @context='scriptComment' };
+   window.AEM_DATA.labels.miniCartLabels = ${ headerFetch.miniCartLabels || '{}' @context='scriptComment' };
+   window.AEM_DATA.labels.globalLabels.translationUrls = ${ headerFetch.translationUrls || '{}' @context='scriptComment' };
+   window.AEM_DATA.labels.globalLabels.countriesList = ${globalHeaderModel.myLabels || '{}' @context='scriptComment'};
+   window.AEM_DATA.labels.globalLabels.hiddenPagesPath = ${globalHeaderModel.pathList || '{}' @context='scriptComment'};
+   window.AEM_DATA.config.searchContainerConfig = ${ searchBox.searchContainerConfig || '{}' @context='scriptComment' };
+   window.AEM_DATA.config.searchContainerConfig.popularSearchConfig = ${ searchBox.popularSearchConfig || '{}' @context='scriptComment' };
+   window.AEM_DATA.config.miniCartConfig.getMiniCartCount = ${ headerFetch.cartCountConfig || '{}' @context='scriptComment' };
+   window.AEM_DATA.config.miniCartConfig.getMiniCartEntries = ${ headerFetch.cartEntriesConfig || '{}' @context='scriptComment' };
+   window.AEM_DATA.config.miniCartConfig.validateMyCart = ${ headerFetch.validateMyCartConfig || '{}' @context='scriptComment' };
+   window.AEM_DATA.config.miniCartConfig.clearCart = ${ headerFetch.clearCartConfig || '{}' @context='scriptComment' };
+   window.AEM_DATA.labels.searchContainerLabels = ${ searchBox.searchContainerLabels || '{}' @context='scriptComment' };
+   window.AEM_DATA.labels.globalLabels.profileMenu = ${ globalHeaderModel.profileMenu || '[]' @context='scriptComment' };
+   window.AEM_DATA.labels.globalLabels.productUnavailableMsg = "${ globalHeaderModel.productUnavailableMsg || '{}' @context='scriptComment' }";
+   window.AEM_DATA.labels.globalLabels.productDiscontinuedMsg = "${ globalHeaderModel.productDiscontinuedMsg || '{}' @context='scriptComment' }";
+   window.AEM_DATA.labels.compliancealertLabels = ${ compliancealertmodel.labelString || '{}' @context='scriptComment' };
+   if (typeof window.AEM_DATA.config.globalConfig === 'undefined') {
+            window.AEM_DATA.config.globalConfig = {};
+	}
+   window.AEM_DATA.config.globalConfig.chromeMinimumVersion = ${globalHeaderModel.chromeMinimumVersion || 77.0 @context='scriptComment'};
+  window.AEM_DATA.config.globalConfig.IEMinimumVersion = ${globalHeaderModel.IEMinimumVersion || 11 @context='scriptComment'};
+  window.AEM_DATA.config.globalConfig.safariMinimumVersion = ${globalHeaderModel.safariMinimumVersion || 12.1 @context='scriptComment'};
+  window.AEM_DATA.config.globalConfig.firefoxMinimumVersion = ${globalHeaderModel.firefoxMinimumVersion || 68 @context='scriptComment'};
+
+</script>
+<sly data-sly-test="${inheritedPageProperties.enableAddToQuoteCheckBox}">
+   <script>
+      if (typeof window.AEM_DATA === 'undefined') {
+      window.AEM_DATA = {};
+      }
+      if (typeof window.AEM_DATA.labels === 'undefined') {
+      window.AEM_DATA.labels = {};
+      }
+      if (typeof window.AEM_DATA.config === 'undefined') {
+      window.AEM_DATA.config = {};
+      }
+      window.AEM_DATA.labels.miniQuoteLabels=${headerFetch.miniQuoteLabels || '{}' @context='scriptComment'};
+      if (typeof window.AEM_DATA.config.miniQuoteConfig === 'undefined') {
+      window.AEM_DATA.config.miniQuoteConfig = {};
+      }
+      window.AEM_DATA.config.miniQuoteConfig.getMiniQuoteCount=${ headerFetch.miniQuoteCountConfig || '{}' @context='scriptComment' };
+      window.AEM_DATA.config.miniQuoteConfig.getMiniQuoteEntries=${ headerFetch.miniQuoteEntriesConfig || '{}' @context='scriptComment' };
+   </script>
+</sly>
+<sly data-sly-test.showAsContentSite="${inheritedPageProperties.isContentSite? inheritedPageProperties.isContentSite : 'false'}"></sly>
+<sly data-sly-test.showAnnouncement="${inheritedPageProperties.showAnnouncement? inheritedPageProperties.showAnnouncement : 'false'}"></sly>
+<header
+        class="bdb-header w-100 app-js__bdb-header ${!pageProperties.transparentHeader? 'is-primary':''} ${properties.isNoNav ?'is-small-header':''}">
+    <div class="bdb-header__customer-logo-container d-none">
+        <div class="container p-0">
+            <img src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/blankimage.png" alt="${properties.custAltlogo}" class="bdb-header__customer-logo" aria-label="${properties.custAltlogo}"/>
+        </div>
+    </div>
+    <div class="container bdb-header__main-content d-flex justify-content-between align-items-center">
+        <div class="d-flex justify-content-between bdb-header__left-container">
+            <a data-sly-test="${!properties.isNoNav}"
+               class="d-flex d-lg-none justify-content-center bdb-header__hamburger"
+               aria-label="Hamburger Menu" href="#">
+                <img class="d-block" src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/hamburger.svg"
+                     alt="Hamburger Menu" />
+            </a>
+            <div class="d-none d-lg-block flex-row bdb-header__left-container-title">
+                <sly data-sly-test="${!pageProperties.isCheckoutPage}">
+                    <a class="d-flex justify-content-left bdb-header__logo" href="${globalHeaderModel.urlLogoAction}" aria-label="BDB Logo" tabindex="0" data-header-logo="${globalHeaderModel.urlLogo}" data-header-sticky-logo="${globalHeaderModel.urlLogo}">
+                        <img src="${globalHeaderModel.urlLogo}" alt="${properties.altlogo}" class="icon-white" />
+                        <img src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/Logo-Unit.svg" alt="${properties.altlogo}" class="icon-black d-none"/>
+                    </a>
+                </sly>
+                <sly data-sly-test="${pageProperties.isCheckoutPage}">
+                    <a class="d-flex justify-content-left bdb-header__logo" href="${globalHeaderModel.urlLogoAction}" aria-label="BDB Logo" tabindex="0" data-toggle="modal" data-target="#redirection-modal" data-header-logo="${globalHeaderModel.urlLogo}" data-header-sticky-logo="${globalHeaderModel.urlLogo}">
+                        <img src="${globalHeaderModel.urlLogo}" alt="${properties.altlogo}" class="icon-white" />
+                        <img src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/Logo-Unit.svg" alt="${properties.altlogo}" class="icon-black d-none"/>
+                    </a>
+                </sly>
+            </div>
+        </div>
+        <div class="d-flex d-lg-none flex-row bdb-header__left-container-title">
+            <sly data-sly-test="${!pageProperties.isCheckoutPage}">
+                <a class="d-flex justify-content-left bdb-header__logo" href="${globalHeaderModel.urlLogoAction}" aria-label="BDB Logo" tabindex="0" data-header-logo="${globalHeaderModel.urlLogo}" data-header-sticky-logo="${globalHeaderModel.urlLogo}">
+                    <img src="${globalHeaderModel.urlLogo}" alt="${properties.altlogo}" class="icon-white" />
+                    <img src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/Logo-Unit.svg" alt="${properties.altlogo}" class="icon-black d-none"/>
+                </a>
+            </sly>
+            <sly data-sly-test="${pageProperties.isCheckoutPage}">
+                <a class="d-flex justify-content-left bdb-header__logo" href="${globalHeaderModel.urlLogoAction}" aria-label="BDB Logo" tabindex="0" data-toggle="modal" data-target="#redirection-modal" data-header-logo="${globalHeaderModel.urlLogo}" data-header-sticky-logo="${globalHeaderModel.urlLogo}">
+                    <img src="${globalHeaderModel.urlLogo}" alt="${properties.altlogo}" class="icon-white" />
+                    <img src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/Logo-Unit.svg" alt="${properties.altlogo}" class="icon-black d-none"/>
+                </a>
+            </sly>
+        </div>
+        <div data-sly-test="${!properties.isNoNav}" class="d-flex flex-column align-items-end bdb-header__right-container">
+            <input type="hidden" class="bdb-header__top-nav-hidden-logOutURL" data-logoutURL="/content/bdb/paths/sign-out.json" data-locale="${globalHeaderModel.urlLogoAction}">
+            <div class="d-flex d-lg-none bdb-header__top-nav-container">
+                <a href="#searchMobileModal_false" class="d-flex align-items-center bdb-header__nav-item-search-link mr-3"
+                   data-toggle="modal" data-backdrop="false" data-keyboard="true">
+                    <img src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/search-m.svg" alt="Search icon" />
+                </a>
+                <div data-sly-test="${showAsContentSite == 'false'}" class="d-flex align-items-center bdb-header__nav-item" tabindex="0" style="width:30px">
+                    <sly data-sly-test="${!inheritedPageProperties.enableAddToQuoteCheckBox}">
+                        <bd-mini-cart labels="miniCartLabels" config="miniCartConfig" tabindex="-1">
+                        	<img src="/content/dam/bdb/general/header/shopping-cart.svg" aria-label="cart icon" width="23" height="20" />
+                        </bd-mini-cart>
+                    </sly>
+                    <sly data-sly-test="${inheritedPageProperties.enableAddToQuoteCheckBox}">
+                        <bd-mini-cart labels="miniQuoteLabels" config="miniQuoteConfig" tabindex="-1">
+                            <img src="/content/dam/bdb/general/header/shopping-cart.svg" aria-label="cart icon" width="23" height="20" />
+                        </bd-mini-cart>
+                    </sly>
+                </div>
+                <div class="modal fade search-modal bdb-header__search-modal" tabindex="-1" role="dialog" aria-modal="true"
+                     aria-hidden="true" id="searchMobileModal_false">
+                    <bd-search-modal-container labels="searchContainerLabels" config="searchContainerConfig"></bd-search-modal-container>
+                </div>
+            </div>
+            <div class="d-none d-lg-flex bdb-header__top-nav-container">
+                <div data-sly-test="${globalHeaderModel.orderLookupIconUrl && globalHeaderNavigationModel.countryValue == 'us' && showAsContentSite == 'false'}" class="d-flex align-items-center bdb-header__nav-item">
+                    <img class="user-icon icon-white" src="${globalHeaderModel.orderLookupIconUrl}" alt="${globalHeaderModel.orderLookupIconAltText}" />
+                    <img class="user-icon icon-black d-none" src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/orders-dark.svg" alt="${globalHeaderModel.orderLookupIconAltText}" />
+                    <div class="bdb-header__nav-wrapper position-relative">
+                        <a data-bdb-href="${globalHeaderModel.orderLookupUrl}" class="signInCta bdb-header__nav-label">
+                            <span class="pl-2 bdb-header__nav-label cursor-pointer no-sub-menu">${globalHeaderModel.orderLookupLabel}</span>
+                        </a>
+                    </div>
+                </div>
+                <div data-sly-test="${globalHeaderModel.orderLookupIconUrl && globalHeaderNavigationModel.countryValue == 'ca' && showAsContentSite == 'false'}" class="d-flex align-items-center bdb-header__nav-item">
+                    <img class="user-icon icon-white" src="${globalHeaderModel.orderLookupIconUrl}" alt="${globalHeaderModel.orderLookupIconAltText}" />
+                    <img class="user-icon icon-black d-none" src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/orders-dark.svg" alt="${globalHeaderModel.orderLookupIconAltText}" />
+                    <div class="bdb-header__nav-wrapper position-relative">
+                        <a data-bdb-href="${globalHeaderModel.orderLookupUrl}" class="signInCta bdb-header__nav-label">
+                            <span class="pl-2 bdb-header__nav-label cursor-pointer no-sub-menu">${globalHeaderModel.orderLookupLabel}</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="d-flex align-items-center bdb-header__nav-item">
+                    <img class="language-icon icon-white" src="${properties.urlCountry}" alt="${properties.altcountry}" />
+                    <img class="language-icon icon-black d-none" src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/images/language-black.svg" alt="${properties.altcountry}"/>
+                    <div class="bdb-header__nav-wrapper position-relative">
+                        <a href="#" class="pl-2 bdb-header__nav-label" tabindex="0">${globalHeaderNavigationModel.currentCL}</a>
+                        <div class="bdb-header__sub-menu-container multi-col">
+                            <ul class="d-flex flex-wrap flex-column bdb-header__sub-menu-region-list">
+                                <sly data-sly-list.item="${globalHeaderNavigationModel.dropdownItems}">
+                                    <li class="bdb-header__sub-menu-region-list-item-disable">
+                                        <a data-locale="${item.localeName}" aria-label="${item.countryName}"
+                                           class="${item.countryName==globalHeaderNavigationModel.currentCL ? 'selected' : ''}">${item.countryName}</a>
+                                    </li>
+                                </sly>
+                            </ul>
+                            <ul class="d-flex flex-wrap flex-column bdb-header__sub-menu-country">
+                                <li class="bdb-header__sub-menu-country-selected">
+                                    <p class="bdb-header__sub-menu-country-label">${properties.currentLabel}</p>
+                                    <p class="bdb-header__sub-menu-country-value">${globalHeaderNavigationModel.countryName}</p>
+                                </li>
+                                <li class="bdb-header__sub-menu-country-navigation">
+                                    <a href="${globalHeaderModel.changeLabelUrl}" aria-label="${properties.changeLabel}">${properties.changeLabel}</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div data-sly-test="${properties.urlIcon && showAsContentSite == 'false'}" class="d-flex align-items-center bdb-header__nav-item">
+                    <img class="user-icon icon-white" src="${properties.urlIcon}" alt="${properties.alticon}" />
+                    <img class="user-icon icon-black d-none" src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/images/profile-black.svg" alt="${properties.alticon}" />
+                    <div class="bdb-header__nav-wrapper position-relative">
+                        <a data-bdb-href="${globalHeaderModel.signInUrl}" class="d-none guest-js signInCta pl-2 bdb-header__nav-label cursor-pointer no-sub-menu" aria-label="Sign-In URL">
+                            <span class="bdb-header__nav-label_item">${properties.signInLabel}</span>
+                        </a>
+                        <a href="javascript:void(0)" class="d-none userName-js bdb-header__nav-label cursor-pointer pl-2">
+                            <span class="pl-2 bdb-header__nav-label cursor-pointer">UserName</span>
+                        </a>
+                        <div class="profileMenu-js d-none">
+                            <bd-profile-menu-container viewport="desktop"></bd-profile-menu-container>
+                        </div>
+                    </div>
+                </div>
+                <div data-sly-test="${showAsContentSite == 'false'}" class="d-flex align-items-center bdb-header__nav-item" style="width:30px" tabindex="0">
+                    <sly data-sly-test="${! inheritedPageProperties.enableAddToQuoteCheckBox}">
+                        <bd-mini-cart labels="miniCartLabels" config="miniCartConfig" tabindex="-1">
+                        	<img src="/content/dam/bdb/general/header/shopping-cart.svg" aria-label="cart icon" width="23" height="20" />
+                        </bd-mini-cart>
+                    </sly>
+                    <sly data-sly-test="${inheritedPageProperties.enableAddToQuoteCheckBox}">
+                        <bd-mini-cart labels="miniQuoteLabels" config="miniQuoteConfig" tabindex="-1">
+                        	<img src="/content/dam/bdb/general/header/shopping-cart.svg" aria-label="cart icon" width="23" height="20" />
+                        </bd-mini-cart>
+                    </sly>
+                </div>
+            </div>
+            <div class="d-none d-lg-flex bdb-header__bottom-nav-container" role="list">
+                <sly data-sly-list.item="${globalHeaderNavigationModel.navigationItems}">
+                    <sly data-sly-test="${item.productLabel}">
+                        <div class="d-flex align-items-center bdb-header__bottom-nav mr-5" data-nav-name="${item.productLabel}" id="navigation_${itemList.index}" tabindex="0" role="listbox" aria-label="${item.productLabel}">
+                            <span class="has-sub-menu pl-2 bdb-header__bottom-nav-label cursor-pointer" role="option" tabindex="-1">${item.productLabel @context='html'}</span>
+                            <div class="container bdb-header__sub-menu-container multi-col">
+                                <div class="row">
+                                    <div class="col-lg-9">
+                                        <ul class="bdb-header__sub-menu-container-list">
+                                            <sly data-sly-list.category="${item.children}">
+                                                <li>
+                                                    <div class="dropdown dropright position-static">
+                                                        <a class="bdb-header__sub-menu-container-list-item bdb-header__sub-menu-container-promo-link dropdown-toggle"
+                                                           href="${category.redirectPath}"
+                                                           data-image="${category.modelImagePath}" data-promoDesc="${category.modelImageDesc}"
+                                                           data-promoHeader="${category.modelImageTitle}" data-promoLink="${category.modelImageLink}"
+                                                           data-imageAlt="${category.modelImageAltText}"
+                                                           data-promoLinkLabel="${category.modelImageCTALabel}" tabindex="0"
+                                                           aria-label="${category.productLabel}">
+                                                            <span tabindex="-1">${category.productLabel @context='html'}</span>
+                                                        </a>
+                                                        <ul class="dropdown-menu pt-0 pl-4 dropdown-level-2">
+                                                            <sly data-sly-list.subcategory="${category.children}">
+                                                                <li class="dropdown-submenu dropright position-static">
+                                                                    <a class="bdb-header__sub-sub-menu-container-list-item dropdown-submenu-link bdb-header__sub-menu-container-promo-link"
+                                                                       tabindex="0" href="${subcategory.redirectPath}"
+                                                                       id="${category.productLabelTrimmed}_${subcategory.productLabelTrimmed}" data-image="${subcategory.modelImagePath}"
+                                                                       data-promoDesc="${subcategory.modelImageDesc}"
+                                                                       data-promoHeader="${subcategory.modelImageTitle}"
+                                                                       data-promoLink="${subcategory.modelImageLink}"
+                                                                       data-imageAlt="${subcategory.modelImageAltText}"
+                                                                       data-promoLinkLabel="${subcategory.modelImageCTALabel}"
+                                                                       aria-label="${subcategory.productLabel}">
+                                                                        <span tabindex="-1">${subcategory.productLabel @context='html'}</span>
+                                                                    </a>
+                                                                    <ul class="dropdown-menu pt-0 pl-4 dropdown-level-2 w-100">
+                                                                        <sly data-sly-list.subSubcategory="${subcategory.children}">
+                                                                            <li class="bdb-header__sub-sub-menu-2-container-list-item dropdown-submenu dropdown-submenu-link">
+                                                                                <a class="bdb-header__sub-menu-container-promo-link"
+                                                                                   href="${subSubcategory.redirectPath}" tabindex="0"
+                                                                                   aria-label="${subSubcategory.productLabel}">
+                                                                                    <span tabindex="-1">${subSubcategory.productLabel @context='html'}</span>
+                                                                                </a>
+                                                                            </li>
+                                                                        </sly>
+                                                                    </ul>
+                                                                </li>
+                                                            </sly>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+                                            </sly>
+                                        </ul>
+                                    </div>
+                                    <div class="col-lg-3 container bdb-header__sub-menu-container-right">
+                                        <img class="d-none bdb-header__sub-menu-container-list-image rounded mx-auto" src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/blankimage.png" alt="" />
+                                        <div class="bdb-header__sub-menu-container-list-image-details">
+                                            <h5 class="bdb-header__sub-menu-container-list-image-details-header"></h5>
+                                            <p class="bdb-header__sub-menu-container-list-image-details-body"></p>
+                                            <a class="bdb-header__sub-menu-container-list-image-details-link mt-3 d-inline-block border-0" href=""
+                                               tabindex="0">
+                                                <img class="bi-three-dots d-none"
+                                                     src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/link-arrow.svg" alt="Link Arrow" />
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </sly>
+                </sly>
+                <div class="d-flex align-items-center bdb-header__bottom-nav mr-5" role="listitem">
+                    <div class="bdb-header__search-container">
+                        <div class="bdb-header__search-nav-link">
+                            <a href="#searchModal" data-target="#searchModal" data-toggle="modal" data-backdrop="true"
+                               data-keyboard="true">
+                                <img class="search-icon icon-white" src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/images/search.svg" alt="Search icon" />
+                                <img class="search-icon icon-black d-none" src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/images/search-black.svg" alt="Search icon" />
+                            </a>
+                            <div class="modal fade bdb-header__search-modal" tabindex="-1" role="dialog" aria-modal="true"
+                                 aria-hidden="true" id="searchModal">
+                                <bd-search-modal-container labels="searchContainerLabels" config="searchContainerConfig"></bd-search-modal-container>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <sly data-sly-resource="${'breadcrumb' @resourceType = 'bdb-aem/proxy/components/content/breadcrumb'}"
+         data-sly-unwrap></sly>
+    <div class="bdb-header__overlay-m">
+        <div class="container">
+            <a href="#" class="d-inline-flex align-items-center bdb-header__close-nav" tabindex="0" aria-label="Close Menu">
+                <img src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/close-light.svg" alt="Close Menu" />
+            </a>
+            <div class="bdb-header__accordion" id="accordionExample">
+                <sly data-sly-list.item="${globalHeaderNavigationModel.navigationItems}">
+                    <div class="bdb-header__mobile-menu">
+                        <div class="bdb-header__mobile-menu-header" id="${item.productLabelTrimmed}_${itemList.index}" aria-labelledby="bottomNavHeading_${itemList.index}">
+                            <div class="menu-item-wrap mb-0" id="bottomNavHeading_${itemList.index}">
+                                <a href="#" class="d-flex justify-content-between" type="button" data-toggle="collapse"
+                                   data-target="#collapse_${itemList.index}" aria-expanded="true"
+                                   aria-controls="collapse_${itemList.index}" tabindex="0">
+                                    <span>${item.productLabel @context='html'}</span>
+                                    <img class="arrow-down" alt="Expand menu"
+                                         src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/arrow-down-m.svg"/>
+                                    <img class="arrow-up" alt="Expand menu"
+                                         src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/arrow-up-m.svg"/>
+                                </a>
+                            </div>
+                        </div>
+                        <div id="collapse_${itemList.index}" class="collapse show bdb-header__mobile-menu-body"
+                             aria-labelledby="${item.productLabelTrimmed}_${itemList.index}" data-parent=".bdb-header__accordion">
+                            <ul class="bdb-header__mobile-menu-body-list bdb-header__accordion-level-2">
+                                <sly data-sly-list.category="${item.children}">
+                                    <div class="bdb-header__mobile-menu-header" id="${category.productLabelTrimmed}_${categoryList.index}">
+                                        <div class="menu-item-wrap mb-0">
+                                            <a data-sly-test="${category.children}" href="#${item.productLabelTrimmed}_${category.productLabelTrimmed}"
+                                               class="d-flex justify-content-between" type="button" data-toggle="collapse"
+                                               data-target="#${item.productLabelTrimmed}_${category.productLabelTrimmed}" aria-expanded="true"
+                                               aria-controls="${item.productLabelTrimmed}_${category.productLabelTrimmed}" tabindex="0">
+                                                <span>${category.productLabel @context='html'}</span>
+                                                <img class="arrow-down" alt="arrow-down"
+                                                     src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/arrow-down-m.svg"/>
+                                                <img class="arrow-up" alt="arrow-up"
+                                                     src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/arrow-up-m.svg"/>
+                                            </a>
+                                            <a data-sly-test="${!category.children}" href="${category.redirectPath}"
+                                               class="d-flex justify-content-between" type="button">
+                                                <span>${category.productLabel @context='html'}</span>
+                                            </a>
+                                        </div>
+                                        <div data-sly-test="${category.children}" id="${item.productLabelTrimmed}_${category.productLabelTrimmed}"
+                                             class="collapse show bdb-header__mobile-menu-body pb-0" aria-labelledby="${category.productLabelTrimmed}_${categoryList.index}"
+                                             data-parent=".bdb-header__accordion-level-2">
+                                            <ul class="pt-0 bdb-header__mobile-menu-body border-0 pb-0">
+                                                <sly data-sly-list.subcategory="${category.children}">
+                                                    <li class="dropdown-submenu position-relative">
+                                                        <div class="bdb-header__mobile-menu-header" id="${item.productLabelTrimmed}_${category.productLabelTrimmed}_${subcategory.productLabelTrimmed}">
+                                                            <div class="menu-item-wrap mb-0">
+                                                                <a data-sly-test="${subcategory.children}" tabindex="-1"
+                                                                   href="#collapses_${itemList.index}_${categoryList.index}_${subcategoryList.index}" data-index="${subcategoryList.index}"
+                                                                   id="${subcategory.productLabelTrimmed}_${categoryList.index}_${subcategoryList.index}" type="button" data-toggle="collapse"
+                                                                   aria-controls="collapses_${itemList.index}_${categoryList.index}_${subcategoryList.index}"
+                                                                   aria-target="collapses_${itemList.index}_${categoryList.index}_${subcategoryList.index}"
+                                                                   class="bdb-header__sub-sub-menu-container-list-item dropdown-submenu-link text-white d-flex justify-content-between ml-2"
+                                                                   tabindex="0">
+                                                                    <span>${subcategory.productLabel @context='html'}</span>
+                                                                    <img class="arrow-down" alt="arrow-down"
+                                                                         src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/arrow-down-m.svg"/>
+                                                                    <img class="arrow-up" alt="arrow-up"
+                                                                         src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/arrow-up-m.svg"/>
+                                                                </a>
+                                                                <a data-sly-test="${!subcategory.children}" tabindex="-1"
+                                                                   href="${subcategory.redirectPath}" data-index="${subcategoryList.index}"
+                                                                   id="${subcategory.productLabelTrimmed}_${categoryList.index}_${subcategoryList.index}" type="button"
+                                                                   class="bdb-header__sub-sub-menu-container-list-item dropdown-submenu-link text-white d-flex justify-content-between ml-2"
+                                                                   tabindex="0">
+                                                                    <span>${subcategory.productLabel @context='html'}</span>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                        <ul data-sly-test="${subcategory.children}" id="collapses_${itemList.index}_${categoryList.index}_${subcategoryList.index}"
+                                                            class="collapse show bdb-header__mobile-menu-body border-0 ml-3 pt-0 pb-0">
+                                                            <sly data-sly-list.subSubcategory="${subcategory.children}">
+                                                                <li class="bdb-header__sub-sub-menu-2-container-list-item dropdown-submenu dropdown-submenu-link position-relative">
+                                                                    <a href="${subSubcategory.redirectPath}" class="text-white"
+                                                                       data-index="${subSubcategoryList.index}" tabindex="0"
+                                                                       aria-label="${subSubcategory.productLabel}">
+                                                                        ${subSubcategory.productLabel @context='html'}
+                                                                    </a>
+                                                                </li>
+                                                            </sly>
+                                                            <div class="bdb-header__mobile-menu-header pb-0">
+                                                                <li class="bdb-header__sub-sub-menu-2-container-list-item dropdown-submenu dropdown-submenu-link position-relative">
+                                                                    <a href="${subcategory.redirectPath}" class="text-white bdb-header__sub-menu-container-promo-link"
+                                                                       data-index=${subcategoryList.index} tabindex="0" aria-label="${subcategory.productLabel}">
+                                                                        <span>View All ${subcategory.productLabel @context='html'}</span>
+                                                                    </a>
+                                                                </li>
+                                                            </div>
+                                                        </ul>
+                                                    </li>
+                                                </sly>
+                                                <div class="bdb-header__mobile-menu-header pb-0">
+                                                    <div class="menu-item-wrap mb-0">
+                                                        <a tabindex="-1" href="${category.redirectPath}" type="button" data-toggle="collapse"
+                                                           aria-label="${category.productLabel}"
+                                                           class="bdb-header__sub-sub-menu-container-list-item dropdown-submenu-link text-white d-flex justify-content-between ml-2 bdb-header__sub-menu-container-promo-link"
+                                                           tabindex="0">
+                                                            <span>View All ${category.productLabel @context='html'}</span>
+                                                    </div>
+                                                </div>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </sly>
+                            </ul>
+                        </div>
+                    </div>
+                </sly>
+                <div data-sly-test="${showAsContentSite == 'false'}" class=" bdb-header__mobile-menu bottom-nav bottom-nav-0 ">
+                    <div class="bdb-header__mobile-menu-header" id="Order LookUp_0" aria-labelledby="topNavHeading_0">
+                        <div class="menu-item-wrap mb-0" id="topNavHeading_0">
+                            <a href="#" class="d-flex justify-content-between" type="button" tabindex="0" aria-label="Order Look-Up">
+                                <div data-sly-test="${globalHeaderModel.orderLookupIconUrl && globalHeaderNavigationModel.countryValue == 'us' && showAsContentSite == 'false'}" class="bdb-header__mobile-menu-heading d-flex align-items-center">
+                                    <img class="user-icon icon-white" src="${globalHeaderModel.orderLookupIconUrl}" alt="${globalHeaderModel.orderLookupIconAltText}" />
+                                    <img class="user-icon icon-black d-none" src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/orders-dark.svg" alt="${globalHeaderModel.orderLookupIconAltText}" />
+                                    <a class="signInCta" data-bdb-href="${globalHeaderModel.orderLookupUrl}" aria-label="Sign-In CTA Link">
+                                        <span class="ml-3">${globalHeaderModel.orderLookupLabel}</span>
+                                    </a>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div data-sly-test="${showAsContentSite == 'false'}" class="bdb-header__mobile-menu bottom-nav bottom-nav-1">
+                    <div class="bdb-header__mobile-menu-header" id="Sign In / Register" aria-labelledby="topNavHeading_1">
+                        <div class="menu-item-wrap mb-0" id="topNavHeading_1">
+                            <a href="javascript:void(0)" class="d-flex justify-content-between" type="button" data-toggle="collapse"
+                               data-target="#top-collapse_1" aria-expanded="true" tabindex="0" aria-controls="top-collapse_1" aria-label="top-collapse_1">
+                                <div class="bdb-header__mobile-menu-heading d-flex align-items-center">
+                                    <img class="user-icon icon-white" src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/images/profile.svg"
+                                         alt="Profile icon" />
+                                    <img class="user-icon icon-black d-none" src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/images/profile-black.svg"
+                                         alt="Profile icon" />
+                                    <span class="ml-3 d-none userName-js">UserName</span>
+                                    <span class="d-none guest-js signInCta" href="${globalHeaderModel.signInUrl}" data-bdb-href="${globalHeaderModel.signInUrl}" aria-label="Sign-In URL">
+                              <span class="ml-3">${properties.signInLabel}</span>
+                           </span>
+                        </div>
+                        <img class="arrow-down" alt="Expand menu"
+                           src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/arrow-down-m.svg" />
+                        <img class="arrow-up" alt="Expand menu"
+                           src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/arrow-up-m.svg" />
+                     </a>
+                  </div>
+               </div>
+               <div id="top-collapse_1" class="collapse show bdb-header__mobile-menu-body"
+                  aria-labelledby="Sign In / Register" data-parent=".bdb-header__accordion">
+                  <ul class="d-none profileMenu-js">
+                     <bd-profile-menu-container viewport="mobile"></bd-profile-menu-container>
+                  </ul>
+               </div>
+            </div>
+            <div class="bdb-header__mobile-menu bottom-nav bottom-nav-2">
+            <div class="bdb-header__mobile-menu-header" id="${globalHeaderNavigationModel.currentCL}"
+               aria-labelledby="topNavHeading">
+            <div class="mb-0" id="topNavHeading">
+            <a href="#" class="d-flex justify-content-between" type="button" data-toggle="collapse"
+               data-target="#top-collapse_0" aria-expanded="true" tabindex="0" aria-controls="top-collapse_0">
+            <div class="bdb-header__mobile-menu-heading d-flex align-items-center">
+            <img class="language-icon icon-white" src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/images/language.svg"
+               alt="Language selector icon" />
+            <img class="language-icon icon-black d-none" src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/images/language-black.svg"
+               alt="Language selector icon" />
+            <span class="ml-3">${globalHeaderNavigationModel.currentCL}</span>
+            </div>
+            <img class="arrow-down"
+               src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/arrow-down-m.svg"
+               alt="Expand menu" />
+            <img class="arrow-up"
+               src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/arrow-up-m.svg"
+               alt="Expand menu" />
+            </a>
+            </div>
+            </div>
+            <div id="top-collapse_0" class="collapse show bdb-header__mobile-menu-body change-language"
+               aria-labell="${globalHeaderNavigationModel.currentCL}" data-parent=".bdb-header__accordion">
+               <ul class="">
+                  <sly data-sly-list.item="${globalHeaderNavigationModel.dropdownItems}">
+                     <li class="pb-3 ">
+                        <span class="ml-3 bdb-header__mobile-menu-body-value">${item.countryName}</span>
+                     </li>
+                  </sly>
+                  <li class="pb-3 ">
+                     <a class="d-flex justify-content-between align-items-center bdb-header__mobile-menu-lbl bdb-header__mobile-menu-item"
+                        href="${globalHeaderModel.changeLabelUrl}" tabindex="0" aria-label="${properties.changeLabel}">
+                        <span class="ml-3 bdb-header__mobile-menu-body-value">${properties.changeLabel}</span>
+                        <img class="arrow-right" src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/arrow-right-m.svg"
+                        alt="Expand menu" />
+                     </a>
+                  </li>
+               </ul>
+            </div>
+            </div>
+            
+            <div class="d-none bdb-header__mobile-menu bottom-nav bottom-nav-3">
+               <div class="bdb-header__mobile-menu-header" id="" aria-labelledby="topNavHeading_2">
+                  <div class="mb-0" id="topNavHeading_2">
+                     <a href="#" class="d-flex justify-content-between" type="button" data-toggle="collapse"
+                        data-target="#top-collapse_2" aria-expanded="true" tabindex="0" aria-controls="top-collapse_2">
+                        <div class="bdb-header__mobile-menu-heading d-flex align-items-center">
+                           <img class="search-icon icon-white" src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/search-m.svg" alt="Search icon" />
+                           <img class="search-icon icon-black d-none" src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/images/search-black.svg" alt="Search icon" />
+                           <span class="ml-3"></span>
+                        </div>
+                        <img class="arrow-down"
+                           src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/arrow-down-m.svg"
+                           alt="Expand menu" />
+                        <img class="arrow-up"
+                           src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/arrow-up-m.svg"
+                           alt="Expand menu" />
+                     </a>
+                  </div>
+               </div>
+               <div id="top-collapse_2" class="collapse show bdb-header__mobile-menu-body" aria-labelledby=""
+                  data-parent=".bdb-header__accordion">
+                  <ul></ul>
+               </div>
+            </div>
+            <div data-sly-test="${showAsContentSite == 'false'}" class="d-none bdb-header__mobile-menu bottom-nav bottom-nav-4">
+               <div class="bdb-header__mobile-menu-header" id="" aria-labelledby="topNavHeading_3">
+                  <div class="mb-0" id="topNavHeading_3">
+                     <a href="#" class="d-flex justify-content-between" type="button" data-toggle="collapse"
+                        data-target="#top-collapse_3" aria-expanded="true" tabindex="0" aria-controls="top-collapse_3">
+                        <div class="bdb-header__mobile-menu-heading d-flex align-items-center" style="width: 30px" tabindex="0">
+                           <sly data-sly-test="${! inheritedPageProperties.enableAddToQuoteCheckBox}">
+                              <bd-mini-cart labels="miniCartLabels" config="miniCartConfig">
+                              	  <img src="/content/dam/bdb/general/header/shopping-cart.svg" aria-label="cart icon" width="23" height="20" />
+                              </bd-mini-cart>
+                           </sly>
+                           <sly data-sly-test="${inheritedPageProperties.enableAddToQuoteCheckBox}">
+                              <bd-mini-cart labels="miniQuoteLabels" config="miniQuoteConfig">
+                              	  <img src="/content/dam/bdb/general/header/shopping-cart.svg" aria-label="cart icon" width="23" height="20" />
+                              </bd-mini-cart>
+                           </sly>
+                           <span class="ml-3"></span>
+                        </div>
+                        <img class="arrow-down"
+                           src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/arrow-down-m.svg"
+                           alt="Expand menu" />
+                        <img class="arrow-up"
+                           src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/arrow-up-m.svg"
+                           alt="Expand menu" />
+                     </a>
+                  </div>
+               </div>
+               <div id="top-collapse_3" class="collapse show bdb-header__mobile-menu-body" aria-labelledby=""
+                  data-parent=".bdb-header__accordion">
+                  <ul></ul>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="d-none w-100 flex-column d-lg-none bdb-header__mobile-lang-selector">
+      <!-- empty because separate component - countrySelector
+         <sly data-sly-list.item="${globalHeaderModel.regionmultifield}">
+         	<div class="bdb-header__mobile-region">
+         		<div class="bdb-header__mobile-region-heading">${item.region}</div>
+         		<ul class="bdb-header__mobile-region-list">
+         			<sly data-sly-list.region="${item.countrymultifield}">
+         				<li>
+         					<a class="bdb-header__mobile-region-list-item" href="${region.urlCountryAction}" tabindex="0"
+         					   aria-label="${region.country}">${region.country}</a>
+         				</li>
+         			</sly>
+         		</ul>
+         	</div>
+         </sly>
+         !-->
+   </div>
+</header>
+<div class="sticky-hidden-header"></div>
+<sly data-sly-test="${pageProperties.customLoaderMessage}">
+	<bd-loader showLoaderMessage="true" cancelBtn="${pageProperties.customLoaderMessageCancel}" ajaxCallsCount=0></bd-loader>
+</sly>
+<sly data-sly-test="${!pageProperties.customLoaderMessage}">
+	<bd-loader ajaxCallsCount=0></bd-loader>
+</sly>
+<bd-global-error-message></bd-global-error-message>
+<sly data-sly-test="${globalHeaderModel.allowAlertBanner == 'yes'}">
+    <article class="w-100 container full-width bdb-alert app-js__alert bdb-maintainence-alert auto-maintainence-alert ${!pageProperties.hideBreadcrumb && breadcrumbModel.breadcrumbMap.size > 1 ? 'has-breadcrumbs' : ''}">
+        <div class="d-flex align-items-center">
+        <span class="bdb-alert__icon">
+            <img class="d-none d-lg-block"
+                 src="${globalHeaderModel.alertIconAlert}"
+                 alt="${globalHeaderModel.iconAltTextAlert}">
+        </span>
+            <div class="bdb-alert__info bd-rte ml-lg-3">
+            	<p>
+	                <sly data-sly-test=${!globalHeaderModel.isSameEventDate}>
+						${globalHeaderModel.alertDescOne @context='html'} <b>${globalHeaderModel.alertBannerStartTime}</b> on <b>${globalHeaderModel.alertBannerStartDate}</b> through <b>${globalHeaderModel.alertBannerEndTime}</b> on <b>${globalHeaderModel.alertBannerEndDate}</b>. ${globalHeaderModel.alertDescTwo @context='html'}
+					</sly>
+					<sly data-sly-test=${globalHeaderModel.isSameEventDate}>
+						${globalHeaderModel.alertDescOne @context='html'} <b>${globalHeaderModel.scheduledTimings}</b> on <b>${globalHeaderModel.alertBannerStartDate}</b>. ${globalHeaderModel.alertDescTwo @context='html'}
+					</sly>
+	                <a data-sly-test="${globalHeaderModel.mobileLabelAlert}"
+	                   class="d-inline-flex d-lg-none align-items-center bdb-alert__info-link"
+	                   href="${globalHeaderModel.alertInfoLinkAlert}">${globalHeaderModel.mobileLabelAlert @context='html'}
+	                    <img src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/see-more-m.svg" role="presentation"></a>
+	
+	                <a data-sly-test="${globalHeaderModel.desktopLabelAlert}"
+	                   class="d-none d-lg-inline-flex align-items-center bdb-alert__info-link "
+	                   href="${globalHeaderModel.alertInfoLinkAlert}">${globalHeaderModel.desktopLabelAlert}
+	                    <img src=" /etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/see-more-m.svg" role="presentation"></a>
+	
+	                <a data-sly-test.msgPopup="${globalHeaderModel.msgPopupLabelAlert ? globalHeaderModel.msgPopupLabelAlert : 'Read More'}" class="d-none align-items-center bdb-alert__info-link bdb-alert__readMore-link"
+	                   href="#" data-toggle="modal" data-target="#bdMaintenanceModal">${msgPopup}
+	                    <img src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/see-more-m.svg" role="presentation"></a>
+				</p>
+            </div>
+        </div>
+        <div data-sly-test="${globalHeaderModel.alertDescOptionalAlert}" class="d-none d-lg-flex mt-3 mt-lg-0 align-items-center second-alert">
+        <span class="bdb-alert__icon">
+            <img class="d-none d-lg-block"
+                 src="${globalHeaderModel.alertIconOptionalAlert}"
+                 alt="${globalHeaderModel.iconAltTextOptionalAlert}">
+        </span>
+            <div class="bdb-alert__info bd-rte ml-lg-3">
+                ${globalHeaderModel.alertDescOptionalAlert @context='html'}
+                <a data-sly-test="${globalHeaderModel.mobileLabelOptionalAlert}"
+                   class="d-inline-flex d-lg-none align-items-center bdb-alert__info-link"
+                   href="${globalHeaderModel.alertInfoLinkOptionalAlert}">${globalHeaderModel.mobileLabelOptionalAlert @context='html'}
+                    <img src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/see-more-m.svg" role="presentation"></a>
+
+                <a data-sly-test="${globalHeaderModel.desktopLabelOptionalAlert}"
+                   class="d-none d-lg-inline-flex align-items-center bdb-alert__info-link "
+                   href="${globalHeaderModel.alertInfoLinkOptionalAlert}">${globalHeaderModel.desktopLabelOptionalAlert @context='html'}
+                    <img src=" /etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/see-more-m.svg" role="presentation"></a>
+
+            </div>
+        </div>
+    </article>
+
+    <div data-sly-test="${globalHeaderModel.alertDescOne}" class="modal fade bd-maintenance-modal" id="bdMaintenanceModal" tabindex="-1" role="dialog" aria-labelledby="bdb maintainence information"
+         aria-hidden="true" data-backdrop="static">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="closeCta" data-dismiss="modal" aria-label="Close">
+                        <img src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/Close-dark.svg" alt="close" />
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <sly data-sly-test=${!globalHeaderModel.isSameEventDate}>
+						${globalHeaderModel.alertDescOne @context='html'} <b>${globalHeaderModel.alertBannerStartTime}</b> on <b>${globalHeaderModel.alertBannerStartDate}</b> through <b>${globalHeaderModel.alertBannerEndTime}</b> on <b>${globalHeaderModel.alertBannerEndDate}</b>. ${globalHeaderModel.alertDescTwo @context='html'}
+					</sly>
+					<sly data-sly-test=${globalHeaderModel.isSameEventDate}>
+						${globalHeaderModel.alertDescOne @context='html'} <b>${globalHeaderModel.scheduledTimings}</b> on <b>${globalHeaderModel.alertBannerStartDate}</b>. ${globalHeaderModel.alertDescTwo @context='html'}
+					</sly>
+
+                    <a data-sly-test="${globalHeaderModel.mobileLabelAlert}"
+                       class="d-inline-flex d-lg-none align-items-center bdb-alert__info-link"
+                       href="${globalHeaderModel.alertInfoLinkAlert}">${globalHeaderModel.mobileLabelAlert @context='html'}
+                        <img src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/see-more-m.svg" role="presentation"></a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</sly>
+<article class="redirection-modal app-js__redirection-modal">
+   <div class="modal fade" id="redirection-modal" tabindex="-1" role="dialog" aria-labell="Redirection Modal" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+         <div class="modal-content">
+            <div class="modal-header d-flex justify-content-end border-0">
+                  <button type="button" class="close-btn" data-dismiss="modal" aria-label=closeicon>
+                     <img src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/Close-dark.svg"
+                        alt=closeicon />
+                  </button>
+            </div>
+            <div class="modal-body">
+                  <p class="modal-body__title pb-3">${pageProperties.popUpTitle}</p>
+                  <p class="modal-body__description">${pageProperties.popUpDescription}</p>
+                  <div class="modal-body__cta-section d-flex">
+                     <button type="button" class="btn dismissCTA p-0" data-dismiss="modal">${pageProperties.dismissLabel}</button>
+                     <a href="${globalHeaderModel.urlLogoAction}" class="btn btn-primary-blue confirmCTA"
+                        aria-label="Back to Homepage">${pageProperties.backToHomePageLabel}</a>
+                  </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</article>
+<!-- html code to add feedback button across all pages -->
+<div class="sticky-wrapper" data-sly-test="${globalHeaderModel.stickyFormNameLabel}">
+    <a href="${globalHeaderModel.feedBackFormURL}" class="btn btn-primary-blue sticky-wrapper__btn hide" target="_blank">
+        ${globalHeaderModel.stickyFormNameLabel}
+    </a>
+</div>
+ <p data-sly-test="${inheritedPageProperties.enableTimer}">Global Header:${time.endTime}</p>     
+ <bd-login-error></bd-login-error>
+<div class="bdb-external-site-redirection app-js__bdb-external-site-redirection">
+    <div class="modal fade" id="bdb-external-site-redirection-modal" tabindex="-1" role="dialog"
+        aria-labell="External Site Redirection" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content" id="popup-notification">
+                <div class="modal-body">
+                    ${globalHeaderModel.warningMessage}
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal"> ${globalHeaderModel.noButton}</button>
+                    <a class="btn btn-primary-blue redirection-button" href=""> ${globalHeaderModel.yesButton}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="bd-container d-flex justify-content-start justify-content-lg-center d-none">
+   <article class="product-announcement show-announcement align-items-center bdb-alert app-js__alert d-none visible">
+        <span class="bdb-alert__icon" role="alert">
+            <img src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/information.svg" alt="Alert Icon">
+        </span>
+      <div class="bdb-alert__info">
+      </div>
+   </article>
+</div>
+
+<div class="bdb-browser-version app-js__bdb-browser-version">
+   <div class="modal fade" id="bdb-browser-version-modal" tabindex="-1" role="dialog" data-backdrop="static"
+        aria-labelledby="bdb-browser-version-modal-label" aria-hidden="true">
+   <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+         <div class="modal-header">
+            <h5 class="modal-title" id="bdb-browser-version-modal-label"> ${globalHeaderModel.heading}</h5>
+         </div>
+         <div class="modal-body">
+            ${globalHeaderModel.warningMsg}
+         </div>
+         <div class="modal-footer">
+            <button type="button" class="btn btn-primary-blue btn-md confirm-cta">${globalHeaderModel.ctaLable}</button>
+         </div>
+      </div>
+   </div>
+</div>
+</div>
+
+<article class="bdb-translation-modal app-js__bdb-translation-modal">
+    <div class="modal fade" id="bdb-translation-modal" tabindex="-1" role="dialog"
+        aria-labell="BDB Translation Dialog" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content p-0">
+                <div class="bdb-translation-modal-close">
+                    <button type="button" class="close p-0" data-dismiss="modal" aria-label="Close" data-role="none">
+                        <img src="/etc.clientlibs/bdb-aem/clientlibs/clientlib-base/resources/icons/Close-dark.svg" alt="close" />
+                    </button>
+                </div>
+                <div class="bdb-translation-modal-body">
+                    <div class="bdb-translation-modal-title">
+                        ${headerFetch.modalTitle}
+                    </div>
+                    <div class="bdb-translation-modal-description">
+                        ${headerFetch.modalDescription @context='html'}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</article>
+
+<article class="bdb-country-detection-modal app-js__bdb-country-detection-modal">
+    <div class="modal fade" id="bdb-country-detection-modal" tabindex="-1" role="dialog"
+        aria-labelledby="bdb-country-detection-modal-label" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header" id="bdb-country-detection-modal-label">${globalHeaderModel.countryDetectionTitle}</div>
+                <div class="modal-body">${globalHeaderModel.countryDetectionDescription @context='html'}</div>
+                <div class="modal-footer text-right">
+                    <button type="button"
+                        class="btn btn-md btn-primary-blue stay-here-button">${globalHeaderModel.stayHereButton}</button>
+                    <button type="button"
+                        class="btn btn-md btn-secondary switch-location-button">${globalHeaderModel.redirectButton}</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</article>
+
+<article class="bdb-reactivation-modal app-js__bdb-reactivation-modal">
+    <div class="modal fade" id="bdb-reactivation-modal" tabindex="-1" role="dialog"
+        aria-labell="BDB Reactivation Dialog" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content p-0">
+                <div class="bdb-reactivation-modal-body">
+                    <div class="bdb-reactivation-modal-title">
+                        ${globalHeaderModel.modalTitle}
+                    </div>
+                    <div class="bdb-reactivation-modal-description">
+                        ${globalHeaderModel.modalDescription @context='html'}
+                    </div>
+                    <div class="bdb-reactivation-modal-buttons mt-3">
+                        <button
+                            class="btn btn-md btn-secondary reactivation-cancel-button">${globalHeaderModel.cancelCTALabel}</button>
+                        <a href="${globalHeaderModel.reactivationURL}"
+                            class="btn btn-md btn-primary-blue">${globalHeaderModel.reactivateCTALabel}</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</article>
+
+<script type='application/ld+json'>
+   {
+      "@context": "https://schema.org",
+      "@graph": [${globalHeaderModel.siteSearchJson || '{}' @context='scriptComment'},
+          ${breadcrumbModel.breadcrumbJson || '{}' @context='scriptComment'}]
+   }
+</script>

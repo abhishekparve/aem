@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="PDP Hero"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+        <items jcr:primaryType="nt:unstructured">
+            <column
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/container">
+                <items jcr:primaryType="nt:unstructured">
+                    <clonelabel
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldDescription="clone label"
+                        fieldLabel="Clone Label"
+                        name="./cloneLabel"/>
+                    <viewallformats
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldDescription="View all formats CTA label"
+                        fieldLabel="View All Formats Label"
+                        name="./allFormatsLabel"/>
+                    <showmorecta
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldDescription="show more CTA label"
+                        fieldLabel="Show more CTA Label"
+                        name="./showMoreCta"/>
+                    <showlesscta
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldDescription="Show less CTA label"
+                        fieldLabel="Show Less CTA Label"
+                        name="./showLessCta"/>
+                    <linescount
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/form/select"
+                        fieldLabel="Lines to be displayed"
+                        name="./linesCount">
+                        <items jcr:primaryType="cq:WidgetCollection">
+                            <twolines
+                                jcr:primaryType="nt:unstructured"
+                                text="Two Lines"
+                                value="2"/>
+                            <threelines
+                                jcr:primaryType="nt:unstructured"
+                                text="Three Lines"
+                                value="3"/>
+                        </items>
+                    </linescount>
+                    <ruoheading
+                        granite:class="coral-Heading coral-Heading--4"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/heading"
+                        text="RUO Fields"/>
+                    <legendtitle
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldDescription="Enter the title"
+                        fieldLabel="Regulatory Title"
+                        name="./ruoLegendTitle"/>
+                    <ruofields
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                        composite="{Boolean}true"
+                        eaem-show-on-collapse="EAEM.showProductName">
+                        <field
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/container"
+                            name="./ruoFields">
+                            <items jcr:primaryType="nt:unstructured">
+                                <column
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/container">
+                                    <items jcr:primaryType="nt:unstructured">
+                                        <label
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            fieldDescription="Enter the Lable"
+                                            fieldLabel="Label"
+                                            name="./label"/>
+                                        <description
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
+                                            fieldDescription="Enter the description"
+                                            fieldLabel="Description"
+                                            name="./description"/>
+                                    </items>
+                                </column>
+                            </items>
+                        </field>
+                    </ruofields>
+                    <description
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldDescription="Enter the Description"
+                        fieldLabel="Regulatory Description"
+                        name="./ruoDescription"/>
+                </items>
+            </column>
+        </items>
+    </content>
+</jcr:root>

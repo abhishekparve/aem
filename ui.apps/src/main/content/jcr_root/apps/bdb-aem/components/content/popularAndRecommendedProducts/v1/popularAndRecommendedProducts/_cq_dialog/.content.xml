@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Popular and Recommended Products"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+        <items jcr:primaryType="nt:unstructured">
+            <column
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/container">
+                <items jcr:primaryType="nt:unstructured">
+                    <dropdown
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                        fieldLabel="Popular/ Recommended Products"
+                        name="./categorySelect">
+                        <items jcr:primaryType="nt:unstructured">
+                            <def
+                                jcr:primaryType="nt:unstructured"
+                                text="Select Popular/ Recommended Products"
+                                value=""/>
+                            <popular
+                                jcr:primaryType="nt:unstructured"
+                                text="Popular Products"
+                                value="popular"/>
+                            <recommended
+                                jcr:primaryType="nt:unstructured"
+                                text="Recommended Products"
+                                value="recommended"/>
+                            <customerAlsoViewed
+                                jcr:primaryType="nt:unstructured"
+                                text="Customer Also Viewed"
+                                value="alsoViewed"/>
+                        </items>
+                    </dropdown>
+                    <categoryTitle
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldLabel="Category Title"
+                        name="./categoryTitle"/>
+                    <catalogNo
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldLabel="Catalog Number Label"
+                        name="./catalogNo"/>
+                    <alsoKnownAs
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldLabel="Also  Known As Label"
+                        name="./alsoKnownAs"/>
+                    <inquire
+		               jcr:primaryType="nt:unstructured"
+		               sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+		               fieldLabel="Inquire Label"
+		               name="./inquireLabel"/>
+	               <addToShoppingList
+		               jcr:primaryType="nt:unstructured"
+		               sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+		               fieldLabel="Add To Shopping List Label"
+		               name="./addToShoppingList"/>
+	               <addToQuoteList
+		               jcr:primaryType="nt:unstructured"
+		               sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+		               fieldLabel="Add To Quote List Label"
+		               name="./addToQuoteList"/>
+	               <compare
+		               jcr:primaryType="nt:unstructured"
+		               sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+		               fieldLabel="Compare Label"
+		               name="./compareLabel"/>  
+                   <clone
+		               jcr:primaryType="nt:unstructured"
+		               sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+		               fieldLabel="Clone Label"
+		               name="./clone"/> 
+                   <size
+		               jcr:primaryType="nt:unstructured"
+		               sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+		               fieldLabel="Size Label"
+		               name="./size"/>   					   
+                </items>
+            </column>
+        </items>
+    </content>
+</jcr:root>

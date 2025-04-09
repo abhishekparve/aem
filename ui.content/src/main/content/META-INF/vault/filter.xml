@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <filter root="/conf/bdb-aem/settings/wcm">
+        <exclude pattern=".*/experiencefragment.*"/>
+		<exclude pattern="/conf/bdb-aem/settings/wcm/segments(/.*)?"/>
+    </filter>
+	<filter root="/conf/bdb-aem/settings/cloudsettings" mode="merge"/>
+	<filter root="/conf/global/settings/workflow/launcher/config/-1025062283" mode="merge"/>
+	<filter root="/conf/global/settings/workflow/launcher/config/-1560418874" mode="merge"/>
+	<filter root="/conf/global/settings/workflow/launcher/config/-742934001" mode="merge"/>
+	<filter root="/conf/global/settings/workflow/launcher/config/update_asset_create" mode="merge"/>
+	<filter root="/conf/global/settings/workflow/launcher/config/update_asset_mod" mode="merge"/>
+	<filter root="/conf/global/settings/workflow/launcher/config/-882891533" mode="merge"/>
+	<filter root="/conf/global/settings/workflow/launcher/config/1231227828" mode="merge"/>
+	<filter root="/conf/global/settings/workflow/launcher/config/1111644335" mode="merge"/>
+	<filter root="/conf/global/settings/workflow/launcher/config/680843960" mode="merge"/>
+	
+	<filter root="/conf/global/settings/workflow/models/bdb-content-approval"/>
+	<filter root="/conf/global/settings/workflow/models/bdb-solr-all-content-page-indexing"/>
+	<filter root="/conf/global/settings/workflow/models/bdb-solr-all-pdf-assets-indexing"/>
+	<filter root="/conf/global/settings/workflow/models/bdb-solr-all-pdp-page-indexing"/>
+	<filter root="/conf/global/settings/workflow/models/bdb-all-scientific-images-solr-indexing"/>
+	<filter root="/conf/global/settings/workflow/models/bdb-solr-indexing"/>
+	<filter root="/conf/global/settings/workflow/models/ProcessProductDocumentWorkflow"/>
+	<filter root="/conf/global/settings/workflow/models/processProductDocumentWorkflowFutureState"/>
+	<filter root="/conf/global/settings/workflow/models/product-image-processing"/>
+	<filter root="/conf/global/settings/workflow/models/bdb-Asset-Replication-Workflow"/>
+	<filter root="/conf/global/settings/workflow/models/bdb-tools-antigen-indexing"/>
+	<filter root="/conf/global/settings/workflow/models/bdb-tools-clone-indexing"/>
+	<filter root="/conf/global/settings/workflow/models/bdb-tools-cell-indexing"/>
+	<filter root="/conf/global/settings/workflow/models/bdb-tools-panel-indexing"/>
+	<filter root="/conf/global/settings/workflow/models/update-product-announcement"/>
+	<filter root="/conf/global/settings/workflow/models/update-product-announcement--post-processing-"/>
+	<filter root="/conf/global/settings/workflow/models/create-bulk-synonym--post-processing-"/>
+	<!--<filter root="/conf/global/settings/workflow/models/create-bulk-synonym"/>-->
+	<filter root="/conf/global/settings/workflow/models/document-metadata-import-workflow"/>
+	<filter root="/conf/global/settings/workflow/models/update-missing-tds-regions"/>
+	<filter root="/conf/global/settings/workflow/models/update-missing-tds-regions--post-processing-"/>
+	<!-- <filter root="/conf/global/settings/workflow/models/bulk-PublishorUnpublish-Page"/> -->
+	
+	
+	<!--Commenting this line so that generic list in PROD will not get overwritten-->
+    <!--<filter root="/etc/acs-commons/lists" mode="update"/>-->
+	<filter root="/etc/notification/email/bdb" mode="update"/>
+    <filter root="/etc/acs-commons/lists/bdb/comparison_table_values" mode="merge"/>
+    <filter root="/etc/map.publish" mode="replace"/>
+    <filter root="/content/bdb/paths"/>
+	<filter root="/var/workflow/models/bdb-content-approval"/>
+	<filter root="/var/workflow/models/bdb-solr-all-content-page-indexing"/>
+	<filter root="/var/workflow/models/bdb-solr-all-pdf-assets-indexing"/>
+	<filter root="/var/workflow/models/bdb-solr-all-pdp-page-indexing"/>
+	<filter root="/var/workflow/models/bdb-all-scientific-images-solr-indexing"/>
+	<filter root="/var/workflow/models/bdb-solr-indexing"/>
+	<filter root="/var/workflow/models/ProcessProductDocumentWorkflow"/>
+	<filter root="/var/workflow/models/processProductDocumentWorkflowFutureState"/>
+	<filter root="/var/workflow/models/product-image-processing"/>
+	<filter root="/var/workflow/models/bdb-Asset-Replication-Workflow"/>
+	<filter root="/var/workflow/models/bdb-tools-antigen-indexing"/>
+	<filter root="/var/workflow/models/bdb-tools-clone-indexing"/>
+	<filter root="/var/workflow/models/bdb-tools-cell-indexing"/>
+	<filter root="/var/workflow/models/bdb-tools-panel-indexing"/>
+	<filter root="/var/workflow/models/update-product-announcement"/>
+	<filter root="/var/workflow/models/update-product-announcement--post-processing-"/>
+	<filter root="/var/workflow/models/create-bulk-synonym--post-processing-"/>
+	<!--<filter root="/var/workflow/models/create-bulk-synonym"/>-->
+	<filter root="/var/workflow/models/document-metadata-import-workflow"/>
+	<filter root="/var/workflow/models/update-missing-tds-regions"/>
+	<filter root="/var/workflow/models/update-missing-tds-regions--post-processing-"/>
+	<!-- <filter root="/var/workflow/models/bulk-PublishorUnpublish-Page"/> -->
+	
+	<filter root="/conf/global/settings/dam/adminui-extension/metadataschema/default" mode="replace"/>
+	<filter root="/conf/global/settings/dam/adminui-extension/metadataschema/image-scheduler-schema" mode="merge"/>
+	<filter root="/conf/global/settings/dam/adminui-extension/metadataschema/scientific" mode="merge"/>
+</workspaceFilter>

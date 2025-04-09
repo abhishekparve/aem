@@ -1,0 +1,434 @@
+{
+    "type": "bdbQuoteWsDTO",
+    "billingAddress": {
+        "addressId": "b943a742-4c33-4359-9a55-a9a4dfb5df2e",
+        "billingAddress": true,
+        "building": "Building - 1",
+        "companyName": "test company",
+        "country": {
+            "isocode": "US",
+            "name": "United States"
+        },
+        "defaultAddress": true,
+        "department": "Science",
+        "district": "DK",
+        "floor": "2",
+        "formattedAddress": "Address Line 1, Address Line 2, Alabama, Birmingham, 91345",
+        "line1": "Address Line 1",
+        "line2": "Address Line 2",
+        "pendingAddress": true,
+        "phone": "123456789",
+        "postalCode": "91345",
+        "region": {
+            "countryIso": "US",
+            "isocode": "US-AL",
+            "isocodeShort": "AL",
+            "name": "Alabama"
+        },
+        "room": "001",
+        "shippingAddress": false,
+        "status": "PENDING_APPROVAL",
+        "town": "Birmingham",
+        "visibleInAddressBook": false
+    },
+    "code": "Test-3333",
+    "deliveryAddress": {
+        "addressId": "9f4f925b-9d23-40ae-946a-e1f3e32ef1a4",
+        "billingAddress": false,
+        "building": "Building - 1",
+        "companyName": "test company",
+        "country": {
+            "isocode": "US",
+            "name": "United States"
+        },
+        "defaultAddress": true,
+        "department": "Science",
+        "district": "DK",
+        "floor": "2",
+        "formattedAddress": "Address Line 1, Address Line 2, Alabama, Birmingham, 91345",
+        "line1": "Address Line 1",
+        "line2": "Address Line 2",
+        "organizationName": "Sold-To-BDName",
+        "pendingAddress": true,
+        "phone": "123456789",
+        "postalCode": "91345",
+        "region": {
+            "countryIso": "US",
+            "isocode": "US-AL",
+            "isocodeShort": "AL",
+            "name": "Alabama"
+        },
+        "room": "001",
+        "shippingAddress": true,
+        "status": "PENDING_APPROVAL",
+        "town": "Birmingham",
+        "visibleInAddressBook": false
+    },
+    "entries": [
+        {
+            "basePrice": {
+                "currencyIso": "USD",
+                "formattedValue": "$0.00",
+                "priceType": "BUY",
+                "value": 0
+            },
+            "cancellableQuantity": 0,
+            "configurationInfos": [],
+            "contractPrice": {
+                "currencyIso": "USD",
+                "formattedValue": "$0.00",
+                "priceType": "BUY",
+                "value": 0
+            },
+            "entryNumber": 0,
+            "isContractualPrice": false,
+            "listPrice": {
+                "currencyIso": "USD",
+                "formattedValue": "$0.00",
+                "priceType": "BUY",
+                "value": 0
+            },
+            "product": {
+                "availableForPickup": false,
+                "baseOptions": [
+                    {
+                        "selected": {
+                            "code": "340991",
+                            "stock": {
+                                "isValueRounded": false,
+                                "stockLevel": 0,
+                                "stockLevelStatus": "inStock"
+                            },
+                            "url": "///p/340991",
+                            "variantOptionQualifiers": []
+                        },
+                        "variantType": "GenericVariantProduct"
+                    }
+                ],
+                "baseProduct": "340991_base",
+                "batchManaged": true,
+                "categories": [
+                    {
+                        "code": "40",
+                        "name": "40",
+                        "url": "/size/40/c/40"
+                    }
+                ],
+                "code": "340991",
+                "displayable": true,
+                "name": "BD Stem Cell Control Kit 15 Tests IVD ",
+                "pictureUrl": "",
+                "productUrl": "",
+                "purchasable": false,
+                "ruoQualified": true,
+                "stock": {
+                    "isValueRounded": false,
+                    "stockLevel": 0,
+                    "stockLevelStatus": "inStock"
+                },
+                "url": "///p/340991"
+            },
+            "quantity": 1,
+            "requestSameLot": false,
+            "returnableQuantity": 0,
+            "statusSummaryList": [],
+            "surchargeApplied": false,
+            "totalPrice": {
+                "currencyIso": "USD",
+                "formattedValue": "$0.00",
+                "priceType": "BUY",
+                "value": 0
+            },
+            "updateable": true
+        }
+    ],
+    "specialInstructions": "My Special Instruction for quotes",
+    "user": {
+        "name": "Anshumali Gupta",
+        "uid": "caweb_788222000"
+    },
+    "accountManagerInfo": {
+        "email": "ravi@deloitte.com",
+        "name": "Ravi",
+        "phone": "9999999999"
+    },
+    "currency": {
+        "active": true,
+        "defaultCurrency": false,
+        "isocode": "USD",
+        "name": "US Dollar",
+        "symbol": "$"
+    },
+    "distributorInfo": {
+        "distributorAddress": {
+            "addressId": "1001019823",
+            "billingAddress": false,
+            "country": {
+                "isocode": "US"
+            },
+            "defaultAddress": false,
+            "district": "PITT",
+            "firstName": "Vinay",
+            "formattedAddress": "North Carolina, GREENVILLE, 27834-0000",
+            "lastName": "Doddi",
+            "pendingAddress": false,
+            "phone": "252 816 4100",
+            "postalCode": "27834-0000",
+            "region": {
+                "isocode": "US-NC"
+            },
+            "shippingAddress": false,
+            "town": "GREENVILLE"
+        },
+        "email": "Green@deloitte.com",
+        "id": "456",
+        "name": "Green",
+        "phone": "9999999999"
+    },
+    "payerAddress": {
+        "addressId": "1001030564",
+        "billingAddress": true,
+        "country": {
+            "isocode": "US",
+            "name": "United States"
+        },
+        "defaultAddress": false,
+        "district": "DOUGLAS",
+        "formattedAddress": "Colorado, LITTLETON, 80163-6000",
+        "organizationName": "CHI ACCOUNTS PAYABLE SUPPORT CENTER",
+        "pendingAddress": false,
+        "phone": "866 731 3267",
+        "postalCode": "80163-6000",
+        "region": {
+            "countryIso": "US",
+            "isocode": "US-CO",
+            "isocodeShort": "CO",
+            "name": "Colorado"
+        },
+        "shippingAddress": false,
+        "town": "LITTLETON",
+        "visibleInAddressBook": true
+    },
+    "requestDate": "Oct 20, 2020",
+    "state": "REQUEST_SENT"
+}
+
+// {
+//     "type":"bdbQuoteWsDTO",
+//     "billingAddress":{
+//        "addressId":"b943a742-4c33-4359-9a55-a9a4dfb5df2e",
+//        "billingAddress":true,
+//        "building":"Building - 1",
+//        "companyName":"test company",
+//        "country":{
+//           "isocode":"US",
+//           "name":"United States"
+//        },
+//        "defaultAddress":true,
+//        "department":"Science",
+//        "district":"DK",
+//        "floor":"2",
+//        "formattedAddress":"Address Line 1, Address Line 2, Alabama, Birmingham, 91345",
+//        "line1":"Address Line 1",
+//        "line2":"Address Line 2",
+//        "pendingAddress":true,
+//        "phone":"123456789",
+//        "postalCode":"91345",
+//        "region":{
+//           "countryIso":"US",
+//           "isocode":"US-AL",
+//           "isocodeShort":"AL",
+//           "name":"Alabama"
+//        },
+//        "room":"001",
+//        "shippingAddress":false,
+//        "status":"PENDING_APPROVAL",
+//        "town":"Birmingham",
+//        "visibleInAddressBook":false
+//     },
+//     "code":"Test-1111",
+//     "deliveryAddress":{
+//        "addressId":"9f4f925b-9d23-40ae-946a-e1f3e32ef1a4",
+//        "billingAddress":false,
+//        "building":"Building - 1",
+//        "companyName":"test company",
+//        "country":{
+//           "isocode":"US",
+//           "name":"United States"
+//        },
+//        "defaultAddress":true,
+//        "department":"Science",
+//        "district":"DK",
+//        "floor":"2",
+//        "formattedAddress":"Address Line 1, Address Line 2, Alabama, Birmingham, 91345",
+//        "line1":"Address Line 1",
+//        "line2":"Address Line 2",
+//        "organizationName":"Sold-To-BDName",
+//        "pendingAddress":true,
+//        "phone":"123456789",
+//        "postalCode":"91345",
+//        "region":{
+//           "countryIso":"US",
+//           "isocode":"US-AL",
+//           "isocodeShort":"AL",
+//           "name":"Alabama"
+//        },
+//        "room":"001",
+//        "shippingAddress":true,
+//        "status":"PENDING_APPROVAL",
+//        "town":"Birmingham",
+//        "visibleInAddressBook":false
+//     },
+//     "entries":[
+//        {
+//           "basePrice":{
+//              "currencyIso":"USD",
+//              "formattedValue":"$0.00",
+//              "priceType":"BUY",
+//              "value":0
+//           },
+//           "cancellableQuantity":0,
+//           "configurationInfos":[
+
+//           ],
+//           "contractPrice":{
+//              "currencyIso":"USD",
+//              "formattedValue":"$0.00",
+//              "priceType":"BUY",
+//              "value":0
+//           },
+//           "entryNumber":0,
+//           "isContractualPrice":false,
+//           "listPrice":{
+//              "currencyIso":"USD",
+//              "formattedValue":"$0.00",
+//              "priceType":"BUY",
+//              "value":0
+//           },
+//           "product":{
+//              "availableForPickup":false,
+//              "baseOptions":[
+//                 {
+//                    "selected":{
+//                       "code":"566599",
+//                       "stock":{
+//                          "isValueRounded":false,
+//                          "stockLevel":0,
+//                          "stockLevelStatus":"inStock"
+//                       },
+//                       "url":"/c/Bacteriostatic-Concentrate-Solution/p/566599",
+//                       "variantOptionQualifiers":[
+
+//                       ]
+//                    },
+//                    "variantType":"GenericVariantProduct"
+//                 }
+//              ],
+//              "baseProduct":"defaultBaseProduct",
+//              "batchManaged":true,
+//              "categories":[
+//                 {
+//                    "code":"defaultvariantvaluecategory",
+//                    "name":"Default Variant Value Category",
+//                    "url":"/deafault-Variant-Category/Default-Variant-Value-Category/c/defaultvariantvaluecategory"
+//                 }
+//              ],
+//              "code":"566599",
+//              "displayable":true,
+//              "name":"Ms CD177 Alexa 647 Y127 50ug",
+//              "pictureUrl":"",
+//              "productUrl":"",
+//              "purchasable":false,
+//              "ruoQualified":true,
+//              "stock":{
+//                 "isValueRounded":false,
+//                 "stockLevel":0,
+//                 "stockLevelStatus":"inStock"
+//              },
+//              "url":"/c/Bacteriostatic-Concentrate-Solution/p/566599"
+//           },
+//           "quantity":1,
+//           "requestSameLot":false,
+//           "returnableQuantity":0,
+//           "statusSummaryList":[
+
+//           ],
+//           "surchargeApplied":false,
+//           "totalPrice":{
+//              "currencyIso":"USD",
+//              "formattedValue":"$0.00",
+//              "priceType":"BUY",
+//              "value":0
+//           },
+//           "updateable":true
+//        }
+//     ],
+//     "user":{
+//        "name":"Anshumali Gupta",
+//        "uid":"caweb_788222000"
+//     },
+//     "accountManagerInfo":{
+//        "email":"ravi@deloitte.com",
+//        "name":"Ravi",
+//        "phone":"9999999999"
+//     },
+//     "currency":{
+//        "active":true,
+//        "defaultCurrency":false,
+//        "isocode":"USD",
+//        "name":"US Dollar",
+//        "symbol":"$"
+//     },
+//     "distributorInfo":{
+//        "distributorAddress":{
+//           "addressId":"1001019823",
+//           "billingAddress":false,
+//           "country":{
+//              "isocode":"US"
+//           },
+//           "defaultAddress":false,
+//           "district":"PITT",
+//           "firstName":"Vinay",
+//           "formattedAddress":"North Carolina, GREENVILLE, 27834-0000",
+//           "lastName":"Doddi",
+//           "pendingAddress":false,
+//           "phone":"252 816 4100",
+//           "postalCode":"27834-0000",
+//           "region":{
+//              "isocode":"US-NC"
+//           },
+//           "shippingAddress":false,
+//           "town":"GREENVILLE"
+//        },
+//        "email":"Green@deloitte.com",
+//        "id":"456",
+//        "name":"Green",
+//        "phone":"9999999999"
+//     },
+//     "payerAddress":{
+//        "addressId":"1001030564",
+//        "billingAddress":true,
+//        "country":{
+//           "isocode":"US",
+//           "name":"United States"
+//        },
+//        "defaultAddress":false,
+//        "district":"DOUGLAS",
+//        "formattedAddress":"Colorado, LITTLETON, 80163-6000",
+//        "organizationName":"CHI ACCOUNTS PAYABLE SUPPORT CENTER",
+//        "pendingAddress":false,
+//        "phone":"866 731 3267",
+//        "postalCode":"80163-6000",
+//        "region":{
+//           "countryIso":"US",
+//           "isocode":"US-CO",
+//           "isocodeShort":"CO",
+//           "name":"Colorado"
+//        },
+//        "shippingAddress":false,
+//        "town":"LITTLETON",
+//        "visibleInAddressBook":true
+//     },
+//     "requestDate":"Oct 08, 2020",
+//     "state":"REQUEST_SENT"
+//  }
